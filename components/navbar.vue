@@ -17,10 +17,10 @@
           <b-nav-item href="">Услуги</b-nav-item>
           <b-nav-item href="">Тарифы</b-nav-item>
           <b-nav-item href="">Технические средства</b-nav-item>
-          <b-nav-item href="">Спецсредства</b-nav-item>
-          <b-nav-item href="">Лицензии</b-nav-item>
-          <b-nav-item href="">Наши клиенты</b-nav-item>
-          <b-nav-item href="">Контакты</b-nav-item>
+          <b-nav-item to="/special_equipment">Спецсредства</b-nav-item>
+          <b-nav-item to="/licenses">Лицензии</b-nav-item>
+          <b-nav-item to="/our_clients">Наши клиенты</b-nav-item>
+          <b-nav-item to="/contact">Контакты</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
