@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
     <b-container>
-      <b-navbar-brand href="#Home" @click.prevent="scrollToTop()">
+      <b-navbar-brand to="/">
      ЧОП <br> ООО "Валенсия"
       </b-navbar-brand>
       <a href="" class="telephone">+7(999)999-99-99</a>
@@ -14,9 +14,18 @@
       <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav v-model="isExpanded">
         <b-navbar-nav>
           <b-nav-item to="/company">О нас</b-nav-item>
-          <b-nav-item href="">Услуги</b-nav-item>
+          <b-nav-item>
+            <b-dropdown text="Услуги">
+              <b-dropdown-item to="/">Охрана организаций</b-dropdown-item>
+              <b-dropdown-item to="/">Охрана объектов</b-dropdown-item>
+              <b-dropdown-item to="/">Охрана недвижимости</b-dropdown-item>
+              <b-dropdown-item to="/">Личная охрана</b-dropdown-item>
+              <b-dropdown-item to="/">Охрана мероприятий </b-dropdown-item>
+              <b-dropdown-item to="/">Сопровождение грузов</b-dropdown-item>
+            </b-dropdown>
+          </b-nav-item>
           <b-nav-item href="">Тарифы</b-nav-item>
-          <b-nav-item href="">Технические средства</b-nav-item>
+          <b-nav-item to="/technical_means">Технические средства</b-nav-item>
           <b-nav-item to="/special_equipment">Спецсредства</b-nav-item>
           <b-nav-item to="/licenses">Лицензии</b-nav-item>
           <b-nav-item to="/our_clients">Наши клиенты</b-nav-item>
@@ -45,6 +54,26 @@
     font-family: 'Viaoda Libre', cursive;
     font-weight: 700;
     color: #ffffff !important;
+  }
+  .dropdown-item {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem;
+    background: #040610;
+    border: 0.5px solid rgba(75, 105, 119, 0.66) !important;
+  }
+  .dropdown-item:hover{
+    background: rgb(37, 74, 94) !important;
+  }
+  .btn {
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 1.25rem;
+  }
+  .dropdown-menu {
+    background-color:white !important;
+    padding: 0 !important;
   }
   @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
