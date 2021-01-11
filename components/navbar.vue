@@ -29,7 +29,7 @@
               <b-dropdown-item to="/">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
-          <b-nav-item href="">Тарифы</b-nav-item>
+          <b-nav-item href="/tariffs">Тарифы</b-nav-item>
           <b-nav-item to="/technical_means">Технические средства</b-nav-item>
           <b-nav-item to="/special_equipment">Спецсредства</b-nav-item>
           <b-nav-item to="/licenses">Лицензии</b-nav-item>
