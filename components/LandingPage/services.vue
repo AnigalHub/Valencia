@@ -63,7 +63,7 @@
 <style scoped>
   #Services{
     padding: 2.5% 0;
-    background:linear-gradient( to top left, #304355, #768c9e,#304355);
+    background:linear-gradient( to top , #6d7d90, #bbc4d2, #6d7d90);
   }
   .flex-container {
     display: flex;
