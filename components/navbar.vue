@@ -26,7 +26,7 @@
               <b-dropdown-item to="/">Охрана недвижимости</b-dropdown-item>
               <b-dropdown-item to="/">Личная охрана</b-dropdown-item>
               <b-dropdown-item to="/">Охрана мероприятий </b-dropdown-item>
-              <b-dropdown-item to="/">Сопровождение грузов</b-dropdown-item>
+              <b-dropdown-item to="/cargo_escort">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
           <b-nav-item href="/tariffs">Тарифы</b-nav-item>
