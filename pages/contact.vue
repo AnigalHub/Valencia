@@ -138,10 +138,14 @@
   }
  h2{
    margin-top: 6%;
+   font-family: "Noto Sans", sans-serif;font-weight: 600;
+   text-align: left;
+   color:rgb(15, 37, 56);
+   text-shadow: none;
  }
- .important_row{
-   margin-bottom: 2%;
- }
+  .row{
+    padding-bottom: 2%;
+  }
   .place_h1{
     background: #e8edf5;
     padding: 5px 0;
