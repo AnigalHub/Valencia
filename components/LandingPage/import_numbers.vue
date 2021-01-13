@@ -50,7 +50,7 @@
     letter-spacing: -4px;
     margin-top: -5%;
     text-shadow: 2px 2px 2px rgb(15, 37, 56);
-    color: #cfdde8;
+    color: #dce5ec;
   }
   .number_row{
     margin-left: 8% !important;
@@ -64,6 +64,6 @@
     font-size: 1.35rem;
     text-align: center;
     text-shadow: 1.5px 2px 2px rgb(15, 37, 56);
-    color: #cfdde8;
+    color: #dce5ec;
   }
 </style>
