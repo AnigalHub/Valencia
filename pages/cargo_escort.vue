@@ -117,8 +117,8 @@
   .name{
     font-family: 'Viaoda Libre', cursive;
     font-weight: 800 !important;
+    letter-spacing: -1.5px;
     color: #09324e;
-    letter-spacing: 1px;
     text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
   }
   .text{
