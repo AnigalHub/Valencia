@@ -162,6 +162,7 @@
   h4{
     font-family: 'Viaoda Libre', cursive;
     font-weight: 800 !important;
+    letter-spacing: -1.5px;
     color: #09324e;
     display: block;
     padding-bottom: 0.5%;
@@ -174,8 +175,8 @@
   .name_company{
     font-family: 'Viaoda Libre', cursive;
     font-weight: 800 !important;
+    letter-spacing: -1.5px;
     color: #09324e;
-    letter-spacing: 1px;
     text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
   }
   svg{
@@ -191,14 +192,6 @@
     float: left;
     margin-right: 2.5%;
   }
-  .text{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500; letter-spacing: -1px;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 56)
-  }
 
   .col-4{
     padding: 0 2% !important;
@@ -212,6 +205,14 @@
   }
   .principal_2,.principal_3{
     margin-bottom: 2%;
+  }
+  .text{
+    font-family: 'Vollkorn', serif;
+    font-weight: 500; letter-spacing: -1px;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
+    color:rgb(15, 37, 56)
   }
   img{
     box-shadow: 7px 7px 7px rgb(15, 37, 56);
