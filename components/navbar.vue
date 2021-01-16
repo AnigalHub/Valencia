@@ -22,10 +22,10 @@
           <b-nav-item>
             <b-dropdown text="Услуги">
               <b-dropdown-item to="/">Охрана организаций</b-dropdown-item>
-              <b-dropdown-item to="/">Охрана объектов</b-dropdown-item>
-              <b-dropdown-item to="/">Охрана недвижимости</b-dropdown-item>
-              <b-dropdown-item to="/">Личная охрана</b-dropdown-item>
-              <b-dropdown-item to="/">Охрана мероприятий </b-dropdown-item>
+              <b-dropdown-item to="/object_protection">Охрана объектов</b-dropdown-item>
+              <b-dropdown-item to="/protection_of_real_estate">Охрана недвижимости</b-dropdown-item>
+              <b-dropdown-item to="/bodyguard">Личная охрана</b-dropdown-item>
+              <b-dropdown-item to="/protection_of_events">Охрана мероприятий </b-dropdown-item>
               <b-dropdown-item to="/cargo_escort">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
@@ -66,10 +66,14 @@
     font-weight: 600 !important;
     font-size: 1.25rem;
     background: #040610;
+    letter-spacing: -1.5px;
     border: 0.5px solid rgba(75, 105, 119, 0.66) !important;
   }
   .dropdown-item:hover{
     background: rgb(37, 74, 94) !important;
+  }
+  .dropdown-toggle{
+    letter-spacing: -1.5px;
   }
   .btn {
     padding: 0 !important;
