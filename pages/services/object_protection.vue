@@ -1,6 +1,5 @@
 <template>
   <div id="object_protection">
-    <Navbar/>
     <div id="object_protection_content">
       <div class="place_h1">
         <b-container>
@@ -10,7 +9,7 @@
       <b-container>
         <b-row>
           <b-col>
-            <img src="../static/377.jpg">
+            <img src="../../static/377.jpg">
           </b-col>
           <b-col cols="7">
             <p class="text">
@@ -135,8 +134,8 @@
             <p class="text">Иные обязанности охранников предусматриваются непосредственно заказчиками.</p>
           </b-col>
           <b-col>
-            <img src="../static/object_33.jpg" style="margin-bottom: 5%">
-            <img src="../static/object_22.jpg" style="margin-bottom: 10%">
+            <img src="../../static/object_33.jpg" style="margin-bottom: 5%">
+            <img src="../../static/object_22.jpg" style="margin-bottom: 10%">
           </b-col>
         </b-row>
         <h2>Охрана объектов транспорта</h2>
@@ -205,8 +204,8 @@
         </b-row>
         <b-row>
           <b-col>
-            <img src="../static/91.jpg" style="margin-bottom: 5%">
-            <img src="../static/object_3.jpg"  style="margin-bottom: 10%">
+            <img src="../../static/91.jpg" style="margin-bottom: 5%">
+            <img src="../../static/object_3.jpg" style="margin-bottom: 10%">
           </b-col>
           <b-col cols="9">
             <p class="text" style="text-align: center; padding-top: 2%"><u>Обязанности сотрудников при охране транспортных объектов:</u></p>
@@ -235,12 +234,11 @@
         <Tarrifs_content/>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 
 <script>
-  import Tarrifs_content from "../components/tarrifs/tarrifs_content";
+  import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
     export default {
         name: "object_protection",
       components: {Tarrifs_content},
@@ -254,11 +252,7 @@
   #object_protection_content{
     padding: 2% 0;
   }
-  h1{
-    padding-left: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 600;
-  }
+
   h2{
     padding-left: 15px;
     font-family: 'Vollkorn', serif;
@@ -308,7 +302,7 @@
     line-height: 1.6rem;
     text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
     color: rgb(15, 37, 55);
-    list-style-image: url(../static/icon.png);
+    list-style-image: url(../../static/icon.png);
     padding-bottom: 0.85%;
   }
   .text{

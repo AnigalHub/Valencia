@@ -1,6 +1,5 @@
 <template>
   <div id="contact">
-    <Navbar/>
     <div id="contact_content">
       <div class="place_h1">
         <b-container>
@@ -111,7 +110,6 @@
        </div>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 

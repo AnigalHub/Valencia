@@ -22,8 +22,8 @@
           <b-nav-item>
             <b-dropdown text="Услуги">
               <b-dropdown-item to="/">Охрана организаций</b-dropdown-item>
-              <b-dropdown-item to="/object_protection">Охрана объектов</b-dropdown-item>
-              <b-dropdown-item to="/protection_of_real_estate">Охрана недвижимости</b-dropdown-item>
+              <b-dropdown-item to="/services/object_protection">Охрана объектов</b-dropdown-item>
+              <b-dropdown-item to="/services/protection_of_real_estate">Охрана недвижимости</b-dropdown-item>
               <b-dropdown-item to="/bodyguard">Личная охрана</b-dropdown-item>
               <b-dropdown-item to="/protection_of_events">Охрана мероприятий </b-dropdown-item>
               <b-dropdown-item to="/cargo_escort">Сопровождение грузов</b-dropdown-item>

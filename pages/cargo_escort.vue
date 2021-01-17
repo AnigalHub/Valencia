@@ -1,6 +1,5 @@
 <template>
   <div id="cargo_escort">
-    <Navbar/>
     <div id="cargo_escort_content">
       <div class="place_h1">
         <b-container>
@@ -68,12 +67,10 @@
             <li>отчетность за проведенную работу.</li>
           </ul>
         </b-col>
-
       </b-row>
        <Tarrifs_content/>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 
@@ -126,7 +123,7 @@
     font-weight: 500;
     letter-spacing: -1px;
     font-size: 1.4rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
     color:rgb(15, 37, 55);
   }
@@ -139,7 +136,7 @@
     padding-bottom: 0.95%;
   }
   .col-4{
-    padding: 4.5% 0 0 0 !important;
+    padding: 6% 0 0 0 !important;
   }
 
 </style>

@@ -60,7 +60,7 @@
   #Advantages{
     padding: 2.5% 0;
     height: 23rem;
-    background:linear-gradient( to top left, #304355, #768c9e,#304355);
+    background:linear-gradient( to top , #6d7d90, #bbc4d2, #6d7d90);
   }
   .hexagon {
     width: 16rem;

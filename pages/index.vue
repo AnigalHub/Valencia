@@ -1,6 +1,5 @@
 <template>
     <div id="index">
-      <Navbar/>
       <Home/>
       <Advantages/>
       <Type/>
@@ -8,7 +7,6 @@
       <Feedback/>
       <Clients/>
       <Map/>
-      <Myfooter/>
       </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
   <div id="bodyguard">
-    <Navbar/>
     <div id="bodyguard_content">
       <div class="place_h1">
         <b-container>
@@ -68,7 +67,6 @@
       <Tarrifs_content/>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 

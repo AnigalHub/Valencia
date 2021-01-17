@@ -1,90 +1,75 @@
 <template>
-  <div id="tariffs">
-    <div class="padding_h1">
-      <div class="place_h1">
-        <b-container>
-          <h1>Тарифы</h1>
-        </b-container>
-      </div>
-    </div>
-    <div id="tariffs_content">
-      <b-container>
-        <b-row>
-          <b-col>
-            <b-table class="text" hover :items="items" :fields="fields">
-              <template v-slot:cell(econom)="{item}">
-                <h4>{{item.econom.name}}</h4>
-                <div class="text">{{item.econom.descr_name}}</div>
-                <img :src="item.econom.src">
-                <p class="text">{{item.econom.descr}}</p>
-                <b-row>
-                  <b-col cols="2">
-                    <component :is="item.econom.svg_2"/>
-                  </b-col>
-                  <b-col> от {{item.econom.price}} ₽</b-col>
-                  <b-col cols="2">
-                    <component :is="item.econom.svg"/>
-                  </b-col>
-                  <b-col>от {{item.econom.price_with_weapon}} ₽</b-col>
-                </b-row>
-              </template>
-            </b-table>
-          </b-col>
-          <b-col>
-            <b-table class="text" hover :items="items2" :fields="fields2">
-              <template v-slot:cell(standart)="{item}">
-                <img :src="item.standart.src">
-                <h4>{{item.standart.name}}</h4>
-                <div class="text">{{item.standart.descr_name}}</div>
-                <p class="text">{{item.standart.descr}}</p>
-                <b-row>
-                  <b-col cols="2">
-                    <component :is="item.standart.svg_2"/>
-                  </b-col>
-                  <b-col> от {{item.standart.price}} ₽</b-col>
-                  <b-col cols="2">
-                    <component :is="item.standart.svg"/>
-                  </b-col>
-                  <b-col>от {{item.standart.price_with_weapon}} ₽</b-col>
-                </b-row>
-              </template>
-            </b-table>
-          </b-col>
-          <b-col>
-            <b-table class="text" hover :items="items3" :fields="fields3">
-              <template v-slot:cell(premium)="{item}">
-                <img :src="item.premium.src">
-                <h4>{{item.premium.name}}</h4>
-                <div class="text">{{item.premium.descr_name}}</div>
-                <p class="text">{{item.premium.descr}}</p>
-                <b-row>
-                  <b-col cols="2">
-                    <component :is="item.premium.svg_2"/>
-                  </b-col>
-                  <b-col> от {{item.premium.price}} ₽</b-col>
-                  <b-col cols="2">
-                    <component :is="item.premium.svg"/>
-                  </b-col>
-                  <b-col>от {{item.premium.price_with_weapon}} ₽</b-col>
-                </b-row>
-              </template>
-            </b-table>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
+  <div id="tariffs_content">
+    <b-container>
+      <b-row>
+        <b-col>
+          <b-table class="text" hover :items="items" :fields="fields">
+            <template v-slot:cell(econom)="{item}">
+              <h4>{{item.econom.name}}</h4>
+              <div class="text">{{item.econom.descr_name}}</div>
+              <img :src="item.econom.src">
+              <b-row>
+                <b-col cols="2">
+                  <component :is="item.econom.svg_2"/>
+                </b-col>
+                <b-col> от {{item.econom.price}} ₽</b-col>
+                <b-col cols="2">
+                  <component :is="item.econom.svg"/>
+                </b-col>
+                <b-col>от {{item.econom.price_with_weapon}} ₽</b-col>
+              </b-row>
+            </template>
+          </b-table>
+        </b-col>
+        <b-col>
+          <b-table class="text" hover :items="items2" :fields="fields2">
+            <template v-slot:cell(standart)="{item}">
+              <img :src="item.standart.src">
+              <h4>{{item.standart.name}}</h4>
+              <div class="text">{{item.standart.descr_name}}</div>
+              <b-row>
+                <b-col cols="2">
+                  <component :is="item.standart.svg_2"/>
+                </b-col>
+                <b-col> от {{item.standart.price}} ₽</b-col>
+                <b-col cols="2">
+                  <component :is="item.standart.svg"/>
+                </b-col>
+                <b-col>от {{item.standart.price_with_weapon}} ₽</b-col>
+              </b-row>
+            </template>
+          </b-table>
+        </b-col>
+        <b-col>
+          <b-table class="text" hover :items="items3" :fields="fields3">
+            <template v-slot:cell(premium)="{item}">
+              <img :src="item.premium.src">
+              <h4>{{item.premium.name}}</h4>
+              <div class="text">{{item.premium.descr_name}}</div>
+              <b-row>
+                <b-col cols="2">
+                  <component :is="item.premium.svg_2"/>
+                </b-col>
+                <b-col> от {{item.premium.price}} ₽</b-col>
+                <b-col cols="2">
+                  <component :is="item.premium.svg"/>
+                </b-col>
+                <b-col>от {{item.premium.price_with_weapon}} ₽</b-col>
+              </b-row>
+            </template>
+          </b-table>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-  import Navbar from "../components/navbar";
-  import Myfooter from "../components/myfooter";
-  import Weapon_svg from "../components/tariffs_svg/weapon_svg";
-  import NoWeapon_svg from "../components/tariffs_svg/no_weapon_svg";
-
+  import Weapon_svg from "../tariffs_svg/weapon_svg";
+  import NoWeapon_svg from "../tariffs_svg/no_weapon_svg";
     export default {
-        name: "tariffs",
-      components: { Myfooter, Navbar, Weapon_svg,NoWeapon_svg},
+        name: "tarrifs_content",
+      components: {Weapon_svg,NoWeapon_svg},
       data() {
         return {
           fields: [
@@ -97,12 +82,6 @@
             { label: "Премиум", key: "premium" },
           ],
           items: [
-            {
-              econom:{
-                src:'./security_ohr.jpeg',
-                descr:'Сотрудники со среднем телосложением, имеющие разряд не выше 5-го, с опытом работы от 1 года, обученные для выполнения общенаблюдательных функций и обеспечения пропускного режима',
-              }
-            },
             {
               econom: {
                 name:'Вахтовый режим',
@@ -156,12 +135,6 @@
           items2: [
             {
               standart:{
-                src:'./security_ohr_2.jpg',
-                descr:'Сотрудники, обладающие хорошими физическими качествами и спецнавыками, имеющие разряд 5-6, с опытом работы от 3 лет, подготовлены для выполнения контрольно-пропускного режима, работы с техническими средствами '
-              }
-            },
-            {
-              standart:{
                 name:'Вахтовый режим',
                 price:80000,
                 price_with_weapon:85000,
@@ -211,12 +184,6 @@
             },
           ],
           items3: [
-            {
-              premium: {
-                src:'./security_oht_3.jpg',
-                descr: 'Сотрудники, строго до 45-лет, крепкого телосложения и презентабельной внешности, имеющие 6-ой разряд, с опытом работы от 5-лет, обученные для выполнения особо сложных задач'
-              }
-            },
             {
               premium:{
                 name:'Вахтовый режим',
@@ -275,9 +242,7 @@
   .table tr, .table th {
     text-align: center;
   }
-  .table tr{
-    padding: 0.5rem !important;
-  }
+
   table {
     width: 100%;
     table-layout: fixed;
@@ -286,62 +251,48 @@
   table{
     width: 100%;
     border-collapse: separate; /* Способ отображения границы */
-    border-spacing: 0 4px; /* Расстояние между ячейками */
+    border-spacing: 0 3.5px; /* Расстояние между ячейками */
   }
   .table tbody tr {
-    border: 2px solid #ffffff;
-    background: #ecf1f5;
+    border: 2px solid rgb(15, 37, 56);
+    background: #bcc8d7;
+    //background: #b5bcc9;
   }
   .table tbody tr:hover {
     background: #ecf1f5;
     cursor: default;
   }
-
+  .table td{
+    border: 0.2px solid rgb(26, 60, 88,.6) !important;
+    box-shadow: 0.25px 0.25px 0.25px rgb(26, 60, 88,.6);
+  }
   .table thead th{
-    box-shadow: 2px 2px 2px rgb(15, 37, 56);
+    box-shadow: 1.5px 1.5px 1.5px rgb(15, 37, 56);
     font-family: 'Viaoda Libre', cursive;
     font-weight: 800 !important;
-    background: #b5bcc9;
+    background: #cfd4de;
     border: 1.8px solid rgb(26, 60, 88,.6);
   }
-
-  .table tbody tr:first-child {
-    text-align: left;
-    height: 22.5rem;
+  .table tr{
     td{
-      padding: 0.4rem;
-    }
-
-    p{
-      margin-bottom: 0 !important;
-    }
-  }
-  .table tr:not(:first-child){
-    td{
-      padding: 0.25rem !important;
+      padding: 0.1rem !important;
     }
 
     .row{
-      margin: 0 7% !important;
+      margin: 0 9% !important;
     }
+  }
+  .table th{
+    padding: 0.45rem !important;
   }
 </style>
 <style scoped lang="scss">
-  #tariffs{
-    background:linear-gradient( to top , #6d7d90, #bbc4d2, #d0d8e2);
+  #tariffs_content{
+    margin: 0 2%;
   }
-  h1{
-    padding-left: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 600;
-  }
-  .padding_h1{
-    padding-top: 2%;
-  }
-  .place_h1{
-    background: #e8edf5;
-    padding: 5px 0;
-    margin-bottom: 2%;
+  svg{
+    width: 40px;
+    height: 35px;
   }
   img{
     width: 60%;
@@ -362,12 +313,11 @@
   }
   h4{
     font-family: 'Vollkorn', serif;
-    font-weight: 800 !important;
     color: #09324e;
     display: block;
     padding-bottom: 0.5%;
     margin-bottom: 0 !important;
-    text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
+    text-shadow: 0.9px 1px  rgb(15, 37, 56);
   }
   .text{
     font-family: 'Vollkorn', serif;
@@ -378,31 +328,18 @@
     color:rgb(15, 37, 56)
   }
   .table .col{
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center
   }
   .table .row{
     .col{
-      padding: 0 5px !important;
+      padding: 0 2.5px !important;
     }
   }
   .col{
-    padding: 0 20px !important;
-  }
-  .table .row{
-    .col{
-      padding: 0 5px !important;
-    }
-  }
-  .col{
-    padding: 0 20px !important;
-  }
-  .table tbody tr:first-child {
-    .row{
-      display: none;
-    }
+    padding: 0 15px !important;
   }
   .table tr:not(:first-child){
     p{

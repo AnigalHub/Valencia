@@ -1,6 +1,5 @@
 <template>
   <div id="our_clients">
-    <Navbar/>
     <div id="our_clients_content">
       <div class="place_h1">
         <b-container>
@@ -52,7 +51,6 @@
         </div>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 

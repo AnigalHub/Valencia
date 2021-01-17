@@ -1,6 +1,5 @@
 <template>
   <div id="special_equipment">
-    <Navbar/>
     <div id="special_equipment_content">
       <div class="place_h1">
         <b-container>
@@ -25,7 +24,6 @@
           </b-col>
         </b-row>
         <p class="text">Перечень специальных средств, используемых в частном охранном предприятии “ООО Валенсия”:</p>
-
         <div class="flex-container">
           <div>
               <h3>Радиостанция</h3>
@@ -88,7 +86,6 @@
         </div>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 
@@ -149,13 +146,12 @@
   .flex-container > div {
     width: 22%;
     margin: 1% 1.2% 1% 1.2% !important;
-    //background: #e8edf5;
     h3{
       text-align: center;
     }
     img{
       box-shadow: none;
-      padding: 10%;
+      padding: 15%;
     }
     .text{
       text-align: center;

@@ -1,6 +1,5 @@
 <template>
   <div id="protection_of_real_estate">
-    <Navbar/>
     <div id="protection_of_real_estate_content">
       <div class="place_h1">
         <b-container>
@@ -10,7 +9,7 @@
       <b-container>
         <b-row>
           <b-col>
-            <img src="../static/estate.jpg">
+            <img src="../../static/estate.jpg">
           </b-col>
           <b-col cols="7">
             <p class="text">
@@ -115,8 +114,8 @@
             </b-row>
           </b-col>
           <b-col>
-            <img src="../static/estate_2.jpeg" style="margin-bottom: 5%">
-            <img src="../static/estate_22.jpg">
+            <img src="../../static/estate_2.jpeg" style="margin-bottom: 5%">
+            <img src="../../static/estate_22.jpg">
           </b-col>
         </b-row>
         <h2>Охрана частных объектов</h2>
@@ -150,8 +149,8 @@
         </b-row>
         <b-row>
           <b-col>
-            <img src="../static/988.jpg" style="margin-bottom: 5%">
-            <img src="../static/675.jpg" style="margin-bottom: 10%">
+            <img src="../../static/988.jpg" style="margin-bottom: 5%">
+            <img src="../../static/675.jpg" style="margin-bottom: 10%">
           </b-col>
           <b-col cols="9">
             <p class="text"><u>Круг обязанностей охранников частных объектов:</u></p>
@@ -183,12 +182,11 @@
         <Tarrifs_content/>
       </b-container>
     </div>
-    <Myfooter/>
   </div>
 </template>
 
 <script>
-    import Tarrifs_content from "../components/tarrifs/tarrifs_content";
+    import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
 
     export default {
         name: "protection_of_real_estate",
