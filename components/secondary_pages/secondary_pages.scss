@@ -1,0 +1,67 @@
+.page{
+  background:linear-gradient( to top , #6d7d90, #bbc4d2, #d0d8e2);
+  padding: 2% 0;
+}
+.text{
+  font-family: 'Vollkorn', serif;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
+  color:rgb(15, 37, 55);
+}
+.emphasized{
+  font-family: 'Viaoda Libre', cursive;
+  font-weight: 800 !important;
+  letter-spacing: -1.5px;
+  color: #09324e;
+  text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
+}
+img{
+  box-shadow: 7px 7px 7px rgb(15, 37, 56);
+  width: 100%;
+  filter: contrast(115%);
+}
+h2{
+  text-align: left;
+  font-family: 'Vollkorn', serif;
+  padding-bottom: 0;
+  text-shadow: none;
+  color: #212529;
+  font-size: 2rem;
+  background: #dfe4ec;
+  font-weight: 600;
+  letter-spacing: -2px;
+  padding-left: 15px;
+}
+h3{
+  font-family: 'Viaoda Libre', cursive;
+  padding-bottom: 1%;
+  font-weight: 600;
+  color: rgb(15, 37, 56);
+  letter-spacing: -2.5px;
+  text-decoration: underline;
+  font-size: 1.6rem !important;
+  text-shadow: 0.5px 1px 1px #8094aa;
+}
+h4{
+  font-family: 'Vollkorn', serif;
+  font-weight: 500;
+  text-decoration: underline;
+  letter-spacing: -1px;
+  padding-bottom: 1%;
+  text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
+  color:rgb(15, 37, 56);
+}
+h5{
+  font-family: 'Viaoda Libre', cursive;
+  padding-top: 2.5%;
+  font-weight: 600;
+  color: rgb(15, 37, 56);
+  letter-spacing: -1.5px;
+  text-align: center;
+  font-size: 1.3rem !important;
+  text-shadow: 0.5px 1px 1px #8094aa;
+}
+
