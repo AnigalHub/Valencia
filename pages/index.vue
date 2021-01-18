@@ -40,12 +40,5 @@ export default {
   .row {
     margin: 0 !important;
   }
-  h2{
-    text-align: center;
-    font-family: 'Viaoda Libre', cursive;
-    padding-bottom: 2%;
-    text-shadow: 2px 2.5px 2.5px rgb(15, 37, 56);
-    color: #cfdde8;
-    font-size: 2.25rem !important;
-  }
+
 </style>
