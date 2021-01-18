@@ -1,110 +1,45 @@
 <template>
-  <div id="our_clients">
-    <div id="our_clients_content">
-      <div class="place_h1">
-        <b-container>
-          <h1>Наши клиенты</h1>
-        </b-container>
-      </div>
-      <b-container>
-        <p class="text">
-          За время существования частного охранного предприятия “ООО Валенсия” были заключены долгосрочные и надежные отношения с различными организациями: государственными учреждениями (детские сады, школы, вузы), бизнес-центрами, ритейлерами, торговыми центрами, букмекерскими конторами, строительными компаниями и т.д.
-        </p>
-        <h4>Предприятия, которые выбрали наши услуги:</h4>
-        <div class="flex-container">
-          <div>
-            <img src="../static/41.jpg">
-            <h5> МОУ ГИМНАЗИЯ № 46</h5>
-          </div>
-          <div>
-            <img src="../static/42.jpg">
-            <h5> МОУ СОШ № 25 </h5>
-          </div>
-          <div>
-            <img src="../static/43.jpg">
-            <h5> МОУ ШКОЛА № 17</h5>
-          </div>
-          <div>
-            <img src="../static/44.jpg">
-            <h5>МОУ ЛИЦЕЙ №12</h5>
-          </div>
-          <div>
-            <img src="../static/46.jpg">
-            <h5>АДМИНИСТРАЦИЯ ГОРОДСКОГО ОКРУГА ЛЮБЕРЦЫ</h5>
-          </div>
-          <div>
-            <img src="../static/45.jpg">
-            <h5>МДОУ Д/С № 9 "КОСМОС"</h5>
-          </div>
-          <div>
-            <img src="../static/47.jpg">
-            <h5>МОУ КАДЕТСКАЯ ШКОЛА</h5>
-          </div>
-          <div>
-            <img src="../static/48.jpg">
-            <h5>МОУ ГИМНАЗИЯ № 24</h5>
-          </div>
-          <div>
-            <img src="../static/49.jpg">
-            <h5>МДОУ №28 "СОВЕНОК"</h5>
-          </div>
+  <div id="our_clients" class="page">
+    <Name_page :name_page="name_page"/>
+    <b-container>
+      <p class="text">За время существования частного охранного предприятия “ООО Валенсия” были заключены долгосрочные и надежные отношения с различными организациями: государственными учреждениями (детские сады, школы, вузы), бизнес-центрами, ритейлерами, торговыми центрами, букмекерскими конторами, строительными компаниями и т.д.</p>
+      <h4>Предприятия, которые выбрали наши услуги:</h4>
+      <div class="flex-container">
+        <div v-for="client in Clients" :key="index">
+          <img :src="client.img_src" :alt="client.img_alt"/>
+          <h5>{{client.name_client}}</h5>
         </div>
-      </b-container>
-    </div>
+      </div>
+    </b-container>
   </div>
 </template>
 
 <script>
+    import Secondary_pages from "../components/secondary_pages/secondary_pages.scss";
+    import Name_page from "../components/secondary_pages/name_page";
     export default {
-        name: "our_clients"
+      name: "our_clients",
+      components: {Name_page},
+      data() {
+        return {
+          name_page:"Наши клиенты",
+          Clients:[
+            {name_client:"МОУ ГИМНАЗИЯ № 46", img_src:"../41.jpg", img_alt:"моу_гимназия_46",},
+            {name_client:"МОУ СОШ № 25", img_src:"../42.jpg", img_alt:"моу_сош_25",},
+            {name_client:"МОУ ШКОЛА № 17", img_src:"../43.jpg", img_alt:"моу_школа_17",},
+            {name_client:"МОУ ЛИЦЕЙ №12", img_src:"../44.jpg", img_alt:"моу_лицей_12",},
+            {name_client:"АДМИНИСТРАЦИЯ ГОРОДСКОГО ОКРУГА ЛЮБЕРЦЫ", img_src:"../46.jpg", img_alt:"администрация_городского_округа_люберцы",},
+            {name_client:"МДОУ Д/С № 9 \"КОСМОС\"", img_src:"../45.jpg", img_alt:"мдоу_д/с_9_космос",},
+            {name_client:"МОУ КАДЕТСКАЯ ШКОЛА", img_src:"../47.jpg", img_alt:"моу_кадетская_школа",},
+            {name_client:"МОУ ГИМНАЗИЯ № 24", img_src:"../48.jpg", img_alt:"моу_гимназия_24",},
+            {name_client:"МДОУ №28 \"СОВЕНОК\"", img_src:"../49.jpg", img_alt:"мдоу_28_совенок",},
+          ]
+        }
+      }
     }
 </script>
 
 <style scoped>
-  #our_clients{
-    background:linear-gradient( to top , #6d7d90, #bbc4d2, #d0d8e2);
-  }
-  #our_clients_content{
-    padding: 2% 0;
-  }
-  h1{
-    padding-left: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 600;
-  }
-  h5{
-    font-family: 'Viaoda Libre', cursive;
-    padding-top: 2.5%;
-    font-weight: 600;
-    color: rgb(15, 37, 56);
-    letter-spacing: -1.5px;
-    text-align: center;
-    font-size: 1.3rem !important;
-    text-shadow: 0.5px 1px 1px #8094aa;
-  }
-  .place_h1{
-    background: #e8edf5;
-    padding: 5px 0;
-    margin-bottom: 2%;
-  }
-  h4{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500;
-    text-decoration: underline;
-    letter-spacing: -1px;
-    padding-bottom: 1%;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 56);
-  }
-  .text{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500;
-    letter-spacing: -1px;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 55);
-  }
   .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -112,10 +47,5 @@
   .flex-container > div {
     width: 30%;
     margin: 0 1.5% 1% 1.5% !important;
-  }
-  img{
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
-    width: 100%;
-    filter: contrast(110%);
   }
 </style>
