@@ -1,11 +1,6 @@
 <template>
-  <div id="technical_means">
-    <div id="technical_means_content">
-      <div class="place_h1">
-        <b-container>
-          <h1>Технические средства</h1>
-        </b-container>
-      </div>
+  <div id="technical_means" class="page">
+      <Name_page :name_page="name_page"/>
       <b-container>
         <p class="text">
           Технические средства повышают безопасность любого охраняемого объекта. Наша компания занимается монтажом и обслуживанием систем безопасности во время охраны любой вверенной территории.
@@ -14,167 +9,168 @@
           Классификация технических средств охранников компании “ООО Валенсия:
         </p>
         <div class="flex-container">
-          <div>
-            <b-row>
-              <b-col>
-                <img src="../static/pogar.jpg">
-              </b-col>
-              <b-col>
-                <h3>Пожарная сигнализация:</h3>
-                <ul class="text">
-                 <li>датчики задымления и температуры;</li>
-                  <li>приемно-контрольный прибор;</li>
-                  <li>прибор управления;</li>
-                  <li>извещатели;</li>
-                  <li>оповещатели.</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
-          <div>
-            <b-row>
-              <b-col>
-                <img src="../static/control.jpg">
-              </b-col>
-              <b-col>
-                <h3>Технические средства системы контроля управления доступом</h3>
-                <ul class="text">
-                  <li>электромагнитные замки;</li>
-                  <li>автоматические ворота;</li>
-                  <li>контроллеры;</li>
-                  <li>шлагбаумы;</li>
-                  <li>считыватели.</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
-          <div>
-            <b-row>
-              <b-col>
-                <img src="../static/ohr.png">
-              </b-col>
-              <b-col>
-                <h3>Охранная сигнализация:</h3>
-                <ul class="text">
-                  <li>контрольная панель;</li>
-                  <li>датчики движения;</li>
-                  <li>устройство оповещения;</li>
-                  <li>ключ отключения;</li>
-                  <li>кнопка тревоги.</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
-          <div>
-            <b-row>
-              <b-col>
-                <img src="../static/knopka.jpg">
-              </b-col>
-              <b-col>
-                <h3>Тревожная сигнализация</h3>
-                <ul class="text">
-                  <li>контрольная панель;</li>
-                  <li>механический ключ разблокировки;</li>
-                  <li>тревожная кнопка.</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
-          <div>
-            <b-row>
-              <b-col>
-                <img src="../static/pult.jpg">
-              </b-col>
-              <b-col>
-                <h3>Технические средства пультовой охраны:</h3>
-                <ul class="text">
-                  <li>датчики состояния охраняемого объекта;</li>
-                  <li>модуль связи с центральным охранным пультом;</li>
-                  <li>исполнительные устройства разных конфигураций:звуковые и световые системы, блокировка.</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
-          <div>
-            <b-row>
-              <b-col>
-                <img src="../static/video.jpg">
-              </b-col>
-              <b-col>
-                <h3>Видеонаблюдение:</h3>
-                <ul class="text">
-                  <li>камеры;</li>
-                  <li>записывающие устройства;</li>
-                  <li>блоки преобразования данных;</li>
-                  <li>устройства вывода информации для охранника (монитор).</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
+          <b-row v-for="mean in СlassificationTechnicalMeans" :key="index">
+            <b-col>
+              <img :src="mean.img_src" :alt="mean.img_alt"/>
+            </b-col>
+            <b-col>
+              <h3>{{mean.name_technical_means}}</h3>
+              <ul class="text">
+                <li v-for="paragraph in mean.list" :key="index">
+                  {{paragraph.paragraph}}
+                </li>
+              </ul>
+            </b-col>
+          </b-row>
         </div>
       </b-container>
-    </div>
   </div>
 </template>
 
 <script>
+    import Secondary_pages from "../components/secondary_pages/secondary_pages.scss";
+    import Name_page from "../components/secondary_pages/name_page";
     export default {
-        name: "technical_means"
+     name: "technical_means",
+     components: {Name_page},
+      data() {
+        return {
+          name_page:"Технические средства",
+          СlassificationTechnicalMeans:[
+            {
+              name_technical_means:"Пожарная сигнализация",
+              img_src:"../pogar.jpg",
+              img_alt:"пожарная_сигнализация",
+              list:[
+                {
+                  paragraph:"датчики задымления и температуры;"
+                },
+                {
+                  paragraph:"приемно-контрольный прибор;"
+                },
+                {
+                  paragraph:"прибор управления;"
+                },
+                {
+                  paragraph:"извещатели;"
+                },
+                {
+                  paragraph:"оповещатели."
+                },
+              ],
+            },
+            {
+              name_technical_means:"Система контроля управления доступом",
+              img_src:"../control.jpg",
+              img_alt:"контроль_доступа",
+              list:[
+                {
+                  paragraph:"электромагнитные замки;"
+                },
+                {
+                  paragraph:"автоматические ворота;"
+                },
+                {
+                  paragraph:"контроллеры;"
+                },
+                {
+                  paragraph:"шлагбаумы;"
+                },
+                {
+                  paragraph:"считыватели."
+                },
+              ],
+            },
+            {
+              name_technical_means:"Охранная сигнализация",
+              img_src:"../ohr.png",
+              img_alt:"охранная_сигнализация",
+              list:[
+                {
+                  paragraph:"контрольная панель;"
+                },
+                {
+                  paragraph:"датчики движения;"
+                },
+                {
+                  paragraph:"устройство оповещения;"
+                },
+                {
+                  paragraph:"ключ отключения;"
+                },
+                {
+                  paragraph:"кнопка тревоги."
+                },
+              ],
+            },
+            {
+              name_technical_means:"Тревожная сигнализация",
+              img_src:"../knopka.jpg",
+              img_alt:"тревожная_сигнализация",
+              list:[
+                {
+                  paragraph:"контрольная панель;"
+                },
+                {
+                  paragraph:"механический ключ разблокировки;"
+                },
+                {
+                  paragraph:"тревожная кнопка."
+                },
+              ],
+            },
+            {
+              name_technical_means:"Технические средства пультовой охраны",
+              img_src:"../pult.jpg",
+              img_alt:"пультовая_охрана",
+              list:[
+                {
+                  paragraph:"датчики состояния охраняемого объекта;"
+                },
+                {
+                  paragraph:"модуль связи с центральным охранным пультом;"
+                },
+                {
+                  paragraph:"исполнительные устройства (звуковые и световые системы, блокировка)"
+                },
+              ],
+            },
+            {
+              name_technical_means:"Видеоналюдение",
+              img_src:"../video.jpg",
+              img_alt:"видеонаблюдение",
+              list:[
+                {
+                  paragraph:"камеры;"
+                },
+                {
+                  paragraph:"записывающие устройства;"
+                },
+                {
+                  paragraph:"блоки преобразования данных;"
+                },
+                {
+                  paragraph:"устройства вывода информации(монитор)."
+                },
+              ],
+            },
+          ]
+        }
+      }
     }
 </script>
 
 <style scoped lang="scss">
-  #technical_means{
-    background:linear-gradient( to top , #6d7d90, #bbc4d2, #d0d8e2);
-  }
-  #technical_means_content{
-    padding: 2% 0;
-  }
-  h1{
-    padding-left: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 600;
-  }
-  .place_h1{
-    background: #e8edf5;
-    padding: 5px 0;
-    margin-bottom: 2%;
-  }
   .row{
     padding-bottom: 3%;
-  }
-  .text{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500;
-    letter-spacing: -1px;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 55);
-  }
-  img{
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
-    width: 100%;
-    filter: contrast(95%);
-  }
-  h3{
-    font-family: 'Viaoda Libre', cursive;
-    padding-bottom: 1%;
-    font-weight: 600;
-    color: rgb(15, 37, 56);
-    letter-spacing: -2.5px;
-    text-decoration: underline;
-    font-size: 1.55rem !important;
-    text-shadow: 0.5px 1px 1px #8094aa;
   }
   .flex-container {
     display: flex;
     flex-wrap: wrap;
   }
-  .flex-container > div {
+  .flex-container > .row {
     width: 47%;
     margin: 1% 1.5% 1% 1.5% !important;
-
 
     .row .col:first-child{
       padding: 0 !important;
