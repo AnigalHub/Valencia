@@ -44,11 +44,19 @@
   }
   h2{
     margin-top: 15%;
-    font-size: 2.8rem !important;
-    text-shadow: 2px 2.5px 2.5px rgb(10, 22, 33) !important;
-    color: #dce5ec !important;
     text-decoration: underline;
+    text-align: center;
+    font-family: 'Viaoda Libre', cursive;
+    padding-bottom: 2%;
+    text-shadow: 2px 2.5px 2.5px rgb(15, 37, 56);
+    color: #cfdde8;
+    font-size: 2.8rem;
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: normal;
+    padding-left: 0;
   }
+
   .call_telephone{
     font-size: 3.25rem !important;
     text-align: center;

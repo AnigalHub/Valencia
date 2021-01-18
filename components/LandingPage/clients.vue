@@ -25,6 +25,19 @@
 </script>
 
 <style scoped>
+  h2{
+    text-align: center;
+    font-family: 'Viaoda Libre', cursive;
+    padding-bottom: 2%;
+    text-shadow: 2px 2.5px 2.5px rgb(15, 37, 56);
+    color: #cfdde8;
+    font-size: 2.25rem;
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: normal;
+    padding-left: 0;
+  }
+
   #Clients{
     padding: 2.5% 0;
     background:linear-gradient( to top left, #304355, #768c9e,#304355);
