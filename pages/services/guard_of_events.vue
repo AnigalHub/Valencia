@@ -1,15 +1,10 @@
 <template>
-  <div id="protection_of_events">
-    <div id="protection_of_events_content">
-      <div class="place_h1">
-        <b-container>
-          <h1>Охрана мероприятий</h1>
-        </b-container>
-      </div>
+  <div id="protection_of_events" class="page">
+    <Name_page :name_page="name_page"/>
       <b-container>
         <b-row>
           <b-col>
-            <img src="../static/events_1.jpg">
+            <img src="../../static/events_1.jpg">
           </b-col>
           <b-col cols="7">
             <p class="text">
@@ -42,16 +37,15 @@
                 <li> формирование четкого плана действий на все время мероприятия;</li>
                 <li> предотвращение посягательств на организаторов и посетителей мероприятия;</li>
                   <li>пресечение правонарушения на территории проведения мероприятия (дебош, воровство, порча имущества), а также выведение нарушителей за пределы проведения мероприятия;</li>
-
                 </ul>
               </b-col>
               <b-col cols="4">
-                <img src="../static/events_3.jpg">
+                <img src="../../static/events_3.jpg">
               </b-col>
             </b-row>
             <b-row>
               <b-col cols="4">
-                <img src="../static/events_2.png">
+                <img src="../../static/events_2.png">
               </b-col>
               <b-col>
                 <ul class="text"><li>установление контакта с правоохранительными органами на случай непредвиденных ситуаций;</li>
@@ -64,38 +58,27 @@
                 </ul>
               </b-col>
             </b-row>
-
         <Tarrifs_content/>
       </b-container>
-    </div>
   </div>
 </template>
 
 <script>
-    import Tarrifs_content from "../components/tarrifs/tarrifs_content";
+    import Secondary_pages from "../../components/secondary_pages/secondary_pages.scss";
+    import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
+    import Name_page from "../../components/secondary_pages/name_page";
     export default {
-        name: "protection_of_events",
-      components: {Tarrifs_content}
+      name: "protection_of_events",
+      components: {Name_page, Tarrifs_content},
+      data() {
+        return {
+          name_page: "Охрана мероприятий",
+        }
+      }
     }
 </script>
 
 <style scoped>
-  #protection_of_events{
-    background:linear-gradient( to top , #6d7d90, #bbc4d2, #d0d8e2);
-  }
-  #protection_of_events_content{
-    padding: 2% 0;
-  }
-  h1{
-    padding-left: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 600;
-  }
-  .place_h1{
-    background: #e8edf5;
-    padding: 5px 0;
-    margin-bottom: 2%;
-  }
   .row:first-child{
     padding-bottom: 2% !important;
   }
@@ -104,20 +87,6 @@
   }
   .row:nth-child(4){
     padding-bottom: 2%;
-  }
-  .text{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500;
-    letter-spacing: -1px;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 55);
-  }
-  img{
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
-    width: 100%;
-    filter: contrast(120%);
   }
   li{
     padding-bottom: 0.95%;
