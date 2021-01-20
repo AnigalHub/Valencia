@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "map"
+        name: "mymap"
     }
 </script>
 
