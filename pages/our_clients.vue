@@ -3,9 +3,9 @@
     <Name_page :name_page="name_page"/>
     <b-container>
       <p class="text">За время существования частного охранного предприятия “ООО Валенсия” были заключены долгосрочные и надежные отношения с различными организациями: государственными учреждениями (детские сады, школы, вузы), бизнес-центрами, ритейлерами, торговыми центрами, букмекерскими конторами, строительными компаниями и т.д.</p>
-      <h4>Предприятия, которые выбрали наши услуги:</h4>
+      <h6>Предприятия, которые выбрали наши услуги:</h6>
       <div class="flex-container">
-        <div v-for="client in Clients" :key="index">
+        <div v-for="client in Clients" :key="client.index">
           <img :src="client.img_src" :alt="client.img_alt"/>
           <h5>{{client.name_client}}</h5>
         </div>
@@ -40,12 +40,5 @@
 </script>
 
 <style scoped>
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .flex-container > div {
-    width: 30%;
-    margin: 0 1.5% 1% 1.5% !important;
-  }
+
 </style>
