@@ -6,7 +6,7 @@
       <Services/>
       <Feedback/>
       <Clients/>
-      <Map/>
+      <Mymap/>
       </div>
 </template>
 
@@ -17,11 +17,11 @@ import Advantages from "../components/LandingPage/advantages";
 import Type from "../components/LandingPage/type";
 import Services from "../components/LandingPage/services";
 import Feedback from "../components/LandingPage/feedback";
-import Map from "../components/LandingPage/map";
 import Clients from "../components/LandingPage/clients";
 import Myfooter from "../components/myfooter";
+import Mymap from "../components/LandingPage/mymap";
 export default {
-  components: {Myfooter, Clients, Map, Feedback, Services, Type, Advantages, Home, Navbar}
+  components: {Mymap, Myfooter, Clients, Feedback, Services, Type, Advantages, Home, Navbar}
 }
 </script>
 
