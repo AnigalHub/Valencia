@@ -1,5 +1,5 @@
 <template>
-  <div id="guard_of_commercial_objects" class="page">
+  <div id="guard_of_commercial_objects" class="page services">
     <Name_page :name_page="name_page"/>
     <b-container>
       <b-row>
@@ -68,12 +68,6 @@
 
 <style scoped lang="scss">
 
-  .row:first-child{
-    padding-bottom: 2% !important;
-  }
-  .row:nth-child(2){
-    padding-bottom: 0.05% !important;
-  }
   .row:nth-child(4){
     padding-bottom: 1.5%;
   }

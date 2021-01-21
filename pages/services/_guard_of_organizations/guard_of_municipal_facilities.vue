@@ -1,5 +1,5 @@
 <template>
-  <div id="guard_of_municipal_facilities" class="page">
+  <div id="guard_of_municipal_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
       <b-row>
@@ -87,41 +87,6 @@
     }
 </script>
 
-<style scoped lang="scss">
-  h6{
-    margin-left: 20px !important;
-  }
-  .row h6{
-    margin-left: 0 !important;
-  }
-  .row:first-child{
-    padding-bottom: 2% !important;
-  }
-  .row:nth-child(2){
-    padding-bottom: 0.05% !important;
-  }
-  .row:nth-child(4){
-    padding-bottom: 1.5%;
-  }
-  .row:nth-child(3), .row:nth-child(5){
-    ul{
-      margin-left: -8%;
-    }
-  }
-  .im_descr .col{
-    padding: 5% 0 0 0 !important;
-  }
-  li{
-    padding-bottom: 0.85%;
-  }
-  .col-4{
-    padding: 6% 0 0 0 !important;
-  }
-  .col .col{
-    padding: 0 5px !important;
-  }
-  .import ul{
-    margin-left: -8%;
-  }
+<style scoped>
 
 </style>
