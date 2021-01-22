@@ -1,12 +1,6 @@
 <template>
-  <div id="tariffs">
-    <div class="padding_h1">
-      <div class="place_h1">
-        <b-container>
-          <h1>Тарифы</h1>
-        </b-container>
-      </div>
-    </div>
+  <div id="tariffs" class="page">
+    <Name_page :name_page="name_page"/>
     <div id="tariffs_content">
       <b-container>
         <b-row>
@@ -77,16 +71,16 @@
 </template>
 
 <script>
-  import Navbar from "../components/navbar";
-  import Myfooter from "../components/myfooter";
+  import Secondary_pages from "../components/secondary_pages/secondary_pages.scss";
   import Weapon_svg from "../components/tariffs_svg/weapon_svg";
   import NoWeapon_svg from "../components/tariffs_svg/no_weapon_svg";
-
+  import Name_page from "../components/secondary_pages/name_page";
     export default {
-        name: "tariffs",
-      components: { Myfooter, Navbar, Weapon_svg,NoWeapon_svg},
+      name: "tariffs",
+      components: {Name_page, Weapon_svg,NoWeapon_svg},
       data() {
         return {
+          name_page:"Тарифы",
           fields: [
             { label: "Эконом", key: "econom" },
           ],
@@ -306,12 +300,9 @@
   }
 
   .table tbody tr:first-child {
-    text-align: left;
-    height: 22.5rem;
     td{
       padding: 0.4rem;
     }
-
     p{
       margin-bottom: 0 !important;
     }
@@ -327,55 +318,19 @@
   }
 </style>
 <style scoped lang="scss">
-  #tariffs{
-    background:linear-gradient( to top , #6d7d90, #bbc4d2, #d0d8e2);
-  }
-  h1{
-    padding-left: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 600;
-  }
-  .padding_h1{
-    padding-top: 2%;
-  }
-  .place_h1{
-    background: #e8edf5;
-    padding: 5px 0;
-    margin-bottom: 2%;
-  }
   img{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     display: block;
     border-radius: 50%;
-  }
-  h3{
-    font-family: 'Viaoda Libre', cursive;
-    padding-bottom: 1%;
-    font-weight: 600;
-    color: rgb(15, 37, 56);
-    letter-spacing: -2.5px;
-    text-decoration: underline;
-    font-size: 1.6rem !important;
-    text-shadow: 0.5px 1px 1px #8094aa;
+    box-shadow: none;
   }
   h4{
-    font-family: 'Vollkorn', serif;
-    font-weight: 800 !important;
-    color: #09324e;
+    font-weight: 800;
     display: block;
     padding-bottom: 0.5%;
-    margin-bottom: 0 !important;
-    text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
-  }
-  .text{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500; letter-spacing: -1px;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 56)
+    margin-bottom: 0;
   }
   .table .col{
     height: 50px;
@@ -407,6 +362,12 @@
   .table tr:not(:first-child){
     p{
       display: none;
+    }
+  }
+  .table tbody tr:first-child {
+    p{
+    height: 9.5rem !important;
+    text-align: left;
     }
   }
 </style>
