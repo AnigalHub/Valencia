@@ -4,7 +4,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <img src="../../../static/000004.jpg">
+          <img src="../../../static/services/guard_of_organizations/000004.jpg">
         </b-col>
         <b-col cols="7">
           <p class="text"><b>Медицинские учреждения</b> - это организации с наличием дорогостоящего оборудования и дефицитных лекарственных препаратов: наркотических, спиртосодержащих и предписанных строго по рецепту врачей. Из-за специализации в медучреждениях проблема безопасности очень актуальна, как и соблюдение режима работы и предупреждение чрезвычайных ситуаций.</p>
@@ -36,7 +36,7 @@
           </ul>
         </b-col>
         <b-col>
-          <img src="../../../static/polozhenie-o-videonablyudenii-v-bolnice_2.jpg" >
+          <img src="../../../static/services/guard_of_organizations/polozhenie-o-videonablyudenii-v-bolnice_2.jpg" >
         </b-col>
       </b-row>
       <Tarrifs_content/>

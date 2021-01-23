@@ -4,7 +4,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <img src="../../../static/object_22.jpg">
+          <img src="../../../static/services/object_guard/object_22.jpg">
         </b-col>
         <b-col cols="7">
           <p class="text"><b>Промышленный объект</b> - предприятие, агрегат, участок или цех, используемый для осуществления промышленной деятельности, который относится к категории опасных производственных объектов нашей страны.</p>
@@ -23,7 +23,7 @@
           </ul>
         </b-col>
         <b-col>
-          <img src="../../../static/object_33.jpg" >
+          <img src="../../../static/services/object_guard/object_33.jpg" >
         </b-col>
       </b-row>
       <Tarrifs_content/>

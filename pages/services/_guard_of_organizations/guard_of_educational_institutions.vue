@@ -4,7 +4,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <img src="../../../static/005.jpg">
+          <img src="../../../static/services/guard_of_organizations/005.jpg">
         </b-col>
         <b-col cols="7">
           <p class="text"><b>Образовательные и дошкольные учреждения</b>- это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
@@ -31,7 +31,7 @@
           </ul>
         </b-col>
         <b-col>
-          <img src="../../../static/image-5.jpg" >
+          <img src="../../../static/services/guard_of_organizations/image-5.jpg" >
         </b-col>
       </b-row>
       <Tarrifs_content/>

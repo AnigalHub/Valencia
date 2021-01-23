@@ -4,7 +4,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <img src="../../../static/988.jpg">
+          <img src="../../../static/services/guard_of_real_estate/988.jpg">
         </b-col>
         <b-col cols="7">
           <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
@@ -21,7 +21,7 @@
               </ul>
         </b-col>
         <b-col>
-          <img src="../../../static/677.jpg" >
+          <img src="../../../static/services/guard_of_real_estate/677.jpg" >
         </b-col>
       </b-row>
       <Tarrifs_content/>

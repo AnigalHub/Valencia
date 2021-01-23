@@ -4,10 +4,10 @@
     <b-container>
       <b-row>
         <b-col>
-          <img src="../../../static/91.jpg">
+          <img src="../../../static/services/object_guard/91.jpg">
         </b-col>
         <b-col cols="7">
-          <p class="text"><b>Промышленный объект</b> - предприятие, агрегат, участок или цех, используемый для осуществления промышленной деятельности, который относится к категории опасных производственных объектов нашей страны.</p>
+          <p class="text">Для обеспечения безопасности объектов транспорта, комплекс охранных мероприятий прежде всего направлен на защиту работников транспортной инфраструктуры и сохранность передаваемого под охрану имущества.
           <div class="import">
             <div class="li_text" v-for="guard in GuardOfTransportFacilities" :key="guard.index">
               <component :is="guard.svg"/>{{guard.name}}
@@ -23,7 +23,7 @@
           </ul>
         </b-col>
         <b-col>
-          <img src="../../../static/object_3.jpg" >
+          <img src="../../../static/services/object_guard/object_3.jpg" >
         </b-col>
       </b-row>
       <Tarrifs_content/>

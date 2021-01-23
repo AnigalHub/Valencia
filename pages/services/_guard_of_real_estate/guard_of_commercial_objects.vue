@@ -1,10 +1,10 @@
 <template>
-  <div id="guard_of_commercial_objects" class="page services">
+  <div id="guard_of_commercial_objects" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
       <b-row>
         <b-col>
-          <img src="../../../static/133.jpg">
+          <img src="../../../static/services/guard_of_real_estate/133.jpg">
         </b-col>
         <b-col cols="7">
           <p class="text">В охране нуждаются здания, сооружения и иные объекты коммерческой деятельности, безопасность таких объектов - самое важное условие их бесперебойной работы.</p>
@@ -25,7 +25,7 @@
           </ul>
         </b-col>
         <b-col>
-         <img src="../../../static/121.jpg" >
+         <img src="../../../static/services/guard_of_real_estate/121.jpg" >
         </b-col>
       </b-row>
       <Tarrifs_content/>
@@ -68,31 +68,5 @@
 
 <style scoped lang="scss">
 
-  .row:nth-child(4){
-    padding-bottom: 1.5%;
-  }
-  .row:nth-child(3), .row:nth-child(5){
-    ul{
-      margin-left: -8%;
-    }
-  }
-  .im_descr .col{
-  padding: 10% 0 0 0 !important;
-}
-  li{
-    padding-bottom: 0.85%;
-  }
-  .col-4{
-    padding: 6% 0 0 0 !important;
-  }
-   .col .col, .col-9 .col, .import .col{
-    padding: 0 5px !important;
-  }
-  .col-7 .col{
-    padding: 0 !important;
-  }
-  .import ul{
-    margin-left: -8%;
-  }
 
 </style>
