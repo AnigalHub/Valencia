@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page" />
     <b-container>
       <b-row>
-        <b-col><img src="../../static/422212508651055_cea3.jpg"></b-col>
+        <b-col><img src="../../static/services/guard_of_organizations/422212508651055_cea3.jpg"></b-col>
         <b-col cols="7">
           <p class="text"><span class="emphasized">Охрана организаций</span> предусматривает комплекс мер, направленных на обеспечение безопасности функционирования объекта, сохранности материального имущества, информационной безопасности, защиту жизни и здоровья лиц организации.</p>
           <p class="text"><u>Охрана организаций надежно защитит вас от:</u></p>
@@ -14,7 +14,7 @@
       </b-row>
       <h6>Разновидности охраны организаций:</h6>
       <div class="flex-container">
-        <div class="beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
+        <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
           <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>
           <b-row>
             <b-col cols="5">
@@ -27,8 +27,8 @@
             </b-col>
           </b-row>
         </div>
-        <div class="beautiful_block">
-            <img src="../../static/shkolapiksi.jpg">
+        <div class="type_guard_beautiful_block">
+            <img src="../../static/services/guard_of_organizations/shkolapiksi.jpg">
         </div>
       </div>
       <Tarrifs_content/>
@@ -59,7 +59,7 @@
             {
               name: "Охрана образовательных и дошкольных учреждений",
               svg: Guard_shield_typesSVG,
-              img_src: "../005.jpg",
+              img_src: "../guard_of_organizations/005.jpg",
               img_alt: "охрана_коммерческих_объектов",
               list: [
                 {guard: "Охрана детских садов"},
@@ -71,7 +71,7 @@
             {
               name: "Охрана медицинских учреждений",
               svg: Guard_shield_typesSVG,
-              img_src: "../000004.jpg",
+              img_src: "../guard_of_organizations/000004.jpg",
               img_alt: "охрана_частных_объектов",
               list: [
                 {guard: "Охрана поликлиник"},
@@ -83,7 +83,7 @@
             {
               name: "Охрана муниципальных объектов - госучреждений",
               svg: Guard_shield_typesSVG,
-              img_src: "../344.jpg",
+              img_src: "../guard_of_organizations/344.jpg",
               img_alt: "охрана_частных_объектов",
               list: [
                 {guard: "Охрана административных зданий"},

@@ -3,7 +3,7 @@
       <Name_page :name_page="name_page"/>
       <b-container>
         <b-row>
-          <b-col><img src="../../static/377.jpg"></b-col>
+          <b-col><img src="../../static/services/object_guard/377.jpg"></b-col>
           <b-col cols="7">
             <p class="text"><span class="emphasized">Охрана объектов </span>- комплексное обеспечение защиты производственного или коммерческого объекта, товарно-материальных ценностей и защиту здоровья сотрудников объекта. Для обеспечения безопасности объекта разрабатывается проект со всеми особенностями и характером деятельности бизнеса и его графиком работы.</p>
             <p class="text"><u>При составлении проекта работы охранников учитывается:</u></p>
@@ -14,7 +14,7 @@
         </b-row>
         <h6>Разновидности охраны объектов:</h6>
         <div class="flex-container">
-          <div class="beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
+          <div class="type_guard_beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
             <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>
             <b-row>
               <b-col cols="5">
@@ -56,7 +56,7 @@
           TypesOfGuard:[
             { name:"Охрана промышленных объектов",
               svg:Guard_shield_typesSVG,
-              img_src:"../object_22.jpg",
+              img_src:"../object_guard/object_22.jpg",
               img_alt:"охрана_коммерческих_объектов",
               list:[
                 {guard:"Охрана предприятий"},
@@ -69,7 +69,7 @@
             },
             { name:"Охрана объектов транспорта",
               svg:Guard_shield_typesSVG,
-              img_src:"../object_3.jpg",
+              img_src:"../object_guard/object_3.jpg",
               img_alt:"охрана_частных_объектов",
               list:[
                 {guard:"Охрана вокзалов"},

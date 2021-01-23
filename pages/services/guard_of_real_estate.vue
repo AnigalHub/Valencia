@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page"/>
     <b-container>
       <b-row>
-        <b-col><img src="../../static/estate.jpg"></b-col>
+        <b-col><img src="../../static/services/guard_of_real_estate/estate.jpg"></b-col>
         <b-col cols="7">
           <p class="text"><span class="emphasized">Профессиональная охрана недвижимости </span> позволяет владельцам объекта работать и отдыхать спокойно. Наша организация гарантирует полную безопасность посетителей и персонала, а также сохранность имущества всего здания.
           </p>
@@ -15,7 +15,7 @@
       </b-row>
       <h6>Разновидности охраны недвижимости:</h6>
       <div class="flex-container">
-        <div class="beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
+        <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
           <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>
           <b-row>
             <b-col cols="5">
@@ -58,7 +58,7 @@
           TypesOfGuard:[
             { name:"Охрана коммерческих объектов",
               svg:Guard_shield_typesSVG,
-              img_src:"../133.jpg",
+              img_src:"./133.jpg",
               img_alt:"охрана_коммерческих_объектов",
               list:[
                 {guard:"Охрана банков"},
@@ -72,7 +72,7 @@
             },
             { name:"Охрана частных объектов",
               svg:Guard_shield_typesSVG,
-              img_src:"../988.jpg",
+              img_src:"./988.jpg",
               img_alt:"охрана_частных_объектов",
               list:[
                 {guard:"Охрана коттеджей и коттеджных поселков"},
