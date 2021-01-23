@@ -3,16 +3,16 @@
     <Name_page :name_page="name_page"/>
       <b-container>
         <p class="text">Общество с ограниченной ответственностью частное охранное предприятие “Валенсия” обладает всеми необходимыми лицензиями на работу, согласно статье №3 Закона РФ №2487-1 "О частной детективной и охранной деятельности в Российской Федерации".</p>
-        <h4>В целях охраны разрешается предоставление следующих видов услуг:</h4>
+        <h6>В целях охраны разрешается предоставление следующих видов услуг:</h6>
         <ol class="text">
           <li v-for="type in TypesOfServices" :key="type.index">{{type.type}}</li>
         </ol>
-        <h3>Лицензии:</h3>
+        <h4 class="emphasized">Лицензии:</h4>
         <p class="text">Действующие лицензии частного охранного предприятия “ООО Валенсия” на право оказания охранных услуг: </p>
         <div class="flex-container">
           <img v-for="img in Licenses" :src="img.img_src" :alt="img.img_alt"/>
         </div>
-        <h3>Благодарные и рекомендательные письма:</h3>
+        <h4 class="emphasized">Благодарные и рекомендательные письма:</h4>
         <p class="text">Наивысшей наградой являются благодарные и рекомендательные письма наших Клиентов о частном охранном предприятии “ООО Валенсия”:</p>
         <div class="flex-container">
           <img v-for="img in ThanksgivingLetters" :src="img.img_src" :alt="img.img_alt"/>
@@ -40,25 +40,25 @@
             {type:"Охрана объектов и/или имущества, а также обеспечение внутриобъектового и пропускного режимов на объектах, которые имеют особо важное значение для жизнедеятельности и безопасности государства и населения.",},
           ],
           Licenses:[
-            {img_src:"../l1.jpg", img_alt:"Лицензия_1",},
-            {img_src:"../l2.jpg", img_alt:"Лицензия_2",},
-            {img_src:"../l3.jpg", img_alt:"Лицензия_3",},
-            {img_src:"../l4.jpg", img_alt:"Лицензия_4",},
-            {img_src:"../l5.jpg", img_alt:"Лицензия_5",},
-            {img_src:"../l6.jpg", img_alt:"Лицензия_6",},
-            {img_src:"../l7.jpg", img_alt:"Лицензия_7",},
-            {img_src:"../l8.jpg", img_alt:"Лицензия_8",},
-            {img_src:"../l9.jpg", img_alt:"Лицензия_9",},
-            {img_src:"../l10.jpg", img_alt:"Лицензия_10",},
+            {img_src:"../licenses/l1.jpg", img_alt:"Лицензия_1",},
+            {img_src:"../licenses/l2.jpg", img_alt:"Лицензия_2",},
+            {img_src:"../licenses/l3.jpg", img_alt:"Лицензия_3",},
+            {img_src:"../licenses/l4.jpg", img_alt:"Лицензия_4",},
+            {img_src:"../licenses/l5.jpg", img_alt:"Лицензия_5",},
+            {img_src:"../licenses/l6.jpg", img_alt:"Лицензия_6",},
+            {img_src:"../licenses/l7.jpg", img_alt:"Лицензия_7",},
+            {img_src:"../licenses/l8.jpg", img_alt:"Лицензия_8",},
+            {img_src:"../licenses/l9.jpg", img_alt:"Лицензия_9",},
+            {img_src:"../licenses/l10.jpg", img_alt:"Лицензия_10",},
           ],
           ThanksgivingLetters:[
-            {img_src:"../ll1.jpg", img_alt:"Благодарственное_письмо_1",},
-            {img_src:"../ll2.jpg", img_alt:"Благодарственное_письмо_2",},
-            {img_src:"../ll3.jpg", img_alt:"Благодарственное_письмо_3",},
-            {img_src:"../ll4.jpg", img_alt:"Благодарственное_письмо_4",},
-            {img_src:"../ll5.jpg", img_alt:"Благодарственное_письмо_5",},
-            {img_src:"../ll6.jpg", img_alt:"Благодарственное_письмо_6",},
-            {img_src:"../ll7.jpg", img_alt:"Благодарственное_письмо_7",},
+            {img_src:"../licenses/ll1.jpg", img_alt:"Благодарственное_письмо_1",},
+            {img_src:"../licenses/ll2.jpg", img_alt:"Благодарственное_письмо_2",},
+            {img_src:"../licenses/ll3.jpg", img_alt:"Благодарственное_письмо_3",},
+            {img_src:"../licenses/ll4.jpg", img_alt:"Благодарственное_письмо_4",},
+            {img_src:"../licenses/ll5.jpg", img_alt:"Благодарственное_письмо_5",},
+            {img_src:"../licenses/ll6.jpg", img_alt:"Благодарственное_письмо_6",},
+            {img_src:"../licenses/ll7.jpg", img_alt:"Благодарственное_письмо_7",},
           ]
         }
       }
@@ -66,18 +66,5 @@
 </script>
 
 <style scoped lang="scss">
-  li{
-    padding-bottom: 1%;
-  }
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    img{
-      filter: contrast(95%);
-    }
-  }
-  .flex-container > img {
-    width: 18%;
-    margin: 0 1% 2% 1% !important;
-  }
+
 </style>
