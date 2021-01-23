@@ -3,14 +3,14 @@
       <Name_page :name_page="name_page"/>
       <b-container>
         <p class="text">Технические средства повышают безопасность любого охраняемого объекта. Наша компания занимается монтажом и обслуживанием систем безопасности во время охраны любой вверенной территории.</p>
-        <p class="text">Классификация технических средств охранников компании “ООО Валенсия:</p>
+        <h6>Классификация технических средств охранников компании “ООО Валенсия:</h6>
         <div class="flex-container">
-          <b-row v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
+          <b-row class="beautiful_block" v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
             <b-col>
               <img :src="mean.img_src" :alt="mean.img_alt"/>
             </b-col>
             <b-col>
-              <h3>{{mean.name_technical_means}}</h3>
+              <p class="text emphasized">{{mean.name_technical_means}}</p>
               <ul class="text">
                 <li v-for="paragraph in mean.list" :key="paragraph.index">
                   {{paragraph.paragraph}}
@@ -34,8 +34,8 @@
           name_page:"Технические средства",
           СlassificationTechnicalMeans:[
             {
-              name_technical_means:"Пожарная сигнализация",
-              img_src:"../pogar.jpg",
+              name_technical_means:"Пожарная сигнализация:",
+              img_src:"../technical_means/pogar.jpg",
               img_alt:"пожарная_сигнализация",
               list:[
                 {paragraph:"датчики задымления и температуры;"},
@@ -46,8 +46,8 @@
               ],
             },
             {
-              name_technical_means:"Система контроля управления доступом",
-              img_src:"../control.jpg",
+              name_technical_means:"Система контроля управления доступом:",
+              img_src:"../technical_means/control.jpg",
               img_alt:"контроль_доступа",
               list:[
                 {paragraph:"электромагнитные замки;"},
@@ -58,8 +58,8 @@
               ],
             },
             {
-              name_technical_means:"Охранная сигнализация",
-              img_src:"../ohr.png",
+              name_technical_means:"Охранная сигнализация:",
+              img_src:"../technical_means/ohr.png",
               img_alt:"охранная_сигнализация",
               list:[
                 {paragraph:"контрольная панель;"},
@@ -70,8 +70,8 @@
               ],
             },
             {
-              name_technical_means:"Тревожная сигнализация",
-              img_src:"../knopka.jpg",
+              name_technical_means:"Тревожная сигнализация:",
+              img_src:"../technical_means/knopka.jpg",
               img_alt:"тревожная_сигнализация",
               list:[
                 {paragraph:"контрольная панель;"},
@@ -80,18 +80,18 @@
               ],
             },
             {
-              name_technical_means:"Технические средства пультовой охраны",
-              img_src:"../pult.jpg",
+              name_technical_means:"Технические средства пультовой охраны:",
+              img_src:"../technical_means/pult.jpg",
               img_alt:"пультовая_охрана",
               list:[
                 {paragraph:"датчики состояния охраняемого объекта;"},
                 {paragraph:"модуль связи с центральным охранным пультом;"},
-                {paragraph:"исполнительные устройства (звуковые и световые системы, блокировка)"},
+                {paragraph:"исполнительные устройства."},
               ],
             },
             {
-              name_technical_means:"Видеоналюдение",
-              img_src:"../video.jpg",
+              name_technical_means:"Система видеоналюдения:",
+              img_src:"../technical_means/video.jpg",
               img_alt:"видеонаблюдение",
               list:[
                 {paragraph:"камеры;"},
@@ -106,32 +106,6 @@
     }
 </script>
 
-<style scoped lang="scss">
-  .row{
-    padding-bottom: 3%;
-  }
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .flex-container > .row {
-    width: 47%;
-    margin: 1% 1.5% 1% 1.5% !important;
+<style scoped>
 
-    .row .col:first-child{
-      padding: 0 !important;
-    }
-    .row .col:nth-child(2){
-      padding: 0 13px !important;
-    }
-    h3{
-      text-align: center;
-    }
-    img{
-      margin-top: 5%;
-    }
-   ul{
-     margin-left: -4%;
-   }
-  }
 </style>

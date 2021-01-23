@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page"/>
       <b-container>
         <b-row>
-          <b-col><img src="../../static/bodyguard.jpg"></b-col>
+          <b-col><img src="../../static/services/bodyguard/bodyguard.jpg"></b-col>
           <b-col cols="7">
             <p class="text"><span class="emphasized">Личная охрана</span> - профессиональная охрана, обеспечивающая безопасность жизни и здоровья Клиента и конфиденциальность информации.</p>
             <p class="text">Охранники личной охраны - настоящие профессионалы своего дела, прошедшие полную систему подготовки и жесткий отбор до собеседования с клиентом.</p>
@@ -22,12 +22,12 @@
             </ul>
           </b-col>
           <b-col cols="3">
-            <img src="../../static/bodyguard_2.jpg">
+            <img src="../../static/services/bodyguard/bodyguard_2.jpg">
           </b-col>
         </b-row>
         <b-row>
           <b-col cols="4">
-            <img src="../../static/bodyguard_3.jpg">
+            <img src="../../static/services/bodyguard/bodyguard_3.jpg">
           </b-col>
           <b-col>
             <h6>Обязанности личной охраны:</h6>

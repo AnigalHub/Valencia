@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page"/>
       <b-container>
         <b-row>
-          <b-col><img src="../../static/escort_2.jpg"></b-col>
+          <b-col><img src="../../static/services/cargo_escort/escort_2.jpg"></b-col>
           <b-col cols="7">
             <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
             <h6>Опасности при передвижении груза:</h6>
@@ -19,10 +19,10 @@
               <li v-for="type in TypesOfCargo" :key="type.index"><i><b>{{type.type}}</b></i>{{type.descr_type}}</li>
             </ul>
           </b-col>
-          <b-col cols="3"><img src="../../static/escort_3.jpg"></b-col>
+          <b-col cols="3"><img src="../../static/services/cargo_escort/escort_3.jpg"></b-col>
         </b-row>
         <b-row>
-          <b-col cols="4"><img src="../../static/escort_1.jpg"></b-col>
+          <b-col cols="4"><img src="../../static/services/cargo_escort/escort_1.jpg"></b-col>
           <b-col>
             <h6>Структура сопровождения грузов:</h6>
             <ul class="text">

@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page"/>
       <b-container>
         <b-row>
-          <b-col><img src="../../static/events_1.jpg"></b-col>
+          <b-col><img src="../../static/services/guard_of_events/events_1.jpg"></b-col>
           <b-col cols="7">
             <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.
             </p>
@@ -20,7 +20,7 @@
                   <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
                 </ul>
               </b-col>
-              <b-col cols="4"><img src="../../static/events_3.jpg"><img src="../../static/events_2.png"></b-col>
+              <b-col cols="4"><img src="../../static/services/guard_of_events/events_3.jpg"><img src="../../static/services/guard_of_events/events_2.png"></b-col>
             </b-row>
         <Tarrifs_content/>
       </b-container>
