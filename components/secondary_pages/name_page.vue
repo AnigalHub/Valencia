@@ -22,7 +22,7 @@
     font-weight: 600;
   }
   .place_h1{
-    background: #e8edf5;
+    background: #bcc6d4;
     padding: 5px 0;
     margin-bottom: 2%;
   }
