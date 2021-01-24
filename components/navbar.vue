@@ -1,5 +1,5 @@
 <template>
-  <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
+  <b-navbar id="Nav" class="navbar-expand-md sticky-top" toggleable>
     <b-container>
       <b-navbar-brand to="/">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -21,14 +21,14 @@
           <b-nav-item to="/company">О нас</b-nav-item>
           <b-nav-item>
             <b-dropdown text="Услуги">
-              <b-dropdown-item to="/services/guard_of_organizations">Охрана организаций</b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_organizations/">Охрана организаций</b-dropdown-item>
               <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">---Охрана образовательных учреждений</b-dropdown-item>
               <b-dropdown-item to="/services/_guard_of_organizations/guard_of_medical_institutions">---Охрана медицинских учреждений</b-dropdown-item>
               <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities">---Охрана муниципальных объектов</b-dropdown-item>
-              <b-dropdown-item to="/services/object_guard">Охрана объектов</b-dropdown-item>
+              <b-dropdown-item to="/services/object_guard/">Охрана объектов</b-dropdown-item>
               <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities">---Охрана промышленных объектов</b-dropdown-item>
               <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">---Охрана объектов транспорта</b-dropdown-item>
-              <b-dropdown-item to="/services/guard_of_real_estate">Охрана недвижимости</b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_real_estate/">Охрана недвижимости</b-dropdown-item>
               <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">---Охрана коммерческих объектов</b-dropdown-item>
               <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">---Охрана частных объектов</b-dropdown-item>
               <b-dropdown-item to="/services/bodyguard">Личная охрана</b-dropdown-item>
@@ -68,13 +68,15 @@
     color: #ffffff !important;
     margin-top: -1%;
   }
+  .navbar-expand-xl .navbar-collapse {
+    margin-left: -2.5%;
+  }
   .dropdown-item {
     color: #ffffff !important;
     font-weight: 600 !important;
     font-size: 1.25rem;
     background: #040610;
     letter-spacing: -1.5px;
-    //border: 0.5px solid rgba(75, 105, 119, 0.66) !important;
   }
   .dropdown-item:hover{
     background: rgb(37, 74, 94) !important;
@@ -143,4 +145,8 @@
     letter-spacing: -1.75px;
     color: #ffffff !important;
   }
+  .telephone{
+    margin-left: 1%;
+  }
+
 </style>
