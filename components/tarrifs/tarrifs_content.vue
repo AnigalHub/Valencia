@@ -256,7 +256,7 @@
   .table tbody tr {
     border: 2px solid rgb(15, 37, 56);
     background: #bcc8d7;
-    //background: #b5bcc9;
+
   }
   .table tbody tr:hover {
     background: #ecf1f5;
