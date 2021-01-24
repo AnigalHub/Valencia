@@ -6,13 +6,13 @@
         fade
       >
         <b-carousel-slide
-          img-src="1.jpg"
+          img-src="LandingPage/1.jpg"
         ></b-carousel-slide>
         <b-carousel-slide
-          img-src="4.jpg"
+          img-src="LandingPage/4.jpg"
         ></b-carousel-slide>
         <b-carousel-slide
-          img-src="2.jpg"
+          img-src="LandingPage/2.jpg"
         ></b-carousel-slide>
       </b-carousel>
     </div>

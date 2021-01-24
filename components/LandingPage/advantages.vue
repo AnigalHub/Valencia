@@ -92,7 +92,7 @@
     height: 0;
     border-left: 8rem solid transparent;
     border-right: 8rem solid transparent;
-    border-top: 28.8675px solid rgba(21, 45, 66, 0.95);
+    border-top: 29.8675px solid rgba(21, 45, 66, 0.95);
   }
   .hexagon::before {
     content: "";

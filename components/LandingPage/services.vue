@@ -3,10 +3,10 @@
       <b-container>
         <h2>Виды деятельности организации:</h2>
         <div class="flex-container">
-          <div v-for="(pad,index) in Open_mount_pads" :key="index">
+          <div v-for="(guard,index) in Guard" :key="index">
             <b-button>
-              <img :src="pad.src" :alt="pad.alt"/>
-              <p class="text">{{pad.name_pad}}</p>
+              <img :src="guard.src" :alt="guard.alt"/>
+              <p class="text">{{guard.name_guard}}</p>
             </b-button>
           </div>
         </div>
@@ -21,16 +21,16 @@
         name: "services",
       components: {Import_numbers},
       data(){
-          return{
-            "Open_mount_pads":[
-              {src:"21.jpg", alt:"охрана_организаций", name_pad:"Охрана организаций",},
-              {src:"24.jpg", alt:"охрана_объектов", name_pad:"Охрана объектов",},
-              {src:"23.jpg", alt:"личная_охрана", name_pad:"Личная охрана",},
-              {src:"22.jpg", alt:"охрана_недвижимости", name_pad:"Охрана недвижимости",},
-              {src:"25.jpg", alt:"охрана_мероприятий", name_pad:"Охрана мероприятий",},
-              {src:"26.jpg", alt:"сопровождение_грузов", name_pad:"Сопровождение грузов",},
-             ]
-          }
+        return{
+          Guard:[
+            {src:"LandingPage/21.jpg", alt:"охрана_организаций", name_guard:"Охрана организаций",},
+            {src:"LandingPage/24.jpg", alt:"охрана_объектов", name_guard:"Охрана объектов",},
+            {src:"LandingPage/23.jpg", alt:"личная_охрана", name_guard:"Личная охрана",},
+            {src:"LandingPage/22.jpg", alt:"охрана_недвижимости", name_guard:"Охрана недвижимости",},
+            {src:"LandingPage/25.jpg", alt:"охрана_мероприятий", name_guard:"Охрана мероприятий",},
+            {src:"LandingPage/26.jpg", alt:"сопровождение_грузов", name_guard:"Сопровождение грузов",},
+          ]
+        }
       }
     }
 </script>
@@ -41,6 +41,7 @@
     background:linear-gradient( to top , #6d7d90, #bbc4d2, #6d7d90);
   }
   h2{
+    margin-top: 0 !important;
     text-align: center;
     font-family: 'Viaoda Libre', cursive;
     padding-bottom: 2%;
@@ -52,7 +53,6 @@
     letter-spacing: normal;
     padding-left: 0;
   }
-
   .flex-container {
     display: flex;
     flex-wrap: wrap;

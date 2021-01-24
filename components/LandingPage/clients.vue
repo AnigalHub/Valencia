@@ -4,13 +4,13 @@
         <h2>Наши клиенты</h2>
         <b-row>
           <b-col>
-            <img src="../../static/41.jpg">
+            <img src="../../static/our_clients/41.jpg">
           </b-col>
           <b-col>
-            <img src="../../static/42.jpg">
+            <img src="../../static/our_clients/42.jpg">
           </b-col>
           <b-col>
-            <img src="../../static/43.jpg">
+            <img src="../../static/our_clients/43.jpg">
           </b-col>
         </b-row>
       </b-container>
@@ -20,12 +20,13 @@
 
 <script>
     export default {
-        name: "clients"
+        name: "clients",
     }
 </script>
 
 <style scoped>
   h2{
+    margin-top: 0;
     text-align: center;
     font-family: 'Viaoda Libre', cursive;
     padding-bottom: 2%;

@@ -29,15 +29,15 @@
           ],
           Images:[
             {
-              src: "14.jpg",
+              src: "LandingPage/14.jpg",
               alt: "Накладка_на_2_розетки",
             },
             {
-              src: "17.jpg",
+              src: "LandingPage/17.jpg",
               alt: "Накладка_на_ночник",
             },
             {
-              src: "11.jpg",
+              src: "LandingPage/11.jpg",
               alt: "Накладка_на_выключатель",
             },
           ],
