@@ -7,12 +7,12 @@
         <ol class="text">
           <li v-for="type in TypesOfServices" :key="type.index">{{type.type}}</li>
         </ol>
-        <h4 class="emphasized">Лицензии:</h4>
+        <h4 class="emphasized text">Лицензии:</h4>
         <p class="text">Действующие лицензии частного охранного предприятия “ООО Валенсия” на право оказания охранных услуг: </p>
         <div class="flex-container">
           <img v-for="img in Licenses" :src="img.img_src" :alt="img.img_alt"/>
         </div>
-        <h4 class="emphasized">Благодарные и рекомендательные письма:</h4>
+        <h4 class="emphasized text">Благодарные и рекомендательные письма:</h4>
         <p class="text">Наивысшей наградой являются благодарные и рекомендательные письма наших Клиентов о частном охранном предприятии “ООО Валенсия”:</p>
         <div class="flex-container">
           <img v-for="img in ThanksgivingLetters" :src="img.img_src" :alt="img.img_alt"/>
