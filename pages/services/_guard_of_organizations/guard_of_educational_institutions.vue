@@ -2,20 +2,14 @@
   <div id="guard_of_educational_institutions" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <b-row>
-        <b-col>
-          <img src="../../../static/services/guard_of_organizations/005.jpg">
-        </b-col>
-        <b-col cols="7">
-          <p class="text"><b>Образовательные и дошкольные учреждения</b>- это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
-          <div class="import">
-            <div class="li_text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">
-              <component :is="guard.svg"/>{{guard.name}}
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-      <h6>Особенности охраны образовательных и дошкольных учреждений:</h6>
+      <img src="../../../static/services/guard_of_organizations/005.jpg" class="first_img">
+      <p class="text"><b>Образовательные и дошкольные учреждения</b>- это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
+      <div class="import">
+        <div class="li_text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">
+          <component :is="guard.svg"/>{{guard.name}}
+        </div>
+      </div>
+      <h6 class="block_two">Особенности охраны образовательных и дошкольных учреждений:</h6>
       <b-row>
         <b-col v-for="feature in GuardOfEducationalInstitutionFeatures" :key="feature.index">
           <ul class="text">

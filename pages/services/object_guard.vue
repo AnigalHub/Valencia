@@ -2,17 +2,13 @@
   <div id="object_guard" class="page services services_with_types">
       <Name_page :name_page="name_page"/>
       <b-container>
-        <b-row>
-          <b-col><img src="../../static/services/object_guard/377.jpg"></b-col>
-          <b-col cols="7">
-            <p class="text"><span class="emphasized">Охрана объектов </span>- комплексное обеспечение защиты производственного или коммерческого объекта, товарно-материальных ценностей и защиту здоровья сотрудников объекта. Для обеспечения безопасности объекта разрабатывается проект со всеми особенностями и характером деятельности бизнеса и его графиком работы.</p>
-            <p class="text"><u>При составлении проекта работы охранников учитывается:</u></p>
-                <ul class="text">
-                  <li v-for="nuance in NuancesOfWork" :key="nuance.index">{{nuance.name}}</li>
-                </ul>
-          </b-col>
-        </b-row>
-        <h6>Разновидности охраны объектов:</h6>
+        <img src="../../static/services/object_guard/377.jpg" class="first_img">
+        <p class="text"><span class="emphasized">Охрана объектов </span>- комплексное обеспечение защиты производственного или коммерческого объекта, товарно-материальных ценностей и защиту здоровья сотрудников объекта. Для обеспечения безопасности объекта разрабатывается проект со всеми особенностями и характером деятельности бизнеса и его графиком работы.</p>
+        <p class="text"><u>При составлении проекта работы охранников учитывается:</u></p>
+        <ul class="text">
+          <li v-for="nuance in NuancesOfWork" :key="nuance.index">{{nuance.name}}</li>
+        </ul>
+        <h6 class="block_two">Разновидности охраны объектов:</h6>
         <div class="flex-container">
           <div class="type_guard_beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
             <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>

@@ -2,18 +2,14 @@
   <div id="guard_private_property" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <b-row>
-        <b-col>
-          <img src="../../../static/services/guard_of_real_estate/988.jpg">
-        </b-col>
-        <b-col cols="7">
-          <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
-              <div class="li_text" v-for="name in GuardPrivateProperty">
-                <component :is="name.svg"/>{{name.name}}
-              </div>
-        </b-col>
-      </b-row>
-      <b-row class="im_descr">
+      <img src="../../../static/services/guard_of_real_estate/988.jpg" class="first_img">
+        <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
+        <div class="import">
+          <div class="li_text" v-for="name in GuardPrivateProperty">
+            <component :is="name.svg"/>{{name.name}}
+          </div>
+        </div>
+      <b-row class="im_descr block_two">
         <b-col cols="8">
           <h6>Круг обязанностей охранников частных объектов:</h6>
               <ul class="text">
@@ -41,7 +37,7 @@
           name_page: "Охрана частных объектов",
           GuardPrivateProperty:[
             {name:"Охрана коттеджей и коттеджных поселков",svg:Guard_shieldSVG},
-            {name:"Охрана ТСЖ, жилых комплексов и многоквартирных домов",svg:Guard_shieldSVG},
+            {name:"Охрана жилых комплексов и многоквартирных домов",svg:Guard_shieldSVG},
             {name:"Охрана часных домов и загородных резиденций",svg:Guard_shieldSVG},
             {name:"Охрана дач и дачных поселков",svg:Guard_shieldSVG},
           ],

@@ -2,20 +2,14 @@
   <div id="guard_of_industrial_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <b-row>
-        <b-col>
-          <img src="../../../static/services/object_guard/object_22.jpg">
-        </b-col>
-        <b-col cols="7">
-          <p class="text"><b>Промышленный объект</b> - предприятие, агрегат, участок или цех, используемый для осуществления промышленной деятельности, который относится к категории опасных производственных объектов нашей страны.</p>
-          <div class="import">
-            <div class="li_text" v-for="guard in GuardOfIndustrialFacilities" :key="guard.index">
-                <component :is="guard.svg"/>{{guard.name}}
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row class="im_descr">
+      <img src="../../../static/services/object_guard/object_22.jpg" class="first_img">
+      <p class="text"><b>Промышленный объект</b> - предприятие, агрегат, участок или цех, используемый для осуществления промышленной деятельности, который относится к категории опасных производственных объектов нашей страны.</p>
+      <div class="import">
+        <div class="li_text" v-for="guard in GuardOfIndustrialFacilities" :key="guard.index">
+          <component :is="guard.svg"/>{{guard.name}}
+        </div>
+      </div>
+      <b-row class="im_descr block_two">
         <b-col cols="8">
           <h6>Круг обязанностей охранников коммерческих объектов:</h6>
           <ul class="text">
@@ -44,10 +38,10 @@
           GuardOfIndustrialFacilities:[
             {name:"Охрана предприятий",svg:Guard_shieldSVG},
             {name:"Охрана производства",svg:Guard_shieldSVG},
-            {name:"Охрана заводов",svg:Guard_shieldSVG},
             {name:"Охрана строительных объектов",svg:Guard_shieldSVG},
             {name:"Охрана фабрик",svg:Guard_shieldSVG},
-            {name:"Охрана складов и складских помещений",svg:Guard_shieldSVG},
+            {name:"Охрана заводов",svg:Guard_shieldSVG},
+            {name:"Охрана складов",svg:Guard_shieldSVG},
           ],
           DutiesGuardOfIndustrialFacilities:[
             {duty:"защита сотрудников, работающих на промышленном объекте;",},

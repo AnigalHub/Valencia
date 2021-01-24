@@ -2,17 +2,15 @@
   <div id="guard_of_organizations" class="page services services_with_types">
     <Name_page :name_page="name_page" />
     <b-container>
-      <b-row>
-        <b-col><img src="../../static/services/guard_of_organizations/422212508651055_cea3.jpg"></b-col>
-        <b-col cols="7">
-          <p class="text"><span class="emphasized">Охрана организаций</span> предусматривает комплекс мер, направленных на обеспечение безопасности функционирования объекта, сохранности материального имущества, информационной безопасности, защиту жизни и здоровья лиц организации.</p>
-          <p class="text"><u>Охрана организаций надежно защитит вас от:</u></p>
-          <ul class="text">
-            <li v-for="paragraph in DefenceFrom" :key="paragraph.index">{{paragraph.paragraph}}</li>
-          </ul>
-        </b-col>
-      </b-row>
-      <h6>Разновидности охраны организаций:</h6>
+      <div class="description_services">
+        <img src="../../static/services/guard_of_organizations/422212508651055_cea3.jpg" class="first_img">
+        <p class="text"><span class="emphasized">Охрана организаций</span> предусматривает комплекс мер, направленных на обеспечение безопасности функционирования объекта, сохранности материального имущества, информационной безопасности, защиту жизни и здоровья лиц организации.</p>
+        <p class="text"><u>Охрана организаций надежно защитит вас от:</u></p>
+        <ul class="text">
+          <li v-for="paragraph in DefenceFrom" :key="paragraph.index">{{paragraph.paragraph}}</li>
+        </ul>
+      </div>
+      <h6 class="block_two">Разновидности охраны организаций:</h6>
       <div class="flex-container">
         <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
           <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>
@@ -49,11 +47,10 @@
         return {
           name_page: "Охрана организаций",
           DefenceFrom: [
-            {paragraph: "незаконного проникновения;",},
-            {paragraph: "кражи имущества;",},
-            {paragraph: "утечки информации;",},
-            {paragraph: "противоправных действий;",},
-            {paragraph: "нарушения общественного порядка.",}
+            {paragraph: "незаконного проникновения на территорию организации;",},
+            {paragraph: "кражи имущества, вандализма - осквернения здания;",},
+            {paragraph: "утечки кофиденцальной информации;",},
+            {paragraph: "противоправных действий, нарушения общественного порядка.",}
           ],
           TypesOfGuard: [
             {

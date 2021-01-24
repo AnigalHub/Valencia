@@ -2,17 +2,13 @@
   <div id="cargo_escort" class="page services">
     <Name_page :name_page="name_page"/>
       <b-container>
-        <b-row>
-          <b-col><img src="../../static/services/cargo_escort/escort_2.jpg"></b-col>
-          <b-col cols="7">
-            <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
-            <h6>Опасности при передвижении груза:</h6>
-            <ul class="text">
-              <li v-for="danger in DangersWhenDriving" :key="danger.index">{{danger.danger}}</li>
-            </ul>
-          </b-col>
-        </b-row>
-        <b-row>
+       <img src="../../static/services/cargo_escort/escort_2.jpg" class="first_img">
+        <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
+        <h6>Опасности при передвижении груза:</h6>
+        <ul class="text">
+          <li v-for="danger in DangersWhenDriving" :key="danger.index">{{danger.danger}}</li>
+        </ul>
+        <b-row class="block_two">
           <b-col>
             <h6>Наша компания занимается сопровождением:</h6>
             <ul class="text">

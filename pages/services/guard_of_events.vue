@@ -2,26 +2,21 @@
   <div id="guard_of_events" class="page services">
     <Name_page :name_page="name_page"/>
       <b-container>
+         <img src="../../static/services/guard_of_events/events_1.jpg" class="first_img">
+        <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.</p>
+        <h6>Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
+        <ul class="text">
+          <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
+        </ul>
+        <h6 class="block_two">Перечень мер по охране мероприятий:</h6>
         <b-row>
-          <b-col><img src="../../static/services/guard_of_events/events_1.jpg"></b-col>
-          <b-col cols="7">
-            <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.
-            </p>
-            <h6>Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
+          <b-col>
             <ul class="text">
-              <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
+              <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
             </ul>
           </b-col>
+          <b-col cols="4"><img src="../../static/services/guard_of_events/events_3.jpg"><img src="../../static/services/guard_of_events/events_2.png"></b-col>
         </b-row>
-            <h6>Перечень мер по охране мероприятий:</h6>
-            <b-row>
-              <b-col>
-                <ul class="text">
-                  <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
-                </ul>
-              </b-col>
-              <b-col cols="4"><img src="../../static/services/guard_of_events/events_3.jpg"><img src="../../static/services/guard_of_events/events_2.png"></b-col>
-            </b-row>
         <Tarrifs_content/>
       </b-container>
   </div>

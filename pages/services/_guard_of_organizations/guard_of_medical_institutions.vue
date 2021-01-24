@@ -2,20 +2,14 @@
   <div id="guard_of_medical_institutions" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <b-row>
-        <b-col>
-          <img src="../../../static/services/guard_of_organizations/000004.jpg">
-        </b-col>
-        <b-col cols="7">
-          <p class="text"><b>Медицинские учреждения</b> - это организации с наличием дорогостоящего оборудования и дефицитных лекарственных препаратов: наркотических, спиртосодержащих и предписанных строго по рецепту врачей. Из-за специализации в медучреждениях проблема безопасности очень актуальна, как и соблюдение режима работы и предупреждение чрезвычайных ситуаций.</p>
-          <div class="import">
-            <div class="li_text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">
-              <component :is="guard.svg"/>{{guard.name}}
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-      <h6>Особенности охраны медучреждений:</h6>
+      <img src="../../../static/services/guard_of_organizations/000004.jpg" class="first_img">
+      <p class="text"><b>Медицинские учреждения</b> - это организации с наличием дорогостоящего оборудования и дефицитных лекарственных препаратов: наркотических, спиртосодержащих и предписанных строго по рецепту врачей. Из-за специализации в медучреждениях проблема безопасности очень актуальна, как и соблюдение режима работы и предупреждение чрезвычайных ситуаций.</p>
+      <div class="import">
+        <div class="li_text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">
+          <component :is="guard.svg"/>{{guard.name}}
+        </div>
+      </div>
+      <h6 class="block_two">Особенности охраны медучреждений:</h6>
       <b-row>
         <b-col v-for="feature in GuardOfMedicalInstitutionsFeatures" :key="feature.index">
           <ul class="text">

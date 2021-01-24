@@ -2,19 +2,13 @@
   <div id="bodyguard" class="page services">
     <Name_page :name_page="name_page"/>
       <b-container>
-        <b-row>
-          <b-col><img src="../../static/services/bodyguard/bodyguard.jpg"></b-col>
-          <b-col cols="7">
-            <p class="text"><span class="emphasized">Личная охрана</span> - профессиональная охрана, обеспечивающая безопасность жизни и здоровья Клиента и конфиденциальность информации.</p>
-            <p class="text">Охранники личной охраны - настоящие профессионалы своего дела, прошедшие полную систему подготовки и жесткий отбор до собеседования с клиентом.</p>
-            <h6>Режимы работы личной охраны:</h6>
-            <ul class="text">
-              <li v-for="mode in Modes" :key="mode.index">{{mode.mode}}</li>
-            </ul>
-          </b-col>
-        </b-row>
-
-        <b-row>
+        <img src="../../static/services/bodyguard/bodyguard.jpg" class="first_img">
+        <p class="text"><span class="emphasized">Личная охрана</span> - профессиональная охрана, обеспечивающая безопасность жизни и здоровья Клиента и конфиденциальность информации. Охранники личной охраны настоящие профессионалы своего дела, прошедшие полную систему подготовки и жесткий отбор до собеседования с клиентом.</p>
+        <h6>Режимы работы личной охраны:</h6>
+        <ul class="text">
+          <li v-for="mode in Modes" :key="mode.index">{{mode.mode}}</li>
+        </ul>
+        <b-row class="block_two">
           <b-col>
             <h6>Разновидности личной охраны:</h6>
             <ul class="text">

@@ -2,20 +2,14 @@
   <div id="guard_of_municipal_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <b-row>
-        <b-col>
-          <img src="../../../static/services/guard_of_organizations/344.jpg">
-        </b-col>
-        <b-col cols="7">
-          <p class="text"><b>Муниципальные объекты (госучреждения) </b> - это организации особого назначения, которые выполняют разнообразные задачи некоммерческого характера, для всеобщего блага и развития граждан. Безопасность госучреждений влияет на защищенность информации и имущества, для полного функционирования таких объектов необходима надежная охрана.
-          <div class="import">
-            <div class="li_text" v-for="guard in GuardOfMunicipalFacilities" :key="guard.index">
-              <component :is="guard.svg"/>{{guard.name}}
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-      <h6>Особенности охраны госучреждений:</h6>
+      <img src="../../../static/services/guard_of_organizations/344.jpg" class="first_img">
+      <p class="text"><b>Муниципальные объекты (госучреждения) </b> - это организации особого назначения, которые выполняют разнообразные задачи некоммерческого характера, для всеобщего блага и развития граждан. Безопасность госучреждений влияет на защищенность информации и имущества, для полного функционирования таких объектов необходима надежная охрана.
+      <div class="import">
+        <div class="li_text" v-for="guard in GuardOfMunicipalFacilities" :key="guard.index">
+          <component :is="guard.svg"/>{{guard.name}}
+        </div>
+      </div>
+      <h6 class="block_two">Особенности охраны госучреждений:</h6>
       <b-row>
         <b-col v-for="feature in  GuardOfMunicipalFacilitiesFeatures" :key="feature.index">
           <ul class="text">
@@ -51,8 +45,9 @@
           name_page: "Охрана муниципальных объектов - госучреждений",
           GuardOfMunicipalFacilities:[
             {name:"Охрана административных зданий",svg:Guard_shieldSVG},
-            {name:"Охрана музеев и театров",svg:Guard_shieldSVG},
             {name:"Охрана библиотек",svg:Guard_shieldSVG},
+            {name:"Охрана музеев и театров",svg:Guard_shieldSVG},
+
             {name:"Охрана церквей",svg:Guard_shieldSVG},
           ],
           GuardOfMunicipalFacilitiesFeatures:[

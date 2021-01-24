@@ -2,18 +2,13 @@
   <div id="guard_of_real_estate" class="page services services_with_types">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <b-row>
-        <b-col><img src="../../static/services/guard_of_real_estate/estate.jpg"></b-col>
-        <b-col cols="7">
-          <p class="text"><span class="emphasized">Профессиональная охрана недвижимости </span> позволяет владельцам объекта работать и отдыхать спокойно. Наша организация гарантирует полную безопасность посетителей и персонала, а также сохранность имущества всего здания.
-          </p>
-          <p class="text"><u>Методы работы охраны недвижимости подбираются отдельно под каждый объект, учитывая:</u></p>
-          <ul class="text">
-            <li v-for="name_metod in WorkingMethods" :key="name_metod.index">{{name_metod.name_metod}}</li>
-          </ul>
-        </b-col>
-      </b-row>
-      <h6>Разновидности охраны недвижимости:</h6>
+     <img src="../../static/services/guard_of_real_estate/estate.jpg" class="first_img">
+      <p class="text"><span class="emphasized">Профессиональная охрана недвижимости </span> позволяет владельцам объекта работать и отдыхать спокойно. Наша организация гарантирует полную безопасность посетителей и персонала, а также сохранность имущества всего здания.</p>
+      <p class="text"><u>Методы работы охраны недвижимости подбираются отдельно под каждый объект, учитывая:</u></p>
+      <ul class="text">
+        <li v-for="name_metod in WorkingMethods" :key="name_metod.index">{{name_metod.name_metod}}</li>
+      </ul>
+      <h6 class="block_two">Разновидности охраны недвижимости:</h6>
       <div class="flex-container">
         <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
           <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>
