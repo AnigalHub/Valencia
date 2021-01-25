@@ -17,10 +17,10 @@
           </ul>
         </b-col>
       </b-row>
-      <b-row class="im_descr">
-        <b-col cols="8">
+      <div class="im_descr">
           <h6>Комплекс мероприятий охраны медицинских организаций:</h6>
-          <ul class="text">
+        <img src="../../../static/services/guard_of_organizations/polozhenie-o-videonablyudenii-v-bolnice_2.jpg" >
+        <ul class="text">
             <li v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">{{duty.duty}}</li>
             <ul v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">
               <li v-for="name_duty in duty.subordination" :key="name_duty.index">
@@ -28,11 +28,7 @@
               </li>
             </ul>
           </ul>
-        </b-col>
-        <b-col>
-          <img src="../../../static/services/guard_of_organizations/polozhenie-o-videonablyudenii-v-bolnice_2.jpg" >
-        </b-col>
-      </b-row>
+      </div>
       <Tarrifs_content/>
     </b-container>
   </div>

@@ -9,17 +9,13 @@
             <component :is="name.svg"/>{{name.name}}
           </div>
         </div>
-      <b-row class="im_descr block_two">
-        <b-col cols="8">
-          <h6>Круг обязанностей охранников частных объектов:</h6>
-              <ul class="text">
-                <li v-for="name_duty in DutiesGuardPrivateProperty" :key="name_duty.index">{{name_duty.duty}}</li>
-              </ul>
-        </b-col>
-        <b-col>
-          <img src="../../../static/services/guard_of_real_estate/677.jpg" >
-        </b-col>
-      </b-row>
+      <div class="im_descr">
+        <h6>Круг обязанностей охранников частных объектов:</h6>
+        <img src="../../../static/services/guard_of_real_estate/677.jpg" >
+        <ul class="text">
+          <li v-for="name_duty in DutiesGuardPrivateProperty" :key="name_duty.index">{{name_duty.duty}}</li>
+        </ul>
+      </div>
       <Tarrifs_content/>
     </b-container>
   </div>

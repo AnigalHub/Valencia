@@ -17,17 +17,13 @@
           </ul>
         </b-col>
       </b-row>
-      <b-row class="im_descr">
-        <b-col cols="8">
-          <h6>Комплекс мероприятий охраны учебных заведений:</h6>
+      <div class="im_descr">
+        <h6>Комплекс мероприятий охраны учебных заведений:</h6>
+        <img src="../../../static/services/guard_of_organizations/image-5.jpg">
           <ul class="text">
             <li v-for="duty in DutiesGuardOfEducationalInstitutionFeatures" :key="duty.index">{{duty.duty}}</li>
           </ul>
-        </b-col>
-        <b-col>
-          <img src="../../../static/services/guard_of_organizations/image-5.jpg" >
-        </b-col>
-      </b-row>
+      </div>
       <Tarrifs_content/>
     </b-container>
   </div>
