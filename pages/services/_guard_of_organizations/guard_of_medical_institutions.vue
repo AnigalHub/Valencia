@@ -2,7 +2,7 @@
   <div id="guard_of_medical_institutions" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_organizations/000004.jpg" class="first_img">
+      <img src="../../../static/services/guard_of_organizations/guard_of_medical_institutions.jpg" alt="охрана_медицинских_учреждений" class="first_img">
       <p class="text"><b>Медицинские учреждения</b> - это организации с наличием дорогостоящего оборудования и дефицитных лекарственных препаратов: наркотических, спиртосодержащих и предписанных строго по рецепту врачей. Из-за специализации в медучреждениях проблема безопасности очень актуальна, как и соблюдение режима работы и предупреждение чрезвычайных ситуаций.</p>
       <div class="import">
         <div class="li_text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">
@@ -19,7 +19,7 @@
       </b-row>
       <div class="im_descr">
           <h6>Комплекс мероприятий охраны медицинских организаций:</h6>
-        <img src="../../../static/services/guard_of_organizations/polozhenie-o-videonablyudenii-v-bolnice_2.jpg" >
+        <img src="../../../static/services/guard_of_organizations/hospital.jpg" alt="больница">
         <ul class="text">
             <li v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">{{duty.duty}}</li>
             <ul v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">

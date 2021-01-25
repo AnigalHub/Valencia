@@ -9,7 +9,7 @@
               <template v-slot:cell(econom)="{item}">
                 <h4>{{item.econom.name}}</h4>
                 <div class="text">{{item.econom.descr_name}}</div>
-                <img :src="item.econom.src">
+                <img :src="item.econom.src" :alt="item.econom.alt">
                 <p class="text">{{item.econom.descr}}</p>
                 <b-row>
                   <b-col cols="2">
@@ -27,7 +27,7 @@
           <b-col>
             <b-table class="text" hover :items="items2" :fields="fields2">
               <template v-slot:cell(standart)="{item}">
-                <img :src="item.standart.src">
+                <img :src="item.standart.src" :alt="item.standart.alt">
                 <h4>{{item.standart.name}}</h4>
                 <div class="text">{{item.standart.descr_name}}</div>
                 <p class="text">{{item.standart.descr}}</p>
@@ -47,7 +47,7 @@
           <b-col>
             <b-table class="text" hover :items="items3" :fields="fields3">
               <template v-slot:cell(premium)="{item}">
-                <img :src="item.premium.src">
+                <img :src="item.premium.src" :alt="item.premium.alt">
                 <h4>{{item.premium.name}}</h4>
                 <div class="text">{{item.premium.descr_name}}</div>
                 <p class="text">{{item.premium.descr}}</p>
@@ -93,7 +93,8 @@
           items: [
             {
               econom:{
-                src:'./security_ohr.jpeg',
+                src:'./type_1.jpeg',
+                alt:"тип_охранны_1",
                 descr:'Сотрудники со среднем телосложением, имеющие разряд не выше 5-го, с опытом работы от 1 года, обученные для выполнения общенаблюдательных функций и обеспечения пропускного режима',
               }
             },
@@ -150,7 +151,8 @@
           items2: [
             {
               standart:{
-                src:'./security_ohr_2.jpg',
+                src:'./type_2.jpg',
+                alt:"тип_охранны_2",
                 descr:'Сотрудники, обладающие хорошими физическими качествами и спецнавыками, имеющие разряд 5-6, с опытом работы от 3 лет, подготовлены для выполнения контрольно-пропускного режима, работы с техническими средствами '
               }
             },
@@ -207,7 +209,8 @@
           items3: [
             {
               premium: {
-                src:'./security_oht_3.jpg',
+                src:'./type_3.jpg',
+                alt:"тип_охранны_3",
                 descr: 'Сотрудники, строго до 45-лет, крепкого телосложения и презентабельной внешности, имеющие 6-ой разряд, с опытом работы от 5-лет, обученные для выполнения особо сложных задач'
               }
             },

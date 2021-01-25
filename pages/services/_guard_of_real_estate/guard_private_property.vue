@@ -2,7 +2,7 @@
   <div id="guard_private_property" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_real_estate/988.jpg" class="first_img">
+      <img src="../../../static/services/guard_of_real_estate/place_of_guard.jpg" alt="рабочее_место_охраны(кпп)" class="first_img">
         <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
         <div class="import">
           <div class="li_text" v-for="name in GuardPrivateProperty">
@@ -11,7 +11,7 @@
         </div>
       <div class="im_descr">
         <h6>Круг обязанностей охранников частных объектов:</h6>
-        <img src="../../../static/services/guard_of_real_estate/677.jpg" >
+        <img src="../../../static/services/guard_of_real_estate/guard_private_property.jpg" alt="охрана_частных_объектов">
         <ul class="text">
           <li v-for="name_duty in DutiesGuardPrivateProperty" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>

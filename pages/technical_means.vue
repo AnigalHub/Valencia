@@ -35,7 +35,7 @@
           СlassificationTechnicalMeans:[
             {
               name_technical_means:"Пожарная сигнализация:",
-              img_src:"../technical_means/pogar.jpg",
+              img_src:"../technical_means/fire_alarm.jpg",
               img_alt:"пожарная_сигнализация",
               list:[
                 {paragraph:"датчики задымления и температуры;"},
@@ -47,7 +47,7 @@
             },
             {
               name_technical_means:"Система контроля управления доступом:",
-              img_src:"../technical_means/control.jpg",
+              img_src:"../technical_means/access_control.jpg",
               img_alt:"контроль_доступа",
               list:[
                 {paragraph:"электромагнитные замки;"},
@@ -59,7 +59,7 @@
             },
             {
               name_technical_means:"Охранная сигнализация:",
-              img_src:"../technical_means/ohr.png",
+              img_src:"../technical_means/guard_alarm.png",
               img_alt:"охранная_сигнализация",
               list:[
                 {paragraph:"контрольная панель;"},
@@ -71,7 +71,7 @@
             },
             {
               name_technical_means:"Тревожная сигнализация:",
-              img_src:"../technical_means/knopka.jpg",
+              img_src:"../technical_means/alarm_signaling.jpg",
               img_alt:"тревожная_сигнализация",
               list:[
                 {paragraph:"контрольная панель;"},
@@ -81,7 +81,7 @@
             },
             {
               name_technical_means:"Технические средства пультовой охраны:",
-              img_src:"../technical_means/pult.jpg",
+              img_src:"../technical_means/console_guard.jpg",
               img_alt:"пультовая_охрана",
               list:[
                 {paragraph:"датчики состояния охраняемого объекта;"},
@@ -91,7 +91,7 @@
             },
             {
               name_technical_means:"Система видеоналюдения:",
-              img_src:"../technical_means/video.jpg",
+              img_src:"../technical_means/cctv.jpg",
               img_alt:"видеонаблюдение",
               list:[
                 {paragraph:"камеры;"},

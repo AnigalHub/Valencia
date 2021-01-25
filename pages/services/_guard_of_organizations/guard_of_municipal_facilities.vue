@@ -2,7 +2,7 @@
   <div id="guard_of_municipal_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_organizations/344.jpg" class="first_img">
+      <img src="../../../static/services/guard_of_organizations/guard_of_municipal_facilities.jpg" alt="охрана_муниципальных_объектов" class="first_img">
       <p class="text"><b>Муниципальные объекты (госучреждения) </b> - это организации особого назначения, которые выполняют разнообразные задачи некоммерческого характера, для всеобщего блага и развития граждан. Безопасность госучреждений влияет на защищенность информации и имущества, для полного функционирования таких объектов необходима надежная охрана.
       <div class="import">
         <div class="li_text" v-for="guard in GuardOfMunicipalFacilities" :key="guard.index">
@@ -19,7 +19,7 @@
       </b-row>
       <div class="im_descr">
         <h6>Комплекс мероприятий охраны муниципальных объектов:</h6>
-        <img src="../../../static/services/guard_of_organizations/my.jpg" >
+        <img src="../../../static/services/guard_of_organizations/gallery.jpg" alt="галлерея">
         <ul class="text">
           <li v-for="duty in DutiesGuardOfMunicipalFacilities" :key="duty.index">{{duty.duty}}</li>
         </ul>

@@ -2,7 +2,7 @@
   <div id="cargo_escort" class="page services">
     <Name_page :name_page="name_page"/>
       <b-container>
-       <img src="../../static/services/cargo_escort/escort_2.jpg" class="first_img">
+       <img src="../../static/services/cargo_escort/cargo_escort.jpg" alt="сопровождение грузов" class="first_img">
         <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
         <h6>Опасности при передвижении груза:</h6>
         <ul class="text">
@@ -15,10 +15,10 @@
               <li v-for="type in TypesOfCargo" :key="type.index"><i><b>{{type.type}}</b></i>{{type.descr_type}}</li>
             </ul>
           </b-col>
-          <b-col cols="3"><img src="../../static/services/cargo_escort/escort_3.jpg"></b-col>
+          <b-col cols="3"><img src="../../static/services/cargo_escort/types_of_cargo.jpg" alt="типы_грузов"></b-col>
         </b-row>
         <b-row>
-          <b-col cols="4"><img src="../../static/services/cargo_escort/escort_1.jpg"></b-col>
+          <b-col cols="4"><img src="../../static/services/cargo_escort/guard_cargo.jpg" alt="защита_грузов"></b-col>
           <b-col>
             <h6>Структура сопровождения грузов:</h6>
             <ul class="text">

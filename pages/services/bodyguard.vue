@@ -2,7 +2,7 @@
   <div id="bodyguard" class="page services">
     <Name_page :name_page="name_page"/>
       <b-container>
-        <img src="../../static/services/bodyguard/bodyguard.jpg" class="first_img">
+        <img src="../../static/services/bodyguard/bodyguard.jpg" alt="личная_охрана" class="first_img">
         <p class="text"><span class="emphasized">Личная охрана</span> - профессиональная охрана, обеспечивающая безопасность жизни и здоровья Клиента и конфиденциальность информации. Охранники личной охраны настоящие профессионалы своего дела, прошедшие полную систему подготовки и жесткий отбор до собеседования с клиентом.</p>
         <h6>Режимы работы личной охраны:</h6>
         <ul class="text">
@@ -16,12 +16,12 @@
             </ul>
           </b-col>
           <b-col cols="3">
-            <img src="../../static/services/bodyguard/bodyguard_2.jpg">
+            <img src="../../static/services/bodyguard/child_bodyguard.jpg" alt="личная_охрана_детей">
           </b-col>
         </b-row>
         <b-row>
           <b-col cols="4">
-            <img src="../../static/services/bodyguard/bodyguard_3.jpg">
+            <img src="../../static/services/bodyguard/bodyguard_driver.jpg" alt="личная_охрана_водитель">
           </b-col>
           <b-col>
             <h6>Обязанности личной охраны:</h6>

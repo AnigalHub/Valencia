@@ -2,7 +2,7 @@
   <div id="guard_of_real_estate" class="page services services_with_types">
     <Name_page :name_page="name_page"/>
     <b-container>
-     <img src="../../static/services/guard_of_real_estate/estate.jpg" class="first_img">
+     <img src="../../static/services/guard_of_real_estate/guard_of_real_estate.jpg" alt="охрана_недвижимости" class="first_img">
       <p class="text"><span class="emphasized">Профессиональная охрана недвижимости </span> позволяет владельцам объекта работать и отдыхать спокойно. Наша организация гарантирует полную безопасность посетителей и персонала, а также сохранность имущества всего здания.</p>
       <p class="text"><u>Методы работы охраны недвижимости подбираются отдельно под каждый объект, учитывая:</u></p>
       <ul class="text">
@@ -53,7 +53,7 @@
           TypesOfGuard:[
             { name:"Охрана коммерческих объектов",
               svg:Guard_shield_typesSVG,
-              img_src:"./133.jpg",
+              img_src:"./guard_of_commercial_object.jpg",
               img_alt:"охрана_коммерческих_объектов",
               list:[
                 {guard:"Охрана банков"},
@@ -67,7 +67,7 @@
             },
             { name:"Охрана частных объектов",
               svg:Guard_shield_typesSVG,
-              img_src:"./988.jpg",
+              img_src:"./place_of_guard.jpg",
               img_alt:"охрана_частных_объектов",
               list:[
                 {guard:"Охрана коттеджей и коттеджных поселков"},

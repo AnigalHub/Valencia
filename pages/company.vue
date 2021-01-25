@@ -4,7 +4,7 @@
       <b-container>
         <b-row>
           <b-col cols="5">
-            <img src="../static/company/733.jpg" alt="компания_валенсия">
+            <img src="../static/company/chevron.jpg" alt="компания_валенсия">
           </b-col>
           <b-col>
             <p class="text"><span class="emphasized">«ООО Валенсия» </span> - частное охранное предприятие, обеспечивающее комплексную безопасность личности, предпринимательской деятельности, мероприятий, и всех, кто нуждается в охране на всей территории во всех субъектах Российской Федерации.</p>
@@ -27,7 +27,7 @@
               </b-col>
             </b-row>
           </div>
-        <div><img src="../static/company/33.jpg" alt="охрана"></div>
+        <div><img src="../static/company/walkie_talkie.jpg" alt="охрана_пост"></div>
         </div>
         <h6>Наши специалисты также повышают свой уровень профессиональных навыков в специализированном центре:</h6>
         <ul class="text">
@@ -36,7 +36,7 @@
         <h6>Как мы работаем?</h6>
         <b-row class="stage">
           <b-col cols="5">
-            <img src="../static/company/888.jpg" alt="компания_валенсия">
+            <img src="../static/company/surveillance_by_cameras.jpg" alt="наблюдение_по_камерам">
             <div v-for="stage in StagesOfWorkPart1" :key="stage.index">
               <component :is="stage.svg"/>   <p class="emphasized text">{{stage.index}}. {{stage.name_stage}}</p>
               <p class="text">{{stage.descr_stage}}</p>
