@@ -20,6 +20,7 @@
   text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
   color: rgb(15, 37, 55);
   padding-bottom: 0.85%;
+  margin-bottom: -0.5%;
 }
 .emphasized{
   font-family: 'Vollkorn', serif;
@@ -308,48 +309,38 @@ h6{
     width: 48px;
     height: 50px;
   }
+   ul{
+    margin-left: -8%;
+  }
   .row:nth-child(4){
     padding-bottom: 1.5%;
   }
-  .row:nth-child(3), .row:nth-child(5){
-    ul{
-      margin-left: -8%;
+  .im_descr {
+    h6{
+      clear: left;
     }
-  }
-  .im_descr .col{
-    padding: 5% 0 0 0 !important;
-  }
-  .col-4{
-    padding: 6% 0 0 0 !important;
-  }
-  .col .col{
-    padding: 0 5px !important;
-  }
-  .import ul{
-    margin-left: -8%;
+    img{
+      width: 32.5%;
+      float: right;
+      margin-bottom: 2%;
+      margin-left: 1%;
+      margin-right: 5%;
+    }
+    ul{
+      margin-left: -3%;
+    }
   }
 }
 #guard_of_educational_institutions,
 #guard_of_medical_institutions,
 #guard_of_municipal_facilities{
-  h6{
-    margin-left: 20px !important;
-  }
+
   .row h6{
     margin-left: 0 !important;
   }
 }
-#guard_of_commercial_objects{
-  .import .col{
-    padding: 0 !important;
-  }
-  .import .col:last-child{
-    margin-left: -5%;
-  }
-}
-@media screen and (max-width: 300px) {
 
-}
+
 @media screen and (max-width: 500px) {
   h1{
     padding-left: 0;
@@ -381,11 +372,22 @@ h6{
       clear: left;
     }
   }
-  .types_of_guard {
-    #guard_shield_svg {
+  .types_of_guard{
+    #guard_shield_svg{
       margin-top: -1%;
       width: 30px;
       height: 30px;
+    }
+    .im_descr {
+      img{
+        width: 65%;
+        margin-right: 0;
+        margin-left: 0.5%;
+        float: none;
+      }
+      ul{
+        margin-left: -12% ;
+      }
     }
   }
   .page ul{
@@ -412,6 +414,7 @@ h6{
     font-size: 1rem;
     line-height: 1.2rem;
     padding-bottom: 0.5%;
+    margin-bottom: -1.5%;
   }
   .services {
     .first_img {
@@ -427,11 +430,21 @@ h6{
       margin-right: 3%;
     }
   }
-  .types_of_guard {
-    #guard_shield_svg {
+  .types_of_guard{
+    #guard_shield_svg{
       margin-top: -1%;
       width: 35px;
       height: 35px;
+    }
+    .im_descr {
+      img{
+        width: 40%;
+        margin-right: 0;
+        margin-left: 0.5%;
+      }
+      ul{
+        margin-left: -8% ;
+      }
     }
   }
 }
@@ -455,11 +468,12 @@ h6{
     font-size: 1.15rem;
     line-height: 1.25rem;
     padding-bottom: 0.5%;
+    margin-bottom: -1.5%;
   }
   .services {
     .first_img {
       float: left;
-      width: 40%;
+      width: 45%;
       margin: 0 2% 0.5% 0;
     }
     .import,p:nth-child(3){
@@ -470,11 +484,21 @@ h6{
       margin-right: 7%;
     }
   }
-  .types_of_guard {
-    #guard_shield_svg {
+  .types_of_guard{
+    #guard_shield_svg{
       margin-top: -1%;
       width: 40px;
       height: 38px;
+    }
+    .im_descr {
+      img{
+        width: 37%;
+        margin-right: 0;
+        margin-left: 0.5%;
+      }
+      ul{
+        margin-left: -7% ;
+      }
     }
   }
   #technical_means{
@@ -508,6 +532,7 @@ h6{
     font-size: 1.15rem;
     line-height: 1.3rem;
     padding-bottom: 0.5%;
+    margin-bottom: -1.5%;
   }
   .services {
     .first_img {
@@ -519,11 +544,16 @@ h6{
       float: left;
     }
   }
-  .types_of_guard {
-    #guard_shield_svg {
+  .types_of_guard{
+    #guard_shield_svg{
       margin-top: -1%;
       width: 40px;
       height: 42px;
+    }
+    .im_descr {
+      img{
+        width: 33%;
+      }
     }
   }
   .page {
@@ -567,6 +597,7 @@ h6{
     font-size: 1.25rem;
     line-height: 1.4rem;
     padding-bottom: 0.5%;
+    margin-bottom: -1%;
   }
   .page {
     li {
@@ -580,11 +611,16 @@ h6{
       margin: 0 2% 0.5% 0;
     }
   }
-  .services_with_types {
-    #guard_shield_svg {
+  .types_of_guard{
+    #guard_shield_svg{
       margin-top: -1%;
-      width: 45px !important;
-      height: 46px !important;
+      width: 45px;
+      height: 46px;
+    }
+    .im_descr {
+      img{
+        width: 35%;
+      }
     }
   }
 }
