@@ -55,7 +55,6 @@ h2{
   text-shadow: none;
   background: transparent;
 }
-
 h6{
   font-family: 'Vollkorn', serif;
   font-weight: 800;
@@ -85,7 +84,6 @@ h6{
   background: rgba(250, 250, 250, 0.23);
   box-shadow: 0 0 3px 1px rgb(15, 37, 56);
 }
-
 #our_clients{
   .flex-container > div {
     width: 30%;
@@ -175,6 +173,14 @@ h6{
     background: rgba(28, 97, 146, 0.1);
     border-radius: 5px;
   }
+  .first_img{
+    float: left;
+    width: 40%;
+    margin: 0 2% 0.5% 0;
+  }
+  .block_two{
+    clear: left;
+  }
   .flex-container > div {
     width: 31%;
     margin: 0 0.8% 1.6% 0.8% !important;
@@ -186,6 +192,7 @@ h6{
     }
     img{
       box-shadow: none;
+      height: 100%;
     }
   }
   .stage{
@@ -362,6 +369,13 @@ h6{
     line-height: 1.2rem;
     margin-bottom: -1.5%;
   }
+  #company{
+    .first_img {
+      float: none;
+      width: 80%;
+      margin: 0 2% 2% 0;
+    }
+  }
   .services {
     .first_img {
       float: none;
@@ -422,6 +436,13 @@ h6{
     padding-bottom: 0.5%;
     margin-bottom: -1.5%;
   }
+  #company{
+    .first_img {
+      float: left;
+      width: 45%;
+      margin: 0 2% 0.5% 0;
+    }
+  }
   .services {
     .first_img {
       float: left;
@@ -481,6 +502,13 @@ h6{
     line-height: 1.25rem;
     padding-bottom: 0.5%;
     margin-bottom: -1.5%;
+  }
+  #company{
+    .first_img {
+      float: left;
+      width: 45%;
+      margin: 0 2% 0.5% 0;
+    }
   }
   .services {
     .first_img {
@@ -551,6 +579,36 @@ h6{
     line-height: 1.3rem;
     padding-bottom: 0.5%;
     margin-bottom: -1.5%;
+  }
+  #company{
+    .first_img {
+      float: left;
+      width: 40%;
+      margin: 0 2% 0.5% 0;
+    }
+    svg{
+      width: 60px;
+      height: 60px;
+    }
+    .flex-container > div {
+      width: 48%;
+      margin: 0 0.5% 1.2% 0.5% !important;
+      img{
+        height:145px;
+        padding: 0 10%;
+      }
+      .col{
+        padding-left: 0 !important;
+      }
+      .emphasized{
+        margin-bottom: 0.5rem !important;
+      }
+      svg {
+        float: left;
+        margin-left: -15%;
+        margin-top: 30%;
+      }
+    }
   }
   .services {
     .first_img {
@@ -635,6 +693,26 @@ h6{
   .page {
     li {
       padding-bottom: 0.5%;
+    }
+  }
+  #company{
+    .first_img {
+      float: left;
+      width: 44%;
+      margin: 0 2% 0.5% 0;
+    }
+    svg{
+      width: 65px;
+      height: 65px;
+    }
+    .flex-container > div {
+      width: 32%;
+      margin: 0 0.5% 1.2% 0.5% !important;
+      svg {
+        float: left;
+        margin-left: -45%;
+        margin-top: 130%;
+      }
     }
   }
   .services {
