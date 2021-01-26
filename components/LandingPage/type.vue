@@ -29,16 +29,16 @@
           ],
           Images:[
             {
-              src: "LandingPage/14.jpg",
-              alt: "Накладка_на_2_розетки",
+              src: "LandingPage/about_company.jpg",
+              alt: "о_компании",
             },
             {
-              src: "LandingPage/17.jpg",
-              alt: "Накладка_на_ночник",
+              src: "LandingPage/tariffs.jpg",
+              alt: "тарифы_компании",
             },
             {
-              src: "LandingPage/11.jpg",
-              alt: "Накладка_на_выключатель",
+              src: "LandingPage/thanksgiving_letters.jpg",
+              alt: "благодарственные_письма_компании",
             },
           ],
         }
