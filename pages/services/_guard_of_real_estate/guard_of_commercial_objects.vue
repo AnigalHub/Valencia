@@ -11,7 +11,7 @@
           </div>
         </b-col>
       </b-row>
-      <div class="im_descr">
+      <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
         <img src="../../../static/services/guard_of_real_estate/office.jpg" alt="офис">
         <ul class="text">

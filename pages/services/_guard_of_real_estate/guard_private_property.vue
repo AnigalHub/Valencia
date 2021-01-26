@@ -9,7 +9,7 @@
             <component :is="name.svg"/>{{name.name}}
           </div>
         </div>
-      <div class="im_descr">
+      <div class="im_descr block_two">
         <h6>Круг обязанностей охранников частных объектов:</h6>
         <img src="../../../static/services/guard_of_real_estate/guard_private_property.jpg" alt="охрана_частных_объектов">
         <ul class="text">

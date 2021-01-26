@@ -9,7 +9,7 @@
           <component :is="guard.svg"/>{{guard.name}}
         </div>
       </div>
-      <div class="im_descr">
+      <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
         <img src="../../../static/services/object_guard/object_check_by_cameras.jpg" alt="проверка_объекта_по_камерам">
         <ul class="text">
