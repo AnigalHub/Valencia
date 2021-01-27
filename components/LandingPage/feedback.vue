@@ -63,12 +63,7 @@
     text-shadow: 2px 5px 5px rgb(15, 37, 56);
     color: #cfdde8;
   }
-  label{
-    font-weight: 800;
-    font-size: 1.25rem;
-    text-shadow: 0.5px 0.5px 1px white;
-    color: rgb(15, 37, 56);
-  }
+
   .text{
     margin-top: 2%;
     font-family: 'Viaoda Libre', cursive;
@@ -80,42 +75,6 @@
   }
   .place_form{
     background: rgba(255, 255, 255, 0.35);
-    padding: 3%;
-    border-radius: 10px;
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
-    margin-top: 1.5%;
   }
-  input{
-    padding: 20px 10px;
-    min-height: 1.5rem;
-    margin-bottom: 1%;
-  }
-  input,textarea{
-    background: #cfdde8;
-    box-shadow: 2px 2px 2px rgb(15, 37, 56);
-    font-weight: 700;
-  }
-  input:hover, textarea:hover{
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
-  }
-  textarea{
-    height: 15vh !important;
-  }
-  button{
-    display: block;
-    margin: 3% auto 0 auto;
-    padding:  2%;
-    font-weight: 600;
-    font-family: "Tenor Sans", sans-serif;
-    font-size: 1.1rem;
-    border-width: 2px 0;
-    border-style: solid none;
-    border-color: rgb(15, 37, 56) rgb(15, 37, 56) rgb(15, 37, 56);
-    border-radius: 6px;
-    background:radial-gradient(#acb1c2, #afb3cb, rgba(64, 107, 139, 0.65));
-    box-shadow: 2px 2px 2px rgb(15, 37, 56);
-    transition: 0.2s;
-  }
-  button:hover { background: linear-gradient(#eee0d7, #eee0d7) #d6c8bf; }
-  button:active { background: linear-gradient(#b6a89f, #eee0d7) #d6c8bf; }
+
 </style>
