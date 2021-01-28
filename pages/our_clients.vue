@@ -15,7 +15,6 @@
 </template>
 
 <script>
-    import Secondary_pages from "../components/secondary_pages/secondary_pages.scss";
     import Name_page from "../components/secondary_pages/name_page";
     export default {
       name: "our_clients",

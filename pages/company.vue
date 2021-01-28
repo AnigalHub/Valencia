@@ -48,7 +48,6 @@
 </template>
 
 <script>
-    import Secondary_pages from "../components/secondary_pages/secondary_pages.scss";
     import Name_page from "../components/secondary_pages/name_page";
     import RequestSVG from "../components/company_svg/request_svg";
     import VisitSVG from "../components/company_svg/visit_svg";

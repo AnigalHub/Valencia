@@ -26,7 +26,6 @@
 </template>
 
 <script>
-    import Secondary_pages from "../components/secondary_pages/secondary_pages.scss";
     import Name_page from "../components/secondary_pages/name_page";
     import TelephoneSVG from "../components/contact_svg/telephone_svg";
     import EmailSVG from "../components/contact_svg/email_svg";

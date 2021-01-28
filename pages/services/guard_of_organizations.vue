@@ -35,11 +35,9 @@
 </template>
 
 <script>
-    import Secondary_pages from "../../components/secondary_pages/secondary_pages.scss";
     import Name_page from "../../components/secondary_pages/name_page";
     import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
     import Guard_shield_typesSVG from "../../components/secondary_pages/services_svg/guard_shield_types_svg";
-    import Guard_shieldSVG from "../../components/secondary_pages/services_svg/guard_shield_svg";
     export default {
       name: "guard_of_organizations",
       components: {Tarrifs_content, Name_page},
