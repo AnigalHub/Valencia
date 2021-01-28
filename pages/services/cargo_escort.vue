@@ -4,13 +4,13 @@
       <b-container>
        <img src="../../static/services/cargo_escort/cargo_escort.jpg" alt="сопровождение грузов" class="first_img">
         <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
-        <h6 class="block_two">Опасности при передвижении груза:</h6>
+        <h6>Опасности при передвижении груза:</h6>
         <ul class="text">
           <li v-for="danger in DangersWhenDriving" :key="danger.index">{{danger.danger}}</li>
         </ul>
         <b-row class="block_two">
           <b-col>
-            <h6>Наша компания занимается сопровождением:</h6>
+            <h6 >Наша компания занимается сопровождением:</h6>
             <ul class="text">
               <li v-for="type in TypesOfCargo" :key="type.index"><i><b>{{type.type}}</b></i>{{type.descr_type}}</li>
             </ul>
@@ -43,7 +43,6 @@
           name_page: "Сопровождение грузов",
           DangersWhenDriving:[
             {danger:"потеря важных документов;"},
-            {danger:"кража имущества;"},
             {danger:"вымогательство;"},
             {danger:"хищение груза;"},
             {danger:"неисправности с транспортом на маршруте;"},

@@ -1,5 +1,5 @@
 <template>
-  <div id="guard_of_events" class="page services">
+  <div id="guard_of_events" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
       <b-container>
          <img src="../../static/services/guard_of_events/guard_of_events.jpg" class="first_img">
@@ -8,18 +8,14 @@
         <ul class="text">
           <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
         </ul>
-        <h6 class="block_two">Перечень мер по охране мероприятий:</h6>
-        <b-row>
-          <b-col>
-            <ul class="text">
-              <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
-            </ul>
-          </b-col>
-          <b-col cols="4">
-            <img src="../../static/services/guard_of_events/checking_the_premises.jpg" alt="проверка_помещения"
-            <img src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта">
-          </b-col>
-        </b-row>
+        <div class="im_descr block_two">
+          <h6>Перечень мер по охране мероприятий:</h6>
+          <img src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта">
+          <!--<img src="../../static/services/guard_of_events/checking_the_premises.jpg" alt="проверка_помещения">-->
+          <ul class="text">
+            <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
+          </ul>
+        </div>
         <Tarrifs_content/>
       </b-container>
   </div>

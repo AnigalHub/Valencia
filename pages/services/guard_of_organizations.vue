@@ -13,7 +13,7 @@
       <h6 class="block_two">Разновидности охраны организаций:</h6>
       <div class="flex-container">
         <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
-          <component :is="guard.svg"/><span class="li_text">{{guard.name}}</span>
+          <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
           <b-row>
             <b-col cols="5">
               <img :src="guard.img_src" :alt="guard.img_alt">
