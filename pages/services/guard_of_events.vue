@@ -4,7 +4,7 @@
       <b-container>
          <img src="../../static/services/guard_of_events/guard_of_events.jpg" class="first_img">
         <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.</p>
-        <h6>Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
+        <h6 class="block_one">Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
         <ul class="text">
           <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
         </ul>
@@ -22,7 +22,6 @@
 </template>
 
 <script>
-    import Secondary_pages from "../../components/secondary_pages/secondary_pages.scss";
     import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
     import Name_page from "../../components/secondary_pages/name_page";
     export default {
