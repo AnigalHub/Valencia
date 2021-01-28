@@ -1,5 +1,5 @@
 <template>
-  <div id="tariffs_content">
+  <div id="tariffs_content" class="block_two">
     <b-container>
       <b-row>
         <b-col>
