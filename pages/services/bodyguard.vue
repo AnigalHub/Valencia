@@ -4,39 +4,26 @@
       <b-container>
         <img src="../../static/services/bodyguard/bodyguard.jpg" alt="личная_охрана" class="first_img">
         <p class="text"><span class="emphasized">Личная охрана</span> - профессиональная охрана, обеспечивающая безопасность жизни и здоровья Клиента и конфиденциальность информации. Охранники личной охраны настоящие профессионалы своего дела, прошедшие полную систему подготовки и жесткий отбор до собеседования с клиентом.</p>
-        <h6>Режимы работы личной охраны:</h6>
+        <h6 class="block_one">Режимы работы личной охраны:</h6>
         <ul class="text">
           <li v-for="mode in Modes" :key="mode.index">{{mode.mode}}</li>
         </ul>
-        <b-row class="block_two">
-          <b-col>
-            <h6>Разновидности личной охраны:</h6>
-            <ul class="text">
-              <li v-for="bodyguard in TypesBodyguard" :key="bodyguard.index"><i><b>{{bodyguard.name}}</b></i> - {{bodyguard.descr}}</li>
-            </ul>
-          </b-col>
-          <b-col cols="3">
-            <img src="../../static/services/bodyguard/child_bodyguard.jpg" alt="личная_охрана_детей">
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col cols="4">
-            <img src="../../static/services/bodyguard/bodyguard_driver.jpg" alt="личная_охрана_водитель">
-          </b-col>
-          <b-col>
-            <h6>Обязанности личной охраны:</h6>
-            <ul class="text">
-              <li v-for="name_duty in DutiesBodyguard" :key="name_duty.index">{{name_duty.duty}}</li>
-            </ul>
-          </b-col>
-        </b-row>
+        <h6 class="block_two">Разновидности личной охраны:</h6>
+        <img src="../../static/services/bodyguard/child_bodyguard.jpg" alt="личная_охрана_детей" class="second_img">
+        <ul class="text varieties">
+          <li v-for="bodyguard in TypesBodyguard" :key="bodyguard.index"><i><b>{{bodyguard.name}}</b></i> - {{bodyguard.descr}}</li>
+        </ul>
+        <img src="../../static/services/bodyguard/bodyguard_driver.jpg" alt="личная_охрана_водитель" class="third_img">
+        <h6>Обязанности личной охраны:</h6>
+        <ul class="text">
+          <li v-for="name_duty in DutiesBodyguard" :key="name_duty.index">{{name_duty.duty}}</li>
+        </ul>
       <Tarrifs_content/>
       </b-container>
     </div>
 </template>
 
 <script>
-  import Secondary_pages from "../../components/secondary_pages/secondary_pages.scss";
   import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
   import Name_page from "../../components/secondary_pages/name_page";
     export default {
