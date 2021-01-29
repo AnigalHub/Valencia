@@ -8,12 +8,12 @@
               <h4>{{item.econom.name}}</h4>
               <div class="text">{{item.econom.descr_name}}</div>
               <img :src="item.econom.src">
-              <b-row>
-                <b-col cols="2">
+              <b-row class="show_row">
+                <b-col cols="1">
                   <component :is="item.econom.svg_2"/>
                 </b-col>
                 <b-col> от {{item.econom.price}} ₽</b-col>
-                <b-col cols="2">
+                <b-col cols="1">
                   <component :is="item.econom.svg"/>
                 </b-col>
                 <b-col>от {{item.econom.price_with_weapon}} ₽</b-col>
@@ -27,12 +27,12 @@
               <img :src="item.standart.src">
               <h4>{{item.standart.name}}</h4>
               <div class="text">{{item.standart.descr_name}}</div>
-              <b-row>
-                <b-col cols="2">
+              <b-row class="show_row">
+                <b-col cols="1">
                   <component :is="item.standart.svg_2"/>
                 </b-col>
                 <b-col> от {{item.standart.price}} ₽</b-col>
-                <b-col cols="2">
+                <b-col cols="1">
                   <component :is="item.standart.svg"/>
                 </b-col>
                 <b-col>от {{item.standart.price_with_weapon}} ₽</b-col>
@@ -46,12 +46,12 @@
               <img :src="item.premium.src">
               <h4>{{item.premium.name}}</h4>
               <div class="text">{{item.premium.descr_name}}</div>
-              <b-row>
-                <b-col cols="2">
+              <b-row class="show_row">
+                <b-col cols="1">
                   <component :is="item.premium.svg_2"/>
                 </b-col>
                 <b-col> от {{item.premium.price}} ₽</b-col>
-                <b-col cols="2">
+                <b-col cols="1">
                   <component :is="item.premium.svg"/>
                 </b-col>
                 <b-col>от {{item.premium.price_with_weapon}} ₽</b-col>
@@ -65,10 +65,10 @@
 </template>
 
 <script>
-  import Weapon_svg from "../tariffs_svg/weapon_svg";
-  import NoWeapon_svg from "../tariffs_svg/no_weapon_svg";
+  import Weapon_svg from "./tariffs_svg/weapon_svg";
+  import NoWeapon_svg from "./tariffs_svg/no_weapon_svg";
     export default {
-        name: "tarrifs_content",
+      name: "tarrifs_content",
       components: {Weapon_svg,NoWeapon_svg},
       data() {
         return {
@@ -238,112 +238,6 @@
       }
     }
 </script>
-<style lang="scss">
-  .table tr, .table th {
-    text-align: center;
-  }
+<style scoped>
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border: none !important;
-  }
-  table{
-    width: 100%;
-    border-collapse: separate; /* Способ отображения границы */
-    border-spacing: 0 3.5px; /* Расстояние между ячейками */
-  }
-  .table tbody tr {
-    border: 2px solid rgb(15, 37, 56);
-    background: #bcc8d7;
-
-  }
-  .table tbody tr:hover {
-    background: #ecf1f5;
-    cursor: default;
-  }
-  .table td{
-    border: 0.2px solid rgb(26, 60, 88,.6) !important;
-    box-shadow: 0.25px 0.25px 0.25px rgb(26, 60, 88,.6);
-  }
-  .table thead th{
-    box-shadow: 1.5px 1.5px 1.5px rgb(15, 37, 56);
-    font-family: 'Viaoda Libre', cursive;
-    font-weight: 800 !important;
-    background: #cfd4de;
-    border: 1.8px solid rgb(26, 60, 88,.6);
-  }
-  .table tr{
-    td{
-      padding: 0.1rem !important;
-    }
-
-    .row{
-      margin: 0 9% !important;
-    }
-  }
-  .table th{
-    padding: 0.45rem !important;
-  }
-</style>
-<style scoped lang="scss">
-  #tariffs_content{
-    margin: 0 2%;
-  }
-  svg{
-    width: 40px;
-    height: 35px;
-  }
-  img{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 50%;
-  }
-  h3{
-    font-family: 'Viaoda Libre', cursive;
-    padding-bottom: 1%;
-    font-weight: 600;
-    color: rgb(15, 37, 56);
-    letter-spacing: -2.5px;
-    text-decoration: underline;
-    font-size: 1.6rem !important;
-    text-shadow: 0.5px 1px 1px #8094aa;
-  }
-  h4{
-    font-family: 'Vollkorn', serif;
-    color: #09324e;
-    display: block;
-    padding-bottom: 0.5%;
-    margin-bottom: 0 !important;
-    text-shadow: 0.9px 1px  rgb(15, 37, 56);
-  }
-  .text{
-    font-family: 'Vollkorn', serif;
-    font-weight: 500; letter-spacing: -1px;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-    color:rgb(15, 37, 56)
-  }
-  .table .col{
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  .table .row{
-    .col{
-      padding: 0 2.5px !important;
-    }
-  }
-  .col{
-    padding: 0 15px !important;
-  }
-  .table tr:not(:first-child){
-    p{
-      display: none;
-    }
-  }
 </style>
