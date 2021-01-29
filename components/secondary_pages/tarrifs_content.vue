@@ -65,8 +65,8 @@
 </template>
 
 <script>
-  import Weapon_svg from "./tariffs_svg/weapon_svg";
-  import NoWeapon_svg from "./tariffs_svg/no_weapon_svg";
+  import Weapon_svg from "../tariffs_svg/weapon_svg";
+  import NoWeapon_svg from "../tariffs_svg/no_weapon_svg";
     export default {
       name: "tarrifs_content",
       components: {Weapon_svg,NoWeapon_svg},
