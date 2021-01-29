@@ -36,7 +36,7 @@
 
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/tarrifs/tarrifs_content";
+    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
     import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
     export default {
       name: "guard_of_medical_institutions",

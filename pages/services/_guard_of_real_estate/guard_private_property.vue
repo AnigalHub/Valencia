@@ -24,7 +24,7 @@
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
     import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
-    import Tarrifs_content from "../../../components/tarrifs/tarrifs_content";
+    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
     export default {
         name: "guard_private_property",
       components: {Tarrifs_content, Name_page},

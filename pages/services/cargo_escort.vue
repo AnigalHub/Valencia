@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import Tarrifs_content from "../../components/tarrifs/tarrifs_content";
+    import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
     import Name_page from "../../components/secondary_pages/name_page";
     export default {
       name: "cargo_escort",
