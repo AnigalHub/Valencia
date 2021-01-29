@@ -12,11 +12,11 @@
                 <img :src="item.econom.src" :alt="item.econom.alt">
                 <p class="text">{{item.econom.descr}}</p>
                 <b-row>
-                  <b-col cols="2">
+                  <b-col cols="1">
                     <component :is="item.econom.svg_2"/>
                   </b-col>
                   <b-col> от {{item.econom.price}} ₽</b-col>
-                  <b-col cols="2">
+                  <b-col cols="1">
                     <component :is="item.econom.svg"/>
                   </b-col>
                   <b-col>от {{item.econom.price_with_weapon}} ₽</b-col>
@@ -32,11 +32,11 @@
                 <div class="text">{{item.standart.descr_name}}</div>
                 <p class="text">{{item.standart.descr}}</p>
                 <b-row>
-                  <b-col cols="2">
+                  <b-col cols="1">
                     <component :is="item.standart.svg_2"/>
                   </b-col>
                   <b-col> от {{item.standart.price}} ₽</b-col>
-                  <b-col cols="2">
+                  <b-col cols="1">
                     <component :is="item.standart.svg"/>
                   </b-col>
                   <b-col>от {{item.standart.price_with_weapon}} ₽</b-col>
@@ -52,11 +52,11 @@
                 <div class="text">{{item.premium.descr_name}}</div>
                 <p class="text">{{item.premium.descr}}</p>
                 <b-row>
-                  <b-col cols="2">
+                  <b-col cols="1">
                     <component :is="item.premium.svg_2"/>
                   </b-col>
                   <b-col> от {{item.premium.price}} ₽</b-col>
-                  <b-col cols="2">
+                  <b-col cols="1">
                     <component :is="item.premium.svg"/>
                   </b-col>
                   <b-col>от {{item.premium.price_with_weapon}} ₽</b-col>
@@ -267,109 +267,6 @@
       }
     }
 </script>
-<style lang="scss">
-  .table tr, .table th {
-    text-align: center;
-  }
-  .table tr{
-    padding: 0.5rem !important;
-  }
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border: none !important;
-  }
-  table{
-    width: 100%;
-    border-collapse: separate; /* Способ отображения границы */
-    border-spacing: 0 4px; /* Расстояние между ячейками */
-  }
-  .table tbody tr {
-    border: 2px solid #ffffff;
-    background: #ecf1f5;
-  }
-  .table tbody tr:hover {
-    background: #ecf1f5;
-    cursor: default;
-  }
+<style scoped>
 
-  .table thead th{
-    box-shadow: 2px 2px 2px rgb(15, 37, 56);
-    font-family: 'Viaoda Libre', cursive;
-    font-weight: 800 !important;
-    background: #b5bcc9;
-    border: 1.8px solid rgb(26, 60, 88,.6);
-  }
-
-  .table tbody tr:first-child {
-    td{
-      padding: 0.4rem;
-    }
-    p{
-      margin-bottom: 0 !important;
-    }
-  }
-  .table tr:not(:first-child){
-    td{
-      padding: 0.25rem !important;
-    }
-
-    .row{
-      margin: 0 7% !important;
-    }
-  }
-</style>
-<style scoped lang="scss">
-  img{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 50%;
-    box-shadow: none;
-  }
-  h4{
-    font-weight: 800;
-    display: block;
-    padding-bottom: 0.5%;
-    margin-bottom: 0;
-  }
-  .table .col{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  .table .row{
-    .col{
-      padding: 0 5px !important;
-    }
-  }
-  .col{
-    padding: 0 20px !important;
-  }
-  .table .row{
-    .col{
-      padding: 0 5px !important;
-    }
-  }
-  .col{
-    padding: 0 20px !important;
-  }
-  .table tbody tr:first-child {
-    .row{
-      display: none;
-    }
-  }
-  .table tr:not(:first-child){
-    p{
-      display: none;
-    }
-  }
-  .table tbody tr:first-child {
-    p{
-    height: 9.5rem !important;
-    text-align: left;
-    }
-  }
 </style>
