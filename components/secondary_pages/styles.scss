@@ -334,7 +334,7 @@ textarea{
 #licenses{
   img{
     width: 100%;
-    filter: contrast(85%);
+    filter: contrast(98%);
   }
   .flex-container > img {
     width: 18%;
@@ -528,6 +528,7 @@ textarea{
           margin-bottom: 0.5rem !important;
         }
       }
+      &:last-child{display: none;}
       .emphasized{
         margin-bottom: 0.5rem !important;
       }
@@ -801,6 +802,7 @@ textarea{
           margin-bottom: 0.5rem !important;
         }
       }
+      &:last-child{display: none;}
       .emphasized{
         margin-bottom: 0.5rem !important;
       }
