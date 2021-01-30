@@ -17,7 +17,7 @@
             important_numbers:[
               {
                 number:15,
-                descr_number: "Лет на рынке",
+                descr_number: "Лет на рынке безопасности",
               },
               {
                 number:50,
