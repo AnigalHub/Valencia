@@ -1,5 +1,5 @@
 .page{
-  background:linear-gradient( to bottom, #8e9aa8, #acb5c1, #c6cedb);
+  background:linear-gradient( to bottom, #788593, #acb5c1, #c6cedb);
   padding: 2.5rem 0;
 }
 .text{
@@ -8,8 +8,13 @@
   letter-spacing: -1px;
   font-size: 1.45rem;
   line-height: 1.6rem;
-  text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-  color:rgb(15, 37, 55);
+  text-shadow: 0.25px 0.5px 0.5px #245b79;
+  color: rgb(15, 37, 55);
+}
+.text_descr{
+  font-size: 1.25rem !important;
+  line-height: 1.4rem !important;
+  margin-top: -2%;
 }
 .li_text,.name_type_guard{
   font-family: 'Vollkorn', serif;
@@ -45,9 +50,19 @@ h1{
   font-weight: 600;
 }
 .place_h1{
-  background: #bcc6d4;
+  background: #ccd3dc;
   padding: 5px 0;
   margin-bottom: 2.25rem;
+}
+h4{
+  font-family: 'Vollkorn', serif;
+  color: #09324e;
+  display: block;
+  padding-bottom: 0.5%;
+  text-shadow: 0.9px 1px  rgb(15, 37, 56);
+  font-weight: 800;
+  margin-top: -2%;
+  margin-bottom: 0;
 }
 h6{
   font-family: 'Vollkorn', serif;
@@ -82,9 +97,7 @@ h6{
   clear: left;
 }
 .page{
-  li{
-    padding-bottom: 0.85%;
-  }
+  li{padding-bottom: 0.85%;}
   ul li:before {
     content:"·";
     font-size:80px;
@@ -179,28 +192,99 @@ textarea{
     }
   }
   .stage{
-    img{
-      width: 100%;
-    }
     svg{
       padding: 1%;
       margin: 1.5% 1.5% 0 1.5%;
     }
-    .emphasized{
-      margin-bottom: 0.5rem !important;
+    img{width: 100%;}
+    .emphasized{margin-bottom: 0.5rem !important;}
+    div{padding-bottom: 1.5%;}
+    .col-5{padding-left: 0  !important;}
+    img{margin-bottom: 2.5%;}
+  }
+  ul{margin-left: -3% !important;}
+}
+#tariffs,#tariffs_content{
+  img{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    display: none;
+    border-radius: 50%;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.85);
+  }
+  svg{
+    width: 35px;
+    height: 45px;
+  }
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border: none !important;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+    thead th {
+      font-family: 'Viaoda Libre', cursive;
+      font-weight: 800 !important;
+      border: 1.8px solid rgb(26, 60, 88, .6);
+      box-shadow: 0 1.5px 0 #0f2538 ;
+      background: #e0e5ec;
     }
-    div{
-      padding-bottom: 1.5%;
+    .row {
+      display: flex;
+      .col{padding: 0 2.5px !important;}
     }
-    .col-5{
-      padding-left: 0  !important;
+    .col-1{margin-left: -2.5%;}
+    .col{
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    img{
-      margin-bottom: 2.5%;
+    th,td {
+      text-align: center;
+    }
+    th{
+      padding: 0.5rem;
+    }
+    td{
+      padding: 0.5rem 0.5rem 0 0.5rem;
+    }
+    tbody{
+      background: #ccd5e0 !important;
+      td{box-shadow: 0 0 4px 0 rgba(26, 60, 88, 0.6);}
+      tr{
+        &:hover{
+          background: #ecf1f5 !important;
+          cursor: default;
+        }
+        &:first-child {
+          .row{display: none;}
+          .show_row{display: flex !important;}
+          p{
+            text-align: left;
+            margin-bottom: 0 !important;
+          }
+        }
+        &:not(:first-child){
+          .row{display: flex;}
+          p{display: none;}
+        }
+      }
     }
   }
-  ul{
-    margin-left: -3% !important;
+}
+#tariffs{
+  table{
+    tr{ &:first-child { img{display: block !important;} } }
+    tbody tr {background: rgba(223, 230, 239, 0.82) !important;}
+    tbody tr:first-child{height: 22.5rem !important;;}
+    thead th {
+      box-shadow: 1px 1px 1px rgb(15, 37, 56) !important;
+      background: #cfd4de !important;
+    }
   }
 }
 .services{
@@ -214,17 +298,13 @@ textarea{
     width: 48px;
     height: 50px;
   }
-  .row{
-    padding-bottom: 0 !important;
-  }
+  .row{padding-bottom: 0 !important;}
   .second_img{
     float: right;
     width: 24%;
     margin: 0 2% 0.5% 0;
   }
-  .varieties{
-    margin-left: -3%;
-  }
+  .varieties{margin-left: -3%;}
   .third_img{
     float: left;
     width: 35%;
@@ -253,9 +333,7 @@ textarea{
     height: 300px;
     margin-bottom: 5%;
   }
-  svg{
-    margin-left: 25%;
-  }
+  svg{margin-left: 25%;}
 }
 #guard_of_organizations{
   .type_guard_beautiful_block:not(:nth-child(2)) svg{
@@ -275,9 +353,7 @@ textarea{
   }
 }
 .types_of_guard{
-  ul{
-    margin-left: -8%;
-  }
+  ul{margin-left: -8%;}
   .im_descr {
     h6{clear: left;}
     img{
@@ -303,9 +379,7 @@ textarea{
   }
   ul{
     margin-left: -15%;
-     li {
-      padding-bottom: 0.5% !important;
-    }
+     li {padding-bottom: 0.5% !important;}
   }
   p{margin-bottom: 0.25rem !important;}
 }
@@ -345,9 +419,7 @@ textarea{
   .flex-container > div {
     width: 30%;
     margin: 0 1.5% 0.5% 1.5% ;
-    img{
-      width: 100%;
-    }
+    img{width: 100%;}
   }
   .emphasized{
     padding-top: 2.5%;
@@ -398,20 +470,25 @@ textarea{
       width: 45px;
       height: 45px;
     }
-
     .flex-container > div {
-      img {
-        height: 60px !important;
-      }
-
-      .col {
-        margin-left: 7% !important;
-      }
-
+      img {height: 60px !important;}
+      .col {margin-left: 7% !important;}
       svg {
         margin-left: -100% !important;
         margin-top: 85% !important;
       }
+    }
+  }
+  #tariffs, #tariffs_content{
+    .row .row{
+      margin: 0!important;
+    }
+    svg{
+      width: 22px !important;
+      height: 28px !important;
+    }
+   table .col-1{
+      margin-left: -5% !important;
     }
   }
   .services_with_types {
@@ -425,38 +502,24 @@ textarea{
     .row { ul {margin-left: -23% !important;} }
   }
   #technical_means{
-    ul{
-      margin-left: -15% !important;
-    }
+    ul{margin-left: -15% !important;}
   }
   #licenses{
-    .flex-container > img {
-      height: 120px !important;
-    }
-    ol{
-      margin-left: -8% !important;
-    }
+    .flex-container > img {height: 120px !important;}
+    ol{margin-left: -8% !important;}
   }
   #our_clients{
-    .emphasized{
-      font-size: 0.85rem !important;
-    }
+    .emphasized{font-size: 0.85rem !important;}
   }
   #contact{
-    .col-1{
-      margin-left: -12% !important;
-    }
-    .col .col{
-      margin-left: 8% !important;
-    }
+    .col-1{margin-left: -12% !important;}
+    .col .col{margin-left: 8% !important;}
   }
 }
 @media screen and (max-width: 500px) {
   .page{
-    padding-top: 1.5rem !important;
-    ul{
-      margin-left: -12%;
-    }
+    padding: 1.5rem 0 !important;
+    ul{margin-left: -12%;}
   }
   .place_h1{
     margin-bottom:1.5rem;
@@ -466,6 +529,9 @@ textarea{
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
   }
+  h4{
+    font-size: 1.15rem;
+  }
   h6{
     font-size: 1rem;
     line-height: 1.2rem;
@@ -473,6 +539,11 @@ textarea{
   .text{
     font-size: 1rem;
     line-height: 1.2rem;
+  }
+  .text_descr{
+    font-size: 0.9rem !important;
+    line-height: 0.85rem !important;
+    margin-top: -1%;
   }
   .li_text,.name_type_guard{
     font-size: 1rem;
@@ -491,15 +562,9 @@ textarea{
     height: 26vh !important;
   }
   #contact, #Feedback {
-    button {
-      font-size: 0.95rem;
-    }
-    .place_form{
-      box-shadow: 0 0 5px 0 #0f2538;
-    }
-    .map{
-      box-shadow: none;
-    }
+    button {font-size: 0.95rem;}
+    .place_form{box-shadow: 0 0 5px 0 #0f2538;}
+    .map{box-shadow: none;}
   }
   #company{
     .first_img {
@@ -511,9 +576,7 @@ textarea{
       width: 48px;
       height: 48px;
     }
-    ul{
-      margin-left: -10% !important;
-    }
+    ul{margin-left: -10% !important;}
     .flex-container > div {
       width: 100%;
       margin: 0 0.5% 1.5% 0.5% !important;
@@ -524,9 +587,7 @@ textarea{
       }
       .col{
         padding: 0 10px !important;
-        p{
-          margin-bottom: 0.5rem !important;
-        }
+        p{margin-bottom: 0.5rem !important;}
       }
       &:last-child{display: none;}
       .emphasized{
@@ -548,18 +609,41 @@ textarea{
         flex: 0 0 100% !important;
         max-width: 100% !important;
       }
-      .col,.col-5{
-        padding: 0 !important;
-      }
-      p{
-        margin-bottom: 0.5rem !important;
-      }
-      p:nth-child(2){
-       padding-top: 4%;
-      }
-      p:nth-child(3){
-        clear: left;
-      }
+      .col,.col-5{padding: 0 !important;}
+      p{margin-bottom: 0.5rem !important;}
+      p:nth-child(2){padding-top: 4%;}
+      p:nth-child(3){clear: left;}
+    }
+  }
+  .container .container{
+    padding: 0 !important;
+  }
+  #tariffs, #tariffs_content{
+    img{
+      width: 50%;
+      margin-bottom: -1.5%;
+    }
+    table{
+      th{padding: 0.25rem;}
+    }
+    p{margin-top: 5%;}
+    .col{padding: 5px 0 !important;}
+    .row{
+      flex-direction: column !important;
+    }
+    .row .row{
+      flex-direction: row !important;
+      margin: 0 6%;
+    }
+    svg{
+      width: 29px;
+      height: 30px;
+      margin-left: -30%;
+    }
+  }
+  #tariffs{
+    table tbody tr:first-child {
+      height: auto !important;
     }
   }
   .services {
@@ -572,17 +656,13 @@ textarea{
       width: 30px;
       height: 30px;
     }
-    .import,p:nth-child(3){
-      clear: left;
-    }
+    .import,p:nth-child(3){clear: left;}
     .second_img{
       float: none;
       width: 70%;
       margin: 0 0 0.5% 0;
     }
-    .varieties{
-      margin-left: -12%;
-    }
+    .varieties{margin-left: -12%;}
     .third_img{
       float: none;
       width: 70%;
@@ -608,12 +688,9 @@ textarea{
           margin-bottom: 0 !important;
         }
       }
-
     }
     .type_guard_beautiful_block{height: auto;}
-    svg{
-      margin-left: 0;
-    }
+    svg{margin-left: 0;}
   }
   #guard_of_organizations{
     .type_guard_beautiful_block:last-child{display: none;}
@@ -645,9 +722,7 @@ textarea{
     .flex-container > div {
       width: 100%;
       padding: 0.8%;
-      p{
-        margin-bottom: 0.5rem !important;
-      }
+      p{margin-bottom: 0.5rem !important;}
     }
     ul{
       margin-left: -12%;
@@ -677,24 +752,16 @@ textarea{
       height: 165px;
       margin: 0 0.95% 1.9% 0.95% !important;
     }
-    h4{
-      padding-top: 3%;
-    }
+    h4{padding-top: 3%;}
     ol{
       margin-left: -6%;
       margin-bottom: 0rem !important;
     }
   }
   #our_clients{
-    .flex-container > div {
-      width: 47%;
-    }
-    .emphasized{
-      padding-top: 3%;
-    }
-    p{
-      margin-bottom: 0.25rem !important;
-    }
+    .flex-container > div {width: 47%;}
+    .emphasized{padding-top: 3%;}
+    p{margin-bottom: 0.25rem !important;}
   }
   #contact{
     .important_row{
@@ -715,20 +782,14 @@ textarea{
       height: 45px;
       padding: 20%;
     }
-    .col-1{
-      margin-left: -3%;
-    }
-    .col .col{
-      margin-left: 12%;
-    }
+    .col-1{margin-left: -3%;}
+    .col .col{margin-left: 12%;}
   }
 }
 @media screen and (min-width: 500px)and (max-width: 768px) {
   .page{
-    padding-top: 2rem !important;
-    ul{
-      margin-left: -8%;
-    }
+    padding: 2rem 0 !important;
+    ul{margin-left: -8%;}
   }
   .place_h1{
     margin-bottom: 2rem;
@@ -738,6 +799,9 @@ textarea{
     font-size: 1.4rem;
     margin-bottom: 0.2rem;
   }
+  h4{
+    font-size: 1.25rem;
+  }
   h6{
     font-size: 1.15rem;
     line-height: 1.2rem;
@@ -745,6 +809,11 @@ textarea{
   .text{
     font-size: 1rem;
     line-height: 1.2rem;
+  }
+  .text_descr{
+    font-size: 0.9rem !important;
+    line-height: 0.85rem !important;
+    margin-top: -1%;
   }
   .li_text,.name_type_guard{
     font-size: 1rem;
@@ -784,9 +853,7 @@ textarea{
       width: 55px;
       height: 55px;
     }
-    ul{
-      margin-left: -8% !important;
-    }
+    ul{margin-left: -8% !important;}
     .flex-container > div {
       width: 100%;
       margin: 0 0.5% 1.5% 0.5% !important;
@@ -798,14 +865,10 @@ textarea{
       .col{
         padding: 0 5px !important;
         margin-left: -1% !important;
-        p{
-          margin-bottom: 0.5rem !important;
-        }
+        p{margin-bottom: 0.5rem !important;}
       }
       &:last-child{display: none;}
-      .emphasized{
-        margin-bottom: 0.5rem !important;
-      }
+      .emphasized{margin-bottom: 0.5rem !important;}
       svg {
         float: left;
         margin-left: -15%;
@@ -822,12 +885,42 @@ textarea{
         flex: 0 0 100% !important;
         max-width: 100% !important;
       }
-      .col,.col-5{
-        padding: 0 !important;
-      }
-      p{
-        margin-bottom: 0.25rem !important;
-      }
+      .col,.col-5{padding: 0 !important;}
+      p{margin-bottom: 0.25rem !important;}
+    }
+  }
+  .container .container{
+    padding: 0 !important;
+  }
+  #tariffs, #tariffs_content{
+    img{
+      float: left;
+      width: 30%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+    p{margin-top: 5%;}
+    .col{padding: 5px 0 !important;}
+    .row{
+      flex-direction: column;
+    }
+    .row .row{
+      flex-direction: row;
+      margin: 0.85% 19% 0 19% !important;
+    }
+    svg{
+      width: 26px;
+      height: 30px;
+      margin-left: -30%;
+    }
+    table {
+      th {padding: 0.25rem;}
+      td {padding: 0.5rem 0.2rem 0 0.2rem;}
+    }
+  }
+  #tariffs{
+    table tbody tr:first-child {
+      height: auto !important;
     }
   }
   .services {
@@ -840,19 +933,13 @@ textarea{
       width: 35px;
       height: 35px;
     }
-    .import,p:nth-child(3){
-      clear: left;
-    }
+    .import,p:nth-child(3){clear: left;}
     .li_text{
       float: left;
       margin-right: 3%;
     }
-    .second_img{
-      width: 30%;
-    }
-    .varieties{
-      margin-left: -6%;
-    }
+    .second_img{width: 30%;}
+    .varieties{margin-left: -6%;}
     .third_img{
       width: 37.5%;
       margin: 3% 2% 0.5% 2%;
@@ -869,14 +956,10 @@ textarea{
           margin-bottom: 8%;
         }
       }
-      ul{
-        margin-left: -10%;
-      }
+      ul{margin-left: -10%;}
     }
     .type_guard_beautiful_block{height: auto;}
-    svg{
-      margin-left: 0;
-    }
+    svg{margin-left: 0;}
   }
   #guard_of_organizations{
     .type_guard_beautiful_block:last-child{display: none;}
@@ -906,9 +989,7 @@ textarea{
     .flex-container > div {
       width: 100%;
       padding: 0.8%;
-      p{
-        margin-bottom: 0.5rem !important;
-      }
+      p{margin-bottom: 0.5rem !important;}
     }
     ul{
       margin-left: -8%;
@@ -929,24 +1010,16 @@ textarea{
       width: 30%;
       margin: 0 1.2% 2.4% 1.2% !important;
     }
-    h4{
-      padding-top: 2%;
-    }
+    h4{padding-top: 2%;}
     ol{
       margin-left: -3%;
       margin-bottom: 0rem !important;
     }
   }
   #our_clients{
-    .flex-container > div {
-      width: 47%;
-    }
-    .emphasized{
-      padding-top: 3%;
-    }
-    p{
-      margin-bottom: 0.25rem !important;
-    }
+    .flex-container > div {width: 47%;}
+    .emphasized{padding-top: 3%;}
+    p{margin-bottom: 0.25rem !important;}
   }
   #contact{
     .important_row{
@@ -961,21 +1034,15 @@ textarea{
       font-size: 1.3rem;
       margin-top: 0;
     }
-    svg{
-      padding: 20%;
-    }
+    svg{padding: 20%;}
     .col .row{padding-bottom: 0;}
-    .col-1{
-      margin-left: -1.5%;
-    }
-    .col .col{
-      margin-left: 4%;
-    }
+    .col-1{margin-left: -1.5%;}
+    .col .col{margin-left: 4%;}
   }
 }
 @media screen and (min-width: 768px)and (max-width: 992px) {
   .page{
-    padding-top: 2rem !important;
+    padding: 2rem 0 !important;
   }
   .place_h1{
     margin-bottom: 2rem;
@@ -985,6 +1052,9 @@ textarea{
     font-size: 1.6rem;
     margin-bottom: 0.2rem;
   }
+  h4{
+    font-size: 1.25rem;
+  }
   h6{
     font-size: 1.2rem;
     line-height: 1.3rem;
@@ -992,6 +1062,10 @@ textarea{
   .text{
     font-size: 1.15rem;
     line-height: 1.3rem;
+  }
+  .text_descr{
+    font-size: 1rem !important;
+    line-height: 1rem !important;
   }
   .li_text,.name_type_guard{
     font-size: 1.15rem;
@@ -1010,9 +1084,7 @@ textarea{
     height: 32vh !important;
   }
   #contact, #Feedback {
-    button {
-      font-size: 0.95rem;
-    }
+    button {font-size: 0.95rem;}
   }
   #company{
     .first_img {
@@ -1024,9 +1096,7 @@ textarea{
       width: 55px;
       height: 55px;
     }
-    ul{
-      margin-left: -6% !important;
-    }
+    ul{margin-left: -6% !important;}
     .flex-container > div {
       width: 48%;
       margin: 0 0.5% 1.2% 0.5% !important;
@@ -1036,13 +1106,9 @@ textarea{
       }
       .col{
         padding-left: 1rem !important;
-        p{
-          margin-bottom: 0.5rem !important;
-        }
+        p{margin-bottom: 0.5rem !important;}
       }
-      .emphasized{
-        margin-bottom: 0.5rem !important;
-      }
+      .emphasized{margin-bottom: 0.5rem !important;}
       svg {
         float: left;
         margin-left: -15%;
@@ -1051,19 +1117,49 @@ textarea{
     }
     .stage{
       flex-direction: column;
-      img{
-        width: 62%;
-      }
+      img{width: 62%;}
       .col-5{
         flex: 0 0 100% !important;
         max-width: 100% !important;
       }
-      .col,.col-5{
-        padding: 0 !important;
+      .col,.col-5{padding: 0 !important;}
+      p{margin-bottom: 0.25rem !important;}
+    }
+  }
+  .container .container{
+    padding: 0 !important;
+  }
+  #tariffs, #tariffs_content{
+    .col{padding: 0 5px !important;}
+    .row .row{
+       flex-direction: column;
+      .col{
+        height: auto;
+        margin-top: -10%;
       }
-      p{
-        margin-bottom: 0.25rem !important;
+      .col-1{
+        margin-left: 5%;
       }
+    }
+    svg{
+      width: 29px;
+      height: 30px;
+      margin-left: -30%;
+    }
+    table{
+      th{padding: 0.25rem;}
+      td{padding: 0.5rem 0.2rem 0 0.2rem;}
+      .row{
+        .col-1{
+          padding-right: 0 !important;
+          padding-left: 10px !important;
+        }
+      }
+    }
+  }
+  #tariffs{
+    table tbody tr:first-child {
+      height: 18.5rem !important;
     }
   }
   .services {
@@ -1076,26 +1172,15 @@ textarea{
       width: 40px;
       height: 38px;
     }
-    .import,p:nth-child(3){
-      clear: left;
-    }
+    .import,p:nth-child(3){clear: left;}
     .li_text{
       float: left;
       margin-right: 7%;
     }
-    .block_one{
-      clear: left;
-    }
-    .second_img{
-      width: 28%;
-    }
-    .varieties{
-      margin-left: -6%;
-    }
-    .third_img{
-      width: 37.5%;
-      margin: 3% 2% 1% 2%;
-    }
+    .block_one{clear: left;}
+    .second_img{width: 28%;}
+    .varieties{margin-left: -6%;}
+    .third_img{width: 37.5%;margin: 3% 2% 1% 2%;}
   }
   .services_with_types{
     .flex-container > div {
@@ -1110,18 +1195,14 @@ textarea{
       }
     }
     .type_guard_beautiful_block{height: auto;}
-    svg{
-      margin-left: 0;
-    }
+    svg{margin-left: 0;}
   }
   #guard_of_organizations{
     .type_guard_beautiful_block:last-child{display: none;}
   }
   .types_of_guard{
     .row{
-      ul{
-        margin-left: -18% ;
-      }
+      ul{margin-left: -18% ;}
     }
     .im_descr {
       img{
@@ -1129,9 +1210,7 @@ textarea{
         margin-right: 0;
         margin-left: 0.5%;
       }
-      ul{
-        margin-left: -7% ;
-      }
+      ul{margin-left: -7% ;}
     }
   }
   #technical_means{
@@ -1157,41 +1236,23 @@ textarea{
     }
   }
   #licenses{
-    .flex-container > img {
-      width: 23%;
-    }
+    .flex-container > img {width: 23%;}
     ol{
       margin-left: -1.5%;
       margin-bottom: 0.5rem !important;
     }
   }
   #our_clients{
-    .flex-container > div {
-      width: 47%;
-    }
-    .emphasized{
-      padding-top: 3%;
-    }
-    p{
-      margin-bottom: 0.25rem !important;
-    }
+    .flex-container > div {width: 47%;}
+    .emphasized{padding-top: 3%;}
+    p{margin-bottom: 0.25rem !important;}
   }
   #contact{
-    h2{
-      font-size: 1.45rem;
-    }
-    svg{
-      padding: 10%;
-    }
-    .col-1{
-      margin-left: -6%;
-    }
-    .col .col{
-      margin-left: 10%;
-    }
-    .important_row .col{
-      padding-left: 0 !important;
-    }
+    h2{font-size: 1.45rem;}
+    svg{padding: 10%;}
+    .col-1{margin-left: -6%;}
+    .col .col{margin-left: 10%;}
+    .important_row .col{padding-left: 0 !important;}
     .col-5{
       padding: 0;
       flex: 0 0 45% !important;
@@ -1204,13 +1265,20 @@ textarea{
     font-size: 1.8rem;
     margin-bottom: 0.25rem;
   }
-  h6{
+  h4{
     font-size: 1.3rem;
+  }
+  h6{
+    font-size: 1.25rem;
     line-height: 1.45rem;
   }
   .text{
     font-size: 1.2rem;
     line-height: 1.4rem;
+  }
+  .text_descr{
+    font-size: 1rem !important;
+    line-height: 1.2rem !important;
   }
   .li_text,.name_type_guard{
     line-height: 1.3rem;
@@ -1263,9 +1331,30 @@ textarea{
       }
     }
     .stage{
-      p{
-        margin-bottom: 0.5rem !important;
+      p{margin-bottom: 0.5rem !important;}
+    }
+  }
+  #tariffs, #tariffs_content{
+    .col{padding: 0 6px !important;}
+    svg{
+      width: 29px;
+      height: 30px;
+      margin-left: -30%;
+    }
+    table{
+      th{padding: 0.25rem;}
+      td{padding: 0.5rem 0.2rem 0 0.2rem;}
+      .row{
+        .col-1{
+          padding-right: 0 !important;
+          padding-left: 10px !important;
+        }
       }
+    }
+  }
+  #tariffs{
+    table tbody tr:first-child {
+      height: 18.5rem !important;
     }
   }
   .services {
@@ -1332,9 +1421,7 @@ textarea{
       width: 48.2%;
       padding: 0.8%;
     }
-    ul{
-      margin-left: -8%;
-    }
+    ul{margin-left: -8%;}
   }
   #special_equipment{
     .first_img{width: 28%;}
@@ -1344,9 +1431,7 @@ textarea{
     }
   }
   #licenses{
-    .flex-container > img {
-      width: 23%;
-    }
+    .flex-container > img {width: 23%;}
     ol{
       margin-left: -1%;
       margin-bottom: 0.5rem !important;
@@ -1357,20 +1442,12 @@ textarea{
       width: 31.25%;
       margin: 0 1% 0.5% 1% ;
     }
-    .emphasized{
-      padding-top: 3%;
-    }
-    p{
-      margin-bottom: 0.25rem !important;
-    }
+    .emphasized{padding-top: 3%;}
+    p{margin-bottom: 0.25rem !important;}
   }
   #contact{
-    h2{
-      font-size: 1.6rem;
-    }
-    .col .col{
-      margin-left: 4%;
-    }
+    h2{font-size: 1.6rem;}
+    .col .col{margin-left: 4%;}
     .col-5{
       padding: 0;
       flex: 0 0 45% !important;
@@ -1383,13 +1460,20 @@ textarea{
     font-size: 2rem;
     margin-bottom: 0.25rem;
   }
+  h4{
+    font-size: 1.3rem;
+  }
   h6{
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     line-height: 1.5rem;
   }
   .text{
     font-size: 1.3rem;
     line-height: 1.4rem;
+  }
+  .text_descr{
+    font-size: 1.15rem !important;
+    line-height: 1.3rem !important;
   }
   .li_text,.name_type_guard{
     font-size: 1.25rem;
@@ -1417,6 +1501,29 @@ textarea{
       }
     }
   }
+  #tariffs, #tariffs_content{
+    .col{
+      padding: 0 8px !important;
+    }
+    svg{
+      width: 30px;
+      height: 40px;
+    }
+    table{
+      .row{
+        margin: 0 2.8% !important;
+        .col-1{
+          padding-right: 0 !important;
+          padding-left: 10px !important;
+        }
+      }
+    }
+  }
+  #tariffs{
+    table tbody tr:first-child {
+      height: 20.8rem !important;
+    }
+  }
   .services {
     .first_img {
       float: left;
@@ -1429,8 +1536,6 @@ textarea{
     }
   }
   .types_of_guard{
-    .im_descr {
-      img{width: 35%;}
-    }
+    .im_descr { img{width: 35%;} }
   }
 }
