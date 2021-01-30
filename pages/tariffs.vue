@@ -7,19 +7,23 @@
           <b-col>
             <b-table class="text" hover :items="items" :fields="fields">
               <template v-slot:cell(econom)="{item}">
-                <h4>{{item.econom.name}}</h4>
-                <div class="text">{{item.econom.descr_name}}</div>
                 <img :src="item.econom.src" :alt="item.econom.alt">
+                <h4>{{item.econom.name}}</h4>
+                <div class="text_descr">{{item.econom.descr_name}}</div>
                 <p class="text">{{item.econom.descr}}</p>
                 <b-row>
                   <b-col cols="1">
                     <component :is="item.econom.svg_2"/>
                   </b-col>
-                  <b-col> от {{item.econom.price}} ₽</b-col>
+                  <b-col class="text">
+                    от {{item.econom.price}} ₽/мес
+                  </b-col>
                   <b-col cols="1">
                     <component :is="item.econom.svg"/>
                   </b-col>
-                  <b-col>от {{item.econom.price_with_weapon}} ₽</b-col>
+                  <b-col class="text">
+                    от {{item.econom.price_with_weapon}} ₽/мес
+                  </b-col>
                 </b-row>
               </template>
             </b-table>
@@ -29,17 +33,17 @@
               <template v-slot:cell(standart)="{item}">
                 <img :src="item.standart.src" :alt="item.standart.alt">
                 <h4>{{item.standart.name}}</h4>
-                <div class="text">{{item.standart.descr_name}}</div>
+                <div class="text_descr">{{item.standart.descr_name}}</div>
                 <p class="text">{{item.standart.descr}}</p>
                 <b-row>
                   <b-col cols="1">
                     <component :is="item.standart.svg_2"/>
                   </b-col>
-                  <b-col> от {{item.standart.price}} ₽</b-col>
+                  <b-col class="text"> от {{item.standart.price}} ₽/мес</b-col>
                   <b-col cols="1">
                     <component :is="item.standart.svg"/>
                   </b-col>
-                  <b-col>от {{item.standart.price_with_weapon}} ₽</b-col>
+                  <b-col class="text">от {{item.standart.price_with_weapon}} ₽/мес</b-col>
                 </b-row>
               </template>
             </b-table>
@@ -49,17 +53,17 @@
               <template v-slot:cell(premium)="{item}">
                 <img :src="item.premium.src" :alt="item.premium.alt">
                 <h4>{{item.premium.name}}</h4>
-                <div class="text">{{item.premium.descr_name}}</div>
+                <div class="text_descr">{{item.premium.descr_name}}</div>
                 <p class="text">{{item.premium.descr}}</p>
                 <b-row>
                   <b-col cols="1">
                     <component :is="item.premium.svg_2"/>
                   </b-col>
-                  <b-col> от {{item.premium.price}} ₽</b-col>
+                  <b-col class="text"> от {{item.premium.price}} ₽/мес</b-col>
                   <b-col cols="1">
                     <component :is="item.premium.svg"/>
                   </b-col>
-                  <b-col>от {{item.premium.price_with_weapon}} ₽</b-col>
+                  <b-col class="text">от {{item.premium.price_with_weapon}} ₽/мес</b-col>
                 </b-row>
               </template>
             </b-table>
@@ -92,14 +96,15 @@
           items: [
             {
               econom:{
-                src:'./type_1.jpeg',
+                src:'./type_1.png',
                 alt:"тип_охранны_1",
-                descr:'Сотрудники со среднем телосложением, имеющие разряд не выше 5-го, с опытом работы от 1 года, обученные для выполнения общенаблюдательных функций и обеспечения пропускного режима',
+                descr:'Сотрудники с хорошим телосложением, имеющие разряд не выше 5-го, с опытом работы от 1 года, обученные для выполнения общенаблюдательных функций и обеспечения пропускного режима',
               }
             },
             {
               econom: {
                 name:'Вахтовый режим',
+                descr_name:'(смена 12 часов)',
                 price:65000,
                 price_with_weapon:70000,
                 svg:Weapon_svg,
@@ -150,14 +155,15 @@
           items2: [
             {
               standart:{
-                src:'./type_2.jpg',
+                src:'./type_2.png',
                 alt:"тип_охранны_2",
-                descr:'Сотрудники, обладающие хорошими физическими качествами и спецнавыками, имеющие разряд 5-6, с опытом работы от 3 лет, подготовлены для выполнения контрольно-пропускного режима, работы с техническими средствами '
+                descr:'Сотрудники, со среднем телосложением, имеющие разряд 5-6, с опытом работы от 3-лет, обученные для выполнения контрольно-пропускного режима и работы с техническими средствами'
               }
             },
             {
               standart:{
                 name:'Вахтовый режим',
+                descr_name:'(смена 12 часов)',
                 price:80000,
                 price_with_weapon:85000,
                 svg:Weapon_svg,
@@ -208,7 +214,7 @@
           items3: [
             {
               premium: {
-                src:'./type_3.jpg',
+                src:'./type_3.png',
                 alt:"тип_охранны_3",
                 descr: 'Сотрудники, строго до 45-лет, крепкого телосложения и презентабельной внешности, имеющие 6-ой разряд, с опытом работы от 5-лет, обученные для выполнения особо сложных задач'
               }
@@ -216,6 +222,7 @@
             {
               premium:{
                 name:'Вахтовый режим',
+                descr_name:'(смена 12 часов)',
                 price:85000,
                 price_with_weapon:90000,
                 svg:Weapon_svg,
