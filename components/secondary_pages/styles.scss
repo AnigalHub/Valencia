@@ -1,9 +1,11 @@
+$font: 'EB Garamond', serif;
+
 .page{
   background:linear-gradient( to bottom, #788593, #acb5c1, #c6cedb);
   padding: 2.5rem 0;
 }
 .text{
-  font-family: 'Vollkorn', serif;
+  font-family: $font;
   font-weight: 400;
   letter-spacing: -1px;
   font-size: 1.45rem;
@@ -17,7 +19,7 @@
   margin-top: -2%;
 }
 .li_text,.name_type_guard{
-  font-family: 'Vollkorn', serif;
+  font-family: $font;
   font-weight: 800;
   letter-spacing: -1px;
   font-size: 1.4rem;
@@ -28,7 +30,7 @@
   margin-bottom: -0.5%;
 }
 .emphasized{
-  font-family: 'Vollkorn', serif;
+  font-family: $font;
   font-weight: 800 !important;
   letter-spacing: -1.25px;
   color: #072f4b;
@@ -45,7 +47,7 @@ img{
 }
 h1{
   padding-left: 15px;
-  font-family: 'Vollkorn', serif;
+  font-family: $font;
   letter-spacing: -1px;
   font-weight: 600;
 }
@@ -55,17 +57,17 @@ h1{
   margin-bottom: 2.25rem;
 }
 h4{
-  font-family: 'Vollkorn', serif;
+  font-family: $font;
   color: #09324e;
   display: block;
   padding-bottom: 0.5%;
-  text-shadow: 0.9px 1px  rgb(15, 37, 56);
+  text-shadow: 0.9px 1px rgb(15, 37, 56);
   font-weight: 800;
   margin-top: -2%;
   margin-bottom: 0;
 }
 h6{
-  font-family: 'Vollkorn', serif;
+  font-family: $font;
   font-weight: 800;
   letter-spacing: -1px;
   padding: 1% 0;
@@ -118,8 +120,9 @@ h6{
 label{
   font-weight: 800;
   font-size: 1.25rem;
-  text-shadow: 0.5px 0.5px 1px white;
-  color: rgb(15, 37, 56);
+  text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
+  color: rgb(15, 37, 55);
+  font-family: $font;
 }
 input{
   padding: 20px 10px;
@@ -142,12 +145,13 @@ textarea{
     display: block;
     margin: 3% auto 0 auto;
     padding:  2%;
-    font-weight: 600;
-    font-family: "Tenor Sans", sans-serif;
+    font-family: $font;
+    font-weight: 700;
+    text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
     font-size: 1.1rem;
     border-width: 2px 0;
     border-style: solid none;
-    border-color: rgb(15, 37, 56) rgb(15, 37, 56) rgb(15, 37, 56);
+    border-color: rgb(15, 37, 55) rgb(15, 37, 55) rgb(15, 37, 55);
     border-radius: 6px;
     background:radial-gradient(#acb1c2, #afb3cb, rgba(64, 107, 139, 0.65));
     box-shadow: 2px 2px 2px rgb(15, 37, 56);
@@ -433,7 +437,7 @@ textarea{
     font-family: Tahoma, Arial, verdana, Helvetica, sans-serif;
     font-weight: 800;
     text-align: left;
-    color:rgb(15, 37, 56);
+    color:rgb(15, 37, 55);
   }
   .row{padding-bottom: 3%;}
   .col .row{padding-bottom: 1.5%;}
