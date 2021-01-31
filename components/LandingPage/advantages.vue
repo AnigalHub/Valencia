@@ -39,39 +39,46 @@
               {
                 name:"гибкое ценнообразование на любой бюджет",
                 svg:PriceSVG
-              }
+              },
             ]
           }
       }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  $border_1: #487fa3;
+  $border_2:rgba(0, 0, 0, 0.2);
   #Advantages{
     padding: 2.5% 0;
     height: 23rem;
-    background:linear-gradient( to top , #6d7d90, #bbc4d2, #6d7d90);
+    background:linear-gradient( to left top, #304153, #808da0, #304153);
+    filter: brightness(70%);
   }
   .hexagon {
-    width: 16rem;
+    width: 18.5%;
     height: 11rem;
-    background: rgba(21, 45, 66, 0.85);
+    background: rgba(21, 45, 66, 0.75);
     position: relative;
     float: left;
     margin: 0 0.5rem;
     padding: 0 2rem !important;
-    border-right: 3.5px solid #71c2ff;
-    border-left: 3.5px solid #71c2ff;
-    border-top: 3.5px solid  #71c2ff;
+    border-radius: 10px;
+    border-right: 3px solid $border_1;
+    border-left: 3px solid $border_1;
+    border-top: 3px solid $border_1;
   }
   .hexagon:nth-child(odd){
     margin-top: 4rem !important;
-    border-right: 3.5px solid white;
-    border-left: 3.5px solid white;
-    border-top: 3.5px solid  white;
+    border-right: 3px solid $border_2;
+    border-left:3px solid $border_2;
+    border-top: 3px solid $border_2;
   }
   .hexagon:nth-child(odd)::before {
-    border-top: 34.8675px solid white;
+    border-top: 34.8675px solid $border_2;
+  }
+  .hexagon:nth-child(odd)::after {
+    border-top: 29.8675px solid solid $border_2;
   }
   .hexagon::after {
     content: "";
@@ -80,9 +87,10 @@
     left: 0;
     width: 0;
     height: 0;
-    border-left: 8rem solid transparent;
-    border-right: 8rem solid transparent;
+    border-left: 7.8rem solid transparent;
+    border-right: 7.8rem solid transparent;
     border-top: 29.8675px solid rgba(21, 45, 66, 0.95);
+
   }
   .hexagon::before {
     content: "";
@@ -91,9 +99,10 @@
     left: 0;
     width: 0;
     height: 0;
-    border-left: 8rem solid transparent;
-    border-right: 8rem solid transparent;
-    border-top: 34.8675px solid #71c2ff;
+    border-left: 7.8rem solid transparent;
+    border-right: 7.8rem solid transparent;
+    border-top: 34.8675px solid $border_1;
+
   }
   svg{
     margin-left: auto;
