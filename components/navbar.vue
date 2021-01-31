@@ -79,8 +79,8 @@
   .navbar-brand{
     padding-bottom: 0 !important;
     text-align: center;
-    font-family: 'Vollkorn', serif;
-    font-weight: 700;
+    font-family: 'RobotoWeb', sans-serif;
+    font-weight: 600;
     color: #ffffff !important;
     margin-top: -1%;
   }
@@ -126,8 +126,8 @@
     background: #040610;
   }
   .name_brand{
-    font-family: 'Vollkorn', serif;
-    font-weight: 800 !important;
+    font-family: 'RobotoWeb', sans-serif;
+    font-weight: 600 !important;
     letter-spacing: -1.5px;
     color: #ffffff;
     font-size: 1.35rem;
@@ -153,13 +153,13 @@
     height: 1em;
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-right: 0.6rem !important;
     padding-left: 0.6rem !important;
     text-align: center;
-    font-family: 'Vollkorn', serif;
-    font-weight: 500;
-    letter-spacing: -1.65px;
+    font-family: 'RobotoWeb', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
     color: #ffffff !important;
   }
   .telephone{
