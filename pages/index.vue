@@ -1,8 +1,8 @@
 <template>
     <div id="index">
       <Home/>
-      <Advantages/>
       <Type/>
+      <!-- <Advantages/> -->
       <Services/>
       <Feedback/>
       <Clients/>
