@@ -1,9 +1,11 @@
 <template>
   <div id="Advantages">
     <b-container>
-      <div class="hexagon" v-for="advantage in Advanatages" :key="advantage.index">
+      <div class="flex-container">
+        <div class="type_guard_beautiful_block" v-for="advantage in Advanatages" :key="advantage.index">
         <component :is="advantage.svg"/>
-        <p class="text">{{advantage.name}}</p>
+        <p class="text1" v-html="advantage.name"></p>
+        </div>
       </div>
     </b-container>
   </div>
@@ -14,6 +16,7 @@
   import EquipmentSVG from "./advantages_svg/equipment_svg";
   import QualityControlSVG from "./advantages_svg/quality_control_svg";
   import SupportSVG from "./advantages_svg/support_svg";
+  import ClockSVG from "./advantages_svg/clock_svg";
   import PriceSVG from "./advantages_svg/price_svg";
     export default {
         name: "advantages",
@@ -21,7 +24,7 @@
           return{
             Advanatages:[
               {
-                name:"квалифицированный штат сотрудников",
+                name:"квалифицированный штат <br> сотрудников",
                 svg:StateSVG,
               },
               {
@@ -29,11 +32,15 @@
                 svg:EquipmentSVG,
               },
               {
-                name:"контроль качества на каждом этапе работы",
+                name:"готовность <br>  работать в <br> любое время",
+                svg:ClockSVG
+              },
+              {
+                name:"контроль качества <br> на каждом <br> этапе работы",
                 svg:QualityControlSVG,
               },
               {
-                name:"круглосуточная поддержка клиентов 24/7",
+                name:"круглосуточная поддержка <br> клиентов 24/7",
                 svg:SupportSVG,
               },
               {
@@ -50,76 +57,48 @@
   $border_1: #487fa3;
   $border_2:rgba(0, 0, 0, 0.2);
   #Advantages{
-    padding: 2.5% 0;
-    height: 23rem;
-    background:linear-gradient( to left top, #304153, #808da0, #304153);
-    filter: brightness(70%);
+    //padding: 2.5% 0;
+    height: 15rem;
+    //background:linear-gradient( to left top, #304153, #808da0, #304153);
+    //filter: brightness(70%);
   }
-  .hexagon {
-    width: 18.5%;
-    height: 11rem;
-    background: rgba(21, 45, 66, 0.75);
+  .flex-container{
+    margin-top: 7%;
+  }
+  .flex-container > div {
+    width: 28%;
+    padding: 0.25%;
+    margin: 1.5% 2.5% 0.5% 0 !important;
+    //height: 11rem;
+    //background: rgba(21, 45, 66, 0.75);
     position: relative;
     float: left;
-    margin: 0 0.5rem;
-    padding: 0 2rem !important;
-    border-radius: 10px;
-    border-right: 3px solid $border_1;
-    border-left: 3px solid $border_1;
-    border-top: 3px solid $border_1;
-  }
-  .hexagon:nth-child(odd){
-    margin-top: 4rem !important;
-    border-right: 3px solid $border_2;
-    border-left:3px solid $border_2;
-    border-top: 3px solid $border_2;
-  }
-  .hexagon:nth-child(odd)::before {
-    border-top: 34.8675px solid $border_2;
-  }
-  .hexagon:nth-child(odd)::after {
-    border-top: 29.8675px solid solid $border_2;
-  }
-  .hexagon::after {
-    content: "";
-    position: absolute;
-    bottom: -28.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 7.8rem solid transparent;
-    border-right: 7.8rem solid transparent;
-    border-top: 29.8675px solid rgba(21, 45, 66, 0.95);
-
-  }
-  .hexagon::before {
-    content: "";
-    position: absolute;
-    bottom: -34.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 7.8rem solid transparent;
-    border-right: 7.8rem solid transparent;
-    border-top: 34.8675px solid $border_1;
+    border-radius: 20px;
+    filter: contrast(120%);
+    background-color: rgba(250, 250, 255, 0.68);
+    color: #4D4B4B;
+    border: 1px solid #999999;
+    box-shadow: 2px 2px 5px #131212;
 
   }
   svg{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 75px !important;
-    height: 75px !important;
+    width: 50px !important;
+    height: 50px !important;
     margin-top: 3%;
+
   }
-  .text{
-    font-family: 'Viaoda Libre', cursive;
-    font-weight: 500;
-    letter-spacing: -1.75px;
-    text-shadow: 1px 1px 2px rgb(15, 37, 56);
-    font-size: 1.25rem;
+  .text1{
+    font-family: 'Source Serif Pro', serif !important;
+    font-weight: 600;
+    letter-spacing: -1.6px;
+    text-shadow: 1px 1px 80px #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
     text-align: center;
-    color: #ffffff;
+    color: rgb(15, 37, 56);
   }
 
 </style>
