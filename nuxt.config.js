@@ -11,7 +11,13 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/icons.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/icons.png' },
+      {
+        rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap'
+      },
+      {
+        rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap'
+      },
     ]
   },
   server:{
