@@ -18,6 +18,12 @@ export default {
       {
         rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap'
       },
+      {
+        rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Lobster&display=swap'
+      },
+      {
+        rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'
+      },
     ]
   },
   server:{
