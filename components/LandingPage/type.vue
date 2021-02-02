@@ -1,18 +1,14 @@
 <template>
   <div class="container-inner">
-    <div class="section" v-for="(category, index) in Categories" :key="index">
-
+    <router-link :to="category.link" class="section" v-for="(category, index) in Categories" :key="index">
       <div class="content">
-        <router-link :to="category.link">
         <div class="container">
           <h2>{{category.category}}</h2>
           <div class="text1">{{category.descr_category}}</div>
         </div>
-        </router-link>
       </div>
-
       <div class="overlay"></div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -23,17 +19,17 @@
         return{
           Categories:[
             {
-              link:"/selection_and_supply_it",
+              link:"/company/",
               category:"Информация для клиентов",
               descr_category:"(принципы организации, этапы работы)",
             },
             {
-              link:"/laboratory",
-              category:"Прайс-лист",
-              descr_category:"(цены на наши услуги)",
+              link:"/tariffs/",
+              category:"Прайс-лист на услуги",
+              descr_category:"(актуальные цены на все виды услуг)",
             },
             {
-              link:"/supply",
+              link:"/licenses/",
               category:"Впечатление о работе с нами",
               descr_category:"(благодарственные и рекомендательные письма)",
             },
@@ -46,7 +42,7 @@
 <style scoped lang="scss">
   .container-inner {
     display: flex;
-    height: 42vh;
+    height: 40vh;
     max-width: 100%;
   }
   .container div{
@@ -54,15 +50,10 @@
   }
   h2{
   font-family: 'Yeseva One', cursive;
+    width: 600px;
   }
-  .section:first-child h2{
-    padding-top: 60%;
-  }
-  .section:nth-child(2) h2{
-    padding-top: 122%;
-  }
-  .section:nth-child(3) h2{
-    padding-top: 55%;
+  .section h2{
+    padding-top: 45%;
   }
   .section {
     flex: 1;
@@ -90,20 +81,22 @@
     background-size: 100% 100%;
   }
   .section {
-  a{
-    color: white;
-    font-family: 'Exo 2', sans-serif;
-  }
+    a{
+      color: white;
+      text-decoration:none !important;
+      font-family: 'Exo 2', sans-serif;
+    }
+    a:hover{
+      color: white;
+      font-weight: 600 !important;
+      text-decoration:none !important;
+    }
     &:hover h2{
       text-decoration:underline;
     }
-    &:hover .container div{
+    &:hover .text1{
       text-decoration:none !important;
     }
-  a:hover{
-    color: white;
-    font-weight: 600 !important; text-decoration:none !important;
-  }
   }
   .section .overlay {
     background-color: rgba(0, 0, 0, 0.4);
