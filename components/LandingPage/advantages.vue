@@ -3,8 +3,10 @@
     <b-container>
       <div class="flex-container">
         <div class="type_guard_beautiful_block" v-for="advantage in Advanatages" :key="advantage.index">
+          <router-link :to="advantage.link">
         <component :is="advantage.svg"/>
         <p class="text1" v-html="advantage.name"></p>
+          </router-link>
         </div>
       </div>
     </b-container>
@@ -24,28 +26,34 @@
           return{
             Advanatages:[
               {
-                name:"квалифицированный штат <br> сотрудников",
+                name:"квалифицированный <br> штат <br> сотрудников",
                 svg:StateSVG,
+                link:'/company',
               },
               {
-                name:"современное инновационное оборудование",
+                name:"современное <br> инновационное <br> оборудование",
                 svg:EquipmentSVG,
+                link:'/technical_means',
               },
               {
                 name:"готовность <br>  работать в <br> любое время",
-                svg:ClockSVG
+                svg:ClockSVG,
+                link:'/tariffs',
               },
               {
                 name:"контроль качества <br> на каждом <br> этапе работы",
                 svg:QualityControlSVG,
+                link:'/company',
               },
               {
-                name:"круглосуточная поддержка <br> клиентов 24/7",
+                name:"круглосуточная <br>поддержка <br> клиентов 24/7",
                 svg:SupportSVG,
+                link:'/contact',
               },
               {
-                name:"гибкое ценнообразование на любой бюджет",
-                svg:PriceSVG
+                name:"гибкое <br> ценнообразование <br> на любой бюджет",
+                svg:PriceSVG,
+                link:'/tariffs',
               },
             ]
           }
@@ -63,42 +71,47 @@
     //filter: brightness(70%);
   }
   .flex-container{
-    margin-top: 7%;
+    margin-top: 7.5%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
   .flex-container > div {
-    width: 28%;
-    padding: 0.25%;
-    margin: 1.5% 2.5% 0.5% 0 !important;
-    //height: 11rem;
-    //background: rgba(21, 45, 66, 0.75);
+    width: 28.5%;
+    padding: 0.5%;
+    margin: 1.5% 3% 1.25% 0 !important;
     position: relative;
     float: left;
-    border-radius: 20px;
-    filter: contrast(120%);
-    background-color: rgba(250, 250, 255, 0.68);
-    color: #4D4B4B;
-    border: 1px solid #999999;
-    box-shadow: 2px 2px 5px #131212;
-
+    filter: contrast(120%)brightness(110%);
+    background-color: rgba(250, 250, 255,.7);
+    border: 2.5px solid rgba(255, 255, 255);
+    box-shadow: 0 0 4px white, 3px 3px 3px rgb(21, 44, 64);
+    &:hover{
+    }
+    p{
+      margin-bottom: 1rem !important;
+    }
   }
   svg{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 50px !important;
-    height: 50px !important;
-    margin-top: 3%;
-
+    width: 60px !important;
+    height: 60px !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 10%;
+    padding: .5%;
   }
   .text1{
-    font-family: 'Source Serif Pro', serif !important;
-    font-weight: 600;
-    letter-spacing: -1.6px;
-    text-shadow: 1px 1px 80px #ffffff;
-    font-size: 1.1rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 600 !important;
+    letter-spacing: -.25px;
+    transform: scale(1, 1.1);
+    text-shadow: -.05px .25px .05px rgb(64, 94, 121);
+    font-size: 1.2rem;
     line-height: 1.4rem;
     text-align: center;
-    color: rgb(15, 37, 56);
+    color: rgb(9, 24, 38);
   }
 
 </style>
