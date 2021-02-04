@@ -11,7 +11,7 @@
         <h6 class="block_two">Разновидности личной охраны:</h6>
         <img src="../../static/services/bodyguard/child_bodyguard.jpg" alt="личная_охрана_детей" class="second_img">
         <ul class="text varieties">
-          <li v-for="bodyguard in TypesBodyguard" :key="bodyguard.index"><i><b>{{bodyguard.name}}</b></i> - {{bodyguard.descr}}</li>
+          <li v-for="bodyguard in TypesBodyguard" :key="bodyguard.index"><b>{{bodyguard.name}}</b>- {{bodyguard.descr}}</li>
         </ul>
         <img src="../../static/services/bodyguard/bodyguard_driver.jpg" alt="личная_охрана_водитель" class="third_img">
         <h6>Обязанности личной охраны:</h6>
