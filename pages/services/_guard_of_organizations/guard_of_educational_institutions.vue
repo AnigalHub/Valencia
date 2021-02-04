@@ -2,12 +2,14 @@
   <div id="guard_of_educational_institutions" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_organizations/guard_preschool.jpg" alt="охрана_дошкольных_учреждений" class="first_img">
+      <img src="../../../static/services/guard_of_organizations/422212491682368_78b6.jpg" alt="охрана_дошкольных_учреждений" class="first_img">
       <p class="text"><b>Образовательные и дошкольные учреждения</b>- это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
       <div class="import">
-        <div class="li_text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">
-          <component :is="guard.svg"/>{{guard.name}}
-        </div>
+        <ul>
+        <li class="li_text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">
+          {{guard.name}}
+        </li>
+        </ul>
       </div>
       <h6 class="block_two">Особенности охраны образовательных и дошкольных учреждений:</h6>
       <b-row>
@@ -19,7 +21,7 @@
       </b-row>
       <div class="im_descr">
         <h6>Комплекс мероприятий охраны учебных заведений:</h6>
-        <img src="../../../static/services/guard_of_organizations/guard_of_educational_institutions.jpg" alt="охрана_образовательных_учреждений">
+        <img src="../../../static/services/guard_of_organizations/scale_1200.jpg" alt="охрана_образовательных_учреждений">
           <ul class="text">
             <li v-for="duty in DutiesGuardOfEducationalInstitutionFeatures" :key="duty.index">{{duty.duty}}</li>
           </ul>
@@ -32,7 +34,6 @@
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
     import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
-    import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
     export default {
       name: "guard_of_educational_institutions",
       components: {Tarrifs_content, Name_page},
@@ -40,10 +41,10 @@
         return {
           name_page: "Охрана образовательных и дошкольных учреждений",
           GuardOfEducationalAndPreschoolInstitutions:[
-            {name:"Охрана детских садов",svg:Guard_shieldSVG},
-            {name:"Охрана школ",svg:Guard_shieldSVG},
-            {name:"Охрана интерната",svg:Guard_shieldSVG},
-            {name:"Охрана вузов/училищ",svg:Guard_shieldSVG},
+            {name:"Охрана детских садов"},
+            {name:"Охрана школ"},
+            {name:"Охрана интерната"},
+            {name:"Охрана вузов/училищ"},
           ],
           GuardOfEducationalInstitutionFeatures:[
             {

@@ -2,12 +2,14 @@
   <div id="guard_private_property" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_real_estate/place_of_guard.jpg" alt="рабочее_место_охраны(кпп)" class="first_img">
+      <img src="../../../static/services/guard_of_real_estate/estate_33.jpg" alt="рабочее_место_охраны(кпп)" class="first_img">
         <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
         <div class="import">
-          <div class="li_text" v-for="name in GuardPrivateProperty">
-            <component :is="name.svg"/>{{name.name}}
-          </div>
+          <ul>
+            <li class="li_text" v-for="name in GuardPrivateProperty">
+             {{name.name}}
+            </li>
+          </ul>
         </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников частных объектов:</h6>
@@ -23,7 +25,6 @@
 
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
-    import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
     import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
     export default {
         name: "guard_private_property",
@@ -32,10 +33,11 @@
         return{
           name_page: "Охрана частных объектов",
           GuardPrivateProperty:[
-            {name:"Охрана коттеджей и коттеджных поселков",svg:Guard_shieldSVG},
-            {name:"Охрана жилых комплексов и многоквартирных домов",svg:Guard_shieldSVG},
-            {name:"Охрана часных домов и загородных резиденций",svg:Guard_shieldSVG},
-            {name:"Охрана дач и дачных поселков",svg:Guard_shieldSVG},
+            {name:"Охрана ТСЖ"},
+            {name:"Охрана дач и дачных поселков"},
+            {name:"Охрана коттеджей и коттеджных поселков"},
+            {name:"Охрана жилых комплексов и многоквартирных домов"},
+            {name:"Охрана часных домов и загородных резиденций"},
           ],
           DutiesGuardPrivateProperty:[
             {duty:"вооруженная охрана со спецсредствами;",},

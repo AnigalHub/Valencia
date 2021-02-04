@@ -4,13 +4,14 @@
     <b-container>
       <img src="../../../static/services/guard_of_real_estate/guard_of_commercial_object.jpg" alt="охрана_коммерческого_объекта" class="first_img">
       <p class="text">В охране нуждаются здания, сооружения и иные объекты коммерческой деятельности, безопасность таких объектов - самое важное условие их бесперебойной работы.</p>
-      <b-row class="import">
-        <b-col v-for="guard in GuardOfCommercialObjects" :key="guard.index">
-          <div class="li_text" v-for="name in guard.guard">
-            <component :is="name.svg"/>{{name.name}}
-          </div>
-        </b-col>
-      </b-row>
+      <div class="import" >
+          <ul>
+            <li v-for="guard in GuardOfCommercialObjects" :key="guard.index"  class="li_text">
+              {{guard.name}}
+            </li>
+          </ul>
+
+      </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
         <img src="../../../static/services/guard_of_real_estate/office.jpg" alt="офис">
@@ -25,7 +26,6 @@
 
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
-    import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
     import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
     export default {
       name: "guard_of_commercial_objects",
@@ -34,8 +34,13 @@
         return {
           name_page: "Охрана коммерческих объектов",
           GuardOfCommercialObjects:[
-            {guard: [{name:"Охрана бизнес-центров",svg:Guard_shieldSVG}, {name:"Охрана банков",svg:Guard_shieldSVG}, {name:"Охрана баров, ресторанов",svg:Guard_shieldSVG},{name:"Охрана торговых центров",svg:Guard_shieldSVG},{name:"Охрана салонов красоты",svg:Guard_shieldSVG},]},
-            {guard: [{name:"Охрана офисов",svg:Guard_shieldSVG}, {name:"Охрана гостиниц и отелей",svg:Guard_shieldSVG}, {name:"Охрана ночных клубов",svg:Guard_shieldSVG},{name:"Охрана магазинов",svg:Guard_shieldSVG},{name:"Охрана санаториев",svg:Guard_shieldSVG},]},
+            {name:"Охрана банков"},
+            {name:"Охрана торговых центров"},
+            {name:"Охрана салонов красоты"},
+            {name:"Охрана гостиниц и отелей"},
+            {name:"Охрана магазинов"},
+            {name:"Охрана офисов и бизнес-центров"},
+            {name:"Охрана баров, клубов, ресторанов"},
           ],
           DutiesGuardOfCommercialObjects:[
             {duty:"защита полной сохранности имущества коммерческой недвижимости, жизни и здоровья людей, а также посетителей объекта;",},

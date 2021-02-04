@@ -5,9 +5,11 @@
       <img src="../../../static/services/guard_of_organizations/guard_of_medical_institutions.jpg" alt="охрана_медицинских_учреждений" class="first_img">
       <p class="text"><b>Медицинские учреждения</b> - это организации с наличием дорогостоящего оборудования и дефицитных лекарственных препаратов: наркотических, спиртосодержащих и предписанных строго по рецепту врачей. Из-за специализации в медучреждениях проблема безопасности очень актуальна, как и соблюдение режима работы и предупреждение чрезвычайных ситуаций.</p>
       <div class="import">
-        <div class="li_text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">
-          <component :is="guard.svg"/>{{guard.name}}
-        </div>
+        <ul>
+          <li class="li_text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">
+          {{guard.name}}
+          </li>
+        </ul>
       </div>
       <h6 class="block_two">Особенности охраны медучреждений:</h6>
       <b-row>
@@ -37,7 +39,6 @@
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
     import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
-    import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
     export default {
       name: "guard_of_medical_institutions",
       components: {Tarrifs_content, Name_page},
@@ -45,10 +46,10 @@
           return{
             name_page: "Охрана медицинских учреждений",
             GuardOfMedicalInstitutions:[
-              {name:"Охрана поликлиник",svg:Guard_shieldSVG},
-              {name:"Охрана аптек",svg:Guard_shieldSVG},
-              {name:"Охрана больниц",svg:Guard_shieldSVG},
-              {name:"Охрана медицинских центров",svg:Guard_shieldSVG},
+              {name:"Охрана поликлиник"},
+              {name:"Охрана аптек"},
+              {name:"Охрана больниц"},
+              {name:"Охрана медицинских центров"},
             ],
             GuardOfMedicalInstitutionsFeatures:[
               {
@@ -72,7 +73,7 @@
               {duty:"активная защита (оборона) организации;",},
               { duty:"меры, направленные на штатный режим в медучреждении:",
                 subordination:[
-                  {name_duty:"правовые", descr_duty:" - подготовка нормативных документов, договоров, инструкций и приказов;"},
+                  {name_duty:"правовые", descr_duty:" - подготовка нормативных документов, инструкций и приказов;"},
                   {name_duty:"технические", descr_duty:" - монтаж и поддержание работы систем безопасности;"},
                   {name_duty:"физические:", descr_duty:" создание КПП (на въезде/выезде) и постовой службы; патрулирование территории и автостоянки; сопровождение пациентов/ценных грузов; контроль за объектом с помощью технических средств систем безопасности; связь с правоохранительными органами; предотвращение правонарушителей.;"},
                   {name_duty:"режимные:", descr_duty:" прием посетителей; пропускная система персонала; мониторинг перемещения автотранспорта/материальных ценностей; организация доступа в кабинеты, склады и хранилища."},

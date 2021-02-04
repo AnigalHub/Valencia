@@ -2,12 +2,14 @@
   <div id="guard_of_transport_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/object_guard/guard_at_the_post.jpg" alt="охрана_на_посту" class="first_img">
+      <img src="../../../static/services/object_guard/121205087_381794626186194_5364950773827644449_n.jpg" alt="охрана_на_посту" class="first_img">
       <p class="text">Для обеспечения безопасности объектов транспорта, комплекс охранных мероприятий прежде всего направлен на защиту работников транспортной инфраструктуры и сохранность передаваемого под охрану имущества.
       <div class="import">
-        <div class="li_text" v-for="guard in GuardOfTransportFacilities" :key="guard.index">
-          <component :is="guard.svg"/>{{guard.name}}
-        </div>
+      <ul>
+        <li class="li_text" v-for="guard in GuardOfTransportFacilities" :key="guard.index">
+          {{guard.name}}
+        </li>
+      </ul>
       </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
@@ -24,7 +26,6 @@
 <script>
     import Name_page from "../../../components/secondary_pages/name_page";
     import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
-    import Guard_shieldSVG from "../../../components/secondary_pages/services_svg/guard_shield_svg";
     export default {
       name: "guard_of_transport_facilities",
       components: {Tarrifs_content, Name_page},
@@ -32,12 +33,12 @@
         return{
           name_page: "Охрана объектов транспорта",
           GuardOfTransportFacilities:[
-            {name:"Охрана вокзалов",svg:Guard_shieldSVG},
-            {name:"Охрана автосервисов",svg:Guard_shieldSVG},
-            {name:"Охрана АЗС",svg:Guard_shieldSVG},
-            {name:"Охрана аэропортов",svg:Guard_shieldSVG},
-            {name:"Охрана гаражных комплексов",svg:Guard_shieldSVG},
-            {name:"Охрана автостоянок и железнодорожных объектов",svg:Guard_shieldSVG},
+            {name:"Охрана вокзалов"},
+            {name:"Охрана автосервисов"},
+            {name:"Охрана АЗС"},
+            {name:"Охрана аэропортов"},
+            {name:"Охрана гаражных комплексов"},
+            {name:"Охрана автостоянок и железнодорожных объектов"},
 
           ],
           DutiesGuardOfTransportFacilities:[
