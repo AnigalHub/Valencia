@@ -24,6 +24,12 @@ export default {
       {
         rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'
       },
+      {
+        rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap'
+      },
+      {
+        rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap'
+      },
     ]
   },
   server:{
