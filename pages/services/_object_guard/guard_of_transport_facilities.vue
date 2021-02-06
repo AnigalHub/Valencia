@@ -2,7 +2,7 @@
   <div id="guard_of_transport_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/object_guard/121205087_381794626186194_5364950773827644449_n.jpg" alt="охрана_на_посту" class="first_img">
+      <img src="../../../static/services/object_guard/guard_at_the_post.jpg" alt="охрана_на_посту" class="first_img">
       <p class="text">Для обеспечения безопасности объектов транспорта, комплекс охранных мероприятий прежде всего направлен на защиту работников транспортной инфраструктуры и сохранность передаваемого под охрану имущества.
       <div class="import">
       <ul>

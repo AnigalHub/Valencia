@@ -2,7 +2,7 @@
   <div id="guard_private_property" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_real_estate/estate_33.jpg" alt="рабочее_место_охраны(кпп)" class="first_img">
+      <img src="../../../static/services/guard_of_real_estate/panel_protection.jpg" alt="рабочее_место_охраны(кпп)" class="first_img">
         <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
         <div class="import">
           <ul>

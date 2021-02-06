@@ -56,7 +56,7 @@
             {
               name: "Охрана образовательных и дошкольных учреждений",
               svg: Guard_shield_typesSVG,
-              img_src: "../guard_of_organizations/guard_preschool.jpg",
+              img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
               img_alt: "охрана_коммерческих_объектов",
               list: [
                 {guard: "Охрана детских садов"},
@@ -80,7 +80,7 @@
             {
               name: "Охрана муниципальных объектов - госучреждений",
               svg: Guard_shield_typesSVG,
-              img_src: "../guard_of_organizations/guard_of_municipal_facilities.jpg",
+              img_src: "../guard_of_organizations/gallery.jpg",
               img_alt: "охрана_частных_объектов",
               list: [
                 {guard: "Охрана административных зданий"},
