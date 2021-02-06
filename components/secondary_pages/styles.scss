@@ -1,64 +1,75 @@
 $font: 'EB Garamond', serif;
+$color: black;
 
 .page{
-  background:linear-gradient( to bottom, #788593, #acb5c1, #c6cedb);
+  background:linear-gradient( to bottom left, #3b475a 2%, #68778e,#7e8da5,#7e8da5,#68778e, #3b475a);
+  filter: brightness(110%);
   padding: 2.5rem 0;
 }
 .text{
   font-family: $font;
-  font-weight: 400;
-  letter-spacing: -1px;
-  font-size: 1.45rem;
-  line-height: 1.6rem;
-  text-shadow: 0.25px 0.5px 0.5px #245b79;
-  color: rgb(15, 37, 55);
+  font-weight: 400 !important;
+  letter-spacing: -.25px;
+  font-size: 1.58rem;
+  line-height: 1.4rem;
+  filter: contrast(120%)brightness(170%);
+  text-shadow: 0 0 .15px  black;
+  color: $color;
 }
 .text_descr{
   font-size: 1.25rem !important;
   line-height: 1.4rem !important;
-  margin-top: -2%;
+  //margin-top: -6%;
 }
 .li_text,.name_type_guard{
   font-family: $font;
   font-weight: 800;
-  letter-spacing: -1px;
-  font-size: 1.4rem;
+  letter-spacing: -.25px;
+  font-size: 1.5rem;
   line-height: 1.6rem;
-  text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-  color: rgb(15, 37, 55);
+  text-shadow: 0 0 .15px  black;
+  color: $color;
   padding-bottom: 0.85%;
-  margin-bottom: -0.5%;
 }
+
 .emphasized{
   font-family: $font;
   font-weight: 800 !important;
   letter-spacing: -1.25px;
-  color: #072f4b;
-  text-shadow: 0.5px 0.5px 1px #09324e;
+  color: $color;
+  //text-shadow: 0.5px 0.5px 1px black;
   text-decoration: none !important;
 }
 img{
-  //box-shadow: 7px 7px 7px rgb(15, 37, 56);
-  //border: 8px solid transparent;
-  //border-image: linear-gradient(to top left, transparent 40%, rgba(255, 255, 255) 60%, transparent 40%,transparent 60%);
-  //border-image-slice: 1;
-  //padding: 0.8%;
-  filter: contrast(115%);
+  filter: brightness(80%) contrast(100%)!important; //box-shadow: 0 0 8px rgb(15, 37, 56);
+  background-color: transparent;
+  box-shadow: 0 0 10px black, 0.5px 0.5px 4px black;
 }
 h1{
-  padding-left: 15px;
-  font-family: $font;
-  letter-spacing: -1px;
-  font-weight: 600;
+  margin-top: 0 !important;
+  font-family: 'Yeseva One', cursive;
+  text-shadow: -.75px 1px .75px $color;
+  color: $color;
+  font-size: 2.2rem;
+  background: transparent;
+  font-weight: 500;
+  letter-spacing: -1.5px;
 }
 .place_h1{
-  background: #ccd3dc;
   padding: 5px 0;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
+  //box-shadow: 0 0 15px #152c40, 2.5px 2.5px 2.5px #718199;
+}
+h2,h3{
+  font-family: 'EB Garamond', serif;
+  font-weight: 800 !important;
+  padding: 1% 0;
+  line-height: 1.6rem;
+  color:black;
 }
 h4{
   font-family: $font;
-  color: #09324e;
+  color: black;
   display: block;
   padding-bottom: 0.5%;
   text-shadow: 0.9px 1px rgb(15, 37, 56);
@@ -68,52 +79,57 @@ h4{
 }
 h6{
   font-family: $font;
-  font-weight: 800;
-  letter-spacing: -1px;
+  font-weight: 800 !important;
   padding: 1% 0;
-  font-size: 1.4rem;
+  font-size: 1.58rem;
   line-height: 1.6rem;
-  text-shadow: 0.25px 0.5px 0.5px rgb(16, 40, 61);
-  color:rgb(15, 37, 55);
+  text-shadow: 0 0 0.15px black;
+  color:$color;
   text-decoration: underline;
-  text-decoration-color: #f5f1f1;
+  filter: contrast(120%) brightness(170%);
 }
 .flex-container {
   display: flex;
   flex-wrap: wrap;
 }
 .beautiful_block{
-  border: 3px solid rgba(250, 250, 250, 0.53);
   background: transparent;
-  box-shadow: 0 0 3px 0.2px rgb(15, 37, 56);
-  border-radius: 8px;
   padding: 0.5%;
 }
 .type_guard_beautiful_block{
   padding: 0.5%;
-  border: 2px solid #f5f1f1;
-  background: rgba(250, 250, 250, 0.23);
+  border: 3px solid rgba(250, 250, 250, 0.23);
   box-shadow: 0 0 3px 1px rgb(15, 37, 56);
 }
 .block_two{
   clear: left;
 }
 .page{
-  li{padding-bottom: 0.85%;}
+  li{padding-bottom: 0.8%;}
   ul li:before {
     content:"·";
-    font-size:80px;
-    vertical-align:middle;
-    color: #f5f1f1;
-    text-shadow:  1.5px 1.5px rgb(15, 37, 55);
+    font-size:70px;
+    vertical-align: text-top;
+    color: black;
+    text-shadow:  1px 1px .5px #797777;
+    margin-bottom: 0 !important;
+  }
+  .import{
+    ul li:before {
+      content:"»";
+      font-size:40px !important;
+      vertical-align: text-top;
+      color: black;
+      margin-bottom: 0 !important;
+    }
   }
   ul{
     list-style-type:none !important;
     margin-left: -6%;
   }
   ul ul li:before {
-    color: rgba(245, 241, 241, 0.03) !important;
-    text-shadow:  1.5px 1.5px rgb(15, 37, 55);
+    color: rgba(0, 0, 0, 0.8) !important;
+    text-shadow:  none;
     margin-left: 2%;
   }
 }
@@ -171,28 +187,33 @@ textarea{
     width: 70px;
     height: 70px;
     float: left;
-    border: 2px solid rgba(9, 50, 78, 0.62);
-    background: rgba(28, 97, 146, 0.1);
-    border-radius: 5px;
+    border-radius: 50%;
+    //border: 2px solid rgba(255, 255, 255, 0.7);
+    //background: rgba(168, 188, 227, 0.28);
+    box-shadow: 0 0 6.5px black;
+    //border-radius: 5px;
   }
   .first_img{
     float: left;
-    width: 40%;
-    margin: 0 2% 0.8% 0;
+    width: 38%;
+    margin: 0 1.5% 0.5% 0;
   }
   .flex-container > div {
-    width: 31%;
-    margin: 0 0.8% 1.6% 0.8% !important;
+    width: 33%;
+    margin-bottom: 0.5%  !important;
     svg {
       float: left;
       margin-left: -25%;
-      margin-top: 110%;
+      margin-top: 70%;
       padding: 10%;
     }
     img{
-      box-shadow: none;
+      //box-shadow: none;
       width: 100% ;
       height: 100%;
+    }
+    p{
+      margin-bottom: 0.5rem !important;
     }
   }
   .stage{
@@ -209,85 +230,70 @@ textarea{
   ul{margin-left: -3% !important;}
 }
 #tariffs,#tariffs_content{
-  img{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
-    display: none;
-    border-radius: 50%;
-    box-shadow: none;
-    background: rgba(255, 255, 255, 0.85);
+  table{
+    background: rgba(219, 205, 205, 0.1);
+    box-shadow: 0 0 3px 1px #0f2538;
+    margin-bottom: 0 !important;
   }
-  svg{
-    width: 35px;
-    height: 45px;
+  .table th{
+    background: rgba(8, 22, 33, 0.25) !important;
   }
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border: none !important;
-    border-collapse: separate;
-    border-spacing: 0 2px;
-    thead th {
-      font-family: 'Viaoda Libre', cursive;
-      font-weight: 800 !important;
-      border: 1.8px solid rgb(26, 60, 88, .6);
-      box-shadow: 0 1.5px 0 #0f2538 ;
-      background: #e0e5ec;
-    }
-    .row {
-      display: flex;
-      .col{padding: 0 2.5px !important;}
-    }
-    .col-1{margin-left: -2.5%;}
-    .col{
-      height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    th,td {
-      text-align: center;
-    }
-    th{
-      padding: 0.5rem;
-    }
-    td{
-      padding: 0.5rem 0.5rem 0 0.5rem;
-    }
-    tbody{
-      background: #ccd5e0 !important;
-      td{box-shadow: 0 0 4px 0 rgba(26, 60, 88, 0.6);}
-      tr{
-        &:hover{
-          background: #ecf1f5 !important;
-          cursor: default;
-        }
-        &:first-child {
-          .row{display: none;}
-          .show_row{display: flex !important;}
-          p{
-            text-align: left;
-            margin-bottom: 0 !important;
-          }
-        }
-        &:not(:first-child){
-          .row{display: flex;}
-          p{display: none;}
-        }
-      }
-    }
+  .table th, .table td {
+    border: 1px solid rgba(250, 250, 250, 0.23) !important;
+    box-shadow: 0 0 1px 1px #0f2538;
+  }
+  th,tr td:nth-child(2),tr td:nth-child(3){
+    text-align: center !important;
+  }
+  h2,h3{
+    text-shadow: 0 0 0.15px black;
+    text-decoration: underline;
+    filter: contrast(120%) brightness(170%);
   }
 }
 #tariffs{
-  table{
-    tr{ &:first-child { img{display: block !important;} } }
-    tbody tr {background: rgba(223, 230, 239, 0.82) !important;}
-    tbody tr:first-child{height: 22.5rem !important;;}
-    thead th {
-      box-shadow: 1px 1px 1px rgb(15, 37, 56) !important;
-      background: #cfd4de !important;
+  .table th, .table td {
+    padding: 0.45rem !important;
+  }
+  img{
+    width: 60%;
+    margin-bottom: 1%;
+    border-radius: 45%;
+    filter: brightness(88%) !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: none;
+  }
+
+  .row{margin-bottom: 2% !important;}
+  p{
+    font-weight: 800 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .col-3{
+    padding: 0 4.5px !important;
+    text-align: center;
+    background: rgba(238, 224, 224, 0.1);
+    border: 1px solid rgba(250, 250, 250, 0.43) !important;
+    box-shadow: 0 0 3px 2px #1a4971;
+  }
+  .col{
+    padding: 0 2rem 0 0 !important;
+  }
+}
+#tariffs_content{
+  h2,h3{
+    text-align: center;
+  }
+  .table th, .table td {
+    padding: 0.35rem !important;
+  }
+  .flex-container > div {
+    width: 48%;
+    margin: 0 1% !important;
+    &:last-child{
+      margin-left: 25% !important;
     }
   }
 }
@@ -296,6 +302,9 @@ textarea{
     float: left;
     width: 40%;
     margin: 0 2% 0.5% 0;
+  }
+  img{
+  filter: brightness(90%) contrast(100%) !important
   }
   svg{
     margin-top: -1%;
@@ -327,14 +336,14 @@ textarea{
       padding-left: 20px !important;
       img {
         width: 100%;
-        height: 200px;
+        height: 180px;
         margin-top: 5%;
       }
     }
     ul {margin-left: -10%;}
   }
   .type_guard_beautiful_block{
-    height: 300px;
+    height: 280px;
     margin-bottom: 5%;
   }
   svg{margin-left: 25%;}
@@ -347,7 +356,7 @@ textarea{
     box-shadow: none;
     img{
       width: 100%;
-      height: 300px;
+      height: 270px;
       box-shadow: none;
       padding: 2% 4% 4% 4%;
     }
@@ -377,9 +386,9 @@ textarea{
     margin: 2% 2% 0.8% 0.8%;
   }
   .flex-container > div {
-    width: 48.2%;
+    width: 48%;
     padding: 0.5%;
-    margin: 0.8% !important;
+    margin: 1% !important;
   }
   ul{
     margin-left: -15%;
@@ -396,14 +405,16 @@ textarea{
   .flex-container > div {
     width: 48%;
     padding: 0.65%;
-    margin: 0.65% !important;
+    margin: 0.8% !important;
     img{
-      width: 20%;
+      width: 17.5%;
       float: left;
       margin: 0 2% 0 0;
-      box-shadow: 0 0 3px 0.2px rgba(250, 250, 250, 0.53);
-      background: rgba(28, 97, 146, 0.1);
-      border-radius: 5px;
+      filter: contrast(120%) brightness(110%);
+      //background-color: rgba(250, 250, 255, 0.2);
+      //border: 1.8px solid rgba(0, 0, 0, 0.32);
+      box-shadow: 0 0 4px #999696, 4px 4px 4px #152c40;
+      //border-radius: 50%;
     }
     .emphasized{padding-top: 1.5%;}
     p{margin: 0 !important;}
@@ -412,7 +423,7 @@ textarea{
 #licenses{
   img{
     width: 100%;
-    filter: contrast(98%);
+    filter: brightness(60%) !important;
   }
   .flex-container > img {
     width: 18%;
@@ -469,6 +480,10 @@ textarea{
 }
 
 @media screen and (max-width: 350px) {
+  .text{
+    font-size: 0.86rem !important;
+    line-height: 1rem !important;
+  }
   #company {
     svg {
       width: 45px;
@@ -484,15 +499,8 @@ textarea{
     }
   }
   #tariffs, #tariffs_content{
-    .row .row{
-      margin: 0!important;
-    }
-    svg{
-      width: 22px !important;
-      height: 28px !important;
-    }
-   table .col-1{
-      margin-left: -5% !important;
+    .table th, .table td {
+      padding: 0.1rem !important
     }
   }
   .services_with_types {
@@ -526,12 +534,15 @@ textarea{
     ul{margin-left: -12%;}
   }
   .place_h1{
-    margin-bottom:1.5rem;
+    margin-bottom:.8rem;
   }
   h1{
     padding-left: 0.5rem;
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
+  }
+  h2,h3{
+    font-size: 1.18rem;
   }
   h4{
     font-size: 1.15rem;
@@ -593,7 +604,6 @@ textarea{
         padding: 0 10px !important;
         p{margin-bottom: 0.5rem !important;}
       }
-      &:last-child{display: none;}
       .emphasized{
         margin-bottom: 0.5rem !important;
       }
@@ -619,36 +629,46 @@ textarea{
       p:nth-child(3){clear: left;}
     }
   }
+  #tariffs{
+    table tr td:first-child{
+      width: 20% !important;
+      span{
+        display: none;
+      }
+    }
+    .row{
+      flex-direction: column-reverse;
+    }
+    .col-3{
+      flex: 0 0 100% !important;
+      max-width:100% !important;
+      text-align: left;
+      img{
+        width: 25% !important;
+        float: left;
+      }
+    }
+    .col {
+      padding: 0 !important;
+    }
+  }
+  #tariffs_content {
+    table tr td:first-child {
+      width: 20% !important;
+      span{
+        display: none;
+      }
+    }
+    .flex-container > div {
+      width: 100%;
+
+      &:last-child{
+        margin-left:  1% !important;
+      }
+    }
+  }
   .container .container{
     padding: 0 !important;
-  }
-  #tariffs, #tariffs_content{
-    img{
-      width: 50%;
-      margin-bottom: -1.5%;
-    }
-    table{
-      th{padding: 0.25rem;}
-    }
-    p{margin-top: 5%;}
-    .col{padding: 5px 0 !important;}
-    .row{
-      flex-direction: column !important;
-    }
-    .row .row{
-      flex-direction: row !important;
-      margin: 0 6%;
-    }
-    svg{
-      width: 29px;
-      height: 30px;
-      margin-left: -30%;
-    }
-  }
-  #tariffs{
-    table tbody tr:first-child {
-      height: auto !important;
-    }
   }
   .services {
     .first_img {
@@ -796,12 +816,15 @@ textarea{
     ul{margin-left: -8%;}
   }
   .place_h1{
-    margin-bottom: 2rem;
+    margin-bottom: .8rem;
   }
   h1{
     padding-left: 0;
     font-size: 1.4rem;
     margin-bottom: 0.2rem;
+  }
+  h2,h3{
+    font-size: 1.35rem;
   }
   h4{
     font-size: 1.25rem;
@@ -822,7 +845,7 @@ textarea{
   .li_text,.name_type_guard{
     font-size: 1rem;
     line-height: 1.2rem;
-    padding-bottom: 0.5%;
+    padding-bottom: 1% !important;
     margin-bottom: -1.5%;
   }
   label{
@@ -871,7 +894,6 @@ textarea{
         margin-left: -1% !important;
         p{margin-bottom: 0.5rem !important;}
       }
-      &:last-child{display: none;}
       .emphasized{margin-bottom: 0.5rem !important;}
       svg {
         float: left;
@@ -893,39 +915,34 @@ textarea{
       p{margin-bottom: 0.25rem !important;}
     }
   }
+  #tariffs{
+    .row{
+      flex-direction: column-reverse;
+    }
+    .col-3{
+      flex: 0 0 100% !important;
+      max-width:100% !important;
+      text-align: left;
+      img{
+        width: 25% !important;
+        float: left;
+      }
+    }
+    .col {
+      padding: 0 !important;
+    }
+  }
+  #tariffs_content {
+    .flex-container > div {
+      width: 100%;
+
+      &:last-child{
+        margin-left:  1% !important;
+      }
+    }
+  }
   .container .container{
     padding: 0 !important;
-  }
-  #tariffs, #tariffs_content{
-    img{
-      float: left;
-      width: 30%;
-      margin-right: 2%;
-      margin-bottom: 2%;
-    }
-    p{margin-top: 5%;}
-    .col{padding: 5px 0 !important;}
-    .row{
-      flex-direction: column;
-    }
-    .row .row{
-      flex-direction: row;
-      margin: 0.85% 19% 0 19% !important;
-    }
-    svg{
-      width: 26px;
-      height: 30px;
-      margin-left: -30%;
-    }
-    table {
-      th {padding: 0.25rem;}
-      td {padding: 0.5rem 0.2rem 0 0.2rem;}
-    }
-  }
-  #tariffs{
-    table tbody tr:first-child {
-      height: auto !important;
-    }
   }
   .services {
     .first_img {
@@ -939,7 +956,7 @@ textarea{
     }
     .import,p:nth-child(3){clear: left;}
     .li_text{
-      float: left;
+      //float: left;
       margin-right: 3%;
     }
     .second_img{width: 30%;}
@@ -1056,6 +1073,9 @@ textarea{
     font-size: 1.6rem;
     margin-bottom: 0.2rem;
   }
+  h2,h3{
+    font-size: 1.4rem;
+  }
   h4{
     font-size: 1.25rem;
   }
@@ -1074,7 +1094,7 @@ textarea{
   .li_text,.name_type_guard{
     font-size: 1.15rem;
     line-height: 1.25rem;
-    padding-bottom: 0.5%;
+    padding-bottom: 1% !important;
     margin-bottom: -1.5%;
   }
   label{
@@ -1130,41 +1150,29 @@ textarea{
       p{margin-bottom: 0.25rem !important;}
     }
   }
+  #tariffs{
+    .col-3{
+      flex: 0 0 27% !important;
+      max-width: 27% !important;
+      padding: 0 2px !important;
+      img{
+        width: 65% !important;
+      }
+    }
+    .col {
+      padding: 0 1rem 0 0 !important;
+    }
+  }
+  #tariffs_content {
+    .flex-container > div {
+      width: 100%;
+      &:last-child{
+        margin-left:  1% !important;
+      }
+    }
+  }
   .container .container{
     padding: 0 !important;
-  }
-  #tariffs, #tariffs_content{
-    .col{padding: 0 5px !important;}
-    .row .row{
-       flex-direction: column;
-      .col{
-        height: auto;
-        margin-top: -10%;
-      }
-      .col-1{
-        margin-left: 5%;
-      }
-    }
-    svg{
-      width: 29px;
-      height: 30px;
-      margin-left: -30%;
-    }
-    table{
-      th{padding: 0.25rem;}
-      td{padding: 0.5rem 0.2rem 0 0.2rem;}
-      .row{
-        .col-1{
-          padding-right: 0 !important;
-          padding-left: 10px !important;
-        }
-      }
-    }
-  }
-  #tariffs{
-    table tbody tr:first-child {
-      height: 18.5rem !important;
-    }
   }
   .services {
     .first_img {
@@ -1178,7 +1186,7 @@ textarea{
     }
     .import,p:nth-child(3){clear: left;}
     .li_text{
-      float: left;
+      //float: left;
       margin-right: 7%;
     }
     .block_one{clear: left;}
@@ -1269,6 +1277,9 @@ textarea{
     font-size: 1.8rem;
     margin-bottom: 0.25rem;
   }
+  h2,h3{
+    font-size: 1.6rem;
+  }
   h4{
     font-size: 1.3rem;
   }
@@ -1286,8 +1297,8 @@ textarea{
   }
   .li_text,.name_type_guard{
     line-height: 1.3rem;
-    padding-bottom: 0.5%;
-    margin-bottom: -1.5%;
+    padding-bottom: 1.2% !important;
+    margin-bottom: -1.6%;
   }
   .li_text{
     font-size: 1.15rem;
@@ -1338,27 +1349,14 @@ textarea{
       p{margin-bottom: 0.5rem !important;}
     }
   }
-  #tariffs, #tariffs_content{
-    .col{padding: 0 6px !important;}
-    svg{
-      width: 29px;
-      height: 30px;
-      margin-left: -30%;
-    }
-    table{
-      th{padding: 0.25rem;}
-      td{padding: 0.5rem 0.2rem 0 0.2rem;}
-      .row{
-        .col-1{
-          padding-right: 0 !important;
-          padding-left: 10px !important;
-        }
-      }
+  #tariffs{
+    img{
+      margin-top: 10%;
     }
   }
-  #tariffs{
-    table tbody tr:first-child {
-      height: 18.5rem !important;
+  #tariffs_content {
+    table tr td:first-child {
+      width: 35% !important;
     }
   }
   .services {
@@ -1372,7 +1370,7 @@ textarea{
       height: 42px;
     }
     .li_text{
-      float: left;
+      //float: left;
       margin-bottom: -1%;
     }
     .varieties{
@@ -1464,6 +1462,9 @@ textarea{
     font-size: 2rem;
     margin-bottom: 0.25rem;
   }
+  h2,h3{
+    font-size: 1.8rem;
+  }
   h4{
     font-size: 1.3rem;
   }
@@ -1482,7 +1483,7 @@ textarea{
   .li_text,.name_type_guard{
     font-size: 1.25rem;
     line-height: 1.4rem;
-    padding-bottom: 0.5%;
+    padding-bottom: 1.65% !important;
     margin-bottom: -1%;
   }
   #company{
@@ -1505,27 +1506,9 @@ textarea{
       }
     }
   }
-  #tariffs, #tariffs_content{
-    .col{
-      padding: 0 8px !important;
-    }
-    svg{
-      width: 30px;
-      height: 40px;
-    }
-    table{
-      .row{
-        margin: 0 2.8% !important;
-        .col-1{
-          padding-right: 0 !important;
-          padding-left: 10px !important;
-        }
-      }
-    }
-  }
   #tariffs{
-    table tbody tr:first-child {
-      height: 20.8rem !important;
+    img{
+      margin-top: 3%;
     }
   }
   .services {
