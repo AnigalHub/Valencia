@@ -27,7 +27,7 @@
               },
               {
                 number:50,
-                descr_number: "Благодарностей и рекомендаций",
+                descr_number: "Благодарностей <br> и рекомендаций",
               },
               {
                 number:74,
@@ -42,7 +42,7 @@
 <style scoped>
 
   .number{
-    font-size:5rem;
+    font-size:5.25rem;
     text-align: center;
     font-family: 'Vollkorn', serif;
     font-weight: 400;
@@ -59,17 +59,17 @@
   .flex-container > div {
     width: 20%;
     padding: 0.25%;
-    margin: 1.5% 1% 0.5% 1% !important;
+    margin: 1.5% 1.8% 0.5% 1.8% !important;
   }
   .text1{
-    font-family: 'Source Serif Pro', serif;
-    line-height: 1.4rem;
+    font-family: 'Source Serif Pro', serif !important;
+    line-height: 1.55rem;
     transform: scale(1.05);
     margin-top: -5%;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     text-align: center;
-    font-weight: 600;
-    letter-spacing: -1px;
+    font-weight: 500;
+    letter-spacing: -.2px;
     text-shadow: 0 2.5px 0  rgb(15, 37, 56) !important;
     color: white;
   }
