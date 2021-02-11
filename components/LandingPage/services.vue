@@ -79,7 +79,7 @@
   img{
     box-shadow: 2px 5px 5px #273849;
     width: 100%;
-    filter:  brightness(110%) brightness(75%)!important;
+    filter: brightness(75%)!important;
   }
   p{
     margin: 0!important;
@@ -87,7 +87,7 @@
   .text1{
     font-weight: 400;
     padding: 2% 0;
-    text-shadow: 1.25px 1.25px 0 rgb(15, 37, 56), 2px 2px 6px #fff !important;
+    text-shadow: 1px 1px 0 rgb(15, 37, 56), 2px 2px 6px #fff !important;
     font-size: 1.5rem;
     text-align: center;
     color: rgb(15, 37, 56);
