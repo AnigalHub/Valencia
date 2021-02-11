@@ -25,23 +25,24 @@
 </script>
 
 <style scoped>
-  h2{
-    margin-top: 0;
-    text-align: center;
-    font-family: 'Viaoda Libre', cursive;
-    padding-bottom: 2%;
-    text-shadow: 2px 2.5px 2.5px rgb(15, 37, 56);
-    color: #cfdde8;
-    font-size: 2.25rem;
-    background: transparent;
-    font-weight: 500;
-    letter-spacing: normal;
-    padding-left: 0;
-  }
-
   #Clients{
     padding: 2.5% 0;
-    background:linear-gradient( to top left, #304355, #768c9e,#304355);
+    background:linear-gradient( to bottom, #36506c, #718199,#718199, #36506c);
+    filter: brightness(80%);
+  }
+  h2{
+    text-decoration: underline;
+    margin-top: 0 !important;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    padding-bottom: 2%;
+    text-shadow: 2px 2.5px 2.5px rgb(15, 37, 56);
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 2.2rem;
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: -.5px;
+    padding-left: 0;
   }
   .row{
     margin-bottom: 3% !important;
@@ -52,9 +53,9 @@
 
   img{
     width: 100%;
-    filter: contrast(110%);
+    filter:  brightness(110%) brightness(75%)!important;
   }
   .col:hover img{
-    filter: contrast(130%);
+    filter: brightness(100%)!important;
   }
 </style>
