@@ -25,37 +25,5 @@
 </script>
 
 <style scoped>
-  #Clients{
-    padding: 2.5% 0;
-    background:linear-gradient( to bottom, #36506c, #718199,#718199, #36506c);
-    filter: brightness(80%);
-  }
-  h2{
-    text-decoration: underline;
-    margin-top: 0 !important;
-    text-align: center;
-    font-family: 'Yeseva One', cursive;
-    padding-bottom: 2%;
-    text-shadow: 2px 2.5px 2.5px rgb(15, 37, 56);
-    color: rgba(255, 255, 255, 0.86);
-    font-size: 2.2rem;
-    background: transparent;
-    font-weight: 500;
-    letter-spacing: -.5px;
-    padding-left: 0;
-  }
-  .row{
-    margin-bottom: 3% !important;
-  }
-  img{
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
-  }
 
-  img{
-    width: 100%;
-    filter:  brightness(110%) brightness(75%)!important;
-  }
-  .col:hover img{
-    filter: brightness(100%)!important;
-  }
 </style>
