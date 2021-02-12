@@ -295,9 +295,9 @@ textarea{
       border: 2.5px solid rgba(255, 255, 255, 0.19);
     }
     p{margin: 0!important;}
-    .flex-container > div {
+    .flex-container > a {
       width: 30.5%;
-      margin: 0 1.25% 2% 1.25% !important;
+      margin: 0 0 2% 2.5% !important;
     }
     img{
       box-shadow: 2px 5px 5px #273849;
@@ -723,7 +723,6 @@ textarea{
         line-height: 1.6rem !important;
         margin-left: -2% !important;
       }
-
       .slogan{
         font-size: 1.15rem !important;
         line-height: 1.6rem !important;
@@ -732,6 +731,24 @@ textarea{
       img{
         margin-top: 5% !important;
         width:245% !important;
+      }
+    }
+    #Services {
+      .textLandingPage {
+        height: 3rem;
+        font-size: 1rem !important;
+      }
+    }
+    #Import_numbers{
+      .textLandingPage{
+        font-size: .88rem !important;
+        line-height: 1.15rem !important;
+      }
+      .number{font-size:2.25rem !important;}
+      .flex-container{
+        & > div{
+          margin: 1.5% 1% 0.5% 1% !important;
+        }
       }
     }
   }
@@ -828,6 +845,9 @@ textarea{
     height: 26vh !important;
   }
   #LandingPage{
+    h2{
+      font-size: 1.18rem;
+    }
     #Home{
       .title_guard{
         padding: 4% 0 0 7%;
@@ -862,6 +882,31 @@ textarea{
     }
     #Advantages{
       display: none;
+    }
+    #Services {
+      .textLandingPage {
+        font-size: 1.15rem;
+      }
+      .flex-container > a {
+        width: 47%;
+        margin: 0 2.5% 2.5% 0 !important;
+      }
+    }
+    #Import_numbers{
+      .textLandingPage{
+        font-size: 1.15rem;
+        line-height: 1.18rem;
+        letter-spacing: -1px;
+      }
+      .number{font-size:3rem;}
+      .flex-container{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        & > div{
+          width: 45%;
+          margin: 1.5% 2% 0.5% 2%;
+        }
+      }
     }
     #Map {
       iframe {
@@ -1152,6 +1197,9 @@ textarea{
     height: 26vh !important;
   }
   #LandingPage{
+    h2{
+      font-size: 1.35rem;
+    }
     #Home{
       .title_guard{
         padding: 4% 0 0 7%;
@@ -1202,6 +1250,31 @@ textarea{
         width: 45px !important;
         height: 45px !important;
         padding: 0;
+      }
+    }
+    #Services {
+      .textLandingPage {
+        font-size: 1.15rem;
+      }
+      .flex-container > a {
+        width: 47%;
+        margin: 0 1.25% 2.5% 1.25% !important;
+      }
+    }
+    #Import_numbers{
+      .textLandingPage{
+        font-size: 1.15rem;
+        line-height: 1.18rem;
+        letter-spacing: -1px;
+      }
+      .number{font-size:3rem;}
+      .flex-container{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        & > div{
+          width: 45%;
+          margin: 1.5% 2% 0.5% 2%;
+        }
       }
     }
     #Map {
@@ -1456,9 +1529,12 @@ textarea{
     min-height: 1.25rem;
   }
   textarea{
-    height: 32vh !important;
+    height: 25vh !important;
   }
   #LandingPage{
+    h2{
+      font-size: 1.4rem;
+    }
     #Home{
       .title_guard{
         padding: 4% 0 0 7%;
@@ -1505,6 +1581,26 @@ textarea{
         width: 50px !important;
         height: 50px !important;
         padding: 0;
+      }
+    }
+    #Services {
+      .textLandingPage {
+        font-size: 1.15rem;
+      }
+    }
+    #Import_numbers{
+      .textLandingPage{
+        font-size: 1.15rem;
+        line-height: 1.18rem;
+        letter-spacing: -1.5px;
+      }
+      .number{font-size:3.5rem;}
+      .flex-container{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        & > div{
+          margin: 1.5% 2% 0.5% 2%;
+        }
       }
     }
   }
@@ -1712,9 +1808,12 @@ textarea{
     margin-bottom: 0 !important;
   }
   textarea{
-    height: 35vh !important;
+    height: 30vh !important;
   }
   #LandingPage{
+    h2{
+      font-size: 1.6rem;
+    }
     #Home{
       .title_guard{
         padding: 4% 0 0 7%;
@@ -1748,6 +1847,25 @@ textarea{
         width: 50px !important;
         height: 50px !important;
         padding: 0;
+      }
+    }
+    #Services {
+      .textLandingPage {
+        font-size: 1.3rem;
+      }
+    }
+    #Import_numbers{
+      .textLandingPage{
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+      }
+      .number{font-size:4rem;}
+      .flex-container{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        & > div{
+          margin: 1.5% 2% 0.5% 2%;
+        }
       }
     }
   }
@@ -1924,6 +2042,9 @@ textarea{
     margin-bottom: -1%;
   }
   #LandingPage{
+    h2{
+      font-size: 1.8rem;
+    }
     #Home{
       .title_guard{
         padding: 4% 0 0 7%;
@@ -1941,6 +2062,25 @@ textarea{
       .textLandingPage{
         font-size: 1.25rem;
         line-height: 1.3rem;
+      }
+    }
+    #Services {
+      .textLandingPage {
+        font-size: 1.4rem;
+      }
+    }
+    #Import_numbers{
+      .textLandingPage{
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+      }
+      .number{font-size:4.5rem;}
+      .flex-container{
+        margin-left: 5.5% !important;
+        margin-right: 5.5% !important;
+        & > div{
+          margin: 1.5% 2% 0.5% 2% !important;
+        }
       }
     }
   }
