@@ -1,5 +1,12 @@
 $font: 'EB Garamond', serif;
-$color: black;
+$fontLandingPage : 'Source Serif Pro', serif;
+$titleLandingPage:'Yeseva One', cursive;
+$centerText: center;
+$fontWeight400:400;
+$fontWeight800:800;
+$shadeOfBlack: black;
+$shadeOfBlue:rgb(15, 37, 56);
+$imgWidth100percent:100%;
 
 .page{
   background:linear-gradient( to bottom left, #3b475a 2%, #68778e,#7e8da5,#7e8da5,#68778e, #3b475a);
@@ -8,83 +15,81 @@ $color: black;
 }
 .text{
   font-family: $font;
-  font-weight: 400 !important;
+  font-weight: $fontWeight400 !important;
   letter-spacing: -.25px;
   font-size: 1.58rem;
   line-height: 1.4rem;
   filter: contrast(120%)brightness(170%);
-  text-shadow: 0 0 .15px  black;
-  color: $color;
+  text-shadow: 0 0 .15px $shadeOfBlack;
+  color: $shadeOfBlack;
 }
 .text_descr{
   font-size: 1.25rem !important;
   line-height: 1.4rem !important;
-  //margin-top: -6%;
 }
 .li_text,.name_type_guard{
   font-family: $font;
-  font-weight: 800;
+  font-weight: $fontWeight800;
   letter-spacing: -.25px;
   font-size: 1.5rem;
   line-height: 1.6rem;
-  text-shadow: 0 0 .15px  black;
-  color: $color;
+  text-shadow: 0 0 .15px $shadeOfBlack;
+  color: $shadeOfBlack;
   padding-bottom: 0.85%;
 }
-
 .emphasized{
   font-family: $font;
-  font-weight: 800 !important;
+  font-weight: $fontWeight800 !important;
   letter-spacing: -1.25px;
-  color: $color;
-  //text-shadow: 0.5px 0.5px 1px black;
+  color: $shadeOfBlack;
   text-decoration: none !important;
 }
 img{
-  filter: brightness(80%) contrast(100%)!important; //box-shadow: 0 0 8px rgb(15, 37, 56);
+  filter: brightness(80%) contrast(100%)!important;
   background-color: transparent;
-  box-shadow: 0 0 10px black, 0.5px 0.5px 4px black;
+  box-shadow: 0 0 10px $shadeOfBlack, 0.5px 0.5px 4px $shadeOfBlack;
 }
 h1{
   margin-top: 0 !important;
   font-family: 'Yeseva One', cursive;
-  text-shadow: -.75px 1px .75px $color;
-  color: $color;
+  text-shadow: -.75px 1px .75px $shadeOfBlack;
+  color: $shadeOfBlack;
   font-size: 2.2rem;
   background: transparent;
-  font-weight: 500;
+  font-weight: $fontWeight400;
   letter-spacing: -1.5px;
 }
 .place_h1{
   padding: 5px 0;
   margin-bottom: 1rem;
-  //box-shadow: 0 0 15px #152c40, 2.5px 2.5px 2.5px #718199;
 }
 h2,h3{
   font-family: 'EB Garamond', serif;
-  font-weight: 800 !important;
+  font-weight: $fontWeight800 !important;
   padding: 1% 0;
+  color:$shadeOfBlack;
+}
+h3{
   line-height: 1.6rem;
-  color:black;
 }
 h4{
   font-family: $font;
-  color: black;
+  color: $shadeOfBlack;
   display: block;
   padding-bottom: 0.5%;
-  text-shadow: 0.9px 1px rgb(15, 37, 56);
-  font-weight: 800;
+  text-shadow: 0.9px 1px $shadeOfBlue;
+  font-weight: $fontWeight800;
   margin-top: -2%;
   margin-bottom: 0;
 }
 h6{
   font-family: $font;
-  font-weight: 800 !important;
+  font-weight: $fontWeight800 !important;
   padding: 1% 0;
   font-size: 1.58rem;
   line-height: 1.6rem;
-  text-shadow: 0 0 0.15px black;
-  color:$color;
+  text-shadow: 0 0 0.15px $shadeOfBlack;
+  color:$shadeOfBlack;
   text-decoration: underline;
   filter: contrast(120%) brightness(170%);
 }
@@ -99,7 +104,7 @@ h6{
 .type_guard_beautiful_block{
   padding: 0.5%;
   border: 3px solid rgba(250, 250, 250, 0.23);
-  box-shadow: 0 0 3px 1px rgb(15, 37, 56);
+  box-shadow: 0 0 3px 1px $shadeOfBlue;
 }
 .block_two{
   clear: left;
@@ -110,7 +115,7 @@ h6{
     content:"·";
     font-size:70px;
     vertical-align: text-top;
-    color: black;
+    color: $shadeOfBlack;
     text-shadow:  1px 1px .5px #797777;
     margin-bottom: 0 !important;
   }
@@ -119,7 +124,7 @@ h6{
       content:"»";
       font-size:40px !important;
       vertical-align: text-top;
-      color: black;
+      color: $shadeOfBlack;
       margin-bottom: 0 !important;
     }
   }
@@ -134,10 +139,10 @@ h6{
   }
 }
 label{
-  font-weight: 800;
+  font-weight: $fontWeight800;
   font-size: 1.25rem;
-  text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
-  color: rgb(15, 37, 55);
+  text-shadow: 0.5px 0.5px 1px $shadeOfBlue;
+  color: $shadeOfBlue;
   font-family: $font;
 }
 input{
@@ -147,14 +152,249 @@ input{
 }
 input,textarea{
   background: #cfdde8;
-  box-shadow: 2px 2px 2px rgb(15, 37, 56);
+  box-shadow: 2px 2px 2px $shadeOfBlue;
   font-weight: 700;
 }
 input:hover, textarea:hover{
-  box-shadow: 7px 7px 7px rgb(15, 37, 56);
+  box-shadow: 7px 7px 7px $shadeOfBlue;
 }
 textarea{
   height: 15vh !important;
+}
+#LandingPage{
+  h2{
+    text-decoration: underline;
+    text-align: $centerText;
+    font-family: $titleLandingPage;
+    padding-bottom: 2%;
+    text-shadow: 2px 2.5px 2.5px $shadeOfBlue;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 2.2rem;
+    background: transparent;
+    font-weight: $fontWeight400;
+    letter-spacing: -.5px;
+    padding-left: 0;
+  }
+  .textLandingPage{
+    font-weight: $fontWeight400;
+    font-size: 1.5rem;
+    text-align: $centerText;
+    font-family: $fontLandingPage;
+  }
+  #Home{
+    height: auto;
+    background: url(../../static/LandingPage/ооо.jpg) 100% 100% no-repeat;
+    background-size: 100% 100%;
+    filter: brightness(72%);
+    animation: anim 60s  ease-out infinite;
+
+    @keyframes anim {
+      0% {
+        background: url(../../static/LandingPage/666.jpg) no-repeat;
+        background-size: 100% 100%;
+      }
+      50% {
+        background: url(../../static/LandingPage/99.jpg) no-repeat;
+        background-size: 100% 100%;
+      }
+      100% {
+        background: url(../../static/LandingPage/ооо.jpg) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    img{
+      width:120%;
+      margin-left:-8%;
+      padding: 2% 0 0 0;
+      box-shadow: none;
+    }
+    .title_guard{
+      padding: 6% 0 0 7%;
+      font-family: 'Lobster', cursive;
+      font-size: 3.1rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      transform: scale(1.2, 1.25);
+      color: #65acdc;
+      margin-left: -7%;
+      text-shadow: -1.2px 5.5px 1.2px #02022a;
+      line-height: 3.25rem;
+    }
+    .slogan{
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -1.2px;
+      transform: scale(1.2, 1.1);
+      color: white;
+      filter: contrast(120%)brightness(110%);
+      padding: 8% 0 0 7%;
+      margin-left: -8%;
+      text-shadow: -1px 4px 1px rgb(9, 24, 38);
+      line-height: 3.25rem;
+    }
+    .col{padding: 0 !important;}
+    .mobile_version{
+      display: none;
+    }
+  }
+  #Advantages{
+    height: 15rem;
+    .textLandingPage{
+      font-weight: $fontWeight800 !important;
+      letter-spacing: -.25px;
+      transform: scale(1, 1.1);
+      text-shadow: -.05px .25px .05px rgb(64, 94, 121);
+      font-size: 1.3rem;
+      line-height: 1.4rem;
+      color: rgb(9, 24, 38);
+    }
+    .flex-container{
+      margin-top: 7.5%;
+      margin-left: -3%;
+      margin-right: 1%;
+    }
+    .flex-container > div {
+      width: 28.5%;
+      padding: 0.5%;
+      margin: 1.5% 3% 1.25% 0;
+      position: relative;
+      float: left;
+      filter: contrast(120%) brightness(110%);
+      background-color: rgba(250, 250, 255,.7);
+      border: 2.5px solid rgba(255, 255, 255);
+      box-shadow: 0 0 4px white, 3px 3px 3px rgb(21, 44, 64);
+    }
+    svg{
+      margin: 5% auto;
+      display: block;
+      width: 60px !important;
+      height: 60px !important;
+      border-radius: 10%;
+      padding: .5%;
+    }
+  }
+  #Services,  #Feedback, #Clients{
+    padding: 2.5% 0;
+    filter: brightness(80%);
+  }
+  #Feedback{
+    background: url("../../static/LandingPage/55.jpg") 100% 100% no-repeat;
+    background-size: 100% 100%;
+  }
+  #Services, #Clients{
+    background:linear-gradient( to bottom, #36506c, #718199,#718199, #36506c);
+  }
+  #Services{
+    .textLandingPage{
+      padding: 2% 0;
+      letter-spacing: -.8px;
+      line-height: 1.4rem;
+      color: $shadeOfBlue;
+      text-shadow: 1px 1px 0 $shadeOfBlue, 2px 2px 6px white !important;
+      border: 2.5px solid rgba(255, 255, 255, 0.19);
+    }
+    p{margin: 0!important;}
+    .flex-container > div {
+      width: 30.5%;
+      margin: 0 1.25% 2% 1.25% !important;
+    }
+    img{
+      box-shadow: 2px 5px 5px #273849;
+      width: $imgWidth100percent;
+      filter: brightness(75%)!important;
+    }
+    .btn:hover{
+      background-color: rgba(250, 250, 255,.9) !important;
+      img{
+        filter: brightness(100%)!important;
+      }
+    }
+    .btn{
+      background-color: rgba(250, 250, 255,.45) !important;
+      box-shadow: 2px 5px 5px #273849;
+    }
+  }
+  #Import_numbers{
+    .textLandingPage{
+      color: white;
+      text-shadow: 0 2.5px 0 $shadeOfBlue !important;
+      line-height: 1.55rem;
+      transform: scale(1.05);
+      margin-top: -5%;
+      letter-spacing: -.2px;
+      border: none;
+    }
+    .number{
+      font-size:5.25rem;
+      text-align: $centerText;
+      font-family: 'Vollkorn', serif;
+      font-weight: $fontWeight400;
+      text-shadow: 2px 2px 2px $shadeOfBlue;
+      transform: scale(1.35);
+      letter-spacing: -4px;
+      margin-top: -5%;
+      color: white;
+    }
+    .flex-container{
+      margin-left: 8% !important;
+      margin-right: 8% !important;
+      & > div{
+        width: 20%;
+        padding: 0.25%;
+        margin: 1.5% 1.8% 0.5% 1.8% !important;
+      }
+    }
+  }
+  #Feedback{
+    h2{
+      margin-top: 13%;
+      font-size: 2.8rem;
+    }
+    .textLandingPage{
+      margin-top: 2%;
+      text-align: left;
+      margin-left: 15%;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      letter-spacing: -.85px;
+      transform: scale(1.2, 1.1);
+      color: #cfdde8;
+    }
+    .call_telephone{
+      font-size: 3.25rem !important;
+      text-align: $centerText;
+      transform: scale(1.35);
+      display: block;
+      color: #cfdde8;
+      font-family: 'Vollkorn', serif;
+      font-weight: 500;
+      text-shadow: 2px 2px 2px rgb(15, 37, 56);
+    }
+    .place_form{background: rgba(255, 255, 255, 0.55);}
+  }
+  #Clients{
+    .row{margin-bottom: 3% !important;}
+    img{
+      box-shadow: 7px 7px 7px $shadeOfBlue;
+      width: $imgWidth100percent;
+      filter:  brightness(110%) brightness(75%)!important;
+    }
+    .col:hover img{
+      filter: brightness(100%)!important;
+    }
+  }
+  #Map{
+    background-color: #0c1c42;
+    iframe {
+      filter: opacity(55%) brightness(95%) contrast(110%);
+      min-height: 400px;
+      height: auto;
+      width:100% !important;
+      border:0;
+      box-shadow: none !important;
+    }
+  }
 }
 #contact, #Feedback{
   button{
@@ -163,14 +403,14 @@ textarea{
     padding:  2%;
     font-family: $font;
     font-weight: 700;
-    text-shadow: 0.5px 0.5px 1px rgb(15, 37, 56);
+    text-shadow: 0.5px 0.5px 1px $shadeOfBlue;
     font-size: 1.1rem;
     border-width: 2px 0;
     border-style: solid none;
-    border-color: rgb(15, 37, 55) rgb(15, 37, 55) rgb(15, 37, 55);
+    border-color: $shadeOfBlue;
     border-radius: 6px;
     background:radial-gradient(#acb1c2, #afb3cb, rgba(64, 107, 139, 0.65));
-    box-shadow: 2px 2px 2px rgb(15, 37, 56);
+    box-shadow: 2px 2px 2px $shadeOfBlue;
     transition: 0.2s;
   }
   button:hover {}
@@ -179,7 +419,7 @@ textarea{
 .place_form{
   padding: 3%;
   border-radius: 10px;
-  box-shadow: 7px 7px 7px rgb(15, 37, 56);
+  box-shadow: 7px 7px 7px $shadeOfBlue;
   margin-top: 1.5%;
 }
 #company{
@@ -188,10 +428,7 @@ textarea{
     height: 70px;
     float: left;
     border-radius: 50%;
-    //border: 2px solid rgba(255, 255, 255, 0.7);
-    //background: rgba(168, 188, 227, 0.28);
-    box-shadow: 0 0 6.5px black;
-    //border-radius: 5px;
+    box-shadow: 0 0 6.5px $shadeOfBlack;
   }
   .first_img{
     float: left;
@@ -208,8 +445,7 @@ textarea{
       padding: 10%;
     }
     img{
-      //box-shadow: none;
-      width: 100% ;
+      width: $imgWidth100percent;
       height: 100%;
     }
     p{
@@ -221,7 +457,7 @@ textarea{
       padding: 1%;
       margin: 1.5% 1.5% 0 1.5%;
     }
-    img{width: 100%;}
+    img{width: $imgWidth100percent;}
     .emphasized{margin-bottom: 0.5rem !important;}
     div{padding-bottom: 1.5%;}
     .col-5{padding-left: 0  !important;}
@@ -246,7 +482,7 @@ textarea{
     text-align: center !important;
   }
   h2,h3{
-    text-shadow: 0 0 0.15px black;
+    text-shadow: 0 0 0.15px $shadeOfBlack;
     text-decoration: underline;
     filter: contrast(120%) brightness(170%);
   }
@@ -265,15 +501,14 @@ textarea{
     display: block;
     box-shadow: none;
   }
-
   .row{margin-bottom: 2% !important;}
   p{
-    font-weight: 800 !important;
+    font-weight: $fontWeight800 !important;
     margin-bottom: 0.5rem !important;
   }
   .col-3{
     padding: 0 4.5px !important;
-    text-align: center;
+    text-align:$centerText;
     background: rgba(238, 224, 224, 0.1);
     border: 1px solid rgba(250, 250, 250, 0.43) !important;
     box-shadow: 0 0 3px 2px #1a4971;
@@ -284,7 +519,7 @@ textarea{
 }
 #tariffs_content{
   h2,h3{
-    text-align: center;
+    text-align: $centerText;
   }
   .table th, .table td {
     padding: 0.35rem !important;
@@ -304,7 +539,7 @@ textarea{
     margin: 0 2% 0.5% 0;
   }
   img{
-  filter: brightness(90%) contrast(100%) !important
+    filter: brightness(90%) contrast(100%) !important
   }
   svg{
     margin-top: -1%;
@@ -335,7 +570,7 @@ textarea{
     .col-5 {
       padding-left: 20px !important;
       img {
-        width: 100%;
+        width: $imgWidth100percent;
         height: 180px;
         margin-top: 5%;
       }
@@ -355,7 +590,7 @@ textarea{
   .type_guard_beautiful_block:last-child{
     box-shadow: none;
     img{
-      width: 100%;
+      width: $imgWidth100percent;
       height: 270px;
       box-shadow: none;
       padding: 2% 4% 4% 4%;
@@ -411,10 +646,7 @@ textarea{
       float: left;
       margin: 0 2% 0 0;
       filter: contrast(120%) brightness(110%);
-      //background-color: rgba(250, 250, 255, 0.2);
-      //border: 1.8px solid rgba(0, 0, 0, 0.32);
       box-shadow: 0 0 4px #999696, 4px 4px 4px #152c40;
-      //border-radius: 50%;
     }
     .emphasized{padding-top: 1.5%;}
     p{margin: 0 !important;}
@@ -422,7 +654,7 @@ textarea{
 }
 #licenses{
   img{
-    width: 100%;
+    width: $imgWidth100percent;
     filter: brightness(60%) !important;
   }
   .flex-container > img {
@@ -434,21 +666,21 @@ textarea{
   .flex-container > div {
     width: 30%;
     margin: 0 1.5% 0.5% 1.5% ;
-    img{width: 100%;}
+    img{width: $imgWidth100percent;}
   }
   .emphasized{
     padding-top: 2.5%;
     margin-bottom: 0.5rem !important;
-    text-align: center;
+    text-align: $centerText;
   }
 }
 #contact{
   h2{
     margin-top: 4%;
     font-family: Tahoma, Arial, verdana, Helvetica, sans-serif;
-    font-weight: 800;
+    font-weight: $fontWeight800;
     text-align: left;
-    color:rgb(15, 37, 55);
+    color:$shadeOfBlue;
   }
   .row{padding-bottom: 3%;}
   .col .row{padding-bottom: 1.5%;}
@@ -468,7 +700,7 @@ textarea{
   .place_form{background: rgba(232, 237, 245, 0.63);}
   .col-5{padding-right: 2.5%;}
   .map {
-    box-shadow: 7px 7px 7px rgb(15, 37, 56);
+    box-shadow: 7px 7px 7px $shadeOfBlue;
     iframe {
       filter: opacity(75%) brightness(95%) contrast(110%);
       min-height: 500px;
@@ -479,10 +711,29 @@ textarea{
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 355px) {
   .text{
     font-size: 0.86rem !important;
     line-height: 1rem !important;
+  }
+  #LandingPage{
+    #Home{
+      .title_guard{
+        font-size: 1.24rem !important;
+        line-height: 1.6rem !important;
+        margin-left: -2% !important;
+      }
+
+      .slogan{
+        font-size: 1.15rem !important;
+        line-height: 1.6rem !important;
+        margin-left: 15% !important;
+      }
+      img{
+        margin-top: 5% !important;
+        width:245% !important;
+      }
+    }
   }
   #company {
     svg {
@@ -576,6 +827,48 @@ textarea{
   textarea{
     height: 26vh !important;
   }
+  #LandingPage{
+    #Home{
+      .title_guard{
+        padding: 4% 0 0 7%;
+        font-size: 1.5rem;
+        margin-left: -.5%;
+        line-height: 1.8rem;
+        letter-spacing: -1.3px;
+        text-shadow: -.5px 2.5px .5px #02022a;
+      }
+      .slogan{
+        margin-left: 4%;
+        margin-right: 5%;
+        margin-top: 20%;
+        font-size: 1.3rem;
+        padding: 5% 0 0 0;
+        line-height: 1.8rem;
+        text-shadow: -.5px 2px .5px rgb(9, 24, 38);
+      }
+      img{
+        width:200%;
+        margin-left: -24%;
+      }
+      .big_version{display: none;}
+      .mobile_version{display: block;
+        .col .slogan{
+          display: block !important;
+        }
+        .slogan{
+          display: none !important;
+        }
+      }
+    }
+    #Advantages{
+      display: none;
+    }
+    #Map {
+      iframe {
+        min-height: 250px !important;
+      }
+    }
+  }
   #contact, #Feedback {
     button {font-size: 0.95rem;}
     .place_form{box-shadow: 0 0 5px 0 #0f2538;}
@@ -661,7 +954,6 @@ textarea{
     }
     .flex-container > div {
       width: 100%;
-
       &:last-child{
         margin-left:  1% !important;
       }
@@ -858,6 +1150,65 @@ textarea{
   }
   textarea{
     height: 26vh !important;
+  }
+  #LandingPage{
+    #Home{
+      .title_guard{
+        padding: 4% 0 0 7%;
+        font-size: 1.75rem;
+        margin-left: 0;
+        line-height: 2rem;
+        letter-spacing: .5px !important;
+        text-shadow: -1px 3.5px 1px #02022a;
+      }
+      .slogan{
+        margin-left: 0;
+        font-size: 1.45rem;
+        padding: 5% 0 0 8%;
+        line-height: 2rem;
+        text-shadow: -.8px 2px .8px rgb(9, 24, 38);
+      }
+      img{
+        width:200%;
+        margin-left: -24%;
+      }
+      .big_version{display: none;}
+      .mobile_version{display: block;
+        .col .slogan{
+          display: none;
+        }
+        .slogan{
+          display: block;
+        }
+      }
+    }
+    #Advantages{
+      .textLandingPage{
+        font-size: .9rem;
+        line-height: 1rem;
+        letter-spacing: -.9px;
+      }
+      .flex-container{
+        margin-top: 15%;
+        margin-left: 3%;
+      }
+      .flex-container > div {
+        width: 47%;
+        padding: 0.25%;
+        margin: 1.25% 3% 1.25% 0;
+      }
+      svg{
+        margin: 2.5% auto;
+        width: 45px !important;
+        height: 45px !important;
+        padding: 0;
+      }
+    }
+    #Map {
+      iframe {
+        min-height: 330px !important;
+      }
+    }
   }
   #contact, #Feedback {
     button {
@@ -1107,6 +1458,56 @@ textarea{
   textarea{
     height: 32vh !important;
   }
+  #LandingPage{
+    #Home{
+      .title_guard{
+        padding: 4% 0 0 7%;
+        font-size: 2.25rem;
+        margin-left: 3%;
+        line-height: 2.5rem;
+        text-shadow: -1px 3.5px 1px #02022a;
+      }
+      .slogan{
+        margin-left: 2.5%;
+        font-size: 2rem;
+        padding: 5% 0 0 8%;
+        line-height: 2.5rem;
+        text-shadow: -.8px 2px .8px rgb(9, 24, 38);
+      }
+      img{
+        width:150%;
+      }
+      .big_version{display: none;}
+      .mobile_version{
+        display: block;
+      .col .slogan{
+          display: none;
+        }
+      }
+    }
+    #Advantages{
+      .textLandingPage{
+        font-size: 1.15rem;
+        line-height: 1.15rem;
+        letter-spacing: -.5px;
+      }
+      .flex-container{
+        margin-top: 7%;
+        margin-left: 8%;
+      }
+      .flex-container > div {
+        width: 47%;
+        padding: 0.5%;
+        margin: 1.5% 3% 1.5% 0;
+      }
+      svg{
+        margin: 2.5% auto;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0;
+      }
+    }
+  }
   #contact, #Feedback {
     button {font-size: 0.95rem;}
   }
@@ -1313,6 +1714,43 @@ textarea{
   textarea{
     height: 35vh !important;
   }
+  #LandingPage{
+    #Home{
+      .title_guard{
+        padding: 4% 0 0 7%;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        text-shadow: -1px 3.5px 1px #02022a;
+      }
+      .slogan{
+        font-size: 2rem;
+        padding: 5% 0 0 8%;
+        line-height: 2.5rem;
+      }
+    }
+    #Advantages{
+      .textLandingPage{
+        font-size: 1.15rem;
+        line-height: 1.2rem;
+        letter-spacing: -.5px;
+      }
+      .flex-container{
+        margin-top: 3.5%;
+        margin-left: -5%;
+      }
+      .flex-container > div {
+        width: 31%;
+        padding: 0.5%;
+        margin: 1% 2% 1% 0;
+      }
+      svg{
+        margin: 2.5% auto;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0;
+      }
+    }
+  }
   #company{
     .first_img {
       float: left;
@@ -1370,7 +1808,6 @@ textarea{
       height: 42px;
     }
     .li_text{
-      //float: left;
       margin-bottom: -1%;
     }
     .varieties{
@@ -1485,6 +1922,27 @@ textarea{
     line-height: 1.4rem;
     padding-bottom: 1.65% !important;
     margin-bottom: -1%;
+  }
+  #LandingPage{
+    #Home{
+      .title_guard{
+        padding: 4% 0 0 7%;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        text-shadow: -1px 4.5px 1px #02022a;
+      }
+      .slogan{
+        font-size: 2.25rem;
+        padding: 5% 0 0 8%;
+        line-height: 3rem;
+      }
+    }
+    #Advantages{
+      .textLandingPage{
+        font-size: 1.25rem;
+        line-height: 1.3rem;
+      }
+    }
   }
   #company{
     .first_img {
