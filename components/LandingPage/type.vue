@@ -91,7 +91,8 @@
   }
   @media screen and (min-width:500px) and (max-width: 768px) {
     #Type{
-      height: 50vh;
+      height: 25vh;
+      flex-direction: row !important;
       h2{
         font-size: 1.3rem !important;
         left: 0;
@@ -112,11 +113,12 @@
   }
   @media screen and (min-width:768px) and (max-width: 992px) {
     #Type{
+      height: 25vh;
       h2{
         font-size: 1.3rem !important;
         left: 0;
         letter-spacing: -1.2px;
-        bottom: 8%;
+        bottom: 12%;
         padding-left: 2% !important;
       }
       .text1{
@@ -132,6 +134,7 @@
   }
   @media screen and (min-width:992px) and (max-width: 1200px) {
     #Type{
+      height: 30vh;
       h2{
         font-size: 1.35rem !important;
         letter-spacing: -1.2px;
@@ -145,6 +148,7 @@
   }
   @media screen and (min-width:1200px) and (max-width: 1400px) {
     #Type{
+      height: 35vh;
       h2{
         font-size: 1.6rem !important;
       }
