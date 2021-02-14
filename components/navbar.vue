@@ -1,18 +1,18 @@
 <template>
-  <b-navbar id="Nav" class="navbar-expand-md sticky-top" toggleable>
+  <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
     <b-container>
       <b-navbar-brand to="/">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 172 172" style=" fill:#000000;">
+        <svg id="shield" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z"></path>
             <g>
               <path  d="M86,151.84375c33.325,-19.75313 53.75,-54.95938 53.75,-94.19687v-20.29063l-53.75,-19.8875l-53.75,19.8875v20.29062c0,39.2375 20.425,74.44375 53.75,94.19688"
                      fill="#0b375e"></path>
               <path d="M86,155.875c-0.67187,0 -1.47813,-0.13438 -2.01562,-0.5375c-34.9375,-20.69375 -55.76562,-57.24375 -55.76562,-97.69063v-20.29062c0,-1.74688 1.075,-3.225 2.6875,-3.7625l53.75,-19.8875c0.94062,-0.26875 1.88125,-0.26875 2.82187,0l53.61563,19.8875c1.6125,0.5375 2.6875,2.15 2.6875,3.7625v20.29062c0,40.44688 -20.82812,76.99687 -55.76562,97.69063c-0.5375,0.40312 -1.34375,0.5375 -2.01562,0.5375zM36.28125,40.17813v17.46875c0,36.81875 18.54375,70.00938 49.71875,89.49375c31.175,-19.35 49.71875,-52.675 49.71875,-89.49375v-17.46875l-49.71875,-18.40938z"
-                    fill="#ffffff" stroke="#000000" stroke-width="5"></path>
+                    fill="#ffffff" stroke="#000000" stroke-width="3.5"></path>
               <path d="M86,136.525c-0.80625,0 -1.74688,-0.26875 -2.41875,-0.80625c-21.36562,-15.72187 -34.9375,-38.96875 -38.43125,-65.17187c-0.26875,-2.15 1.20938,-4.16563 3.49375,-4.56875c2.15,-0.26875 4.16562,1.20937 4.56875,3.49375c3.09063,22.97813 14.64688,43.40313 32.7875,57.78125c21.36563,-16.93125 33.59375,-42.19375 33.59375,-69.74062v-6.18125l-33.59375,-12.3625l-36.28125,13.4375c-2.15,0.80625 -4.43437,-0.26875 -5.24063,-2.41875c-0.80625,-2.15 0.26875,-4.43437 2.41875,-5.24063l37.75938,-13.84063c0.94062,-0.26875 1.88125,-0.26875 2.82187,0l37.625,13.975c1.6125,0.5375 2.6875,2.15 2.6875,3.7625v9.00313c0,31.175 -14.24375,59.6625 -39.2375,78.07188c-0.80625,0.5375 -1.74688,0.80625 -2.55312,0.80625z"
-                    fill="none" stroke="#ffffff" stroke-width="0.85"></path>
-              <g fill="#4382a5">
+                    fill="none" stroke="#ffffff" stroke-width="2"></path>
+              <g fill="#65acdc">
                 <path d="M86,34.66875v97.825c23.78437,-17.60313 37.625,-44.88125 37.625,-74.84688v-9.00313z"></path>
               </g>
             </g>
@@ -34,7 +34,7 @@
       </b-navbar-toggle>
       <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav v-model="isExpanded">
         <b-navbar-nav>
-          <b-nav-item to="/company">О нас</b-nav-item>
+          <b-nav-item id="nav_company" to="/company">О нас</b-nav-item>
           <b-nav-item>
             <b-dropdown text="Услуги">
               <b-dropdown-item to="/services/guard_of_organizations/">Охрана организаций</b-dropdown-item>
@@ -52,7 +52,7 @@
               <b-dropdown-item to="/services/cargo_escort">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
-          <b-nav-item href="/tariffs">Тарифы</b-nav-item>
+          <b-nav-item to="/tariffs">Тарифы</b-nav-item>
           <b-nav-item to="/technical_means">Технические средства</b-nav-item>
           <b-nav-item to="/special_equipment">Спецсредства</b-nav-item>
           <b-nav-item to="/licenses">Лицензии</b-nav-item>
@@ -79,26 +79,28 @@
   .navbar-brand{
     padding-bottom: 0 !important;
     text-align: center;
-    font-family: 'RobotoWeb', sans-serif;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.25px;
     font-weight: 600;
     color: #ffffff !important;
     margin-top: -1%;
   }
   .navbar-expand-xl .navbar-collapse {
-    margin-left: -2.5%;
+    margin-left: 0;
   }
-  .dropdown-item {
-    color: #ffffff !important;
-    font-weight: 600 !important;
-    font-size: 1.25rem;
-    background: #040610;
-    letter-spacing: -1.5px;
-  }
+
   .dropdown-item:hover{
     background: rgb(37, 74, 94) !important;
   }
   .dropdown-toggle{
     letter-spacing: -1.5px;
+    font-weight: 600 !important;
+    color: #ffffff ;
+    font-size: 1.25rem;
+    background: #040610;
+    font-family: 'Playfair Display', serif;
+    padding-right: 0.7rem !important;
+    padding-left: 0.7rem !important;
   }
   .btn {
     padding: 0 !important;
@@ -126,16 +128,22 @@
     background: #040610;
   }
   .name_brand{
-    font-family: 'RobotoWeb', sans-serif;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 0.15px;
+    margin-left: -7%;
     font-weight: 600 !important;
-    letter-spacing: -1.5px;
     color: #ffffff;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     text-shadow: 0.5px 0.5px 1px rgb(0, 0, 15);
   }
   svg{
     margin-top: 2.5%;
     margin-left: 1%;
+  }
+  #shield{
+    width:64px;
+    height: 64px;
+    margin: 1.5% 0;
   }
   .podmenu{
     margin-left: 10%;
@@ -143,27 +151,58 @@
     color: #ffffff;
   }
   .chop{
-    font-size: 0.725rem !important;
-    margin-top: -11%;
-    margin-left: 27%;
+    font-size: 0.55rem !important;
+    margin-top: -13%;
+    margin-left: 24%;
     text-align: center;
     margin-bottom: 0.5rem !important;
   }
   .nav-link,.telephone{
-    height: 1em;
+    height: 1.7em;
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
-    padding-right: 0.6rem !important;
-    padding-left: 0.6rem !important;
+    font-size: 1.4rem;
+    padding-right: 0.68rem !important;
+    padding-left: 0.68rem !important;
     text-align: center;
-    font-family: 'RobotoWeb', sans-serif;
-    font-weight: 600;
-    letter-spacing: -1px;
+    font-family: "EB Garamond", serif;
+    font-weight: 600;  letter-spacing: -.5px;
     color: #ffffff !important;
   }
   .telephone{
-    margin-left: 1%;
+    font-family: 'Source Serif Pro', serif !important;
+    font-size: 1.2rem !important;
+  }
+  .nav-link:hover{
+    color: #65acdc !important;
+    padding-bottom: 2.5%;
+  }
+  #nav_company{
+    border: none !important;
+  }
+  @media screen and (max-width: 1200px) {
+    .navbar-expand-xl .navbar-collapse {
+      margin-left: 2%;
+    }
+    #shield{
+      margin-top: -1% !important;
+      width:50px;
+      height:52px;
+    }
+    .name_brand{
+      font-size: 1.3rem;
+      letter-spacing: -0.2px;
+    }
+    .chop{
+      font-size: 0.6rem !important;
+      margin-top: -10.2%;
+      margin-left: 24%;
+      letter-spacing: -.25px !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .telephone{
+      display: none;
+    }
   }
 
 </style>
