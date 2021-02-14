@@ -159,7 +159,7 @@ input:hover, textarea:hover{
   box-shadow: 7px 7px 7px $shadeOfBlue;
 }
 textarea{
-  height: 15vh !important;
+  height: 18vh !important;
 }
 #LandingPage{
   h2{
@@ -855,9 +855,6 @@ textarea{
     min-height: 1.5rem;
     margin-bottom: 1%;
   }
-  textarea{
-    height: 18vh !important;
-  }
   #LandingPage{
     h2{
       font-size: 1.2rem;
@@ -1241,14 +1238,11 @@ textarea{
     min-height: 1.5rem;
     margin-bottom: 1%;
   }
-  textarea{
-    height: 18vh !important;
-  }
   #LandingPage{
     h2{
       font-size: 1.35rem;
     }
-    #Services,  #Feedback, #Clients{
+    #Services, #Feedback, #Clients{
       padding: 3.5% 0;
     }
     #Home{
@@ -1603,9 +1597,6 @@ textarea{
   input{
     min-height: 1.25rem;
   }
-  textarea{
-    height: 16vh !important;
-  }
   #LandingPage{
     h2{
       font-size: 1.4rem;
@@ -1902,9 +1893,6 @@ textarea{
   label{
     font-size: 1.15rem;
     margin-bottom: 0 !important;
-  }
-  textarea{
-    height: 18vh !important;
   }
   #LandingPage{
     h2{
