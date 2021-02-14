@@ -1,18 +1,15 @@
 <template>
     <div id="Myfooter">
       <b-container>
-        <b-row>
-          <b-col v-for="(page_catalog,index) in catalog_pages" :key="index">
+        <div class="flex-container">
+          <div v-for="(page_catalog,index) in catalog_pages" :key="index">
             <div v-for="(value, index) in page_catalog.pages" :key="index">
               <router-link  :to="value.link">{{value.page}}</router-link>
               <br>
             </div>
-          </b-col>
-          <b-col>
-            <a href="">   Московская область, город Люберцы, Красная улица, дом 1, этаж 8, комната 24</a>
-
-          </b-col>
-        </b-row>
+          </div>
+          <div>Московская обл., г. Люберцы, Красная ул., дом 1, этаж 8, комната 24</div>
+        </div>
       </b-container>
     </div>
 </template>
@@ -25,50 +22,26 @@
             catalog_pages:[
               {
                 pages:[
-                  {
-                    link: "",
-                    page: "О нас",
-                  },
-                  {
-                    link: "",
-                    page: "Услуги",
-                  },
+                  {link: "/company", page: "О нас",},
+                  {link: "/#Services", page: "Услуги",},
                 ],
               },
               {
                 pages:[
-                  {
-                    link: "",
-                    page: "Тарифы",
-                  },
-                  {
-                    link: "",
-                    page: "Технические средства",
-                  },
+                  {link: "/tariffs", page: "Тарифы",},
+                  {link: "/technical_means", page: "Технические средства",},
                 ],
               },
               {
                 pages:[
-                  {
-                    link: "",
-                    page: "Спецсрества",
-                  },
-                  {
-                    link: "",
-                    page: "Лицензии",
-                  },
+                  {link: "/special_equipment", page: "Спецсрества",},
+                  {link: "/licenses", page: "Лицензии",},
                 ],
               },
               {
                 pages:[
-                  {
-                    link: "",
-                    page: "Наши клиенты",
-                  },
-                  {
-                    link: "",
-                    page: "Контакты",
-                  },
+                  {link: "/our_clients", page: "Наши клиенты",},
+                  {link: "/contact", page: "Контакты",},
                 ],
               },
             ]
@@ -77,18 +50,75 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   #Myfooter{
     padding: 2% 0;
      background: #05081a;
 
   }
-  a{
-    color: white;
-    display: block;
+  .flex-container > div {
+    width: 20%;
+    margin: 0;
+  }
+  div{
+    color: white !important;
     text-align: center;
-    text-shadow: 1px 1px 2px rgb(15, 37, 56);
-    font-size: 1.25rem;
-    font-family: 'Viaoda Libre', cursive;
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+  }
+  a{
+    color: white !important;
+    display: block;
+  }
+  @media screen and (max-width: 500px) {
+    .flex-container{margin-top: 5%;}
+    .flex-container > div {
+      width: 50%;
+      &:nth-child(5),{
+        width: 100%;
+        margin-bottom: 5%;
+      }
+    }
+    div{
+      font-size: 1rem;
+    }
+  }
+  @media screen and (min-width:500px) and (max-width: 768px) {
+    .flex-container{margin: 3.5% 0;}
+    .flex-container > div {
+      width: 33% !important;
+      &:nth-child(4),&:nth-child(5),{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    div{
+      font-size: 1rem;
+    }
+  }
+  @media screen and (min-width:768px) and (max-width: 992px) {
+    .flex-container{margin: 1.5% 0;}
+    .flex-container > div {
+      width: 33%;
+      &:nth-child(4),&:nth-child(5),{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    div{
+      font-size: 1.15rem;
+    }
+  }
+  @media screen and (min-width:992px) and (max-width: 1200px) {
+    div{
+      font-size: 1.15rem;
+    }
+  }
+  @media screen and (min-width:1200px) and (max-width: 1400px) {
+    div{
+      font-size: 1.15rem;
+    }
   }
 </style>
