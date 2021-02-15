@@ -750,6 +750,9 @@ textarea{
     width: 30%;
     margin: 0 1.5% 0.5% 1.5% ;
     img{width: $imgWidth100percent;}
+    &:hover img{
+      filter: brightness(100%)!important;
+    }
   }
   .emphasized{
     padding-top: 2.5%;
@@ -894,7 +897,7 @@ textarea{
     ul{margin-left: -12%;}
   }
   .place_h1{
-    margin-bottom:.8rem;
+    margin-bottom:0 !important;
   }
   h1{
     padding-left: 0.5rem;
@@ -1296,7 +1299,7 @@ textarea{
     ul{margin-left: -8%;}
   }
   .place_h1{
-    margin-bottom: .8rem;
+    margin-bottom: .6rem;
   }
   h1{
     padding-left: 0;
@@ -1629,7 +1632,7 @@ textarea{
     }
   }
   #special_equipment{
-    .first_img{width: 33%;}
+    .first_img{width: 38%; float: left !important;}
     .flex-container > div {
       width: 100%;
       img{width: 16%;}
