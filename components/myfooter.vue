@@ -53,8 +53,7 @@
 <style scoped lang="scss">
   #Myfooter{
     padding: 2% 0;
-     background: #05081a;
-
+   background: #05081a;
   }
   .flex-container > div {
     width: 20%;
@@ -63,8 +62,10 @@
   div{
     color: white !important;
     text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Playfair Display', serif;
+    font-size: 1.42rem;
+    font-family: "EB Garamond", serif;
+    background: #05081a;
+    font-weight: 500;
   }
   a{
     color: white !important;
@@ -94,7 +95,7 @@
       }
     }
     div{
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   @media screen and (min-width:768px) and (max-width: 992px) {
@@ -108,17 +109,17 @@
       }
     }
     div{
-      font-size: 1.15rem;
+      font-size: 1.2rem;
     }
   }
   @media screen and (min-width:992px) and (max-width: 1200px) {
     div{
-      font-size: 1.15rem;
+      font-size: 1.2rem;
     }
   }
   @media screen and (min-width:1200px) and (max-width: 1400px) {
     div{
-      font-size: 1.15rem;
+      font-size: 1.3rem;
     }
   }
 </style>
