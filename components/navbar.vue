@@ -21,7 +21,7 @@
         <span class="name_brand">"ООО Валенсия"</span>
         <p class="chop">частное охранное предприятие</p>
       </b-navbar-brand>
-      <a href="" class="telephone">+7(999)999-99-99</a>
+      <a href="tel:+7(999)999-99-99" class="telephone">+7(999)999-99-99</a>
       <b-navbar-toggle target="navbar-toggle-collapse">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
              width="35" height="25"
@@ -37,16 +37,25 @@
           <b-nav-item id="nav_company" to="/company">О нас</b-nav-item>
           <b-nav-item>
             <b-dropdown text="Услуги">
-              <b-dropdown-item to="/services/guard_of_organizations/">Охрана организаций</b-dropdown-item>
-              <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">---Охрана образовательных учреждений</b-dropdown-item>
-              <b-dropdown-item to="/services/_guard_of_organizations/guard_of_medical_institutions">---Охрана медицинских учреждений</b-dropdown-item>
-              <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities">---Охрана муниципальных объектов</b-dropdown-item>
-              <b-dropdown-item to="/services/object_guard/">Охрана объектов</b-dropdown-item>
-              <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities">---Охрана промышленных объектов</b-dropdown-item>
-              <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">---Охрана объектов транспорта</b-dropdown-item>
-              <b-dropdown-item to="/services/guard_of_real_estate/">Охрана недвижимости</b-dropdown-item>
-              <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">---Охрана коммерческих объектов</b-dropdown-item>
-              <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">---Охрана частных объектов</b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_organizations/" class="menu1">Охрана организаций
+                  <div style="top:-.5%" class="menu_org">
+                    <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
+                    <b-dropdown-item to="/services/_guard_of_organizations/guard_of_medical_institutions">Охрана медицинских учреждений</b-dropdown-item>
+                    <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities">Охрана муниципальных объектов</b-dropdown-item>
+                  </div>
+              </b-dropdown-item>
+              <b-dropdown-item to="/services/object_guard/"  class="menu2">Охрана объектов
+                <div style="top:18%" class="menu_obj">
+                  <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities">Охрана промышленных объектов</b-dropdown-item>
+                  <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">Охрана объектов транспорта</b-dropdown-item>
+                </div>
+              </b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3">Охрана недвижимости
+                <div style="top:33%" class="menu_state">
+                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">Охрана коммерческих объектов</b-dropdown-item>
+                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">Охрана частных объектов</b-dropdown-item>
+                </div>
+              </b-dropdown-item>
               <b-dropdown-item to="/services/bodyguard">Личная охрана</b-dropdown-item>
               <b-dropdown-item to="/services/guard_of_events">Охрана мероприятий </b-dropdown-item>
               <b-dropdown-item to="/services/cargo_escort">Сопровождение грузов</b-dropdown-item>
@@ -76,6 +85,17 @@
 
 </script>
 <style lang="scss">
+  .menu_org,.menu_obj,.menu_state{
+    display:none;
+    position: absolute;
+    left: 100%;
+    &:hover{
+      display:block ;
+    }
+  }
+  .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {
+    display:block ;
+  }
   .navbar-brand{
     padding-bottom: 0 !important;
     text-align: center;
@@ -88,9 +108,19 @@
   .navbar-expand-xl .navbar-collapse {
     margin-left: 0;
   }
-
-  .dropdown-item:hover{
-    background: rgb(37, 74, 94) !important;
+  .dropdown-item{
+    letter-spacing: -1.5px;
+    font-weight: 600 !important;
+    color: #ffffff ;
+    font-size: 1.25rem;
+    background: #040610;
+    font-family: 'Playfair Display', serif;
+    padding-right: 0.7rem !important;
+    padding-left: 0.7rem !important;
+    &:hover{
+      color: #8bcaf5 !important;
+      background: #040610;
+    }
   }
   .dropdown-toggle{
     letter-spacing: -1.5px;
@@ -101,6 +131,9 @@
     font-family: 'Playfair Display', serif;
     padding-right: 0.7rem !important;
     padding-left: 0.7rem !important;
+    &:hover{
+      color: #8bcaf5 !important;
+    }
   }
   .btn {
     padding: 0 !important;
@@ -109,7 +142,6 @@
     font-size: 1.25rem;
   }
   .dropdown-menu {
-    background-color:white !important;
     padding: 0 !important;
   }
   @media (min-width: 1200px){
@@ -166,15 +198,23 @@
     padding-left: 0.68rem !important;
     text-align: center;
     font-family: "EB Garamond", serif;
-    font-weight: 600;  letter-spacing: -.5px;
+    font-weight: 600;
+    letter-spacing: -.5px;
     color: #ffffff !important;
   }
   .telephone{
-    font-family: 'Source Serif Pro', serif !important;
-    font-size: 1.2rem !important;
+    font-family: 'Vollkorn', serif;
+    font-size: 1.35rem !important;
+    letter-spacing: -.5px;
+    color: #97c7e7 !important;
+    font-weight: 400 !important;
+    &:hover{
+      text-decoration: none !important;
+      text-shadow: -.15px 1px .15px #97c7e7;
+    }
   }
   .nav-link:hover{
-    color: #65acdc !important;
+    color: #8bcaf5 !important;
     padding-bottom: 2.5%;
   }
   #nav_company{
