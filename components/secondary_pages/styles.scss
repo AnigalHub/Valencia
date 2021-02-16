@@ -106,6 +106,10 @@ h6{
   padding: 0.5%;
   border: 3px solid rgba(250, 250, 250, 0.23);
   box-shadow: 0 0 3px 1px $shadeOfBlue;
+  &:hover{
+    border: 3px solid rgba(250, 250, 250, 0.4);
+    box-shadow: 0 0 10px 1px $shadeOfBlue;
+  }
 }
 .block_two{
   clear: left;
@@ -217,7 +221,7 @@ textarea{
       font-weight: $fontWeight400;
       letter-spacing: 3.55px;
       transform: scale(1.025, 1.25);
-      color: rgb(149, 190, 219);
+      color: #2487c8;
       margin-left: -6%;
       filter: contrast(120%);
       text-shadow: -1px 4px 1px black;
@@ -227,7 +231,7 @@ textarea{
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       font-weight: $fontWeight800;
-      letter-spacing: -1px;
+      letter-spacing: -.25px;
       transform: scale(1.025, 1.1);
       color: $shadeOfWhite;
       filter: contrast(90%);
@@ -495,8 +499,9 @@ textarea{
     box-shadow: 2px 2px 2px $shadeOfBlue;
     transition: 0.2s;
   }
-  button:hover {}
-  button:active {}
+  button:hover, button:active {
+    background:radial-gradient( #afb3cb , rgba(64, 107, 139, 0.65) 90% );
+  }
 }
 .place_form{
   padding: 3%;
@@ -643,6 +648,9 @@ textarea{
 }
 .services_with_types{
   h6{text-align: $centerText;}
+  a:hover{
+    text-decoration: none !important;
+  }
   .flex-container > div {
     width: 48%;
     margin: 0 1% 2% 1% !important;
@@ -676,6 +684,9 @@ textarea{
       height: 270px;
       box-shadow: none;
       padding: 2% 4% 4% 4%;
+    }
+    &:hover{
+      border: 3px solid rgba(250, 250, 250, 0.23);
     }
   }
   .flex-container > div {
@@ -764,7 +775,7 @@ textarea{
 }
 #contact{
   h2{
-    margin-top: 4%;
+    margin-top: 3%;
     font-family: Tahoma, Arial, verdana, Helvetica, sans-serif;
     font-weight: $fontWeight800;
     text-align: left;
@@ -785,7 +796,7 @@ textarea{
     border-radius: 5px;
     padding: 8%;
   }
-  .place_form{background: rgba(232, 237, 245, 0.63);}
+  .place_form{background: rgba(232, 237, 245, 0.25);}
   .col-5{padding-right: 2.5%;}
   .map {
     box-shadow: 7px 7px 7px $shadeOfBlue;
