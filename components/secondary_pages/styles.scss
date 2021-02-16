@@ -185,7 +185,7 @@ textarea{
     height: auto;
     background: url(../../static/LandingPage/ооо.jpg) 100% 100% no-repeat;
     background-size: 100% 100% ;
-    filter: brightness(72%);
+    filter: brightness(85%);
     animation: anim 40s  ease-out infinite;
 
     @keyframes anim {
@@ -207,12 +207,13 @@ textarea{
       margin-left:-8%;
       padding: 2% 0 0 0;
       box-shadow: none;
+      filter: contrast(120%) !important;
     }
     .title_guard{
       padding: 6% 0 0 0;
       font-family: 'Lobster', cursive;
       font-size: 3.7rem;
-      font-weight: 400;
+      font-weight: $fontWeight400;
       letter-spacing: 3.5px;
       transform: scale(1, 1.25);
       color: #65acdc;
@@ -223,7 +224,7 @@ textarea{
     .slogan{
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
-      font-weight: 600;
+      font-weight: $fontWeight800;
       letter-spacing: -1px;
       transform: scale(1.025, 1.1);
       color: white;
@@ -308,7 +309,7 @@ textarea{
       color: #fff !important;
       transition: flex .4s ease;
       position: relative;
-      filter: brightness(60%);
+      filter: brightness(80%);
     }
     .section:first-child{
       background: url(../../static/LandingPage/about_company.jpg) ;
@@ -326,11 +327,10 @@ textarea{
       a{
         color: white;
         text-decoration:none !important;
-        font-family: 'Exo 2', sans-serif;
       }
       a:hover{
         color: white;
-        font-weight: 600 !important;
+        font-weight: $fontWeight800 !important;
         text-decoration:none !important;
       }
       &:hover h2{
@@ -356,7 +356,7 @@ textarea{
   }
   #Services,  #Feedback, #Clients{
     padding: 2.5% 0;
-    filter: brightness(80%);
+    filter: brightness(90%);
   }
   #Feedback{
     background: url("../../static/LandingPage/55.jpg") 100% 100% no-repeat;
@@ -382,12 +382,12 @@ textarea{
     img{
       box-shadow: 2px 5px 5px #273849;
       width: $imgWidth100percent;
-      filter: brightness(75%)!important;
+      filter: brightness(115%)!important;
     }
     .btn:hover{
       background-color: rgba(250, 250, 255,.9) !important;
       img{
-        filter: brightness(100%)!important;
+        filter: brightness(130%)!important;
       }
     }
     .btn{
@@ -458,14 +458,14 @@ textarea{
     img{
       box-shadow: 7px 7px 7px $shadeOfBlue;
       width: $imgWidth100percent;
-      filter:  brightness(110%) brightness(75%)!important;
+      filter:  brightness(90%)!important;
     }
     .col:hover img{
       filter: brightness(100%)!important;
     }
   }
   #Map{
-    background-color: #0c1c42;
+    background-color: rgba(39, 70, 142);
     iframe {
       filter: opacity(55%) brightness(95%) contrast(110%);
       min-height: 400px;
