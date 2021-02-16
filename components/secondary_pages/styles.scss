@@ -5,6 +5,7 @@ $centerText: center;
 $fontWeight400:400;
 $fontWeight800:800;
 $shadeOfBlack: black;
+$shadeOfWhite: white;
 $shadeOfBlue:rgb(15, 37, 56);
 $imgWidth100percent:100%;
 
@@ -51,7 +52,7 @@ img{
 }
 h1{
   margin-top: 0 !important;
-  font-family: 'Yeseva One', cursive;
+  font-family: $titleLandingPage;
   text-shadow: -.75px 1px .75px $shadeOfBlack;
   color: $shadeOfBlack;
   font-size: 2.2rem;
@@ -64,7 +65,7 @@ h1{
   margin-bottom: 1rem;
 }
 h2,h3{
-  font-family: 'EB Garamond', serif;
+  font-family: $font;
   font-weight: $fontWeight800 !important;
   padding: 1% 0;
   color:$shadeOfBlack;
@@ -153,7 +154,7 @@ input{
 input,textarea{
   background: #cfdde8;
   box-shadow: 2px 2px 2px $shadeOfBlue;
-  font-weight: 700;
+  font-weight: $fontWeight800;
 }
 input:hover, textarea:hover{
   box-shadow: 7px 7px 7px $shadeOfBlue;
@@ -214,11 +215,11 @@ textarea{
       font-family: 'Lobster', cursive;
       font-size: 3.7rem;
       font-weight: $fontWeight400;
-      letter-spacing: 3.5px;
-      transform: scale(1, 1.25);
-      color: #65acdc;
+      letter-spacing: 3.55px;
+      transform: scale(1.025, 1.25);
+      color: rgb(149, 190, 219);
       margin-left: -6%;
-      text-shadow: -1.2px 5.5px 1.2px #02022a;
+      text-shadow: -1px 4px 1px black;
       line-height: 3.25rem;
     }
     .slogan{
@@ -227,7 +228,7 @@ textarea{
       font-weight: $fontWeight800;
       letter-spacing: -1px;
       transform: scale(1.025, 1.1);
-      color: white;
+      color: $shadeOfWhite;
       filter: contrast(120%)brightness(110%);
       padding: 8% 0 0 0;
       margin-left: -2%;
@@ -264,7 +265,7 @@ textarea{
       filter: contrast(120%) brightness(110%);
       background-color: rgba(250, 250, 255,.7);
       border: 2.5px solid rgba(255, 255, 255);
-      box-shadow: 0 0 4px white, 3px 3px 3px rgb(21, 44, 64);
+      box-shadow: 0 0 4px $shadeOfWhite, 3px 3px 3px rgb(21, 44, 64);
     }
     svg{
       margin: 5% auto;
@@ -296,7 +297,7 @@ textarea{
       letter-spacing: -.5px;
       font-size: 1.35rem !important;
       line-height: 1.4rem;
-      color: white;
+      color: $shadeOfWhite;
     }
     .section {
       flex: 1;
@@ -325,11 +326,11 @@ textarea{
     }
     .section {
       a{
-        color: white;
+        color: $shadeOfWhite;
         text-decoration:none !important;
       }
       a:hover{
-        color: white;
+        color: $shadeOfWhite;
         font-weight: $fontWeight800 !important;
         text-decoration:none !important;
       }
@@ -371,7 +372,7 @@ textarea{
       letter-spacing: -.8px;
       line-height: 1.4rem;
       color: $shadeOfBlue;
-      text-shadow: 1px 1px 0 $shadeOfBlue, 2px 2px 6px white !important;
+      text-shadow: 1px 1px 0 $shadeOfBlue, 2px 2px 6px $shadeOfWhite !important;
       border: 2.5px solid rgba(255, 255, 255, 0.19);
     }
     p{margin: 0!important;}
@@ -397,7 +398,7 @@ textarea{
   }
   #Import_numbers{
     .textLandingPage{
-      color: white;
+      color: $shadeOfWhite;
       text-shadow: 0 2.5px 0 $shadeOfBlue !important;
       line-height: 1.55rem;
       transform: scale(1.05);
@@ -414,7 +415,7 @@ textarea{
       transform: scale(1.35);
       letter-spacing: -4px;
       margin-top: -5%;
-      color: white;
+      color: $shadeOfWhite;
     }
     .flex-container{
       margin-left: 8% !important;
@@ -449,7 +450,7 @@ textarea{
       color: #cfdde8;
       font-family: 'Vollkorn', serif;
       font-weight: 500;
-      text-shadow: 2px 2px 2px rgb(15, 37, 56);
+      text-shadow: 2px 2px 2px $shadeOfBlue;
     }
     .place_form{background: rgba(255, 255, 255, 0.55);}
   }
@@ -482,7 +483,7 @@ textarea{
     margin: 3% auto 0 auto;
     padding:  2%;
     font-family: $font;
-    font-weight: 700;
+    font-weight: $fontWeight800;
     text-shadow: 0.5px 0.5px 1px $shadeOfBlue;
     font-size: 1.1rem;
     border-width: 2px 0;
@@ -559,7 +560,7 @@ textarea{
     box-shadow: 0 0 1px 1px #0f2538;
   }
   th,tr td:nth-child(2),tr td:nth-child(3){
-    text-align: center !important;
+    text-align: $centerText !important;
   }
   h2,h3{
     text-shadow: 0 0 0.15px $shadeOfBlack;
@@ -640,7 +641,7 @@ textarea{
   }
 }
 .services_with_types{
-  h6{text-align: center;}
+  h6{text-align: $centerText;}
   .flex-container > div {
     width: 48%;
     margin: 0 1% 2% 1% !important;
