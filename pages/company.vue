@@ -21,7 +21,6 @@
               </b-col>
             </b-row>
           </div>
-
         </div>
         <h6>Наши специалисты также повышают свой уровень профессиональных навыков в специализированном центре:</h6>
         <img src="../static/company/company_3.jpg" alt="охрана_пост" style="width: 25%;float: right; margin-left: 2%;margin-bottom: 1%">
@@ -32,13 +31,15 @@
         <b-row class="stage">
           <b-col cols="5">
             <div v-for="stage in StagesOfWorkPart1" :key="stage.index">
-              <component :is="stage.svg"/>   <p class="emphasized text">{{stage.index}}. {{stage.name_stage}}</p>
+              <component :is="stage.svg"/>
+              <p class="emphasized text">{{stage.index}}. {{stage.name_stage}}</p>
               <p class="text">{{stage.descr_stage}}</p>
             </div>
           </b-col>
           <b-col>
             <div v-for="stage in StagesOfWorkPart2" :key="stage.index">
-              <component :is="stage.svg"/>   <p class="emphasized text">{{stage.index}}. {{stage.name_stage}}</p>
+              <component :is="stage.svg"/>
+              <p class="emphasized text">{{stage.index}}. {{stage.name_stage}}</p>
               <p class="text">{{stage.descr_stage}}</p>
             </div>
           </b-col>

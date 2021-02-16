@@ -2,7 +2,7 @@
   <div id="guard_of_transport_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/object_guard/guard_at_the_post.jpg" alt="охрана_на_посту" class="first_img">
+      <img src="../../../static/services/object_guard/guard_at_the_post.jpg" alt="охрана_на_посту" class="first_img"/>
       <p class="text">Для обеспечения безопасности объектов транспорта, комплекс охранных мероприятий прежде всего направлен на защиту работников транспортной инфраструктуры и сохранность передаваемого под охрану имущества.
       <div class="import">
       <ul>
@@ -13,7 +13,7 @@
       </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
-        <img src="../../../static/services/object_guard/barrier.jpg" alt="шлагбаум" >
+        <img src="../../../static/services/object_guard/barrier.jpg" alt="шлагбаум"/>
         <ul class="text">
           <li v-for="name_duty in DutiesGuardOfTransportFacilities" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>

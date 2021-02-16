@@ -2,7 +2,7 @@
   <div id="guard_of_commercial_objects" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_real_estate/guard_of_commercial_object.jpg" alt="охрана_коммерческого_объекта" class="first_img">
+      <img src="../../../static/services/guard_of_real_estate/guard_of_commercial_object.jpg" alt="охрана_коммерческого_объекта" class="first_img"/>
       <p class="text">В охране нуждаются здания, сооружения и иные объекты коммерческой деятельности, безопасность таких объектов - самое важное условие их бесперебойной работы.</p>
       <div class="import" >
           <ul>
@@ -10,11 +10,10 @@
               {{guard.name}}
             </li>
           </ul>
-
       </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
-        <img src="../../../static/services/guard_of_real_estate/office.jpg" alt="офис">
+        <img src="../../../static/services/guard_of_real_estate/office.jpg" alt="офис"/>
         <ul class="text">
           <li v-for="name_duty in DutiesGuardOfCommercialObjects" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>

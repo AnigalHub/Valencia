@@ -2,7 +2,7 @@
   <div id="guard_of_real_estate" class="page services services_with_types">
     <Name_page :name_page="name_page"/>
     <b-container>
-     <img src="../../static/services/guard_of_real_estate/guard_of_real_estate.jpg" alt="охрана_недвижимости" class="first_img">
+     <img src="../../static/services/guard_of_real_estate/guard_of_real_estate.jpg" alt="охрана_недвижимости" class="first_img"/>
       <p class="text"><span class="emphasized">Профессиональная охрана недвижимости </span> позволяет владельцам объекта работать и отдыхать спокойно. Наша организация гарантирует полную безопасность посетителей и персонала, а также сохранность имущества всего здания.</p>
       <p class="text"><u>Методы работы охраны недвижимости подбираются отдельно под каждый объект, учитывая:</u></p>
       <ul class="text">
@@ -14,7 +14,7 @@
           <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
           <b-row>
             <b-col cols="5">
-              <img :src="guard.img_src" :alt="guard.img_alt">
+              <img :src="guard.img_src" :alt="guard.img_alt"/>
             </b-col>
             <b-col>
               <ul class="text">

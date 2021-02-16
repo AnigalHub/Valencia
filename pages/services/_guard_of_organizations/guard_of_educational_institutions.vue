@@ -2,7 +2,7 @@
   <div id="guard_of_educational_institutions" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/guard_of_organizations/guard_of_educational_institutions.jpg" alt="охрана_дошкольных_учреждений" class="first_img">
+      <img src="../../../static/services/guard_of_organizations/guard_of_educational_institutions.jpg" alt="охрана_дошкольных_учреждений" class="first_img"/>
       <p class="text"><b>Образовательные и дошкольные учреждения</b>- это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
       <div class="import">
         <ul>
@@ -21,7 +21,7 @@
       </b-row>
       <div class="im_descr">
         <h6>Комплекс мероприятий охраны учебных заведений:</h6>
-        <img src="../../../static/services/guard_of_organizations/scale_1200.jpg" alt="охрана_образовательных_учреждений">
+        <img src="../../../static/services/guard_of_organizations/scale_1200.jpg" alt="охрана_образовательных_учреждений"/>
           <ul class="text">
             <li v-for="duty in DutiesGuardOfEducationalInstitutionFeatures" :key="duty.index">{{duty.duty}}</li>
           </ul>

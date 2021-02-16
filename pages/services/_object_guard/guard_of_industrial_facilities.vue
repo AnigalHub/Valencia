@@ -2,7 +2,7 @@
   <div id="guard_of_industrial_facilities" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
     <b-container>
-      <img src="../../../static/services/object_guard/checkpoint.jpg" alt="контрольно-пропускной_пункт" class="first_img">
+      <img src="../../../static/services/object_guard/checkpoint.jpg" alt="контрольно-пропускной_пункт" class="first_img"/>
       <p class="text"><b>Промышленный объект</b> - предприятие, агрегат, участок или цех, используемый для осуществления промышленной деятельности, который относится к категории опасных производственных объектов нашей страны.</p>
       <div class="import">
         <ul>
@@ -13,7 +13,7 @@
       </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников коммерческих объектов:</h6>
-        <img src="../../../static/services/object_guard/object_check_by_cameras.jpg" alt="проверка_объекта_по_камерам">
+        <img src="../../../static/services/object_guard/object_check_by_cameras.jpg" alt="проверка_объекта_по_камерам"/>
         <ul class="text">
           <li v-for="name_duty in DutiesGuardOfIndustrialFacilities" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>

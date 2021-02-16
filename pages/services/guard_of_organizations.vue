@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page" />
     <b-container>
       <div class="description_services">
-        <img src="../../static/services/guard_of_organizations/guard_of_organizations.jpg" class="first_img">
+        <img src="../../static/services/guard_of_organizations/guard_of_organizations.jpg" class="first_img"/>
         <p class="text"><span class="emphasized">Охрана организаций</span> предусматривает комплекс мер, направленных на обеспечение безопасности функционирования объекта, сохранности материального имущества, информационной безопасности, защиту жизни и здоровья лиц организации.</p>
         <p class="text"><u>Охрана организаций надежно защитит вас от:</u></p>
         <ul class="text">
@@ -16,7 +16,7 @@
           <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
           <b-row>
             <b-col cols="5">
-              <img :src="guard.img_src" :alt="guard.img_alt">
+              <img :src="guard.img_src" :alt="guard.img_alt"/>
             </b-col>
             <b-col>
               <ul class="text">
