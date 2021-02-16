@@ -4,7 +4,7 @@
         <div class="flex-container">
           <div v-for="(page_catalog,index) in catalog_pages" :key="index">
             <div v-for="(value, index) in page_catalog.pages" :key="index">
-              <router-link  :to="value.link">{{value.page}}</router-link>
+              <NuxtLink  :to="value.link">{{value.page}}</NuxtLink>
               <br>
             </div>
           </div>
@@ -53,7 +53,7 @@
 <style scoped lang="scss">
   #Myfooter{
     padding: 2% 0;
-   background: #05081a;
+    background: #05081a;
   }
   .flex-container > div {
     width: 20%;
