@@ -13,17 +13,19 @@
       <h6 class="block_two">Разновидности охраны организаций:</h6>
       <div class="flex-container">
         <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
-          <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
-          <b-row>
-            <b-col cols="5">
-              <img :src="guard.img_src" :alt="guard.img_alt"/>
-            </b-col>
-            <b-col>
-              <ul class="text">
-                <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
-              </ul>
-            </b-col>
-          </b-row>
+          <NuxtLink :to="guard.link">
+            <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
+            <b-row>
+              <b-col cols="5">
+                <img :src="guard.img_src" :alt="guard.img_alt"/>
+              </b-col>
+              <b-col>
+                <ul class="text">
+                  <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
+                </ul>
+              </b-col>
+            </b-row>
+          </NuxtLink>
         </div>
         <div class="type_guard_beautiful_block">
             <img src="../../static/services/guard_of_organizations/building.jpg" alt="здание">
@@ -54,6 +56,7 @@
           ],
           TypesOfGuard: [
             {
+              link:"/services/_guard_of_organizations/guard_of_educational_institutions",
               name: "Охрана образовательных и дошкольных учреждений",
               svg: Guard_shield_typesSVG,
               img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
@@ -66,6 +69,7 @@
               ]
             },
             {
+              link:"/services/_guard_of_organizations/guard_of_medical_institutions",
               name: "Охрана медицинских учреждений",
               svg: Guard_shield_typesSVG,
               img_src: "../guard_of_organizations/guard_of_medical_institutions.jpg",
@@ -78,6 +82,7 @@
               ]
             },
             {
+              link:"/services/_guard_of_organizations/guard_of_municipal_facilities",
               name: "Охрана муниципальных объектов - госучреждений",
               svg: Guard_shield_typesSVG,
               img_src: "../guard_of_organizations/gallery.jpg",

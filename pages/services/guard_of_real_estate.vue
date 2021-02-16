@@ -11,17 +11,19 @@
       <h6 class="block_two">Разновидности охраны недвижимости:</h6>
       <div class="flex-container">
         <div class="type_guard_beautiful_block" v-for="guard in TypesOfGuard" :key="guard.index">
-          <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
-          <b-row>
-            <b-col cols="5">
-              <img :src="guard.img_src" :alt="guard.img_alt"/>
-            </b-col>
-            <b-col>
-              <ul class="text">
-                <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
-              </ul>
-            </b-col>
-          </b-row>
+          <NuxtLink :to="guard.link">
+            <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
+            <b-row>
+              <b-col cols="5">
+                <img :src="guard.img_src" :alt="guard.img_alt"/>
+              </b-col>
+              <b-col>
+                <ul class="text">
+                  <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
+                </ul>
+              </b-col>
+            </b-row>
+          </NuxtLink>
         </div>
       </div>
       <Tarrifs_content/>
@@ -48,7 +50,9 @@
 
           ],
           TypesOfGuard:[
-            { name:"Охрана коммерческих объектов",
+            {
+              link:"/services/_guard_of_real_estate/guard_of_commercial_objects",
+              name:"Охрана коммерческих объектов",
               svg:Guard_shield_typesSVG,
               img_src:"./guard_of_commercial_object.jpg",
               img_alt:"охрана_коммерческих_объектов",
@@ -61,7 +65,9 @@
                 {guard:"Охрана гостиниц и отелей"},
               ]
             },
-            { name:"Охрана частных объектов",
+            {
+              link:"/services/_guard_of_real_estate/guard_private_property",
+              name:"Охрана частных объектов",
               svg:Guard_shield_typesSVG,
               img_src:"./panel_protection.jpg",
               img_alt:"охрана_частных_объектов",

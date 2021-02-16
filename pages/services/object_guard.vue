@@ -11,17 +11,19 @@
         <h6 class="block_two">Разновидности охраны объектов:</h6>
         <div class="flex-container">
           <div class="type_guard_beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
-            <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
-            <b-row>
-              <b-col cols="5">
-                <img :src="guard.img_src" :alt="guard.img_alt"/>
-              </b-col>
-              <b-col>
-                <ul class="text">
-                  <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
-                </ul>
-              </b-col>
-            </b-row>
+            <NuxtLink :to="guard.link">
+              <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
+              <b-row>
+                <b-col cols="5">
+                  <img :src="guard.img_src" :alt="guard.img_alt"/>
+                </b-col>
+                <b-col>
+                  <ul class="text">
+                    <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
+                  </ul>
+                </b-col>
+              </b-row>
+            </NuxtLink>
           </div>
         </div>
         <Tarrifs_content/>
@@ -47,7 +49,9 @@
             {name:"особенности расположения входов/выходов и въездов на территорию."},
           ],
           TypesOfGuard:[
-            { name:"Охрана промышленных объектов",
+            {
+              link:"/services/_object_guard/guard_of_industrial_facilities",
+              name:"Охрана промышленных объектов",
               svg:Guard_shield_typesSVG,
               img_src:"../object_guard/checkpoint.jpg",
               img_alt:"охрана_коммерческих_объектов",
@@ -60,7 +64,9 @@
                 {guard:"Охрана складов и складских помещений"},
               ]
             },
-            { name:"Охрана объектов транспорта",
+            {
+              link:"/services/_object_guard/guard_of_transport_facilities",
+              name:"Охрана объектов транспорта",
               svg:Guard_shield_typesSVG,
               img_src:"../object_guard/barrier.jpg",
               img_alt:"охрана_частных_объектов",
