@@ -36,7 +36,7 @@
         <b-navbar-nav>
           <b-nav-item id="nav_company" to="/company">О нас</b-nav-item>
           <b-nav-item>
-            <b-dropdown text="Услуги">
+            <b-dropdown text="Услуги" class="menu_service">
               <b-dropdown-item to="/services/guard_of_organizations/" class="menu1">Охрана организаций
                   <div style="top:-.5%" class="menu_org">
                     <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
@@ -50,7 +50,7 @@
                   <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">Охрана объектов транспорта</b-dropdown-item>
                 </div>
               </b-dropdown-item>
-              <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3">Охрана недвижимости
+             <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3">Охрана недвижимости
                 <div style="top:33%" class="menu_state">
                   <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">Охрана коммерческих объектов</b-dropdown-item>
                   <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">Охрана частных объектов</b-dropdown-item>
@@ -109,7 +109,7 @@
     margin-left: 0;
   }
   .dropdown-item{
-    letter-spacing: -1.5px;
+    letter-spacing: -.8px;
     font-weight: 600 !important;
     color: #ffffff ;
     font-size: 1.25rem;
@@ -135,6 +135,9 @@
       color: #8bcaf5 !important;
     }
   }
+  ul:hover .dropdown-toggle{
+    color:#8bcaf5 !important;
+  }
   .btn {
     padding: 0 !important;
     background: transparent !important;
@@ -150,8 +153,27 @@
       max-height: 100%;
     }
   }
+  @media screen  and (max-width: 1250px) {
+    .dropdown-item,.dropdown-toggle{
+      font-size: 1.1rem !important;
+    }
+  }
+  @media screen and (min-width:1250px) and (max-width: 1310px) {
+    .dropdown-item,.dropdown-toggle{
+      font-size: 1.15rem !important;
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
+    }
+  }
+  @media screen and (min-width:1310px) and (max-width: 1400px) {
+    .dropdown-item,.dropdown-toggle{
+      padding-right: 0.55rem !important;
+      padding-left: 0.55rem !important;
+    }
+  }
 </style>
 <style scoped lang="scss">
+
   .container {
     padding: 0 !important;
   }
@@ -193,32 +215,57 @@
     height: 1.7em;
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
     padding-right: 0.68rem !important;
     padding-left: 0.68rem !important;
     text-align: center;
     font-family: "EB Garamond", serif;
     font-weight: 600;
-    letter-spacing: -.5px;
+    letter-spacing: -.45px;
     color: #ffffff !important;
+  }
+  .nav-link{
+    font-size: 1.4rem;
   }
   .telephone{
     font-family: 'Vollkorn', serif;
-    font-size: 1.35rem !important;
+    font-size: 1.35rem;
     letter-spacing: -.5px;
-    color: #97c7e7 !important;
-    font-weight: 400 !important;
+    color: white !important;
+    font-weight: 400 !important;   text-decoration: underline !important;
     &:hover{
-      text-decoration: none !important;
       text-shadow: -.15px 1px .15px #97c7e7;
     }
   }
-  .nav-link:hover{
-    color: #8bcaf5 !important;
-    padding-bottom: 2.5%;
+  @media screen and (max-width: 1250px) {
+    .nav-link:hover {
+      color: #8bcaf5 !important;
+      padding-bottom: 2.5%;
+    }
   }
   #nav_company{
     border: none !important;
+  }
+  @media screen and (max-width: 1250px) {
+    .nav-link,.telephone{
+      font-size: 1.2rem !important;
+      padding-right: 0.425rem !important;
+      padding-left: 0.425rem !important;
+    }
+  }
+
+  @media screen and (min-width:1250px) and (max-width: 1310px) {
+    .nav-link,.telephone{
+      font-size: 1.25rem ;
+      padding-right: 0.475rem !important;
+      padding-left: 0.475rem !important;
+    }
+  }
+  @media screen and (min-width:1310px) and (max-width: 1400px) {
+    .nav-link,.telephone{
+      font-size: 1.3rem;
+      padding-right: 0.525rem !important;
+      padding-left: 0.525rem !important;
+    }
   }
   @media screen and (max-width: 1200px) {
     .navbar-expand-xl .navbar-collapse {
