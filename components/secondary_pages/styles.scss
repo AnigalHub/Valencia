@@ -219,6 +219,7 @@ textarea{
       transform: scale(1.025, 1.25);
       color: rgb(149, 190, 219);
       margin-left: -6%;
+      filter: contrast(120%);
       text-shadow: -1px 4px 1px black;
       line-height: 3.25rem;
     }
@@ -229,7 +230,7 @@ textarea{
       letter-spacing: -1px;
       transform: scale(1.025, 1.1);
       color: $shadeOfWhite;
-      filter: contrast(120%)brightness(110%);
+      filter: contrast(90%);
       padding: 8% 0 0 0;
       margin-left: -2%;
       text-shadow: -1px 4px 1px rgb(9, 24, 38);
