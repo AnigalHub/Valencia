@@ -34,7 +34,7 @@
 <script>
   import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
   import Name_page from "../../components/secondary_pages/name_page";
-  import GuardSVG from "../../components/secondary_pages/guard_svg";
+  import GuardSVG from "../../components/secondary_pages/shield_svg";
     export default {
       name: "object_guard",
       components: {Name_page, Tarrifs_content},

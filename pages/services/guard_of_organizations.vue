@@ -39,7 +39,7 @@
 <script>
     import Name_page from "../../components/secondary_pages/name_page";
     import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
-    import GuardSVG from "../../components/secondary_pages/guard_svg";
+    import GuardSVG from "../../components/secondary_pages/shield_svg";
     export default {
       name: "guard_of_organizations",
       components: {Tarrifs_content, Name_page},
