@@ -39,7 +39,7 @@
 <script>
     import Name_page from "../../components/secondary_pages/name_page";
     import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
-    import Guard_shield_typesSVG from "../../components/secondary_pages/services_svg/guard_shield_types_svg";
+    import GuardSVG from "../../components/secondary_pages/guard_svg";
     export default {
       name: "guard_of_organizations",
       components: {Tarrifs_content, Name_page},
@@ -58,7 +58,7 @@
             {
               link:"/services/_guard_of_organizations/guard_of_educational_institutions",
               name: "Охрана образовательных и дошкольных учреждений",
-              svg: Guard_shield_typesSVG,
+              svg: GuardSVG,
               img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
               img_alt: "охрана_коммерческих_объектов",
               list: [
@@ -71,7 +71,7 @@
             {
               link:"/services/_guard_of_organizations/guard_of_medical_institutions",
               name: "Охрана медицинских учреждений",
-              svg: Guard_shield_typesSVG,
+              svg: GuardSVG,
               img_src: "../guard_of_organizations/guard_of_medical_institutions.jpg",
               img_alt: "охрана_частных_объектов",
               list: [
@@ -84,7 +84,7 @@
             {
               link:"/services/_guard_of_organizations/guard_of_municipal_facilities",
               name: "Охрана муниципальных объектов - госучреждений",
-              svg: Guard_shield_typesSVG,
+              svg: GuardSVG,
               img_src: "../guard_of_organizations/gallery.jpg",
               img_alt: "охрана_частных_объектов",
               list: [

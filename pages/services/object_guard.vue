@@ -34,7 +34,7 @@
 <script>
   import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
   import Name_page from "../../components/secondary_pages/name_page";
-  import Guard_shield_typesSVG from "../../components/secondary_pages/services_svg/guard_shield_types_svg";
+  import GuardSVG from "../../components/secondary_pages/guard_svg";
     export default {
       name: "object_guard",
       components: {Name_page, Tarrifs_content},
@@ -52,7 +52,7 @@
             {
               link:"/services/_object_guard/guard_of_industrial_facilities",
               name:"Охрана промышленных объектов",
-              svg:Guard_shield_typesSVG,
+              svg:GuardSVG,
               img_src:"../object_guard/checkpoint.jpg",
               img_alt:"охрана_коммерческих_объектов",
               list:[
@@ -67,7 +67,7 @@
             {
               link:"/services/_object_guard/guard_of_transport_facilities",
               name:"Охрана объектов транспорта",
-              svg:Guard_shield_typesSVG,
+              svg:GuardSVG,
               img_src:"../object_guard/barrier.jpg",
               img_alt:"охрана_частных_объектов",
               list:[
