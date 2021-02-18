@@ -59,13 +59,13 @@
 </template>
 
 <script>
-  import GuardSVG from "../components/secondary_pages/guard_svg";
+  import ShieldSVG from "./secondary_pages/shield_svg";
   export default {
     name: "navbar",
     data(){
       return {
         isExpanded: false,
-        svg:GuardSVG,
+        svg:ShieldSVG,
       }
     },
   }
