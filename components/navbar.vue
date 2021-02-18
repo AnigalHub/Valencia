@@ -2,22 +2,7 @@
   <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
     <b-container>
       <b-navbar-brand to="/">
-        <svg id="shield" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172" style=" fill:#000000;">
-          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-            <path d="M0,172v-172h172v172z"></path>
-            <g>
-              <path  d="M86,151.84375c33.325,-19.75313 53.75,-54.95938 53.75,-94.19687v-20.29063l-53.75,-19.8875l-53.75,19.8875v20.29062c0,39.2375 20.425,74.44375 53.75,94.19688"
-                     fill="#0b375e"></path>
-              <path d="M86,155.875c-0.67187,0 -1.47813,-0.13438 -2.01562,-0.5375c-34.9375,-20.69375 -55.76562,-57.24375 -55.76562,-97.69063v-20.29062c0,-1.74688 1.075,-3.225 2.6875,-3.7625l53.75,-19.8875c0.94062,-0.26875 1.88125,-0.26875 2.82187,0l53.61563,19.8875c1.6125,0.5375 2.6875,2.15 2.6875,3.7625v20.29062c0,40.44688 -20.82812,76.99687 -55.76562,97.69063c-0.5375,0.40312 -1.34375,0.5375 -2.01562,0.5375zM36.28125,40.17813v17.46875c0,36.81875 18.54375,70.00938 49.71875,89.49375c31.175,-19.35 49.71875,-52.675 49.71875,-89.49375v-17.46875l-49.71875,-18.40938z"
-                    fill="#ffffff" stroke="#000000" stroke-width="3.5"></path>
-              <path d="M86,136.525c-0.80625,0 -1.74688,-0.26875 -2.41875,-0.80625c-21.36562,-15.72187 -34.9375,-38.96875 -38.43125,-65.17187c-0.26875,-2.15 1.20938,-4.16563 3.49375,-4.56875c2.15,-0.26875 4.16562,1.20937 4.56875,3.49375c3.09063,22.97813 14.64688,43.40313 32.7875,57.78125c21.36563,-16.93125 33.59375,-42.19375 33.59375,-69.74062v-6.18125l-33.59375,-12.3625l-36.28125,13.4375c-2.15,0.80625 -4.43437,-0.26875 -5.24063,-2.41875c-0.80625,-2.15 0.26875,-4.43437 2.41875,-5.24063l37.75938,-13.84063c0.94062,-0.26875 1.88125,-0.26875 2.82187,0l37.625,13.975c1.6125,0.5375 2.6875,2.15 2.6875,3.7625v9.00313c0,31.175 -14.24375,59.6625 -39.2375,78.07188c-0.80625,0.5375 -1.74688,0.80625 -2.55312,0.80625z"
-                    fill="none" stroke="#ffffff" stroke-width="2"></path>
-              <g fill="#65acdc">
-                <path d="M86,34.66875v97.825c23.78437,-17.60313 37.625,-44.88125 37.625,-74.84688v-9.00313z"></path>
-              </g>
-            </g>
-          </g>
-        </svg>
+        <component :is="svg"/>
         <span class="name_brand">"ООО Валенсия"</span>
         <p class="chop">частное охранное предприятие</p>
       </b-navbar-brand>
@@ -38,20 +23,20 @@
           <b-nav-item>
           <b-dropdown text="Услуги" class="menuu">
             <b-dropdown-item to="/services/guard_of_organizations/" class="menu1">Охрана организаций
-              <span style="top:-.15%" class="menu_org">
+              <span style="top:-.35%" class="menu_org">
                 <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
                 <b-dropdown-item to="/services/_guard_of_organizations/guard_of_medical_institutions">Охрана медицинских учреждений</b-dropdown-item>
                 <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities">Охрана муниципальных объектов</b-dropdown-item>
               </span>
             </b-dropdown-item>
             <b-dropdown-item to="/services/object_guard/"  class="menu2">Охрана объектов
-              <div style="top:18%" class="menu_obj">
+              <div style="top:16.5%" class="menu_obj">
                 <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities">Охрана промышленных объектов</b-dropdown-item>
                 <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">Охрана объектов транспорта</b-dropdown-item>
               </div>
             </b-dropdown-item>
              <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3">Охрана недвижимости
-               <div style="top:33%" class="menu_state">
+               <div style="top:32.5%" class="menu_state">
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">Охрана коммерческих объектов</b-dropdown-item>
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">Охрана частных объектов</b-dropdown-item>
                </div>
@@ -74,11 +59,13 @@
 </template>
 
 <script>
+  import GuardSVG from "../components/secondary_pages/guard_svg";
   export default {
     name: "navbar",
     data(){
       return {
         isExpanded: false,
+        svg:GuardSVG,
       }
     },
   }
@@ -89,6 +76,7 @@
     display:none;
     position: absolute;
     left: 100%;
+    border: 2px solid  #8bcaf5;
     &:hover{
       display:block ;
     }
@@ -120,6 +108,8 @@
     &:hover{
       color: #8bcaf5 !important;
       background: #040610;
+      border-bottom: 2px solid  #8bcaf5;
+      border-top: 2px solid  #8bcaf5;
     }
   }
   .dropdown-toggle{
@@ -133,6 +123,7 @@
     padding-left: 0.7rem !important;
     &:hover{
       color: #8bcaf5 !important;
+
     }
   }
   .menuu:hover .dropdown-toggle{
@@ -146,6 +137,7 @@
   }
   .dropdown-menu {
     padding: 0 !important;
+    border: 2px solid  #8bcaf5;
   }
   @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
