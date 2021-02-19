@@ -50,12 +50,6 @@
 
 <script>
     import Name_page from "../components/secondary_pages/name_page";
-    import RequestSVG from "../components/company_svg/request_svg";
-    import VisitSVG from "../components/company_svg/visit_svg";
-    import PlanSVG from "../components/company_svg/plan_svg";
-    import PersonalSVG from "../components/company_svg/personal_svg";
-    import ContractSVG from "../components/company_svg/contract_svg";
-    import VerificationSVG from "../components/company_svg/verification_svg";
     import LawSVG from "../components/company_svg/law_svg";
     import SpeedSVG from "../components/company_svg/speed_svg";
     import StrengthSVG from "../components/company_svg/strength_svg";
