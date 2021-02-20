@@ -33,7 +33,7 @@
             <div v-for="stage in StagesOfWorkPart1" :key="stage.index">
               <component :is="stage.svg"/>
               <p class="emphasized text">{{stage.index}}. {{stage.name_stage}}</p>
-              <p class="text">{{stage.descr_stage}}</p>
+              <p class="text" v-html="stage.descr_stage"></p>
             </div>
           </b-col>
           <b-col>
@@ -56,12 +56,14 @@
     import ReliabilitySVG from "../components/company_svg/reliability_svg";
     import PartnersSVG from "../components/company_svg/partners_svg";
     import ConfidentialitySVG from "../components/company_svg/confidentiality_svg";
+    import Address from "static/documents/address.json"
     export default {
       name: "company",
       components: {Name_page},
       data() {
         return {
           name_page:"О компании",
+          address:Address,
           WorkPrinciples:[
             {index:1, name_principle:"Законность",svg:LawSVG, descr_principle:"Деятельность компании полностью соответствует законодательству Российской Федерации.",},
             {index:2, name_principle:"Честное партнерство",svg:PartnersSVG, descr_principle:"Все отношения с клиентами основаны на принципах конфиденциальности, взаимного доверия и уважения.",},
@@ -76,7 +78,7 @@
             {skill:"Для улучшения личностных качеств - проходят курсы по техническим, правовым, психологическим и этическим нормам поведения частных охранников.",},
           ],
           StagesOfWorkPart1:[
-            {index:1,svg:'', name_stage:"Заявка от клиента", descr_stage:"Если Вам необходима охрана, Вы можете позвонить по номеру +7(999)999-99-99 или же отправить форму обратной связи и мы сами перезвоним Вам.",},
+            {index:1,svg:'', name_stage:"Заявка от клиента", descr_stage:"Если Вам необходима охрана, Вы можете позвонить по номеру <a href=tel:" + Address.phone + " >"  + Address.phone +"</a>" + "или же отправить форму обратной связи и мы сами перезвоним Вам.",},
             {index:2,svg:'', name_stage:"Выезд специалиста", descr_stage:"В удобное для Вас время, на территорию Вашего объекта выезжает специалист нашей компании для обследования объекта на предмет уязвимостей и оценки потенциальных угроз.",},
             {index:3,svg:'', name_stage:"Индивидуальный план на работу", descr_stage:"Учитывая требования клиента, по результатам осмотра территории или опроса Клиента, составляется индивидуальный план на необходимое количество постов и их режима работы. ",},
           ],
