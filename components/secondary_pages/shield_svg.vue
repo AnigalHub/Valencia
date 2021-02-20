@@ -24,21 +24,5 @@
 </script>
 
 <style scoped>
-.color_white{
-  fill: white;
-}
-.color_dark_blue{
-  fill: #0b375e;
-}
-.color_light_blue{
-  fill: #65acdc;
-}
-.outline_light{
-  stroke: white;
-  stroke-width: 2;
-}
-.outline_dark{
-  stroke: #000000;
-  stroke-width: 3.5;
-}
+
 </style>
