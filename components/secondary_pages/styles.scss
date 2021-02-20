@@ -10,11 +10,12 @@ $shadeOfBlue:rgb(15, 37, 56);
 $imgWidth100percent:100%;
 
 .page{
-  background:linear-gradient( to bottom left, #3b475a 2%, #68778e,#7e8da5,#7e8da5,#68778e, #3b475a);
+  background:linear-gradient( to bottom left, #36506c, #718199, #36506c);
+
   filter: brightness(110%);
   padding: 2.25rem 0;
 }
-.text{
+.text,.modal-header{
   font-family: $font;
   font-weight: $fontWeight400 !important;
   letter-spacing: -.25px;
@@ -166,6 +167,19 @@ input:hover, textarea:hover{
 textarea{
   height: 18vh !important;
 }
+#shield{
+  .color_white{fill: white;}
+  .color_dark_blue{fill: #0b375e;}
+  .color_light_blue{fill: #65acdc;}
+  .outline_light{
+    stroke: white;
+    stroke-width: 2;
+  }
+  .outline_dark{
+    stroke: #000000;
+    stroke-width: 3.5;
+  }
+}
 #LandingPage{
   h2{
     text-decoration: underline;
@@ -279,6 +293,17 @@ textarea{
       height: 60px !important;
       border-radius: 10%;
       padding: .5%;
+      .color_inside{fill: white;}
+      .color_strokes_inside{fill: #333333;}
+      .color_inside_small_object{fill:#2487c8;}
+      .outline{
+        stroke:#333333;
+        stroke-width: 3;
+      }
+      .bold_outline{
+        stroke:#333333;
+        stroke-width: 6;
+      }
     }
   }
   #Type{
@@ -516,6 +541,18 @@ textarea{
     float: left;
     border-radius: 50%;
     box-shadow: 0 0 6.5px $shadeOfBlack;
+    .color_inside{fill: rgba(255, 255, 255, 0.65);}
+    .color_strokes_inside{fill: #000000;}
+    .color_inside_small_object{fill:#14608F;}
+    .color_shadow{fill: #cccccc;}
+    .outline{
+      stroke:#000000;
+      stroke-width: 3;
+    }
+    .bold_outline{
+      stroke:#000000;
+      stroke-width: 8.0625;
+    }
   }
   .first_img{
     float: left;
@@ -748,7 +785,10 @@ textarea{
 #licenses{
   img{
     width: $imgWidth100percent;
-    filter: brightness(60%) !important;
+    filter: brightness(65%) !important;
+    &:hover{
+      filter: brightness(75%)!important;
+    }
   }
   h4{
     padding: 1rem 0;
@@ -756,6 +796,7 @@ textarea{
   .flex-container > img {
     width: 18%;
     margin: 0 1% 2% 1% !important;
+    cursor: pointer;
   }
 }
 #our_clients{
@@ -795,6 +836,17 @@ textarea{
     background: rgba(28, 97, 146, 0.1);
     border-radius: 5px;
     padding: 8%;
+    .color_inside{fill: white;}
+    .color_shadow{fill:#cccccc;}
+    .outline{fill:#333333;}
+    .bold_outline{
+      stroke:#333333;
+      stroke-width: 5;
+    }
+    .very_bold_outline{
+      stroke:#333333;
+      stroke-width: 18;
+    }
   }
   .place_form{background: rgba(232, 237, 245, 0.25);}
   .col-5{padding-right: 2.5%;}
