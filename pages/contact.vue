@@ -10,7 +10,9 @@
               <component :is="information.svg"/>
             </b-col>
             <b-col>
-              <p class="text"><b>{{information.name}}: </b>{{information.description}}</p>
+              <p class="text"><b>{{information.name}}: </b>
+                <a :href="information.link" > {{information.description}} </a>
+              </p>
             </b-col>
           </b-row>
         </b-col>
@@ -42,8 +44,8 @@
           address:Address,
           name_page:"Контакты",
           CompanyInformation:[
-            {svg:TelephoneSVG, name:"Телефон", description:Address.phone,},
-            {svg:EmailSVG, name:"Email", description:Address.mail,},
+            {svg:TelephoneSVG, name:"Телефон", description:Address.phone,link:'tel:' + Address.phone},
+            {svg:EmailSVG, name:"Email", description:Address.mail,link:'mailto:'+ Address.mail},
             {svg:OpeningHoursSVG, name:"Часы работы", description:Address.working_hours,},
             {svg:UndergroundSVG, name:"Метро", description:Address.underground,},
             {svg:AddressSVG, name:"Адрес", description:Address.address,},
