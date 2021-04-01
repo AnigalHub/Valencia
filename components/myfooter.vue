@@ -65,7 +65,7 @@
     font-size: 1.42rem;
     font-family: "EB Garamond", serif;
     background: #05081a;
-    font-weight: 500;
+    font-weight: 600;
   }
   a{
     color: white !important;

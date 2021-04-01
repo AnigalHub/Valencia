@@ -19,8 +19,8 @@ $imgWidth100percent:100%;
   font-family: $font;
   font-weight: $fontWeight400 !important;
   letter-spacing: -.25px;
-  font-size: 1.58rem;
-  line-height: 1.4rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   filter: contrast(120%)brightness(170%);
   text-shadow: 0 0 .15px $shadeOfBlack;
   color: $shadeOfBlack;
@@ -172,8 +172,8 @@ textarea{
 }
 #shield{
   .color_white{fill: white;}
-  .color_dark_blue{fill: #154e80;}
-  .color_light_blue{fill: #3a799e;}
+  .color_dark_blue{fill: #0d3b63;}
+  .color_light_blue{fill: #30749c;}
   .outline_light{
     stroke: white;
     stroke-width: 2;
