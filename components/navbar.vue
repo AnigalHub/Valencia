@@ -21,7 +21,7 @@
         <b-navbar-nav>
           <b-nav-item id="nav_company" to="/company">О нас</b-nav-item>
           <b-nav-item>
-          <b-dropdown text="Услуги" class="menuu">
+          <b-dropdown text="Услуги" class="menuu" id="mm">
             <b-dropdown-item to="/services/guard_of_organizations/" class="menu1">Охрана организаций
               <span style="top:-.35%" class="menu_org">
                 <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
@@ -46,7 +46,7 @@
               <b-dropdown-item to="/services/cargo_escort">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
-          <b-nav-item to="/tariffs">Тарифы</b-nav-item>
+          <b-nav-item to="/tariffs" id="tarif">Тарифы</b-nav-item>
           <b-nav-item to="/technical_means">Технические средства</b-nav-item>
           <b-nav-item to="/special_equipment">Спецсредства</b-nav-item>
           <b-nav-item to="/licenses">Лицензии</b-nav-item>
@@ -72,10 +72,6 @@
 
 </script>
 <style lang="scss">
-
-
-
-
   .menu_org,.menu_obj,.menu_state{
     display:none;
     position: absolute;
@@ -148,10 +144,26 @@
       max-width: 1400px !important;
       max-height: 100%;
     }
+
   }
+
   @media screen  and (max-width: 1250px) {
     .dropdown-item,.dropdown-toggle{
       font-size: 1.1rem !important;
+    }
+    .btn-group{
+      display: block;
+    }
+  }
+  @media  screen  and (min-width: 1200px)  {
+    .nav-link,.telephone{
+      height: 1.7em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding-right: 0.68rem !important;
+      padding-left: 0.68rem !important;
+      letter-spacing: -.4px;
     }
   }
   @media screen and (min-width:1250px) and (max-width: 1310px) {
@@ -202,18 +214,10 @@
     text-align: center;
     margin-bottom: 0.5rem !important;
   }
-  .nav-link,.telephone{
-    height: 1.7em;
-    display: flex;
-    align-items: center;
-    padding-right: 0.68rem !important;
-    padding-left: 0.68rem !important;
-    text-align: center;
-    font-weight: 400 !important;
-    letter-spacing: -.4px;
-    color: #ffffff !important;
-  }
+
   .nav-link{
+    color: #ffffff !important;
+    font-weight: 400 !important;
     font-size: 1.4rem;
     font-family: "EB Garamond", serif;
   }
