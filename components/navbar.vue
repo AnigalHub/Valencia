@@ -72,18 +72,6 @@
 
 </script>
 <style lang="scss">
-  .menu_org,.menu_obj,.menu_state{
-    display:none;
-    position: absolute;
-    left: 100%;
-    border: 2px solid #007bff;
-    &:hover{
-      display:block ;
-    }
-  }
-  .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {
-    display:block ;
-  }
   .navbar-brand{
     padding-bottom: 0 !important;
     text-align: center;
@@ -108,8 +96,6 @@
     &:hover{
       color: #007bff !important;
       background: #040610;
-      border-bottom: 2px solid  #007bff;
-      border-top: 2px solid  #007bff;
     }
   }
   .dropdown-toggle{
@@ -123,7 +109,6 @@
     padding-left: 0.7rem !important;
     &:hover{
       color: #007bff !important;
-
     }
   }
   .menuu:hover .dropdown-toggle{
@@ -137,16 +122,7 @@
   }
   .dropdown-menu {
     padding: 0 !important;
-    border: 2px solid  #007bff;
   }
-  @media (min-width: 1200px){
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 1400px !important;
-      max-height: 100%;
-    }
-
-  }
-
   @media screen  and (max-width: 1250px) {
     .dropdown-item,.dropdown-toggle{
       font-size: 1.1rem !important;
@@ -155,7 +131,26 @@
       display: block;
     }
   }
+  @media  screen  and (max-width: 1200px)  {
+    .menu_org,.menu_obj,.menu_state{
+      .dropdown-item::before {
+          content: "\25B8";
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: .5em;
+        }
+    }
+  }
   @media  screen  and (min-width: 1200px)  {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1400px !important;
+      max-height: 100%;
+    }
+    .dropdown-item:hover{
+      border-bottom: 2px solid  #007bff;
+      border-top: 2px solid  #007bff;
+    }
     .nav-link,.telephone{
       height: 1.7em;
       text-align: center;
@@ -164,6 +159,21 @@
       padding-right: 0.68rem !important;
       padding-left: 0.68rem !important;
       letter-spacing: -.4px;
+    }
+    .dropdown-menu {
+      border: 2px solid  #007bff;
+    }
+    .menu_org,.menu_obj,.menu_state{
+      display:none;
+      position: absolute;
+      left: 100%;
+      border: 2px solid #007bff;
+      &:hover{
+        display:block ;
+      }
+    }
+    .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {
+      display:block ;
     }
   }
   @media screen and (min-width:1250px) and (max-width: 1310px) {
@@ -214,10 +224,11 @@
     text-align: center;
     margin-bottom: 0.5rem !important;
   }
-
-  .nav-link{
+  .nav-link,.telephone{
     color: #ffffff !important;
     font-weight: 400 !important;
+  }
+  .nav-link{
     font-size: 1.4rem;
     font-family: "EB Garamond", serif;
   }
@@ -231,7 +242,6 @@
   .nav-link:hover {
     color: #007bff !important;
   }
-
   #nav_company{
     border: none !important;
   }
