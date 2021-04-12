@@ -22,12 +22,6 @@ export default {
 </script>
 
 <style>
-  #LandingPage{
-    background:linear-gradient( to top left, #304355, #768c9e,#304355);
-  }
-  #LandingPage img{
-    border: none;
-  }
   .container-fluid{
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -39,5 +33,4 @@ export default {
   .row {
     margin: 0 !important;
   }
-
 </style>
