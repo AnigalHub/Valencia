@@ -8,17 +8,19 @@
               <br>
             </div>
           </div>
-          <div>Московская обл., г. Люберцы, Красная ул., дом 1, этаж 8, комната 24</div>
+          <div>{{address.address}}</div>
         </div>
       </b-container>
     </div>
 </template>
 
 <script>
+    import Address from "../static/documents/address.json";
     export default {
         name: "myfooter",
       data(){
           return{
+            address:Address,
             catalog_pages:[
               {
                 pages:[
@@ -51,75 +53,91 @@
 </script>
 
 <style scoped lang="scss">
+  //компонент Footer
   #Myfooter{
     padding: 2% 0;
     background: #05081a;
-  }
-  .flex-container > div {
-    width: 20%;
-    margin: 0;
-  }
-  div{
-    color: white !important;
-    text-align: center;
-    font-size: 1.42rem;
-    font-family: "EB Garamond", serif;
-    background: #05081a;
-    font-weight: 600;
-  }
-  a{
-    color: white !important;
-    display: block;
-  }
-  @media screen and (max-width: 500px) {
-    .flex-container{margin-top: 5%;}
-    .flex-container > div {
-      width: 50%;
-      &:nth-child(5),{
-        width: 100%;
-        margin-bottom: 5%;
+    .flex-container > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
+      width: 20%;
+      margin: 0;
+      color: white !important;
+      text-align: center;
+      font-size: 1.42rem;
+      font-family: "EB Garamond", serif;
+      background: #05081a;
+      font-weight: 600;
+      a { //ссылки
+        color: white !important;
+        display: block;
       }
     }
-    div{
-      font-size: 1rem;
+  }
+
+  //АДАПТИВКА
+  @media screen and (max-width: 500px) {
+    //компонент Footer
+    #Myfooter {
+      .flex-container { //контейнер, который включает в себя повтор блоков
+        margin-top: 5%;
+        & > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
+          font-size: 1rem;
+          width: 50%;
+          &:nth-child(5), {//5-ый (блок с адресом)
+            width: 100%;
+            margin-bottom: 5%;
+          }
+        }
+      }
     }
   }
   @media screen and (min-width:500px) and (max-width: 768px) {
-    .flex-container{margin: 3.5% 0;}
-    .flex-container > div {
-      width: 33% !important;
-      &:nth-child(4),&:nth-child(5),{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    //компонент Footer
+    #Myfooter {
+      .flex-container { //контейнер, который включает в себя повтор блоков
+        margin: 3.5% 0;
+        & > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
+          font-size: 1.1rem;
+          width: 33% !important;
+          &:nth-child(4), &:nth-child(5), { //4-ый и 5-ый (блок с адресом)
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       }
-    }
-    div{
-      font-size: 1.1rem;
     }
   }
   @media screen and (min-width:768px) and (max-width: 992px) {
-    .flex-container{margin: 1.5% 0;}
-    .flex-container > div {
-      width: 33%;
-      &:nth-child(4),&:nth-child(5),{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    //компонент Footer
+    #Myfooter{
+      .flex-container{ //контейнер, который включает в себя повтор блоков
+        margin: 1.5% 0;
+        & > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
+          width: 33%;
+          font-size: 1.2rem;
+          &:nth-child(4), &:nth-child(5), { //4-ый и 5-ый (блок с адресом)
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       }
-    }
-    div{
-      font-size: 1.2rem;
     }
   }
   @media screen and (min-width:992px) and (max-width: 1200px) {
-    div{
-      font-size: 1.2rem;
+    //компонент Footer
+    #Myfooter {
+      .flex-container > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
+        font-size: 1.2rem;
+      }
     }
   }
   @media screen and (min-width:1200px) and (max-width: 1400px) {
-    div{
-      font-size: 1.3rem;
+    //компонент Footer
+    #Myfooter {
+      .flex-container > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
+        font-size: 1.3rem;
+      }
     }
   }
 </style>
