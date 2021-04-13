@@ -41,10 +41,10 @@
         return {
           name_page: "Охрана образовательных и дошкольных учреждений",
           GuardOfEducationalAndPreschoolInstitutions:[
-            {name:"Охрана детских садов"},
-            {name:"Охрана школ"},
-            {name:"Охрана интерната"},
-            {name:"Охрана вузов/училищ"},
+            {name:"охрана детских садов;"},
+            {name:"охрана школ;"},
+            {name:"охрана интерната;"},
+            {name:"охрана вузов/училищ."},
           ],
           GuardOfEducationalInstitutionFeatures:[
             {

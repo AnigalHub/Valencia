@@ -3,7 +3,7 @@
     <Name_page :name_page="name_page" />
     <b-container>
       <div class="description_services">
-        <img src="../../static/services/guard_of_organizations/guard_of_organizations.jpg" class="first_img"/>
+        <img src="../../static/services/guard_of_organizations/guard_of_organizations.jpg" class="first_img" alt="охрана_организаций"/>
         <p class="text"><span class="emphasized">Охрана организаций</span> предусматривает комплекс мер, направленных на обеспечение безопасности функционирования объекта, сохранности материального имущества, информационной безопасности, защиту жизни и здоровья лиц организации.</p>
         <p class="text"><u>Охрана организаций надежно защитит вас от:</u></p>
         <ul class="text">
@@ -62,10 +62,10 @@
               img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
               img_alt: "охрана_коммерческих_объектов",
               list: [
-                {guard: "Охрана детских садов"},
-                {guard: "Охрана школ"},
-                {guard: "Охрана интерната"},
-                {guard: "Охрана вузов/училищ"},
+                {guard: "охрана детских садов;"},
+                {guard: "охрана школ;"},
+                {guard: "охрана интерната;"},
+                {guard: "охрана вузов/училищ."},
               ]
             },
             {
@@ -75,10 +75,10 @@
               img_src: "../guard_of_organizations/guard_of_medical_institutions.jpg",
               img_alt: "охрана_частных_объектов",
               list: [
-                {guard: "Охрана поликлиник"},
-                {guard: "Охрана аптек"},
-                {guard: "Охрана больниц"},
-                {guard: "Охрана медицинских центров"},
+                {guard: "охрана поликлиник;"},
+                {guard: "охрана аптек;"},
+                {guard: "охрана больниц;"},
+                {guard: "охрана медицинских центров."},
               ]
             },
             {
@@ -88,10 +88,10 @@
               img_src: "../guard_of_organizations/gallery.jpg",
               img_alt: "охрана_частных_объектов",
               list: [
-                {guard: "Охрана административных зданий"},
-                {guard: "Охрана музеев и театров"},
-                {guard: "Охрана библиотек"},
-                {guard: "Охрана церквей"},
+                {guard: "охрана административных зданий;"},
+                {guard: "охрана музеев и театров;"},
+                {guard: "охрана библиотек;"},
+                {guard: "охрана церквей."},
               ]
             },
           ],

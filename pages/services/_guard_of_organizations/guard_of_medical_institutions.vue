@@ -46,10 +46,10 @@
           return{
             name_page: "Охрана медицинских учреждений",
             GuardOfMedicalInstitutions:[
-              {name:"Охрана поликлиник"},
-              {name:"Охрана аптек"},
-              {name:"Охрана больниц"},
-              {name:"Охрана медицинских центров"},
+              {name:"охрана поликлиник;"},
+              {name:"охрана аптек;"},
+              {name:"охрана больниц;"},
+              {name:"охрана медицинских центров."},
             ],
             GuardOfMedicalInstitutionsFeatures:[
               {

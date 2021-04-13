@@ -1,24 +1,24 @@
 <template>
   <div id="cargo_escort" class="page services">
     <Name_page :name_page="name_page"/>
-      <b-container>
-       <img src="../../static/services/cargo_escort/cargo_escort.jpg" alt="сопровождение грузов" class="first_img"/>
-        <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
-        <h6 class="block_one">Опасности при передвижении груза:</h6>
-        <ul class="text">
-          <li v-for="danger in DangersWhenDriving" :key="danger.index">{{danger.danger}}</li>
-        </ul>
-        <h6 class="block_two">Наша компания занимается сопровождением:</h6>
-        <img src="../../static/services/cargo_escort/types_of_cargo.jpg" alt="типы_грузов" class="second_img"/>
-        <ul class="text varieties">
-          <li v-for="type in TypesOfCargo" :key="type.index"><i><b>{{type.type}}</b></i>{{type.descr_type}}</li>
-        </ul>
-        <img src="../../static/services/cargo_escort/guard_cargo.jpg" alt="защита_грузов" class="third_img"/>
-        <h6>Структура сопровождения грузов:</h6>
-        <ul class="text">
-           <li v-for="duty in DutiesCargoEscort" :key="duty.index">{{duty.duty}}</li>
-        </ul>
-        <Tarrifs_content/>
+    <b-container>
+       <img src="../../static/services/cargo_escort/cargo_escort.jpg" alt="сопровождение_грузов" class="first_img"/>
+       <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
+       <h6 class="block_one">Опасности при передвижении груза:</h6>
+       <ul class="text">
+         <li v-for="danger in DangersWhenDriving" :key="danger.index">{{danger.danger}}</li>
+       </ul>
+       <h6 class="block_two">Наша компания занимается сопровождением:</h6>
+       <img src="../../static/services/cargo_escort/types_of_cargo.jpg" alt="типы_грузов" class="second_img"/>
+       <ul class="text varieties">
+         <li v-for="type in TypesOfCargo" :key="type.index"><b>{{type.type}}</b>{{type.descr_type}}</li>
+       </ul>
+       <img src="../../static/services/cargo_escort/guard_cargo.jpg" alt="защита_грузов" class="third_img"/>
+       <h6>Структура сопровождения грузов:</h6>
+       <ul class="text">
+          <li v-for="duty in DutiesCargoEscort" :key="duty.index">{{duty.duty}}</li>
+       </ul>
+       <Tarrifs_content/>
       </b-container>
   </div>
 </template>

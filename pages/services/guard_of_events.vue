@@ -2,7 +2,7 @@
   <div id="guard_of_events" class="page services types_of_guard">
     <Name_page :name_page="name_page"/>
       <b-container>
-         <img src="../../static/services/guard_of_events/guard_of_events.jpg" class="first_img"/>
+         <img src="../../static/services/guard_of_events/guard_of_events.jpg" class="first_img" alt="охрана_мероприятий"/>
         <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.</p>
         <h6 class="block_one">Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
         <ul class="text">
