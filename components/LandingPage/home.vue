@@ -3,7 +3,7 @@
       <b-container>
         <b-row class="big_version">
           <b-col cols="4">
-            <img src="../../static/LandingPage/111.png">
+            <img src="../../static/LandingPage/111.png" alt="охранник">
           </b-col>
           <b-col>
             <div class="title_guard">Частное охранное предприятие <br> "ООО Валенсия"</div>
@@ -16,7 +16,7 @@
           <div class="slogan">Безопасность частных лиц и объектов <br> любой сложности  на Высшем уровне!</div>
           <b-row>
             <b-col cols="4">
-              <img src="../../static/LandingPage/111.png">
+              <img src="../../static/LandingPage/111.png" alt="охранник">
             </b-col>
             <b-col>
               <div class="slogan">Безопасность частных  лиц  и объектов  любой сложности на Высшем уровне!</div>
