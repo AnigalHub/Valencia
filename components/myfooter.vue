@@ -63,9 +63,11 @@
       color: white !important;
       text-align: center;
       font-size: 1.42rem;
+      letter-spacing: -.25px;
+      text-shadow: 0 0 0.15px black;
       font-family: "EB Garamond", serif;
       background: #05081a;
-      font-weight: 600;
+      font-weight: 400;
       a { //ссылки
         color: white !important;
         display: block;
@@ -80,7 +82,10 @@
       .flex-container { //контейнер, который включает в себя повтор блоков
         margin-top: 5%;
         & > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
-          font-size: 1rem;
+          font-size: 1.1rem;
+          a{
+            font-size: 1.1rem !important;
+          }
           width: 50%;
           &:nth-child(5), {//5-ый (блок с адресом)
             width: 100%;
@@ -97,6 +102,9 @@
         margin: 3.5% 0;
         & > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
           font-size: 1.1rem;
+          a{
+            font-size: 1.1rem !important;
+          }
           width: 33% !important;
           &:nth-child(4), &:nth-child(5), { //4-ый и 5-ый (блок с адресом)
             display: block;
@@ -115,6 +123,9 @@
         & > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
           width: 33%;
           font-size: 1.2rem;
+          a{
+            font-size: 1.2rem !important;
+          }
           &:nth-child(4), &:nth-child(5), { //4-ый и 5-ый (блок с адресом)
             display: block;
             margin-left: auto;
@@ -129,6 +140,9 @@
     #Myfooter {
       .flex-container > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
         font-size: 1.2rem;
+        a{
+           font-size: 1.2rem !important;
+         }
       }
     }
   }
@@ -136,7 +150,10 @@
     //компонент Footer
     #Myfooter {
       .flex-container > div { //стили на одинаковые блоки контейнера (столбики с ссылками)
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        a{
+           font-size: 1.25rem !important;
+         }
       }
     }
   }
