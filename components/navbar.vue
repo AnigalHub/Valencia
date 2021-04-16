@@ -73,6 +73,14 @@
 </script>
 <style lang="scss">
   /*стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)*/
+  //название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе
+  .name_brand,.chop{
+    filter: contrast(120%) brightness(170%);
+  }
+  //svg-щит
+  #shield{
+    filter: contrast(120%) brightness(130%);
+  }
   //кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки
   .btn {
     padding: 0 !important;
@@ -132,7 +140,7 @@
     // кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)
     .dropdown-item,.dropdown-toggle{
       font-size: 1.1rem !important;
-      padding: 0.1rem !important;
+      padding: 0.25rem !important;
     }
   }
   @media screen and (min-width:1250px) and (max-width: 1310px) {
@@ -282,7 +290,6 @@
     top:33% !important;
   }
 
-  
   //АДАПТИВНОСТЬ
   @media screen and (max-width: 1200px) {
     //вид меню на экране когда меню через кнопку видно (отступы)
@@ -295,11 +302,13 @@
       margin-bottom: 0 !important;
       width:52px;
       height:52px;
+      filter: contrast(120%) brightness(170%);
     }
     //название компании "Валенсия" в логотипе
     .name_brand{
       font-size: 1.3rem;
       letter-spacing: -0.2px;
+      filter: contrast(120%) brightness(170%) !important;
     }
     //надпись "частное охранное предприятие" в логотипе
     .chop{
