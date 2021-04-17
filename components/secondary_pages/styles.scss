@@ -29,9 +29,12 @@ $imgWidth100percent:100%;
   letter-spacing: -.25px;
   font-size: 1.5rem;
   line-height: 1.5rem;
-  filter: contrast(120%)brightness(170%);
   text-shadow: 0 0 .15px $shadeOfBlack;
   color: $shadeOfBlack;
+}
+//любой текст (текст,заголочки, ссылки и т.д.)
+.text,.text_descr,.emphasized,a,h1,h2,h3,h4,h5,h6{
+  filter: contrast(140%);
 }
 //наведение на ссылку
 a:hover{
@@ -64,7 +67,7 @@ a:hover{
 //картинки (общие стили)
 img{
   height: auto;
-  filter: brightness(80%) contrast(100%)!important;
+  filter: brightness(100%) contrast(100%)!important;
   background-color: transparent;
   box-shadow: 0 0 10px $shadeOfBlack, 0.5px 0.5px 4px $shadeOfBlack;
 }
@@ -112,7 +115,6 @@ h6{
   text-shadow: 0 0 0.15px $shadeOfBlack;
   color:$shadeOfBlack;
   text-decoration: underline;
-  filter: contrast(120%) brightness(170%);
 }
 //контейнер, который включает в себя повтор блоков
 .flex-container {
@@ -141,7 +143,8 @@ h6{
   li{padding-bottom: 0.8%;} //список
   ul li:before { // как выглядит список (содержимое,цвет,тень,отступы) - используется везде
     content:"·";
-    font-size:70px;
+    font-size:60px;
+    margin-right: 1%;
     vertical-align: text-top;
     color: $shadeOfBlack;
     text-shadow:  1px 1px .5px #797777;
@@ -151,7 +154,8 @@ h6{
     // объектов, а в охране транспорта/промышленных объектов)
     ul li:before {
       content:"»";
-      font-size:40px !important;
+      margin-right: 0 !important;
+      font-size:35px !important;
       vertical-align: text-top;
       color: $shadeOfBlack;
       margin-bottom: 0 !important;
@@ -192,9 +196,13 @@ input {
   background:linear-gradient( to top left, #304355, #768c9e,#304355);
   // картинки на главной странице
   img{border: none;}
+  //заголовки и текст на главной странице
+  h2,.textLandingPage{
+    filter: contrast(140%);
+  }
   // заголовок на главной странице (названия компонентов)
   h2{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     text-align: $centerText;
     font-family: $titleLandingPage;
     padding-bottom: 2%;
@@ -209,7 +217,8 @@ input {
   // текст на главной странице
   .textLandingPage{
     font-weight: $fontWeight400;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
     text-align: $centerText;
     font-family: $fontLandingPage;
   }
@@ -239,10 +248,11 @@ input {
       margin-left:-8%;
       padding: 2% 0 0 0;
       box-shadow: none;
-      filter: contrast(120%) !important;
+      filter: contrast(120%) brightness(115%) !important;
     }
     .title_guard{ //название чопа
       padding: 6% 0 0 0;
+      filter: contrast(120%) brightness(130%);
       cursor: default;
       font-family: 'Lobster', cursive;
       font-size: 3.7rem;
@@ -251,7 +261,6 @@ input {
       transform: scale(1.025, 1.25);
       color: #2487c8;
       margin-left: -6%;
-      filter: contrast(120%);
       text-shadow: -1px 4px 1px black;
       line-height: 3.25rem;
     }
@@ -282,7 +291,7 @@ input {
       letter-spacing: -.25px;
       transform: scale(1, 1.1);
       text-shadow: -.05px .25px .05px rgb(64, 94, 121);
-      font-size: 1.3rem;
+      font-size: 1.25rem !important;
       line-height: 1.4rem;
       color: rgb(9, 24, 38);
     }
@@ -303,6 +312,7 @@ input {
       box-shadow: 0 0 4px $shadeOfWhite, 3px 3px 3px rgb(21, 44, 64);
     }
     svg{ //общие стили для svg для данного компонента (Преимущества)
+      filter: contrast(120%) brightness(130%);
       margin: 5% auto;
       display: block;
       width: 60px !important;
@@ -335,16 +345,14 @@ input {
       bottom: 3%;
     }
     h2{ // добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)
+      font-size: 2rem !important;
       position: absolute;
       left: 2%;
       bottom: 10%;
-      font-size: 2rem !important;
       text-align: left !important;
     }
     .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)
       letter-spacing: -.5px;
-      font-size: 1.35rem !important;
-      line-height: 1.4rem;
       color: $shadeOfWhite;
     }
     .section{ //ссылка-картинка - общие стили на каждую
@@ -409,7 +417,6 @@ input {
     .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)
       padding: 2% 0;
       letter-spacing: -.8px;
-      line-height: 1.4rem;
       color: $shadeOfBlue;
       text-shadow: 1px 1px 0 $shadeOfBlue, 2px 2px 6px $shadeOfBlue !important;
       border: 2.5px solid rgba(255, 255, 255, 0.19);
@@ -427,6 +434,7 @@ input {
     .btn { //кнопки
       background-color: rgba(250, 250, 255, .45) !important;
       box-shadow: 2px 5px 5px #273849;
+      filter: contrast(120%) brightness(130%);
       &:hover { //кнопки при наведении
         background-color: rgba(250, 250, 255, .9) !important;
         img {
@@ -440,7 +448,6 @@ input {
     .textLandingPage{  //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
       color: $shadeOfWhite;
       text-shadow: 0 2.5px 0 $shadeOfBlue !important;
-      line-height: 1.55rem;
       transform: scale(1.05);
       margin-top: -5%;
       letter-spacing: -.2px;
@@ -473,28 +480,40 @@ input {
     background-size: 100% 100%;
     h2{ //заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)
       margin-top: 3%;
-      font-size: 2.7rem;
+      padding-bottom: 0 !important;
     }
     .textLandingPage{  //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)
       text-align: center !important;
       margin-top: 2%;
+      width: 95%;
       margin-left: 4.5%;
-      font-size: 2rem;
-      line-height: 2rem;
+      line-height: 1.8rem;
       letter-spacing: -1px;
       text-shadow: 2px 2.5px 2.5px $shadeOfBlue;
       color: #cfdde8;
     }
     .call_telephone{ //номер телефона
       font-size: 4rem;
-      text-align: $centerText;
-      padding: 3% 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.5%;
+      padding: 3.5% 0;
+      border: 1px solid black;
       letter-spacing: 1px;
       display: block;
-      color: #cfdde8;
+      background: rgba(255, 255, 255, 0.28);
+      width: 77%;
+      color: white;
       font-family: 'Vollkorn', serif;
       font-weight: 500;
-      text-shadow: 2px 2px 2px $shadeOfBlue;
+      text-shadow: 3px 3px 3px black;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px $shadeOfBlue;
+      &:hover{
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.18);
+        border:2px solid black;
+      }
     }
     .place_form{ //добавление стилей на место, где находится форма заявки (обратной связи)
       background: rgba(255, 255, 255, 0.55);
@@ -557,6 +576,7 @@ input {
 //страница "О нас"
 #company{
   svg{ //svg для данной страницы ("О нас")
+    filter: contrast(120%) brightness(130%);
     width: 70px;
     height: 70px;
     float: left;
@@ -625,7 +645,6 @@ input {
   h2,h3{ // заголовоки - касательно только для страницы "Тарифы" и компонента "Тарифы"
     text-shadow: 0 0 0.15px $shadeOfBlack;
     text-decoration: underline;
-    filter: contrast(120%) brightness(170%);
   }
 }
 //страница "Тарифы"
@@ -756,7 +775,7 @@ input {
 // "Охрана коммерческих объектов","Охрана частных объектов"
 .types_of_guard{
   ul{margin-left: -8%;} //как выглядит список (сдвигаем)
-  .im_descr { //картинка с описанием комплексо мер
+  .im_descr{ //картинка с описанием комплексо мер
     h6{clear: left;} //заголовки (которые не будут переносится вверх, если выше - текста с картинкой будет мало)
     img{ //картинка
       width: 32.5%;
@@ -859,6 +878,7 @@ input {
     align-items: center
   }
   svg{ //svg страницы "Контакты"
+    filter: contrast(120%) brightness(130%);
     width: 50px;
     height: 50px;
     border: 2px solid rgba(9, 50, 78, 0.62);
@@ -880,9 +900,9 @@ input {
   }
   .place_form{background: rgba(232, 237, 245, 0.25);} //место, где находится форма заявки (обратной связи)
   .col-5{padding-right: 2.5%;}  //параметры сетки бутстрап (форма заявки - обратной связи)
-  .map {
+  .map {//место под карту
     box-shadow: 7px 7px 7px $shadeOfBlue;
-    iframe {
+    iframe {//карта с гугл-карт
       filter: opacity(75%) brightness(95%) contrast(110%);
       min-height: 500px;
       height: auto;
@@ -896,12 +916,19 @@ input {
 
 @media screen and (max-width: 355px) {
   //текст на всех страницах (кроме главной)
-  .text{
-    font-size: 0.86rem !important;
-    line-height: 1rem !important;
+  .text,a{
+    font-size: 0.9rem !important;
+    line-height: 1.15rem !important;
   }
   //стили для главной страницы
   #LandingPage{
+    h2{
+      font-size: 1.1rem !important;
+    }
+    .textLandingPage { // текст на главной странице
+      font-size: .9rem !important;
+      line-height: 1.15rem !important;
+    }
     // компонент (самый первый - главный) с названием чопа, слоганом, картинкой и преимуществами
     #Home{
       .title_guard{ //название чопа
@@ -919,19 +946,18 @@ input {
         width:245% !important;
       }
     }
+    // компонент "Типы" - 3 ссылки-картинки
+    #Type{
+      height: 35vh;
+    }
     // компонент "Услуги" (виды деятельности)
     #Services {
       .textLandingPage { // текст на главной странице (касательно компонента "Услуги")
         height: 3rem;
-        font-size: 1rem !important;
       }
     }
     // компонент "Важные числа"
     #Import_numbers{
-      .textLandingPage{ // текст на главной странице (касательно компонента "Важные числа")
-        font-size: .88rem !important;
-        line-height: 1.15rem !important;
-      }
       .number{font-size:2.25rem !important;} //цифры
       .flex-container > div{ //каждый блок с цифрой и текстом отдельно
         margin: 1.5% 1% 0.5% 1% !important;
@@ -939,12 +965,9 @@ input {
     }
     // компонент "Обратная связь"
     #Feedback{
-      .textLandingPage{ // текст на главной странице (касательно компонента "Обратная связь")
-        font-size: 1rem !important;
-        line-height: 1.15rem !important;
-      }
       .call_telephone{ //телефон
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
+        width: 85%;
       }
     }
   }
@@ -1003,8 +1026,8 @@ input {
 }
 @media screen and (max-width: 500px) {
   //текст на всех страницах (кроме главной)
-  .text{
-    font-size: 1rem;
+  .text,a{
+    font-size: 1.15rem;
     line-height: 1.2rem;
   }
   //текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках
@@ -1022,7 +1045,7 @@ input {
   //общие стили страниц (кроме главной)
   .page{
     padding: .8rem 0 !important;
-    ul{margin-left: -12%;}//как выглядит список везде (сдвигаем)
+    ul{margin-left: -10%;}//как выглядит список везде (сдвигаем)
   }
   //место для заголовка h1 - отступы (для всех страниц, кроме главной)
   .place_h1{
@@ -1049,7 +1072,8 @@ input {
     font-size: 0.95rem;
     margin-bottom: 0 !important;
   }
-  .form-control{ //поле ввода в форме заявки (обратной связи) - фраза внутри
+  //поле ввода в форме заявки (обратной связи) - фраза внутри
+  .form-control{
     font-size: 0.85rem;
     letter-spacing: -.5px;
     padding: 0.375rem !important;
@@ -1069,9 +1093,10 @@ input {
     h2{
       font-size: 1.2rem;
     }
-    // компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили
-    #Services, #Feedback, #Clients{
-      padding: 6% 0;
+    //текст на главной странице
+    .textLandingPage {//изменение/добавление стилей в текст на главной странице
+      font-size: 1.15rem;
+      line-height: 1.18rem;
     }
     // компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами
     #Home{
@@ -1083,10 +1108,10 @@ input {
       .title_guard{ //название чопа
         padding: 4% 0 0 7%;
         font-size: 1.55rem;
-        margin-left: -.5%;
+        margin-left: -3.5%;
         line-height: 1.8rem;
-        letter-spacing: -1.2px;
-        text-shadow: -.5px 2.5px .5px #02022a;
+        letter-spacing: -.3px;
+        text-shadow: -.9px 3px .9px #02022a;
       }
       .slogan{ //слоган чопа
         margin-left: 20%;
@@ -1112,6 +1137,10 @@ input {
         }
       }
     }
+    // компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили
+    #Services, #Feedback, #Clients{
+      padding: 6% 0;
+    }
     //компонент "Преимущества" - 6 блоков с svg и текстом
     #Advantages{
       display: none;
@@ -1121,21 +1150,21 @@ input {
       height: 80vh;
       flex-direction: column;
       h2{// добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)
-        font-size: 1.2rem !important;
+        font-size: 1.18rem !important;
         letter-spacing: -1px;
         left: 1.5%;
         padding-left: 2% !important;
       }
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)
+        font-size: 1rem !important;
         letter-spacing: -1.5px;
-        font-size: 1.15rem;
         padding-left: 2%;
       }
     }
     // компонент "Услуги" (виды деятельности)
     #Services{
-      .textLandingPage {//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)
-        font-size: 1.15rem;
+      .textLandingPage{
+        height: 3rem;
       }
       .flex-container > a { //блоки-ссылки с картинками и кнопками
         width: 47%;
@@ -1145,8 +1174,6 @@ input {
     // компонент "Важные числа"
     #Import_numbers{
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
-        font-size: 1.15rem;
-        line-height: 1.18rem;
         letter-spacing: -1px;
       }
       .number{font-size:3rem;}// цифры
@@ -1163,7 +1190,6 @@ input {
     #Feedback{
       h2{//заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)
         margin-top: 0;
-        font-size: 1.2rem;
       }
       //блок - обратная связь с текстом, заголовком и телефоном
       .row{
@@ -1177,12 +1203,8 @@ input {
           padding: 0 !important;
         }
       }
-      .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)
-        font-size: 1.15rem;
-        line-height: 1.25rem;
-      }
       .call_telephone{//номер телефона
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
     //компонент "Карта"
@@ -1273,7 +1295,6 @@ input {
   #tariffs, #tariffs_content {
     table tr td:first-child { //первые ячейки таблицы
       width: 20% !important;
-
       span {
         display: none;
       }
@@ -1342,7 +1363,7 @@ input {
     .row{ //блок с особенностями
       flex-direction: column;
       ul{//как выглядит список (сдвигаем)
-        margin-left: -18% ;
+        margin-left: -15%;
         margin-bottom: 0 !important;
       }
     }
@@ -1441,8 +1462,8 @@ input {
     ul{margin-left: -8%;}//как выглядит список (сдвигаем)
   }
   //текст на всех страницах (кроме главной)
-  .text{
-    font-size: 1rem;
+  .text,a{
+    font-size: 1.15rem;
     line-height: 1.2rem;
   }
   //текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках
@@ -1498,11 +1519,12 @@ input {
   #LandingPage{
     // заголовок на главной странице (названия компонентов)
     h2{
-      font-size: 1.35rem;
+      font-size: 1.2rem;
     }
-    // компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили
-    #Services, #Feedback, #Clients{
-      padding: 3.5% 0;
+    //текст на главной странице
+    .textLandingPage{ //изменение/добавление стилей в текст на главной странице
+      font-size: 1.15rem;
+      line-height: 1.18rem;
     }
     // компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами
     #Home{
@@ -1535,11 +1557,15 @@ input {
         }
       }
     }
+    // компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили
+    #Services, #Feedback, #Clients{
+      padding: 3.5% 0;
+    }
     //компонент "Преимущества" - 6 блоков с svg и текстом
     #Advantages{
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)
-        font-size: .9rem;
-        line-height: 1rem;
+        font-size: .9rem !important;
+        line-height: 1rem !important;
         letter-spacing: -.9px;
       }
       .flex-container{//контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)
@@ -1563,15 +1589,16 @@ input {
       height: 25vh;
       flex-direction: row !important;
       h2{// добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)
-        font-size: 1.3rem !important;
+        font-size: 1.15rem !important;
         left: 0;
-        letter-spacing: -1.2px;
-        bottom: 22%;
+        letter-spacing: -1px;
+        bottom: 20%;
         padding-left: 2% !important;
       }
       .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)
-        letter-spacing: -1.5px;
-        font-size: 1.15rem;
+        font-size: .95rem !important;
+        line-height: 1rem !important;
+        letter-spacing: -.9px;
         padding-left: 2%;
       }
       .container div{ //блок с текстом
@@ -1581,9 +1608,6 @@ input {
     }
     // компонент "Услуги"(виды деятельности)
     #Services{
-      .textLandingPage {//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)
-        font-size: 1.15rem;
-      }
       .flex-container > a {//блоки-ссылки с картинками и кнопками
         width: 47%;
         margin: 0 1.25% 2.5% 1.25% !important;
@@ -1592,8 +1616,6 @@ input {
     // компонент "Важные числа"
     #Import_numbers{
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
-        font-size: 1.15rem;
-        line-height: 1.18rem;
         letter-spacing: -1px;
       }
       .number{font-size:3rem;}// цифры
@@ -1610,13 +1632,10 @@ input {
     #Feedback{
       h2{//заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)
         margin-top: 0;
-        font-size: 1.35rem;
       }
       .row{ //блок с формой заявки (обратной связи) и текстом, телефоном, заголовком
         flex-direction: column-reverse;
-        .col{
-          padding: 0 !important; // параметры сетки бутстрап (текст,телефон,заголовок)
-        }
+        .col{padding: 0 !important;} // параметры сетки бутстрап (текст,телефон,заголовок)
         .col-6{ // параметры сетки бутстрап (форма заявки)
           flex: 0 0 100% !important;
           padding: 0 8% !important;
@@ -1624,11 +1643,13 @@ input {
         }
       }
       .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)
-        font-size: 1.25rem;
-        line-height: 1.35rem;
+        line-height: 1.3rem;
+        margin-bottom: 0 !important;
       }
       .call_telephone{//номер телефона
-        font-size: 2.25rem;
+        font-size: 1.8rem;
+        margin-bottom: 2.5%;
+        width: 55%;
       }
     }
     //компонент "Карта"
@@ -1855,9 +1876,9 @@ input {
     margin-bottom: 2rem;
   }
   //текст на всех страницах (кроме главной)
-  .text{
+  .text,a{
     font-size: 1.15rem;
-    line-height: 1.3rem;
+    line-height: 1.2rem;
   }
   //текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках
   .text_descr{
@@ -1906,7 +1927,12 @@ input {
   #LandingPage{
     // заголовок на главной странице (названия компонентов)
     h2{
-      font-size: 1.4rem;
+      font-size: 1.3rem;
+    }
+    //текст на главной странице
+    .textLandingPage{ //изменение/добавление стилей в текст на главной странице
+      font-size: 1.15rem;
+      line-height: 1.18rem;
     }
     // компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами
     #Home{
@@ -1939,8 +1965,8 @@ input {
     //компонент "Преимущества" - 6 блоков с svg и текстом
     #Advantages{
       .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)
-        font-size: 1.15rem;
-        line-height: 1.15rem;
+        font-size: 1.1rem !important;
+        line-height: 1.18rem !important;
         letter-spacing: -.5px;
       }
       .flex-container{//контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)
@@ -1971,8 +1997,9 @@ input {
         padding-left: 2% !important;
       }
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)
+        font-size: 1.1rem !important;
+        line-height: 1.18rem !important;
         letter-spacing: -1.5px;
-        font-size: 1.15rem;
         padding-left: 2%;
       }
       .container div{//стили для места где расположен текст
@@ -1980,17 +2007,9 @@ input {
         bottom: 1%;
       }
     }
-    // компонент "Услуги" (виды деятельности)
-    #Services {
-      .textLandingPage { //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)
-        font-size: 1.15rem;
-      }
-    }
     // компонент "Важные числа"
     #Import_numbers{
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
-        font-size: 1.15rem;
-        line-height: 1.18rem;
         letter-spacing: -1.5px;
       }
       .number{font-size:3.5rem;} // цифры
@@ -2006,14 +2025,13 @@ input {
     #Feedback{
       h2{//заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)
         margin-top: 4%;
-        font-size: 2rem;
       }
       .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+        line-height: 1.3rem;
       }
       .call_telephone{ //номер телефона
-        font-size: 2.6rem;
+        font-size: 2rem;
+        width: 85%;
       }
       .col-6{ // блок с формой заявки
         padding: 0 !important;
@@ -2188,7 +2206,7 @@ input {
     .col-1{margin-left: -6%;}// параметры сетки бутстрап (svg)
     .col .col{margin-left: 10%;}// параметры сетки бутстрап (информация (название информации и информация))
     .col-5{ //параметры сетки бутстрап (форма заявки - обратной связи)
-      padding: 0;
+      padding:0 5px !important;
       flex: 0 0 45% !important;
       max-width: 45% !important;
     }
@@ -2215,9 +2233,9 @@ input {
     line-height: 1.45rem;
   }
   //текст на всех страницах (кроме главной)
-  .text{
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+  .text,a{
+    font-size: 1.3rem;
+    line-height: 1.3rem;
   }
   //текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках
   .text_descr{
@@ -2246,7 +2264,12 @@ input {
   #LandingPage{
     // заголовок на главной странице (названия компонентов)
     h2{
-      font-size: 1.6rem;
+      font-size: 1.6rem !important;
+    }
+    //текст на главной странице
+    .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)
+      font-size: 1.3rem;
+      line-height: 1.25rem;
     }
     // компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами
     #Home{
@@ -2267,8 +2290,8 @@ input {
     //компонент "Преимущества" - 6 блоков с svg и текстом
     #Advantages{
       .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)
-        font-size: 1.15rem;
-        line-height: 1.2rem;
+        font-size: 1.15rem !important;
+        line-height: 1.2rem !important;
         letter-spacing: -.5px;
       }
       .flex-container{//контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)
@@ -2297,21 +2320,10 @@ input {
       }
       .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)
         letter-spacing: -1.5px;
-        font-size: 1.3rem;
-      }
-    }
-    // компонент "Услуги" (виды деятельности)
-    #Services {
-      .textLandingPage {//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)
-        font-size: 1.3rem;
       }
     }
     // компонент "Важные числа"
     #Import_numbers{
-      .textLandingPage{//изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
-        font-size: 1.3rem;
-        line-height: 1.3rem;
-      }
       .number{font-size:4rem;}// цифры
       .flex-container{// контейнер с цифрами и текстом
         margin-left: 0 !important;
@@ -2323,15 +2335,11 @@ input {
     }
     // компонент "Обратная связь"
     #Feedback{
-      h2{//заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)
-        font-size: 2.25rem;
-      }
       .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)
-        font-size: 1.6rem;
-        line-height: 1.8rem;
+        line-height: 1.6rem;
       }
       .call_telephone{//номер телефона
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
       .col-6{ // параметры сетки бутстрап (форма заявки - обратной связи)
         padding: 0 !important;
@@ -2479,8 +2487,8 @@ input {
     padding: 1.8rem 0 !important;
   }
   //текст на всех страницах (кроме главной)
-  .text{
-    font-size: 1.3rem;
+  .text,a{
+    font-size: 1.4rem;
     line-height: 1.4rem;
   }
   //текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках
@@ -2532,32 +2540,13 @@ input {
         line-height: 3rem;
       }
     }
-    //компонент "Преимущества" - 6 блоков с svg и текстом
-    #Advantages{
-      .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)
-        font-size: 1.25rem;
-        line-height: 1.3rem;
-      }
-    }
     // компонент "Типы" - 3 ссылки-картинки
     #Type{
       height: 35vh;
-      h2{// добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)
-        font-size: 1.6rem !important;
-      }
-    }
-    // компонент "Услуги" (виды деятельности)
-    #Services {
-      .textLandingPage { //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)
-        font-size: 1.4rem;
-      }
+      h2{font-size: 1.6rem !important;}  // добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)
     }
     // компонент "Важные числа"
     #Import_numbers{
-      .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-      }
       .number{font-size:4.5rem;}// цифры
       .flex-container{// контейнер с цифрами и текстом
         margin-left: 5.5% !important;
@@ -2571,11 +2560,6 @@ input {
     #Feedback{
       h2{//заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)
         margin-top: 8%;
-        font-size: 2.25rem;
-      }
-      .textLandingPage{ //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)
-        font-size: 1.8rem;
-        line-height: 2rem;
       }
       .call_telephone{//номер телефона
         font-size: 3.25rem;
