@@ -77,6 +77,8 @@
     }
 </script>
 <style>
+  /*стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)*/
+
   .modal-dialog img{ /*картинка в модальном окне*/
     width: 100% !important;
     box-shadow: none !important;
