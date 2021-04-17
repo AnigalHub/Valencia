@@ -21,36 +21,18 @@
   import ClockSVG from "./advantages_svg/clock_svg";
   import PriceSVG from "./advantages_svg/price_svg";
     export default {
-        name: "advantages",
+      name: "advantages",
       data(){
-          return{
-            Advanatages:[
-              {
-                name:"квалифицированный <br> штат <br> сотрудников",
-                svg:StateSVG, link:'/company',
-              },
-              {
-                name:"современное <br> инновационное <br> оборудование",
-                svg:EquipmentSVG, link:'/technical_means',
-              },
-              {
-                name:"готовность <br>  работать в <br> любое время",
-                svg:ClockSVG, link:'/tariffs',
-              },
-              {
-                name:"контроль качества <br> на каждом <br> этапе работы",
-                svg:QualityControlSVG, link:'/company',
-              },
-              {
-                name:"круглосуточная <br>поддержка <br> клиентов 24/7",
-                svg:SupportSVG, link:'/contact',
-              },
-              {
-                name:"гибкое <br> ценнообразование <br> на любой бюджет",
-                svg:PriceSVG, link:'/tariffs',
-              },
-            ]
-          }
+        return{
+          Advanatages:[
+            {name:"квалифицированный <br> штат <br> сотрудников", svg:StateSVG, link:'/company',},
+            {name:"современное <br> инновационное <br> оборудование", svg:EquipmentSVG, link:'/technical_means',},
+            {name:"готовность <br>  работать в <br> любое время", svg:ClockSVG, link:'/tariffs',},
+            {name:"контроль качества <br> на каждом <br> этапе работы", svg:QualityControlSVG, link:'/company',},
+            {name:"круглосуточная <br>поддержка <br> клиентов 24/7", svg:SupportSVG, link:'/contact',},
+            {name:"гибкое <br> ценнообразование <br> на любой бюджет",svg:PriceSVG, link:'/tariffs',},
+          ]
+        }
       }
     }
 </script>
