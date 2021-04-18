@@ -90,6 +90,10 @@
   }
   .modal-header{ /*заголовок модального окна*/
     padding: 0.5rem 1.5rem !important;
+    font-family:'EB Garamond', serif;
+  }
+  .modal-title{ /*фразы в заголовке модального меню*/
+    font-weight: 800;
   }
   .modal-body { /*тело модального окна*/
     padding:0 1rem 1rem 1rem!important;
