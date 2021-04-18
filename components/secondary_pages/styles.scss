@@ -628,19 +628,19 @@ input {
 //страница "Тарифы", компонент "Тарифы"(после каждой услуги)
 #tariffs,#tariffs_content{
   table{ //таблица
-    background: rgba(149, 201, 226, 0.14);
+    background: rgba(250, 250, 250, 0.23);
     box-shadow: 0 0 3px 1px #0f2538;
     margin-bottom: 0 !important;
   }
   .table th{ //заголовок таблицы
-    background: rgba(62, 106, 128, 0.24);
+    background: rgb(19 42 53 / 24%);
   }
   .table th, .table td { //заголовок таблицы, ячейка таблицы
     border: 1px solid rgba(250, 250, 250, 0.23) !important;
     box-shadow: 0 0 1px 1px #0f2538;
   }
   tr:hover{
-    background: rgba(149, 201, 226, 0.24);
+    background: rgba(250, 250, 250, 0.18);
   }
   th,tr td:nth-child(2),tr td:nth-child(3){ //заголовок таблицы, второй и 3 столбец таблицы
     text-align: $centerText !important;
@@ -659,7 +659,7 @@ input {
   .col-3{ // параметры сетки бутстрап (картинка с текстом)
     padding: 0 4.5px !important;
     text-align:$centerText;
-    background: rgba(149, 201, 226, 0.14);
+    background: rgba(250, 250, 250, 0.18);
     border: 1px solid rgba(250, 250, 250, 0.43) !important;
     box-shadow: 0 0 3px 2px #1a4971;
     img{ // картинки страницы "Тарифы"
