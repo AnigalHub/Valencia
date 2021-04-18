@@ -77,10 +77,6 @@
   .name_brand,.chop{
     filter: contrast(120%) brightness(170%);
   }
-  //svg-щит
-  #shield{
-    filter: contrast(120%) brightness(130%);
-  }
   //кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки
   .btn {
     padding: 0 !important;
@@ -189,6 +185,10 @@
   }
 </style>
 <style scoped lang="scss">
+  //svg-щит
+  #shield{
+    filter: contrast(120%) brightness(130%);
+  }
   //вид меню на большом экране (отступы)
   .navbar-expand-xl .navbar-collapse {
     margin-left: 0;
