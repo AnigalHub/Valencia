@@ -252,7 +252,7 @@ input {
     }
     .title_guard{ //название чопа
       padding: 6% 0 0 0;
-      filter: contrast(120%) brightness(130%);
+      filter: contrast(120%) brightness(125%);
       cursor: default;
       font-family: 'Lobster', cursive;
       font-size: 3.7rem;
@@ -261,7 +261,7 @@ input {
       transform: scale(1.025, 1.25);
       color: #2487c8;
       margin-left: -6%;
-      text-shadow: -1px 4px 1px black;
+      text-shadow: -1.2px 4px 1.2px black;
       line-height: 3.25rem;
     }
     .slogan{ //слоган чопа
@@ -629,15 +629,15 @@ input {
 #tariffs,#tariffs_content{
   table{ //таблица
     background: rgba(250, 250, 250, 0.23);
-    box-shadow: 0 0 3px 1px #0f2538;
     margin-bottom: 0 !important;
   }
   .table th{ //заголовок таблицы
-    background: rgb(19 42 53 / 24%);
+    background: rgb(15 56 76 / 24%);
   }
   .table th, .table td { //заголовок таблицы, ячейка таблицы
     border: 1px solid rgba(250, 250, 250, 0.23) !important;
     box-shadow: 0 0 1px 1px #0f2538;
+    padding: 0.2rem !important;
   }
   tr:hover{
     background: rgba(250, 250, 250, 0.18);
@@ -652,9 +652,6 @@ input {
 }
 //страница "Тарифы"
 #tariffs{
-  .table th, .table td { //заголовок и ячейки таблицы
-    padding: 0.25rem !important;
-  }
   .row{margin-bottom: 2% !important;} // блок с таблицей и картинкой
   .col-3{ // параметры сетки бутстрап (картинка с текстом)
     padding: 0 4.5px !important;
@@ -665,8 +662,7 @@ input {
     img{ // картинки страницы "Тарифы"
       width: 60%;
       margin-bottom: 1%;
-      border-radius: 45%;
-      filter: brightness(88%) !important;
+      border-radius: 40%;
       margin-left: auto;
       margin-right: auto;
       display: block;
@@ -681,9 +677,6 @@ input {
 #tariffs_content{
   h2,h3{ //заголовки компонента "Тарифы"
     text-align: $centerText;
-  }
-  .table th, .table td { //заголовок таблицы, ячейка таблицы
-    padding: 0.35rem !important;
   }
   .flex-container > div { //блоки под каждый тип тарифа
     width: 48%;
