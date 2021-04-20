@@ -1,27 +1,69 @@
 <template>
     <div id="Clients">
-      <b-container>
-        <h2>Наши клиенты</h2>
-        <b-row>
-          <b-col>
-            <img src="../../static/our_clients/school_25.jpg" alt="моу_сош_25">
-          </b-col>
-          <b-col>
-            <img src="../../static/our_clients/school_17.jpg" alt="моу_школа_17">
-          </b-col>
-          <b-col>
-            <img src="../../static/our_clients/lyubertsy_administration.jpg" alt="администрация_городского_округа_люберцы">
-          </b-col>
-        </b-row>
-      </b-container>
-
+      <div class="container">
+        <b-carousel id="carousel_desktop" v-model="slide" :interval="6000" controls indicators>
+          <b-carousel-slide v-for="(client, index) in Clients" :key="index">
+            <template #img>
+              <b-row>
+                <b-col v-for="img in client.clients" :key="img.name">
+                  <img :src="img.src_img" :alt="img.alt_img">
+                </b-col>
+              </b-row>
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
+        <b-carousel id="carousel_mobile" v-model="slide" :interval="6000" controls>
+          <b-carousel-slide v-for="img in ClientsMobile" :key="img.name" :img-src="img.img_src" :img-alt="img.img_alt"></b-carousel-slide>
+        </b-carousel>
+      </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "clients",
+      name: "clients",
+      data() {
+        return {
+          slide: 0,
+          sliding: null,
+          Clients:[
+            {
+              clients:[
+                {name_client:"МОУ Гимназия №46", src_img:"./our_clients/school_17.jpg", alt_img:"моу_гимназия_46",},
+                {name_client:"МОУ СОШ №25", src_img:"./our_clients/school_25.jpg", alt_img:"моу_сош_25",},
+                {name_client:"МОУ Школа №17", src_img:"./our_clients/school_17.jpg", alt_img:"моу_школа_17",},
+              ]
+            },
+            {
+              clients:[
+                {name_client:"МОУ Лицей №12", src_img:"./our_clients/lyceum_12.jpg", alt_img:"моу_лицей_12",},
+                {name_client:"Администрация города Люберцы", src_img:"./our_clients/lyubertsy_administration.jpg", alt_img:"администрация_городского_округа_люберцы",},
+                {name_client:"МДОУ Детский Сад №9 \"Космос\"", src_img:"./our_clients/kindergarten_9.jpg", alt_img:"мдоу_д/с_9_космос",}
+              ]
+            },
+            {
+              clients:[
+                {name_client:"МОУ Кадетская Школа", src_img:"./our_clients/cadet_school.jpg", alt_img:"моу_кадетская_школа",},
+                {name_client:"МОУ Гимназия №24", src_img:"./our_clients/gymnasium_24.jpg", alt_img:"моу_гимназия_24",},
+                {name_client:"МДОУ №28 \"Совенок\"", src_img:"./our_clients/kindergarten_owlet.jpg", alt_img:"мдоу_28_совенок",}
+              ]
+            }
+          ],
+          ClientsMobile:[
+            {name_client:"МОУ Гимназия №46", img_src:"../our_clients/gymnasium_46.jpg", img_alt:"моу_гимназия_46",},
+            {name_client:"МОУ СОШ №25", img_src:"../our_clients/school_25.jpg", img_alt:"моу_сош_25",},
+            {name_client:"МОУ Школа №17", img_src:"../our_clients/school_17.jpg", img_alt:"моу_школа_17",},
+            {name_client:"МОУ Лицей №12", img_src:"../our_clients/lyceum_12.jpg", img_alt:"моу_лицей_12",},
+            {name_client:"Администрация города Люберцы", img_src:"../our_clients/lyubertsy_administration.jpg", img_alt:"администрация_городского_округа_люберцы",},
+            {name_client:"МДОУ Детский Сад №9 \"Космос\"", img_src:"../our_clients/kindergarten_9.jpg", img_alt:"мдоу_д/с_9_космос",},
+            {name_client:"МОУ Кадетская Школа", img_src:"../our_clients/cadet_school.jpg", img_alt:"моу_кадетская_школа",},
+            {name_client:"МОУ Гимназия №24", img_src:"../our_clients/gymnasium_24.jpg", img_alt:"моу_гимназия_24",},
+            {name_client:"МДОУ №28 \"Совенок\"", img_src:"../our_clients/kindergarten_owlet.jpg", img_alt:"мдоу_28_совенок",},
+          ]
+        }
+      }
     }
+
 </script>
 
 <style scoped>
