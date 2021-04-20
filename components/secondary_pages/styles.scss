@@ -67,7 +67,7 @@ a:hover{
 //картинки (общие стили)
 img{
   height: auto;
-  filter: brightness(100%) contrast(100%)!important;
+  filter: brightness(100%) contrast(100%);
   background-color: transparent;
   box-shadow: 0 0 10px $shadeOfBlack, 0.5px 0.5px 4px $shadeOfBlack;
 }
@@ -855,7 +855,7 @@ input {
     margin: 0 1.5% 0.5% 1.5% ;
     img{width: $imgWidth100percent;}
     &:hover img{ //наведение на картинку
-      filter: brightness(100%)!important;
+      filter: brightness(110%)!important;
     }
   }
   .emphasized{ // выделение фраз в тексте - для красоты
