@@ -403,8 +403,8 @@ input {
       background-size: 100% 100%;
     }
   }
-  // компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили
-  #Services, #Feedback, #Clients{
+  // компонент "Услуги" (виды деятельности),"Обратная связь"
+  #Services, #Feedback{
     padding: 2.5% 0;
     filter: brightness(90%);
   }
@@ -522,14 +522,25 @@ input {
   }
   // компонент "Наши клиенты"
   #Clients{
-    .row{margin-bottom: 3% !important;} //отступы блоков с картинками
-    img{ //картинки (добавление/изменение стилей - касательно только данного компонента (Clients)
+    padding: 2.5% 0 0 0;
+    #carousel_mobile{ //карусель для мобильной версии
+      display: none;
+      padding: 0 6.5%;
+      .carousel-inner{ //область, отвечающая за картинки
+        box-shadow: 7px 7px 7px $shadeOfBlue;
+      }
+    }
+    #carousel_desktop{ //карусель для большой версии
+      .row{margin-bottom: 4.5% !important;} //отступы блоков с картинками
+    }
+    img { //картинки (добавление/изменение стилей - касательно только данного компонента (Clients)
       box-shadow: 7px 7px 7px $shadeOfBlue;
       width: $imgWidth100percent;
-      filter:  brightness(90%)!important;
-    }
-    .col:hover img{ //наведение на блок (картинку)
-      filter: brightness(100%)!important;
+      filter: brightness(90%) !important;
+
+      &:hover { //наведение на блок (картинку)
+        filter: brightness(100%) !important;
+      }
     }
   }
   //компонент "Карта"
@@ -933,6 +944,7 @@ input {
         font-size: 1.15rem !important;
         line-height: 1.6rem !important;
         margin-left: 15% !important;
+        margin-top: 8% !important;
       }
       img{ //картинка
         margin-top: 5% !important;
@@ -1203,6 +1215,17 @@ input {
       }
       .call_telephone{//номер телефона
         font-size: 1.8rem;
+      }
+    }
+    //компонент "Наши клиенты"
+    #Clients{
+      //включаем слайдер для мобилки
+      #carousel_mobile{
+        display: block;
+      }
+      //отключаем большой слайдер
+      #carousel_desktop{
+        display: none;
       }
     }
     //компонент "Карта"
@@ -1658,6 +1681,17 @@ input {
         width: 55%;
       }
     }
+    //компонент "Наши клиенты"
+    #Clients{
+      //включаем слайдер для мобилки
+      #carousel_mobile{
+        display: block;
+      }
+      //отключаем большой слайдер
+      #carousel_desktop{
+        display: none;
+      }
+    }
     //компонент "Карта"
     #Map {
       iframe { // сама карта (с гугла)
@@ -2044,6 +2078,12 @@ input {
         padding: 0 !important;
       }
     }
+    //компонент "Наши клиенты"
+    #Clients{
+      #carousel_desktop{ //карусель для большой версии
+        .row{margin-bottom: 8% !important;} //отступы блоков с картинками
+      }
+    }
   }
   //компонент "Обратная связь" на главной странице и страница "Контакты"
   #contact, #Feedback {
@@ -2350,6 +2390,12 @@ input {
       }
       .col-6{ // параметры сетки бутстрап (форма заявки - обратной связи)
         padding: 0 !important;
+      }
+    }
+    //компонент "Наши клиенты"
+    #Clients{
+      #carousel_desktop{ //карусель для большой версии
+        .row{margin-bottom: 6% !important;} //отступы блоков с картинками
       }
     }
   }
