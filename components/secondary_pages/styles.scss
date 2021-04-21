@@ -464,8 +464,7 @@ input {
       color: $shadeOfWhite;
       animation: up-down 5s infinite;
     }
-    //смена тени у цифр
-    @keyframes up-down{
+    @keyframes up-down{ //смена тени у цифр
       0%    {text-shadow: 2px 2px 2px $shadeOfBlue;}
       25%   {text-shadow: 3px 3px 3px $shadeOfBlue;}
       50%   {text-shadow: 4.2px 4.2px 4.2px $shadeOfBlue;}
@@ -477,7 +476,6 @@ input {
       margin-right: 8% !important;
       & > div{ //каждый блок с цифрой и текстом отдельно
         width: 20%;
-
         padding: 0.25%;
         margin: 1.5% 1.8% 0.5% 1.8% !important;
       }
