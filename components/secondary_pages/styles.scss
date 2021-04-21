@@ -51,7 +51,7 @@ a:hover{
   font-weight: $fontWeight800;
   letter-spacing: -.25px;
   font-size: 1.5rem;
-  line-height: 1.6rem;
+  line-height: 1.3rem;
   text-shadow: 0 0 .15px $shadeOfBlack;
   color: $shadeOfBlack;
   padding-bottom: 0.85%;
@@ -80,7 +80,7 @@ img{
 h1{
   margin-top: 0 !important;
   font-family: $titleLandingPage;
-  text-shadow: -.75px 1px .75px $shadeOfBlack;
+  text-shadow: -.75px 1px .85px #29425c;
   color: $shadeOfBlack;
   font-size: 2.2rem;
   background: transparent;
@@ -137,15 +137,15 @@ h6{
 }
 //общие стили страниц (кроме главной)
 .page{
-  background:linear-gradient( to bottom left, #36506c, #718199, #36506c);  //фон
+  background:linear-gradient( to bottom left, #42607f, #718199, #42607f);  //фон
   filter: brightness(110%);
   padding: 2.25rem 0;
   li{padding-bottom: 0.8%;} //список
   ul li:before { // как выглядит список (содержимое,цвет,тень,отступы) - используется везде
-    content:"·";
-    font-size:60px;
+    content:"\2022";
+    font-size:30px;
     margin-right: 1%;
-    vertical-align: text-top;
+    vertical-align: text-bottom;
     color: $shadeOfBlack;
     text-shadow:  1px 1px .5px #797777;
     margin-bottom: 0 !important;
@@ -153,10 +153,10 @@ h6{
   .import{ // как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране
     // объектов, а в охране транспорта/промышленных объектов)
     ul li:before {
-      content:"»";
+      content:"\2023";
       margin-right: 0 !important;
-      font-size:35px !important;
-      vertical-align: text-top;
+      font-size:38px;
+      vertical-align: text-bottom;
       color: $shadeOfBlack;
       margin-bottom: 0 !important;
     }
@@ -410,7 +410,7 @@ input {
   }
   // компонент "Услуги" (виды деятельности),"Наши клиенты" - общие стили (фон)
   #Services, #Clients{
-    background:linear-gradient( to bottom, #36506c, #718199,#718199, #36506c);
+    background:linear-gradient( to bottom, #42607f, #718199,#718199, #42607f);
   }
   // компонент "Услуги" (виды деятельности)
   #Services{
@@ -434,7 +434,7 @@ input {
     .btn { //кнопки
       background-color: rgba(250, 250, 255, .45) !important;
       box-shadow: 2px 5px 5px #273849;
-      filter: contrast(120%) brightness(145%);
+      filter: contrast(105%) brightness(145%);
       &:hover { //кнопки при наведении
         background-color: rgba(250, 250, 255, .9) !important;
         img {
@@ -447,14 +447,13 @@ input {
   #Import_numbers{
     .textLandingPage{  //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
       color: $shadeOfWhite;
-      text-shadow: 0 2.5px 0 $shadeOfBlue !important;
       transform: scale(1.05);
       margin-top: -5%;
       letter-spacing: -.2px;
-      border: none;
+      border: none;animation: up-down 5s infinite;
     }
     .number{ // цифры
-      font-size:5.25rem;
+      font-size:5.25rem !important;
       text-align: $centerText;
       font-family: 'Vollkorn', serif;
       font-weight: $fontWeight400;
@@ -463,12 +462,22 @@ input {
       letter-spacing: -4px;
       margin-top: -5%;
       color: $shadeOfWhite;
+      animation: up-down 5s infinite;
+    }
+    //смена тени у цифр
+    @keyframes up-down{
+      0%    {text-shadow: 2px 2px 2px $shadeOfBlue;}
+      25%   {text-shadow: 3px 3px 3px $shadeOfBlue;}
+      50%   {text-shadow: 4.2px 4.2px 4.2px $shadeOfBlue;}
+      75%   {text-shadow: 3px 3px 3px $shadeOfBlue;}
+      100%  {text-shadow: 2px 2px 2px $shadeOfBlue;}
     }
     .flex-container{ // контейнер с цифрами и текстом
       margin-left: 8% !important;
       margin-right: 8% !important;
       & > div{ //каждый блок с цифрой и текстом отдельно
         width: 20%;
+
         padding: 0.25%;
         margin: 1.5% 1.8% 0.5% 1.8% !important;
       }
@@ -617,7 +626,7 @@ input {
     margin-bottom: 0.5%  !important;
     svg { //svg принципов
       float: left;
-      margin-left: -25%;
+      margin-left: -2%;
       margin-top: 70%;
       padding: 10%;
     }
@@ -919,7 +928,7 @@ input {
 
 @media screen and (max-width: 355px) {
   //текст на всех страницах (кроме главной)
-  .text,a{
+  .text,a,.li_text{
     font-size: 0.9rem !important;
     line-height: 1.15rem !important;
   }
@@ -1044,7 +1053,7 @@ input {
   }
   //список,названия пунктов охраны
   .li_text,.name_type_guard{
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.2rem;
     margin-bottom: -1.5%;
   }
@@ -1052,6 +1061,12 @@ input {
   .page{
     padding: .8rem 0 !important;
     ul{margin-left: -10%;}//как выглядит список везде (сдвигаем)
+    .import{ // как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране
+      // объектов, а в охране транспорта/промышленных объектов)
+      ul li:before {
+        font-size:25px !important;
+      }
+    }
   }
   //место для заголовка h1 - отступы (для всех страниц, кроме главной)
   .place_h1{
@@ -1486,6 +1501,12 @@ input {
   .page{
     padding: 1.2rem 0 !important;
     ul{margin-left: -8%;}//как выглядит список (сдвигаем)
+    .import{ // как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране
+      // объектов, а в охране транспорта/промышленных объектов)
+      ul li:before {
+        font-size:28px !important;
+      }
+    }
   }
   //текст на всех страницах (кроме главной)
   .text,a{
@@ -1500,7 +1521,7 @@ input {
   }
   //список,названия пунктов охраны
   .li_text,.name_type_guard{
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.2rem;
     padding-bottom: 1% !important;
     margin-bottom: -1.5%;
@@ -1911,6 +1932,12 @@ input {
   //общие стили страниц (кроме главной)
   .page{
     padding: 1.5rem 0 !important;
+    .import{ // как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране
+      // объектов, а в охране транспорта/промышленных объектов)
+      ul li:before {
+        font-size:30px !important;
+      }
+    }
   }
   //место для заголовка h1 - отступы (для всех страниц, кроме главной)
   .place_h1{
@@ -1929,7 +1956,7 @@ input {
   //список,названия пунктов охраны
   .li_text,.name_type_guard{
     font-size: 1.15rem;
-    line-height: 1.25rem;
+    line-height: 1.2rem;
     padding-bottom: 1% !important;
     margin-bottom: -1.5%;
   }
@@ -2297,7 +2324,7 @@ input {
   }
   //список
   .li_text{
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
   //названия пунктов охраны
   .name_type_guard{
