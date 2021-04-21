@@ -1,7 +1,7 @@
 <template>
-  <b-navbar id="Nav" class="navbar-expand-xl sticky-top" toggleable>
+  <b-navbar id="Nav" class="navbar-expand-xl sticky-top navbar-dark" toggleable>
     <b-container>
-      <b-navbar-brand to="/">
+      <b-navbar-brand to="/"  v-bind:class="{active: activeLink === 1}" v-on:click.prevent="activeLink = 1">
         <component :is="svg"/>
         <span class="name_brand">"ООО Валенсия"</span>
         <p class="chop">частное охранное предприятие</p>
@@ -19,39 +19,39 @@
       </b-navbar-toggle>
       <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav v-model="isExpanded">
         <b-navbar-nav>
-          <b-nav-item to="/company">О нас</b-nav-item>
+          <b-nav-item to="/company" v-bind:class="{active: activeLink === 2}" v-on:click.prevent="activeLink = 2">О нас</b-nav-item>
           <b-nav-item>
-          <b-dropdown text="Услуги" class="menu">
-            <b-dropdown-item to="/services/guard_of_organizations/" class="menu1">Охрана организаций
+          <b-dropdown text="Услуги" class="menu" v-bind:class="{active: activeLink === 3}" v-on:click.prevent="activeLink = 3" >
+            <b-dropdown-item to="/services/guard_of_organizations/" class="menu1" v-bind:class="{active: activeLink === 4}" v-on:click.prevent="activeLink = 4">Охрана организаций
               <span class="menu_org">
-                <b-dropdown-item to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
-                <b-dropdown-item to="/services/_guard_of_organizations/guard_of_medical_institutions">Охрана медицинских учреждений</b-dropdown-item>
+                <b-dropdown-item id="rr" to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
+                <b-dropdown-item id="r2" to="/services/_guard_of_organizations/guard_of_medical_institutions">Охрана медицинских учреждений</b-dropdown-item>
                 <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities">Охрана муниципальных объектов</b-dropdown-item>
               </span>
             </b-dropdown-item>
-            <b-dropdown-item to="/services/object_guard/" class="menu2">Охрана объектов
+            <b-dropdown-item to="/services/object_guard/" class="menu2" v-bind:class="{active: activeLink === 5}" v-on:click.prevent="activeLink = 5">Охрана объектов
               <div class="menu_obj">
                 <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities">Охрана промышленных объектов</b-dropdown-item>
                 <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">Охрана объектов транспорта</b-dropdown-item>
               </div>
             </b-dropdown-item>
-             <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3">Охрана недвижимости
+             <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3" v-bind:class="{active: activeLink === 6}" v-on:click.prevent="activeLink = 6">Охрана недвижимости
                <div class="menu_state">
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">Охрана коммерческих объектов</b-dropdown-item>
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">Охрана частных объектов</b-dropdown-item>
                </div>
               </b-dropdown-item>
-              <b-dropdown-item to="/services/bodyguard">Личная охрана</b-dropdown-item>
-              <b-dropdown-item to="/services/guard_of_events">Охрана мероприятий </b-dropdown-item>
-              <b-dropdown-item to="/services/cargo_escort">Сопровождение грузов</b-dropdown-item>
+              <b-dropdown-item to="/services/bodyguard" v-bind:class="{active: activeLink === 7}" v-on:click.prevent="activeLink = 7">Личная охрана</b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_events" v-bind:class="{active: activeLink === 8}" v-on:click.prevent="activeLink = 8">Охрана мероприятий </b-dropdown-item>
+              <b-dropdown-item to="/services/cargo_escort" v-bind:class="{active: activeLink === 9}" v-on:click.prevent="activeLink = 9">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
-          <b-nav-item to="/tariffs">Тарифы</b-nav-item>
-          <b-nav-item to="/technical_means">Технические средства</b-nav-item>
-          <b-nav-item to="/special_equipment">Спецсредства</b-nav-item>
-          <b-nav-item to="/licenses">Лицензии</b-nav-item>
-          <b-nav-item to="/our_clients">Наши клиенты</b-nav-item>
-          <b-nav-item to="/contact">Контакты</b-nav-item>
+          <b-nav-item to="/tariffs" v-bind:class="{active: activeLink === 10}" v-on:click.prevent="activeLink = 10">Тарифы</b-nav-item>
+          <b-nav-item to="/technical_means" v-bind:class="{active: activeLink === 11}" v-on:click.prevent="activeLink = 11">Технические средства</b-nav-item>
+          <b-nav-item to="/special_equipment" v-bind:class="{active: activeLink === 12}" v-on:click.prevent="activeLink = 12">Спецсредства</b-nav-item>
+          <b-nav-item to="/licenses" v-bind:class="{active: activeLink === 13}" v-on:click.prevent="activeLink = 13">Лицензии</b-nav-item>
+          <b-nav-item to="/our_clients" v-bind:class="{active: activeLink === 14}" v-on:click.prevent="activeLink = 14">Наши клиенты</b-nav-item>
+          <b-nav-item to="/contact" v-bind:class="{active: activeLink === 15}" v-on:click.prevent="activeLink = 15">Контакты</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -62,16 +62,33 @@
   import ShieldSVG from "./secondary_pages/shield_svg";
   export default {
     name: "navbar",
-    data(){
+    data() {
       return {
         isExpanded: false,
         svg:ShieldSVG,
+        activeLink: undefined
       }
     },
   }
 
 </script>
 <style lang="scss">
+  // все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
+  .nav-link,.telephone{
+    color: white !important;
+    font-weight: 400 !important;
+  }
+  .menu_org,.menu_obj,.menu_state{}
+
+  .navbar-dark .navbar-nav .active > .nav-link,
+  .navbar-dark .navbar-nav .active > .dropdown-item{
+    color: #5091d9 !important;
+    font-weight: 800 !important;
+  }
+  .navbar-dark .navbar-nav .active > .navbar-brand{
+    color: white !important;
+  }
+
   /*стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)*/
   //название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе
   .name_brand,.chop{
@@ -107,7 +124,7 @@
   }
   //наведение на любую кноку в dropdown - кнопка "Услуги" также будет другого цвета, как если бы было наведение на нее
   .menu:hover .dropdown-toggle{
-   color:#007bff !important;
+   //color:#007bff !important;
   }
   // выпадающий блок при нажатии на "Услуги" (dropdown)
   .dropdown-menu {
@@ -256,11 +273,7 @@
     padding-right: 0.7rem !important;
     padding-left: 0.7rem !important;
   }
-  // все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
-  .nav-link,.telephone{
-    color: #ffffff !important;
-    font-weight: 400 !important;
-  }
+
   // все кнопки (кроме кнопки "Услуги" и кнопок в dropdown)
   .nav-link{
     font-size: 1.4rem;
