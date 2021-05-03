@@ -1,5 +1,5 @@
 <template>
-    <div id="LandingPage">
+    <div id="Landing_page">
       <Home/>
       <Type/>
       <Services/>
