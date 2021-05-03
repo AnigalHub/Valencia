@@ -4,7 +4,7 @@
       <div class="content">
         <div class="container">
           <h2>{{category.category}}</h2>
-          <div class="textLandingPage">{{category.descr_category}}</div>
+          <div class="text_Landing_page">{{category.descr_category}}</div>
         </div>
       </div>
       <div class="overlay"></div>

@@ -4,7 +4,7 @@
         <div class="flex-container">
           <div v-for="(important_number, index) in important_numbers" :key="index">
             <div class="number">{{important_number.number}}</div>
-            <p class="textLandingPage" v-html="important_number. descr_number"></p>
+            <p class="text_Landing_page" v-html="important_number. descr_number"></p>
           </div>
         </div>
       </b-container>

@@ -5,7 +5,7 @@
         <div class="type_guard_beautiful_block" v-for="advantage in Advanatages" :key="advantage.index">
           <router-link :to="advantage.link">
             <component :is="advantage.svg"/>
-            <p class="textLandingPage" v-html="advantage.name"></p>
+            <p class="text_Landing_page" v-html="advantage.name"></p>
           </router-link>
         </div>
       </div>
