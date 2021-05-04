@@ -19,7 +19,7 @@
     import Import_numbers from "./import_numbers";
     import Advantages from "./advantages";
     export default {
-        name: "services",
+      name: "services",
       components: {Advantages, Import_numbers},
       data(){
         return{
