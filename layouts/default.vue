@@ -23,7 +23,7 @@
   }
 </style>
 <script>
-  import Styles from "../components/secondary_pages/styles.scss";
+  // import Styles from "../components/secondary_pages/styles.scss";
   import Navbar from "../components/navbar";
   import Myfooter from "../components/myfooter";
   export default {
