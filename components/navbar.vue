@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="Nav" class="navbar-expand-xl sticky-top navbar-dark" toggleable>
     <b-container>
-      <b-navbar-brand to="/"  v-bind:class="{active: activeLink === 1}" v-on:click.prevent="activeLink = 1">
+      <b-navbar-brand to="/">
         <component :is="svg"/>
         <span class="name_brand">"ООО Валенсия"</span>
         <p class="chop">частное охранное предприятие</p>
@@ -19,39 +19,39 @@
       </b-navbar-toggle>
       <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav v-model="isExpanded">
         <b-navbar-nav>
-          <b-nav-item to="/company" v-bind:class="{active: activeLink === 2}" v-on:click.prevent="activeLink = 2">О нас</b-nav-item>
-          <b-nav-item>
-          <b-dropdown text="Услуги" class="menu" v-bind:class="{active: activeLink === 3}" v-on:click.prevent="activeLink = 3" >
-            <b-dropdown-item to="/services/guard_of_organizations/" class="menu1" v-bind:class="{active: activeLink === 4}" v-on:click.prevent="activeLink = 4">Охрана организаций
+          <b-nav-item to="/company" active-class="nav-link-active">О нас</b-nav-item>
+          <b-nav-item active-class="nav-link-active">
+          <b-dropdown text="Услуги" class="menu" :class="{'nav-link-active': isServicesActive} ">
+            <b-dropdown-item to="/services/guard_of_organizations/" class="menu1" active-class="nav-link-active">Охрана организаций
               <span class="menu_org">
-                <b-dropdown-item id="rr" to="/services/_guard_of_organizations/guard_of_educational_institutions">Охрана образовательных учреждений</b-dropdown-item>
-                <b-dropdown-item id="r2" to="/services/_guard_of_organizations/guard_of_medical_institutions">Охрана медицинских учреждений</b-dropdown-item>
-                <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities">Охрана муниципальных объектов</b-dropdown-item>
+                <b-dropdown-item id="rr" to="/services/_guard_of_organizations/guard_of_educational_institutions" active-class="nav-link-active">Охрана образовательных учреждений</b-dropdown-item>
+                <b-dropdown-item id="r2" to="/services/_guard_of_organizations/guard_of_medical_institutions" active-class="nav-link-active">Охрана медицинских учреждений</b-dropdown-item>
+                <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities" active-class="nav-link-active">Охрана муниципальных объектов</b-dropdown-item>
               </span>
             </b-dropdown-item>
-            <b-dropdown-item to="/services/object_guard/" class="menu2" v-bind:class="{active: activeLink === 5}" v-on:click.prevent="activeLink = 5">Охрана объектов
+            <b-dropdown-item to="/services/object_guard/" class="menu2" active-class="nav-link-active">Охрана объектов
               <div class="menu_obj">
-                <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities">Охрана промышленных объектов</b-dropdown-item>
-                <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities">Охрана объектов транспорта</b-dropdown-item>
+                <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities" active-class="nav-link-active">Охрана промышленных объектов</b-dropdown-item>
+                <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities" active-class="nav-link-active">Охрана объектов транспорта</b-dropdown-item>
               </div>
             </b-dropdown-item>
-             <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3" v-bind:class="{active: activeLink === 6}" v-on:click.prevent="activeLink = 6">Охрана недвижимости
+             <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3" active-class="nav-link-active">Охрана недвижимости
                <div class="menu_state">
-                 <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects">Охрана коммерческих объектов</b-dropdown-item>
-                 <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property">Охрана частных объектов</b-dropdown-item>
+                 <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects" active-class="nav-link-active">Охрана коммерческих объектов</b-dropdown-item>
+                 <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property" active-class="nav-link-active">Охрана частных объектов</b-dropdown-item>
                </div>
               </b-dropdown-item>
-              <b-dropdown-item to="/services/bodyguard" v-bind:class="{active: activeLink === 7}" v-on:click.prevent="activeLink = 7">Личная охрана</b-dropdown-item>
-              <b-dropdown-item to="/services/guard_of_events" v-bind:class="{active: activeLink === 8}" v-on:click.prevent="activeLink = 8">Охрана мероприятий </b-dropdown-item>
-              <b-dropdown-item to="/services/cargo_escort" v-bind:class="{active: activeLink === 9}" v-on:click.prevent="activeLink = 9">Сопровождение грузов</b-dropdown-item>
+              <b-dropdown-item to="/services/bodyguard" active-class="nav-link-active">Личная охрана</b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_events" active-class="nav-link-active">Охрана мероприятий </b-dropdown-item>
+              <b-dropdown-item to="/services/cargo_escort" active-class="nav-link-active">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
           </b-nav-item>
-          <b-nav-item to="/tariffs" v-bind:class="{active: activeLink === 10}" v-on:click.prevent="activeLink = 10">Тарифы</b-nav-item>
-          <b-nav-item to="/technical_means" v-bind:class="{active: activeLink === 11}" v-on:click.prevent="activeLink = 11">Технические средства</b-nav-item>
-          <b-nav-item to="/special_equipment" v-bind:class="{active: activeLink === 12}" v-on:click.prevent="activeLink = 12">Спецсредства</b-nav-item>
-          <b-nav-item to="/licenses" v-bind:class="{active: activeLink === 13}" v-on:click.prevent="activeLink = 13">Лицензии</b-nav-item>
-          <b-nav-item to="/our_clients" v-bind:class="{active: activeLink === 14}" v-on:click.prevent="activeLink = 14">Наши клиенты</b-nav-item>
-          <b-nav-item to="/contact" v-bind:class="{active: activeLink === 15}" v-on:click.prevent="activeLink = 15">Контакты</b-nav-item>
+          <b-nav-item to="/tariffs" active-class="nav-link-active">Тарифы</b-nav-item>
+          <b-nav-item to="/technical_means" active-class="nav-link-active">Технические средства</b-nav-item>
+          <b-nav-item to="/special_equipment" active-class="nav-link-active">Спецсредства</b-nav-item>
+          <b-nav-item to="/licenses" active-class="nav-link-active">Лицензии</b-nav-item>
+          <b-nav-item to="/our_clients" active-class="nav-link-active">Наши клиенты</b-nav-item>
+          <b-nav-item to="/contact" active-class="nav-link-active">Контакты</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -65,18 +65,24 @@
     data() {
       return {
         isExpanded: false,
-        svg:ShieldSVG,
-        activeLink: undefined
+        svg:ShieldSVG
       }
     },
+    computed:{
+      isServicesActive(){
+        return this.$route.fullPath.startsWith("/services/")
+      }
+    }
   }
 
 </script>
 <style lang="scss">
-  /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
   .nav-link,.telephone{
     color: white !important;
     font-weight: 400 !important;
+  }
+  .nav-link-active{
+    color: tomato !important;
   }
   .navbar-dark .navbar-nav .active > .nav-link,
   .navbar-dark .navbar-nav .active > .dropdown-item{
@@ -239,7 +245,7 @@
     text-align: center;
     margin-bottom: 0.5rem !important;
   }
-  /*кнопки, которые находятся в drowdown (виды и подвиды охран) - добавляем в дефолтный dropdown-item для них (в данном случае - отступы, шрифт)*/
+  /*кнопки, которые находятся в dropdown (виды и подвиды охран) - добавляем в дефолтный dropdown-item для них (в данном случае - отступы, шрифт)*/
   .dropdown-item{
     letter-spacing: -.45px;
     font-weight: 400 !important;
@@ -273,7 +279,6 @@
   .menu_obj{top:17% !important;}
   /*блок с подвидами охраны недвижимости (коммерческие объекты, частные объекты)*/
   .menu_state{top:33% !important;}
-
   /*******************АДАПТИВНОСТЬ***********************/
   @media screen and (max-width: 1200px) {
     /*вид меню на экране когда меню через кнопку видно (отступы)*/
