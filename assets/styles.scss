@@ -220,22 +220,22 @@ input {
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
-    background: url(../../static/Landing_page/background_1.jpg) 100% 100% no-repeat;
+    background: url("../static/Landing_page/background_1.jpg") 100% 100% no-repeat;
     background-size: 100% 100% ;
     filter: brightness(85%);
     animation: anim 40s  ease-out infinite; /*время смены фона и эффект*/
     /*смена фона*/
     @keyframes anim {
       0% {
-        background: url(../../static/Landing_page/background_1.jpg) no-repeat;
+        background: url("../static/Landing_page/background_1.jpg") no-repeat;
         background-size: 100% 100% ;
       }
       33% {
-        background: url(../../static/Landing_page/background_2.jpg) no-repeat;
+        background: url("../static/Landing_page/background_2.jpg") no-repeat;
         background-size: 100% 100%;
       }
       67% {
-        background: url(../../static/Landing_page/background_3.jpg) no-repeat;
+        background: url("../static/Landing_page/background_3.jpg") no-repeat;
         background-size: 100% 100% ;
       }
     }
@@ -412,15 +412,15 @@ input {
       }
       /*картинки на каждый блок*/
       &:first-child{
-        background: url(../../static/Landing_page/about_company.jpg) ;/*картинка на блок - о компании*/
+        background: url("../static/Landing_page/about_company.jpg") ;/*картинка на блок - о компании*/
         background-size: 100% 100%;
       }
       &:nth-child(2){
-        background: url(../../static/Landing_page/tariffs.jpg);/*картинка на блок - тарифы*/
+        background: url("../static/Landing_page/tariffs.jpg");/*картинка на блок - тарифы*/
         background-size: 100% 100%;
       }
       &:last-child{
-        background: url(../../static/Landing_page/thanksgiving_letters.jpg);/*картинка на блок - лицензии*/
+        background: url("../static/Landing_page/thanksgiving_letters.jpg");/*картинка на блок - лицензии*/
         background-size: 100% 100%;
       }
     }
@@ -513,7 +513,7 @@ input {
   }
   /*компонент "Обратная связь"*/
   #Feedback{
-    background: url("../../static/Landing_page/feedback.jpg") 100% 100% no-repeat;
+    background: url("../static/Landing_page/feedback.jpg") 100% 100% no-repeat;
     background-size: 100% 100%;
     /*заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)*/
     h2{
@@ -1221,7 +1221,7 @@ input {
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       height: auto;
-      background: url(../../static/Landing_page/background_3.jpg) 100% 100% no-repeat !important ;
+      background: url("../static/Landing_page/background_3.jpg") 100% 100% no-repeat !important ;
       background-size: 100% 100% !important;
       filter: brightness(72%);
       animation: none;
