@@ -1,8 +1,9 @@
 <template>
     <div id="Landing_page">
       <Home/>
-      <Type/>
+
       <Services/>
+      <Type/>
       <Feedback/>
       <Clients/>
       <Mymap/>
