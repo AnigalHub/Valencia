@@ -82,7 +82,6 @@
   .modal-dialog img{ /*картинка в модальном окне*/
     width: 100% !important;
     box-shadow: none !important;
-    filter: brightness(80%) contrast(120%)!important;
   }
   .close { /*"крестик" (размер) - кнопка закрытия модального окна*/
     font-size: 2rem !important;
