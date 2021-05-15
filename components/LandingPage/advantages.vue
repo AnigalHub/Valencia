@@ -25,12 +25,12 @@
       data(){
         return{
           advantages:[
-            {name:"квалифицированный <br> штат <br> сотрудников", svg:StateSVG, link:'/company',},
-            {name:"современное <br> инновационное <br> оборудование", svg:EquipmentSVG, link:'/technical_means',},
-            {name:"готовность <br>  работать в <br> любое время", svg:ClockSVG, link:'/tariffs',},
-            {name:"контроль качества <br> на каждом <br> этапе работы", svg:QualityControlSVG, link:'/company',},
-            {name:"круглосуточная <br>поддержка <br> клиентов 24/7", svg:SupportSVG, link:'/contact',},
-            {name:"гибкое <br> ценнообразование <br> на любой бюджет",svg:PriceSVG, link:'/tariffs',},
+            {name:"квалифицированный штат  сотрудников", svg:StateSVG, link:'/company',},
+            {name:"современное инновационное  оборудование", svg:EquipmentSVG, link:'/technical_means',},
+            {name:"готовность  работать в  любое время", svg:ClockSVG, link:'/tariffs',},
+            {name:"контроль качества  на каждом  этапе работы", svg:QualityControlSVG, link:'/company',},
+            {name:"круглосуточная поддержка клиентов 24/7", svg:SupportSVG, link:'/contact',},
+            {name:"гибкое  ценнообразование  на любой бюджет",svg:PriceSVG, link:'/tariffs',},
           ]
         }
       }
