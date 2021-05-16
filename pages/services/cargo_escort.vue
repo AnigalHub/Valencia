@@ -18,17 +18,17 @@
        <ul class="text">
           <li v-for="duty in DutiesCargoEscort" :key="duty.index">{{duty.duty}}</li>
        </ul>
-       <Tarrifs_content/>
+       <Tariffs/>
       </b-container>
   </div>
 </template>
 
 <script>
-    import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
     import Name_page from "../../components/secondary_pages/name_page";
+    import Tariffs from "../tariffs";
     export default {
       name: "cargo_escort",
-      components: {Name_page, Tarrifs_content},
+      components: {Tariffs, Name_page},
       data() {
         return {
           name_page: "Сопровождение грузов",
@@ -52,7 +52,7 @@
             {duty:"проверка целостности сопроводительных документов;"},
             {duty:"вооруженная колонна транспорта рядом с грузом;"},
             {duty:"обеспечение безопасности  при погрузке-выгрузке;"},
-            {duty:"секретность перевозок (маршрута, времени начала движения, остановок в пути), предусмотренная в договоре на работу;"},
+            {duty:"секретность перевозок, предусмотренная в договоре на работу;"},
             {duty:"быстрое изменение маршрута и другие действия при возникших нештатных ситуациях;"},
             {duty:"отчетность за проведенную работу."},
           ]
