@@ -7,7 +7,7 @@
               <b-row>
                 <b-col v-for="img in client.clients" :key="img.name">
                   <a href="/our_clients">
-                      <img :src="img.src_img" :alt="img.alt_img">
+                      <img :src="img.img_src" :alt="img.img_alt">
                   </a>
                 </b-col>
               </b-row>
@@ -33,23 +33,23 @@
           Clients:[
             {
               clients:[
-                {name_client:"МОУ Гимназия №46", src_img:"./our_clients/school_17.jpg", alt_img:"моу_гимназия_46",},
-                {name_client:"МОУ СОШ №25", src_img:"./our_clients/school_25.jpg", alt_img:"моу_сош_25",},
-                {name_client:"МОУ Школа №17", src_img:"./our_clients/school_17.jpg", alt_img:"моу_школа_17",},
+                {name_client:"МОУ Гимназия №46", img_src:"../our_clients/46.jpg", img_alt:"моу_гимназия_46",},
+                {name_client:"МОУ СОШ №25", img_src:"../our_clients/25.jpg", img_alt:"моу_сош_25",},
+                {name_client:"МДОУ Детский Сад №9 \"Космос\"", img_src:"../our_clients/9.jpg", img_alt:"мдоу_д/с_9_космос",},
               ]
             },
             {
               clients:[
-                {name_client:"МОУ Лицей №12", src_img:"./our_clients/lyceum_12.jpg", alt_img:"моу_лицей_12",},
-                {name_client:"Администрация города Люберцы", src_img:"./our_clients/lyubertsy_administration.jpg", alt_img:"администрация_городского_округа_люберцы",},
-                {name_client:"МДОУ Детский Сад №9 \"Космос\"", src_img:"./our_clients/kindergarten_9.jpg", alt_img:"мдоу_д/с_9_космос",}
+                {name_client:"МДОУ №28 \"Совенок\"", img_src:"../our_clients/28.jpg", img_alt:"мдоу_28_совенок",},
+                {name_client:"Администрация города Люберцы", img_src:"../our_clients/ad.jpg", img_alt:"администрация_городского_округа_люберцы",},
+                {name_client:"МОУ Гимназия №24", img_src:"../our_clients/24.jpg", img_alt:"моу_гимназия_24",},
               ]
             },
             {
               clients:[
-                {name_client:"МОУ Кадетская Школа", src_img:"./our_clients/cadet_school.jpg", alt_img:"моу_кадетская_школа",},
-                {name_client:"МОУ Гимназия №24", src_img:"./our_clients/gymnasium_24.jpg", alt_img:"моу_гимназия_24",},
-                {name_client:"МДОУ №28 \"Совенок\"", src_img:"./our_clients/kindergarten_owlet.jpg", alt_img:"мдоу_28_совенок",}
+                {name_client:"МОУ Кадетская Школа", img_src:"../our_clients/kad.jpg", img_alt:"моу_кадетская_школа",},
+                {name_client:"МОУ Школа №17", img_src:"../our_clients/17.jpg", img_alt:"моу_школа_17",},
+                {name_client:"МОУ Лицей №12", img_src:"../our_clients/12.jpg", img_alt:"моу_лицей_12",},
               ]
             }
           ],
