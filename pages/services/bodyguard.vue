@@ -11,24 +11,24 @@
         <h6 class="block_two">Разновидности личной охраны:</h6>
         <img src="../../static/services/bodyguard/child_bodyguard.jpg" alt="личная_охрана_детей" class="second_img"/>
         <ul class="text varieties">
-          <li v-for="bodyguard in TypesBodyguard" :key="bodyguard.index"><b>{{bodyguard.name}}</b>- {{bodyguard.descr}}</li>
+          <li v-for="bodyguard in TypesBodyguard" :key="bodyguard.index"><b>{{bodyguard.name}}</b> - {{bodyguard.descr}}</li>
         </ul>
         <img src="../../static/services/bodyguard/bodyguard_driver.jpg" alt="личная_охрана_водитель" class="third_img"/>
         <h6>Обязанности личной охраны:</h6>
         <ul class="text">
           <li v-for="name_duty in DutiesBodyguard" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>
-        <Tarrifs_content/>
+       <Tariffs/>
       </b-container>
     </div>
 </template>
 
 <script>
-  import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
+  import Tariffs from "../tariffs";
   import Name_page from "../../components/secondary_pages/name_page";
     export default {
       name: "bodyguard",
-      components: {Name_page, Tarrifs_content},
+      components: {Name_page, Tariffs},
       data() {
         return {
           name_page: "Личная охрана",
