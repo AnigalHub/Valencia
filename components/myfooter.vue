@@ -63,14 +63,16 @@
       margin: 0;
       color: white !important;
       text-align: center;
-      font-size: 1.42rem;
+      font-size: 1.2rem;
       letter-spacing: -.25px;
       text-shadow: 0 0 0.15px black;
-      font-family: "EB Garamond", serif;
+      font-family: "Lora", serif;
       background: #05081a;
       font-weight: 400;
       /*ссылки*/
       a {
+        font-size: 1.2rem;
+        font-family: "Lora", serif !important;
         color: white !important;
         display: block;
       }
