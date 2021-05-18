@@ -1,63 +1,50 @@
-$font: 'EB Garamond', serif;
-$fontLanding_page : 'Source Serif Pro', serif;
-$titleLanding_page:'Yeseva One', cursive;
-$centerText: center;
-$fontWeight400:400;
-$fontWeight800:800;
+$fontText:"Helvetica Neue",Helvetica,Arial,sans-serif;
+$fontImportantText:"Playfair Display", serif;
+$fontNumber:"Vollkorn", serif;
+$backgroundPage: #afbdcd;
 $shadeOfBlack: black;
 $shadeOfWhite: white;
-$shadeOfBlue: rgb(11, 30, 45);
+$brightestShadeYellow: #ffff00;
+$brightShadeYellow:#ffd700;
+
 $imgWidth100percent:100%;
 /*svg-в шапке меню*/
 #shield{
-  .color_white{fill: white;}
-  .color_dark_blue{fill: #0d3b63;}
-  .color_light_blue{fill: #30749c;}
+  .color_white{fill: #FFD700;}
+  .color_dark_blue{fill: #b4b4af;}
+  .color_light_blue{fill: $shadeOfBlack;}
   .outline_light{
-    stroke: white;
-    stroke-width: 2;
+    fill: $shadeOfBlack;
+    stroke: #d2d270;
+    stroke-width: 1;
   }
   .outline_dark{
-    stroke: #000000;
-    stroke-width: 3.5;
+   stroke: $shadeOfBlack;
+   stroke-width: 4;
   }
 }
 /*текст на всех страницах (кроме главной)*/
 .text,a{
-  font-family: $font;
-  font-weight: $fontWeight400 !important;
-  letter-spacing: -.25px;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-shadow: 0 0 .15px $shadeOfBlack;
+  font-family: $fontText;
   color: $shadeOfBlack;
+  font-weight: 400 !important;
+  font-size: 1.06rem;
+  line-height: 1.4rem;
 }
 /*любой текст (текст,заголочки, ссылки и т.д.)*/
 .text,.text_descr,.emphasized,a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
-/*наведение на ссылку*/
-a:hover{color: $shadeOfBlack;}
 /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
 .text_descr{
-  font-size: 1.25rem !important;
-  line-height: 1.4rem !important;
-}
-/*список,названия пунктов охраны*/
-.li_text,.name_type_guard{
-  font-family: $font;
-  font-weight: $fontWeight800;
-  letter-spacing: -.25px;
-  font-size: 1.5rem;
-  line-height: 1.3rem;
-  text-shadow: 0 0 .15px $shadeOfBlack;
+  font-family: $fontText;
   color: $shadeOfBlack;
-  padding-bottom: 0.85%;
+  font-size: .85rem !important;
+  line-height: 1.4rem !important;
 }
 /*выделение фраз в тексте - для красоты*/
 .emphasized{
-  font-family: $font;
-  font-weight: $fontWeight800 !important;
-  letter-spacing: -1.25px;
+  font-family: $fontImportantText;
   color: $shadeOfBlack;
+  font-weight: 800 !important;
   text-decoration: none !important;
 }
 /*картинки (общие стили)*/
@@ -65,7 +52,6 @@ img{
   height: auto;
   filter: brightness(100%) contrast(100%);
   background-color: transparent;
-  box-shadow: 0 0 10px $shadeOfBlack, 0.5px 0.5px 4px $shadeOfBlack;
 }
 /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
 .place_h1{
@@ -74,41 +60,42 @@ img{
 }
 /*заголовки на всех страницах (кроме главной)*/
 h1{
-  margin-top: 0 !important;
-  font-family: $titleLanding_page;
-  text-shadow: -.75px 1px .85px #29425c;
-  color: $shadeOfBlack;
+  font-family: $fontImportantText;
+  color: #d2d270;
+  font-weight: 600 !important;
   font-size: 2.2rem;
+  text-shadow: 0 1px 2px $shadeOfBlack;
+  margin-top: 0 !important;
   background: transparent;
-  font-weight: $fontWeight400;
-  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 h2,h3{
-  font-family: $font;
-  font-weight: $fontWeight800 !important;
+  font-family: $fontImportantText;
+  color: #FFD700;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 3px $shadeOfBlack;
   padding: 1% 0;
-  color:$shadeOfBlack;
+  margin-bottom: 3%;
 }
 h3{line-height: 1.6rem;}
 h4{
-  font-family: $font;
   color: $shadeOfBlack;
+  font-weight: 800;
   display: block;
   padding-bottom: 0.5%;
-  text-shadow: 0.9px 1px $shadeOfBlue;
-  font-weight: $fontWeight800;
-  margin-top: -2%;
   margin-bottom: 0;
 }
 h6{
-  font-family: $font;
-  font-weight: $fontWeight800 !important;
-  padding: 1% 0;
-  font-size: 1.58rem;
+  font-family: $fontImportantText;
+  color: $shadeOfBlack;
+  font-weight: 600 !important;
+  font-size: 1.2rem;
   line-height: 1.6rem;
-  text-shadow: 0 0 0.15px $shadeOfBlack;
-  color:$shadeOfBlack;
   text-decoration: underline;
+  text-decoration-color:  #d2d270;
+  text-decoration-thickness: .22rem;
+  padding: 1% 0;
 }
 /*контейнер, который включает в себя повтор блоков*/
 .flex-container {
@@ -118,45 +105,39 @@ h6{
 /*блоки - ссылки на другие подвиды охран (пример: охрана объектов - промышленных/транспорта)*/
 .type_guard_beautiful_block{
   padding: 0.5%;
-  border: 3px solid rgba(250, 250, 250, 0.23);
-  box-shadow: 0 0 3px 1px $shadeOfBlue;
+  background: #b7c4d4;
+  border: 1px solid #e6e686;
+  box-shadow: inset 0 0 6px #e6e686;
   /*стили при наведении на такой блок*/
-  &:hover{
-    border: 3px solid rgba(250, 250, 250, 0.4);
-    box-shadow: 0 0 10px 1px $shadeOfBlue;
-  }
+    &:hover{
+      background: #bdc9d7;
+      box-shadow: inset 0 0 6px #e6e686, 0 1px 6px 0 #575731;
+    }
 }
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
 .block_two{clear: left;}
 /*общие стили страниц (кроме главной)*/
 .page{
   /*фон*/
-  background:linear-gradient( to bottom left, #42607f, #718199, #42607f);
+  background:$backgroundPage;
   filter: brightness(110%);
   padding: 2.25rem 0;
   /*список*/
-  li{padding-bottom: 0.8%;}
+  li{padding-bottom: 0.2%;}
   /*как выглядит список (содержимое,цвет,тень,отступы) - используется везде*/
   ul li:before {
-    content:"\2022";
-    font-size:30px;
-    margin-right: 1%;
+    content:"\00B7";
+    font-size:55px;
+    margin-right: .8%;
     vertical-align: text-bottom;
     color: $shadeOfBlack;
     text-shadow:  1px 1px .5px #797777;
     margin-bottom: 0 !important;
   }
-  /*как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране*/
+  /*как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране)*/
   .import{
     /*объектов, а в охране транспорта/промышленных объектов)*/
-    ul li:before {
-      content:"\2023";
-      margin-right: 0 !important;
-      font-size:38px;
-      vertical-align: text-bottom;
-      color: $shadeOfBlack;
-      margin-bottom: 0 !important;
-    }
+    ul li:before {margin-right: 0 !important;}
   }
   /*как выглядит список везде (стили отключаем, сдвигаем)*/
   ul{
@@ -165,118 +146,106 @@ h6{
   }
   /*как выглядит список списка (цвет,тень,отступы) - используется везде*/
   ul ul li:before {
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: $shadeOfBlack !important;
     text-shadow:  none;
     margin-left: 2%;
   }
 }
 /*метка в форме заявки (обратной связи)*/
 label{
-  font-weight: $fontWeight800;
-  font-size: 1.35rem;
-  text-shadow: 0.5px 0.5px 1px $shadeOfBlue;
-  color: $shadeOfBlue;
-  font-family: $font;
+  font-family: $fontText;
+  color: $shadeOfBlack;
+  font-weight: 600 !important;
+  font-size: 1.08rem;
+  line-height: 1.4rem;
 }
 /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
+.form-control{min-height: 1.5rem;}
 input {
+  font-weight: 800;
   padding: 25px 15px;
-  min-height: 1.5rem;
+  border: 1px solid rgba(20, 27, 38, 0.42) !important;
   margin-bottom: 1%;
-  background: #cfdde8;
-  box-shadow: 2px 2px 2px $shadeOfBlue;
-  font-weight: $fontWeight800;
   /*при наведении*/
-  &:hover {box-shadow: 7px 7px 7px $shadeOfBlue;}
+  &:hover {border: 2px solid rgba(20, 27, 38, 0.82)}
 }
 /*стили для главной страницы*/
 #Landing_page{
-  background:linear-gradient( to top left, #304355, #768c9e,#304355);
+  background: $backgroundPage;
   /*картинки на главной странице*/
   img{border: none;}
   /*заголовки и текст на главной странице*/
   h2,.text_Landing_page{filter: contrast(140%);}
   /*заголовок на главной странице (названия компонентов)*/
   h2{
-    text-align: $centerText;
-    font-family: $titleLanding_page;
-    padding-bottom: 2%;
-    text-shadow: 2px 2.5px 2.5px $shadeOfBlue;
-    color: rgba(255, 255, 255, 0.86);
-    font-size: 2.2rem;
+    font-family: $fontImportantText;
+    color: $shadeOfWhite;
+    font-weight: 600 !important;
+    font-size: 2.4rem;
+    text-shadow: 0 0 3.25px $shadeOfBlack;
+    text-align: center;
+    letter-spacing: 0.5px;
     background: transparent;
-    font-weight: $fontWeight400;
-    letter-spacing: -.5px;
     padding-left: 0;
+    filter: contrast(125%) brightness(120%);
   }
   /*текст на главной странице*/
   .text_Landing_page{
-    font-weight: $fontWeight400;
+    font-family: $fontText;
+    color: $shadeOfBlack;
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.4rem;
-    text-align: $centerText;
-    font-family: $fontLanding_page;
+    text-align: center;
   }
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
-    background: url(../../static/Landing_page/background_1.jpg) 100% 100% no-repeat;
-    background-size: 100% 100% ;
-    filter: brightness(85%);
-    animation: anim 40s  ease-out infinite; /*время смены фона и эффект*/
+    background: url(../../static/Landing_page/134.jpg) 100% 100% no-repeat;
+    background-size: 100% 100%;
+    animation: anim 30s  ease-out infinite; /*время смены фона и эффект*/
     /*смена фона*/
     @keyframes anim {
-      0% {
-        background: url(../../static/Landing_page/background_1.jpg) no-repeat;
-        background-size: 100% 100% ;
-      }
-      33% {
-        background: url(../../static/Landing_page/background_2.jpg) no-repeat;
-        background-size: 100% 100%;
-      }
-      67% {
-        background: url(../../static/Landing_page/background_3.jpg) no-repeat;
-        background-size: 100% 100% ;
-      }
+      0% {background: url(../../static/Landing_page/134.jpg) no-repeat;background-size: 100% 100% ;}
+      33%{background: url(../../static/Landing_page/138.jpg) no-repeat;background-size: 100% 100%;}
+      67%{background: url(../../static/Landing_page/135.jpg) no-repeat;background-size: 100% 100% ;}
     }
     /*картинка с охранником*/
     img{
-      width:120%;
+      width:110%;
       margin-left:-8%;
-      padding: 2% 0 0 0;
-      box-shadow: none;
-      filter: contrast(120%) brightness(115%) !important;
+      filter: contrast(110%) brightness(110%) !important;
     }
     /*название чопа*/
     .title_guard{
-      padding: 6% 0 0 0;
-      filter: contrast(120%) brightness(125%);
+      padding: 2% 0 0 0;
+      filter: contrast(125%) brightness(120%);
       cursor: default;
-      font-family: 'Lobster', cursive;
-      font-size: 3.7rem;
-      font-weight: $fontWeight400;
-      letter-spacing: 3.55px;
-      transform: scale(1.025, 1.25);
-      color: #2487c8;
-      margin-left: -6%;
-      text-shadow: -1px 2px 1px #212121;
-      line-height: 3.25rem;
+      font-weight: 600;
+      font-size: 2.9rem;
+      letter-spacing: 1px;
       text-align: center;
+      transform: scale(1.025, 1.25);
+      color: #FFD700;
+      text-shadow:  1px 1px 2px $shadeOfBlack;
+      text-transform: uppercase;
+      font-family: $fontImportantText;
+      line-height: 4rem;
     }
     /*слоган чопа*/
     .slogan{
-      cursor: default;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: $fontWeight800;
-      transform: scale(1.025, 1.1);
-      color: $shadeOfWhite;
-      filter: contrast(90%);
-      padding: 8% 0 0 0;
-      margin-left: -2%;
-      text-shadow: -1px 4px 1px rgb(9, 24, 38);
+      font-family: $fontText;
+      font-weight: 400 !important;
+      font-size: 2.7rem;
       line-height: 3.25rem;
+      text-shadow: -1px 1px 1px $shadeOfBlack;
+      cursor: default;
       text-align: center;
+      transform: scale(1.025, 1.1);
+      color: $shadeOfBlack;
+      filter: contrast(90%);
+      padding: 8% 0 3% 0;
+      margin-left: -5%;
     }
     /*параметры сетки бутстрап*/
     .col{padding: 0 !important;}
@@ -285,72 +254,122 @@ input {
   }
   /*компонент "Преимущества" - 6 блоков с svg и текстом*/
   #Advantages{
-    a:hover{
-      text-decoration:none !important;
-    }
+    a:hover{text-decoration:none !important;}
     /*высота компонента*/
     height: 15rem;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
     .text_Landing_page{
-      font-weight: $fontWeight800 !important;
-      letter-spacing: -.25px;
       transform: scale(1, 1.1);
-      text-shadow: -.05px .25px .05px rgb(64, 94, 121);
-      font-size: 1.25rem !important;
+      font-size: 1.2rem !important;
       line-height: 1.4rem;
-      color: rgb(9, 24, 38);
+      font-weight: 600;
+      color: $shadeOfBlack;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
     .flex-container{
-      margin-top: 7.5%;
-      margin-left: -3%;
+      margin-top:3%;
+      margin-left: -2%;
       margin-right: 1%;
     }
     /*стили на одинаковые блоки контейнера*/
     .flex-container > div {
-      width: 28.5%;
-      padding: 0.5%;
-      margin: 1.5% 3% 1.25% 0;
+      box-shadow: 0 1px 6px 0 #442e02;
+      background-color: rgba(250, 250, 255, .48);
+      width: 46%;
+      padding: 3% 2%;
+      margin: 1.5% 4% 3% 0;
       position: relative;
       float: left;
-      filter: contrast(120%) brightness(110%);
-      background-color: rgba(250, 250, 255, .7);
-      border: 2.5px solid rgba(255, 255, 255);
-      box-shadow: 0 0 4px $shadeOfWhite, 3px 3px 3px rgb(21, 44, 64);
-
-      &:hover{
-        background-color: rgba(250, 250, 255, .8);
-      }
+      &:hover{background-color: rgba(250, 250, 255, .8);}
     }
     /*общие стили для svg для данного компонента (Преимущества)*/
     svg{
-      filter: contrast(120%) brightness(130%);
-      margin: 5% auto;
       display: block;
-      width: 60px !important;
-      height: 60px !important;
+      width: 75px !important;
+      height: 75px !important;
+      float: left;
       border-radius: 10%;
       padding: .5%;
       /*стили цветов для svg*/
-      .color_inside{fill: white;}
-      .color_strokes_inside{fill: #333333;}
-      .color_inside_small_object{fill:#2487c8;}
+      .color_strokes_inside{fill: #333333;
+        stroke: rgba(212, 212, 217, 0.48);
+        stroke-width: 1;
+      }
+      .color_inside_small_object{fill: #FFD700;}
       .outline{
-        stroke:#333333;
+        stroke:$shadeOfBlack;
         stroke-width: 3;
       }
-      .bold_outline{
-        stroke:#333333;
-        stroke-width: 6;
-      }
+    }
+  }
+  /*компонент "Услуги" (виды деятельности)*/
+  #Services{
+    padding: 2.5% 0;
+    h2{
+      color:#c3c355;
+      text-shadow: 0 0 3.25px $shadeOfBlack;
+    }
+    /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
+    .text_Landing_page{
+      padding: 2% 0;
+      color: $shadeOfBlack;
+    }
+    /*абзацы*/
+    p{margin: 0 !important;}
+    /*блоки-ссылки с картинками и кнопками*/
+    .flex-container > a {
+      width: 30.5%;
+      margin: 0 0 2% 2.5% !important;
+    }
+    /*картинки (изменение/добавление стилей касательно только этого компонента (Услуги))*/
+    img{
+      width: $imgWidth100percent;
+      filter: contrast(105%) brightness(105%) !important;
+    }
+    a{filter: contrast(100%) !important;}
+    /*кнопки*/
+    .btn {
+      box-shadow:
+        0 30px 0 -20px $backgroundPage,
+        0 -30px 0 -20px $backgroundPage,
+        30px 0 0 -20px $backgroundPage,
+        -30px 0 0 -20px $backgroundPage,
+        0 0 0 4px #ffff00;
+      padding: 2% !important;
+      border-radius: unset !important;
+      background-color: rgba(250, 250, 255, .45) !important;
+      /*кнопки при наведении*/
+      &:hover {background-color: rgba(250, 250, 255, .7) !important;}
     }
   }
   /*компонент "Типы" - 3 ссылки-картинки*/
   #Type{
     /*общие стили на весь компонент (Type) в целом*/
     display: flex;
-    height: 40vh;
     max-width: 100%;
+    img{
+      width: $imgWidth100percent;
+      height: min-content;
+      min-height: 20vh;
+      max-height: 100%;
+    }
+    .row{
+      display: flex;
+      min-width: 100%;
+      height: auto;
+      .col{
+        padding: 0 !important;
+        filter:blur(0.11px);
+        &:first-child,&:nth-child(2){margin-right: .3%;}
+        &:hover{
+          filter:contrast(115%) !important;
+          h2{text-decoration: underline;}
+        }
+      }
+    }
     /*стили для места где расположен текст*/
     .container div{
       text-align: left;
@@ -370,134 +389,30 @@ input {
     .text_Landing_page{
       letter-spacing: -.5px;
       color: $shadeOfWhite;
-    }
-    /*ссылка-картинка - общие стили на каждую*/
-    .section{
-      flex: 1;
-      display: flex;
-      height: 100%;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      color: #fff !important;
-      transition: flex .4s ease;
-      position: relative;
-      filter: brightness(80%);
-      /*ссылки (цвет,тень)*/
-      a{
-        color: $shadeOfWhite;
-        text-decoration:none !important;
-        /*при наведении*/
-        &:hover{
-          font-weight: $fontWeight800 !important;
-          text-decoration:none !important;
-        }
-      }
-      /*заголовок при наведении*/
-      &:hover h2{text-decoration:underline;}
-      /*затемнение ссылки-картинки*/
-      .overlay {
-        background-color: rgba(0, 0, 0, 0.3);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transition: background-color .8s ease;
-      }
-      /*затемнение ссылки-картинки при наведении*/
-      &:hover .overlay {background-color: rgba(0, 0, 0, 0.05);}
-      /*место с текстом - более видимое, чем фоновые картинки*/
-      .content {
-        z-index: 1;
-        text-shadow: #000000 3px 3px  5px;
-      }
-      /*картинки на каждый блок*/
-      &:first-child{
-        background: url(../../static/Landing_page/about_company.jpg) ;/*картинка на блок - о компании*/
-        background-size: 100% 100%;
-      }
-      &:nth-child(2){
-        background: url(../../static/Landing_page/tariffs.jpg);/*картинка на блок - тарифы*/
-        background-size: 100% 100%;
-      }
-      &:last-child{
-        background: url(../../static/Landing_page/thanksgiving_letters.jpg);/*картинка на блок - лицензии*/
-        background-size: 100% 100%;
-      }
-    }
-  }
-  /*компонент "Услуги" (виды деятельности),"Обратная связь"*/
-  #Services, #Feedback{
-    padding: 2.5% 0;
-    filter: brightness(90%);
-  }
-  /*компонент "Услуги" (виды деятельности),"Наши клиенты" - общие стили (фон)*/
-  #Services, #Clients{background:linear-gradient( to bottom, #42607f, #718199,#718199, #42607f);}
-  /*компонент "Услуги" (виды деятельности)*/
-  #Services{
-    /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
-    .text_Landing_page{
-      padding: 2% 0;
-      letter-spacing: -.8px;
-      color: $shadeOfBlue;
-      text-shadow: 1px 1px 0 $shadeOfBlue, 2px 2px 6px $shadeOfBlue !important;
-      border: 2.5px solid rgba(255, 255, 255, 0.19);
-    }
-    /*абзацы*/
-    p{margin: 0 !important;}
-    /*блоки-ссылки с картинками и кнопками*/
-    .flex-container > a {
-      width: 30.5%;
-      margin: 0 0 2% 2.5% !important;
-    }
-    /*картинки (изменение/добавление стилей касательно только этого компонента (Услуги))*/
-    img{
-      box-shadow: 2px 5px 5px #273849;
-      width: $imgWidth100percent;
-      filter: brightness(90%)!important;
-    }
-    /*кнопки*/
-    .btn {
-      background-color: rgba(250, 250, 255, .45) !important;
-      box-shadow: 2px 5px 5px #273849;
-      filter: contrast(105%) brightness(145%);
-      /*кнопки при наведении*/
-      &:hover {
-        background-color: rgba(250, 250, 255, .9) !important;
-        /*картинки*/
-        img {filter: brightness(95%) !important;}
-      }
+      filter: none !important;
     }
   }
   /*компонент "Важные числа"*/
   #Import_numbers{
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
     .text_Landing_page{
-      color: $shadeOfWhite;
       transform: scale(1.05);
-      margin-top: -5%;
-      letter-spacing: -.2px;
-      border: none;animation: up-down 5s infinite;
+      font-weight: 600;
+      letter-spacing: .75px;
+      font-family: $fontImportantText;
+      border: none;
     }
     /*цифры*/
     .number{
       font-size:5.25rem !important;
-      text-align: $centerText;
-      font-family: 'Vollkorn', serif;
-      font-weight: $fontWeight400;
-      text-shadow: 2px 2px 2px $shadeOfBlue;
+      text-align: center;
+      font-family: $fontNumber;
+      font-weight: 400;
+      text-shadow: 3px 3px 3px $shadeOfBlack;
       transform: scale(1.35);
       letter-spacing: -4px;
       margin-top: -5%;
-      color: $shadeOfWhite;
-      animation: up-down 5s infinite;
-    }
-    /*смена тени у цифр*/
-    @keyframes up-down{
-      0%    {text-shadow: 2px 2px 2px $shadeOfBlue;}
-      25%   {text-shadow: 3px 3px 3px $shadeOfBlue;}
-      50%   {text-shadow: 4.2px 4.2px 4.2px $shadeOfBlue;}
-      75%   {text-shadow: 3px 3px 3px $shadeOfBlue;}
-      100%  {text-shadow: 2px 2px 2px $shadeOfBlue;}
+      color: #ffff00;
     }
     /*контейнер с цифрами и текстом*/
     .flex-container{
@@ -513,86 +428,87 @@ input {
   }
   /*компонент "Обратная связь"*/
   #Feedback{
-    background: url("../../static/Landing_page/feedback.jpg") 100% 100% no-repeat;
-    background-size: 100% 100%;
+    padding: 4% 0 2% 0;
     /*заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)*/
     h2{
-      margin-top: 3%;
+      margin-top: 2.5%;
+      color: #c3c355;
       padding-bottom: 0 !important;
     }
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)*/
     .text_Landing_page{
       text-align: center !important;
       margin-top: 2%;
-      width: 95%;
-      margin-left: 4.5%;
+      width: 100%;
       line-height: 1.8rem;
-      letter-spacing: -1px;
-      text-shadow: 2px 2.5px 2.5px $shadeOfBlue;
-      color: #cfdde8;
     }
     /*номер телефона*/
     .call_telephone{
-      font-size: 4rem;
+      font-family: $fontNumber;
+      color: $shadeOfBlack;
+      font-weight: 500;
+      text-shadow:  1px 1px .5px $shadeOfBlack;
+      font-size: 3.8rem;
+      display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 1.5%;
+      margin-top: 2.5%;
       padding: 3.5% 0;
-      border: 1px solid black;
       letter-spacing: 1px;
-      display: block;
-      background: rgba(255, 255, 255, 0.28);
       width: 77%;
-      color: white;
-      font-family: 'Vollkorn', serif;
-      font-weight: 500;
-      text-shadow: 3px 3px 3px black;
       border-radius: 5px;
-      box-shadow: 5px 5px 5px $shadeOfBlue;
       /*при наведении*/
       &:hover{
         text-decoration: none;
         background: rgba(255, 255, 255, 0.18);
-        border:2px solid black;
       }
     }
-    /*добавление стилей на место, где находится форма заявки (обратной связи)*/
-    .place_form{
-      background: rgba(255, 255, 255, 0.55);
-      border: 3px solid black;
+    .col-6{padding: 0 !important;}
+    .row{
+      padding: 3.5%;
+      box-shadow: 5px 5px 5px 0 #57606f, inset 3px 3px 10px 0 #384250, 3px 3px 10px 3px $backgroundPage;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
     }
+    /*добавление стилей на место, где находится форма заявки (обратной связи)*/
+    .place_form{background: rgba(255, 255, 255, 0.55);}
   }
   /*компонент "Наши клиенты"*/
   #Clients{
-    padding: 2.5% 0 0 0;
+    padding: 0 0 2% 0;
     /*карусель для мобильной версии*/
     #carousel_mobile{
       display: none;
       padding: 0 6.5%;
-      /*область, отвечающая за картинки*/
-      .carousel-inner{box-shadow: 7px 7px 7px $shadeOfBlue;}
     }
     /*карусель для большой версии*/
     #carousel_desktop{
       /*отступы блоков с картинками*/
       .row{margin-bottom: 4.5% !important;}
     }
+    .row{
+      margin-top: 1.5% !important;
+      margin-right: 1% !important;
+      margin-left: 1% !important;
+    }
+    a{filter: contrast(100%) !important;}
     /*картинки (добавление/изменение стилей - касательно только данного компонента (Наши клиенты)*/
     img{
-      box-shadow: 7px 7px 7px $shadeOfBlue;
       width: $imgWidth100percent;
-      filter: brightness(90%) !important;
-      /*наведение на блок (картинку)*/
-      &:hover {filter: brightness(100%) !important;}
+      box-shadow:
+        0 30px 0 -20px $backgroundPage,
+        0 -30px 0 -20px $backgroundPage,
+        30px 0 0 -20px $backgroundPage,
+        -30px 0 0 -20px $backgroundPage,
+        0 0 0 4px #ffff00;
+      padding: 2%;
     }
   }
   /*компонент "Карта"*/
   #Map{
-    /*небольшое затемнение карты*/
-    background-color: rgba(39, 70, 142);
     /*сама карта (с гугла)*/
     iframe {
-      filter: opacity(55%) brightness(95%) contrast(110%);
+      filter: opacity(75%) brightness(95%) contrast(110%);
       min-height: 400px;
       height: auto;
       width:100% !important;
@@ -605,78 +521,99 @@ input {
 #contact, #Feedback{
   /*место, где находится форма заявки (обратной связи)*/
   .place_form{
-    padding: 3%;
-    margin-top: 5%;
+    padding: 2.5%;
+    box-shadow: 2px 2px 2px 0 #e6e686, inset 2px 2px 5px 0 #e6e686, 3px 3px 10px 3px #384250;
     border-radius: 5px;
-    box-shadow: 8px 8px 8px $shadeOfBlue;
   }
   /*кнопки*/
   button{
+    font-family: $fontText;
+    font-weight: 600 !important;
     display: block;
-    margin: 8% auto 0 auto;
+    margin: 1% auto 1% auto;
+    border-radius: 5px;
+    background: radial-gradient(#f1f0f0,rgba(184, 192, 215, 0.8));
+    box-shadow: 2px 2px 2px 0 #535f6f, inset 2px 2px 5px 0 #535f6f, 2px 2px 5px 2px rgba(102,255,228,0);
     padding:  2%;
-    width: 60%;
-    font-family: $font;
-    font-weight: $fontWeight800;
-    text-shadow: 0.5px 0.5px 1px $shadeOfBlue;
-    font-size: 1.3rem;
-    border-width: 2px 0;
-    border-style: solid none;
-    border-color: $shadeOfBlue;
-    background:radial-gradient(#acb1c2, #afb3cb, rgba(64, 107, 139, 0.65));
-    box-shadow: 2px 2px 2px $shadeOfBlue;
-    transition: 0.2s;
+    width: 40%;
+    font-size: 1.08rem;
+  }
+  .text_descr{margin-top: 5%;}
+  .checkbox{
+    height: 16px;
+    width: 16px;
   }
   /*при наведении, активная*/
-  button:hover, button:active {background:radial-gradient( #afb3cb , rgba(64, 107, 139, 0.65) 90% );}
+  button:hover, button:active  {background: radial-gradient(#e5e2e2, rgba(146, 156, 182, 0.8));}
 }
 /*страница "О нас"*/
 #company{
   /*svg для данной страницы ("О нас")*/
   svg{
     filter: contrast(120%) brightness(130%);
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 85px;
     float: left;
     border-radius: 50%;
-    box-shadow: 0 0 6.5px $shadeOfBlack;
     /*стили цветов для svg*/
-    .color_inside{fill: rgba(255, 255, 255, 0.65);}
-    .color_strokes_inside{fill: #000000;}
-    .color_inside_small_object{fill:#14608F;}
-    .color_shadow{fill: #cccccc;}
-    .outline{
-      stroke:#000000;
-      stroke-width: 3;
+    .color_inside{fill: none;}
+    .color_strokes_inside{
+      fill: #d2d270;
+      stroke:$shadeOfBlack;
+      stroke-width: 2;
+    }
+    .color_inside_small_object{
+      fill:$shadeOfBlack;
+      stroke: #737c8b;
+      stroke-width: 3.5;
+    }
+    .color_shadow{
+      fill:  #d2d270;
+      stroke:$shadeOfBlack;
+      stroke-width: 1;
     }
     .bold_outline{
-      stroke:#000000;
-      stroke-width: 8.0625;
+      stroke:$shadeOfBlack;
+      stroke-width: 4.5;
     }
   }
   /*самая первая картинка на странице "О нас"*/
   .first_img{
+    box-shadow:
+    0 30px 0 -20px $backgroundPage,
+    0 -30px 0 -20px $backgroundPage,
+    30px 0 0 -20px $backgroundPage,
+    -30px 0 0 -20px $backgroundPage,
+    0 0 0 4px  #ffff79;
+    padding: .5%;
     float: left;
-    width: 38%;
+    width: 30%;
     margin: 0 1.5% 0.5% 0;
   }
   /*блоки принципов*/
   .flex-container > div {
-    width: 33%;
-    margin-bottom: 0.5%  !important;
+    width: 50%;
+    margin-bottom: 1.8%  !important;
     /*svg принципов*/
     svg {
       float: left;
       margin-left: -2%;
-      margin-top: 70%;
       padding: 10%;
     }
+    .col{padding-left: 50px !important;}
     /*абзац*/
     p{margin-bottom: 0.5rem !important;}
   }
   /*вторая картинка на странице "О нас"*/
   .second_img{
-    width: 25%;
+    box-shadow:
+      0 30px 0 -20px $backgroundPage,
+      0 -30px 0 -20px $backgroundPage,
+      30px 0 0 -20px $backgroundPage,
+      -30px 0 0 -20px $backgroundPage,
+      0 0 0 4px  #ffff79;
+    padding: .5%;
+    width: 23%;
     float: right;
     margin-left: 2%;
     margin-bottom: 1%
@@ -685,88 +622,113 @@ input {
   .stage{
     /*выделение фраз в тексте - для красоты*/
     .emphasized{margin-bottom: 0.5rem !important;}
+    .col-1 .emphasized{
+      font-size: 2.65rem;
+      margin-right: 0.2%;
+      padding: 0 4px;
+      text-shadow: 1px 2px 0 $shadeOfBlack;
+      font-weight: 500 !important;
+      color:  #d2d270;
+    }
+    .number_stage {
+      flex: 0 0 5% !important;
+      max-width: 5% !important;
+    }
+    .name_stage{
+      flex: 0 0 13.5% !important;
+      max-width: 13.5% !important;
+    }
+    .col-1,.col-2{
+      padding: 0 !important;
+      display: flex;
+      align-items: center
+    }
     /*блок под каждый этап*/
-    div{padding-bottom: 1.5%;}
+    div{padding-bottom: 0.25%;}
     /*параметры сетки бутстрап*/
     .col-5{padding-left: 0  !important;}
   }
   /*как выглядит список (сдвигаем)*/
   ul{margin-left: -3% !important;}
 }
-/*страница "Тарифы", компонент "Тарифы"(после каждой услуги)*/
-#tariffs,#tariffs_content{
-  /*таблица*/
-  table{
-    background: rgba(250, 250, 250, 0.23);
-    margin-bottom: 0 !important;
-  }
-  /*заголовок таблицы*/
-  .table th{
-    background: rgb(15 56 76 / 24%);
-  }
-  /*заголовок таблицы, ячейка таблицы*/
-  .table th, .table td {
-    border: 1px solid rgba(250, 250, 250, 0.23) !important;
-    box-shadow: 0 0 1px 1px #0f2538;
-    padding: 0.2rem !important;
+/*страница "Тарифы"*/
+#tariffs{
+  clear: left;
+  td,th {
+    padding: 0.8rem 0.35rem;
+    box-shadow: 0 1.5px 1.5px 0 #384250;
   }
   /*при наведении на ячейки (строка)*/
   tr:hover{background: rgba(250, 250, 250, 0.18);}
   /*заголовок таблицы, второй и 3 столбец таблицы*/
-  th,tr td:nth-child(2),tr td:nth-child(3){text-align: $centerText !important;}
-  /*заголовоки - касательно только для страницы "Тарифы" и компонента "Тарифы"*/
-  h2,h3{
-    text-shadow: 0 0 0.15px $shadeOfBlack;
-    text-decoration: underline;
+  th,tr td:nth-child(2),tr td:nth-child(3){text-align: center !important;}
+  /*заголовоки - касательно только для страницы "Тарифы"*/
+  h3{
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 0 !important;
   }
-}
-/*страница "Тарифы"*/
-#tariffs{
-  /*блок с таблицей и картинкой*/
-  .row{margin-bottom: 2% !important;}
-  /*параметры сетки бутстрап (картинка с текстом)*/
-  .col-3{
-    padding: 0 4.5px !important;
-    text-align:$centerText;
-    background: rgba(250, 250, 250, 0.18);
-    border: 1px solid rgba(250, 250, 250, 0.43) !important;
-    box-shadow: 0 0 3px 2px #1a4971;
-    /*картинки страницы "Тарифы"*/
-    img{
-      width: 60%;
-      margin-bottom: 1%;
-      border-radius: 40%;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      box-shadow: none;
+  /*таблица*/
+  table {
+    border: none !important;
+    border-collapse: collapse;
+    margin-bottom: 0 !important;
+    tr td:first-child{
+      width: 30%;
+      text-align: center;
+      font-weight: 500;
+      text-shadow: 0 0 0.1px $shadeOfBlack;
     }
   }
-  /*параметры сетки бутстрап (таблица)*/
-  .col{padding: 0 2rem 0 0 !important;}
-}
-/*компонент "Тарифы"(после каждой услуги)*/
-#tariffs_content{
-  /*заголовки компонента "Тарифы"*/
-  h2,h3{text-align: $centerText;}
-  /*блоки под каждый тип тарифа*/
-  .flex-container > div {
-    width: 48%;
-    margin: 0 1% !important;
-    /*последний блок*/
-    &:last-child{margin-left: 25% !important;}
+  .table thead th {
+    font-family: $fontImportantText;
+    font-weight: 700 !important;
+    border-bottom: none !important;
+  }
+  .flex-container > .type{
+    background: rgba(250, 250, 250, 0.2);
+    width: 31.8%;
+    box-shadow: 0 1px 7px 0 #384250;
+    margin:0 0.75%;
+  }
+  /*картинки страницы "Тарифы"*/
+  img{
+    background: $backgroundPage;
+    width: 47%;
+    box-shadow:
+      0 20px 0 -10px $backgroundPage,
+      0 -20px 0 -10px $backgroundPage,
+      20px 0 0 -10px $backgroundPage,
+      -20px 0 0 -10px $backgroundPage,
+      0 0 0 2.5px  #ffff79;
+    margin: 6% auto;
+    display: block;
+    padding: 1%;
+  }
+  p{
+    padding: 1%;
+    text-align: center;
   }
 }
 /*все страницы c "Услуги"*/
 .services{
+  #tariffs{
+    background: transparent;
+    h1,p,img{display: none;}
+  }
   /*первая картинка на каждой странице "Охрана ...."*/
   .first_img{
     float: left;
-    width: 40%;
+    width: 30%;
+    box-shadow:
+      0 30px 0 -20px $backgroundPage,
+      0 -30px 0 -20px $backgroundPage,
+      30px 0 0 -20px $backgroundPage,
+      -30px 0 0 -20px $backgroundPage,
+      0 0 0 4px  #ffff79;
+    padding: .5%;
     margin: 0 2% 0.5% 0;
   }
-  /*картинки*/
-  img{filter: brightness(90%) contrast(100%) !important}
   /*svg страниц с "Услуги"*/
   svg{
     margin-top: -1%;
@@ -776,26 +738,46 @@ input {
   /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
   .second_img{
     float: right;
-    width: 24%;
-    margin: 0 2% 0.5% 0;
+    box-shadow:
+      0 30px 0 -20px $backgroundPage,
+      0 -30px 0 -20px $backgroundPage,
+      30px 0 0 -20px $backgroundPage,
+      -30px 0 0 -20px $backgroundPage,
+      0 0 0 4px #ffff79;
+    padding: .5%;
+    width: 21%;
+    margin: -3% 2% 0.5% 0;
   }
   /*перечень вариантов охраны или груза на страницах "Личная охрана", "Сопровождение грузов"*/
   .varieties{margin-left: -3%;}
   /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
   .third_img{
     float: left;
+    box-shadow:
+      0 30px 0 -20px $backgroundPage,
+      0 -30px 0 -20px $backgroundPage,
+      30px 0 0 -20px $backgroundPage,
+      -30px 0 0 -20px $backgroundPage,
+      0 0 0 4px #ffff79;
+    padding: .5%;
     width: 35%;
-    margin: 9% 2% 12% 2%;
+    margin: 2% 2% 2% 0;
   }
 }
 /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
 .services_with_types{
   /*заголовок (разновидности)*/
-  h6{text-align: $centerText;}
+  h6{text-align: center;}
   /*ссылки при наведении*/
   a:hover{text-decoration: none !important;}
+  .emphasized{text-align: center;}
+  .type_guard_beautiful_block .emphasized{
+    text-transform: uppercase;
+    box-shadow: inset 0 4px 2px -3px #e6e686, inset 0 -4px 2px -3px #e6e686;
+    padding: .65% 0;
+  }
   /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
-  .flex-container > div {
+  .flex-container > .type_guard_beautiful_block {
     width: 48%;
     margin: 0 1% 2% 1% !important;
     /*параметры сетки бутстрап (перечисление охран)*/
@@ -806,8 +788,7 @@ input {
       /*картинка*/
       img {
         width: $imgWidth100percent;
-        height: 180px;
-        margin-top: 5%;
+        height: 160px;
       }
     }
     /*как выглядит список (сдвигаем)*/
@@ -815,28 +796,30 @@ input {
   }
   /*блоки под типы охран*/
   .type_guard_beautiful_block{
-    height: 280px;
+    height: 230px;
     margin-bottom: 5%;
+    &:hover .emphasized{
+      box-shadow: inset 0 4px 2px -3px #e6e686,
+      inset 0 -4px 2px -3px #e6e686,
+      0 0 3px 0 #575731;
+    }
   }
   /*svg (щит)*/
   svg{margin-left: 25%;}
 }
 /*страница "Охрана организаций"*/
 #guard_of_organizations{
-  /*svg все кроме второго блока*/
-  .type_guard_beautiful_block:not(:nth-child(2)) svg{margin-left: 0;}
   /*последний блок*/
   .type_guard_beautiful_block:last-child{
     box-shadow: none;
+    padding: 0 ;
     /*картинка*/
     img{
       width: $imgWidth100percent;
-      height: 270px;
+      height: 230px;
       box-shadow: none;
-      padding: 2% 4% 4% 4%;
+      padding:0;
     }
-    /*наведение на последний блок*/
-    &:hover{border: 3px solid rgba(250, 250, 250, 0.23);}
   }
   /*блоки*/
   .flex-container > div {
@@ -858,9 +841,14 @@ input {
     img{
       width: 32.5%;
       float: right;
-      margin-bottom: 2%;
-      margin-left: 1%;
-      margin-right: 5%;
+      box-shadow:
+        0 30px 0 -20px $backgroundPage,
+        0 -30px 0 -20px $backgroundPage,
+        30px 0 0 -20px $backgroundPage,
+        -30px 0 0 -20px $backgroundPage,
+        0 0 0 4px  #ffff79;
+      padding: .5%;
+      margin: -2% 5% 0 1%;
     }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -3%;}
@@ -870,18 +858,42 @@ input {
 #technical_means{
   /*картинки*/
   img{
-    float: left;
-    width: 45%;
+    width: $imgWidth100percent;
     margin: 2% 2% 0.8% 0.8%;
   }
   /*блок со списком и картинкой*/
   .flex-container > div {
+    background: #b7c4d4;
+    border: 1px solid #e6e686;
+    box-shadow: inset 0 0 6px #e6e686;
     width: 48%;
     padding: 0.5%;
     margin: 1% !important;
+    &:hover{
+      box-shadow:
+        inset 0 0 6px #e6e686,
+        0 1px 6px 0 #575731;
+    }
+    &:hover .emphasized{
+      box-shadow: inset 0 4px 2px -3px #e6e686,
+      inset 0 -4px 2px -3px #e6e686,
+      0 0 3px 0 #575731;
+    }
+  }
+  .row{
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+  }
+  .emphasized{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.65% 0;
+    box-shadow: inset 0 4px 2px -3px #e6e686,
+    inset 0 -4px 2px -3px #e6e686;
   }
   /*как выглядит список (сдвигаем)*/
   ul{
+    margin-top: 5%;
     margin-left: -15%;
     /*список*/
     li {padding-bottom: 0.5% !important;}
@@ -893,27 +905,56 @@ input {
 #special_equipment{
   /*первая картинка*/
   .first_img{
+    box-shadow:
+      0 30px 0 -20px $backgroundPage,
+      0 -30px 0 -20px $backgroundPage,
+      30px 0 0 -20px $backgroundPage,
+      -30px 0 0 -20px $backgroundPage,
+      0 0 0 4px  #ffff79;
+    padding: .5%;
     float: left;
     width: 25%;
     margin: 0 2% 0.8% 0;
   }
   /*блоки с названием, текстом и картинкой*/
   .flex-container > div {
-    width: 48%;
-    padding: 0.65%;
-    margin: 0.8% !important;
+    background: #b7c4d4;
+    width: 23%;
+    border: 1px solid #e6e686;
+    box-shadow: inset 0 0 6px #e6e686;
+    margin: 1% !important;
+    &:hover {
+      box-shadow:
+        inset 0 0 6px #e6e686,
+        0 1px 6px 0 #575731;
+    }
+    &:hover .emphasized{
+      box-shadow: inset 0 4px 2px -3px #e6e686,
+      inset 0 -4px 2px -3px #e6e686,
+      0 0 3px 0 #575731;
+    }
     /*блоки с названием, текстом и картинкой*/
     img{
-      width: 18.5%;
-      float: left;
-      margin: 0 2% 0 0;
-      filter: contrast(120%) brightness(110%);
+      padding: 6%;
+      width: 55%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       box-shadow: none;
     }
     /*выделение фраз в тексте - для красоты*/
-    .emphasized{padding-top: 1.5%;}
+    .emphasized{
+      text-transform: uppercase;
+      text-align:center;
+      box-shadow: inset 0 4px 2px -3px #e6e686,
+      inset 0 -4px 2px -3px #e6e686;
+      padding: 1%;
+    }
     /*абзац(текст)*/
-    p{margin: 0 !important;}
+    p{
+      padding: 3%;
+      margin: 0 !important;
+    }
   }
 }
 /*страница "Лицензии"*/
@@ -921,14 +962,25 @@ input {
   /*картинки*/
   img{
     width: $imgWidth100percent;
-    filter: brightness(65%) !important;
+    box-shadow:
+    0 25px 0 -15px $backgroundPage,
+    0 -25px 0 -15px $backgroundPage,
+    25px 0 0 -15px $backgroundPage,
+    -25px 0 0 -15px $backgroundPage,
+    0 0 0 4px  #ffff79;
+    padding: .4%;
     /*наведение на картинку*/
     &:hover{
-      filter: brightness(75%)!important;
+      box-shadow:
+        0 30px 0 -20px $backgroundPage,
+        0 -30px 0 -20px $backgroundPage,
+        30px 0 0 -20px $backgroundPage,
+        -30px 0 0 -20px $backgroundPage,
+        0 0 0 4px #ffff00;
     }
   }
   /*заголовок (Лицензии,Благодарные и рекомендательные письма)*/
-  h4{padding: 1rem 0;}
+  h4{padding: 0 0 1rem 0;}
   /*картинки лицензий и благодарностей*/
   .flex-container > img {
     width: 18%;
@@ -941,70 +993,82 @@ input {
   /*блоки с картинкой и названием клиента*/
   .flex-container > div {
     width: 30%;
-    margin: 0 1.5% 0.5% 1.5% ;
-    img{width: $imgWidth100percent;}
+    margin: 0 1.5% 0.5% 1.5%;
     /*наведение на картинку*/
-    &:hover img{filter: brightness(110%)!important;}
+    &:hover img{
+      box-shadow:
+        0 30px 0 -20px $backgroundPage,
+        0 -30px 0 -20px $backgroundPage,
+        30px 0 0 -20px $backgroundPage,
+        -30px 0 0 -20px $backgroundPage,
+        0 0 0 4px #ffff00;
+    }
+    img{
+      width: $imgWidth100percent;
+      box-shadow:
+        0 25px 0 -15px $backgroundPage,
+        0 -25px 0 -15px $backgroundPage,
+        25px 0 0 -15px $backgroundPage,
+        -25px 0 0 -15px $backgroundPage,
+        0 0 0 4px  #ffff79;
+      padding: 1%;
+    }
   }
   /*выделение фраз в тексте - для красоты*/
   .emphasized{
     padding-top: 2.5%;
     margin-bottom: 0.5rem !important;
-    text-align: $centerText;
+    text-align: center;
   }
 }
 /*страница "Контакты"*/
 #contact{
   /*заголовок (Общество с ограниченной ответственностью ...)*/
   h2{
-    margin-top: 3%;
-    font-family: Tahoma, Arial, verdana, Helvetica, sans-serif;
-    font-weight: $fontWeight800;
+    font-family: $fontImportantText;
+    color: $shadeOfBlack;
+    font-weight: 500 !important;
     text-align: left;
-    color:$shadeOfBlue;
+    text-shadow: 0px -1px 0 $shadeOfBlack;
   }
   /*блок с информацикй и формой заявки (обратной связи)*/
-  .row{padding-bottom: 3%;}
+  .row{padding-bottom: 4%;}
   /*параметры сетки бутстрап (информация (svg, название информации, информация))*/
   .col .row{padding-bottom: 1.5%;}
   /*параметры сетки бутстрап (информация (название информации и информация))*/
   .col .col{
-    height: 55px;
     display: flex;
     align-items: center
+  }
+  .flex-container{margin-top: 2.5rem;}
+  .col .row{
+    width: 50%;
+    .col{padding-left: 45px !important;}
+    .col-1{margin-left: -6%;}
   }
   /*svg страницы "Контакты"*/
   svg{
     filter: contrast(120%) brightness(130%);
-    width: 50px;
-    height: 50px;
-    border: 2px solid rgba(9, 50, 78, 0.62);
-    background: rgba(28, 97, 146, 0.1);
-    border-radius: 5px;
-    padding: 8%;
+    width: 60px;
+    height: 60px;
     /*стили цветов для svg*/
-    .color_inside{fill: white;}
-    .color_shadow{fill:#cccccc;}
-    .outline{fill:#333333;}
-    .bold_outline{
-      stroke:#333333;
-      stroke-width: 5;
+    .color_inside{fill: none;}
+    .color_shadow{fill:none;}
+    .outline{
+      fill:  #d2d270;
+      stroke:$shadeOfBlack;
+      stroke-width: 2;
     }
-    .very_bold_outline{
-      stroke:#333333;
-      stroke-width: 18;
-    }
+    .color{fill: #d2d270;}
   }
   /*место, где находится форма заявки (обратной связи)*/
   .place_form{background: rgba(232, 237, 245, 0.25);}
   /*параметры сетки бутстрап (форма заявки - обратной связи)*/
-  .col-5{padding-right: 2.5%;}
   /*место под карту*/
   .map {
-    box-shadow: 7px 7px 7px $shadeOfBlue;
     /*карта с гугл-карт*/
     iframe {
-      filter: opacity(75%) brightness(95%) contrast(110%);
+      filter: opacity(85%) brightness(92%);
       min-height: 500px;
       height: auto;
       width:100% !important;
@@ -1017,7 +1081,7 @@ input {
 
 @media screen and (max-width: 355px) {
   /*текст на всех страницах (кроме главной)*/
-  .text,a,.li_text{
+  .text,a{
     font-size: 0.9rem !important;
     line-height: 1.15rem !important;
   }
@@ -1059,7 +1123,7 @@ input {
       /*текст на главной странице (касательно компонента "Услуги")*/
       .text_Landing_page {
         height: 3rem;
-        text-shadow: 1px 1px 0 #0b1e2d, 1px 1px 1px #0b1e2d !important;
+        text-shadow: 1px 1px 0 $shadeOfBlack, 1px 1px 1px $shadeOfBlack !important;
       }
     }
     /*компонент "Важные числа"*/
@@ -1067,9 +1131,7 @@ input {
       /*цифры*/
       .number{font-size:2.25rem !important;}
       /*каждый блок с цифрой и текстом отдельно*/
-      .flex-container > div{
-        margin: 1.5% 1% 0.5% 1% !important;
-      }
+      .flex-container > div{margin: 1.5% 1% 0.5% 1% !important;}
     }
     /*компонент "Обратная связь"*/
     #Feedback{
@@ -1158,12 +1220,6 @@ input {
     line-height: 0.85rem !important;
     margin-top: -1%;
   }
-  /*список,названия пунктов охраны*/
-  .li_text,.name_type_guard{
-    font-size: 1.15rem;
-    line-height: 1.2rem;
-    margin-bottom: -1.5%;
-  }
   /*общие стили страниц (кроме главной)*/
   .page{
     padding: .8rem 0 !important;
@@ -1172,9 +1228,7 @@ input {
     /*как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране*/
     .import{
       /*объектов, а в охране транспорта/промышленных объектов)*/
-      ul li:before {
-        font-size:25px !important;
-      }
+      ul li:before {font-size:25px !important;}
     }
   }
   /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
@@ -1221,7 +1275,7 @@ input {
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       height: auto;
-      background: url(../../static/Landing_page/background_3.jpg) 100% 100% no-repeat !important ;
+      background: url(../../static/Landing_page/134.jpg) 100% 100% no-repeat !important ;
       background-size: 100% 100% !important;
       filter: brightness(72%);
       animation: none;
@@ -1233,7 +1287,7 @@ input {
         line-height: 1.8rem;
         filter: brightness(130%);
         letter-spacing: -.4px;
-        text-shadow: -.9px 2px .9px #02022a, 0 0 2px #02022a, 0 0 5px #02022a;
+        text-shadow: -.9px 2px .9px $shadeOfBlack, 0 0 2px $shadeOfBlack, 0 0 5px $shadeOfBlack;
       }
       /*слоган чопа*/
       .slogan{
@@ -1368,7 +1422,7 @@ input {
     svg{
       width: 45px;
       height: 45px;
-      box-shadow: 0 0 3.5px black !important;
+      box-shadow: 0 0 3.5px $shadeOfBlack !important;
     }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -10% !important;}
@@ -1668,13 +1722,6 @@ input {
     line-height: 0.85rem !important;
     margin-top: -1%;
   }
-  /*список,названия пунктов охраны*/
-  .li_text,.name_type_guard{
-    font-size: 1.15rem;
-    line-height: 1.2rem;
-    padding-bottom: 1% !important;
-    margin-bottom: -1.5%;
-  }
   /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
   .place_h1{margin-bottom: .6rem;}
   /*заголовки на всех страницах (кроме главной)*/
@@ -1891,7 +1938,7 @@ input {
     svg{
       width: 55px;
       height: 55px;
-      box-shadow: 0 0 3.5px black !important;
+      box-shadow: 0 0 3.5px $shadeOfBlack !important;
     }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -8% !important;}
@@ -1973,8 +2020,6 @@ input {
     }
     /*перечисление особенности охраны (комплекс мер)*/
     .import,p:nth-child(3){clear: left;}
-    /*список*/
-    .li_text{margin-right: 3%;}
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{width: 30%;}
     /*перечень вариантов охраны или груза на страницах "Личная охрана", "Сопровождение грузов"*/
@@ -2144,13 +2189,6 @@ input {
   .text_descr{
     font-size: 1rem !important;
     line-height: 1rem !important;
-  }
-  /*список,названия пунктов охраны*/
-  .li_text,.name_type_guard{
-    font-size: 1.15rem;
-    line-height: 1.2rem;
-    padding-bottom: 1% !important;
-    margin-bottom: -1.5%;
   }
   /*заголовки на всех страницах (кроме главной)*/
   h1{
@@ -2395,8 +2433,6 @@ input {
     }
     /*перечисление особенности охраны (комплекс мер)*/
     .import,p:nth-child(3){clear: left;}
-    /*список*/
-    .li_text{margin-right: 7%;}
     /*заголовки,которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
     .block_one{clear: left;}
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
@@ -2541,16 +2577,6 @@ input {
     font-size: 1rem !important;
     line-height: 1.2rem !important;
   }
-  /*список,названия пунктов охраны*/
-  .li_text,.name_type_guard{
-    line-height: 1.3rem;
-    padding-bottom: 1.2% !important;
-    margin-bottom: -1.6%;
-  }
-  /*список*/
-  .li_text{font-size: 1.25rem;}
-  /*названия пунктов охраны*/
-  .name_type_guard{font-size: 1.1rem;}
   /*метка в форме заявки (обратной связи)*/
   label{
     font-size: 1.15rem;
@@ -2711,8 +2737,6 @@ input {
       width: 40px;
       height: 42px;
     }
-    /*список*/
-    .li_text{ margin-bottom: -1%;}
     /*перечень вариантов охраны или груза на страницах "Личная охрана", "Сопровождение грузов"*/
     .varieties{ margin-left: -6%;}
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
@@ -2831,13 +2855,6 @@ input {
   .text_descr{
     font-size: 1.15rem !important;
     line-height: 1.3rem !important;
-  }
-  /*список,названия пунктов охраны*/
-  .li_text,.name_type_guard{
-    font-size: 1.25rem;
-    line-height: 1.4rem;
-    padding-bottom: 1.65% !important;
-    margin-bottom: -1%;
   }
   /*заголовки на всех страницах (кроме главной)*/
   h1{
