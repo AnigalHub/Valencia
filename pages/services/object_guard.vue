@@ -4,7 +4,7 @@
       <b-container>
         <img src="../../static/services/object_guard/object_guard.jpg" alt="охрана_объектов" class="first_img"/>
         <p class="text"><span class="emphasized">Охрана объектов </span>- комплексное обеспечение защиты производственного или коммерческого объекта, товарно-материальных ценностей и защиту здоровья сотрудников объекта. Для обеспечения безопасности объекта разрабатывается проект со всеми особенностями и характером деятельности бизнеса и его графиком работы.</p>
-        <p class="text"><u>При составлении проекта работы охранников учитывается:</u></p>
+        <h4 class="text"><u>При составлении проекта работы охранников учитывается:</u></h4>
         <ul class="text">
           <li v-for="nuance in NuancesOfWork" :key="nuance.index">{{nuance.name}}</li>
         </ul>
@@ -12,7 +12,7 @@
         <div class="flex-container">
           <div class="type_guard_beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
             <NuxtLink :to="guard.link">
-              <component :is="guard.svg"/><span class="name_type_guard">{{guard.name}}</span>
+              <p class="emphasized">{{guard.name}}</p>
               <b-row>
                 <b-col cols="5">
                   <img :src="guard.img_src" :alt="guard.img_alt"/>
@@ -26,18 +26,18 @@
             </NuxtLink>
           </div>
         </div>
-        <Tarrifs_content/>
+        <Tariffs/>
       </b-container>
   </div>
 </template>
 
 <script>
-  import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
   import Name_page from "../../components/secondary_pages/name_page";
   import GuardSVG from "../../components/secondary_pages/shield_svg";
+  import Tariffs from "../tariffs";
     export default {
       name: "object_guard",
-      components: {Name_page, Tarrifs_content},
+      components: {Tariffs, Name_page},
       data() {
         return {
           name_page:"Охрана объектов",
@@ -53,7 +53,7 @@
               link:"/services/_object_guard/guard_of_industrial_facilities",
               name:"Охрана промышленных объектов",
               svg:GuardSVG,
-              img_src:"../object_guard/checkpoint.jpg",
+              img_src:"../object_guard/checkpoint.png",
               img_alt:"охрана_коммерческих_объектов",
               list:[
                 {guard:"охрана предприятий;"},
