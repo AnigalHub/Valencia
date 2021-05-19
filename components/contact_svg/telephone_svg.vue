@@ -21,6 +21,6 @@
 
 <style scoped>
 svg{
-  margin-left: 800%;
+  //margin-left: 800%;
 }
 </style>
