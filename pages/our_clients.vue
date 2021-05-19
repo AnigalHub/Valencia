@@ -1,7 +1,7 @@
 <template>
   <div id="our_clients" class="page">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <p class="text">За время существования частного охранного предприятия "ООО Валенсия" были заключены долгосрочные и надежные отношения с различными организациями: государственными учреждениями (детские сады, школы, вузы), бизнес-центрами, ритейлерами, торговыми центрами, букмекерскими конторами, строительными компаниями и т.д.</p>
       <h6>Предприятия, которые выбрали наши услуги:</h6>
       <div class="flex-container">
@@ -15,10 +15,8 @@
 </template>
 
 <script>
-    import Name_page from "../components/secondary_pages/name_page";
     export default {
       name: "our_clients",
-      components: {Name_page},
       data() {
         return {
           name_page:"Наши клиенты",
@@ -26,9 +24,9 @@
             {name_client:"МОУ Гимназия №46", img_src:"../our_clients/46.jpg", img_alt:"моу_гимназия_46",},
             {name_client:"МОУ СОШ №25", img_src:"../our_clients/25.jpg", img_alt:"моу_сош_25",},
             {name_client:"МДОУ Детский Сад №9 \"Космос\"", img_src:"../our_clients/9.jpg", img_alt:"мдоу_д/с_9_космос",},
-            {name_client:"МДОУ №28 \"Совенок\"", img_src:"../our_clients/28.jpg", img_alt:"мдоу_28_совенок",},
             {name_client:"Администрация города Люберцы", img_src:"../our_clients/ad.jpg", img_alt:"администрация_городского_округа_люберцы",},
             {name_client:"МОУ Гимназия №24", img_src:"../our_clients/24.jpg", img_alt:"моу_гимназия_24",},
+            {name_client:"МДОУ №28 \"Совенок\"", img_src:"../our_clients/28.jpg", img_alt:"мдоу_28_совенок",},
             {name_client:"МОУ Кадетская Школа", img_src:"../our_clients/kad.jpg", img_alt:"моу_кадетская_школа",},
             {name_client:"МОУ Школа №17", img_src:"../our_clients/17.jpg", img_alt:"моу_школа_17",},
             {name_client:"МОУ Лицей №12", img_src:"../our_clients/12.jpg", img_alt:"моу_лицей_12",},
