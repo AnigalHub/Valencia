@@ -1,7 +1,7 @@
 <template>
   <div id="tariffs" class="page">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <div class="flex-container">
         <div class="type">
           <h3>Эконом</h3>
@@ -66,10 +66,8 @@
 </template>
 
 <script>
-  import Name_page from "../components/secondary_pages/name_page";
     export default {
       name: "tariffs",
-      components: {Name_page},
       data() {
         return {
           name_page:"Тарифы",
