@@ -1,14 +1,14 @@
 <template>
   <div id="special_equipment" class="page">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../static/special_equipment/special.jpg" class="first_img" alt="спецсредства">
       <p class="text">Для обеспечения безопасности охраняемого объекта, поддержания правопорядка и нейтрализации правонарушителей в частном охранном предприятии "ООО Валенсия" имеются специальные средства индивидуальной защиты - особая экипировка и оснащение охранника.</p>
       <p class="text">Личный состав частного охранного предприятия <span class="emphasized"> "ООО Валенсия" </span> - охранники 5-го и 6-го разряда (работа со спецсредствами и оружием).</p>
       <p class="text">Исходя из рисков и угроз, для каждого охраняемого объекта подбирается своя экипировка и средства защиты охраны.</p>
       <h6 class="block_two">Перечень специальных средств, используемых в частном охранном предприятии "ООО Валенсия":</h6>
       <div class="flex-container">
-        <div v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
+        <div class="beautiful_block" v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
             <img :src="equipment.img_src" :alt="equipment.img_alt"/>
             <p class="text emphasized">{{equipment.name_equipment}}</p>
             <p class="text">{{equipment.description_equipment}}</p>
@@ -19,10 +19,8 @@
 </template>
 
 <script>
-    import Name_page from "../components/secondary_pages/name_page";
     export default {
       name: "special_equipment",
-      components: {Name_page},
       data() {
         return {
           name_page:"Спецсредства",
