@@ -1,11 +1,11 @@
 <template>
   <div id="technical_means" class="page">
-      <Name_page :name_page="name_page"/>
       <b-container>
+        <h1>{{name_page}}</h1>
         <p class="text">Технические средства повышают безопасность любого охраняемого объекта. Наша компания занимается монтажом и обслуживанием систем безопасности во время охраны любой вверенной территории.</p>
         <h6>Классификация технических средств охранников компании "ООО Валенсия":</h6>
         <div class="flex-container">
-          <div v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
+          <div class="beautiful_block" v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
             <p class="text emphasized">{{mean.name_technical_means}}</p>
             <b-row>
               <b-col cols="5">
@@ -13,9 +13,7 @@
               </b-col>
               <b-col>
                 <ul class="text">
-                  <li v-for="paragraph in mean.list" :key="paragraph.index">
-                    {{paragraph.paragraph}}
-                  </li>
+                  <li v-for="paragraph in mean.list" :key="paragraph.index">{{paragraph.paragraph}}</li>
                 </ul>
               </b-col>
             </b-row>
@@ -26,10 +24,8 @@
 </template>
 
 <script>
-    import Name_page from "../components/secondary_pages/name_page";
     export default {
      name: "technical_means",
-     components: {Name_page},
       data() {
         return {
           name_page:"Технические средства",
@@ -46,30 +42,6 @@
               ],
             },
             {
-              name_technical_means:"Система контроля управления доступом",
-              img_src:"../technical_means/access_control.jpg",
-              img_alt:"контроль_доступа",
-              list:[
-                {paragraph:"электромагнитные замки;"},
-                {paragraph:"автоматические ворота;"},
-                {paragraph:"контроллеры;"},
-                {paragraph:"шлагбаумы;"},
-                {paragraph:"считыватели."},
-              ],
-            },
-            {
-              name_technical_means:"Охранная сигнализация",
-              img_src:"../technical_means/guard_alarm.png",
-              img_alt:"охранная_сигнализация",
-              list:[
-                {paragraph:"контрольная панель;"},
-                {paragraph:"датчики движения;"},
-                {paragraph:"устройство оповещения;"},
-                {paragraph:"ключ отключения;"},
-                {paragraph:"кнопка тревоги."},
-              ],
-            },
-            {
               name_technical_means:"Система видеоналюдения",
               img_src:"../technical_means/cctv.jpg",
               img_alt:"видеонаблюдение",
@@ -81,13 +53,14 @@
               ],
             },
             {
-              name_technical_means:"Технические средства пультовой охраны",
-              img_src:"../technical_means/console_guard.jpg",
-              img_alt:"пультовая_охрана",
+              name_technical_means:"Охранная сигнализация",
+              img_src:"../technical_means/guard_alarm.png",
+              img_alt:"охранная_сигнализация",
               list:[
-                {paragraph:"датчики состояния охраняемого объекта;"},
-                {paragraph:"модуль связи с центральным охранным пультом;"},
-                {paragraph:"исполнительные устройства."},
+                {paragraph:"контрольная панель;"},
+                {paragraph:"датчики движения;"},
+                {paragraph:"устройство оповещения;"},
+                {paragraph:"ключ отключения."},
               ],
             },
             {
@@ -101,6 +74,28 @@
                 {paragraph:"тревожная кнопка."},
               ],
             },
+            {
+              name_technical_means:"Система контроля управления доступом",
+              img_src:"../technical_means/access_control.jpg",
+              img_alt:"контроль_доступа",
+              list:[
+                {paragraph:"электромагнитные замки;"},
+                {paragraph:"автоматические ворота;"},
+                {paragraph:"контроллеры;"},
+                {paragraph:"считыватели и шлагбаумы."},
+              ],
+            },
+            {
+              name_technical_means:"Технические средства пультовой охраны",
+              img_src:"../technical_means/console_guard.jpg",
+              img_alt:"пультовая_охрана",
+              list:[
+                {paragraph:"датчики состояния охраняемого объекта;"},
+                {paragraph:"модуль связи с центральным охранным пультом;"},
+                {paragraph:"исполнительные устройства."},
+              ],
+            },
+
           ]
         }
       }
