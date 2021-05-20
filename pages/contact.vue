@@ -1,7 +1,7 @@
 <template>
   <div id="contact" class="page">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <b-row class="important_row">
         <b-col>
           <h2>Общество с ограниченной ответственностью частное охранное предприятие "Валенсия"</h2>
@@ -30,7 +30,6 @@
 </template>
 
 <script>
-    import Name_page from "../components/secondary_pages/name_page";
     import TelephoneSVG from "../components/contact_svg/telephone_svg";
     import EmailSVG from "../components/contact_svg/email_svg";
     import OpeningHoursSVG from "../components/contact_svg/opening_hours_svg";
@@ -39,7 +38,7 @@
     import Address from "static/documents/address.json"
     export default {
       name: "contact",
-      components: {Send_form, Name_page},
+      components: {Send_form},
       data() {
         return {
           address:Address,
