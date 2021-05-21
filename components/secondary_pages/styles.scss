@@ -561,8 +561,6 @@ input {
   /*svg для данной страницы ("О нас")*/
   svg{
     filter: contrast(120%) brightness(130%);
-    width: 90px;
-    height: 85px;
     float: left;
     border-radius: 50%;
     /*стили цветов для svg*/
@@ -588,15 +586,15 @@ input {
     }
   }
   /*самая первая картинка на странице "О нас"*/
-  .first_img{
-    width: 30%;
-  }
+  .first_img{width: 30%;}
   /*блоки принципов*/
   .flex-container > div {
     width: 50%;
     margin-bottom: 1.8%  !important;
     /*svg принципов*/
     svg {
+      width: 90px;
+      height: 85px;
       float: left;
       margin-left: -2%;
       padding: 10%;
@@ -706,7 +704,7 @@ input {
 .services{
   #tariffs{
     background: transparent;
-    h1,p,img{display: none;}
+    h1,p,img{display: none !important;}
   }
   /*первая картинка на каждой странице "Охрана ...."*/
   .first_img{width: 30%;}
@@ -781,9 +779,6 @@ input {
     /*картинка*/
     img{
       width: 32.5%;
-      float: right;
-      box-shadow: $boxShadow, 0 0 0 4px  #ffff79;
-      padding: .5%;
       margin: -2% 5% 0 1%;
     }
     /*как выглядит список (сдвигаем)*/
@@ -940,7 +935,7 @@ input {
 
 /******************* АДАПТИВНОСТЬ ***********************/
 
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 450px) {
   /*текст на всех страницах (кроме главной)*/
   .text,a{
     font-size: 0.8rem !important;
@@ -1005,26 +1000,31 @@ input {
   }
   /*страница "О нас"*/
   #company {
-    /*svg для данной страницы ("О нас")*/
-    svg {
-      width: 45px;
-      height: 45px;
-    }
     /*блоки принципов*/
     .flex-container > div {
       /*параметры сетки бутстрап*/
-      .col {margin-left: 7% !important;}
-      /*svg принципов*/
-      svg {
-        margin-left: -100% !important;
-        margin-top: 85% !important;
-      }
+      .col {margin-left: 3% !important;}
+    }
+    .stage{
+      .col-1 .emphasized {font-size: 1.8rem !important;}
     }
   }
-  /*страница "Тарифы", компонент "Тарифы"(после каждой услуги)*/
-  #tariffs, #tariffs_content{
-    /*заголовок таблицы, ячейка таблицы*/
-    .table th, .table td {padding: 0.05rem !important}
+  /*страница "Тарифы"*/
+  #tariffs{
+    .flex-container > .type{
+      width: 100%;
+      margin: 0 4.25% 8% 4.25% !important;
+      img{
+        float: none !important;
+        margin: 6% auto !important;
+        display: block ;
+      }
+      p{margin-top: 5%;}
+    }
+    table tr td:first-child {width: 35%;}
+    td,th {
+      padding: 0.4rem 0.2rem;
+    }
   }
   /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
   .services_with_types {
@@ -1051,8 +1051,6 @@ input {
   }
   /*страница "Лицензии"*/
   #licenses{
-    /*картинки лицензий и благодарностей*/
-    .flex-container > img {height: 120px !important;}
     /*нумерованный список*/
     ol{margin-left: -8% !important;}
   }
@@ -1096,15 +1094,17 @@ input {
   .place_h1{margin-bottom:0 !important;}
   /*заголовки на всех страницах (кроме главной)*/
   h1{
-    padding-left: 0.5rem;
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
   }
   h2,h3{font-size: 1.15rem;}
   h4{font-size: 1rem;}
   h6{
     font-size: .9rem;
     line-height: 1.2rem;
+    text-decoration-thickness: .1rem;
   }
   /*метка в форме заявки (обратной связи)*/
   label{
@@ -1122,6 +1122,8 @@ input {
     min-height: 1.5rem;
     margin-bottom: 1%;
   }
+  /*первая, вторая и третья картинки на страницах услуг и "О нас"*/
+  .first_img,.second_img,.third_img{box-shadow: $boxShadow, 0 0 0 2px #ffff79;}
   /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
   .place_form{margin-top: 0;}
   /*стили для главной страницы*/
@@ -1138,7 +1140,6 @@ input {
       height: auto;
       background: url(../../static/Landing_page/134.jpg) 100% 100% no-repeat !important ;
       background-size: 100% 100% !important;
-      filter: brightness(72%);
       animation: none;
       /*название чопа*/
       .title_guard{
@@ -1283,31 +1284,28 @@ input {
       width: 80%;
       margin: 0 2.5% 3% 0;
     }
-    /*svg для данной страницы ("О нас")*/
-    svg{
-      width: 45px;
-      height: 45px;
-      box-shadow: 0 0 3.5px $shadeOfBlack !important;
-    }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -10% !important;}
     /*блоки принципов*/
     .flex-container > div {
       width: 100%;
       margin: 0 0.5% 1.5% 0.5% !important;
+      .col-1{
+        padding: 0 !important;
+      }
       /*параметры сетки бутстрап (текст и название)*/
       .col{
         padding: 0 10px !important;
         /*абзац*/
-        p{margin-bottom: 0.5rem !important;}
+        p{margin-bottom: 0.25rem !important;}
       }
       /*выделение фраз в тексте - для красоты*/
       .emphasized{margin-bottom: 0.5rem !important;}
       /*svg принципов*/
       svg {
+        width: 50px;
+        height: 50px;
         float: left;
-        margin-left: -30%;
-        margin-top: 45%;
       }
     }
     /*вторая картинка в компоненте "О нас"*/
@@ -1317,55 +1315,40 @@ input {
     }
     /*этапы работы*/
     .stage{
-      flex-direction: column;
-      /*параметры сетки бутстрап*/
-      .col-5{
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+      .col-1 .emphasized {font-size: 2rem;}
+      .row{
+        .number_stage{
+          flex: 0 0 15% !important;
+          max-width: 15% !important;
+        }
+        .name_stage{
+          flex: 0 0 85% !important;
+          max-width: 85% !important;
+        }
+        .col{
+          padding: 0 !important;
+          flex-basis: auto !important;
+        }
       }
-      /*параметры сетки бутстрап*/
-      .col,.col-5{padding: 0 !important;}
       /*абзац*/
-      p{margin-bottom: 0.5rem !important;}
-      /*абзац-2*/
-      p:nth-child(2){padding-top: 4%;}
-      /*абзац-3*/
-      p:nth-child(3){clear: left;}
+      p{margin-bottom: 0.25rem !important;}
     }
   }
   /*страница "Тарифы"*/
   #tariffs{
-    /*блок с таблицей и картинкой*/
-    .row{flex-direction: column-reverse;}
-    /*параметры сетки бутстрап (картинка с текстом)*/
-    .col-3{
-      flex: 0 0 100% !important;
-      max-width:100% !important;
-      text-align: left;
-      /*картинки*/
-      img{
-        width: 25% !important;
-        float: left;
-      }
-    }
-    /*параметры сетки бутстрап (таблица)*/
-    .col {padding: 0 !important;}
-  }
-  /*компонент "Тарифы"(после каждой услуги)*/
-  #tariffs_content {
-    /*блоки под каждый тип тарифа*/
-    .flex-container > div {
+    .flex-container > .type{
       width: 100%;
-      /*последний блок*/
-      &:last-child{margin-left: 1% !important;}
+      margin: 0 1% 2% 1%;
+      img{
+        float: left;
+        width: 35%;
+        margin:0 3% 4% 4%;
+      }
+      p{margin-top: 4%;}
     }
-  }
-  /*страница "Тарифы", компонент "Тарифы"(после каждой услуги)*/
-  #tariffs, #tariffs_content {
-    /*первые ячейки таблицы*/
-    table tr td:first-child {
-      width: 20% !important;
-      span {display: none;}
+    table tr td:first-child {width: 35%;}
+    td,th {
+      padding: 0.4rem 0.2rem;
     }
   }
   /*контейнер в контейнере*/
@@ -1464,24 +1447,15 @@ input {
   }
   /*страница "Технические средства"*/
   #technical_means{
-    /*картинки*/
-    img{
-      float: none;
-      width: 75%;
-      margin: 3% 3.5% 3% 0.8%;
-    }
     /*блок со списком и картинкой*/
     .flex-container > div {
       width: 100%;
       padding: 0.8%;
+      margin: 2% 1% !important;
       /*абзац*/
       p{margin-bottom: 0.5rem !important;}
     }
-    /*список (сдвигаем)*/
-    ul{
-      margin-left: -12%;
-      margin-bottom: 0 !important;
-    }
+
   }
   /*страница "Спецсредства"*/
   #special_equipment{
@@ -1493,17 +1467,9 @@ input {
     }
     /*блоки с названием, текстом и картинкой*/
     .flex-container > div {
-      width: 100%;
-      padding: 1%;
-      /*картинки*/
-      img{
-        width: 28%;
-        margin-top: 1%;
-      }
-      /*выделение фраз в тексте - для красот*/
-      .emphasized{padding-top: 0;}
-      /*абзац(текст)*/
-      p{margin: 0 !important;}
+      width: 47%;
+      img{width: 50%;}
+      p {padding: 2%;}
     }
   }
   /*страница "Лицензии"*/
@@ -1594,6 +1560,8 @@ input {
   .place_h1{margin-bottom: .6rem;}
   /*заголовки на всех страницах (кроме главной)*/
   h1{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
     padding-left: 0;
     font-size: 1.3rem;
     margin-bottom: 0.2rem;
@@ -1603,6 +1571,7 @@ input {
   h6{
     font-size: .9rem;
     line-height: 1.2rem;
+    text-decoration-thickness: .15rem;
   }
   /*метка в форме заявки (обратной связи)*/
   label{
@@ -1618,6 +1587,9 @@ input {
   input{
     min-height: 1.5rem;
     margin-bottom: 1%;
+  }
+  .first_img,.second_img,.third_img{
+    box-shadow: $boxShadow, 0 0 0 3px  #ffff79;
   }
   /*стили для главной страницы*/
   #Landing_page{
@@ -1808,22 +1780,18 @@ input {
       width: 50%;
       margin: 0 3.5% 0.5% 0;
     }
-    /*svg для данной страницы ("О нас")*/
-    svg{
-      width: 55px;
-      height: 55px;
-      box-shadow: 0 0 3.5px $shadeOfBlack !important;
-    }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -8% !important;}
     /*блоки принципов*/
     .flex-container > div {
       width: 100%;
       margin: 0 0.5% 1.5% 0.5% !important;
+      .col-1{
+        padding: 0 !important;
+      }
       /*сетка бутстрап (место под текст)*/
       .col{
-        padding: 0 5px !important;
-        margin-left: -1% !important;
+        padding: 0 0 0 20px !important;
         /*абзац (текст)*/
         p{margin-bottom: 0.5rem !important;}
       }
@@ -1831,42 +1799,48 @@ input {
       .emphasized{margin-bottom: 0.5rem !important;}
       /*svg принципов*/
       svg {
+        width: 55px;
+        height: 55px;
         float: left;
-        margin-left: -15%;
-        margin-top: 20%;
       }
     }
     /*этапы работы*/
     .stage{
-      flex-direction: column;
-      /*параметры сетки бутстрап*/
-      .col-5{
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+      .col-1 .emphasized {font-size: 2rem;}
+      .row{
+        .number_stage{
+          flex: 0 0 12% !important;
+          max-width: 12% !important;
+        }
+        .name_stage{
+          flex: 0 0 88% !important;
+          max-width: 88% !important;
+        }
+        .col{
+          padding: 0 !important;
+          flex-basis: auto !important;
+        }
       }
-      /*параметры сетки бутстрап*/
-      .col,.col-5{padding: 0 !important;}
       /*абзац*/
       p{margin-bottom: 0.25rem !important;}
     }
   }
   /*страница "Тарифы"*/
   #tariffs{
-    /*блок с таблицей и картинкой*/
-    .row{flex-direction: column-reverse;}
-    /*параметры сетки бутстрап (картинка с текстом)*/
-    .col-3{
-      flex: 0 0 100% !important;
-      max-width:100% !important;
-      text-align: left;
-      /*картинки страницы "Тарифы"*/
+    .flex-container > .type{
+      width: 100%;
+      margin: 0 1% 2% 1%;
       img{
-        width: 25% !important;
         float: left;
+        width: 30%;
+        margin:0 3% 4% 4%;
       }
+      p{margin-top: 5%;}
     }
-    /*параметры сетки бутстрап (таблица)*/
-    .col {padding: 0 !important;}
+    table tr td:first-child {width: 35%;}
+    td,th {
+      padding: 0.4rem 0.2rem;
+    }
   }
   /*компонент "Тарифы"(после каждой услуги)*/
   #tariffs_content {
@@ -1958,37 +1932,31 @@ input {
   }
   /*страница "Технические средства"*/
   #technical_means{
-    /*картинки*/
-    img{
-      width: 38%;
-      margin: 3% 3.5% 2% 0.8%;
+    .row{
+      flex-direction: column;
+      .col-5{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+      .col{padding: 0 !important;}
+      img{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 65%;
+      }
     }
-    /*блок со списком и картинкой*/
-    .flex-container > div {
-      width: 100%;
-      padding: 0.8%;
-      /*абзац (текст с названием)*/
-      p{margin-bottom: 0.5rem !important;}
-    }
-    /*как выглядит список (сдвигаем)*/
-    ul{
-      margin-left: -8%;
-      margin-bottom: 0 !important;
-    }
+    ul {margin-left: -10%;}
   }
   /*страница "Спецсредства"*/
   #special_equipment{
     /*первая картинка*/
-    .first_img{width: 38%; float: left !important;}
+    .first_img{width: 38%;}
     /*блоки с названием, текстом и картинкой*/
     .flex-container > div {
-      width: 100%;
-      /*блоки с названием, текстом и картинкой*/
-      img{width: 16%;}
-      /*выделение фраз в тексте - для красоты*/
-      .emphasized{padding-top: 0;}
-      /*абзац(текст)*/
-      p{margin: 0 !important;}
+      width: 47%;
+      img{width: 50%;}
+      p {padding: 2%;}
     }
   }
   /*страница "Лицензии"*/
@@ -2072,6 +2040,8 @@ input {
   }
   /*заголовки на всех страницах (кроме главной)*/
   h1{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
     padding-left: 0;
     font-size: 1.4rem;
     margin-bottom: 0.2rem;
@@ -2244,10 +2214,10 @@ input {
       width: 45%;
       margin: 0 3% 0.5% 0;
     }
-    /*svg для данной страницы ("О нас")*/
-    svg{
-      width: 55px;
-      height: 55px;
+
+    .flex-container .row{
+      margin-right: -15px !important;
+      margin-left: -15px !important;
     }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -6% !important;}
@@ -2255,9 +2225,12 @@ input {
     .flex-container > div {
       width: 48%;
       margin: 0 0.5% 1.2% 0.5% !important;
+      .col-1{
+        padding: 0 !important;
+      }
       /*парметры сетки бутстрап (текст)*/
       .col{
-        padding-left: 1rem !important;
+        padding-left: 28px !important;
         /*абзац*/
         p{margin-bottom: 0.5rem !important;}
       }
@@ -2265,37 +2238,43 @@ input {
       .emphasized{margin-bottom: 0.5rem !important;}
       /*svg принципов*/
       svg {
+        width: 55px;
+        height: 55px;
         float: left;
-        margin-left: -15%;
-        margin-top: 80%;
       }
     }
     /*этапы работы*/
     .stage{
-      flex-direction: column;
-      /*параметры сетки бутстрап*/
-      .col-5{
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+     .col-1 .emphasized {font-size: 1.8rem;}
+      .col-2{
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+        padding: 0 0 0 20px !important;
       }
       /*параметры сетки бутстрап*/
-      .col,.col-5{padding: 0 !important;}
+      .col{padding: 0 0 0 10px !important;}
+       div {padding-bottom: 0.5%;}
       /*абзац*/
       p{margin-bottom: 0.25rem !important;}
     }
   }
   /*страница "Тарифы"*/
   #tariffs{
-    /*параметры сетки бутстрап (картинка с текстом)*/
-    .col-3{
-      flex: 0 0 27% !important;
-      max-width: 27% !important;
-      padding: 0 2px !important;
-      /*картинки страницы "Тарифы"*/
-      img{width: 65% !important;}
+   .flex-container > .type{
+    width: 48%;
+    margin: 0 1% 2% 1%;
+     &:last-child{
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+     }
     }
-    /*параметры сетки бутстрап (таблица)*/
-    .col {padding: 0 1rem 0 0 !important;}
+     table tr td:first-child {
+      width: 35%;
+    }
+    td,th {
+      padding: 0.6rem 0.25rem;
+    }
   }
   /*компонент "Тарифы"(после каждой услуги)*/
   #tariffs_content {
@@ -2378,21 +2357,21 @@ input {
   }
   /*страница "Технические средства"*/
   #technical_means{
-    /*картинки*/
-    img{
-      width: 30%;
-      margin: 2% 2% 2% 0.8%;
+    .row{
+      flex-direction: column;
+      .col-5{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+      .col{padding: 0 10px !important;}
+      img{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 60%;
+      }
     }
-    /*блок со списком и картинкой*/
-    .flex-container > div {
-      width: 100%;
-      padding: 0.8%;
-    }
-    /*список (сдвигаем)*/
-    ul{
-      margin-left: -8%;
-      margin-bottom: 0 !important;
-    }
+    ul {margin-left: -10%;}
   }
   /*страница "Спецсредства"*/
   #special_equipment{
@@ -2400,10 +2379,8 @@ input {
     .first_img{width: 33%;}
     /*блоки с названием, текстом и картинкой*/
     .flex-container > div {
-      width: 100%;
-      img{width: 15%;}
-      /*выделение фраз в тексте - для красоты*/
-      .emphasized{padding-top: 1.5%;}
+      width: 31%;
+      p {padding: 1.5%;}
     }
   }
   /*страница "Лицензии"*/
@@ -2450,6 +2427,8 @@ input {
   .page{padding: 1.5rem 0 !important;}
   /*заголовки на всех страницах (кроме главной)*/
   h1{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
     font-size: 1.6rem;
     margin-bottom: 0.25rem;
   }
@@ -2590,38 +2569,48 @@ input {
       width: 40%;
       margin: 0 2% 0.5% 0;
     }
-    /*svg для данной страницы ("О нас")*/
-    svg{
-      width: 60px;
-      height: 60px;
-    }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -4.5% !important;}
     /*блоки принципов*/
     .flex-container > div {
-      width: 48%;
-      margin: 0 0.5% 1.2% 0.5% !important;
+      margin-bottom: 1%  !important;
+      .col-1{padding: 0 !important;}
       /*параметры сетки бутстрап (текст)*/
-      .col{padding-left: 5px !important;}
+      .col{padding-left: 25px !important;}
       /*выделение фраз в тексте - для красоты*/
-      .emphasized{margin-bottom: 0.25rem !important;}
+       .emphasized{margin-bottom: 0.25rem !important;}
       /*svg принципов*/
       svg {
+        width: 60px;
+        height: 60px;
         float: left;
-        margin-left: -15%;
-        margin-top: 45%;
       }
     }
     /*этапы работы*/
     .stage{
       /*абзац*/
       p{margin-bottom: 0.5rem !important;}
+      .col-1 .emphasized {
+        font-size: 2.25rem;
+      }
+      .name_stage{
+        flex: 0 0 16.666667% !important;
+        max-width: 16.666667% !important;
+      }
+      .col-2{padding: 0 0 0 20px !important;}
+      .col{margin-left: -1%;}
     }
   }
   /*страница "Тарифы"*/
   #tariffs{
     /*картинки страницы "Тарифы"*/
-    img{margin-top: 10%;}
+    img{margin-top: 5%;}
+    p{
+      padding: .7%;
+    }
+    td,th {
+      padding: 0.6rem 0.25rem;
+    }
   }
   /*компонент "Тарифы"(после каждой услуги)*/
   #tariffs_content {
@@ -2690,14 +2679,8 @@ input {
   }
   /*страница "Технические средства"*/
   #technical_means{
-    /*картинки*/
-    img{
-      width: 40.5%;
-      height: 71%;
-      margin: 3% 2% 2% 0.8%;
-    }
-    /*как выглядит список (сдвигаем)*/
-    ul{margin-left: -8%;}
+    ul {margin-left: -20%;}
+    img{margin-top: 12%;}
   }
   /*страница "Спецсредства"*/
   #special_equipment{
@@ -2705,10 +2688,7 @@ input {
     .first_img{width: 28%;}
     /*блоки с названием, текстом и картинкой*/
     .flex-container > div {
-      /*блоки с названием, текстом и картинкой*/
-      img{width: 23%;}
-      /*выделение фраз в тексте - для красоты*/
-      .emphasized{padding-top: 0;}
+      p{padding: 1.5%;}
     }
   }
   /*страница "Лицензии"*/
@@ -2830,20 +2810,14 @@ input {
       width: 44%;
       margin: 0 2% 0.5% 0;
     }
-    /*svg для данной страницы ("О нас")*/
-    svg{
-      width: 65px;
-      height: 65px;
-    }
     /*блоки принципов*/
     .flex-container > div {
-      width: 32%;
-      margin: 0 0.5% 1.2% 0.5% !important;
+      margin-bottom: 1%  !important;
       /*svg принципов*/
       svg {
+        width: 75px;
+        height: 75px;
         float: left;
-        margin-left: -45%;
-        margin-top: 130%;
       }
     }
   }
