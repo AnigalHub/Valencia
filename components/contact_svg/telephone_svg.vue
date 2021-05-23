@@ -19,7 +19,4 @@
 </script>
 
 <style scoped>
-svg{
-  //margin-left: 800%;
-}
 </style>
