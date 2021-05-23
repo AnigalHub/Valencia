@@ -133,7 +133,7 @@
               price_hour:165,
               price:105000,
               price_hour_with_weapon:185,
-              price_with_weapon:11000,
+              price_with_weapon:110000,
             },
             {
               name:'Суточный',
