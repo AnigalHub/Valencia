@@ -77,12 +77,18 @@
 
 </script>
 <style lang="scss">
+  /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
   .nav-link,.telephone{
-    color: white !important;
-    font-weight: 400 !important;
+    color: black !important;
+    font-weight: 800 !important;
   }
   .nav-link-active{
-    color: tomato !important;
+   text-shadow: 0 1px 2px black !important;
+    color: #e6e686 !important;
+  }
+  .show > .btn-secondary.dropdown-toggle {
+    color: #007bff !important;
+    text-shadow: none !important;
   }
   .navbar-dark .navbar-nav .active > .nav-link,
   .navbar-dark .navbar-nav .active > .dropdown-item{
@@ -92,11 +98,10 @@
   .navbar-dark .navbar-nav .active > .navbar-brand{
     color: white !important;
   }
-
   /*стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)*/
   /*название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе*/
   .name_brand,.chop{
-    filter: contrast(120%) brightness(170%);
+    filter: contrast(120%) brightness(120%);
   }
   /*кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки*/
   .btn{
@@ -107,27 +112,34 @@
   }
   /*кнопка "Услуги" (пишем свои стили - переписываем btn)*/
   .dropdown-toggle{
-    font-size: 1.35rem !important;
-    color: #ffffff;
-    background-color: #040610 !important;
+    font-size: 1.2rem !important;
+    color: black;
+    font-weight: 800 !important;letter-spacing: -.8px;
+    //background-color: #040610 !important;
     /*при наведении*/
     &:hover{
       color: #007bff !important;
+      text-shadow: none !important;
     }
   }
   /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
   .dropdown-item{
-    border: 0.05px solid #454444;
-    filter: none !important;
-    font-size: 1.3rem;
-    color: #ffffff ;
-    background-color: #040610 !important;
+    box-shadow: 2px 0 9px -6px #000000;
+    text-shadow: none ;
+    font-size: 1.15rem;
+    color: black ;
+    background: #acb0b6 !important;
     /*при наведении*/
     &:hover{
       color: #007bff !important;
-      background: #040610;
+      background: #dce4ee;
     }
   }
+  .menu_org,.menu_obj,.menu_state{
+    background: #acb0b6 !important;
+    filter: contrast(76%) !important;
+  }
+
   /*выпадающий блок при нажатии на "Услуги" (dropdown)*/
   .dropdown-menu {
     padding: 0 !important;
@@ -139,11 +151,11 @@
     /*когда меню становится мобильным (при нажатии на кнопку), то меняются стили для подпунктов охраны ( - ставим треугольник, меняем отступы)*/
     .menu_org,.menu_obj,.menu_state{
       .dropdown-item::before {
-          content: "\25B8";
-          font-weight: bold;
-          display: inline-block;
-          width: 1em;
-          margin-left: .5em;
+        content: "\25B8";
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: .5em;
       }
     }
     /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
@@ -194,37 +206,57 @@
       display:block ;
     }
   }
+  /*кнопки, которые находятся в dropdown (виды и подвиды охран) - добавляем в дефолтный dropdown-item для них (в данном случае - отступы, шрифт)*/
+  .dropdown-item{
+    font-weight: 600 !important;
+    font-family: 'Lora', serif;
+    padding-right: 0.3rem !important;
+    padding-left: 0.3rem !important;
+  }
+  /*кнопка "Услуги" (пишем свои стили -добавляем в btn)*/
+  .dropdown-toggle{
+    font-weight: 600 !important;
+    font-family: 'Lora', serif;
+    padding-right: 0.3rem !important;
+    padding-left: 0.3rem !important;
+  }
 </style>
 <style scoped lang="scss">
   /*svg-щит*/
-  #shield{filter: contrast(120%) brightness(130%);}
+  #shield{filter: contrast(105%) brightness(120%);}
   /*вид меню на большом экране (отступы)*/
   .navbar-expand-xl .navbar-collapse {margin-left: 0;}
   /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
   .navbar{
     padding: 0 !important;
-    background: #040610;
+    background: #dce4ee;
+   // border-bottom: 2px solid #3d3636;
+    box-shadow: 13px 0px 18px -6px #000000;
   }
   /*контейнер, в котором находится весь контент меню*/
   .container {padding: 0 !important;}
   /*блок под логотип(svg, название компании, что за компания(чоп))*/
   .navbar-brand{
-    padding-bottom: 0 !important;
+    //padding-bottom: 0 !important;
     text-align: center;
+    padding-top: 0.2rem !important;
+    margin-right: .35rem !important;
     font-family: 'Playfair Display', serif;
-    letter-spacing: 0.25px;
+    //letter-spacing: 0.25px;
     font-weight: 600;
-    color: #ffffff !important;
-    margin-top: -1%;
+    color: black !important;
+    margin-top: -.8%;
   }
   /*название компании "Валенсия" в логотипе*/
   .name_brand{
-    font-family: 'Lobster', cursive;
-    letter-spacing: 0.15px;
-    margin-left: -4%;
+    vertical-align: middle;
+    margin-top: 200% !important;
+    //font-family: 'Lobster', cursive;
+    margin-left: -5%;
     font-weight: 600 !important;
-    color: rgba(255, 255, 255, 0.6);
+    color: black;
     font-size: 1.3rem;
+    text-decoration: none !important;
   }
   /*svg (щит и кнопка collapse - на которую на маленьких экранах нажимаем, чтобы увидеть меню)*/
   svg{
@@ -233,52 +265,42 @@
   }
   /*svg-щит*/
   #shield{
-    width:64px;
-    height: 64px;
+    width:55px;
+    height: 57px;
     margin: 1.5% 0;
   }
   /*надпись "частное охранное предприятие" в логотипе*/
   .chop{
-    font-size: 0.55rem !important;
-    margin-top: -13%;
+    letter-spacing: .2px;
+    color: black !important;
+    font-size: 0.68rem !important;
+    margin-top: -11%;
+    font-weight: 600;
     margin-left: 24%;
     text-align: center;
-    margin-bottom: 0.5rem !important;
-  }
-  /*кнопки, которые находятся в dropdown (виды и подвиды охран) - добавляем в дефолтный dropdown-item для них (в данном случае - отступы, шрифт)*/
-  .dropdown-item{
-    letter-spacing: -.45px;
-    font-weight: 400 !important;
-    font-family: "EB Garamond", serif;
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
-  }
-  /*кнопка "Услуги" (пишем свои стили -добавляем в btn)*/
-  .dropdown-toggle{
-    letter-spacing: -0.45px;
-    font-weight: 400 !important;
-    font-family: "EB Garamond", serif;
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
+    margin-bottom: 0.15rem !important;
   }
   /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown)*/
   .nav-link{
-    font-size: 1.4rem;
-    font-family: "EB Garamond", serif;
-    &:hover{color: #007bff !important;}
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    font-weight: 600 !important;
+    &:hover{color: #007bff !important; text-shadow: none !important;}
   }
   /*номер телефона*/
   .telephone{
+    font-weight: 900 !important;
     font-family: 'Vollkorn', serif;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     &:hover{text-shadow: -.15px 1px .15px #97c7e7; text-decoration: underline !important;}
   }
   /*блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)*/
   .menu_org{top: -.35% !important;}
   /*блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)*/
-  .menu_obj{top:17% !important;}
+  .menu_obj{top:4% !important;}
   /*блок с подвидами охраны недвижимости (коммерческие объекты, частные объекты)*/
-  .menu_state{top:33% !important;}
+  .menu_state{top:4% !important;}
+
   /*******************АДАПТИВНОСТЬ***********************/
   @media screen and (max-width: 1200px) {
     /*вид меню на экране когда меню через кнопку видно (отступы)*/
@@ -291,18 +313,12 @@
       height:52px;
       filter: contrast(120%) brightness(170%);
     }
-    /*название компании "Валенсия" в логотипе*/
-    .name_brand{
-      font-size: 1.3rem;
-      letter-spacing: -0.2px;
-      filter: contrast(120%) brightness(170%) !important;
-    }
+
     /*надпись "частное охранное предприятие" в логотипе*/
     .chop{
       font-size: 0.6rem !important;
       margin-top: -10.2%;
       margin-left: 24%;
-      letter-spacing: -.25px !important;
       margin-bottom: 0.5rem !important;
     }
     /*номер телефона*/
@@ -315,8 +331,8 @@
       text-align: center;
       display: flex;
       align-items: center;
-      padding-right: 0.68rem !important;
-      padding-left: 0.68rem !important;
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
       letter-spacing: -.4px;
     }
   }
