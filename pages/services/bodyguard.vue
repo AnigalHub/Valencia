@@ -1,7 +1,7 @@
 <template>
   <div id="bodyguard" class="page services">
-    <Name_page :name_page="name_page"/>
       <b-container>
+        <h1>{{name_page}}</h1>
         <img src="../../static/services/bodyguard/bodyguard.jpg" alt="личная_охрана" class="first_img"/>
         <p class="text"><span class="emphasized">Личная охрана</span> - профессиональная охрана, обеспечивающая безопасность жизни и здоровья Клиента и конфиденциальность информации. Охранники личной охраны настоящие профессионалы своего дела, прошедшие полную систему подготовки и жесткий отбор до собеседования с клиентом.</p>
         <h6 class="block_one">Режимы работы личной охраны:</h6>
@@ -25,10 +25,9 @@
 
 <script>
   import Tariffs from "../tariffs";
-  import Name_page from "../../components/secondary_pages/name_page";
     export default {
       name: "bodyguard",
-      components: {Name_page, Tariffs},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Личная охрана",

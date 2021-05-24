@@ -1,14 +1,13 @@
 <template>
   <div id="guard_of_commercial_objects" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../../../static/services/guard_of_real_estate/guard_of_commercial_object.jpg" alt="охрана_коммерческого_объекта" class="first_img"/>
       <p class="text">В охране нуждаются здания, сооружения и иные объекты коммерческой деятельности, безопасность таких объектов - самое важное условие их бесперебойной работы.</p>
+      <h4 class="text"><u>Охрана коммерческих объектов включает:</u></h4>
       <div class="import" >
           <ul>
-            <li v-for="guard in GuardOfCommercialObjects" :key="guard.index"  class="li_text">
-              {{guard.name}}
-            </li>
+            <li v-for="guard in GuardOfCommercialObjects" :key="guard.index"  class="text">{{guard.name}}</li>
           </ul>
       </div>
       <div class="im_descr block_two">
@@ -18,17 +17,16 @@
           <li v-for="name_duty in DutiesGuardOfCommercialObjects" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>
       </div>
-      <Tarrifs_content/>
+      <Tariffs/>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
+    import Tariffs from "../../tariffs";
     export default {
       name: "guard_of_commercial_objects",
-      components: {Tarrifs_content, Name_page},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Охрана коммерческих объектов",

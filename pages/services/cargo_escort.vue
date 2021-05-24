@@ -1,7 +1,7 @@
 <template>
   <div id="cargo_escort" class="page services">
-    <Name_page :name_page="name_page"/>
     <b-container>
+       <h1>{{name_page}}</h1>
        <img src="../../static/services/cargo_escort/cargo_escort.jpg" alt="сопровождение_грузов" class="first_img"/>
        <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
        <h6 class="block_one">Опасности при передвижении груза:</h6>
@@ -24,11 +24,10 @@
 </template>
 
 <script>
-    import Name_page from "../../components/secondary_pages/name_page";
     import Tariffs from "../tariffs";
     export default {
       name: "cargo_escort",
-      components: {Tariffs, Name_page},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Сопровождение грузов",

@@ -1,16 +1,14 @@
 <template>
   <div id="guard_of_municipal_facilities" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../../../static/services/guard_of_organizations/gallery.jpg" alt="охрана_муниципальных_объектов" class="first_img"/>
-      <p class="text"><b>Муниципальные объекты (госучреждения) </b> - это организации особого назначения, которые выполняют разнообразные задачи некоммерческого характера, для всеобщего блага и развития граждан. Безопасность госучреждений влияет на защищенность информации и имущества, для полного функционирования таких объектов необходима надежная охрана.
+      <p class="text"><b class="emphasized">Муниципальные объекты (госучреждения) </b> - это организации особого назначения, которые выполняют разнообразные задачи некоммерческого характера, для всеобщего блага и развития граждан. Безопасность госучреждений влияет на защищенность информации и имущества, для полного функционирования таких объектов необходима надежная охрана.
+      <h4 class="text"><u>Охрана муниципальных объектов (госучреждений) включает:</u></h4>
       <div class="import">
-      <ul>
-        <li class="li_text" v-for="guard in GuardOfMunicipalFacilities" :key="guard.index">
-        {{guard.name}}
-        </li>
-      </ul>
-
+        <ul>
+          <li class="text" v-for="guard in GuardOfMunicipalFacilities" :key="guard.index">{{guard.name}}</li>
+        </ul>
       </div>
       <h6 class="block_two">Особенности охраны госучреждений:</h6>
       <b-row>
@@ -27,17 +25,16 @@
           <li v-for="duty in DutiesGuardOfMunicipalFacilities" :key="duty.index">{{duty.duty}}</li>
         </ul>
       </div>
-      <Tarrifs_content/>
+      <Tariffs/>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
+    import Tariffs from "../../tariffs";
     export default {
       name: "guard_of_municipal_facilities",
-      components: {Tarrifs_content, Name_page},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Охрана муниципальных объектов - госучреждений",

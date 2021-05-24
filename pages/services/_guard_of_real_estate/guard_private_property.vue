@@ -1,16 +1,15 @@
 <template>
   <div id="guard_private_property" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../../../static/services/guard_of_real_estate/panel_protection.jpg" alt="рабочее_место_охраны(кпп)" class="first_img"/>
-        <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
-        <div class="import">
-          <ul>
-            <li class="li_text" v-for="name in GuardPrivateProperty">
-             {{name.name}}
-            </li>
-          </ul>
-        </div>
+      <p class="text">При охране частных объектов мы учитываем все пожелания наших клиентов, создаем индивидуальную программу охраны под каждый уникальный случай и обеспечиваем максимально возможную сохранность жизни и имущества в рамках конкретной задачи.</p>
+      <h4 class="text"><u>Охрана частных объектов включает:</u></h4>
+      <div class="import">
+        <ul>
+          <li class="text" v-for="name in GuardPrivateProperty">{{name.name}}</li>
+        </ul>
+      </div>
       <div class="im_descr block_two">
         <h6>Круг обязанностей охранников частных объектов:</h6>
         <img src="../../../static/services/guard_of_real_estate/guard_private_property.jpg" alt="охрана_частных_объектов"/>
@@ -18,17 +17,16 @@
           <li v-for="name_duty in DutiesGuardPrivateProperty" :key="name_duty.index">{{name_duty.duty}}</li>
         </ul>
       </div>
-      <Tarrifs_content/>
+      <Tariffs/>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
+    import Tariffs from "../../tariffs";
     export default {
         name: "guard_private_property",
-      components: {Tarrifs_content, Name_page},
+      components: {Tariffs},
       data(){
         return{
           name_page: "Охрана частных объектов",

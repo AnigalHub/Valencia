@@ -1,14 +1,13 @@
 <template>
   <div id="guard_of_educational_institutions" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../../../static/services/guard_of_organizations/guard_of_educational_institutions.jpg" alt="охрана_дошкольных_учреждений" class="first_img"/>
-      <p class="text"><b>Образовательные и дошкольные учреждения</b>- это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
+      <p class="text"><b class="emphasized">Образовательные и дошкольные учреждения</b> - это важнейшие социальные организации, посетителями которой являются в основном дети и подростки, которые не очень любят дисциплину, а круг мер активного воздействия на них крайне ограничен. Именно в этом и состоит специфика охраны образовательных и дошкольных учреждений.</p>
+      <h4 class="text"><u>Охрана образовательных и дошкольных учреждений включает:</u></h4>
       <div class="import">
         <ul>
-        <li class="li_text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">
-          {{guard.name}}
-        </li>
+          <li class="text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">{{guard.name}}</li>
         </ul>
       </div>
       <h6 class="block_two">Особенности охраны образовательных и дошкольных учреждений:</h6>
@@ -26,17 +25,16 @@
             <li v-for="duty in DutiesGuardOfEducationalInstitutionFeatures" :key="duty.index">{{duty.duty}}</li>
           </ul>
       </div>
-      <Tarrifs_content/>
+      <Tariffs/>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
+    import Tariffs from "../../tariffs";
     export default {
       name: "guard_of_educational_institutions",
-      components: {Tarrifs_content, Name_page},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Охрана образовательных и дошкольных учреждений",

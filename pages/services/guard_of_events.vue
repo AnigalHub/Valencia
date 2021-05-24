@@ -1,7 +1,7 @@
 <template>
   <div id="guard_of_events" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
       <b-container>
+        <h1>{{name_page}}</h1>
          <img src="../../static/services/guard_of_events/guard_of_events.jpg" class="first_img" alt="охрана_мероприятий"/>
         <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.</p>
         <h6 class="block_one">Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
@@ -10,7 +10,7 @@
         </ul>
         <div class="im_descr block_two">
           <h6>Перечень мер по охране мероприятий:</h6>
-          <img src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта"/>
+          <img class="second_img" src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта"/>
           <ul class="text">
             <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
           </ul>
@@ -21,11 +21,10 @@
 </template>
 
 <script>
-    import Name_page from "../../components/secondary_pages/name_page";
     import Tariffs from "../tariffs";
     export default {
       name: "guard_of_events",
-      components: {Tariffs, Name_page},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Охрана мероприятий",
