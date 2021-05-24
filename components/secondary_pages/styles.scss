@@ -129,7 +129,6 @@ h6{
   box-shadow: inset 0 4px 2px -3px #e6e686, inset 0 -4px 2px -3px #e6e686;
   padding: .65% 0 !important;
 }
-
 /*первая, вторая и третья картинки на страницах услуг и "О нас"*/
 .first_img,.second_img,.third_img{
   box-shadow: $boxShadow, 0 0 0 4px  #ffff79;
@@ -141,7 +140,6 @@ h6{
 .first_img{margin: 0 1.5% 0.5% 0;}
 /*вторая картинка на страницах услуг и "О нас"*/
 .second_img{float: right;}
-
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
 .block_two{clear: left;}
 /*общие стили страниц (кроме главной)*/
@@ -563,8 +561,6 @@ input {
     filter: contrast(120%) brightness(130%);
     float: left;
     border-radius: 50%;
-    /*стили цветов для svg*/
-    .color_inside{fill: none;}
     .color_strokes_inside{
       fill: #d2d270;
       stroke:$shadeOfBlack;
@@ -573,16 +569,11 @@ input {
     .color_inside_small_object{
       fill:$shadeOfBlack;
       stroke: #737c8b;
-      stroke-width: 3.5;
-    }
-    .color_shadow{
-      fill:  #d2d270;
-      stroke:$shadeOfBlack;
-      stroke-width: 1;
+      stroke-width: 4;
     }
     .bold_outline{
       stroke:$shadeOfBlack;
-      stroke-width: 4.5;
+      stroke-width: 5.5;
     }
   }
   /*самая первая картинка на странице "О нас"*/
@@ -595,7 +586,6 @@ input {
     svg {
       width: 90px;
       height: 85px;
-      float: left;
       margin-left: -2%;
       padding: 10%;
     }
@@ -645,7 +635,7 @@ input {
 #tariffs{
   clear: left;
   td,th {
-    padding: 0.8rem 0.35rem;
+    padding: 0.6rem 0.35rem;
     box-shadow: 0 1.5px 1.5px 0 #384250;
   }
   /*при наведении на ячейки (строка)*/
@@ -663,8 +653,11 @@ input {
     border: none !important;
     border-collapse: collapse;
     margin-bottom: 0 !important;
+    tr  td{
+      width: 33%;
+     // height: 19vh;
+    }
     tr td:first-child{
-      width: 30%;
       text-align: center;
       font-weight: 500;
       text-shadow: 0 0 0.1px $shadeOfBlack;
@@ -703,8 +696,15 @@ input {
 /*все страницы c "Услуги"*/
 .services{
   #tariffs{
+    .container{
+      padding: 0 !important;
+    }
     background: transparent;
     h1,p,img{display: none !important;}
+    h3{
+      padding: 0 !important;
+      margin:  1% 0 !important;
+    }
   }
   /*первая картинка на каждой странице "Охрана ...."*/
   .first_img{width: 30%;}
@@ -741,8 +741,6 @@ input {
       /*картинка*/
       img {width: $imgWidth100percent;}
     }
-    /*как выглядит список (сдвигаем)*/
-    ul {margin-left: -10%;}
   }
 }
 /*страница "Охрана организаций"*/
@@ -761,7 +759,7 @@ input {
     }
   }
   /*блоки*/
-  .flex-container > div {
+  .flex-container > .beautiful_block {
     /*как выглядит список (сдвигаем)*/
     ul {margin-top: 5%;}
   }
@@ -1013,7 +1011,7 @@ input {
   #tariffs{
     .flex-container > .type{
       width: 100%;
-      margin: 0 4.25% 8% 4.25% !important;
+      margin: 0 0 4% 0 !important;
       img{
         float: none !important;
         margin: 6% auto !important;
@@ -1026,33 +1024,22 @@ input {
       padding: 0.4rem 0.2rem;
     }
   }
-  /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
   .services_with_types {
-    /*список в блоках под типы охран (охрана объектов - промышленных/транспорта)*/
-    .flex-container > div ul {margin-left: -18% !important;}
-    /*параметры сетки бутстрап (место с картинкой)*/
-    .col-5 {
-      padding-right: 0 !important;
-      /*картинка*/
-      img {height: 115px !important;}
+    /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
+    .flex-container > .beautiful_block {
+      margin: 0 0 4% 0 !important;
     }
-  }
-  /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
-  "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
-  "Охрана коммерческих объектов","Охрана частных объектов"*/
-  .types_of_guard {
-    /*как выглядит список (сдвигаем)*/
-    .row ul {margin-left: -23% !important;}
-  }
-  /*страница "Технические средства"*/
-  #technical_means{
-    /*как выглядит список (сдвигаем)*/
-    ul{margin-left: -15% !important;}
   }
   /*страница "Лицензии"*/
   #licenses{
     /*нумерованный список*/
     ol{margin-left: -8% !important;}
+  }
+  /*страница "Технические средства"*/
+  #technical_means{
+    ul {
+      margin-left: -5% !important;
+    }
   }
   /*страница "Наши клиенты"*/
   #our_clients{
@@ -1305,7 +1292,6 @@ input {
       svg {
         width: 50px;
         height: 50px;
-        float: left;
       }
     }
     /*вторая картинка в компоненте "О нас"*/
@@ -1338,7 +1324,7 @@ input {
   #tariffs{
     .flex-container > .type{
       width: 100%;
-      margin: 0 1% 2% 1%;
+      margin: 0 0 2% 0;
       img{
         float: left;
         width: 35%;
@@ -1386,38 +1372,36 @@ input {
   /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
   .services_with_types{
     /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
-    .flex-container > div {
+    .flex-container > .beautiful_block {
+      height: auto !important;
       width: 100%;
-      /*блок типов охраны*/
-      .row {
-        flex-direction: column !important;
-        /*параметры сетки бутстрап (картинка)*/
-        .col-5 {
-          padding: 0 15px !important;
-          flex: 0 0 65% !important;
-          max-width: 65% !important;
-          /*картинка*/
-          img {
-            height: 140px;
-            margin-bottom: 2.5%;
-          }
-        }
-        /*как выглядит список (сдвигаем)*/
-        ul{
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
-        }
+      margin: 0 0 2% 0;
+       ul {margin-left: -5%;}
+    }
+    .row{
+      flex-direction: column;
+      .col-5{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+      .col{padding: 0 10px !important;}
+      img{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 65% !important;
       }
     }
-    /*блоки под типы охран*/
-    .type_guard_beautiful_block{height: auto;}
-    /*svg (щит)*/
-    svg{margin-left: 0;}
   }
   /*страница "Охрана организаций"*/
   #guard_of_organizations{
+    .flex-container > .beautiful_block {
+      ul {margin-top: 3%;}
+    }
     /*последний блок*/
-    .type_guard_beautiful_block:last-child{display: none;}
+    .beautiful_block{
+      &:last-child{display: none;}
+    }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
   "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
@@ -1455,7 +1439,25 @@ input {
       /*абзац*/
       p{margin-bottom: 0.5rem !important;}
     }
-
+    .row{
+      flex-direction: column;
+      .col-5{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+      .col{padding: 0 !important;}
+      img{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 60%;
+      }
+    }
+    ul {
+      margin-top: 0;
+      margin-left: 0;
+      margin-bottom: 1%;
+    }
   }
   /*страница "Спецсредства"*/
   #special_equipment{
@@ -1588,9 +1590,7 @@ input {
     min-height: 1.5rem;
     margin-bottom: 1%;
   }
-  .first_img,.second_img,.third_img{
-    box-shadow: $boxShadow, 0 0 0 3px  #ffff79;
-  }
+  .first_img,.second_img,.third_img{box-shadow: $boxShadow, 0 0 0 3px  #ffff79;}
   /*стили для главной страницы*/
   #Landing_page{
     /*заголовок на главной странице (названия компонентов)*/
@@ -1776,7 +1776,6 @@ input {
   #company{
     /*самая первая картинка на странице "О нас"*/
     .first_img {
-      float: left;
       width: 50%;
       margin: 0 3.5% 0.5% 0;
     }
@@ -1801,7 +1800,6 @@ input {
       svg {
         width: 55px;
         height: 55px;
-        float: left;
       }
     }
     /*этапы работы*/
@@ -1839,16 +1837,7 @@ input {
     }
     table tr td:first-child {width: 35%;}
     td,th {
-      padding: 0.4rem 0.2rem;
-    }
-  }
-  /*компонент "Тарифы"(после каждой услуги)*/
-  #tariffs_content {
-    /*блоки под каждый тип тарифа*/
-    .flex-container > div {
-      width: 100%;
-      /*последний блок*/
-      &:last-child{margin-left:  1% !important;}
+      padding: 0.25rem 0.2rem;
     }
   }
   /*контейнер в контейнере*/
@@ -1857,7 +1846,6 @@ input {
   .services {
     /*первая картинка на каждой странице "Охрана ...."*/
     .first_img {
-      float: left;
       width: 45%;
       margin: 0 2% 0.5% 0;
     }
@@ -1865,6 +1853,9 @@ input {
     svg{
       width: 35px;
       height: 35px;
+    }
+    h4{
+      clear: left;
     }
     /*перечисление особенности охраны (комплекс мер)*/
     .import,p:nth-child(3){clear: left;}
@@ -1880,30 +1871,25 @@ input {
   }
   /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
   .services_with_types{
-    .flex-container > div {/*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
+    /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
+    .flex-container > .beautiful_block {
       width: 100%;
-      /*параметры сетки бутстрап (место с картинкой)*/
-      .col-5 {
-        flex: 0 0 45% !important;
-        max-width: 45% !important;
-        /*картинка*/
-        img {
-          height: 135px;
-          margin-bottom: 8%;
-        }
-      }
-      /*как выглядит список (сдвигаем)*/
-      ul{margin-left: -10%;}
+      height: auto !important;
+      p{margin-bottom: .8rem !important;}
+      ul {margin-left: -12%;}
     }
-    /*блоки под типы охран*/
-    .type_guard_beautiful_block{height: auto;}
-    /*svg (щит)*/
-    svg{margin-left: 0;}
+    .row{
+      .col{padding: 0 10px !important;}
+      img{margin-bottom: 5%;}
+    }
   }
   /*страница "Охрана организаций"*/
   #guard_of_organizations{
+    .flex-container > .beautiful_block {
+      ul {margin-top: 3%;}
+    }
     /*последний блок*/
-    .type_guard_beautiful_block:last-child{display: none;}
+    .beautiful_block :last-child{display: none;}
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
   "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
@@ -2210,11 +2196,9 @@ input {
   #company{
     /*самая первая картинка на странице "О нас"*/
     .first_img {
-      float: left;
       width: 45%;
       margin: 0 3% 0.5% 0;
     }
-
     .flex-container .row{
       margin-right: -15px !important;
       margin-left: -15px !important;
@@ -2240,7 +2224,6 @@ input {
       svg {
         width: 55px;
         height: 55px;
-        float: left;
       }
     }
     /*этапы работы*/
@@ -2263,26 +2246,20 @@ input {
    .flex-container > .type{
     width: 48%;
     margin: 0 1% 2% 1%;
-     &:last-child{
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-     }
+       &:last-child{
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+       }
     }
-     table tr td:first-child {
-      width: 35%;
+    table{
+      tr td{height: 14vh;}
+      tr td:first-child {
+        width: 35%;
+      }
     }
     td,th {
-      padding: 0.6rem 0.25rem;
-    }
-  }
-  /*компонент "Тарифы"(после каждой услуги)*/
-  #tariffs_content {
-    /*блоки под каждый тип тарифа*/
-    .flex-container > div {
-      width: 100%;
-      /*последний блок*/
-      &:last-child {margin-left: 1% !important;}
+      padding: 0.25rem 0.25rem;
     }
   }
   /*котейнер в контейнере*/
@@ -2291,7 +2268,6 @@ input {
   .services {
     /*первая картинка на каждой странице "Охрана ...."*/
     .first_img {
-      float: left;
       width: 45%;
       margin: 0 2% 0.5% 0;
     }
@@ -2314,28 +2290,24 @@ input {
   /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
   .services_with_types{
     /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
-    .flex-container > div {
+    .flex-container > .beautiful_block {
       width: 100%;
-      /*параметры сетки бутстрап (место с картинкой)*/
-      .col-5 {
-        flex: 0 0 35% !important;
-        max-width: 35% !important;
-        /*картинка*/
-        img {
-          height: 150px;
-          margin-bottom: 8%;
-        }
-      }
+      height: auto !important;
+      margin: 0 0 2% 0 !important;
+      p{margin-bottom: .8rem !important;}
+      ul {margin-left: -12%;}
     }
-    /*блоки под типы охран*/
-    .type_guard_beautiful_block{height: auto;}
-    /*svg (щит)*/
-    svg{margin-left: 0;}
+    .row{
+      .col{padding: 0 10px !important;}
+      img{margin-bottom: 5%;}
+    }
   }
   /*страница "Охрана организаций"*/
   #guard_of_organizations{
     /*последний блок*/
-    .type_guard_beautiful_block:last-child{display: none;}
+    .beautiful_block{
+      &:last-child{display: none;}
+    }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
   "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
@@ -2565,7 +2537,6 @@ input {
   #company{
     /*самая первая картинка на странице "О нас"*/
     .first_img {
-      float: left;
       width: 40%;
       margin: 0 2% 0.5% 0;
     }
@@ -2583,7 +2554,6 @@ input {
       svg {
         width: 60px;
         height: 60px;
-        float: left;
       }
     }
     /*этапы работы*/
@@ -2603,25 +2573,13 @@ input {
   }
   /*страница "Тарифы"*/
   #tariffs{
-    /*картинки страницы "Тарифы"*/
-    img{margin-top: 5%;}
-    p{
-      padding: .7%;
-    }
-    td,th {
-      padding: 0.6rem 0.25rem;
-    }
-  }
-  /*компонент "Тарифы"(после каждой услуги)*/
-  #tariffs_content {
-    /*заголовок таблицы (1-ый столбец)*/
-    table tr td:first-child {width: 35% !important;}
+    td,th {padding: 0.3rem 0.25rem;}
+    p{height: 23vh;}
   }
   /*все страницы c "Услуги"*/
   .services {
     /*первая картинка на каждой странице "Охрана ...."*/
     .first_img {
-      float: left;
       width: 40%;
       margin: 0 2% 0.5% 0;
     }
@@ -2638,7 +2596,8 @@ input {
   /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
   .services_with_types{
     /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
-    .flex-container > div {
+    .flex-container > .beautiful_block  {
+      height: auto !important;
       /*параметры сетки бутстрап (место с картинкой)*/
       .col-5 {
         flex: 0 0 50% !important;
@@ -2651,21 +2610,6 @@ input {
       }
       /*как выглядит список (сдвигаем)*/
       ul {margin-left: -20%;}
-    }
-    /*блоки под типы охран*/
-    .type_guard_beautiful_block{height: auto;}
-    /*svg (щит)*/
-    svg{margin-left: 0;}
-  }
-  /*страница "Охрана организаций"*/
-  #guard_of_organizations{
-    /*последний блок*/
-    .type_guard_beautiful_block:last-child{
-      /*картинка*/
-      img{
-        height: 200px;
-        padding:2% 10% ;
-      }
     }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
@@ -2806,7 +2750,6 @@ input {
   #company{
     /*самая первая картинка на странице "О нас"*/
     .first_img {
-      float: left;
       width: 44%;
       margin: 0 2% 0.5% 0;
     }
@@ -2817,14 +2760,8 @@ input {
       svg {
         width: 75px;
         height: 75px;
-        float: left;
       }
     }
-  }
-  /*страница "Тарифы"*/
-  #tariffs{
-    /*картинки страницы "Тарифы"*/
-    img{margin-top: 3%;}
   }
   /*все страницы c "Услуги"*/
   .services {
@@ -2851,6 +2788,18 @@ input {
     .col-5{
       padding-left: 0 !important;
     }
+  }
+}
+@media screen and (min-width:1200px) and (max-width: 1300px) {
+  .services {
+    #tariffs {
+     .container{padding: 0 !important;}
+    }
+  }
+  #tariffs{
+    p{height: 21vh;}
+    /*таблица*/
+    table { tr td {height: 16vh;} }
   }
 }
 @media screen and (min-width:1400px) and (max-width: 1600px) {
