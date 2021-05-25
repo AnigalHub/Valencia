@@ -18,6 +18,17 @@ $boxShadow:  0 30px 0 -20px $backgroundPage,
 
 $imgWidth100percent:100%;
 
+.container-fluid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.container{
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+.row {
+  margin: 0 !important;
+}
 
 /*svg в шапке меню*/
 #shield{
@@ -259,7 +270,7 @@ input {
     /*слоган чопа*/
     .slogan{
       font-family: $fontText;
-      font-weight: 400 !important;
+      font-weight: 400;
       font-size: 2.7rem;
       line-height: 3.25rem;
       text-shadow: -1px 1px 1px $shadeOfBlack;
@@ -270,6 +281,12 @@ input {
       filter: contrast(90%);
       padding: 8% 0 3% 0;
       margin-left: -5%;
+    }
+    .col .slogan{
+      display: block;
+    }
+    .slogan{
+      display: none;
     }
     /*параметры сетки бутстрап*/
     .col{padding: 0 !important;}
@@ -312,8 +329,8 @@ input {
     /*общие стили для svg для данного компонента (Преимущества)*/
     svg{
       display: block;
-      width: 75px !important;
-      height: 75px !important;
+      width: 75px;
+      height: 75px;
       float: left;
       border-radius: 10%;
       padding: .5%;
@@ -365,9 +382,7 @@ input {
     /*общие стили на весь компонент (Type) в целом*/
     display: flex;
     max-width: 100%;
-    h2{
-      color: $shadeOfWhite;
-    }
+    h2{color: $shadeOfWhite;}
     img{
       width: $imgWidth100percent;
       height: min-content;
@@ -422,7 +437,7 @@ input {
     }
     /*цифры*/
     .number{
-      font-size:5.25rem !important;
+      font-size:5.25rem;
       text-align: center;
       font-family: $fontNumber;
       font-weight: 400;
@@ -940,7 +955,7 @@ input {
     line-height: 1.15rem !important;
   }
   /*стили для главной страницы*/
-  #Landing_page{
+ #Landing_page{
     /*заголовок*/
     h2{font-size: 1.1rem !important;}
     /*текст на главной странице*/
@@ -948,51 +963,22 @@ input {
       font-size: .9rem !important;
       line-height: 1.15rem !important;
     }
-    /*компонент (самый первый - главный) с названием чопа, слоганом, картинкой и преимуществами*/
-    #Home{
-      /*название чопа*/
-      .title_guard{
-        font-size: 1.24rem !important;
-        line-height: 1.6rem !important;
-        margin-left: -2% !important;
-        letter-spacing: -1px !important;
-      }
-      /*слоган*/
-      .slogan{
-        font-size: 1.15rem !important;
-        line-height: 1.6rem !important;
-        margin-left: 15% !important;
-        margin-top: 8% !important;
-      }
-      /*картинка*/
-      img{
-        margin-top: 5% !important;
-        width:245% !important;
-      }
-    }
-    /*компонент "Типы" - 3 ссылки-картинки*/
-    #Type{height: 35vh;}
-    /*компонент "Услуги" (виды деятельности)*/
-    #Services {
-      /*текст на главной странице (касательно компонента "Услуги")*/
-      .text_Landing_page {
-        height: 3rem;
-        text-shadow: 1px 1px 0 $shadeOfBlack, 1px 1px 1px $shadeOfBlack !important;
-      }
-    }
     /*компонент "Важные числа"*/
     #Import_numbers{
       /*цифры*/
-      .number{font-size:2.25rem !important;}
+      .number{
+        font-size:2.25rem !important;
+        letter-spacing: -1px;
+      }
       /*каждый блок с цифрой и текстом отдельно*/
-      .flex-container > div{margin: 1.5% 1% 0.5% 1% !important;}
+      .flex-container > div{margin: 1.5% 1% 5% 1% !important;}
     }
     /*компонент "Обратная связь"*/
     #Feedback{
       /*телефон*/
       .call_telephone{
         font-size: 1.6rem !important;
-        width: 85%;
+        width: 70%;
       }
     }
   }
@@ -1110,7 +1096,7 @@ input {
     margin-bottom: 1%;
   }
   /*первая, вторая и третья картинки на страницах услуг и "О нас"*/
-  .first_img,.second_img,.third_img{box-shadow: $boxShadow, 0 0 0 2px #ffff79;}
+  .first_img,.second_img,.third_img{box-shadow: $boxShadow, 0 0 0 2.5px #ffff79;}
   /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
   .place_form{margin-top: 0;}
   /*стили для главной страницы*/
@@ -1119,7 +1105,7 @@ input {
     h2{font-size: 1.2rem;}
     /*текст на главной странице*/
     .text_Landing_page {
-      font-size: 1.15rem;
+      font-size: .9rem;
       line-height: 1.18rem;
     }
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
@@ -1128,52 +1114,59 @@ input {
       background: url(../../static/Landing_page/134.jpg) 100% 100% no-repeat !important ;
       background-size: 100% 100% !important;
       animation: none;
-      /*название чопа*/
       .title_guard{
-        padding: 4% 0 0 7%;
-        font-size: 1.55rem;
-        margin-left: -3.5%;
-        line-height: 1.8rem;
-        filter: brightness(130%);
-        letter-spacing: -.4px;
-        text-shadow: -.9px 2px .9px $shadeOfBlack, 0 0 2px $shadeOfBlack, 0 0 5px $shadeOfBlack;
+        font-size: .8rem;
+        line-height: 1.15rem;
+        text-shadow:  .5px .5px 2px $shadeOfBlack;
+        letter-spacing: -.1px;transform: scale(1.08, 1.5);
       }
-      /*слоган чопа*/
       .slogan{
-        margin-left: 20%;
-        margin-right: 4%;
-        margin-top: 22%;
-        transform: none;
-        background: rgba(0, 0, 0, .46);
-        font-size: 1.15rem;
-        filter: contrast(120%) brightness(160%);
-        padding: 4%;
-        line-height: 1.7rem;
-        text-shadow: -.9px 2px .9px #02022a, 0 0 2px #02022a, 0 0 5px #02022a;
+        font-weight: 600;
+        text-shadow: none;
+        font-size: 0.75rem;
+        letter-spacing: -.1px;transform: scale(1.05, 1.15);
+        line-height: 1.15rem;
+        padding-left: 14%;
       }
       /*картинка с охранником*/
       img{
+        padding-top: 20%;
         width:300%;
-        margin-left: -32%;
-      }
-      /*блок, который виден только в версии компьютеров, планшетов*/
-      .big_version{display: none;}
-      /*блок, который виден только в мобильной версии*/
-      .mobile_version{display: block;
-        /*слоган чопа - перемещен в row*/
-        .col .slogan{display: block !important;}
-        /*прошлый слоган прячем*/
-        .slogan{display: none !important;}
+        height: 100%;
+        margin-left: -37%;
       }
     }
     /*компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили*/
-    #Services, #Feedback, #Clients{ padding: 6% 0;}
+    #Services, #Feedback{ padding: 6% 0;}
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
-    #Advantages{display: none;}
+    #Advantages{
+      /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
+      .text_Landing_page{
+        font-size: .7rem !important;
+        line-height: 1rem !important;
+        letter-spacing: -.4px;
+      }
+      /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
+      .flex-container{
+        margin-left: 15%;
+        margin-bottom: 2%;
+      }
+      /*стили на одинаковые блоки контейнера*/
+      .flex-container > div {
+        width: 100%;
+        padding: 1%;
+        margin: 2.25% 0 2.25% 0
+      }
+      /*общие стили для svg для данного компонента (Преимущества)*/
+      svg{
+        margin-top: 5%;
+        width: 35px;
+        height: 32px;
+      }
+    }
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type{
-      height: 80vh;
-      flex-direction: column;
+      .row{flex-direction: column;}
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{
         font-size: 1.18rem !important;
@@ -1187,24 +1180,37 @@ input {
         letter-spacing: -1.5px;
         padding-left: 2%;
       }
+      img{
+        height: auto;
+      }
     }
     /*компонент "Услуги" (виды деятельности)*/
     #Services{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
       .text_Landing_page{
-        height: 3rem;
-        text-shadow: 1px 1px 0 #0b1e2d, 1px 1px 1px #0b1e2d !important;
+        text-shadow: 1px 1px 0 $shadeOfBlack, 1px 1px 1px $shadeOfBlack !important;
+        height: 2.5rem;
       }
       /*блоки-ссылки с картинками и кнопками*/
       .flex-container > a {
         width: 47%;
-        margin: 0 1.25% 2.5% 1.25% !important;
+        margin: 0 1.5% 3% 1.5% !important;
+      }
+      .btn {
+        box-shadow:0 25px 0 -15px #afbdcd,
+        0 -25px 0 -15px #afbdcd,
+        25px 0 0 -15px #afbdcd,
+        -25px 0 0 -15px #afbdcd,
+        0 0 0 2.5px #ffff00;
       }
     }
     /*компонент "Важные числа"*/
     #Import_numbers{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
-      .text_Landing_page{letter-spacing: -1px;}
+      .text_Landing_page{
+        text-shadow: none;
+        font-weight: 400;
+      }
       /*цифры*/
       .number{font-size:3rem;}
       /*контейнер с цифрами и текстом*/
@@ -1240,7 +1246,17 @@ input {
     /*компонент "Наши клиенты"*/
     #Clients{
       /*включаем слайдер для мобилки*/
-      #carousel_mobile{display: block;}
+      #carousel_mobile{
+        display: block;
+        img{
+          padding: 2%;
+          box-shadow: 0 25px 0 -15px #afbdcd,
+          0 -25px 0 -15px #afbdcd,
+          25px 0 0 -15px #afbdcd,
+          -25px 0 0 -15px #afbdcd,
+          0 0 0 2.5px #ffff00;
+        }
+      }
       /*отключаем большой слайдер*/
       #carousel_desktop{display: none;}
     }
@@ -1256,7 +1272,7 @@ input {
     button {
       font-size: 0.8rem;
       padding: 1.5%;
-      width: 45%;
+      width: 65%;
     }
     /*место, где находится форма заявки (обратной связи)*/
     .place_form{box-shadow: 0 0 5px 0 #0f2538;}
@@ -1598,82 +1614,67 @@ input {
     /*текст на главной странице*/
     /*изменение/добавление стилей в текст на главной странице*/
     .text_Landing_page{
-      font-size: 1.15rem;
+      font-size: .9rem;
       line-height: 1.18rem;
     }
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       /*название чопа*/
       .title_guard{
-        padding: 4% 0 0 7%;
-        font-size: 1.75rem;
-        margin-left: 0;
-        line-height: 2rem;
-        letter-spacing: .8px !important;
-        text-shadow: -.9px 2px .9px #02022a, 0 0 2px #02022a, 0 0 5px #02022a;
+        font-size: .97rem;
+        line-height: 1.45rem;
       }
       /*слоган чопа*/
       .slogan{
-        margin-left: 0;
-        font-size: 1.45rem;
-        padding: 5% 0 0 8%;
-        line-height: 2rem;
-        text-shadow: -.8px 2px .8px rgb(9, 24, 38);
+        font-size: 0.97rem;
+        line-height: 1.25rem;
+        padding-bottom: 4%;
       }
       /*картинка с охранником*/
       img{
         width:200%;
         margin-left: -24%;
       }
-      /*блок, который виден только в версии компьютеров, планшетов*/
-      .big_version{display: none;}
-      /*блок, который виден только в мобильной версии*/
-      .mobile_version{display: block;
-        /*слоган чопа - перемещен в row*/
-        .col .slogan{display: none;}
-        /*прошлый слоган прячем*/
-        .slogan{display: block;}
-      }
     }
     /*компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили*/
-    #Services, #Feedback, #Clients{padding: 3.5% 0;}
+    #Services, #Feedback{padding: 3.5% 0;}
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
       .text_Landing_page{
-        font-size: .9rem !important;
-        line-height: 1rem !important;
-        letter-spacing: -.9px;
+        font-size: .77rem !important;
+        line-height: 1.18rem !important;
+        letter-spacing: -.5px;
       }
       /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
       .flex-container{
-        margin-top: 5%;
+        margin-top: 0;
         margin-left: 3%;
+        margin-bottom: 2%;
       }
       /*стили на одинаковые блоки контейнера*/
       .flex-container > div {
-        width: 47%;
-        padding: 0.25%;
-        margin: 1.25% 3% 1.25% 0;
+        width: 100%;
+        padding: 1%;
+        margin: 1.6% 0 1.6% 0
       }
       /*общие стили для svg для данного компонента (Преимущества)*/
       svg{
-        margin: 2.5% auto;
-        width: 45px !important;
-        height: 45px !important;
-        padding: 0;
+        width: 38px;
+        height: 40px;
       }
     }
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type{
-      height: 25vh;
-      flex-direction: row !important;
+      img{
+        height: 38vh;
+      }
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{
         font-size: 1.15rem !important;
         left: 0;
+        bottom: 15%;
         letter-spacing: -1px;
-        bottom: 20%;
         padding-left: 2% !important;
       }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)*/
@@ -1691,8 +1692,15 @@ input {
     }
     /*компонент "Услуги"(виды деятельности)*/
     #Services{
+      .btn {
+        box-shadow: 0 25px 0 -15px #afbdcd,
+        0 -25px 0 -15px #afbdcd,
+        25px 0 0 -15px #afbdcd,
+        -25px 0 0 -15px #afbdcd,
+        0 0 0 3px #ffff00;
+      }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
-      .text_Landing_page{text-shadow: 1px 1px 0 #0b1e2d, 1px 1px 1px #0b1e2d !important;}
+      .text_Landing_page{text-shadow: 1px 1px 0 $shadeOfBlack, 1px 1px 1px $shadeOfBlack !important;}
       /*блоки-ссылки с картинками и кнопками*/
       .flex-container > a {
         width: 47%;
@@ -1702,7 +1710,9 @@ input {
     /*компонент "Важные числа"*/
     #Import_numbers{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
-      .text_Landing_page{letter-spacing: -1px;}
+      .text_Landing_page{
+        text-shadow: none !important;
+      }
       /*цифры*/
       .number{font-size:3rem;}
       /*контейнер с цифрами и текстом*/
@@ -1719,10 +1729,12 @@ input {
     /*компонент "Обратная связь"*/
     #Feedback{
       /*заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)*/
-      h2{margin-top: 0;}
+      h2{margin-top: 0; margin-bottom: 0}
       /*блок с формой заявки (обратной связи) и текстом, телефоном, заголовком*/
       .row{
         flex-direction: column-reverse;
+        margin: 0 3% !important;
+        box-shadow: 3px 3px 3px 0 #57606f, inset 2px 2px 5px 0 #384250, 2px 2px 5px 3px #afbdcd;
         /*параметры сетки бутстрап (текст,телефон,заголовок)*/
         .col{padding: 0 !important;}
         /*параметры сетки бутстрап (форма заявки)*/
@@ -1739,15 +1751,28 @@ input {
       }
       /*номер телефона*/
       .call_telephone{
+        margin-top: 0;
         font-size: 1.8rem;
         margin-bottom: 2.5%;
-        width: 55%;
+        width: 60%;
       }
     }
     /*компонент "Наши клиенты"*/
     #Clients{
       /*включаем слайдер для мобилки*/
-      #carousel_mobile{display: block;}
+      #carousel_mobile{
+        display: block;
+        .carousel-item {
+          padding: 2%;
+        }
+        img{
+          box-shadow: 0 25px 0 -15px #afbdcd,
+          0 -25px 0 -15px #afbdcd,
+          25px 0 0 -15px #afbdcd,
+          -25px 0 0 -15px #afbdcd,
+          0 0 0 3px #ffff00;
+        }
+      }
       /*отключаем большой слайдер*/
       #carousel_desktop{display: none;}
     }
@@ -2051,7 +2076,7 @@ input {
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   input{min-height: 1.25rem;}
   /*компонент "Обратная связь" на главной странице и страница "Контакты"*/
-  #contact, #Feedback {
+  #contact{
     /*место, где находится форма заявки (обратной связи)*/
     .place_form {margin-top: 8%;}
   }
@@ -2062,38 +2087,24 @@ input {
     /*текст на главной странице*/
     /*изменение/добавление стилей в текст на главной странице*/
     .text_Landing_page{
-      font-size: 1.15rem;
+      font-size: 1rem;
       line-height: 1.18rem;
     }
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
-      /*название чопа*/
+      /*название чопа,слоган чопа*/
       .title_guard{
-        padding: 4% 0 0 7%;
-        font-size: 2.5rem;
-        margin-left: 0;
-        line-height: 2.15rem;
-        letter-spacing: 2.3px;
-        text-shadow: -1px 3.5px 1px #02022a;
+        font-size: 1.45rem;
+        line-height: 2rem;
       }
-      /*слоган чопа*/
       .slogan{
-        margin-left: 0;
-        font-size: 1.95rem;
-        padding: 5% 0 0 8%;
-        line-height: 2.3rem;
-        text-shadow: -.8px 2px .8px rgb(9, 24, 38);
+        font-size: 1.45rem;
+        padding-top: 3%;
+        padding-bottom: 1%;
+        line-height: 1.8rem;
       }
       /*картинка с охранником*/
       img{width:135%;}
-      /*блок, который виден только в версии компьютеров, планшетов*/
-      .big_version{display: none;}
-      /*блок, который виден только в мобильной версии*/
-      .mobile_version{
-        display: block;
-        /*слоган чопа - перемещен в row*/
-      .col .slogan{display: none;}
-      }
     }
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
@@ -2105,40 +2116,40 @@ input {
       }
       /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
       .flex-container{
-        margin-top: 2%;
-        margin-left: 8%;
+        margin-top: 0;
+        margin-left: 3%;
         margin-bottom: 2%;
       }
       /*стили на одинаковые блоки контейнера*/
       .flex-container > div {
-        width: 47%;
+        width: 100%;
         padding: 0.5%;
-        margin: 1.5% 3% 1.5% 0;
+        margin: 1.6% 0 1.6% 0
       }
       /*общие стили для svg для данного компонента (Преимущества)*/
       svg{
-        margin: 2.5% auto;
-        width: 45px !important;
-        height: 45px !important;
-        padding: 0;
+        width: 45px;
+        height: 45px;
       }
     }
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type{
-      height: 25vh;
+     img{
+       height: 38vh;
+     }
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{
-        font-size: 1.3rem !important;
+        font-size: 1.25rem !important;
         left: 0;
-        letter-spacing: -1.2px;
-        bottom: 12%;
+        letter-spacing: -.9px;
+        bottom: 10%;
         padding-left: 2% !important;
       }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)*/
       .text_Landing_page{
         font-size: 1.1rem !important;
         line-height: 1.18rem !important;
-        letter-spacing: -1.5px;
+        letter-spacing: -1px;
         padding-left: 2%;
       }
       /*стили для места где расположен текст*/
@@ -2150,7 +2161,7 @@ input {
     /*компонент "Важные числа"*/
     #Import_numbers{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
-      .text_Landing_page{letter-spacing: -1.5px;}
+      .text_Landing_page{letter-spacing: -0.5px;}
       /*цифры*/
       .number{font-size:3.5rem;}
       /*контейнер с цифрами и текстом*/
@@ -2170,13 +2181,17 @@ input {
       /*номер телефона*/
       .call_telephone{
         font-size: 2rem;
-        width: 85%;
+        width: 90%;
       }
       /*блок с формой заявки*/
       .col-6{padding: 0 !important;}
+      button{
+        width: 50%;
+      }
     }
     /*компонент "Наши клиенты"*/
     #Clients{
+      padding-bottom: 0;
       /*карусель для большой версии*/
       #carousel_desktop{
         /*отступы блоков с картинками*/
@@ -2254,13 +2269,9 @@ input {
     }
     table{
       tr td{height: 14vh;}
-      tr td:first-child {
-        width: 35%;
-      }
+      tr td:first-child {width: 35%;}
     }
-    td,th {
-      padding: 0.25rem 0.25rem;
-    }
+    td,th {padding: 0.25rem 0.25rem;}
   }
   /*котейнер в контейнере*/
   .container .container{padding: 0 !important;}
@@ -2305,9 +2316,7 @@ input {
   /*страница "Охрана организаций"*/
   #guard_of_organizations{
     /*последний блок*/
-    .beautiful_block{
-      &:last-child{display: none;}
-    }
+    .beautiful_block:last-child{display: none;}
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
   "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
@@ -2436,65 +2445,52 @@ input {
     h2{font-size: 1.6rem !important;}
     /*текст на главной странице*/
     .text_Landing_page{
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       line-height: 1.25rem;
     }
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       /*название чопа*/
-      .title_guard{
-        padding: 4% 0 0 7%;
-        font-size: 2.25rem;
-        line-height: 2.5rem;
-        margin-left: -12%;
-        text-shadow: -1px 3.5px 1px #02022a;
-      }
+      .title_guard{font-size: 2rem;}
       /*слоган чопа*/
       .slogan{
-        font-size: 2rem;
-        margin-left: -12%;
-        padding: 5% 0 0 8%;
-        line-height: 2.5rem;
+        font-size: 1.8rem;
+        line-height: 2.25rem;
       }
     }
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
       .text_Landing_page{
-        font-size: 1.15rem !important;
-        line-height: 1.2rem !important;
-        letter-spacing: -.5px;
+        font-size: 1rem !important;
+        line-height: 1.2rem;
       }
       /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
       .flex-container{
-        margin-top: 3.5%;
-        margin-left: -5%;
-      }
-      /*стили на одинаковые блоки контейнера*/
-      .flex-container > div {
-        width: 31%;
-        padding: 0.5%;
-        margin: 1% 2% 1% 0;
+        margin-top: 0;
+        margin-left: -3%;
+        margin-right: 0 ;
+        & > div{
+          padding: 1.8% 1.8%;
+        }
       }
       /*общие стили для svg для данного компонента (Преимущества)*/
       svg{
-        margin: 2.5% auto;
         width: 50px !important;
-        height: 50px !important;
+        height: 55px !important;
         padding: 0;
       }
     }
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type{
-      height: 30vh;
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{
         font-size: 1.35rem !important;
-        letter-spacing: -1.2px;
-        left: 1.5%;
+        letter-spacing: -.15px;
       }
+      img{height: 36vh;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)*/
-      .text_Landing_page{letter-spacing: -1.5px;}
+      .text_Landing_page{letter-spacing: -1px;}
     }
     /*компонент "Важные числа"*/
     #Import_numbers{
@@ -2513,7 +2509,10 @@ input {
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)*/
       .text_Landing_page{line-height: 1.6rem;}
       /*номер телефона*/
-      .call_telephone{font-size: 2.5rem;}
+      .call_telephone{
+        width: 80%;
+        font-size: 2.5rem;
+      }
       /*параметры сетки бутстрап (форма заявки - обратной связи)*/
       .col-6{padding: 0 !important;}
     }
@@ -2692,29 +2691,30 @@ input {
   }
   /*стили для главной страницы*/
   #Landing_page{
+    /*текст на главной странице*/
+    .text_Landing_page{font-size: 1.2rem;}
     /*заголовок на главной странице (названия компонентов)*/
     h2{font-size: 1.8rem;}
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       /*название чопа*/
       .title_guard{
-        padding: 4% 0 0 7%;
-        margin-left: -10%;
-        font-size: 3rem;
-        line-height: 3rem;
-        text-shadow: -1px 4.5px 1px #02022a;
+        padding: 1% 0 0 0;
+        font-size: 2.55rem;
       }
       /*слоган чопа*/
-      .slogan{
-        font-size: 2.5rem;
-        margin-left: -8%;
-        padding: 5% 0 0 8%;
-        line-height: 3rem;
+      .slogan{font-size: 2.5rem;}
+    }
+    /*компонент "Преимущества" - 6 блоков с svg и текстом*/
+    #Advantages{
+      .text_Landing_page{font-size: 1.05rem !important;}
+      svg {
+        width: 70px;
+        height: 70px;
       }
     }
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type{
-      height: 35vh;
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{font-size: 1.6rem !important;}
     }
@@ -2732,8 +2732,6 @@ input {
     }
     /*компонент "Обратная связь"*/
     #Feedback{
-      /*заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)*/
-      h2{margin-top: 8%;}
       /*номер телефона*/
       .call_telephone{font-size: 3.25rem;}
     }
