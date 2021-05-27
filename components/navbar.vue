@@ -11,7 +11,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  width="35" height="25" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
-            <g fill="#ffffff">
+            <g fill="#000000">
               <path d="M34.37313,44.72c-0.44681,0.00712 -0.87331,0.18785 -1.18922,0.50391l-13.76,13.76c-0.67143,0.67171 -0.67143,1.76048 0,2.43219l65.36,65.36c0.67171,0.67143 1.76048,0.67143 2.43219,0l65.36,-65.36c0.67143,-0.67171 0.67143,-1.76048 0,-2.43219l-13.76,-13.76c-0.67171,-0.67143 -1.76048,-0.67143 -2.43219,0l-50.38391,50.38391l-50.38391,-50.38391c-0.32908,-0.32923 -0.77753,-0.51103 -1.24297,-0.50391zM34.4,48.87219l50.38391,50.38391c0.67171,0.67143 1.76048,0.67143 2.43219,0l50.38391,-50.38391l11.32781,11.32781l-62.92781,62.92781l-62.92781,-62.92781zM35.24992,64.48992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l28.38,28.38c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-28.38,-28.38c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203zM136.7232,64.49328c-0.22319,0.00621 -0.43521,0.09897 -0.59125,0.25867l-41.28,41.28c-0.22464,0.21571 -0.31512,0.536 -0.23655,0.83737c0.07857,0.30136 0.31392,0.53671 0.61528,0.61528c0.30136,0.07857 0.62166,-0.01191 0.83737,-0.23655l41.28,-41.28c0.25309,-0.24743 0.32875,-0.62464 0.19067,-0.95054c-0.13808,-0.3259 -0.46171,-0.53393 -0.81552,-0.52423zM73.08992,102.32992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l6.02,6.02c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-6.02,-6.02c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203zM83.40992,112.64992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l2.58,2.58c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-2.58,-2.58c-0.16204,-0.16747 -0.38509,-0.26203 -0.61813,-0.26203z"></path>
             </g>
           </g>
@@ -84,7 +84,7 @@
   }
   .nav-link-active{
    text-shadow: 0 1px 2px black !important;
-    color: #e6e686 !important;
+   color: #e6e686 !important;
   }
   .show > .btn-secondary.dropdown-toggle {
     color: #007bff !important;
@@ -115,7 +115,6 @@
     font-size: 1.2rem !important;
     color: black;
     font-weight: 800 !important;letter-spacing: -.8px;
-    //background-color: #040610 !important;
     /*при наведении*/
     &:hover{
       color: #007bff !important;
@@ -128,18 +127,16 @@
     text-shadow: none ;
     font-size: 1.15rem;
     color: black ;
-    background: #acb0b6 !important;
     /*при наведении*/
     &:hover{
       color: #007bff !important;
       background: #dce4ee;
     }
   }
-  .menu_org,.menu_obj,.menu_state{
-    background: #acb0b6 !important;
-    filter: contrast(76%) !important;
-  }
 
+  .dropdown-item,.menu_org,.menu_obj,.menu_state{
+    background: #c5c8ce !important;
+  }
   /*выпадающий блок при нажатии на "Услуги" (dropdown)*/
   .dropdown-menu {
     padding: 0 !important;
@@ -148,26 +145,19 @@
 
   /******************АДАПТИВНОСТЬ***************/
   @media screen  and (max-width: 1200px)  {
-    /*когда меню становится мобильным (при нажатии на кнопку), то меняются стили для подпунктов охраны ( - ставим треугольник, меняем отступы)*/
-    .menu_org,.menu_obj,.menu_state{
-      .dropdown-item::before {
-        content: "\25B8";
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        margin-left: .5em;
-      }
-    }
     /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
     .dropdown-item {
-      border: none;
+     border: none;
+      box-shadow: none;
     }
   }
   @media screen  and (max-width: 1250px) {
     /*кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)*/
+    .dropdown-item{
+      padding: 0.25rem !important;
+    }
     .dropdown-item,.dropdown-toggle{
       font-size: 1.1rem !important;
-      padding: 0.25rem !important;
     }
   }
   @media screen and (min-width:1250px) and (max-width: 1310px) {
@@ -186,6 +176,7 @@
     }
   }
   @media screen  and (min-width: 1200px)  {
+
     /*максимальная ширина контента меню на больших экранах*/
     .container, .container-lg, .container-md, .container-sm, .container-xl {
       max-width: 1400px !important;
@@ -217,8 +208,6 @@
   .dropdown-toggle{
     font-weight: 600 !important;
     font-family: 'Lora', serif;
-    padding-right: 0.3rem !important;
-    padding-left: 0.3rem !important;
   }
 </style>
 <style scoped lang="scss">
@@ -230,7 +219,6 @@
   .navbar{
     padding: 0 !important;
     background: #dce4ee;
-   // border-bottom: 2px solid #3d3636;
     box-shadow: 13px 0px 18px -6px #000000;
   }
   /*контейнер, в котором находится весь контент меню*/
@@ -251,7 +239,6 @@
   .name_brand{
     vertical-align: middle;
     margin-top: 200% !important;
-    //font-family: 'Lobster', cursive;
     margin-left: -5%;
     font-weight: 600 !important;
     color: black;
@@ -265,20 +252,20 @@
   }
   /*svg-щит*/
   #shield{
-    width:55px;
-    height: 57px;
-    margin: 1.5% 0;
+    width:50px;
+    height: 54px;
+    margin: 2% 0 1% 0;
   }
   /*надпись "частное охранное предприятие" в логотипе*/
   .chop{
     letter-spacing: .2px;
     color: black !important;
-    font-size: 0.68rem !important;
+    font-size: 0.65rem !important;
     margin-top: -11%;
     font-weight: 600;
     margin-left: 24%;
     text-align: center;
-    margin-bottom: 0.15rem !important;
+    margin-bottom: 0.1rem !important;
   }
   /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown)*/
   .nav-link{
@@ -300,11 +287,16 @@
   .menu_obj{top:4% !important;}
   /*блок с подвидами охраны недвижимости (коммерческие объекты, частные объекты)*/
   .menu_state{top:4% !important;}
-
+  .navbar a{
+    filter: contrast(140%);
+  }
   /*******************АДАПТИВНОСТЬ***********************/
   @media screen and (max-width: 1200px) {
     /*вид меню на экране когда меню через кнопку видно (отступы)*/
     .navbar-expand-xl .navbar-collapse {margin-left: 2%;}
+    .navbar{
+      box-shadow: 0 0 10px 0 #000000;
+    }
     /*svg-щит*/
     #shield{
       margin-top: 1.5% !important;
@@ -313,18 +305,23 @@
       height:52px;
       filter: contrast(120%) brightness(170%);
     }
-
     /*надпись "частное охранное предприятие" в логотипе*/
     .chop{
-      font-size: 0.6rem !important;
+      font-size: 0.5rem !important;
       margin-top: -10.2%;
       margin-left: 24%;
       margin-bottom: 0.5rem !important;
     }
     /*номер телефона*/
     .telephone{display: none;}
+    .menu_org, .menu_obj, .menu_state{display: none;}
+    .dropdown-item{box-shadow: none;}
+    .nav-link,.telephone{
+      margin-left: 2.8% !important;
+    }
   }
   @media screen and (min-width: 1200px)  {
+
     /* все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
     .nav-link,.telephone{
       height: 1.7em;
@@ -333,33 +330,75 @@
       align-items: center;
       padding-right: 0.5rem !important;
       padding-left: 0.5rem !important;
-      letter-spacing: -.4px;
+      letter-spacing: -.35px;
     }
   }
+
   @media screen and (max-width: 1250px) {
     /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
     .nav-link,.telephone{
-      font-size: 1.2rem !important;
-      padding-right: 0.425rem !important;
-      padding-left: 0.425rem !important;
+      font-size: 1.05rem !important;
+      padding-right: 0.35rem !important;
+      padding-left: 0.35rem !important;
+    }
+    /*надпись "частное охранное предприятие" в логотипе*/
+    .chop{
+      font-size: 0.6rem !important;
+      margin-top: -10%;
+      margin-left: 20%;
+      margin-bottom: 0 !important;
+    }
+    /*svg-щит*/
+    #shield{
+      width:45px;
+      height:48px;
+    }
+    .navbar-expand-xl .navbar-collapse{
+      margin-left: -1%;
+    }
+    .telephone{
+      margin-left: -.35%;
     }
     /*кнопки*/
     .btn-group{display: block;}
   }
   @media screen and (min-width:1250px) and (max-width: 1310px) {
+    /*svg-щит*/
+    #shield{
+      width:50px;
+      height:51px;
+    }
     /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
     .nav-link,.telephone{
-      font-size: 1.25rem ;
-      padding-right: 0.475rem !important;
-      padding-left: 0.475rem !important;
+      font-size: 1.1rem ;
+      padding-right: 0.35rem !important;
+      padding-left: 0.35rem !important;
+    }
+    /*надпись "частное охранное предприятие" в логотипе*/
+    .chop {
+      font-size: 0.6rem !important;
+    }
+    .navbar-expand-xl .navbar-collapse{
+      margin-left: -1%;
+    }
+    .telephone{
+      margin-left: .5%;
     }
   }
   @media screen and (min-width:1310px) and (max-width: 1400px) {
+    /*svg-щит*/
+    #shield{
+      width:50px;
+      height:51px;
+    }
     /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
     .nav-link,.telephone{
-      font-size: 1.25rem;
-      padding-right: 0.525rem !important;
-      padding-left: 0.525rem !important;
+      font-size: 1.15rem;
+      padding-right: 0.4rem !important;
+      padding-left: 0.4rem !important;
+    }
+    .telephone{
+      margin-left: .8%;
     }
   }
 </style>
