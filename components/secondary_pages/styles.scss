@@ -54,7 +54,7 @@ $imgWidth100percent:100%;
   line-height: 1.4rem;
 }
 /*любой текст (текст,заголочки, ссылки и т.д.)*/
-.text,.text_descr,.emphasized,a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
+.text,.text_descr,.emphasized,.page a,#Landing_page a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
 /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
 .text_descr{
   font-family: $fontText;
