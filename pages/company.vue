@@ -29,10 +29,10 @@
             <div v-for="stage in StagesOfWorkPart1" :key="stage.index">
               <component :is="stage.svg"/>
               <b-row>
-                <b-col cols="1" class="number_stage">
+                <b-col cols="1">
                   <p class="emphasized text">{{stage.index}}.</p>
                 </b-col>
-                <b-col cols="2" class="name_stage">
+                <b-col cols="2">
                   <p class="emphasized text">{{stage.name_stage}}</p>
                 </b-col>
                 <b-col>
