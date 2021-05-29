@@ -10,13 +10,11 @@
           <li class="text" v-for="guard in GuardOfIndustrialFacilities" :key="guard.index">{{guard.name}}</li>
         </ul>
       </div>
-      <div class="im_descr block_two">
-        <h6>Круг обязанностей охранников коммерческих объектов:</h6>
-        <img src="../../../static/services/object_guard/object_check_by_cameras.jpg" alt="проверка_объекта_по_камерам"/>
-        <ul class="text">
-          <li v-for="name_duty in DutiesGuardOfIndustrialFacilities" :key="name_duty.index">{{name_duty.duty}}</li>
-        </ul>
-      </div>
+      <h6>Круг обязанностей охранников коммерческих объектов:</h6>
+      <img class="second_img" src="../../../static/services/object_guard/object_check_by_cameras.jpg" alt="проверка_объекта_по_камерам"/>
+      <ul class="text">
+        <li v-for="name_duty in DutiesGuardOfIndustrialFacilities" :key="name_duty.index">{{name_duty.duty}}</li>
+      </ul>
       <Tariffs/>
     </b-container>
   </div>

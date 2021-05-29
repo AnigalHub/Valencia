@@ -18,13 +18,11 @@
           </ul>
         </b-col>
       </b-row>
-      <div class="im_descr">
-        <h6>Комплекс мероприятий охраны муниципальных объектов:</h6>
-        <img src="../../../static/services/guard_of_organizations/guard_of_municipal_facilities.jpg" alt="галлерея"/>
-        <ul class="text">
-          <li v-for="duty in DutiesGuardOfMunicipalFacilities" :key="duty.index">{{duty.duty}}</li>
-        </ul>
-      </div>
+      <h6>Комплекс мероприятий охраны муниципальных объектов:</h6>
+      <img class="second_img" src="../../../static/services/guard_of_organizations/guard_of_municipal_facilities.jpg" alt="галлерея"/>
+      <ul class="text">
+        <li v-for="duty in DutiesGuardOfMunicipalFacilities" :key="duty.index">{{duty.duty}}</li>
+      </ul>
       <Tariffs/>
     </b-container>
   </div>

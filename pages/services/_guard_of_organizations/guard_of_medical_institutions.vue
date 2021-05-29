@@ -18,18 +18,16 @@
           </ul>
         </b-col>
       </b-row>
-      <div class="im_descr">
-          <h6>Комплекс мероприятий охраны медицинских организаций:</h6>
-        <img src="../../../static/services/guard_of_organizations/hospital.jpg" alt="больница"/>
-        <ul class="text">
-            <li v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">{{duty.duty}}</li>
-            <ul v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">
-              <li v-for="name_duty in duty.subordination" :key="name_duty.index">
-                <i><b>{{name_duty.name_duty}}</b></i>{{name_duty.descr_duty}}
-              </li>
-            </ul>
-          </ul>
-      </div>
+      <h6>Комплекс мероприятий охраны медицинских организаций:</h6>
+      <img class="second_img"src="../../../static/services/guard_of_organizations/hospital.jpg" alt="больница"/>
+      <ul class="text">
+        <li v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">{{duty.duty}}</li>
+        <ul v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">
+          <li v-for="name_duty in duty.subordination" :key="name_duty.index">
+            <i><b>{{name_duty.name_duty}}</b></i>{{name_duty.descr_duty}}
+          </li>
+        </ul>
+      </ul>
       <Tariffs/>
     </b-container>
   </div>
