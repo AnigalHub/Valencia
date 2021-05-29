@@ -211,8 +211,8 @@
 </style>
 <style scoped lang="scss">
   /*svg-щит*/
-  #shield{
-    filter: contrast(105%) brightness(120%);
+  #navbar_svg{
+    filter: contrast(115%) brightness(120%);
   }
   /*вид меню на большом экране (отступы)*/
   .navbar-expand-xl .navbar-collapse {margin-left: 0;}
@@ -250,10 +250,10 @@
     margin-left: 1%;
   }
   /*svg-щит*/
-  #shield{
+  #navbar_svg{
     width:50px;
     height: 54px;
-    padding: .5%;
+    padding: .8%;
     margin: 2% 0 1% 0;
   }
   /*надпись "частное охранное предприятие" в логотипе*/
@@ -296,10 +296,9 @@
     .navbar-expand-xl .navbar-collapse {margin-left: 2%;}
     .navbar{box-shadow: 0 0 10px 0 #000000;}
     /*svg-щит*/
-    #shield{
+    #navbar_svg{
       margin-top: 1.5% !important;
       margin-bottom: 0 !important;
-      filter: contrast(120%) brightness(170%);
     }
     .name_brand{
       font-size: 1.15rem;
@@ -351,7 +350,7 @@
       font-size: 1.2rem;
     }
     /*svg-щит*/
-    #shield{
+    #navbar_svg{
       width:42px;
       height:42px;
     }
@@ -362,7 +361,7 @@
   }
   @media screen and (min-width:1250px) and (max-width: 1310px) {
     /*svg-щит*/
-    #shield{
+    #navbar_svg{
       width:50px;
       height:51px;
     }
@@ -378,7 +377,7 @@
   }
   @media screen and (min-width:1310px) and (max-width: 1400px) {
     /*svg-щит*/
-    #shield{
+    #navbar_svg{
       width:50px;
       height:51px;
     }
