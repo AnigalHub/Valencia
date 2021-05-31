@@ -2,7 +2,7 @@
   <div id="Advantages">
     <b-container>
       <div class="flex-container desktop_version">
-        <div class="type_guard_beautiful_block" v-for="advantage in advantages" :key="advantage.index">
+        <div v-for="advantage in advantages" :key="advantage.index">
           <router-link :to="advantage.link">
             <component :is="advantage.svg"/>
             <p class="text_Landing_page" v-html="advantage.name"></p>
@@ -38,6 +38,8 @@
       name: "advantages",
       data(){
         return{
+          slide: 0,
+          sliding: null,
           advantages:[
             {name:"квалифицированный штат  сотрудников", svg:StateSVG, link:'/company',},
             {name:"современное инновационное  оборудование", svg:EquipmentSVG, link:'/technical_means',},
