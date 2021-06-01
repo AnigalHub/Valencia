@@ -98,24 +98,23 @@
         width:50px;
         height: 54px;
         padding: .8%;
-        margin: 2% 0 1% 0;
+        margin: 2% 0 1%;
       }
       /*название компании "Валенсия" в логотипе*/
       .name_brand{
-        filter: contrast(140%);
         vertical-align: middle;
         margin-left: -3.5%;
         font-size: 1.22rem;
-        text-decoration: none;
       }
       /*надпись "частное охранное предприятие" в логотипе*/
       .chop{
-        filter: contrast(140%);
         font-size: 0.6rem;
         margin-top: -11%;
         margin-left: 26%;
         margin-bottom: 0.1rem !important;
       }
+      /*название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе*/
+      .name_brand,.chop{filter: contrast(140%);}
     }
     /*номер телефона*/
     .telephone{
@@ -141,14 +140,9 @@
       font-family: 'Lora', serif;
       font-weight: 600 !important;
     }
-    /*наведение на любую кнопку меню*/
+    /*наведение на любую кнопку меню, кнопка "Услуги" - в открытом виде*/
     .nav-link:hover,.show > .btn-secondary.dropdown-toggle,
-    .dropdown-toggle:hover,.dropdown-item:hover{
-      color: #007bff !important;
-      text-shadow: 0 .25px .5px black !important;
-    }
-    /*кнопка "Услуги" - в открытом виде*/
-    .show > .btn-secondary.dropdown-toggle {
+    .dropdown-toggle:hover,.dropdown-item:hover,  .show > .btn-secondary.dropdown-toggle{
       color: #007bff !important;
       text-shadow: 0 .25px .5px black !important;
     }
@@ -170,8 +164,7 @@
       box-shadow: 2px 0 9px -6px #000000;
       text-shadow: none;
       font-size: 1.15rem;
-      padding-right: 0.3rem !important;
-      padding-left: 0.3rem !important;
+      padding: 0.25rem .3rem !important;
       /*при наведении*/
       &:hover{background: #dce4ee;}
     }
@@ -215,12 +208,12 @@
           margin-left: 24%;
         }
       }
-      /*номер телефона*/
-      .telephone{display: none;}
+      /*все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)*/
+      .nav-link{padding: .4rem 0 !important;}
       /*все кнопки (кроме кнопок в опускающемся dropdown)*/
       .nav-link,.dropdown-toggle{font-size: 1.1rem !important;}
-      /*блоки подвидов охраны*/
-      .menu_org, .menu_obj, .menu_state{display: none;}
+      /*номер телефона, блоки подвидов охраны*/
+      .telephone, .menu_org, .menu_obj, .menu_state{display: none;}
       /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
       .dropdown-item {
         border: none !important;
