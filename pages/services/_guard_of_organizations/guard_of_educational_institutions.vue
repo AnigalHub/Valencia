@@ -19,7 +19,7 @@
         </b-col>
       </b-row>
       <h6>Комплекс мероприятий охраны учебных заведений:</h6>
-      <img class="second_img" src="../../../static/services/guard_of_organizations/scale_1200.jpg" alt="охрана_образовательных_учреждений"/>
+      <img class="second_img" src="../../../static/services/guard_of_organizations/tourniquet.jpg" alt="охрана_образовательных_учреждений"/>
       <ul class="text">
         <li v-for="duty in DutiesGuardOfEducationalInstitutionFeatures" :key="duty.index">{{duty.duty}}</li>
       </ul>

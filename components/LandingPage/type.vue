@@ -19,19 +19,19 @@
         return{
           Categories:[
             {
-              img_src:"Landing_page/22.jpg",
+              img_src:"Landing_page/Type/information.jpg",
               link:"/company/",
               category:"Информация для клиентов",
               descr_category:"(принципы и этапы работы)",
             },
             {
-              img_src:"Landing_page/222.jpg",
+              img_src:"Landing_page/Type/price_list.jpg",
               link:"/tariffs/",
               category:"Прайс-лист на все виды услуг",
               descr_category:"(актуальные цены по тарифам)",
             },
             {
-              img_src:"Landing_page/2222.jpg",
+              img_src:"Landing_page/Type/impression.jpg",
               link:"/licenses/",
               category:"Впечатление о работе с нами",
               descr_category:"(благодарности и рекомендации)",

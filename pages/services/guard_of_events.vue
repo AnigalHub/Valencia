@@ -8,13 +8,11 @@
         <ul class="text">
           <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
         </ul>
-        <div class="im_descr block_two">
-          <h6>Перечень мер по охране мероприятий:</h6>
-          <img class="second_img" src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта"/>
-          <ul class="text">
-            <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
-          </ul>
-        </div>
+        <h6 class="block_two">Перечень мер по охране мероприятий:</h6>
+        <img class="second_img" src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта"/>
+        <ul class="text">
+          <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
+        </ul>
         <Tariffs/>
       </b-container>
   </div>

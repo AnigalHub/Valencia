@@ -88,6 +88,7 @@ h1{
   padding: 8px 0;
   margin-top: 0 !important;
   margin-bottom: 1rem;
+  cursor: default;
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -102,6 +103,7 @@ h2,h3{
 h3{
   line-height: 1.6rem;
   text-align: center;
+  cursor: default;
 }
 h4{
   color: $shadeOfBlack;
@@ -259,18 +261,18 @@ input {
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
-    background: url(../../static/Landing_page/134.jpg) 100% 100% no-repeat;
+    background: url(../../static/Landing_page/Home/background_1.jpg) 100% 100% no-repeat;
     background-size: 100% 100%;
     animation: anim 30s  ease-out infinite; /*время смены фона и эффект*/
     /*смена фона*/
     @keyframes anim {
-      0% {background: url(../../static/Landing_page/134.jpg) no-repeat;background-size: 100% 100% ;}
-      33%{background: url(../../static/Landing_page/138.jpg) no-repeat;background-size: 100% 100%;}
-      67%{background: url(../../static/Landing_page/135.jpg) no-repeat;background-size: 100% 100% ;}
+      0% {background: url(../../static/Landing_page/Home/background_1.jpg) no-repeat;background-size: 100% 100% ;}
+      33%{background: url(../../static/Landing_page/Home/background_2.jpg) no-repeat;background-size: 100% 100%;}
+      67%{background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: 100% 100% ;}
     }
     /*картинка с охранником*/
     img{
-      width:110%;
+      width:108%;
       margin-left:-8%;
       filter: contrast(110%) brightness(110%) !important;
     }
@@ -371,6 +373,9 @@ input {
       width: 30.5%;
       margin: 0 0 2% 2.5%;
       filter: contrast(100%) !important;
+    }
+    .btn-secondary{
+      border-color: transparent !important;
     }
     /*картинки (изменение/добавление стилей касательно только этого компонента (Услуги))*/
     img{
@@ -606,6 +611,15 @@ input {
   .stage{
     /*выделение фраз в тексте - для красоты*/
     .emphasized{margin-bottom: 0.5rem !important;}
+    /*ссылка*/
+    a{
+      font-weight: 600;
+      /*при наведении*/
+      &:hover{
+        text-decoration: underline;
+        color: $shadeOfBlack;
+      }
+    }
     /* сетка бутстрап - пункт - цифры*/
     .col-1 {
       flex: 0 0 5% !important;
@@ -760,8 +774,6 @@ input {
 "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
 "Охрана коммерческих объектов","Охрана частных объектов"*/
 .types_of_guard{
-  /*заголовки (которые не будут переносится вверх, если выше - текста с картинкой будет мало)*/
-  h6{clear: left;}
   .row .col{
     margin-left: -.8%;
     padding: 0 !important;
@@ -1039,7 +1051,6 @@ input {
   h1{
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
   }
   h2,h3{font-size: 1.15rem;}
@@ -1081,7 +1092,7 @@ input {
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       height: auto;
-      background: url(../../static/Landing_page/134.jpg) 100% 100% no-repeat !important ;
+      background: url(../../static/Landing_page/Home/background_1.jpg) 100% 100% no-repeat !important ;
       background-size: 100% 100% !important;
       animation: none;
       /*название чопа*/
@@ -1169,7 +1180,7 @@ input {
       .row{
         flex-direction: column;
         /*параметры сетки бутстрап (первая картинка, вторая картинка)*/
-       .col:first-child,.col:nth-child(2){margin-bottom: 1.5%;}
+        .col:first-child,.col:nth-child(2){margin-bottom: 1.5%;}
       }
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{font-size: 1.1rem !important;}
@@ -1270,7 +1281,7 @@ input {
       }
     }
     /*вторая картинка в компоненте "О нас"*/
-     .second_img {
+    .second_img {
       width: 65% !important;
       float: none !important;
     }
@@ -1824,7 +1835,7 @@ input {
       /*название типа охраны*/
       p{margin-bottom: .8rem !important;}
       /*как выглядит список (сдвигаем)*/
-      ul {margin-left: -12%;}
+      ul {margin-left: -8%;}
     }
     /*блок с картинкой и списком(перечисление)*/
     .row{
@@ -2225,7 +2236,7 @@ input {
     /*картинка*/
     .second_img{
       width: 37%;
-      margin: -2% 0 0 0.5%;
+      margin: 2% 0 0 0.5%;
     }
   }
   /*страница "Технические средства"*/
