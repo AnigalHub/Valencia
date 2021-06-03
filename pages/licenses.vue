@@ -1,18 +1,18 @@
 <template>
   <div id="licenses" class="page">
-    <Name_page :name_page="name_page"/>
       <b-container>
+        <h1>{{name_page}}</h1>
         <p class="text"> Общество с ограниченной ответственностью частное охранное предприятие "Валенсия"обладает всеми необходимыми лицензиями на работу, согласно статье №3 Закона РФ №2487-1 "О частной детективной и охранной деятельности в Российской Федерации".</p>
         <h6>В целях охраны разрешается предоставление следующих видов услуг:</h6>
         <ol class="text">
           <li v-for="type in TypesOfServices" :key="type.index">{{type.type}}</li>
         </ol>
-        <h4 class="emphasized text">Лицензии:</h4>
+        <h6>Лицензии:</h6>
         <p class="text">Действующие лицензии частного охранного предприятия “ООО Валенсия” на право оказания охранных услуг: </p>
         <div class="flex-container">
           <img v-for="(img,index) in Licenses" :src="img.src" :alt="img.alt" :key="index" @click="showModal(img)"/>
         </div>
-        <h4 class="emphasized text">Благодарные и рекомендательные письма:</h4>
+        <h6>Благодарные и рекомендательные письма:</h6>
         <p class="text">Наивысшей наградой являются благодарные и рекомендательные письма наших Клиентов о частном охранном предприятии “ООО Валенсия”:</p>
         <div class="flex-container">
           <img v-for="img in ThanksgivingLetters" :src="img.src" :alt="img.alt" @click="showModal(img)"/>
@@ -25,10 +25,8 @@
 </template>
 
 <script>
-    import Name_page from "../components/secondary_pages/name_page";
     export default {
       name: "licenses",
-      components: {Name_page},
       data() {
         return {
          selectedImages:{
@@ -82,7 +80,6 @@
   .modal-dialog img{ /*картинка в модальном окне*/
     width: 100% !important;
     box-shadow: none !important;
-    filter: brightness(80%) contrast(120%)!important;
   }
   .close { /*"крестик" (размер) - кнопка закрытия модального окна*/
     font-size: 2rem !important;

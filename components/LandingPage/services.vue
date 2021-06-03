@@ -24,12 +24,12 @@
       data(){
         return{
           Guard:[
-            {src:"Landing_page/services_1.jpg", alt:"охрана_организаций", name_guard:"Охрана организаций",link:'/services/guard_of_organizations/'},
-            {src:"Landing_page/services_2.jpg", alt:"охрана_недвижимости", name_guard:"Охрана недвижимости",link:'/services/guard_of_real_estate/'},
-            {src:"Landing_page/services_3.jpg", alt:"охрана_объектов", name_guard:"Охрана объектов",link:'/services/object_guard/'},
-            {src:"Landing_page/services_4.jpg", alt:"личная_охрана", name_guard:"Личная охрана",link:'/services/bodyguard'},
-            {src:"Landing_page/services_5.jpg", alt:"охрана_мероприятий", name_guard:"Охрана мероприятий",link:'/services/guard_of_events'},
-            {src:"Landing_page/services_6.jpg", alt:"сопровождение_грузов", name_guard:"Сопровождение грузов",link:'/services/cargo_escort'},
+            {src:"Landing_page/1.jpg", alt:"охрана_организаций", name_guard:"Охрана организаций",link:'/services/guard_of_organizations/'},
+            {src:"Landing_page/2.jpg", alt:"охрана_недвижимости", name_guard:"Охрана недвижимости",link:'/services/guard_of_real_estate/'},
+            {src:"Landing_page/3.jpg", alt:"охрана_объектов", name_guard:"Охрана объектов",link:'/services/object_guard/'},
+            {src:"Landing_page/4.jpg", alt:"личная_охрана", name_guard:"Личная охрана",link:'/services/bodyguard'},
+            {src:"Landing_page/5.png", alt:"охрана_мероприятий", name_guard:"Охрана мероприятий",link:'/services/guard_of_events'},
+            {src:"Landing_page/6.jpg", alt:"сопровождение_грузов", name_guard:"Сопровождение грузов",link:'/services/cargo_escort'},
           ]
         }
       }

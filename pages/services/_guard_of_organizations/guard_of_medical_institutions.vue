@@ -1,14 +1,13 @@
 <template>
   <div id="guard_of_medical_institutions" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../../../static/services/guard_of_organizations/guard_of_medical_institutions.jpg" alt="охрана_медицинских_учреждений" class="first_img"/>
       <p class="text"><b>Медицинские учреждения</b> - это организации с наличием дорогостоящего оборудования и дефицитных лекарственных препаратов: наркотических, спиртосодержащих и предписанных строго по рецепту врачей. Из-за специализации в медучреждениях проблема безопасности очень актуальна, как и соблюдение режима работы и предупреждение чрезвычайных ситуаций.</p>
+      <h4 class="text"><u>Охрана медицинских учреждений включает:</u></h4>
       <div class="import">
         <ul>
-          <li class="li_text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">
-          {{guard.name}}
-          </li>
+          <li class="text" v-for="guard in GuardOfMedicalInstitutions" :key="guard.index">{{guard.name}}</li>
         </ul>
       </div>
       <h6 class="block_two">Особенности охраны медучреждений:</h6>
@@ -19,29 +18,26 @@
           </ul>
         </b-col>
       </b-row>
-      <div class="im_descr">
-          <h6>Комплекс мероприятий охраны медицинских организаций:</h6>
-        <img src="../../../static/services/guard_of_organizations/hospital.jpg" alt="больница"/>
-        <ul class="text">
-            <li v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">{{duty.duty}}</li>
-            <ul v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">
-              <li v-for="name_duty in duty.subordination" :key="name_duty.index">
-                <i><b>{{name_duty.name_duty}}</b></i>{{name_duty.descr_duty}}
-              </li>
-            </ul>
-          </ul>
-      </div>
-      <Tarrifs_content/>
+      <h6>Комплекс мероприятий охраны медицинских организаций:</h6>
+      <img class="second_img"src="../../../static/services/guard_of_organizations/hospital.jpg" alt="больница"/>
+      <ul class="text">
+        <li v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">{{duty.duty}}</li>
+        <ul v-for="duty in DutiesGuardOfMedicalInstitutions" :key="duty.index">
+          <li v-for="name_duty in duty.subordination" :key="name_duty.index">
+            <i><b>{{name_duty.name_duty}}</b></i>{{name_duty.descr_duty}}
+          </li>
+        </ul>
+      </ul>
+      <Tariffs/>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
+    import Tariffs from "../../tariffs";
     export default {
       name: "guard_of_medical_institutions",
-      components: {Tarrifs_content, Name_page},
+      components: {Tariffs},
       data(){
           return{
             name_page: "Охрана медицинских учреждений",

@@ -1,34 +1,30 @@
 <template>
   <div id="guard_of_transport_facilities" class="page services types_of_guard">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../../../static/services/object_guard/guard_at_the_post.jpg" alt="охрана_на_посту" class="first_img"/>
       <p class="text">Для обеспечения безопасности объектов транспорта, комплекс охранных мероприятий прежде всего направлен на защиту работников транспортной инфраструктуры и сохранность передаваемого под охрану имущества.
+      <h4 class="text"><u>Охрана объектов транспорта включает:</u></h4>
       <div class="import">
-      <ul>
-        <li class="li_text" v-for="guard in GuardOfTransportFacilities" :key="guard.index">
-          {{guard.name}}
-        </li>
-      </ul>
-      </div>
-      <div class="im_descr block_two">
-        <h6>Круг обязанностей охранников коммерческих объектов:</h6>
-        <img src="../../../static/services/object_guard/barrier.jpg" alt="шлагбаум"/>
-        <ul class="text">
-          <li v-for="name_duty in DutiesGuardOfTransportFacilities" :key="name_duty.index">{{name_duty.duty}}</li>
+        <ul>
+          <li class="text" v-for="guard in GuardOfTransportFacilities" :key="guard.index">{{guard.name}}</li>
         </ul>
       </div>
-      <Tarrifs_content/>
+      <h6>Круг обязанностей охранников коммерческих объектов:</h6>
+      <img class="second_img" src="../../../static/services/object_guard/barrier.jpg" alt="шлагбаум"/>
+      <ul class="text">
+        <li v-for="name_duty in DutiesGuardOfTransportFacilities" :key="name_duty.index">{{name_duty.duty}}</li>
+      </ul>
+      <Tariffs/>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Name_page from "../../../components/secondary_pages/name_page";
-    import Tarrifs_content from "../../../components/secondary_pages/tarrifs_content";
+    import Tariffs from "../../tariffs";
     export default {
       name: "guard_of_transport_facilities",
-      components: {Tarrifs_content, Name_page},
+      components: {Tariffs},
       data(){
         return{
           name_page: "Охрана объектов транспорта",

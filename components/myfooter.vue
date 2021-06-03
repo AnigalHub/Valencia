@@ -63,22 +63,22 @@
       margin: 0;
       color: white !important;
       text-align: center;
-      font-size: 1.42rem;
       letter-spacing: -.25px;
-      text-shadow: 0 0 0.15px black;
-      font-family: "EB Garamond", serif;
       background: #05081a;
       font-weight: 400;
       /*ссылки*/
-      a {
-        color: white !important;
-        display: block;
-      }
+      a{display: block;}
+    }
+    /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+    .flex-container > div,a {
+      font-size: 1.2rem;
+      font-family: "Lora", serif !important;
+      color: white !important;
     }
   }
 
   /************АДАПТИВКА***************/
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     /*компонент Footer*/
     #Myfooter {
       /*контейнер, который включает в себя повтор блоков*/
@@ -86,36 +86,11 @@
         margin-top: 5%;
         /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
         & > div {
-          font-size: 1.1rem;
-          /*ссылки*/
-          a{font-size: 1.1rem !important;}
           width: 50%;
           /*5-ый (блок с адресом)*/
-          &:nth-child(5), {
+          &:nth-child(5){
             width: 100%;
             margin-bottom: 5%;
-          }
-        }
-      }
-    }
-  }
-  @media screen and (min-width:500px) and (max-width: 768px) {
-    /*компонент Footer*/
-    #Myfooter {
-      /*контейнер, который включает в себя повтор блоков*/
-      .flex-container {
-        margin: 3.5% 0;
-        /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
-        & > div {
-          font-size: 1.1rem;
-          /*ссылки*/
-          a{font-size: 1.1rem !important;}
-          width: 33% !important;
-          /*4-ый и 5-ый (блок с адресом)*/
-          &:nth-child(4), &:nth-child(5), {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
           }
         }
       }
@@ -130,39 +105,27 @@
         /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
         & > div {
           width: 33%;
-          font-size: 1.2rem;
-          /*ссылки*/
-          a{font-size: 1.2rem !important;}
           /*4-ый и 5-ый (блок с адресом)*/
           &:nth-child(4), &:nth-child(5), {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
           }
         }
       }
     }
   }
-  @media screen and (min-width:992px) and (max-width: 1200px) {
+  @media screen and (max-width: 1250px) {
     /*компонент Footer*/
     #Myfooter {
       /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
-      .flex-container > div {
-        font-size: 1.2rem;
-        /*ссылки*/
-        a{font-size: 1.2rem !important;}
-      }
+      .flex-container > div,a {font-size: 1.1rem !important;}
     }
   }
-  @media screen and (min-width:1200px) and (max-width: 1400px) {
+  @media screen and (min-width:1250px) and (max-width: 1400px) {
     /*компонент Footer*/
     #Myfooter {
       /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
-      .flex-container > div {
-        font-size: 1.25rem;
-        /*ссылки*/
-        a{font-size: 1.25rem !important;}
-      }
+      .flex-container > div,a {font-size: 1.14rem !important;}
     }
   }
 </style>

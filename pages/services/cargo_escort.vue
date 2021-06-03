@@ -1,7 +1,7 @@
 <template>
   <div id="cargo_escort" class="page services">
-    <Name_page :name_page="name_page"/>
     <b-container>
+       <h1>{{name_page}}</h1>
        <img src="../../static/services/cargo_escort/cargo_escort.jpg" alt="сопровождение_грузов" class="first_img"/>
        <p class="text"><span class="emphasized"> Сопровождение грузов</span> - особый вид деятельности профессиональной охраны, осуществляющий опытными специалистами, оснащенными всем необходимым оборудованием и средствами защиты сопровождение груза до точки выгрузки, обеспечивая его полную безопасность и сохранность на всем маршруте.</p>
        <h6 class="block_one">Опасности при передвижении груза:</h6>
@@ -18,17 +18,16 @@
        <ul class="text">
           <li v-for="duty in DutiesCargoEscort" :key="duty.index">{{duty.duty}}</li>
        </ul>
-       <Tarrifs_content/>
+       <Tariffs/>
       </b-container>
   </div>
 </template>
 
 <script>
-    import Tarrifs_content from "../../components/secondary_pages/tarrifs_content";
-    import Name_page from "../../components/secondary_pages/name_page";
+    import Tariffs from "../tariffs";
     export default {
       name: "cargo_escort",
-      components: {Name_page, Tarrifs_content},
+      components: {Tariffs},
       data() {
         return {
           name_page: "Сопровождение грузов",
@@ -52,7 +51,7 @@
             {duty:"проверка целостности сопроводительных документов;"},
             {duty:"вооруженная колонна транспорта рядом с грузом;"},
             {duty:"обеспечение безопасности  при погрузке-выгрузке;"},
-            {duty:"секретность перевозок (маршрута, времени начала движения, остановок в пути), предусмотренная в договоре на работу;"},
+            {duty:"секретность перевозок, предусмотренная в договоре на работу;"},
             {duty:"быстрое изменение маршрута и другие действия при возникших нештатных ситуациях;"},
             {duty:"отчетность за проведенную работу."},
           ]

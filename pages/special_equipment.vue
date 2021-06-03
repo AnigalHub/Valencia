@@ -1,14 +1,14 @@
 <template>
   <div id="special_equipment" class="page">
-    <Name_page :name_page="name_page"/>
     <b-container>
+      <h1>{{name_page}}</h1>
       <img src="../static/special_equipment/special.jpg" class="first_img" alt="спецсредства">
       <p class="text">Для обеспечения безопасности охраняемого объекта, поддержания правопорядка и нейтрализации правонарушителей в частном охранном предприятии "ООО Валенсия" имеются специальные средства индивидуальной защиты - особая экипировка и оснащение охранника.</p>
-      <p class="text">Личный состав частного охранного предприятия "ООО Валенсия" - охранники 5-го и 6-го разряда (работа со спецсредствами и оружием).</p>
+      <p class="text">Личный состав частного охранного предприятия <span class="emphasized"> "ООО Валенсия" </span> - охранники 5-го и 6-го разряда (работа со спецсредствами и оружием).</p>
       <p class="text">Исходя из рисков и угроз, для каждого охраняемого объекта подбирается своя экипировка и средства защиты охраны.</p>
       <h6 class="block_two">Перечень специальных средств, используемых в частном охранном предприятии "ООО Валенсия":</h6>
       <div class="flex-container">
-        <div v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
+        <div class="beautiful_block" v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
             <img :src="equipment.img_src" :alt="equipment.img_alt"/>
             <p class="text emphasized">{{equipment.name_equipment}}</p>
             <p class="text">{{equipment.description_equipment}}</p>
@@ -19,10 +19,8 @@
 </template>
 
 <script>
-    import Name_page from "../components/secondary_pages/name_page";
     export default {
       name: "special_equipment",
-      components: {Name_page},
       data() {
         return {
           name_page:"Спецсредства",
@@ -32,7 +30,7 @@
               description_equipment:"Дистанционная связь между охранниками для координации действий и получения инструкций при выполнении служебных задач.",
             },
             {
-              name_equipment:"Служебное и гражданское оружие", img_src:"../special_equipment/weapon.jpg", img_alt:"оружие",
+              name_equipment:"Оружие", img_src:"../special_equipment/weapon.jpg", img_alt:"оружие",
               description_equipment:"Отражения вооруженного нападения на охраняемый объект, подача сигнала тревоги (выстрел в воздух).",
             },
             {
@@ -44,7 +42,7 @@
               description_equipment:"Защита от вооруженного нападения: пули определенного калибра, ножа или заточки в область грудной клетки.",
             },
             {
-              name_equipment:"Дубинка (резиновая палка)", img_src:"../special_equipment/baton.jpg", img_alt:"дубинка",
+              name_equipment:"Дубинка", img_src:"../special_equipment/baton.jpg", img_alt:"дубинка",
               description_equipment:"Оборона при угрозе жизни и здоровья охранника и пресечение преступного посягательства на охраняемую территорию.",
             },
             {

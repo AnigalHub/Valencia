@@ -11,7 +11,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  width="35" height="25" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,172v-172h172v172z" fill="none"></path>
-            <g fill="#ffffff">
+            <g fill="#000000">
               <path d="M34.37313,44.72c-0.44681,0.00712 -0.87331,0.18785 -1.18922,0.50391l-13.76,13.76c-0.67143,0.67171 -0.67143,1.76048 0,2.43219l65.36,65.36c0.67171,0.67143 1.76048,0.67143 2.43219,0l65.36,-65.36c0.67143,-0.67171 0.67143,-1.76048 0,-2.43219l-13.76,-13.76c-0.67171,-0.67143 -1.76048,-0.67143 -2.43219,0l-50.38391,50.38391l-50.38391,-50.38391c-0.32908,-0.32923 -0.77753,-0.51103 -1.24297,-0.50391zM34.4,48.87219l50.38391,50.38391c0.67171,0.67143 1.76048,0.67143 2.43219,0l50.38391,-50.38391l11.32781,11.32781l-62.92781,62.92781l-62.92781,-62.92781zM35.24992,64.48992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l28.38,28.38c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-28.38,-28.38c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203zM136.7232,64.49328c-0.22319,0.00621 -0.43521,0.09897 -0.59125,0.25867l-41.28,41.28c-0.22464,0.21571 -0.31512,0.536 -0.23655,0.83737c0.07857,0.30136 0.31392,0.53671 0.61528,0.61528c0.30136,0.07857 0.62166,-0.01191 0.83737,-0.23655l41.28,-41.28c0.25309,-0.24743 0.32875,-0.62464 0.19067,-0.95054c-0.13808,-0.3259 -0.46171,-0.53393 -0.81552,-0.52423zM73.08992,102.32992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l6.02,6.02c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-6.02,-6.02c-0.16204,-0.16747 -0.38509,-0.26203 -0.61812,-0.26203zM83.40992,112.64992c-0.3504,0.00007 -0.66573,0.21271 -0.79714,0.53754c-0.13141,0.32483 -0.05262,0.6969 0.19917,0.94059l2.58,2.58c0.21571,0.22464 0.536,0.31512 0.83737,0.23655c0.30136,-0.07857 0.53671,-0.31392 0.61528,-0.61528c0.07857,-0.30136 -0.01191,-0.62166 -0.23655,-0.83737l-2.58,-2.58c-0.16204,-0.16747 -0.38509,-0.26203 -0.61813,-0.26203z"></path>
             </g>
           </g>
@@ -77,273 +77,242 @@
 
 </script>
 <style lang="scss">
-  .nav-link,.telephone{
-    color: white !important;
-    font-weight: 400 !important;
-  }
-  .nav-link-active{
-    color: tomato !important;
-  }
-  .navbar-dark .navbar-nav .active > .nav-link,
-  .navbar-dark .navbar-nav .active > .dropdown-item{
-    color: #5091d9 !important;
-    font-weight: 800 !important;
-  }
-  .navbar-dark .navbar-nav .active > .navbar-brand{
-    color: white !important;
-  }
-
-  /*стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)*/
-  /*название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе*/
-  .name_brand,.chop{
-    filter: contrast(120%) brightness(170%);
-  }
-  /*кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки*/
-  .btn{
+  /*вид меню на большом экране (отступы)*/
+  .navbar-expand-xl .navbar-collapse {margin-left: 0;}
+  #Nav{
+    /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
     padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    font-size: 1.25rem;
-  }
-  /*кнопка "Услуги" (пишем свои стили - переписываем btn)*/
-  .dropdown-toggle{
-    font-size: 1.35rem !important;
-    color: #ffffff;
-    background-color: #040610 !important;
-    /*при наведении*/
-    &:hover{
-      color: #007bff !important;
+    background: #dce4ee;
+    box-shadow: 13px 0 18px -6px #000000;
+    .navbar-brand,.name_brand,.chop,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: black;}
+    /*контейнер, в котором находится весь контент меню*/
+    .container {padding: 0 !important;}
+    /*блок под логотип(svg, название компании, что за компания(чоп))*/
+    .navbar-brand{
+      padding: .2rem .35rem 0.15rem ;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      margin-top: -.8%;
+      /*svg-щит*/
+      #navbar_svg{
+        width:50px;
+        height: 54px;
+        padding: .8%;
+        margin: 2% 0 1%;
+      }
+      /*название компании "Валенсия" в логотипе*/
+      .name_brand{
+        vertical-align: middle;
+        margin-left: -3.5%;
+        font-size: 1.22rem;
+      }
+      /*надпись "частное охранное предприятие" в логотипе*/
+      .chop{
+        font-size: 0.6rem;
+        margin-top: -11%;
+        margin-left: 26%;
+        margin-bottom: 0.1rem !important;
+      }
+      /*название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе*/
+      .name_brand,.chop{filter: contrast(140%);}
     }
-  }
-  /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
-  .dropdown-item{
-    border: 0.05px solid #454444;
-    filter: none !important;
-    font-size: 1.3rem;
-    color: #ffffff ;
-    background-color: #040610 !important;
-    /*при наведении*/
-    &:hover{
-      color: #007bff !important;
-      background: #040610;
-    }
-  }
-  /*выпадающий блок при нажатии на "Услуги" (dropdown)*/
-  .dropdown-menu {
-    padding: 0 !important;
-    border: none !important;
-  }
-
-  /******************АДАПТИВНОСТЬ***************/
-  @media screen  and (max-width: 1200px)  {
-    /*когда меню становится мобильным (при нажатии на кнопку), то меняются стили для подпунктов охраны ( - ставим треугольник, меняем отступы)*/
-    .menu_org,.menu_obj,.menu_state{
-      .dropdown-item::before {
-          content: "\25B8";
-          font-weight: bold;
-          display: inline-block;
-          width: 1em;
-          margin-left: .5em;
+    /*номер телефона*/
+    .telephone{
+      text-align: center;
+      font-weight: 900 !important;
+      font-family: 'Vollkorn', serif;
+      &:hover{
+        text-shadow: -.1px .25px .15px black;
+        text-decoration: underline;
       }
     }
+    /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown),номер телефона*/
+    .nav-link,.telephone{letter-spacing: -.3px;}
+    /*активные кнопки*/
+    .nav-link-active{
+      text-shadow: 0 1px 2px black !important;
+      color: #e6e686 !important;
+    }
+    /*все кнопки (кроме кнопок в dropdown)*/
+    .nav-link,.telephone,.dropdown-toggle{font-size: 1.2rem;}
+    /*кнопки меню (все)*/
+    .nav-link,.dropdown-toggle,.dropdown-item{
+      font-family: 'Lora', serif;
+      font-weight: 600 !important;
+    }
+    /*наведение на любую кнопку меню, кнопка "Услуги" - в открытом виде*/
+    .nav-link:hover,.show > .btn-secondary.dropdown-toggle,
+    .dropdown-toggle:hover,.dropdown-item:hover,  .show > .btn-secondary.dropdown-toggle{
+      color: #007bff !important;
+      text-shadow: 0 .25px .5px black !important;
+    }
+    /*кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки*/
+    .btn{
+      padding: 0 !important;
+      background: transparent !important;
+      border: none !important;
+    }
+    /*кнопка "Услуги" (пишем свои стили - переписываем btn)*/
+    .dropdown-toggle{letter-spacing: -.8px;}
+    /*выпадающий блок при нажатии на "Услуги" (dropdown)*/
+    .dropdown-menu {
+      padding: 0 !important;
+      border: none !important;
+    }
     /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
-    .dropdown-item {
-      border: none;
+    .dropdown-item{
+      box-shadow: 2px 0 9px -6px #000000;
+      text-shadow: none;
+      font-size: 1.15rem;
+      padding: 0.25rem .3rem !important;
+      /*при наведении*/
+      &:hover{background: #dce4ee;}
     }
-  }
-  @media screen  and (max-width: 1250px) {
-    /*кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)*/
-    .dropdown-item,.dropdown-toggle{
-      font-size: 1.1rem !important;
-      padding: 0.25rem !important;
-    }
-  }
-  @media screen and (min-width:1250px) and (max-width: 1310px) {
-    /*кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)*/
-    .dropdown-item,.dropdown-toggle{
-      font-size: 1.12rem !important;
-      padding-right: 0.45rem !important;
-      padding-left: 0.45rem !important;
-    }
-  }
-  @media screen and (min-width:1310px) and (max-width: 1400px) {
-    /*кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)*/
-    .dropdown-item,.dropdown-toggle{
-      padding-right: 0.55rem !important;
-      padding-left: 0.55rem !important;
-    }
-  }
-  @media screen  and (min-width: 1200px)  {
-    /*максимальная ширина контента меню на больших экранах*/
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 1400px !important;
-      max-height: 100%;
-    }
+    /*все кнопки, которые находятся в dropdown - в том числе и подпункты*/
+    .dropdown-item,.menu_org,.menu_obj,.menu_state{background: #c5c8ce !important;}
+    /*блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)*/
+    .menu_org{top: -.35% !important;}
+    /*блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)*/
+    .menu_obj{top:16% !important;}
+    /*блок с подвидами охраны недвижимости (коммерческие объекты, частные объекты)*/
+    .menu_state{top:32% !important;}
     /*блоки подвидов охраны*/
     .menu_org,.menu_obj,.menu_state{
       display:none;
       position: absolute;
       left: 100%;
-      /*при наведении*/
-      &:hover{
-        display:block ;
-      }
     }
     /*при наведении на определенный вид услуги - показывается блок с определенными подвидами услуг*/
-    .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {
-      display:block ;
+    .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {display:block;}
+  }
+
+  /******************АДАПТИВНОСТЬ***************/
+  @media screen  and (max-width: 1200px) {
+    #Nav{
+      box-shadow: 0 0 10px 0 #000000;
+      /*меню (кнопки все)*/
+      .navbar-nav{margin-left: 3%;}
+      /*блок под логотип(svg, название компании, что за компания(чоп))*/
+      .navbar-brand{
+        /*svg-щит*/
+        #navbar_svg{
+          width:42px;
+          height:42px;
+        }
+        /*название компании "Валенсия" в логотипе*/
+        .name_brand{font-size: 1.14rem;}
+        /*надпись "частное охранное предприятие" в логотипе*/
+        .chop{
+          font-size: 0.55rem;
+          margin-top: -9%;
+          margin-left: 24%;
+        }
+      }
+      /*все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)*/
+      .nav-link{padding: .4rem 0 !important;}
+      /*все кнопки (кроме кнопок в опускающемся dropdown)*/
+      .nav-link,.dropdown-toggle{font-size: 1.1rem !important;}
+      /*номер телефона, блоки подвидов охраны*/
+      .telephone, .menu_org, .menu_obj, .menu_state{display: none;}
+      /*кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)*/
+      .dropdown-item {
+        border: none !important;
+        box-shadow: none !important;
+      }
+      /*кнопки - список - который находится в dropdown*/
+      .btn-group{display: block}
     }
   }
-</style>
-<style scoped lang="scss">
-  /*svg-щит*/
-  #shield{filter: contrast(120%) brightness(130%);}
-  /*вид меню на большом экране (отступы)*/
-  .navbar-expand-xl .navbar-collapse {margin-left: 0;}
-  /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
-  .navbar{
-    padding: 0 !important;
-    background: #040610;
-  }
-  /*контейнер, в котором находится весь контент меню*/
-  .container {padding: 0 !important;}
-  /*блок под логотип(svg, название компании, что за компания(чоп))*/
-  .navbar-brand{
-    padding-bottom: 0 !important;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 0.25px;
-    font-weight: 600;
-    color: #ffffff !important;
-    margin-top: -1%;
-  }
-  /*название компании "Валенсия" в логотипе*/
-  .name_brand{
-    font-family: 'Lobster', cursive;
-    letter-spacing: 0.15px;
-    margin-left: -4%;
-    font-weight: 600 !important;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 1.3rem;
-  }
-  /*svg (щит и кнопка collapse - на которую на маленьких экранах нажимаем, чтобы увидеть меню)*/
-  svg{
-    margin-top: 2.5%;
-    margin-left: 1%;
-  }
-  /*svg-щит*/
-  #shield{
-    width:64px;
-    height: 64px;
-    margin: 1.5% 0;
-  }
-  /*надпись "частное охранное предприятие" в логотипе*/
-  .chop{
-    font-size: 0.55rem !important;
-    margin-top: -13%;
-    margin-left: 24%;
-    text-align: center;
-    margin-bottom: 0.5rem !important;
-  }
-  /*кнопки, которые находятся в dropdown (виды и подвиды охран) - добавляем в дефолтный dropdown-item для них (в данном случае - отступы, шрифт)*/
-  .dropdown-item{
-    letter-spacing: -.45px;
-    font-weight: 400 !important;
-    font-family: "EB Garamond", serif;
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
-  }
-  /*кнопка "Услуги" (пишем свои стили -добавляем в btn)*/
-  .dropdown-toggle{
-    letter-spacing: -0.45px;
-    font-weight: 400 !important;
-    font-family: "EB Garamond", serif;
-    padding-right: 0.7rem !important;
-    padding-left: 0.7rem !important;
-  }
-  /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown)*/
-  .nav-link{
-    font-size: 1.4rem;
-    font-family: "EB Garamond", serif;
-    &:hover{color: #007bff !important;}
-  }
-  /*номер телефона*/
-  .telephone{
-    font-family: 'Vollkorn', serif;
-    font-size: 1.35rem;
-    &:hover{text-shadow: -.15px 1px .15px #97c7e7; text-decoration: underline !important;}
-  }
-  /*блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)*/
-  .menu_org{top: -.35% !important;}
-  /*блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)*/
-  .menu_obj{top:17% !important;}
-  /*блок с подвидами охраны недвижимости (коммерческие объекты, частные объекты)*/
-  .menu_state{top:33% !important;}
-  /*******************АДАПТИВНОСТЬ***********************/
-  @media screen and (max-width: 1200px) {
-    /*вид меню на экране когда меню через кнопку видно (отступы)*/
-    .navbar-expand-xl .navbar-collapse {margin-left: 2%;}
-    /*svg-щит*/
-    #shield{
-      margin-top: 1.5% !important;
-      margin-bottom: 0 !important;
-      width:52px;
-      height:52px;
-      filter: contrast(120%) brightness(170%);
+  @media screen and (min-width:1200px) and (max-width: 1250px) {
+    #Nav{
+      /*меню (кнопки все)*/
+      .navbar-nav{margin-left: -.8%;}
+      /*блок под логотип(svg, название компании, что за компания(чоп))*/
+      .navbar-brand{
+        margin-right: 0 !important;
+        /*svg-щит*/
+        #navbar_svg{
+          width:42px;
+          height:42px;
+        }
+        /*название компании "Валенсия" в логотипе*/
+        .name_brand{font-size: 1.14rem;}
+        /*надпись "частное охранное предприятие" в логотипе*/
+        .chop{
+          margin-top: -9%;
+          margin-left: 22%;
+        }
+      }
+      /*все кнопки, номер телефона*/
+      .nav-link,.dropdown-item,.telephone,.dropdown-toggle{font-size: 1.1rem !important;}
+      /*все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)*/
+      .nav-link{padding: 0 0.3rem !important;}
+      /*номер телефона*/
+      .telephone{margin-left: -.8%;}
     }
-    /*название компании "Валенсия" в логотипе*/
-    .name_brand{
-      font-size: 1.3rem;
-      letter-spacing: -0.2px;
-      filter: contrast(120%) brightness(170%) !important;
-    }
-    /*надпись "частное охранное предприятие" в логотипе*/
-    .chop{
-      font-size: 0.6rem !important;
-      margin-top: -10.2%;
-      margin-left: 24%;
-      letter-spacing: -.25px !important;
-      margin-bottom: 0.5rem !important;
-    }
-    /*номер телефона*/
-    .telephone{display: none;}
   }
-  @media screen and (min-width: 1200px)  {
-    /* все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
+  @media screen and (min-width:1250px) and (max-width: 1300px) {
+    #Nav{
+      /*меню (кнопки все)*/
+      .navbar-nav{margin-left: -1%;}
+      /*блок под логотип(svg, название компании, что за компания(чоп))*/
+      .navbar-brand{
+        /*svg-щит*/
+        #navbar_svg{height:51px;}
+      }
+      /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
+      .nav-link,.telephone,.dropdown-toggle,.dropdown-item{font-size: 1.1rem !important;}
+      /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
+      .nav-link{padding: 0 .35rem !important;}
+      /*надпись "частное охранное предприятие" в логотипе*/
+      .chop {font-size: 0.6rem !important;}
+      /*номер телефона*/
+      .telephone{margin-left: -1%;}
+    }
+  }
+  @media screen and (min-width:1300px) and (max-width: 1350px) {
+    #Nav{
+      /*меню (кнопки все)*/
+      .navbar-nav{margin-left: 0;}
+      /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
+      .nav-link{padding: 0 .42rem !important;}
+    }
+  }
+  @media screen and (min-width:1350px) and (max-width: 1400px) {
+    #Nav{
+      /*меню (кнопки все)*/
+      .navbar-nav{margin-left: -3%;}
+    }
+  }
+  @media screen and (min-width:1300px) and (max-width: 1400px) {
+    #Nav{
+      /*блок под логотип(svg, название компании, что за компания(чоп))*/
+      .navbar-brand{
+        margin-right: .3rem !important;
+        /*svg-щит*/
+        #navbar_svg{height:51px;}
+      }
+      /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
+      .nav-link,.telephone{font-size: 1.14rem !important;}
+      /*номер телефона*/
+      .telephone {margin-left: -.15%;}
+    }
+    /*кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)*/
+    .dropdown-item,.dropdown-toggle{font-size: 1.12rem !important;}
+  }
+  @media screen  and (min-width: 1200px) {
+    /*максимальная ширина контента меню на больших экранах*/
+    .container, .container-lg, .container-md, .container-sm, .container-xl {max-width: 1400px !important;}
+    /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown),номер телефона*/
     .nav-link,.telephone{
       height: 1.7em;
       text-align: center;
       display: flex;
       align-items: center;
-      padding-right: 0.68rem !important;
-      padding-left: 0.68rem !important;
-      letter-spacing: -.4px;
     }
   }
-  @media screen and (max-width: 1250px) {
-    /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
-    .nav-link,.telephone{
-      font-size: 1.2rem !important;
-      padding-right: 0.425rem !important;
-      padding-left: 0.425rem !important;
-    }
-    /*кнопки*/
-    .btn-group{display: block;}
-  }
-  @media screen and (min-width:1250px) and (max-width: 1310px) {
-    /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
-    .nav-link,.telephone{
-      font-size: 1.25rem ;
-      padding-right: 0.475rem !important;
-      padding-left: 0.475rem !important;
-    }
-  }
-  @media screen and (min-width:1310px) and (max-width: 1400px) {
-    /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
-    .nav-link,.telephone{
-      font-size: 1.25rem;
-      padding-right: 0.525rem !important;
-      padding-left: 0.525rem !important;
-    }
-  }
+</style>
+<style scoped lang="scss">
+  /*ссылки*/
+  .navbar a{filter: contrast(140%);}
 </style>
