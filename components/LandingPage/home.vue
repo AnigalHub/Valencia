@@ -4,7 +4,7 @@
         <div class="title_guard">Частное охранное предприятие <nobr> "ООО Валенсия" </nobr></div>
         <b-row class="big_version">
           <b-col cols="4">
-            <img src="../../static/Landing_page/guard.png" alt="охранник">
+            <img src="../../static/Landing_page/Home/guard.png" alt="охранник">
           </b-col>
           <b-col>
             <div class="slogan">Безопасность частных лиц и объектов  любой сложности  на высшем уровне!</div>
