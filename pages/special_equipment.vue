@@ -9,9 +9,9 @@
       <h6>Спецсредства, используемые в компании "{{information.name_company}}":</h6>
       <div class="flex-container">
         <div class="beautiful_block" v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
-            <img :src="equipment.img_src" :alt="equipment.img_alt"/>
-            <p class="text emphasized">{{equipment.name_equipment}}</p>
-            <p class="text">{{equipment.description_equipment}}</p>
+          <img :src="equipment.img_src" :alt="equipment.img_alt"/>
+          <p class="text emphasized">{{equipment.name_equipment}}</p>
+          <p class="text">{{equipment.description_equipment}}</p>
         </div>
       </div>
     </b-container>
