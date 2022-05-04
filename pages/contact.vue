@@ -4,7 +4,7 @@
       <h1>{{name_page}}</h1>
       <b-row class="important_row">
         <b-col>
-          <h2>Общество с ограниченной ответственностью частное охранное предприятие "Валенсия"</h2>
+          <h2>Частное охранное предприятие "Пересвет"</h2>
           <div class="flex-container">
             <b-row v-for="information in CompanyInformation" :key="information.index">
               <b-col cols="1">
@@ -23,7 +23,7 @@
         </b-col>
       </b-row>
        <div class="map">
-          <iframe :src="address.map" title="адрес_компании_Валенсия"></iframe>
+          <iframe :src="address.map" title="адрес_компании"></iframe>
        </div>
       </b-container>
   </div>
