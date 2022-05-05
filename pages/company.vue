@@ -26,17 +26,17 @@
         </ul>
         <h6 class="block_two">Как мы работаем?</h6>
         <div class="stage">
-            <div v-for="stage in StagesOfWorkPart1" :key="stage.index">
+            <div v-for="stage in StagesOfWork" :key="stage.index">
               <component :is="stage.svg"/>
-              <b-row>
+              <b-row class="text">
                 <b-col cols="1">
-                  <p class="emphasized text">{{stage.index}}.</p>
+                  <p class="emphasized">{{stage.index}}.</p>
                 </b-col>
                 <b-col cols="2">
-                  <p class="emphasized text">{{stage.name_stage}}</p>
+                  <p class="emphasized">{{stage.name_stage}}</p>
                 </b-col>
                 <b-col>
-                  <p class="text" v-html="stage.descr_stage"></p>
+                  <p v-html="stage.descr_stage"></p>
                 </b-col>
               </b-row>
             </div>
@@ -74,7 +74,7 @@
             {skill:"во время искусственно созданной стрессовой ситации - отрабатываются действия в сложной оперативной обстановке;",},
             {skill:"сдают все нормативы и проходят повторные аттестации и повышение квалификации каждый год.",},
           ],
-          StagesOfWorkPart1:[
+          StagesOfWork:[
             {index:'01',svg:'', name_stage:"заявка от клиента", descr_stage:"Если Вам необходима охрана, Вы можете позвонить по номеру <a href=tel:" + Information.phone + " >"  + Information.phone +"</a>" + "  или же отправить форму обратной связи и мы сами перезвоним Вам.",},
             {index:'02',svg:'', name_stage:"выезд специалиста", descr_stage:"В удобное для Вас время, на территорию Вашего объекта выезжает специалист нашей компании для обследования объекта на предмет уязвимостей и оценки потенциальных угроз.",},
             {index:'03',svg:'', name_stage:"индивидуальный план на работу", descr_stage:"Учитывая требования клиента, по результатам осмотра территории или опроса Клиента, составляется индивидуальный план на необходимое количество постов и их режима работы.",},
