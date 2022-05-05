@@ -1,7 +1,7 @@
 <template>
     <div id="Home">
       <b-container>
-        <div class="title_guard">Частное охранное предприятие <nobr> "ООО Валенсия" </nobr></div>
+        <div class="title_guard">Частное охранное предприятие <nobr> "Пересвет" </nobr></div>
         <b-row class="big_version">
           <b-col cols="4">
             <img src="../../static/Landing_page/Home/guard.png" alt="охранник">
