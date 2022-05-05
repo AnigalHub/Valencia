@@ -87,13 +87,10 @@ h1{
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-shadow: 0 1px 1px $shadeOfBlack;
 }
-h1,h2,h3{
-  font-weight: 600 !important;
-}
-h1,h2{
-  text-shadow: 0 1px 3px $shadeOfBlack;
-}
+h1,h2,h3{font-weight: 600 !important;}
+h2{text-shadow: 0 1px 3px $shadeOfBlack;}
 h1,h2,h3,h4,h6{color: $shadeOfBlack;}
 h2,h3{
   padding: 1% 0;
