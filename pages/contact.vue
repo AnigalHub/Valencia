@@ -23,7 +23,7 @@
         </b-col>
       </b-row>
        <div class="map">
-          <iframe :src="address.map" title="адрес_компании"></iframe>
+          <iframe :src="information.map" title="адрес_компании"></iframe>
        </div>
       </b-container>
   </div>
@@ -35,19 +35,19 @@
     import OpeningHoursSVG from "../components/contact_svg/opening_hours_svg";
     import AddressSVG from "../components/contact_svg/address_svg";
     import Send_form from "../components/secondary_pages/send_form";
-    import Address from "static/documents/information.json"
+    import Information from "static/documents/information.json"
     export default {
       name: "contact",
       components: {Send_form},
       data() {
         return {
-          address:Address,
+          information:Information,
           name_page:"Контакты",
           CompanyInformation:[
-            {svg:OpeningHoursSVG, name:"Часы работы", description:Address.working_hours,},
-            {svg:AddressSVG, name:"Адрес", description:Address.address,},
-            {svg:TelephoneSVG, name:"Телефон", description:Address.phone, link:'tel:' + Address.phone},
-            {svg:EmailSVG, name:"Email", description:Address.mail, link:'mailto:'+ Address.mail},
+            {svg:OpeningHoursSVG, name:"Часы работы", description:Information.working_hours,},
+            {svg:AddressSVG, name:"Адрес", description:Information.address,},
+            {svg:TelephoneSVG, name:"Телефон", description:Information.phone, link:'tel:' + Information.phone},
+            {svg:EmailSVG, name:"Email", description:Information.mail, link:'mailto:'+ Information.mail},
           ]
         }
       }
