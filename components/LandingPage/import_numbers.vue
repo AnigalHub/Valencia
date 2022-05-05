@@ -13,7 +13,7 @@
 
 <script>
     export default {
-        name: "import_numbers",
+      name: "import_numbers",
       data(){
         return{
           important_numbers:[

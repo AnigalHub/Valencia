@@ -23,7 +23,7 @@
 <script>
     import Tariffs from "../../tariffs";
     export default {
-        name: "guard_private_property",
+      name: "guard_private_property",
       components: {Tariffs},
       data(){
         return{

@@ -14,7 +14,7 @@
 
 <script>
     export default {
-        name: "type",
+      name: "type",
       data(){
         return{
           Categories:[

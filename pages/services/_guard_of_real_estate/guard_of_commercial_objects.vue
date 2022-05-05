@@ -6,9 +6,9 @@
       <p class="text">В охране нуждаются здания, сооружения и иные объекты коммерческой деятельности, безопасность таких объектов - самое важное условие их бесперебойной работы.</p>
       <h4 class="text"><u>Охрана коммерческих объектов включает:</u></h4>
       <div class="import" >
-          <ul>
-            <li v-for="guard in GuardOfCommercialObjects" :key="guard.index"  class="text">{{guard.name}}</li>
-          </ul>
+        <ul>
+          <li v-for="guard in GuardOfCommercialObjects" :key="guard.index"  class="text">{{guard.name}}</li>
+        </ul>
       </div>
       <h6 class="block_two">Круг обязанностей охранников коммерческих объектов:</h6>
       <img class="second_img" src="../../../static/services/guard_of_real_estate/office.jpg" alt="офис"/>

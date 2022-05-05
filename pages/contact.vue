@@ -30,28 +30,28 @@
 </template>
 
 <script>
-    import TelephoneSVG from "../components/contact_svg/telephone_svg";
+  import TelephoneSVG from "../components/contact_svg/telephone_svg";
     import EmailSVG from "../components/contact_svg/email_svg";
     import OpeningHoursSVG from "../components/contact_svg/opening_hours_svg";
     import AddressSVG from "../components/contact_svg/address_svg";
     import Send_form from "../components/secondary_pages/send_form";
     import Information from "static/documents/information.json"
-    export default {
-      name: "contact",
-      components: {Send_form},
-      data() {
-        return {
-          information:Information,
-          name_page:"Контакты",
-          CompanyInformation:[
-            {svg:OpeningHoursSVG, name:"Часы работы", description:Information.working_hours,},
-            {svg:AddressSVG, name:"Адрес", description:Information.address,},
-            {svg:TelephoneSVG, name:"Телефон", description:Information.phone, link:'tel:' + Information.phone},
-            {svg:EmailSVG, name:"Email", description:Information.mail, link:'mailto:'+ Information.mail},
-          ]
-        }
+  export default {
+    name: "contact",
+    components: {Send_form},
+    data() {
+      return {
+        information:Information,
+        name_page:"Контакты",
+        CompanyInformation:[
+          {svg:OpeningHoursSVG, name:"Часы работы", description:Information.working_hours,},
+          {svg:AddressSVG, name:"Адрес", description:Information.address,},
+          {svg:TelephoneSVG, name:"Телефон", description:Information.phone, link:'tel:' + Information.phone},
+          {svg:EmailSVG, name:"Email", description:Information.mail, link:'mailto:'+ Information.mail},
+        ]
       }
     }
+  }
 </script>
 
 <style scoped>

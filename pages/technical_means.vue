@@ -1,25 +1,25 @@
 <template>
   <div id="technical_means" class="page">
-      <b-container>
-        <h1>{{name_page}}</h1>
-        <p class="text">Технические средства повышают безопасность любого охраняемого объекта. Наша компания занимается монтажом и обслуживанием систем безопасности во время охраны любой вверенной территории.</p>
-        <h6>Классификация технических средств охранников компании "{{information.name_company}}":</h6>
-        <div class="flex-container">
-          <div class="beautiful_block" v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
-            <p class="text emphasized">{{mean.name_technical_means}}</p>
-            <b-row>
-              <b-col cols="5">
-                <img :src="mean.img_src" :alt="mean.img_alt"/>
-              </b-col>
-              <b-col>
-                <ul class="text">
-                  <li v-for="paragraph in mean.list" :key="paragraph.index">{{paragraph.paragraph}}</li>
-                </ul>
-              </b-col>
-            </b-row>
-          </div>
+    <b-container>
+      <h1>{{name_page}}</h1>
+      <p class="text">Технические средства повышают безопасность любого охраняемого объекта. Наша компания занимается монтажом и обслуживанием систем безопасности во время охраны любой вверенной территории.</p>
+      <h6>Классификация технических средств охранников компании "{{information.name_company}}":</h6>
+      <div class="flex-container">
+        <div class="beautiful_block" v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
+          <p class="text emphasized">{{mean.name_technical_means}}</p>
+          <b-row>
+            <b-col cols="5">
+              <img :src="mean.img_src" :alt="mean.img_alt"/>
+            </b-col>
+            <b-col>
+              <ul class="text">
+                <li v-for="paragraph in mean.list" :key="paragraph.index">{{paragraph.paragraph}}</li>
+              </ul>
+            </b-col>
+          </b-row>
         </div>
-      </b-container>
+      </div>
+    </b-container>
   </div>
 </template>
 

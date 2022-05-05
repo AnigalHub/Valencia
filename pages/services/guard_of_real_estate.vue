@@ -32,51 +32,51 @@
 </template>
 
 <script>
-    import Tariffs from "../tariffs";
-    export default {
-      name: "guard_of_real_estate",
-      components: {Tariffs},
-      data() {
-        return {
-          name_page: "Охрана недвижимости",
-          WorkingMethods:[
-            {name_metod:"назначение, месторасположение и удаленность;",},
-            {name_metod:"транспортная доступность;",},
-            {name_metod:"высотность зданий;",},
-            {name_metod:"наличие лифтов и количество лестничных пролетов;",},
-            {name_metod:"общая криминальная ситуация в конкретном районе.",},
-
-          ],
-          TypesOfGuard:[
-            {
-              link:"/services/_guard_of_real_estate/guard_of_commercial_objects",
-              name:"Охрана коммерческих объектов",
-              img_src:"./guard_of_commercial_object.jpg",
-              img_alt:"охрана_коммерческих_объектов",
-              list:[
-                {guard:"охрана банков;"},
-                {guard:"охрана ресторанов и баров;"},
-                {guard:"охрана торговых центров;"},
-                {guard:"охрана офисов и бизнес-центров;"},
-                {guard:"охрана салонов красоты;"},
-                {guard:"охрана гостиниц и отелей."},
-              ]
-            },
-            {
-              link:"/services/_guard_of_real_estate/guard_private_property",
-              name:"Охрана частных объектов",
-              img_src:"./panel_protection.jpg",
-              img_alt:"охрана_частных_объектов",
-              list:[
-                {guard:"охрана коттеджей и коттеджных поселков;"},
-                {guard:"охрана ТСЖ, жилых комплексов и многоквартирных домов;"},
-                {guard:"охрана часных домов и загородных резиденций;"},
-                {guard:"охрана дач и дачных поселков."},
-              ]},
-          ],
-        }
+  import Tariffs from "../tariffs";
+  export default {
+    name: "guard_of_real_estate",
+    components: {Tariffs},
+    data() {
+      return {
+        name_page: "Охрана недвижимости",
+        WorkingMethods:[
+          {name_metod:"назначение, месторасположение и удаленность;",},
+          {name_metod:"транспортная доступность;",},
+          {name_metod:"высотность зданий;",},
+          {name_metod:"наличие лифтов и количество лестничных пролетов;",},
+          {name_metod:"общая криминальная ситуация в конкретном районе.",},
+        ],
+         TypesOfGuard:[
+           {
+             link:"/services/_guard_of_real_estate/guard_of_commercial_objects",
+             name:"Охрана коммерческих объектов",
+             img_src:"./guard_of_commercial_object.jpg",
+             img_alt:"охрана_коммерческих_объектов",
+             list:[
+               {guard:"охрана банков;"},
+               {guard:"охрана ресторанов и баров;"},
+               {guard:"охрана торговых центров;"},
+               {guard:"охрана офисов и бизнес-центров;"},
+               {guard:"охрана салонов красоты;"},
+               {guard:"охрана гостиниц и отелей."},
+             ]
+           },
+           {
+             link:"/services/_guard_of_real_estate/guard_private_property",
+             name:"Охрана частных объектов",
+             img_src:"./panel_protection.jpg",
+             img_alt:"охрана_частных_объектов",
+             list:[
+               {guard:"охрана коттеджей и коттеджных поселков;"},
+               {guard:"охрана ТСЖ, жилых комплексов и многоквартирных домов;"},
+               {guard:"охрана часных домов и загородных резиденций;"},
+               {guard:"охрана дач и дачных поселков."},
+             ]
+           },
+         ],
       }
     }
+  }
 </script>
 
 <style scoped>

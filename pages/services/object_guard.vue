@@ -1,33 +1,33 @@
 <template>
   <div id="object_guard" class="page services services_with_types">
-      <b-container>
-        <h1>{{name_page}}</h1>
-        <img src="../../static/services/object_guard/object_guard.jpg" alt="охрана_объектов" class="first_img"/>
-        <p class="text"><span class="emphasized">Охрана объектов </span>- комплексное обеспечение защиты производственного или коммерческого объекта, товарно-материальных ценностей и защиту здоровья сотрудников объекта. Для обеспечения безопасности объекта разрабатывается проект со всеми особенностями и характером деятельности бизнеса и его графиком работы.</p>
-        <h4 class="text"><u>При составлении проекта работы охранников учитывается:</u></h4>
-        <ul class="text">
-          <li v-for="nuance in NuancesOfWork" :key="nuance.index">{{nuance.name}}</li>
-        </ul>
-        <h6 class="block_two">Разновидности охраны объектов:</h6>
-        <div class="flex-container">
-          <div class="beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
-            <NuxtLink :to="guard.link">
-              <p class="emphasized">{{guard.name}}</p>
-              <b-row>
-                <b-col cols="5">
-                  <img :src="guard.img_src" :alt="guard.img_alt"/>
-                </b-col>
-                <b-col>
-                  <ul class="text">
-                    <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
-                  </ul>
-                </b-col>
-              </b-row>
-            </NuxtLink>
-          </div>
+    <b-container>
+      <h1>{{name_page}}</h1>
+      <img src="../../static/services/object_guard/object_guard.jpg" alt="охрана_объектов" class="first_img"/>
+      <p class="text"><span class="emphasized">Охрана объектов </span>- комплексное обеспечение защиты производственного или коммерческого объекта, товарно-материальных ценностей и защиту здоровья сотрудников объекта. Для обеспечения безопасности объекта разрабатывается проект со всеми особенностями и характером деятельности бизнеса и его графиком работы.</p>
+      <h4 class="text"><u>При составлении проекта работы охранников учитывается:</u></h4>
+      <ul class="text">
+        <li v-for="nuance in NuancesOfWork" :key="nuance.index">{{nuance.name}}</li>
+      </ul>
+      <h6 class="block_two">Разновидности охраны объектов:</h6>
+      <div class="flex-container">
+        <div class="beautiful_block"  v-for="guard in TypesOfGuard" :key="guard.index">
+          <NuxtLink :to="guard.link">
+            <p class="emphasized">{{guard.name}}</p>
+            <b-row>
+              <b-col cols="5">
+                <img :src="guard.img_src" :alt="guard.img_alt"/>
+              </b-col>
+              <b-col>
+                <ul class="text">
+                  <li v-for="name_guard in guard.list" :key="name_guard.index">{{name_guard.guard}}</li>
+                </ul>
+              </b-col>
+            </b-row>
+          </NuxtLink>
         </div>
-        <Tariffs/>
-      </b-container>
+      </div>
+      <Tariffs/>
+    </b-container>
   </div>
 </template>
 

@@ -1,26 +1,26 @@
 <template>
-    <div id="Clients">
-      <div class="container">
-        <b-carousel id="carousel_desktop" v-model="slide" :interval="6000" controls indicators>
-          <b-carousel-slide v-for="(client, index) in Clients" :key="index">
-            <template #img>
-              <b-row>
-                <b-col v-for="img in client.clients" :key="img.name">
-                  <a href="/our_clients">
-                    <img :src="img.img_src" :alt="img.img_alt">
-                  </a>
-                </b-col>
-              </b-row>
-            </template>
-          </b-carousel-slide>
-        </b-carousel>
-        <b-carousel id="carousel_mobile" v-model="slide" :interval="6000" controls>
-          <a href="/our_clients">
-            <b-carousel-slide v-for="img in ClientsMobile" :key="img.name" :img-src="img.img_src" :img-alt="img.img_alt"></b-carousel-slide>
-          </a>
-        </b-carousel>
-      </div>
+  <div id="Clients">
+    <div class="container">
+      <b-carousel id="carousel_desktop" v-model="slide" :interval="6000" controls indicators>
+        <b-carousel-slide v-for="(client, index) in Clients" :key="index">
+          <template #img>
+            <b-row>
+              <b-col v-for="img in client.clients" :key="img.name">
+                <a href="/our_clients">
+                  <img :src="img.img_src" :alt="img.img_alt">
+                </a>
+              </b-col>
+            </b-row>
+          </template>
+        </b-carousel-slide>
+      </b-carousel>
+      <b-carousel id="carousel_mobile" v-model="slide" :interval="6000" controls>
+        <a href="/our_clients">
+          <b-carousel-slide v-for="img in ClientsMobile" :key="img.name" :img-src="img.img_src" :img-alt="img.img_alt"></b-carousel-slide>
+        </a>
+      </b-carousel>
     </div>
+  </div>
 </template>
 
 <script>

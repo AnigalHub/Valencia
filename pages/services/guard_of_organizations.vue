@@ -37,62 +37,62 @@
 </template>
 
 <script>
-    import Tariffs from "../tariffs";
-    export default {
-      name: "guard_of_organizations",
-      components: {Tariffs},
-      data() {
-        return {
-          name_page: "Охрана организаций",
-          DefenceFrom: [
-            {paragraph: "кражи имущества;",},
-            {paragraph: "вандализма - осквернения здания;",},
-            {paragraph: "утечки кофиденцальной информации;",},
-            {paragraph: "противоправных действий;",},
-            {paragraph: "нарушения общественного порядка;",},
-            {paragraph: "незаконного проникновения на территорию организации.",},
-          ],
-          TypesOfGuard: [
-            {
-              link:"/services/_guard_of_organizations/guard_of_educational_institutions",
-              name: "Охрана образовательных и дошкольных учреждений",
-              img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
-              img_alt: "охрана_коммерческих_объектов",
-              list: [
-                {guard: "охрана детских садов;"},
-                {guard: "охрана школ;"},
-                {guard: "охрана интерната;"},
-                {guard: "охрана вузов/училищ."},
-              ]
-            },
-            {
-              link:"/services/_guard_of_organizations/guard_of_medical_institutions",
-              name: "Охрана медицинских учреждений",
-              img_src: "../guard_of_organizations/guard_of_medical_institutions.jpg",
-              img_alt: "охрана_частных_объектов",
-              list: [
-                {guard: "охрана поликлиник;"},
-                {guard: "охрана аптек;"},
-                {guard: "охрана больниц;"},
-                {guard: "охрана медицинских центров."},
-              ]
-            },
-            {
-              link:"/services/_guard_of_organizations/guard_of_municipal_facilities",
-              name: "Охрана муниципальных объектов - госучреждений",
-              img_src: "../guard_of_organizations/gallery.jpg",
-              img_alt: "охрана_частных_объектов",
-              list: [
-                {guard: "охрана административных зданий;"},
-                {guard: "охрана музеев и театров;"},
-                {guard: "охрана библиотек;"},
-                {guard: "охрана церквей."},
-              ]
-            },
-          ],
-        }
+  import Tariffs from "../tariffs";
+  export default {
+    name: "guard_of_organizations",
+    components: {Tariffs},
+    data() {
+      return {
+        name_page: "Охрана организаций",
+        DefenceFrom: [
+          {paragraph: "кражи имущества;",},
+          {paragraph: "вандализма - осквернения здания;",},
+          {paragraph: "утечки кофиденцальной информации;",},
+          {paragraph: "противоправных действий;",},
+          {paragraph: "нарушения общественного порядка;",},
+          {paragraph: "незаконного проникновения на территорию организации.",},
+        ],
+        TypesOfGuard: [
+          {
+            link:"/services/_guard_of_organizations/guard_of_educational_institutions",
+            name: "Охрана образовательных и дошкольных учреждений",
+            img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
+            img_alt: "охрана_коммерческих_объектов",
+            list: [
+              {guard: "охрана детских садов;"},
+              {guard: "охрана школ;"},
+              {guard: "охрана интерната;"},
+              {guard: "охрана вузов/училищ."},
+            ]
+          },
+          {
+            link:"/services/_guard_of_organizations/guard_of_medical_institutions",
+            name: "Охрана медицинских учреждений",
+            img_src: "../guard_of_organizations/guard_of_medical_institutions.jpg",
+            img_alt: "охрана_частных_объектов",
+            list: [
+              {guard: "охрана поликлиник;"},
+              {guard: "охрана аптек;"},
+              {guard: "охрана больниц;"},
+              {guard: "охрана медицинских центров."},
+            ]
+          },
+          {
+            link:"/services/_guard_of_organizations/guard_of_municipal_facilities",
+            name: "Охрана муниципальных объектов - госучреждений",
+            img_src: "../guard_of_organizations/gallery.jpg",
+            img_alt: "охрана_частных_объектов",
+            list: [
+              {guard: "охрана административных зданий;"},
+              {guard: "охрана музеев и театров;"},
+              {guard: "охрана библиотек;"},
+              {guard: "охрана церквей."},
+            ]
+          },
+        ],
       }
     }
+  }
 </script>
 
 <style scoped>

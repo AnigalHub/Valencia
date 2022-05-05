@@ -17,37 +17,37 @@
 <script>
     import Address from "../static/documents/information.json";
     export default {
-        name: "myfooter",
+      name: "myfooter",
       data(){
-          return{
-            address:Address,
-            catalog_pages:[
-              {
-                pages:[
-                  {link: "/company", page: "О нас",},
-                  {link: "/#Services", page: "Услуги",},
-                ],
-              },
-              {
-                pages:[
-                  {link: "/tariffs", page: "Тарифы",},
-                  {link: "/technical_means", page: "Технические средства",},
-                ],
-              },
-              {
-                pages:[
-                  {link: "/special_equipment", page: "Спецсрества",},
-                  {link: "/licenses", page: "Лицензии",},
-                ],
-              },
-              {
-                pages:[
-                  {link: "/our_clients", page: "Наши клиенты",},
-                  {link: "/contact", page: "Контакты",},
-                ],
-              },
-            ]
-          }
+        return{
+          address:Address,
+          catalog_pages:[
+            {
+              pages:[
+                {link: "/company", page: "О нас",},
+                {link: "/#Services", page: "Услуги",},
+              ],
+            },
+            {
+              pages:[
+                {link: "/tariffs", page: "Тарифы",},
+                {link: "/technical_means", page: "Технические средства",},
+              ],
+            },
+            {
+              pages:[
+                {link: "/special_equipment", page: "Спецсрества",},
+                {link: "/licenses", page: "Лицензии",},
+              ],
+            },
+            {
+              pages:[
+                {link: "/our_clients", page: "Наши клиенты",},
+                {link: "/contact", page: "Контакты",},
+              ],
+            },
+          ]
+        }
       }
     }
 </script>

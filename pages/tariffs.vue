@@ -66,145 +66,145 @@
 </template>
 
 <script>
-    export default {
-      name: "tariffs",
-      data() {
-        return {
-          name_page:"Тарифы",
-          fields: [
-            { label: "Режим", key: "econom" },
-            { label: "Невооруженная", key: "tt" },
-            { label: "Вооруженная", key: "ttr" },
-          ],
-          items: [
-            {
-              name:'Вахтовый',
-              descr_name:'(12 ч.)',
-              price_hour:130,
-              price:65000,
-              price_hour_with_weapon:150,
-              price_with_weapon:70000,
-            },
-            {
-              name:'Суточный',
-              descr_name:'(2/2)',
-              price_hour:145,
-              price:85000,
-              price_hour_with_weapon:165,
-              price_with_weapon:90000,
-            },
-            {
-              name:'Суточный',
-              descr_name:'(1/2)',
-              price_hour:150,
-              price:95000,
-              price_hour_with_weapon:170,
-              price_with_weapon:100000,
-            },
-            {
-              name:'Дневной (ночной)',
-              descr_name:'(12 ч., пн-вс)',
-              price_hour:140,
-              price:75000,
-              price_hour_with_weapon:160,
-              price_with_weapon:80000,
-            },
-            {
-              name:'Дневной (ночной)',
-              descr_name:'(12 ч., пн-пт)',
-              price_hour:135,
-              price:70000,
-              price_hour_with_weapon:155,
-              price_with_weapon:75000,
-            },
-          ],
-          items2: [
-            {
-              name:'Вахтовый',
-              descr_name:'(12 ч.)',
-              price_hour:140,
-              price:80000,
-              price_hour_with_weapon:160,
-              price_with_weapon:85000,
-            },
-            {
-              name:'Суточный',
-              descr_name:'(2/2)',
-              price_hour:165,
-              price:105000,
-              price_hour_with_weapon:185,
-              price_with_weapon:110000,
-            },
-            {
-              name:'Суточный',
-              descr_name:'(1/2)',
-              price_hour:170,
-              price:125000,
-              price_hour_with_weapon:190,
-              price_with_weapon:130000,
-            },
-            {
-              name:'Дневной (ночной)',
-              descr_name:'(12 часов, пн-вс)',
-              price_hour:145,
-              price:85000,
-              price_hour_with_weapon:165,
-              price_with_weapon:90000,
-            },
-            {
-              name:'Дневной (ночной)',
-              descr_name:'(12 часов, пн-пт)',
-              price_hour:140,
-              price:75000,
-              price_hour_with_weapon:160,
-              price_with_weapon:80000,
-            },
-          ],
-          items3: [
-            {
-              name:'Вахтовый',
-              descr_name:'(12 ч.)',
-              price_hour:145,
-              price:85000,
-              price_hour_with_weapon:165,
-              price_with_weapon:90000,
-            },
-            {
-              name:'Суточный',
-              descr_name:'(2/2)',
-              price_hour:175,
-              price:120000,
-              price_hour_with_weapon:195,
-              price_with_weapon:125000,
-            },
-            {
-              name:'Суточный',
-              descr_name:'(1/2)',
-              price_hour:185,
-              price:135000,
-              price_hour_with_weapon:200,
-              price_with_weapon:140000,
-            },
-            {
-              name:'Дневной (ночной)',
-              descr_name:'(12 ч., пн-вс)',
-              price_hour:165,
-              price:100000,
-              price_hour_with_weapon:185,
-              price_with_weapon:105000,
-            },
-            {
-              name:'Дневной (ночной)',
-              descr_name:'(12 часов, пн-пт)',
-              price_hour:145,
-              price:85000,
-              price_hour_with_weapon:165,
-              price_with_weapon:90000,
-            },
-          ]
-        }
+  export default {
+    name: "tariffs",
+    data() {
+      return {
+        name_page:"Тарифы",
+        fields: [
+          { label: "Режим", key: "econom" },
+          { label: "Невооруженная", key: "tt" },
+          { label: "Вооруженная", key: "ttr" },
+        ],
+        items: [
+          {
+            name:'Вахтовый',
+            descr_name:'(12 ч.)',
+            price_hour:130,
+            price:65000,
+            price_hour_with_weapon:150,
+            price_with_weapon:70000,
+          },
+          {
+            name:'Суточный',
+            descr_name:'(2/2)',
+            price_hour:145,
+            price:85000,
+            price_hour_with_weapon:165,
+            price_with_weapon:90000,
+          },
+          {
+            name:'Суточный',
+            descr_name:'(1/2)',
+            price_hour:150,
+            price:95000,
+            price_hour_with_weapon:170,
+            price_with_weapon:100000,
+          },
+          {
+            name:'Дневной (ночной)',
+            descr_name:'(12 ч., пн-вс)',
+            price_hour:140,
+            price:75000,
+            price_hour_with_weapon:160,
+            price_with_weapon:80000,
+          },
+          {
+            name:'Дневной (ночной)',
+            descr_name:'(12 ч., пн-пт)',
+            price_hour:135,
+            price:70000,
+            price_hour_with_weapon:155,
+            price_with_weapon:75000,
+          },
+        ],
+        items2: [
+          {
+            name:'Вахтовый',
+            descr_name:'(12 ч.)',
+            price_hour:140,
+            price:80000,
+            price_hour_with_weapon:160,
+            price_with_weapon:85000,
+          },
+          {
+            name:'Суточный',
+            descr_name:'(2/2)',
+            price_hour:165,
+            price:105000,
+            price_hour_with_weapon:185,
+            price_with_weapon:110000,
+          },
+          {
+            name:'Суточный',
+            descr_name:'(1/2)',
+            price_hour:170,
+            price:125000,
+            price_hour_with_weapon:190,
+            price_with_weapon:130000,
+          },
+          {
+            name:'Дневной (ночной)',
+            descr_name:'(12 часов, пн-вс)',
+            price_hour:145,
+            price:85000,
+            price_hour_with_weapon:165,
+            price_with_weapon:90000,
+          },
+          {
+            name:'Дневной (ночной)',
+            descr_name:'(12 часов, пн-пт)',
+            price_hour:140,
+            price:75000,
+            price_hour_with_weapon:160,
+            price_with_weapon:80000,
+          },
+        ],
+        items3: [
+          {
+            name:'Вахтовый',
+            descr_name:'(12 ч.)',
+            price_hour:145,
+            price:85000,
+            price_hour_with_weapon:165,
+            price_with_weapon:90000,
+          },
+          {
+            name:'Суточный',
+            descr_name:'(2/2)',
+            price_hour:175,
+            price:120000,
+            price_hour_with_weapon:195,
+            price_with_weapon:125000,
+          },
+          {
+            name:'Суточный',
+            descr_name:'(1/2)',
+            price_hour:185,
+            price:135000,
+            price_hour_with_weapon:200,
+            price_with_weapon:140000,
+          },
+          {
+            name:'Дневной (ночной)',
+            descr_name:'(12 ч., пн-вс)',
+            price_hour:165,
+            price:100000,
+            price_hour_with_weapon:185,
+            price_with_weapon:105000,
+          },
+          {
+            name:'Дневной (ночной)',
+            descr_name:'(12 часов, пн-пт)',
+            price_hour:145,
+            price:85000,
+            price_hour_with_weapon:165,
+            price_with_weapon:90000,
+          },
+        ]
       }
     }
+  }
 </script>
 
 <style scoped lang="scss">
