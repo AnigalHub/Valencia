@@ -4,15 +4,15 @@
       <h1>{{name_page}}</h1>
       <b-row class="important_row">
         <b-col>
-          <h2>Частное охранное предприятие "Пересвет"</h2>
+          <h2>Частное охранное предприятие «{{information.name_company}}»</h2>
           <div class="flex-container">
-            <b-row v-for="information in CompanyInformation" :key="information.index">
+            <b-row v-for="company_information in CompanyInformation" :key="information.index">
               <b-col cols="1">
-                <component :is="information.svg"/>
+                <component :is="company_information.svg"/>
               </b-col>
               <b-col>
-                <p class="text"><b>{{information.name}}: </b>
-                  <a :href="information.link" > {{information.description}} </a>
+                <p class="text"><b>{{company_information.name}}: </b>
+                  <a :href="company_information.link" > {{company_information.description}} </a>
                 </p>
               </b-col>
             </b-row>
