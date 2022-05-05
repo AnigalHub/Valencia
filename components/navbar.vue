@@ -4,7 +4,6 @@
       <b-navbar-brand to="/">
         <component :is="svg"/>
         <span class="name_brand">"Пересвет"</span>
-        <p class="chop">частное охранное предприятие</p>
       </b-navbar-brand>
       <a href="tel:+7(901)723-47-17" class="telephone">+7(901)723-47-17</a>
       <b-navbar-toggle target="navbar-toggle-collapse">
@@ -84,7 +83,7 @@
     padding: 0 !important;
     background: #dce4ee;
     box-shadow: 13px 0 18px -6px #000000;
-    .navbar-brand,.name_brand,.chop,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: black;}
+    .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: black;}
     /*контейнер, в котором находится весь контент меню*/
     .container {padding: 0 !important;}
     /*блок под логотип(svg, название компании, что за компания(чоп))*/
@@ -106,15 +105,8 @@
         margin-left: -3.5%;
         font-size: 1.22rem;
       }
-      /*надпись "частное охранное предприятие" в логотипе*/
-      .chop{
-        font-size: 0.6rem;
-        margin-top: -11%;
-        margin-left: 26%;
-        margin-bottom: 0.1rem !important;
-      }
       /*название компании "Валенсия" в логотипе, надпись "частное охранное предприятие" в логотипе*/
-      .name_brand,.chop{filter: contrast(140%);}
+      .name_brand{filter: contrast(140%);}
     }
     /*номер телефона*/
     .telephone{
@@ -201,12 +193,6 @@
         }
         /*название компании "Валенсия" в логотипе*/
         .name_brand{font-size: 1.14rem;}
-        /*надпись "частное охранное предприятие" в логотипе*/
-        .chop{
-          font-size: 0.55rem;
-          margin-top: -9%;
-          margin-left: 24%;
-        }
       }
       /*все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)*/
       .nav-link{padding: .4rem 0 !important;}
@@ -237,11 +223,6 @@
         }
         /*название компании "Валенсия" в логотипе*/
         .name_brand{font-size: 1.14rem;}
-        /*надпись "частное охранное предприятие" в логотипе*/
-        .chop{
-          margin-top: -9%;
-          margin-left: 22%;
-        }
       }
       /*все кнопки, номер телефона*/
       .nav-link,.dropdown-item,.telephone,.dropdown-toggle{font-size: 1.1rem !important;}
@@ -264,8 +245,6 @@
       .nav-link,.telephone,.dropdown-toggle,.dropdown-item{font-size: 1.1rem !important;}
       /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
       .nav-link{padding: 0 .35rem !important;}
-      /*надпись "частное охранное предприятие" в логотипе*/
-      .chop {font-size: 0.6rem !important;}
       /*номер телефона*/
       .telephone{margin-left: -1%;}
     }
