@@ -1,18 +1,18 @@
 <template>
-    <div id="Services">
-      <b-container>
-        <h2>Виды деятельности организации:</h2>
-        <div class="flex-container">
-          <router-link v-for="(guard,index) in Guard" :key="index" :to="guard.link">
-            <b-button>
-              <img :src="guard.src" :alt="guard.alt"/>
-              <p class="text_Landing_page">{{guard.name_guard}}</p>
-            </b-button>
-          </router-link>
-        </div>
-        <Import_numbers/>
-      </b-container>
-    </div>
+  <div id="Services">
+    <b-container>
+      <h2>Виды деятельности организации:</h2>
+      <div class="flex-container">
+        <router-link v-for="(guard,index) in Guard" :key="index" :to="guard.link">
+          <b-button>
+            <img :src="guard.src" :alt="guard.alt"/>
+            <p class="text_Landing_page">{{guard.name_guard}}</p>
+          </b-button>
+        </router-link>
+      </div>
+      <Import_numbers/>
+    </b-container>
+  </div>
 </template>
 
 <script>

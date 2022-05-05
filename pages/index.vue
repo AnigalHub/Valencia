@@ -1,12 +1,12 @@
 <template>
-    <div id="Landing_page">
-      <Home/>
-      <Services/>
-      <Type/>
-      <Feedback/>
-      <Clients/>
-      <Mymap/>
-    </div>
+  <div id="Landing_page">
+    <Home/>
+    <Services/>
+    <Type/>
+    <Feedback/>
+    <Clients/>
+    <Mymap/>
+  </div>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-    <div id="Map">
-      <iframe :src="address.map" title="адрес_компании"></iframe>
-    </div>
+  <div id="Map">
+    <iframe :src="address.map" title="адрес_компании"></iframe>
+  </div>
 </template>
 
 <script>

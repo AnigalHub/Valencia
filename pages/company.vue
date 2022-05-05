@@ -1,47 +1,47 @@
 <template>
   <div id="company" class="page">
-      <b-container>
-        <h1>{{name_page}}</h1>
-        <img src="../static/company/walkie_talkie.jpg" alt="охрана(рация)" class="first_img" >
-        <p class="text"><span class="emphasized text">"{{information.name_company}}" </span> - частное охранное предприятие, обеспечивающее комплексную безопасность личности, предпринимательской деятельности, мероприятий, и всех, кто нуждается в охране на всей территории во всех субъектах Российской Федерации.</p>
-        <p class="text">Уже 15 лет компания оказывает услуги как вооруженной, так и невооруженной охраны в зависимости от конкретных задач Клиентов. Наш многолетний опыт и высокий уровень знаний позволяют выполнять самые нестандартные решения для Заказчика. Мы учитываем все пожелания Заказчика и гарантируем полную безопасность самых важных элементов жизни Клиента: близких, себя, бизнес, автотранспорт. В состав компании <span class="emphasized">"{{information.name_company}}" </span> входят более 500 сотрудников. В настоящее время нам доверяют свою безопасность около 120 клиентов по всей России.</p>
-        <h6 class="block_two">Основные принципы нашей службы:</h6>
-        <div class="flex-container">
-          <div v-for="principle in WorkPrinciples" :key="principle.index">
-            <b-row>
-              <b-col cols="1">
-                <component :is="principle.svg"/>
-              </b-col>
-              <b-col>
-                <p class="emphasized text">{{principle.name_principle}}</p>
-                <p class="text">{{principle.descr_principle}}</p>
-              </b-col>
-            </b-row>
-          </div>
+    <b-container>
+      <h1>{{name_page}}</h1>
+      <img src="../static/company/walkie_talkie.jpg" alt="охрана(рация)" class="first_img" >
+      <p class="text"><span class="emphasized text">"{{information.name_company}}" </span> - частное охранное предприятие, обеспечивающее комплексную безопасность личности, предпринимательской деятельности, мероприятий, и всех, кто нуждается в охране на всей территории во всех субъектах Российской Федерации.</p>
+      <p class="text">Уже 15 лет компания оказывает услуги как вооруженной, так и невооруженной охраны в зависимости от конкретных задач Клиентов. Наш многолетний опыт и высокий уровень знаний позволяют выполнять самые нестандартные решения для Заказчика. Мы учитываем все пожелания Заказчика и гарантируем полную безопасность самых важных элементов жизни Клиента: близких, себя, бизнес, автотранспорт. В состав компании <span class="emphasized">"{{information.name_company}}" </span> входят более 500 сотрудников. В настоящее время нам доверяют свою безопасность около 120 клиентов по всей России.</p>
+      <h6 class="block_two">Основные принципы нашей службы:</h6>
+      <div class="flex-container">
+        <div v-for="principle in WorkPrinciples" :key="principle.index">
+          <b-row>
+            <b-col cols="1">
+              <component :is="principle.svg"/>
+            </b-col>
+            <b-col>
+              <p class="emphasized text">{{principle.name_principle}}</p>
+              <p class="text">{{principle.descr_principle}}</p>
+            </b-col>
+          </b-row>
         </div>
-        <h6>Наши специалисты также повышают свой уровень профессиональных навыков в специализированном центре:</h6>
-        <img src="../static/company/shooting.jpg" alt="повышение_квалификации" class="second_img">
-        <ul class="text">
-          <li v-for="skill in ProfessionalSkills" :key="skill.index">{{skill.skill}}</li>
-        </ul>
-        <h6 class="block_two">Как мы работаем?</h6>
-        <div class="stage">
-            <div v-for="stage in StagesOfWork" :key="stage.index">
-              <component :is="stage.svg"/>
-              <b-row class="text">
-                <b-col cols="1">
-                  <p class="emphasized">{{stage.index}}.</p>
-                </b-col>
-                <b-col cols="2">
-                  <p class="emphasized">{{stage.name_stage}}</p>
-                </b-col>
-                <b-col>
-                  <p v-html="stage.descr_stage"></p>
-                </b-col>
-              </b-row>
-            </div>
+      </div>
+      <h6>Наши специалисты также повышают свой уровень профессиональных навыков в специализированном центре:</h6>
+      <img src="../static/company/shooting.jpg" alt="повышение_квалификации" class="second_img">
+      <ul class="text">
+        <li v-for="skill in ProfessionalSkills" :key="skill.index">{{skill.skill}}</li>
+      </ul>
+      <h6 class="block_two">Как мы работаем?</h6>
+      <div class="stage">
+        <div v-for="stage in StagesOfWork" :key="stage.index">
+          <component :is="stage.svg"/>
+          <b-row class="text">
+            <b-col cols="1">
+              <p class="emphasized">{{stage.index}}.</p>
+            </b-col>
+            <b-col cols="2">
+              <p class="emphasized">{{stage.name_stage}}</p>
+            </b-col>
+            <b-col>
+              <p v-html="stage.descr_stage"></p>
+            </b-col>
+          </b-row>
         </div>
-      </b-container>
+      </div>
+    </b-container>
   </div>
 </template>
 

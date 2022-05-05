@@ -7,7 +7,7 @@
               <b-row>
                 <b-col v-for="img in client.clients" :key="img.name">
                   <a href="/our_clients">
-                      <img :src="img.img_src" :alt="img.img_alt">
+                    <img :src="img.img_src" :alt="img.img_alt">
                   </a>
                 </b-col>
               </b-row>

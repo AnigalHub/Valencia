@@ -1,6 +1,6 @@
 <template>
   <div class="container-inner" id="Type">
-  <b-row>
+    <b-row>
       <router-link :to="category.link" class="col" v-for="(category, index) in Categories" :key="index">
         <img :src="category.img_src">
         <div class="container">
