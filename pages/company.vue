@@ -41,7 +41,6 @@
               </b-row>
             </div>
         </div>
-
       </b-container>
   </div>
 </template>
@@ -53,20 +52,20 @@
     import ReliabilitySVG from "../components/company_svg/reliability_svg";
     import PartnersSVG from "../components/company_svg/partners_svg";
     import ConfidentialitySVG from "../components/company_svg/confidentiality_svg";
-    import Address from "static/documents/information.json"
+    import Information from "static/documents/information.json"
     export default {
       name: "company",
       data() {
         return {
           name_page:"О компании",
-          address:Address,
+          information:Information,
           WorkPrinciples:[
             { name_principle:"Законность",svg:LawSVG, descr_principle:"Деятельность компании полностью соответствует законодательству Российской Федерации.",},
-            { name_principle:"Честное партнерство",svg:PartnersSVG, descr_principle:"Все отношения с клиентами основаны на принципах конфиденциальности, взаимного доверия и уважения.",},
-            {name_principle:"Оперативность",svg:SpeedSVG, descr_principle:"Быстрое комплексное решение любых задач, связанных с безопасностью объекта в сжатые сроки.",},
+            { name_principle:"Честное партнерство", svg:PartnersSVG, descr_principle:"Все отношения с клиентами основаны на принципах конфиденциальности, взаимного доверия и уважения.",},
+            {name_principle:"Оперативность", svg:SpeedSVG, descr_principle:"Быстрое комплексное решение любых задач, связанных с безопасностью объекта в сжатые сроки.",},
             { name_principle:"Надежность", svg:ReliabilitySVG,descr_principle:"Работаем на рынке не первый год и знаем все об уязвимостях каждого типа охраняемого объекта.",},
-            {name_principle:"Конфиденциальность",svg:ConfidentialitySVG, descr_principle:"Неразглашение кофиденциальной информации сотрудниками компании, без согласия Клиента",},
-            { name_principle:"Профессионализм",svg:StrengthSVG, descr_principle:"Огромный штат сотрудников с большим опытом работы, хорошой физической подготовкой и умением владеть оружием.",},
+            {name_principle:"Конфиденциальность", svg:ConfidentialitySVG, descr_principle:"Неразглашение кофиденциальной информации сотрудниками компании, без согласия Клиента",},
+            { name_principle:"Профессионализм", svg:StrengthSVG, descr_principle:"Огромный штат сотрудников с большим опытом работы, хорошой физической подготовкой и умением владеть оружием.",},
           ],
           ProfessionalSkills:[
             {skill:"для совершенствования физической формы сотрудники проходят занятия по самообороне и рукопашному бою;",},
@@ -76,7 +75,7 @@
             {skill:"сдают все нормативы и проходят повторные аттестации и повышение квалификации каждый год.",},
           ],
           StagesOfWorkPart1:[
-            {index:'01',svg:'', name_stage:"заявка от клиента", descr_stage:"Если Вам необходима охрана, Вы можете позвонить по номеру <a href=tel:" + Address.phone + " >"  + Address.phone +"</a>" + "  или же отправить форму обратной связи и мы сами перезвоним Вам.",},
+            {index:'01',svg:'', name_stage:"заявка от клиента", descr_stage:"Если Вам необходима охрана, Вы можете позвонить по номеру <a href=tel:" + Information.phone + " >"  + Information.phone +"</a>" + "  или же отправить форму обратной связи и мы сами перезвоним Вам.",},
             {index:'02',svg:'', name_stage:"выезд специалиста", descr_stage:"В удобное для Вас время, на территорию Вашего объекта выезжает специалист нашей компании для обследования объекта на предмет уязвимостей и оценки потенциальных угроз.",},
             {index:'03',svg:'', name_stage:"индивидуальный план на работу", descr_stage:"Учитывая требования клиента, по результатам осмотра территории или опроса Клиента, составляется индивидуальный план на необходимое количество постов и их режима работы.",},
             {index:'04',svg:'', name_stage:"подбор персонала под объект", descr_stage:"Исходя из специфики конкретного объекта/личности и прочих определенных условий подбираются сотрудники наиболее ориентированные на выполнение конкретной задачи.",},
