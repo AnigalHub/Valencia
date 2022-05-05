@@ -1,6 +1,6 @@
 <template>
     <div id="Map">
-      <iframe :src="address.map" title="адрес_компании_Валенсия"></iframe>
+      <iframe :src="address.map" title="адрес_компании"></iframe>
     </div>
 </template>
 
