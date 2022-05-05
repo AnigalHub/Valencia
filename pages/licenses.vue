@@ -2,18 +2,18 @@
   <div id="licenses" class="page">
       <b-container>
         <h1>{{name_page}}</h1>
-        <p class="text"> Компания "Пересвет" обладает всеми необходимыми лицензиями на работу, согласно статье №3 Закона РФ №2487-1 "О частной детективной и охранной деятельности в Российской Федерации".</p>
+        <p class="text"> Компания "{{information.name_company}}" обладает всеми необходимыми лицензиями на работу, согласно статье №3 Закона РФ №2487-1 "О частной детективной и охранной деятельности в Российской Федерации".</p>
         <h6>В целях охраны разрешается предоставление следующих видов услуг:</h6>
         <ol class="text">
           <li v-for="type in TypesOfServices" :key="type.index">{{type.type}}</li>
         </ol>
         <h6>Лицензии:</h6>
-        <p class="text">Действующие лицензии частного охранного предприятия “Пересвет” на право оказания охранных услуг: </p>
+        <p class="text">Действующие лицензии частного охранного предприятия "{{information.name_company}}" на право оказания охранных услуг: </p>
         <div class="flex-container">
           <img v-for="(img,index) in Licenses" :src="img.src" :alt="img.alt" :key="index" @click="showModal(img)"/>
         </div>
         <h6>Благодарные и рекомендательные письма:</h6>
-        <p class="text">Наивысшей наградой являются благодарные и рекомендательные письма наших Клиентов о частном охранном предприятии “Пересвет”:</p>
+        <p class="text">Наивысшей наградой являются благодарные и рекомендательные письма наших Клиентов о частном охранном предприятии "{{information.name_company}}":</p>
         <div class="flex-container">
           <img v-for="img in ThanksgivingLetters" :src="img.src" :alt="img.alt" @click="showModal(img)"/>
         </div>
@@ -25,11 +25,13 @@
 </template>
 
 <script>
+  import Information from "static/documents/information.json"
     export default {
       name: "licenses",
       data() {
         return {
-         selectedImages:{
+          information:Information,
+          selectedImages:{
            src:'',
            alt:'',
           },
