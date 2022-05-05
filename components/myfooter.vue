@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import Address from "../static/documents/address.json";
+    import Address from "../static/documents/information.json";
     export default {
         name: "myfooter",
       data(){

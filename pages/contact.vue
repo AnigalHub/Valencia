@@ -35,7 +35,7 @@
     import OpeningHoursSVG from "../components/contact_svg/opening_hours_svg";
     import AddressSVG from "../components/contact_svg/address_svg";
     import Send_form from "../components/secondary_pages/send_form";
-    import Address from "static/documents/address.json"
+    import Address from "static/documents/information.json"
     export default {
       name: "contact",
       components: {Send_form},

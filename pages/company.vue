@@ -53,7 +53,7 @@
     import ReliabilitySVG from "../components/company_svg/reliability_svg";
     import PartnersSVG from "../components/company_svg/partners_svg";
     import ConfidentialitySVG from "../components/company_svg/confidentiality_svg";
-    import Address from "static/documents/address.json"
+    import Address from "static/documents/information.json"
     export default {
       name: "company",
       data() {
