@@ -8,19 +8,19 @@
             <br>
           </div>
         </div>
-        <div>{{address.address}}</div>
+        <div>{{information.address}}</div>
       </div>
     </b-container>
   </div>
 </template>
 
 <script>
-    import Address from "../static/documents/information.json";
+      import Information from "../static/documents/information.json";
     export default {
       name: "myfooter",
       data(){
         return{
-          address:Address,
+          information:Information,
           catalog_pages:[
             {
               pages:[
