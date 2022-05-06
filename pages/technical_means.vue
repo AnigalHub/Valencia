@@ -24,6 +24,7 @@
 </template>
 
 <script>
+    import Information from "static/documents/information.json"
     export default {
      name: "technical_means",
       data() {
