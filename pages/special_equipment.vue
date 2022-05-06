@@ -3,10 +3,10 @@
     <b-container>
       <h1>{{name_page}}</h1>
       <img src="../static/special_equipment/special.jpg" class="first_img" alt="спецсредства">
-      <p class="text">Для обеспечения безопасности охраняемого объекта, поддержания правопорядка и нейтрализации правонарушителей в частном охранном предприятии "Пересвет" имеются специальные средства индивидуальной защиты - особая экипировка и оснащение охранника.</p>
-      <p class="text">Личный состав частного охранного предприятия <span class="emphasized"> "Пересвет" </span> - охранники 5-го и 6-го разряда (работа со спецсредствами и оружием).</p>
+      <p class="text">Для обеспечения безопасности охраняемого объекта, поддержания правопорядка и нейтрализации правонарушителей в частном охранном предприятии <span class="emphasized">"{{information.name_company}}" </span> имеются специальные средства индивидуальной защиты - особая экипировка и оснащение охранника.</p>
+      <p class="text">Личный состав частного охранного предприятия <span class="emphasized"> "{{information.name_company}}" </span> - охранники 5-го и 6-го разряда (работа со спецсредствами и оружием).</p>
       <p class="text">Исходя из рисков и угроз, для каждого охраняемого объекта подбирается своя экипировка и средства защиты охраны.</p>
-      <h6 class="block_two">Перечень специальных средств, используемых в частном охранном предприятии "Пересвет":</h6>
+      <h6 class="block_two">Перечень специальных средств, используемых в частном охранном предприятии "{{information.name_company}}":</h6>
       <div class="flex-container">
         <div class="beautiful_block" v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
             <img :src="equipment.img_src" :alt="equipment.img_alt"/>
@@ -19,11 +19,13 @@
 </template>
 
 <script>
+    import Information from "static/documents/information.json"
     export default {
       name: "special_equipment",
       data() {
         return {
           name_page:"Спецсредства",
+          information:Information,
           ListOfSpecialEquipments:[
             {
               name_equipment:"Радиостанция", img_src:"../special_equipment/radio_station.png", img_alt:"радиостанция",
