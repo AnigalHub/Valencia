@@ -3,9 +3,9 @@
     <b-container>
       <b-navbar-brand to="/">
         <component :is="svg"/>
-        <span class="name_brand">"Пересвет"</span>
+        <span class="name_brand">"{{information.name_company}}"</span>
       </b-navbar-brand>
-      <a href="tel:+7(901)723-47-17" class="telephone">+7(901)723-47-17</a>
+      <a :href="information.phone" class="telephone"> {{information.phone}} </a>
       <b-navbar-toggle target="navbar-toggle-collapse">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  width="35" height="25" viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
@@ -59,10 +59,12 @@
 
 <script>
   import ShieldSVG from "./secondary_pages/shield_svg";
+  import Information from "../static/documents/information.json";
   export default {
     name: "navbar",
     data() {
       return {
+        information:Information,
         isExpanded: false,
         svg:ShieldSVG
       }
