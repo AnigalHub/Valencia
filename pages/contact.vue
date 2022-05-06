@@ -4,7 +4,7 @@
       <h1>{{name_page}}</h1>
       <b-row class="important_row">
         <b-col>
-          <h2>Частное охранное предприятие «{{information.name_company}}»</h2>
+          <h2>Частное охранное предприятие "{{information.name_company}}"</h2>
           <div class="flex-container">
             <b-row v-for="company_information in CompanyInformation" :key="information.index">
               <b-col cols="1">
