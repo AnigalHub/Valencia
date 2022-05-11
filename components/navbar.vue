@@ -19,7 +19,6 @@
       <b-collapse id="navbar-toggle-collapse" class="justify-content-center" is-nav v-model="isExpanded">
         <b-navbar-nav>
           <b-nav-item to="/company" active-class="nav-link-active">О нас</b-nav-item>
-          <b-nav-item active-class="nav-link-active">
           <b-dropdown text="Услуги" class="menu" :class="{'nav-link-active': isServicesActive} ">
             <b-dropdown-item to="/services/guard_of_organizations/" class="menu1" active-class="nav-link-active">Охрана организаций
               <span class="menu_org">
@@ -29,22 +28,21 @@
               </span>
             </b-dropdown-item>
             <b-dropdown-item to="/services/object_guard/" class="menu2" active-class="nav-link-active">Охрана объектов
-              <div class="menu_obj">
+              <span class="menu_obj">
                 <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities" active-class="nav-link-active">Охрана промышленных объектов</b-dropdown-item>
                 <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities" active-class="nav-link-active">Охрана объектов транспорта</b-dropdown-item>
-              </div>
+              </span>
             </b-dropdown-item>
              <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3" active-class="nav-link-active">Охрана недвижимости
-               <div class="menu_state">
+               <span class="menu_state">
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects" active-class="nav-link-active">Охрана коммерческих объектов</b-dropdown-item>
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property" active-class="nav-link-active">Охрана частных объектов</b-dropdown-item>
-               </div>
-              </b-dropdown-item>
+               </span>
+             </b-dropdown-item>
               <b-dropdown-item to="/services/bodyguard" active-class="nav-link-active">Личная охрана</b-dropdown-item>
               <b-dropdown-item to="/services/guard_of_events" active-class="nav-link-active">Охрана мероприятий </b-dropdown-item>
               <b-dropdown-item to="/services/cargo_escort" active-class="nav-link-active">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
-          </b-nav-item>
           <b-nav-item to="/tariffs" active-class="nav-link-active">Тарифы</b-nav-item>
           <b-nav-item to="/technical_means" active-class="nav-link-active">Технические средства</b-nav-item>
           <b-nav-item to="/special_equipment" active-class="nav-link-active">Спецсредства</b-nav-item>
@@ -81,6 +79,16 @@
   /*вид меню на большом экране (отступы)*/
   .navbar-expand-xl .navbar-collapse {margin-left: 0;}
   #Nav{
+    .navbar-nav{
+      width: 100% !important;
+    }
+    .dropdown{
+      padding: 0.15rem .5rem 0 !important;
+    }
+    .nav-item{
+      padding: 0 .5%;
+      height: 30px !important;
+    }
     /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
     padding: 0 !important;
     background: black;
@@ -146,7 +154,9 @@
       border: none !important;
     }
     /*кнопка "Услуги" (пишем свои стили - переписываем btn)*/
-    .dropdown-toggle{letter-spacing: -.8px;}
+    .dropdown-toggle{
+      letter-spacing: -.8px;
+    }
     /*выпадающий блок при нажатии на "Услуги" (dropdown)*/
     .dropdown-menu {
       padding: 0 !important;
@@ -162,7 +172,7 @@
       &:hover{background: #dce4ee;}
     }
     /*все кнопки, которые находятся в dropdown - в том числе и подпункты*/
-    .dropdown-item,.menu_org,.menu_obj,.menu_state{background: #c5c8ce !important;}
+    .dropdown-item,.menu_org,.menu_obj,.menu_state{background: black !important;}
     /*блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)*/
     .menu_org{top: -.35% !important;}
     /*блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)*/
