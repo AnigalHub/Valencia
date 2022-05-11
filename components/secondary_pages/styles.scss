@@ -12,6 +12,7 @@ $percent100:100%;
 $fontWeight600:600;
 $textCenter:center;
 $uppercase:uppercase;
+$none:none;
 $zero: 0;
 /*контейнер контента - на весь экран*/
 .container-fluid{
@@ -60,7 +61,7 @@ $zero: 0;
 .emphasized{
   color: $colorBodyText;
   font-weight: $fontWeight600 !important;
-  text-decoration: none !important;
+  text-decoration: $none !important;
 }
 /*картинки (общие стили)*/
 img{height: auto;}
@@ -151,13 +152,13 @@ h6{
   }
   /*как выглядит список везде (стили отключаем, сдвигаем)*/
   ul{
-    list-style-type: none !important;
+    list-style-type: $none !important;
     margin-left: -2%;
   }
   /*как выглядит список списка (цвет,тень,отступы) - используется везде*/
   ul ul li:before {
     color: $colorBodyText !important;
-    text-shadow: none;
+    text-shadow: $none;
     margin-left: 2%;
   }
 }
@@ -183,7 +184,7 @@ input {
 #Landing_page{
   background: $backgroundPage;
   /*картинки на главной странице*/
-  img{border: none;}
+  img{border: $none;}
   /*заголовки и текст на главной странице*/
   h2,.text_Landing_page{filter: contrast(140%);}
   /*заголовок на главной странице (названия компонентов)*/
@@ -262,11 +263,11 @@ input {
     /*параметры сетки бутстрап*/
     .col{padding: $zero !important;}
     /*мобильная версия*/
-    .mobile_version{display: none;}
+    .mobile_version{display: $none;}
   }
   /*компонент "Преимущества" - 6 блоков с svg и текстом*/
   #Advantages{
-    a:hover{text-decoration: none !important;}
+    a:hover{text-decoration: $none !important;}
     /*высота компонента*/
     height: 15rem;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
@@ -434,7 +435,7 @@ input {
       letter-spacing: 1px;
       /*при наведении*/
       &:hover{
-        text-decoration: none;
+        text-decoration: $none;
         background: rgba(255, 255, 255, 0.18);
       }
     }
@@ -453,7 +454,7 @@ input {
     padding: $zero $zero 2% $zero;
     /*карусель для мобильной версии*/
     #carousel_mobile{
-      display: none;
+      display: $none;
       padding: $zero 8.5%;
     }
     /*карусель для большой версии*/
@@ -615,14 +616,14 @@ input {
   /*таблица*/
   table {
     background: $shadeOfBlack;
-    border: none !important;
+    border: $none !important;
     border-collapse: collapse;
     margin-bottom: $zero !important;
     /*заголовки таблицы*/
     thead th {
       color: $colorSelection;
       font-weight: 700 !important;
-      border-bottom: none !important;
+      border-bottom: $none !important;
     }
     /*ячейки таблицы, заголовки таблицы*/
     td,th {
@@ -648,7 +649,7 @@ input {
     /*контейнер контента*/
     .container{padding: $zero !important;}
     /*заголовок , описание типа тарифа, картинка*/
-    h1,p,img{display: none !important;}
+    h1,p,img{display: $none !important;}
   }
   /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
   .second_img{
@@ -666,7 +667,7 @@ input {
   /*заголовок (разновидности)*/
   h6{text-align: $textCenter;}
   /*ссылки при наведении*/
-  a:hover{text-decoration: none !important;}
+  a:hover{text-decoration: $none !important;}
   /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
   .flex-container > .beautiful_block {
     width: 48%;
@@ -692,8 +693,8 @@ input {
     ul {margin-top: 5%;}
     /*последний блок*/
     &:last-child {
-      box-shadow: none;
-      border: none;
+      box-shadow: $none;
+      border: $none;
       padding: $zero;
       /*картинка*/
       img {
@@ -824,8 +825,8 @@ input {
     width: 60px;
     height: 60px;
     /*стили цветов для svg*/
-    .color_inside{fill: none;}
-    .color_shadow{fill:none;}
+    .color_inside{fill: $none;}
+    .color_shadow{fill:$none;}
     .outline{
       fill: $colorSelection;
       stroke: $colorBodyText;
@@ -1014,7 +1015,7 @@ input {
       height: auto;
       background: url(../../static/Landing_page/Home/background_1.jpg) $percent100 $percent100 no-repeat !important ;
       background-size: $percent100 $percent100 !important;
-      animation: none;
+      animation: $none;
       /*название чопа*/
       .title_guard{
         padding: 4.5% $zero $zero;
@@ -1040,7 +1041,7 @@ input {
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*большая версия*/
-      .desktop_version{display: none;}
+      .desktop_version{display: $none;}
       /*мобильная версия*/
       .mobile_version{display: block;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
@@ -1145,7 +1146,7 @@ input {
         .carousel-item {padding: 2%;}
       }
       /*отключаем большой слайдер*/
-      #carousel_desktop{display: none;}
+      #carousel_desktop{display: $none;}
     }
     /*компонент "Карта"*/
     #Map {
@@ -1162,13 +1163,13 @@ input {
       width: 65%;
     }
     /*место,где находится карта*/
-    .map{box-shadow: none;}
+    .map{box-shadow: $none;}
   }
   /*страница "О нас"*/
   #company{
     /*самая первая картинка на странице "О нас"*/
     .first_img {
-      float: none;
+      float: $none;
       width: 80%;
       margin: $zero 2.5% 3% $zero;
     }
@@ -1198,7 +1199,7 @@ input {
     /*вторая картинка в компоненте "О нас"*/
     .second_img {
       width: 65% !important;
-      float: none !important;
+      float: $none !important;
     }
     /*этапы работы*/
     .stage{
@@ -1234,7 +1235,7 @@ input {
       margin: $zero $zero 2% $zero;
       /*картинки страницы "Тарифы"*/
       img{
-        float: none;
+        float: $none;
         width: 45%;
         margin: 2% auto $zero;
       }
@@ -1257,19 +1258,19 @@ input {
   .services {
     /*первая картинка на каждой странице "Охрана ...."*/
     .first_img {
-      float: none;
+      float: $none;
       width: 80%;
       margin: $zero 2% 2% $zero;
     }
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{
-      float: none;
+      float: $none;
       width: 70%;
       margin: $zero $zero 0.5%;
     }
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .third_img{
-      float: none;
+      float: $none;
       width: 70%;
       margin: $zero $zero .5% $zero;
     }
@@ -1311,7 +1312,7 @@ input {
       /*как выглядит список (сдвигаем)*/
       ul {margin-top: 3%;}
       /*последний блок*/
-      &:last-child{display: none;}
+      &:last-child{display: $none;}
     }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
@@ -1327,7 +1328,7 @@ input {
     /*картинка*/
     .second_img{
       width: 70%;
-      float: none;
+      float: $none;
       margin: $zero $zero 0.5%;
     }
   }
@@ -1370,7 +1371,7 @@ input {
   #special_equipment{
     /*первая картинка*/
     .first_img{
-      float: none;
+      float: $none;
       width: 80%;
       margin: 3% 3.5% 3% 0.8%;
     }
@@ -1513,7 +1514,7 @@ input {
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*большая версия*/
-      .desktop_version{display: none;}
+      .desktop_version{display: $none;}
       /*мобильная версия*/
       .mobile_version{display: block;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
@@ -1617,7 +1618,7 @@ input {
         .carousel-item {padding: 2%;}
       }
       /*отключаем большой слайдер*/
-      #carousel_desktop{display: none;}
+      #carousel_desktop{display: $none;}
     }
     /*компонент "Карта"*/
     #Map {
@@ -1755,7 +1756,7 @@ input {
       /*как выглядит список (сдвигаем)*/
       ul {margin-top: 3%;}
       /*последний блок*/
-      &:last-child{display: none;}
+      &:last-child{display: $none;}
     }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
@@ -1929,7 +1930,7 @@ input {
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*большая версия*/
-      .desktop_version{display: none;}
+      .desktop_version{display: $none;}
       /*мобильная версия*/
       .mobile_version{display: block;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
@@ -2117,7 +2118,7 @@ input {
   /*страница "Охрана организаций"*/
   #guard_of_organizations{
     /*последний блок*/
-    .beautiful_block:last-child{display: none;}
+    .beautiful_block:last-child{display: $none;}
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
   "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
