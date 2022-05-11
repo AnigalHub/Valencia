@@ -83,9 +83,9 @@
   #Nav{
     /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
     padding: 0 !important;
-    background: #dce4ee;
+    background: black;
     box-shadow: 13px 0 18px -6px #000000;
-    .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: black;}
+    .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #a2a2a3;}
     /*контейнер, в котором находится весь контент меню*/
     .container {padding: 0 !important;}
     /*блок под логотип(svg, название компании, что за компания(чоп))*/
