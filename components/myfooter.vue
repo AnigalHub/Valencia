@@ -56,7 +56,7 @@
   /*компонент Footer*/
   #Myfooter{
     padding: 2% 0;
-    background: #05081a;
+    background: black;
     /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
     .flex-container > div {
       width: 20%;
@@ -64,7 +64,6 @@
       color: white !important;
       text-align: center;
       letter-spacing: -.25px;
-      background: #05081a;
       font-weight: 400;
       /*ссылки*/
       a{display: block;}
