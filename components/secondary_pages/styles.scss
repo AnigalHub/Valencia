@@ -9,6 +9,8 @@ $shadeOfWhite: white;
 $shade_1:#e6e686;
 $shade_2:#575731;
 $imgWidth100percent:100%;
+$fontWeight600:600;
+$textCenter:center;
 /*контейнер контента - на весь экран*/
 .container-fluid{
   padding-left: 0 !important;
@@ -40,7 +42,6 @@ $imgWidth100percent:100%;
 .text,a{
   font-family: $fontText;
   color: $colorBodyText;
-  font-weight: 400;
   font-size: 1.12rem;
   line-height: 1.4rem;
 }
@@ -49,14 +50,14 @@ $imgWidth100percent:100%;
 /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
 .text_descr{
   font-family: $fontText;
-  color: $colorBodyText;
-  font-size: .85rem !important;
+  color: $colorSelection;
+  font-size: 1rem !important;
   line-height: 1.4rem !important;
 }
 /*выделение фраз в тексте - для красоты*/
 .emphasized{
   color: $colorBodyText;
-  font-weight: 800 !important;
+  font-weight: $fontWeight600 !important;
   text-decoration: none !important;
 }
 /*картинки (общие стили)*/
@@ -71,7 +72,7 @@ h1{
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-h1,h2,h3{font-weight: 600 !important;}
+h1,h2,h3,h6{font-weight: $fontWeight600 !important;}
 h2{text-shadow: 0 1px 3px $colorBodyText;}
 h1{color: $colorSelection; }
 h3{color: $shadeOfWhite}
@@ -82,7 +83,7 @@ h2,h3{
 }
 h3{
   line-height: 1.6rem;
-  text-align: center;
+  text-align:$textCenter;
   cursor: default;
 }
 h4{
@@ -92,12 +93,10 @@ h4{
   margin-bottom: 0;
 }
 h6{
-  font-weight: 600 !important;
   font-size: 1.2rem;
   line-height: 1.6rem;
   text-decoration: underline;
-  text-decoration-color:  $colorSelection;
-  text-decoration-thickness: .2rem;
+  text-decoration-color: $colorSelection;
   padding: .8% 0;
 }
 /*контейнер, который включает в себя повтор блоков*/
@@ -112,7 +111,7 @@ h6{
 /*названия в красивых блоках*/
 .beautiful_block .emphasized{
   text-transform: uppercase;
-  text-align: center;
+  text-align: $textCenter;
   color: $colorSelection;
   padding: .65% 0 !important;
 }
@@ -191,11 +190,10 @@ input {
   h2{
     color: $shadeOfWhite;
     filter: contrast(100%) brightness(118%);
-    font-weight: 400 !important;
     font-size: 2.4rem;
     cursor: default;
     text-shadow: 1.5px 1.5px 1.5px $shadeOfBlack;
-    text-align: center;
+    text-align: $textCenter;
     letter-spacing: 0.5px;
     background: transparent;
   }
@@ -207,8 +205,7 @@ input {
   /*текст на главной странице,слоган чопа*/
   .text_Landing_page,#Home .slogan{
     font-family: $fontText;
-    font-weight: 400;
-    text-align: center;
+    text-align: $textCenter;
   }
   /*текст на главной странице,слоган чопа, номер телефона в компоненте обратная связь*/
   .text_Landing_page,#Home .slogan, #Feedback .call_telephone{
@@ -224,7 +221,7 @@ input {
   }
   /*название чопа в первом компоненте,текст на главной странице*/
    #Home .title_guard,#Advantages .text_Landing_page{
-     font-weight: 600;
+     font-weight: $fontWeight600;
    }
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
@@ -252,7 +249,7 @@ input {
       cursor: default;
       font-size: 2.9rem;
       letter-spacing: 1px;
-      text-align: center;
+      text-align: $textCenter;
       line-height: 4rem;
     }
     /*слоган чопа*/
@@ -281,7 +278,7 @@ input {
       line-height: 1.4rem;
       height: 100%;
       display: flex;
-      align-items: center;
+      align-items: $textCenter;
     }
     /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
     .flex-container {
@@ -354,9 +351,9 @@ input {
     /*цифры*/
     .number{
       font-size: 5.25rem;
-      text-align: center;
+      text-align: $textCenter;
       font-family: $fontNumber;
-      color: $colorSelection;;
+      color: $colorSelection;
       transform: scale(1.35);
       letter-spacing: -2.5px;
       filter: contrast(100%) brightness(125%);
@@ -435,7 +432,7 @@ input {
       font-family: $fontNumber;
       font-size: 3.8rem;
       display: block;
-      text-align: center;
+      text-align:$textCenter;
       padding: 3.5% 0;
       letter-spacing: 1px;
       /*при наведении*/
@@ -499,7 +496,7 @@ input {
   /*кнопки*/
   button{
     font-family: $fontText;
-    font-weight: 600 !important;
+    font-weight: $fontWeight600 !important;
     display: block;
     margin: 1% auto;
     border-radius: 5px;
@@ -558,7 +555,7 @@ input {
     .emphasized{margin-bottom: 0.5rem !important;}
     /*ссылка*/
     a{
-      font-weight: 600;
+      font-weight: $fontWeight600;
       /*при наведении*/
       &:hover{
         text-decoration: underline;
@@ -585,7 +582,7 @@ input {
     .col-1,.col-2{
       padding: 0 !important;
       display: flex;
-      align-items: center
+      align-items: $textCenter;
     }
     /*блок под каждый этап*/
     div{padding-bottom: 0.25%;}
@@ -615,7 +612,7 @@ input {
     /*текст под картинкой - описание каждого типа тарифа*/
     p{
       padding: 1%;
-      text-align: center;
+      text-align: $textCenter;
     }
   }
   /*таблица*/
@@ -635,7 +632,7 @@ input {
       vertical-align: middle !important;
       padding: 0.6rem 0.35rem;
       border: 1px solid #4c4b4b;
-      text-align: center;
+      text-align: $textCenter;
     }
     /*ячейки таблицы*/
     tr td{
@@ -670,7 +667,7 @@ input {
 /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
 .services_with_types{
   /*заголовок (разновидности)*/
-  h6{text-align: center;}
+  h6{text-align: $textCenter;}
   /*ссылки при наведении*/
   a:hover{text-decoration: none !important;}
   /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
@@ -793,7 +790,7 @@ input {
     /*выделение фраз в тексте - для красоты*/
     .emphasized{
       padding: 1%;
-      text-align: center;
+      text-align:$textCenter;
       margin-bottom: 0.5rem !important;
     }
   }
@@ -812,7 +809,7 @@ input {
   /*параметры сетки бутстрап (информация (название информации и информация))*/
   .col .col{
     display: flex;
-    align-items: center
+    align-items: $textCenter;
   }
   /*контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)*/
   .flex-container{margin-top: 2.5rem;}
@@ -1029,7 +1026,7 @@ input {
       }
       /*слоган*/
       .slogan{
-        font-weight: 600;
+        font-weight:$fontWeight600;
         font-size: 1rem;
         line-height: 1.2rem;
         text-shadow: .75px .75px 0 $colorBodyText, .5px .5px .5px $colorBodyText;
@@ -1505,7 +1502,7 @@ input {
         transform: scaleY(1.05);
         font-size: .6rem;
         line-height: 1rem;
-        font-weight: 600;
+        font-weight: $fontWeight600;
         text-shadow: .5px .5px 0 $colorBodyText, .25px .25px .25px $colorBodyText;
       }
       /*картинка с охранником*/
