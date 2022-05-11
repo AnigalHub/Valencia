@@ -5,7 +5,7 @@
       <p class="text">За время существования частного охранного предприятия <span class="emphasized"> "{{information.name_company}}" </span> были заключены долгосрочные и надежные отношения с различными организациями: государственными учреждениями (детские сады, школы, вузы), бизнес-центрами, ритейлерами, торговыми центрами, букмекерскими конторами, строительными компаниями и т.д.</p>
       <h6>Предприятия, которые выбрали наши услуги:</h6>
       <div class="flex-container">
-        <div v-for="client in Clients" :key="client.index">
+        <div v-for="client in Clients" class="beautiful_block" :key="client.index">
           <img :src="client.img_src" :alt="client.img_alt"/>
           <p class="text emphasized">{{client.name_client}}</p>
         </div>
