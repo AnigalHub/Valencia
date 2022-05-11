@@ -8,7 +8,7 @@ $shadeOfBlack: black;
 $shadeOfWhite: white;
 $shade_1:#e6e686;
 $shade_2:#575731;
-$imgWidth100percent:100%;
+$percent100:100%;
 $fontWeight600:600;
 $textCenter:center;
 $zero: 0;
@@ -190,7 +190,7 @@ input {
   /*заголовок на главной странице (названия компонентов)*/
   h2{
     color: $shadeOfWhite;
-    filter: contrast(100%) brightness(118%);
+    filter: contrast($percent100) brightness(118%);
     font-size: 2.4rem;
     cursor: default;
     text-shadow: 1.5px 1.5px 1.5px $shadeOfBlack;
@@ -227,14 +227,14 @@ input {
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
-    background: url(../../static/Landing_page/Home/background_1.jpg) 100% 100% no-repeat;
-    background-size: 100% 100%;
+    background: url(../../static/Landing_page/Home/background_1.jpg) $percent100 $percent100 no-repeat;
+    background-size: $percent100 $percent100;
     animation: anim 30s  ease-out infinite; /*время смены фона и эффект*/
     /*смена фона*/
     @keyframes anim {
-      0% {background: url(../../static/Landing_page/Home/background_1.jpg) no-repeat;background-size: 100% 100% ;}
-      33%{background: url(../../static/Landing_page/Home/background_2.jpg) no-repeat;background-size: 100% 100%;}
-      67%{background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: 100% 100% ;}
+      0% {background: url(../../static/Landing_page/Home/background_1.jpg) no-repeat;background-size: $percent100 $percent100 ;}
+      33%{background: url(../../static/Landing_page/Home/background_2.jpg) no-repeat;background-size: $percent100 $percent100;}
+      67%{background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: $percent100 $percent100 ;}
     }
     /*картинка с охранником*/
     img{
@@ -277,7 +277,7 @@ input {
       transform: scale(1, 1.1);
       font-size: 1.2rem;
       line-height: 1.4rem;
-      height: 100%;
+      height: $percent100;
       display: flex;
       align-items: $textCenter;
     }
@@ -326,12 +326,12 @@ input {
       width: 30.5%;
       margin: $zero $zero 2% 2.5%;
       box-shadow: 8px 8px 8px -8px rgb(77 81 83 / 60%);
-      filter: contrast(100%) !important;
+      filter: contrast($percent100) !important;
     }
     .btn-secondary{border-color: transparent !important;}
     /*картинки (изменение/добавление стилей касательно только этого компонента (Услуги))*/
     img{
-      width: $imgWidth100percent;
+      width: $percent100;
       filter: contrast(105%) brightness(105%) !important;
     }
     /*кнопки*/
@@ -357,7 +357,7 @@ input {
       color: $colorSelection;
       transform: scale(1.35);
       letter-spacing: -2.5px;
-      filter: contrast(100%) brightness(125%);
+      filter: contrast($percent100) brightness(125%);
     }
     /*контейнер с цифрами и текстом*/
     .flex-container{
@@ -374,7 +374,7 @@ input {
   #Type{
     /*общие стили на весь компонент (Type) в целом*/
     display: flex;
-    max-width: 100%;
+    max-width: $percent100;
     /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
     h2{
       font-size: 2rem !important;
@@ -386,15 +386,15 @@ input {
     }
     /*картинки*/
     img{
-      width: $imgWidth100percent;
+      width: $percent100;
       height: min-content;
       min-height: 20vh;
-      max-height: 100%;
+      max-height: $percent100;
     }
     /*блок с картинками*/
     .row{
       display: flex;
-      min-width: 100%;
+      min-width: $percent100;
       height: auto;
       /*параметры сетки бутстрап (каждая картинка по отдельности)*/
       .col{
@@ -466,10 +466,10 @@ input {
       .row{margin: 1.5% $zero 4% !important;}
     }
    /*cсылка*/
-    a{filter: contrast(100%) !important;}
+    a{filter: contrast($percent100) !important;}
     /*картинки (добавление/изменение стилей - касательно только данного компонента (Наши клиенты)*/
     img{
-      width: $imgWidth100percent;
+      width: $percent100;
     }
   }
   /*компонент "Карта"*/
@@ -479,7 +479,7 @@ input {
       filter: opacity(75%) brightness(95%) contrast(110%);
       min-height: 400px;
       height: auto;
-      width:100% !important;
+      width:$percent100 !important;
       border:0;
     }
   }
@@ -683,7 +683,7 @@ input {
     .col-5 {
       padding-left: 20px !important;
       /*картинка*/
-      img {width: $imgWidth100percent;}
+      img {width: $percent100;}
     }
     ul{margin-left: -6%;}
   }
@@ -701,8 +701,8 @@ input {
       padding: $zero;
       /*картинка*/
       img {
-        width: $imgWidth100percent;
-        height: 100%;
+        width: $percent100;
+        height: $percent100;
       }
     }
   }
@@ -725,7 +725,7 @@ input {
 #technical_means{
   /*картинки*/
   img{
-    width: $imgWidth100percent;
+    width: $percent100;
     margin: 2% 2% 0.8% 0.8%;
   }
   /*блок со списком и картинкой*/
@@ -786,7 +786,7 @@ input {
     &:hover {background-color: rgba(250, 250, 255, .65) !important;}
     /*картинка*/
     img{
-      width: $imgWidth100percent;
+      width: $percent100;
     }
     /*выделение фраз в тексте - для красоты*/
     .emphasized{
@@ -851,7 +851,7 @@ input {
       filter: opacity(85%) brightness(92%);
       min-height: 500px;
       height: auto;
-      width: 100% !important;
+      width: $percent100 !important;
       border:$zero;
     }
   }
@@ -1016,8 +1016,8 @@ input {
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       height: auto;
-      background: url(../../static/Landing_page/Home/background_1.jpg) 100% 100% no-repeat !important ;
-      background-size: 100% 100% !important;
+      background: url(../../static/Landing_page/Home/background_1.jpg) $percent100 $percent100 no-repeat !important ;
+      background-size: $percent100 $percent100 !important;
       animation: none;
       /*название чопа*/
       .title_guard{
@@ -1035,7 +1035,7 @@ input {
       /*картинка с охранником*/
       img{
         width: 225%;
-        height: 100%;
+        height: $percent100;
         margin-left: -40%;
       }
     }
@@ -1057,7 +1057,7 @@ input {
         height: 250px;
         /*стили на одинаковые блоки контейнера*/
         & > div {
-          width: 100%;
+          width: $percent100;
           padding: 1.5%;
           margin: 3.5% $zero;
         }
@@ -1126,8 +1126,8 @@ input {
         flex-direction: column-reverse;
         /*место, где находится форма заявки (обратной связи)*/
         .col-6{
-          flex: $zero $zero 100% !important;
-          max-width: 100% !important;
+          flex: $zero $zero $percent100 !important;
+          max-width: $percent100 !important;
           padding: $zero 2% !important;
         }
         /*место с текстом, заголовком и телефоном*/
@@ -1180,7 +1180,7 @@ input {
     ul{margin-left: -10% !important;}
     /*блоки принципов*/
     .flex-container > div {
-      width: 100%;
+      width: $percent100;
       margin: $zero 0.5% 1.5% 0.5% !important;
       /*сетка бутстрап (место под svg)*/
       .col-1{padding: $zero !important;}
@@ -1234,7 +1234,7 @@ input {
   #tariffs{
     /*типы тарифов*/
     .flex-container > .type{
-      width: 100%;
+      width: $percent100;
       margin: $zero $zero 2% $zero;
       /*картинки страницы "Тарифы"*/
       img{
@@ -1283,7 +1283,7 @@ input {
     /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
     .flex-container > .beautiful_block {
       height: auto !important;
-      width: 100%;
+      width: $percent100;
       margin: $zero $zero 2%;
       /*как выглядит список (сдвигаем)*/
       ul {margin-left: -5%;}
@@ -1295,8 +1295,8 @@ input {
       flex-direction: column;
       /*параметры сетки бутстрап (картинка)*/
       .col-5{
-        flex: $zero $zero 100% !important;
-        max-width: 100% !important;
+        flex: $zero $zero $percent100 !important;
+        max-width: $percent100 !important;
       }
       /*параметры сетки бутстрап (перечисление охран)*/
       .col{padding: $zero 10px !important;}
@@ -1339,7 +1339,7 @@ input {
   #technical_means{
     /*блок со списком и картинкой*/
     .flex-container > div {
-      width: 100%;
+      width: $percent100;
       padding: 0.8%;
       margin: 2% 1% !important;
       /*абзац*/
@@ -1350,8 +1350,8 @@ input {
       flex-direction: column;
       /*прааметры сетки бутстрап (картинки)*/
       .col-5{
-        flex: $zero $zero 100% !important;
-        max-width: 100% !important;
+        flex: $zero $zero $percent100 !important;
+        max-width: $percent100 !important;
       }
       /*прааметры сетки бутстрап (список)*/
       .col{padding: $zero !important;}
@@ -1416,7 +1416,7 @@ input {
     /*контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)*/
     .flex-container {margin-top: 1rem;}
     /*блок с информацикй и формой заявки (обратной связи), отдельные блоки с информацией (svg, название информации, информация)*/
-    .flex-container > .row{width: 100%;}
+    .flex-container > .row{width: $percent100;}
     /*svg страницы "Контакты"*/
     svg{
       width: 45px;
@@ -1427,8 +1427,8 @@ input {
     /*параметры сетки бутстрап (форма заявки - обратной связи)*/
     .col-5{
       padding: $zero 5px !important;
-      flex: $zero $zero 100% !important;
-      max-width: 100% !important;
+      flex: $zero $zero $percent100 !important;
+      max-width: $percent100 !important;
     }
     /*место, где находится форма заявки (обратной связи)*/
     .place_form{margin-top: 2%;}
@@ -1531,7 +1531,7 @@ input {
         margin: 6% 1% 2% 3%;
         /*стили на одинаковые блоки контейнера*/
         & > div {
-          width: 100%;
+          width: $percent100;
           padding: 1.5%;
           margin: 3.5% $zero;
         }
@@ -1597,8 +1597,8 @@ input {
         .col{padding: $zero !important;}
         /*параметры сетки бутстрап (форма заявки)*/
         .col-6{
-          flex: $zero $zero 100% !important;
-          max-width: 100% !important;
+          flex: $zero $zero $percent100 !important;
+          max-width: $percent100 !important;
           padding: $zero 8% !important;
         }
       }
@@ -1641,7 +1641,7 @@ input {
   #company{
     /*блоки принципов*/
     .flex-container > div {
-      width: 100%;
+      width: $percent100;
       margin: $zero 0.5% 1.5% 0.5% !important;
       /*сетка бутстрап (место под svg)*/
       .col-1{padding: $zero !important;}
@@ -1689,7 +1689,7 @@ input {
     h3{margin: $zero;}
     /*типы тарифов*/
     .flex-container > .type{
-      width: 100%;
+      width: $percent100;
       margin: $zero 1% 2%;
       /*картинки страницы "Тарифы"*/
       img{
@@ -1736,7 +1736,7 @@ input {
   .services_with_types{
     /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
     .flex-container > .beautiful_block {
-      width: 100%;
+      width: $percent100;
       height: auto !important;
       margin: $zero $zero 2%;
       /*название типа охраны*/
@@ -1785,8 +1785,8 @@ input {
       flex-direction: column;
       /*прааметры сетки бутстрап (картинки)*/
       .col-5{
-        flex: $zero $zero 100% !important;
-        max-width: 100% !important;
+        flex: $zero $zero $percent100 !important;
+        max-width: $percent100 !important;
       }
       /*прааметры сетки бутстрап (список)*/
       .col{padding: $zero !important;}
@@ -1849,8 +1849,8 @@ input {
     /*параметры сетки бутстрап (форма заявки - обратной связи)*/
     .col-5{
       padding:$zero 5px !important;
-      flex: $zero $zero 100% !important;
-      max-width: 100% !important;
+      flex: $zero $zero $percent100 !important;
+      max-width: $percent100 !important;
     }
     /*место, где находится форма заявки (обратной связи)*/
     .place_form{margin-top: 2%;}
@@ -1949,7 +1949,7 @@ input {
         margin-left: 3%;
       }
       /*стили на одинаковые блоки контейнера*/
-      .flex-container > div {width: 100%;}
+      .flex-container > div {width: $percent100;}
       /*общие стили для svg для данного компонента (Преимущества)*/
       svg{
         width: 45px;
@@ -2105,7 +2105,7 @@ input {
   .services_with_types{
     /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
     .flex-container > .beautiful_block {
-      width: 100%;
+      width: $percent100;
       height: auto !important;
       margin: $zero $zero 2%;
       /*название типа охраны*/
@@ -2141,8 +2141,8 @@ input {
       flex-direction: column;
       /*прааметры сетки бутстрап (картинки)*/
       .col-5{
-        flex: $zero $zero 100% !important;
-        max-width: 100% !important;
+        flex: $zero $zero $percent100 !important;
+        max-width: $percent100 !important;
       }
       /*прааметры сетки бутстрап (список)*/
       .col{padding: $zero 10px !important;}
