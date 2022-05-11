@@ -6,7 +6,7 @@
         <b-col>
           <h2>Частное охранное предприятие "{{information.name_company}}"</h2>
           <div class="flex-container">
-            <b-row v-for="company_information in CompanyInformation" :key="information.index">
+            <b-row v-for="(company_information,index) in CompanyInformation" :key="index">
               <b-col cols="1">
                 <component :is="company_information.svg"/>
               </b-col>
