@@ -11,6 +11,7 @@ $shade_2:#575731;
 $percent100:100%;
 $fontWeight600:600;
 $textCenter:center;
+$uppercase:uppercase;
 $zero: 0;
 /*контейнер контента - на весь экран*/
 .container-fluid{
@@ -41,19 +42,19 @@ $zero: 0;
 }
 /*текст на всех страницах (кроме главной)*/
 .text,a{
-  font-family: $fontText;
   color: $colorBodyText;
   font-size: 1.12rem;
-  line-height: 1.4rem;
 }
 /*любой текст (текст,заголочки, ссылки и т.д.)*/
 .text,.text_descr,.emphasized,.page a,#Landing_page a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
 /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
 .text_descr{
-  font-family: $fontText;
   color: $colorSelection;
   font-size: 1rem !important;
-  line-height: 1.4rem !important;
+}
+.text,a,.text_descr{
+  font-family: $fontText;
+  line-height: 1.4rem;
 }
 /*выделение фраз в тексте - для красоты*/
 .emphasized{
@@ -69,12 +70,10 @@ h1{
   padding: 8px $zero;
   margin: $zero $zero 1rem ;
   cursor: default;
-  background: transparent;
-  text-transform: uppercase;
+  text-transform: $uppercase;
   letter-spacing: 2px;
 }
 h1,h2,h3,h6{font-weight: $fontWeight600 !important;}
-h2{text-shadow: $zero 1px 3px $colorBodyText;}
 h1{color: $colorSelection; }
 h3{color: $shadeOfWhite}
 h2,h4,h6{color: $colorBodyText;}
@@ -88,7 +87,7 @@ h3{
   cursor: default;
 }
 h4{
-  font-weight: 800;
+  font-weight: $fontWeight600;
   display: block;
   padding-bottom: 0.5%;
   margin-bottom: $zero;
@@ -111,7 +110,7 @@ h6{
 }
 /*названия в красивых блоках*/
 .beautiful_block .emphasized{
-  text-transform: uppercase;
+  text-transform: $uppercase;
   text-align: $textCenter;
   color: $colorSelection;
   padding: .65% $zero !important;
@@ -127,7 +126,7 @@ h6{
 /*вторая картинка на страницах услуг и "О нас"*/
 .second_img{float: right;}
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
-.block_two{clear: left; text-transform: uppercase;}
+.block_two{clear: left; text-transform: $uppercase;}
 /*общие стили страниц (кроме главной)*/
 .page{
   /*фон*/
@@ -173,7 +172,7 @@ label{
 /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
 .form-control{min-height: 1.5rem;}
 input {
-  font-weight: 800;
+  font-weight: $fontWeight600;
   padding: 25px 15px;
   border: 1px solid $colorBodyText !important;
   margin-bottom: 1%;
@@ -196,7 +195,6 @@ input {
     text-shadow: 1.5px 1.5px 1.5px $shadeOfBlack;
     text-align: $textCenter;
     letter-spacing: 0.5px;
-    background: transparent;
   }
   /*текст на главной странице*/
   .text_Landing_page{
@@ -221,7 +219,7 @@ input {
     color: $shadeOfWhite;
   }
   /*название чопа в первом компоненте,текст на главной странице*/
-   #Home .title_guard,#Advantages .text_Landing_page{
+   #Advantages .text_Landing_page{
      font-weight: $fontWeight600;
    }
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
@@ -229,12 +227,12 @@ input {
     height: auto;
     background: url(../../static/Landing_page/Home/background_1.jpg) $percent100 $percent100 no-repeat;
     background-size: $percent100 $percent100;
-    animation: anim 30s  ease-out infinite; /*время смены фона и эффект*/
+    animation: anim 30s ease-out infinite; /*время смены фона и эффект*/
     /*смена фона*/
     @keyframes anim {
-      0% {background: url(../../static/Landing_page/Home/background_1.jpg) no-repeat;background-size: $percent100 $percent100 ;}
+      0% {background: url(../../static/Landing_page/Home/background_1.jpg) no-repeat;background-size: $percent100 $percent100;}
       33%{background: url(../../static/Landing_page/Home/background_2.jpg) no-repeat;background-size: $percent100 $percent100;}
-      67%{background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: $percent100 $percent100 ;}
+      67%{background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: $percent100 $percent100;}
     }
     /*картинка с охранником*/
     img{
@@ -244,7 +242,6 @@ input {
     }
     /*название чопа*/
     .title_guard{
-      font-weight: 500 !important;
       padding: 2% $zero $zero;
       filter: contrast(125%) brightness(120%);
       cursor: default;
@@ -274,7 +271,6 @@ input {
     height: 15rem;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
     .text_Landing_page{
-      transform: scale(1, 1.1);
       font-size: 1.2rem;
       line-height: 1.4rem;
       height: $percent100;
