@@ -11,10 +11,11 @@ $shade_2:#575731;
 $imgWidth100percent:100%;
 $fontWeight600:600;
 $textCenter:center;
+$zero: 0;
 /*контейнер контента - на весь экран*/
 .container-fluid{
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: $zero !important;
+  padding-right: $zero !important;
 }
 /*контейнер контента - по середине*/
 .container{
@@ -22,7 +23,7 @@ $textCenter:center;
   padding-left: 15px !important;
 }
 /*параметры сетки бутстрап - блок*/
-.row {margin: 0 !important;}
+.row {margin: $zero !important;}
 /*svg в шапке меню*/
 #navbar_svg{
   filter: contrast(115%) brightness(120%);
@@ -65,20 +66,20 @@ img{height: auto;}
 /*заголовки на всех страницах (кроме главной)*/
 h1{
   font-size: 2.2rem;
-  padding: 8px 0;
-  margin: 0 0 1rem ;
+  padding: 8px $zero;
+  margin: $zero $zero 1rem ;
   cursor: default;
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 h1,h2,h3,h6{font-weight: $fontWeight600 !important;}
-h2{text-shadow: 0 1px 3px $colorBodyText;}
+h2{text-shadow: $zero 1px 3px $colorBodyText;}
 h1{color: $colorSelection; }
 h3{color: $shadeOfWhite}
 h2,h4,h6{color: $colorBodyText;}
 h2,h3{
-  padding: 1% 0;
+  padding: 1% $zero;
   margin-bottom: 3%;
 }
 h3{
@@ -90,14 +91,14 @@ h4{
   font-weight: 800;
   display: block;
   padding-bottom: 0.5%;
-  margin-bottom: 0;
+  margin-bottom: $zero;
 }
 h6{
   font-size: 1.2rem;
   line-height: 1.6rem;
   text-decoration: underline;
   text-decoration-color: $colorSelection;
-  padding: .8% 0;
+  padding: .8% $zero;
 }
 /*контейнер, который включает в себя повтор блоков*/
 .flex-container {
@@ -106,14 +107,14 @@ h6{
 }
 /*красивые блоки (используются в видах охран, страницах - "Технические средства","Спецсредства")*/
 .beautiful_block:hover .emphasized{
-  box-shadow: inset 0 4px 2px -3px $shade_1, inset 0 -4px 2px -3px $shade_1, 0 0 3px 0 $shade_2;
+  box-shadow: inset $zero 4px 2px -3px $shade_1, inset $zero -4px 2px -3px $shade_1, $zero $zero 3px $zero $shade_2;
 }
 /*названия в красивых блоках*/
 .beautiful_block .emphasized{
   text-transform: uppercase;
   text-align: $textCenter;
   color: $colorSelection;
-  padding: .65% 0 !important;
+  padding: .65% $zero !important;
 }
 /*первая, вторая картинки на страницах услуг и "О нас"*/
 .first_img,.second_img,.third_img{
@@ -122,7 +123,7 @@ h6{
 /*первая и третья картинки на страницах услуг и "О нас"*/
 .first_img,.third_img{float: left;}
 /*первая картинка на страницах услуг и "О нас"*/
-.first_img{margin: 0 1.5% 0.5% 0;}
+.first_img{margin: $zero 1.5% 0.5% $zero;}
 /*вторая картинка на страницах услуг и "О нас"*/
 .second_img{float: right;}
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
@@ -132,7 +133,7 @@ h6{
   /*фон*/
   background: $backgroundPage;
   filter: brightness(110%);
-  padding: 2.25rem 0;
+  padding: 2.25rem $zero;
   /*список*/
   li{padding-bottom: 0.3%;}
   /*как выглядит список (содержимое,цвет,тень,отступы) - используется везде*/
@@ -142,12 +143,12 @@ h6{
     margin-right: .8%;
     vertical-align: text-bottom;
     color: $colorBodyText;
-    margin-bottom: 0 !important;
+    margin-bottom: $zero !important;
   }
   /*как выглядит список (содержимое,цвет,тень,отступы) - используется в подпунктах охран (к примеру, не в охране)*/
   .import{
     /*объектов, а в охране транспорта/промышленных объектов)*/
-    ul li:before {margin-right: 0 !important;}
+    ul li:before {margin-right: $zero !important;}
   }
   /*как выглядит список везде (стили отключаем, сдвигаем)*/
   ul{
@@ -244,7 +245,7 @@ input {
     /*название чопа*/
     .title_guard{
       font-weight: 500 !important;
-      padding: 2% 0 0;
+      padding: 2% $zero $zero;
       filter: contrast(125%) brightness(120%);
       cursor: default;
       font-size: 2.9rem;
@@ -258,11 +259,11 @@ input {
       line-height: 3.25rem;
       cursor: default;
       filter: contrast(150%);
-      padding: 6.5% 0 3%;
+      padding: 6.5% $zero 3%;
       margin-left: -5%;
     }
     /*параметры сетки бутстрап*/
-    .col{padding: 0 !important;}
+    .col{padding: $zero !important;}
     /*мобильная версия*/
     .mobile_version{display: none;}
   }
@@ -282,12 +283,12 @@ input {
     }
     /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
     .flex-container {
-      margin: 3% 1% 0 -2%;
+      margin: 3% 1% $zero -2%;
       /*стили на одинаковые блоки контейнера*/
       & > div {
         width: 46%;
         padding: 3% 2%;
-        margin: 1.5% 4% 3% 0;
+        margin: 1.5% 4% 3% $zero;
         position: relative;
         float: left;
         /*при наведении*/
@@ -315,15 +316,15 @@ input {
   }
   /*компонент "Услуги" (виды деятельности)*/
   #Services{
-    padding: 3% 0 2.5%;
+    padding: 3% $zero 2.5%;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
-    .text_Landing_page{padding: 2% 0;}
+    .text_Landing_page{padding: 2% $zero;}
     /*абзацы*/
-    p{margin: 0 !important;}
+    p{margin: $zero !important;}
     /*блоки-ссылки с картинками и кнопками*/
     .flex-container > a {
       width: 30.5%;
-      margin: 0 0 2% 2.5%;
+      margin: $zero $zero 2% 2.5%;
       box-shadow: 8px 8px 8px -8px rgb(77 81 83 / 60%);
       filter: contrast(100%) !important;
     }
@@ -335,7 +336,7 @@ input {
     }
     /*кнопки*/
     .btn {
-      padding: 0 !important;
+      padding: $zero !important;
       border-radius: unset !important;
       background-color: $shadeOfBlack !important;
       /*кнопки при наведении*/
@@ -360,7 +361,7 @@ input {
     }
     /*контейнер с цифрами и текстом*/
     .flex-container{
-      margin: 0 8%;
+      margin: $zero 8%;
       /*каждый блок с цифрой и текстом отдельно*/
       & > div{
         width: 20%;
@@ -397,7 +398,7 @@ input {
       height: auto;
       /*параметры сетки бутстрап (каждая картинка по отдельности)*/
       .col{
-        padding: 0 !important;
+        padding: $zero !important;
         filter: contrast(95%) !important;
         /*параметры сетки бутстрап (первая картинка, вторая картинка)*/
         &:first-child,&:nth-child(2){margin-right: .3%;}
@@ -421,10 +422,10 @@ input {
   }
   /*компонент "Обратная связь"*/
   #Feedback{
-    padding: 2% 0;
+    padding: 2% $zero;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)*/
     .text_Landing_page{
-      margin: 2% 0;
+      margin: 2% $zero;
       line-height: 1.8rem;
     }
     /*номер телефона*/
@@ -433,7 +434,7 @@ input {
       font-size: 3.8rem;
       display: block;
       text-align:$textCenter;
-      padding: 3.5% 0;
+      padding: 3.5% $zero;
       letter-spacing: 1px;
       /*при наведении*/
       &:hover{
@@ -446,23 +447,23 @@ input {
       padding: 3.5%;
       border-radius: 5px;
       /*место, где находится форма заявки (обратной связи)*/
-      .col-6{padding: 0 !important;}
+      .col-6{padding: $zero !important;}
       /*место, где находится форма заявки (обратной связи)*/
      // .place_form{background: $shadeOfBlack;}
     }
   }
   /*компонент "Наши клиенты"*/
   #Clients{
-    padding: 0 0 2% 0;
+    padding: $zero $zero 2% $zero;
     /*карусель для мобильной версии*/
     #carousel_mobile{
       display: none;
-      padding: 0 8.5%;
+      padding: $zero 8.5%;
     }
     /*карусель для большой версии*/
     #carousel_desktop{
       /*отступы блоков с картинками*/
-      .row{margin: 1.5% 0 4% !important;}
+      .row{margin: 1.5% $zero 4% !important;}
     }
    /*cсылка*/
     a{filter: contrast(100%) !important;}
@@ -547,7 +548,7 @@ input {
   /*вторая картинка на странице "О нас"*/
   .second_img{
     width: 23%;
-    margin: 0 0 1% 2%;
+    margin: $zero $zero 1% 2%;
   }
   /*этапы работы*/
   .stage{
@@ -564,23 +565,23 @@ input {
     }
     /* сетка бутстрап - пункт - цифры*/
     .col-1 {
-      flex: 0 0 5% !important;
+      flex: $zero $zero 5% !important;
       max-width: 5% !important;
       .emphasized{
         font-size: 2.65rem;
-       //text-shadow: 1px 2px 0 $colorBodyText;
+       //text-shadow: 1px 2px $zero $colorBodyText;
         font-weight: 500 !important;
         color: $colorSelection;
       }
     }
     /*сетка бутстрап - название этапа*/
     .col-2{
-      flex: 0 0 13.5% !important;
+      flex: $zero $zero 13.5% !important;
       max-width: 13.5% !important;
     }
     /*параметры сетки бутстрап (номер этапа, название этапа)*/
     .col-1,.col-2{
-      padding: 0 !important;
+      padding: $zero !important;
       display: flex;
       align-items: $textCenter;
     }
@@ -594,11 +595,11 @@ input {
 #tariffs{
   clear: left;
   /*заголовоки - касательно только для страницы "Тарифы"*/
-  h3{margin: 1% 0}
+  h3{margin: 1% $zero}
   /*типы тарифов*/
   .flex-container > .type{
     width: 31.8%;
-    margin:0 0.75%;
+    margin:$zero 0.75%;
     /*картинки страницы "Тарифы"*/
     img{
       //background: $backgroundPage;
@@ -620,7 +621,7 @@ input {
     background: $shadeOfBlack;
     border: none !important;
     border-collapse: collapse;
-    margin-bottom: 0 !important;
+    margin-bottom: $zero !important;
     /*заголовки таблицы*/
     thead th {
       color: $colorSelection;
@@ -649,19 +650,19 @@ input {
   #tariffs{
     background: transparent;
     /*контейнер контента*/
-    .container{padding: 0 !important;}
+    .container{padding: $zero !important;}
     /*заголовок , описание типа тарифа, картинка*/
     h1,p,img{display: none !important;}
   }
   /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
   .second_img{
     width: 21%;
-    margin: -3% 2% 0.5% 0;
+    margin: -3% 2% 0.5% $zero;
   }
   /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
   .third_img{
     width: 35%;
-    margin: 2% 2% 2% 0;
+    margin: 2% 2% 2% $zero;
   }
 }
 /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
@@ -675,9 +676,9 @@ input {
     width: 48%;
     padding: 0.25%;
     height: 230px;
-    margin: 0 1% 2%;
+    margin: $zero 1% 2%;
     /*параметры сетки бутстрап (перечисление охран)*/
-    .col{padding: 0 5px !important;}
+    .col{padding: $zero 5px !important;}
     /*параметры сетки бутстрап (место с картинкой)*/
     .col-5 {
       padding-left: 20px !important;
@@ -697,7 +698,7 @@ input {
     &:last-child {
       box-shadow: none;
       border: none;
-      padding: 0;
+      padding: $zero;
       /*картинка*/
       img {
         width: $imgWidth100percent;
@@ -712,12 +713,12 @@ input {
 .types_of_guard{
   .row .col{
     margin-left: -.8%;
-    padding: 0 !important;
+    padding: $zero !important;
   }
   /*картинка*/
   .second_img{
     width: 32.5%;
-    margin: -2% 5% 0 1%;
+    margin: -2% 5% $zero 1%;
   }
 }
 /*страница "Технические средства"*/
@@ -754,12 +755,12 @@ input {
       padding: 6%;
       width: 55%;
       display: block;
-      margin: 0 auto;
+      margin: $zero auto;
     }
     /*абзац(текст)*/
     p{
       padding: 3%;
-      margin: 0 !important;
+      margin: $zero !important;
     }
   }
 }
@@ -769,7 +770,7 @@ input {
   .flex-container > img {
     cursor: pointer;
     width: 18%;
-    margin: 0 1% 2%;
+    margin: $zero 1% 2%;
     padding: .15%;
   }
 }
@@ -778,7 +779,7 @@ input {
   /*блоки с картинкой и названием клиента*/
   .flex-container > div {
     width: 30.5%;
-    margin: 0 1.25% 2.5%;
+    margin: $zero 1.25% 2.5%;
     box-shadow: 8px 8px 8px -8px rgba(77, 81, 83, 0.6);
     background-color: rgba(0, 0, 0, .45) !important;
     /*кнопки при наведении*/
@@ -791,7 +792,7 @@ input {
     .emphasized{
       padding: 1%;
       text-align:$textCenter;
-      margin-bottom: 0.5rem !important;
+      margin-bottom: $zero !important;
     }
   }
 }
@@ -800,7 +801,7 @@ input {
   /*заголовок*/
   h2{
     color: $colorBodyText;
-    text-shadow: 0px -1px 0 $colorBodyText;
+    text-shadow: $zero -1px $zero $colorBodyText;
   }
   /*блок с информацикй и формой заявки (обратной связи), отдельные блоки с информацией (svg, название информации, информация)*/
   .important_row{padding-bottom: 4%;}
@@ -851,7 +852,7 @@ input {
       min-height: 500px;
       height: auto;
       width: 100% !important;
-      border:0;
+      border:$zero;
     }
   }
 }
@@ -876,7 +877,7 @@ input {
       .slogan{
         font-size: .85rem !important;
         line-height: 1rem !important;
-        padding: 10% 0 0 5% !important;
+        padding: 10% $zero $zero 5% !important;
       }
       /*картинка с охранником*/
       img{margin-left: -70% !important;}
@@ -912,20 +913,20 @@ input {
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
       /*слоган*/
-      .slogan{padding: 19% 0 8% 19%;}
+      .slogan{padding: 19% $zero 8% 19%;}
       /*картинка с охранником*/
       img{width:316% !important;}
     }
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
-      .container{padding: 0 !important;}
+      .container{padding: $zero !important;}
       /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
       .flex-container {
         height: 230px !important;
         /*стили на одинаковые блоки контейнера*/
         & > div {
           padding: 1% !important;
-          margin: 3% 0 !important;
+          margin: 3% $zero !important;
         }
       }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
@@ -968,7 +969,7 @@ input {
   }
   /*общие стили страниц (кроме главной)*/
   .page{
-    padding: .8rem 0 !important;
+    padding: .8rem $zero !important;
     /*как выглядит список везде (сдвигаем)*/
     ul{margin-left: -10%;}
   }
@@ -988,7 +989,7 @@ input {
   /*метка в форме заявки (обратной связи)*/
   label{
     font-size: 0.8rem;
-    margin-bottom: 0 !important;
+    margin-bottom: $zero !important;
   }
   /*поле ввода в форме заявки (обратной связи) - фраза внутри*/
   .form-control{
@@ -1002,7 +1003,7 @@ input {
     margin-bottom: 1%;
   }
   /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
-  .place_form{margin-top: 0;}
+  .place_form{margin-top: $zero;}
   /*стили для главной страницы*/
   #Landing_page{
     /*заголовок на главной странице (названия компонентов)*/
@@ -1020,7 +1021,7 @@ input {
       animation: none;
       /*название чопа*/
       .title_guard{
-        padding: 4.5% 0 0;
+        padding: 4.5% $zero $zero;
         font-size: 1.15rem;
         line-height: 1.25rem;
       }
@@ -1029,7 +1030,7 @@ input {
         font-weight:$fontWeight600;
         font-size: 1rem;
         line-height: 1.2rem;
-        text-shadow: .75px .75px 0 $colorBodyText, .5px .5px .5px $colorBodyText;
+        text-shadow: .75px .75px $zero $colorBodyText, .5px .5px .5px $colorBodyText;
       }
       /*картинка с охранником*/
       img{
@@ -1039,7 +1040,7 @@ input {
       }
     }
     /*компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили*/
-    #Services, #Feedback{ padding: 6% 0;}
+    #Services, #Feedback{ padding: 6% $zero;}
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*большая версия*/
@@ -1058,38 +1059,38 @@ input {
         & > div {
           width: 100%;
           padding: 1.5%;
-          margin: 3.5% 0;
+          margin: 3.5% $zero;
         }
       }
       /*общие стили для svg для данного компонента (Преимущества)*/
       svg{
         width: 40px;
         height: 40px;
-        margin: 2% 0 0 2%;
+        margin: 2% $zero $zero 2%;
       }
     }
     /*компонент "Услуги" (виды деятельности)*/
     #Services{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
       .text_Landing_page{
-        text-shadow: .5px .5px 0 $colorBodyText, .25px .25px .25px $colorBodyText;
+        text-shadow: .5px .5px $zero $colorBodyText, .25px .25px .25px $colorBodyText;
         height: 2rem;
       }
       /*блоки-ссылки с картинками и кнопками*/
       .flex-container > a {
         width: 47%;
-        margin: 0 1.5% 3%;
+        margin: $zero 1.5% 3%;
       }
     }
     /*компонент "Важные числа"*/
     #Import_numbers{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
-      .text_Landing_page{text-shadow: .2px .2px 0 $colorBodyText, .2px .2px .2px $colorBodyText;}
+      .text_Landing_page{text-shadow: .2px .2px $zero $colorBodyText, .2px .2px .2px $colorBodyText;}
       /*цифры*/
       .number{font-size: 3rem;}
       /*контейнер с цифрами и текстом*/
       .flex-container{
-        margin: 0;
+        margin: $zero;
         /*каждый блок с цифрой и текстом отдельно*/
         & > div{width: 45%;}
       }
@@ -1117,7 +1118,7 @@ input {
     /*компонент "Обратная связь"*/
     #Feedback{
       /*заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)*/
-      h2{margin-bottom: 0}
+      h2{margin-bottom: $zero}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)*/
       .text_Landing_page{line-height: 1.25rem;}
       /*блок - обратная связь с текстом, заголовком и телефоном*/
@@ -1125,12 +1126,12 @@ input {
         flex-direction: column-reverse;
         /*место, где находится форма заявки (обратной связи)*/
         .col-6{
-          flex: 0 0 100% !important;
+          flex: $zero $zero 100% !important;
           max-width: 100% !important;
-          padding: 0 2% !important;
+          padding: $zero 2% !important;
         }
         /*место с текстом, заголовком и телефоном*/
-        .col{padding: 0 !important;}
+        .col{padding: $zero !important;}
       }
       /*номер телефона*/
       .call_telephone{
@@ -1173,19 +1174,19 @@ input {
     .first_img {
       float: none;
       width: 80%;
-      margin: 0 2.5% 3% 0;
+      margin: $zero 2.5% 3% $zero;
     }
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -10% !important;}
     /*блоки принципов*/
     .flex-container > div {
       width: 100%;
-      margin: 0 0.5% 1.5% 0.5% !important;
+      margin: $zero 0.5% 1.5% 0.5% !important;
       /*сетка бутстрап (место под svg)*/
-      .col-1{padding: 0 !important;}
+      .col-1{padding: $zero !important;}
       /*параметры сетки бутстрап (текст и название)*/
       .col{
-        padding: 0 10px !important;
+        padding: $zero 10px !important;
         /*абзац*/
         p{margin-bottom: 0.25rem !important;}
       }
@@ -1211,17 +1212,17 @@ input {
       .row{
         /*номер этапа*/
         .col-1{
-          flex: 0 0 15% !important;
+          flex: $zero $zero 15% !important;
           max-width: 15% !important;
         }
         /*название этапа*/
         .col-2{
-          flex: 0 0 85% !important;
+          flex: $zero $zero 85% !important;
           max-width: 85% !important;
         }
         /*параметры сетки бутстрап (описание этапа)*/
         .col{
-          padding: 0 !important;
+          padding: $zero !important;
           flex-basis: auto !important;
         }
       }
@@ -1234,12 +1235,12 @@ input {
     /*типы тарифов*/
     .flex-container > .type{
       width: 100%;
-      margin: 0 0 2% 0;
+      margin: $zero $zero 2% $zero;
       /*картинки страницы "Тарифы"*/
       img{
         float: none;
         width: 45%;
-        margin: 2% auto 0;
+        margin: 2% auto $zero;
       }
       /*текст под картинкой - описание каждого типа тарифа*/
       p{margin-top: 4%;}
@@ -1262,19 +1263,19 @@ input {
     .first_img {
       float: none;
       width: 80%;
-      margin: 0 2% 2% 0;
+      margin: $zero 2% 2% $zero;
     }
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{
       float: none;
       width: 70%;
-      margin: 0 0 0.5%;
+      margin: $zero $zero 0.5%;
     }
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .third_img{
       float: none;
       width: 70%;
-      margin: 0 0 0.5% 0;
+      margin: $zero $zero .5% $zero;
     }
   }
   /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
@@ -1283,7 +1284,7 @@ input {
     .flex-container > .beautiful_block {
       height: auto !important;
       width: 100%;
-      margin: 0 0 2%;
+      margin: $zero $zero 2%;
       /*как выглядит список (сдвигаем)*/
       ul {margin-left: -5%;}
       /*название типа охраны*/
@@ -1294,15 +1295,15 @@ input {
       flex-direction: column;
       /*параметры сетки бутстрап (картинка)*/
       .col-5{
-        flex: 0 0 100% !important;
+        flex: $zero $zero 100% !important;
         max-width: 100% !important;
       }
       /*параметры сетки бутстрап (перечисление охран)*/
-      .col{padding: 0 10px !important;}
+      .col{padding: $zero 10px !important;}
       /*картинка*/
       img{
         display: block;
-        margin: 0 auto;
+        margin: $zero auto;
         width: 65% !important;
       }
     }
@@ -1325,13 +1326,13 @@ input {
     .row{
       flex-direction: column;
       /*как выглядит список (сдвигаем)*/
-      ul{margin-bottom: 0 !important;}
+      ul{margin-bottom: $zero !important;}
     }
     /*картинка*/
     .second_img{
       width: 70%;
       float: none;
-      margin: 0 0 0.5%;
+      margin: $zero $zero 0.5%;
     }
   }
   /*страница "Технические средства"*/
@@ -1349,11 +1350,11 @@ input {
       flex-direction: column;
       /*прааметры сетки бутстрап (картинки)*/
       .col-5{
-        flex: 0 0 100% !important;
+        flex: $zero $zero 100% !important;
         max-width: 100% !important;
       }
       /*прааметры сетки бутстрап (список)*/
-      .col{padding: 0 !important;}
+      .col{padding: $zero !important;}
       /*картинка*/
       img{
         display: block;
@@ -1364,8 +1365,8 @@ input {
     }
     /*как выглядит список (сдвигаем)*/
     ul {
-      margin-top: 0;
-      margin-left: 0;
+      margin-top: $zero;
+      margin-left: $zero;
       margin-bottom: 1%;
     }
   }
@@ -1392,12 +1393,12 @@ input {
     .flex-container > img {
       width: 30%;
       height: 165px;
-      margin: 0 1.5% 3% 1.5% !important;
+      margin: $zero 1.5% 3% 1.5% !important;
     }
     /*нумерованный список*/
     ol{
       margin-left: -6%;
-      margin-bottom: 0 !important;
+      margin-bottom: $zero !important;
     }
   }
   /*страница "Наши клиенты"*/
@@ -1405,7 +1406,7 @@ input {
     /*блоки с картинкой и названием клиента*/
     .flex-container > div {
       width: 47%;
-      margin: 0 1.5% 4% 1.5%;
+      margin: $zero 1.5% 4% 1.5%;
     }
   }
   /*страница "Контакты"*/
@@ -1425,8 +1426,8 @@ input {
     .col .row .col {padding-left: 30px !important;}
     /*параметры сетки бутстрап (форма заявки - обратной связи)*/
     .col-5{
-      padding: 0 5px !important;
-      flex: 0 0 100% !important;
+      padding: $zero 5px !important;
+      flex: $zero $zero 100% !important;
       max-width: 100% !important;
     }
     /*место, где находится форма заявки (обратной связи)*/
@@ -1436,7 +1437,7 @@ input {
 @media screen and (min-width: 500px) and (max-width: 768px) {
   /*общие стили страниц (кроме главной)*/
   .page{
-    padding: 1.2rem 0 !important;
+    padding: 1.2rem $zero !important;
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -6%;}
   }
@@ -1453,7 +1454,7 @@ input {
   }
   /*заголовки на всех страницах (кроме главной)*/
   h1{
-    padding-left: 0;
+    padding-left: $zero;
     font-size: 1.3rem;
     margin-bottom: 0.2rem;
   }
@@ -1467,7 +1468,7 @@ input {
   /*метка в форме заявки (обратной связи)*/
   label{
     font-size: 0.8rem;
-    margin-bottom: 0 !important;
+    margin-bottom: $zero !important;
   }
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
@@ -1503,7 +1504,7 @@ input {
         font-size: .6rem;
         line-height: 1rem;
         font-weight: $fontWeight600;
-        text-shadow: .5px .5px 0 $colorBodyText, .25px .25px .25px $colorBodyText;
+        text-shadow: .5px .5px $zero $colorBodyText, .25px .25px .25px $colorBodyText;
       }
       /*картинка с охранником*/
       img{
@@ -1512,7 +1513,7 @@ input {
       }
     }
     /*компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили*/
-    #Services, #Feedback{padding: 3.5% 0;}
+    #Services, #Feedback{padding: 3.5% $zero;}
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
       /*большая версия*/
@@ -1532,30 +1533,30 @@ input {
         & > div {
           width: 100%;
           padding: 1.5%;
-          margin: 3.5% 0;
+          margin: 3.5% $zero;
         }
       }
       /*общие стили для svg для данного компонента (Преимущества)*/
       svg{
         width: 40px;
         height: 40px;
-        margin: 2% 0 0 2%;
+        margin: 2% $zero $zero 2%;
       }
     }
     /*компонент "Услуги"(виды деятельности)*/
     #Services{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
-      .text_Landing_page{text-shadow: .5px .5px 0 $colorBodyText, .25px .25px .25px $colorBodyText}
+      .text_Landing_page{text-shadow: .5px .5px $zero $colorBodyText, .25px .25px .25px $colorBodyText}
       /*блоки-ссылки с картинками и кнопками*/
       .flex-container > a {
         width: 47%;
-        margin: 0 1.25% 2.5%;
+        margin: $zero 1.25% 2.5%;
       }
     }
     /*компонент "Важные числа"*/
     #Import_numbers{
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
-      .text_Landing_page{text-shadow: .2px .2px 0 $colorBodyText, .2px .2px .2px $colorBodyText}
+      .text_Landing_page{text-shadow: .2px .2px $zero $colorBodyText, .2px .2px .2px $colorBodyText}
       /*цифры*/
       .number{font-size:3rem;}
       /*каждый блок с цифрой и текстом отдельно*/
@@ -1567,7 +1568,7 @@ input {
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
       h2{
         font-size: 1.05rem !important;
-        left: 0;
+        left: $zero;
         bottom: 23%;
         padding-left: 2% !important;
       }
@@ -1579,26 +1580,26 @@ input {
       }
       /*блок с текстом*/
       .container div{
-        left: 0;
+        left: $zero;
         bottom: 1%;
       }
     }
     /*компонент "Обратная связь"*/
     #Feedback{
       /*заголовок (свяжитесь с нами) - изменение стилей заголовка касательно только данного компонента (Обратная связь)*/
-      h2{margin-bottom: 0}
+      h2{margin-bottom: $zero}
       /*блок с формой заявки (обратной связи) и текстом, телефоном, заголовком*/
       .row{
         flex-direction: column-reverse;
-        margin: 0 3% !important;
+        margin: $zero 3% !important;
         padding: 2% 3.5% 4.5%;
         /*параметры сетки бутстрап (текст,телефон,заголовок)*/
-        .col{padding: 0 !important;}
+        .col{padding: $zero !important;}
         /*параметры сетки бутстрап (форма заявки)*/
         .col-6{
-          flex: 0 0 100% !important;
+          flex: $zero $zero 100% !important;
           max-width: 100% !important;
-          padding: 0 8% !important;
+          padding: $zero 8% !important;
         }
       }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)*/
@@ -1641,11 +1642,11 @@ input {
     /*блоки принципов*/
     .flex-container > div {
       width: 100%;
-      margin: 0 0.5% 1.5% 0.5% !important;
+      margin: $zero 0.5% 1.5% 0.5% !important;
       /*сетка бутстрап (место под svg)*/
-      .col-1{padding: 0 !important;}
+      .col-1{padding: $zero !important;}
       /*сетка бутстрап (место под текст)*/
-      .col{padding: 0 0 0 20px !important;}
+      .col{padding: $zero $zero $zero 20px !important;}
       /*выделение фраз в тексте - для красоты*/
       .emphasized{margin-bottom: 0.25rem !important;}
       /*svg принципов*/
@@ -1660,19 +1661,19 @@ input {
       .row{
         /*номер этапа*/
         .col-1{
-          flex: 0 0 12% !important;
+          flex: $zero $zero 12% !important;
           max-width: 12% !important;
           /*пункт - цифры*/
           .emphasized {font-size: 2rem;}
         }
         /*название этапа*/
         .col-2{
-          flex: 0 0 88% !important;
+          flex: $zero $zero 88% !important;
           max-width: 88% !important;
         }
         /*параметры сетки бутстрап (описание этапа)*/
         .col{
-          padding: 0 !important;
+          padding: $zero !important;
           flex-basis: auto !important;
         }
       }
@@ -1685,16 +1686,16 @@ input {
   /*страница "Тарифы"*/
   #tariffs{
     /*заголовок*/
-    h3{margin: 0;}
+    h3{margin: $zero;}
     /*типы тарифов*/
     .flex-container > .type{
       width: 100%;
-      margin: 0 1% 2%;
+      margin: $zero 1% 2%;
       /*картинки страницы "Тарифы"*/
       img{
         float: left;
         width: 30%;
-        margin: 0 4% 4%;
+        margin: $zero 4% 4%;
       }
       /*текст под картинкой - описание каждого типа тарифа*/
       p{margin-top: 5%;}
@@ -1714,7 +1715,7 @@ input {
   /*страница "О нас",все страницы c "Услуги" - первая картинка на каждой странице*/
   #company .first_img,.services .first_img{
     width: 50%;
-    margin: 0 2.5% 0.5% 0;
+    margin: $zero 2.5% 0.5% $zero;
   }
   /*все страницы c "Услуги"*/
   .services {
@@ -1723,7 +1724,7 @@ input {
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{
       width: 30%;
-      margin: 2% 5% 0 1%;
+      margin: 2% 5% $zero 1%;
     }
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .third_img{
@@ -1737,7 +1738,7 @@ input {
     .flex-container > .beautiful_block {
       width: 100%;
       height: auto !important;
-      margin: 0 0 2%;
+      margin: $zero $zero 2%;
       /*название типа охраны*/
       p{margin-bottom: .8rem !important;}
       /*как выглядит список (сдвигаем)*/
@@ -1746,7 +1747,7 @@ input {
     /*блок с картинкой и списком(перечисление)*/
     .row{
       /*параметры сетки бутстрап (перечисление охран)*/
-      .col{padding: 0 10px !important;}
+      .col{padding: $zero 10px !important;}
       /*картинка*/
       img{margin-bottom: 5%;}
     }
@@ -1769,12 +1770,12 @@ input {
     .row{
       flex-direction: column;
       /*как выглядит список (сдвигаем)*/
-      ul{margin-bottom: 0 !important;}
+      ul{margin-bottom: $zero !important;}
     }
     /*картинка*/
     .second_img{
       width: 40%;
-      margin: 2% 0 0 0.5%;
+      margin: 2% $zero $zero 0.5%;
     }
   }
   /*страница "Технические средства"*/
@@ -1784,11 +1785,11 @@ input {
       flex-direction: column;
       /*прааметры сетки бутстрап (картинки)*/
       .col-5{
-        flex: 0 0 100% !important;
+        flex: $zero $zero 100% !important;
         max-width: 100% !important;
       }
       /*прааметры сетки бутстрап (список)*/
-      .col{padding: 0 !important;}
+      .col{padding: $zero !important;}
       /*картинка*/
       img{
         display: block;
@@ -1816,7 +1817,7 @@ input {
     /*картинки лицензий и благодарностей*/
     .flex-container > img {
       width: 30%;
-      margin: 0 1.2% 2.4%;
+      margin: $zero 1.2% 2.4%;
     }
     /*нумерованный список*/
     ol{
@@ -1829,7 +1830,7 @@ input {
     /*блоки с картинкой и названием клиента*/
     .flex-container > div {
       width: 47%;
-      margin: 0 1.5% 3%;
+      margin: $zero 1.5% 3%;
     }
   }
   /*страница "Контакты"*/
@@ -1837,7 +1838,7 @@ input {
     /*блок с информацикй и формой заявки (обратной связи)*/
     .important_row{flex-direction: column;}
     /*контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)*/
-    .flex-container {margin-top: 0;}
+    .flex-container {margin-top: $zero;}
     /*svg страницы "Контакты"*/
     svg{
       width: 45px;
@@ -1847,8 +1848,8 @@ input {
     .col .row .col {padding-left: 40px !important;}
     /*параметры сетки бутстрап (форма заявки - обратной связи)*/
     .col-5{
-      padding:0 5px !important;
-      flex: 0 0 100% !important;
+      padding:$zero 5px !important;
+      flex: $zero $zero 100% !important;
       max-width: 100% !important;
     }
     /*место, где находится форма заявки (обратной связи)*/
@@ -1858,7 +1859,7 @@ input {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /*общие стили страниц (кроме главной)*/
   .page{
-    padding: 1.5rem 0 !important;
+    padding: 1.5rem $zero !important;
     /*как выглядит список везде (стили отключаем, сдвигаем)*/
     ul{margin-left: -4.5%;}
     /*список*/
@@ -1876,7 +1877,7 @@ input {
   }
   /*заголовки на всех страницах (кроме главной)*/
   h1{
-    padding-left: 0;
+    padding-left: $zero;
     font-size: 1.4rem;
     margin-bottom: 0.2rem;
   }
@@ -1889,7 +1890,7 @@ input {
   /*метка в форме заявки (обратной связи)*/
   label{
     font-size: .85rem;
-    margin-bottom: 0 !important;
+    margin-bottom: $zero !important;
   }
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
@@ -1920,8 +1921,8 @@ input {
       .slogan{
         font-size: 1.5rem;
         line-height: 1.8rem;
-        padding: 4% 0 3%;
-        margin-left: 0;
+        padding: 4% $zero 3%;
+        margin-left: $zero;
       }
       /*картинка с охранником*/
       img{
@@ -1964,7 +1965,7 @@ input {
       .number{font-size:3.5rem;}
       /*контейнер с цифрами и текстом*/
       .flex-container{
-        margin: 0;
+        margin: $zero;
         /*каждый блок с цифрой и текстом отдельно*/
         & > div{margin: 1.5% 2% 0.5%;}
       }
@@ -1976,7 +1977,7 @@ input {
       h2{
         font-size: 1.15rem !important;
         padding-left: 2% !important;
-        left: 0;
+        left: $zero;
       }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)*/
       .text_Landing_page{
@@ -1986,7 +1987,7 @@ input {
       }
       /*стили для места где расположен текст*/
       .container div{
-        left: 0;
+        left: $zero;
         bottom: 1%;
       }
     }
@@ -2003,7 +2004,7 @@ input {
     }
     /*компонент "Наши клиенты"*/
     #Clients{
-      padding-bottom: 0;
+      padding-bottom: $zero;
       /*карусель для большой версии*/
       #carousel_desktop{
         /*отступы блоков с картинками*/
@@ -2032,7 +2033,7 @@ input {
     .flex-container > div {
       width: 48%;
       margin-left: 2%;
-      .col-1{padding: 0 !important;}
+      .col-1{padding: $zero !important;}
       /*парметры сетки бутстрап (текст)*/
       .col{padding-left: 28px !important;}
       /*выделение фраз в тексте - для красоты*/
@@ -2047,9 +2048,9 @@ input {
     .stage{
      .col-1 .emphasized {font-size: 1.8rem;}
       .col-2{
-        flex: 0 0 20% !important;
+        flex: $zero $zero 20% !important;
         max-width: 20% !important;
-        padding: 0 0 0 20px !important;
+        padding: $zero $zero $zero 20px !important;
       }
       /*блок под каждый этап*/
        div {padding-bottom: 0.5%;}
@@ -2062,7 +2063,7 @@ input {
     /*типы тарифов*/
    .flex-container > .type{
     width: 48%;
-    margin: 0 1% 2%;
+    margin: $zero 1% 2%;
         /*последний тип*/
        &:last-child{
          display: block;
@@ -2081,7 +2082,7 @@ input {
   /*страница "О нас",все страницы c "Услуги" - первая картинка на каждой странице*/
   #company .first_img,.services .first_img{
     width: 45%;
-    margin: 0 2% 0.5% 0;
+    margin: $zero 2% 0.5% $zero;
   }
   /*все страницы c "Услуги"*/
   .services {
@@ -2106,13 +2107,13 @@ input {
     .flex-container > .beautiful_block {
       width: 100%;
       height: auto !important;
-      margin: 0 0 2%;
+      margin: $zero $zero 2%;
       /*название типа охраны*/
       p{margin-bottom: .8rem !important;}
       /*как выглядит список (сдвигаем)*/
       ul {margin-left: -12%;}
       /*параметры сетки бутстрап (перечисление охран)*/
-      .col{padding: 0 10px !important;}
+      .col{padding: $zero 10px !important;}
       /*картинка*/
       img{margin-bottom: 5%;}
     }
@@ -2130,7 +2131,7 @@ input {
     /*картинка*/
     .second_img{
       width: 37%;
-      margin: 2% 0 0 0.5%;
+      margin: 2% $zero $zero 0.5%;
     }
   }
   /*страница "Технические средства"*/
@@ -2140,11 +2141,11 @@ input {
       flex-direction: column;
       /*прааметры сетки бутстрап (картинки)*/
       .col-5{
-        flex: 0 0 100% !important;
+        flex: $zero $zero 100% !important;
         max-width: 100% !important;
       }
       /*прааметры сетки бутстрап (список)*/
-      .col{padding: 0 10px !important;}
+      .col{padding: $zero 10px !important;}
       /*картинки*/
       img{
         display: block;
@@ -2186,7 +2187,7 @@ input {
     /*блок с информацикй и формой заявки (обратной связи)*/
     .important_row{flex-direction: column;}
     /*контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)*/
-    .flex-container {margin-top: 0;}
+    .flex-container {margin-top: $zero;}
     /*svg страницы "Контакты"*/
     svg{
       width: 55px;
@@ -2194,9 +2195,9 @@ input {
     }
     /*параметры сетки бутстрап (форма заявки - обратной связи)*/
     .col-5{
-      flex: 0 0 82% !important;
+      flex: $zero $zero 82% !important;
       max-width: 82% !important;
-      margin: 0 auto;
+      margin: $zero auto;
       display: block;
     }
     /*место, где находится форма заявки (обратной связи)*/
@@ -2205,7 +2206,7 @@ input {
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   /*общие стили страниц (кроме главной)*/
-  .page{padding: 1.5rem 0 !important;}
+  .page{padding: 1.5rem $zero !important;}
   /*заголовки на всех страницах (кроме главной)*/
   h1{
     font-size: 1.6rem;
@@ -2230,7 +2231,7 @@ input {
   /*метка в форме заявки (обратной связи)*/
   label{
     font-size: .9rem;
-    margin-bottom: 0 !important;
+    margin-bottom: $zero !important;
   }
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
@@ -2271,7 +2272,7 @@ input {
       svg{
         width: 50px !important;
         height: 55px !important;
-        padding: 0;
+        padding: $zero;
       }
     }
     /*компонент "Важные числа"*/
@@ -2279,7 +2280,7 @@ input {
       /*цифры*/
       .number{font-size: 4rem;}
       /*контейнер с цифрами и текстом*/
-      .flex-container{margin: 0 2%;}
+      .flex-container{margin: $zero 2%;}
     }
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type{
@@ -2324,7 +2325,7 @@ input {
   #company{
     /*блоки принципов*/
     .flex-container > div {
-      .col-1{padding: 0 !important;}
+      .col-1{padding: $zero !important;}
       /*параметры сетки бутстрап (текст)*/
       .col{padding-left: 25px !important;}
       /*выделение фраз в тексте - для красоты*/
@@ -2343,9 +2344,9 @@ input {
       .col-1 .emphasized {font-size: 2.25rem;}
       /*сетка бутстрап - название этапа*/
       .col-2{
-        flex: 0 0 15.5% !important;
+        flex: $zero $zero 15.5% !important;
         max-width: 15.5% !important;
-        padding: 0 0 0 20px !important;
+        padding: $zero $zero $zero 20px !important;
       }
     }
   }
@@ -2363,7 +2364,7 @@ input {
   /*страница "О нас",все страницы c "Услуги" - первая картинка на каждой странице*/
   #company .first_img,.services .first_img{
     width: 40%;
-    margin: 0 2% 0.5% 0;
+    margin: $zero 2% 0.5% $zero;
   }
   /*все страницы c "Услуги"*/
   .services {
@@ -2380,7 +2381,7 @@ input {
       height: 240px;
       /*параметры сетки бутстрап (место с картинкой)*/
       .col-5 {
-        flex: 0 0 48% !important;
+        flex: $zero $zero 48% !important;
         max-width: 48% !important;
         /*картинка*/
         img {height: 140px;}
@@ -2426,7 +2427,7 @@ input {
     .col .col{margin-left: 4%;}
     /*параметры сетки бутстрап (форма заявки - обратной связи)*/
     .col-5{
-      flex: 0 0 45% !important;
+      flex: $zero $zero 45% !important;
       max-width: 45% !important;
     }
   }
@@ -2440,7 +2441,7 @@ input {
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   /*общие стили страниц (кроме главной)*/
-  .page{padding: 1.8rem 0 !important;}
+  .page{padding: 1.8rem $zero !important;}
   /*текст на всех страницах (кроме главной)*/
   .text,a{
     font-size: 1rem;
@@ -2476,7 +2477,7 @@ input {
     #Home{
       /*название чопа*/
       .title_guard{
-        padding: 1% 0;
+        padding: 1% $zero;
         font-size: 2.55rem;
       }
       /*слоган чопа*/
@@ -2498,7 +2499,7 @@ input {
       .number{font-size:4.5rem;}
       /*контейнер с цифрами и текстом*/
       .flex-container{
-        margin: 0 5.5%;
+        margin: $zero 5.5%;
         /*каждый блок с цифрой и текстом отдельно*/
         & > div{margin: 1.5% 2% 0.5% !important;}
       }
