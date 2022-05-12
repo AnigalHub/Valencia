@@ -181,6 +181,7 @@ label{
   color: $colorSelection;
   font-weight: $fontWeight600 !important;
   font-size: 1.2rem;
+  margin-bottom: $zero !important;
 }
 /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
 .form-control{min-height: 1.5rem;}
@@ -911,7 +912,7 @@ input {
       /*слоган*/
       .slogan{padding: 19% $zero 8% 19%;}
       /*картинка с охранником*/
-      img{width:316% !important;}
+      img{width:256% !important;}
     }
     /*компонент "Преимущества" - 6 блоков с svg и текстом*/
     #Advantages{
@@ -952,14 +953,14 @@ input {
   }
 }
 @media screen and (max-width: 500px) {
-  /*текст на всех страницах (кроме главной)*/
-  .text,a{
-    font-size: .8rem;
+  /*текст на всех страницах (кроме главной), метка в форме заявки (обратной связи)*/
+  .text,a,label,.emphasized{
+    font-size: .85rem;
     line-height: 1.1rem;
   }
   /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
   .text_descr{
-    font-size: .7rem !important;
+    font-size: .75rem !important;
     line-height: .85rem !important;
     margin-top: -1%;
   }
@@ -980,12 +981,8 @@ input {
   h6{
     font-size: .9rem;
     line-height: 1.2rem;
-    text-decoration-thickness: .1rem;
-  }
-  /*метка в форме заявки (обратной связи)*/
-  label{
-    font-size: .8rem;
-    margin-bottom: $zero !important;
+    border-top: 3px solid $shade_2;
+    padding: 0;
   }
   /*поле ввода в форме заявки (обратной связи) - фраза внутри*/
   .form-control{
@@ -1024,7 +1021,6 @@ input {
         font-weight:$fontWeight600;
         font-size: 1rem;
         line-height: 1.2rem;
-        text-shadow: .75px .75px $zero $colorBodyText, .5px .5px .5px $colorBodyText;
       }
       /*картинка с охранником*/
       img{
@@ -1065,11 +1061,6 @@ input {
     }
     /*компонент "Услуги" (виды деятельности)*/
     #Services{
-      /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
-      .text_Landing_page{
-        text-shadow: .5px .5px $zero $colorBodyText, .25px .25px .25px $colorBodyText;
-        height: 2rem;
-      }
       /*блоки-ссылки с картинками и кнопками*/
       .flex-container > a {
         width: 47%;
@@ -1155,7 +1146,7 @@ input {
   #contact, #Feedback {
     /*кнопки*/
     button {
-      font-size: .8rem;
+      font-size: .85rem;
       padding: 1.5%;
       width: 65%;
     }
@@ -1308,8 +1299,6 @@ input {
     .flex-container > .beautiful_block {
       /*как выглядит список (сдвигаем)*/
       ul {margin-top: 3%;}
-      /*последний блок*/
-      &:last-child{display: $none;}
     }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
@@ -1387,7 +1376,7 @@ input {
     .flex-container > img {
       width: 30%;
       height: 165px;
-      margin: $zero 1.5% 3% 1.5% !important;
+      margin: $zero 1.5% 3% !important;
     }
     /*нумерованный список*/
     ol{
@@ -1400,7 +1389,7 @@ input {
     /*блоки с картинкой и названием клиента*/
     .flex-container > div {
       width: 47%;
-      margin: $zero 1.5% 4% 1.5%;
+      margin: $zero 1.5% 4%;
     }
   }
   /*страница "Контакты"*/
@@ -1433,7 +1422,7 @@ input {
     /*как выглядит список (сдвигаем)*/
     ul{margin-left: -6%;}
   }
-  /*текст на всех страницах (кроме главной)*/
+  /*текст на всех страницах (кроме главной), метка в форме заявки (обратной связи)*/
   .text,a,label,.emphasized{
     font-size: .85rem;
     line-height: 1.15rem;
@@ -1456,9 +1445,9 @@ input {
   h6{
     font-size: .9rem;
     line-height: 1.2rem;
+    border-top: 3px solid $shade_2;
+    padding: 0;
   }
-  /*метка в форме заявки (обратной связи)*/
-  label{margin-bottom: $zero !important;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1rem;
@@ -1849,7 +1838,7 @@ input {
     /*список*/
     li{padding-bottom: .5%;}
   }
-  /*текст на всех страницах (кроме главной)*/
+  /*текст на всех страницах (кроме главной), метка в форме заявки (обратной связи)*/
   .text,a,.emphasized,label{
     font-size: .9rem;
     line-height: 1.2rem;
@@ -1871,8 +1860,6 @@ input {
     font-size: 1rem;
     line-height: 1.3rem;
   }
-  /*метка в форме заявки (обратной связи)*/
-  label{margin-bottom: $zero !important;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1rem;
@@ -2097,11 +2084,6 @@ input {
       img{margin-bottom: 5%;}
     }
   }
-  /*страница "Охрана организаций"*/
-  #guard_of_organizations{
-    /*последний блок*/
-    .beautiful_block:last-child{display: $none;}
-  }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
   "Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
   "Охрана коммерческих объектов","Охрана частных объектов"*/
@@ -2206,8 +2188,6 @@ input {
     font-size: .85rem !important;
     line-height: 1.2rem !important;
   }
-  /*метка в форме заявки (обратной связи)*/
-  label{margin-bottom: $zero !important;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1rem;
@@ -2419,11 +2399,11 @@ input {
   /*общие стили страниц (кроме главной)*/
   .page{padding: 1.8rem $zero !important;}
   /*текст на всех страницах (кроме главной)*/
-  .text,a{font-size: 1.1rem;}
+  .text,a,label,.emphasized{font-size: 1.1rem;}
   /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
   .text_descr{
    font-size: .85rem !important;
-    line-height: 1.3rem !important;
+   line-height: 1.3rem !important;
   }
   /*заголовки на всех страницах (кроме главной)*/
   h1{
@@ -2433,8 +2413,6 @@ input {
   h2,h3{font-size: 1.6rem;}
   h4{font-size: 1.3rem;}
   h6{font-size: 1.1rem;}
-  /*метка в форме заявки (обратной связи)*/
-  label{font-size: 1rem;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1.25rem;
