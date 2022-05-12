@@ -1,5 +1,4 @@
 $fontText:'Lora', serif;
-$fontNumber:"Vollkorn", serif;
 $backgroundPage: #0a101a;
 $colorBodyText: #b1afaf;
 $colorSelection: #a89815;
@@ -376,11 +375,10 @@ input {
     .number{
       font-size: 5.25rem;
       text-align: $textCenter;
-      font-family: $fontNumber;
+      font-family: $fontText;
       color: $colorSelection;
       transform: scale(1.35);
-      letter-spacing: -2.5px;
-      filter: contrast($percent100) brightness(125%);
+      filter: contrast($percent100) brightness(105%);
     }
     /*контейнер с цифрами и текстом*/
     .flex-container{
@@ -422,7 +420,7 @@ input {
       /*параметры сетки бутстрап (каждая картинка по отдельности)*/
       .col{
         padding: $zero !important;
-        filter: contrast(95%) !important;
+        filter: contrast(98%) !important;
         /*параметры сетки бутстрап (первая картинка, вторая картинка)*/
         &:first-child,&:nth-child(2){margin-right: .3%;}
         /*при наведении*/
@@ -453,7 +451,7 @@ input {
     }
     /*номер телефона*/
     .call_telephone{
-      font-family: $fontNumber;
+      font-family: $fontText;
       font-size: 3.8rem;
       display: $displayBlock;
       text-align:$textCenter;
@@ -832,7 +830,7 @@ input {
     width: 30.5%;
     margin: $zero 1.25% 2.5%;
     box-shadow: 8px 8px 8px -8px rgba(77, 81, 83, .6);
-    background-color: rgba(0, 0, 0, .45) !important;
+    background-color: $shadeOfBlack !important;
     /*картинка*/
     img{width: $percent100;}
     /*выделение фраз в тексте - для красоты*/
