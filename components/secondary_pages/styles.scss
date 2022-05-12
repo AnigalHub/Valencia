@@ -33,20 +33,20 @@ $displayFlex:flex;
 #navbar_svg{
   filter: contrast(115%) brightness(120%);
   /*квадратик и полоска*/
-  .outline{fill: $shadeOfWhite;}
+  .outline{fill: $colorSelection}
   /*верхняя часть отпечатка*/
-  .top_print{stroke: #3498db;}
+  .top_print{stroke: #1d6a9e;}
   /*нижняя часть отпечатка*/
-  .bottom_print{stroke: #f1c40f;}
+  .bottom_print{stroke: #1d6a9e;}
   /*тень svg (яркость и четкость добавляет)*/
   .shadow_svg{
-    stroke: #898686;
-    stroke-width: 3;
+    stroke: #1d6a9e;
+    stroke-width: 2.6;
   }
 }
 /*текст на всех страницах (кроме главной)*/
 .text,a{color: $colorBodyText;}
-.text,a, .emphasized{font-size: 1.15rem;}
+.text,a,.emphasized,label{font-size: 1.15rem;}
 /*любой текст (текст,заголочки, ссылки и т.д.)*/
 .text,.text_descr,.emphasized,.page a,#Landing_page a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
 /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
@@ -105,29 +105,24 @@ h6{
   margin-bottom: 1% !important;
   display: table;
 }
-.noclear{
-  clear: none !important;
-}
+.noclear{clear: none !important;}
 /*контейнер, который включает в себя повтор блоков*/
 .flex-container {
   display: $displayFlex;
   flex-wrap: wrap;
 }
-/*красивые блоки (используются в видах охран, страницах - "Технические средства","Спецсредства")*/
-.beautiful_block:hover .emphasized{
-  box-shadow: inset $zero 4px 2px -3px $shade_1, inset $zero -4px 2px -3px $shade_1, $zero $zero 3px $zero $shade_2;
-}
 /*названия в красивых блоках*/
-.beautiful_block .emphasized{
-  text-transform: $uppercase;
-  text-align: $textCenter;
-  color: $colorSelection;
-  padding: .65% $zero !important;
+.beautiful_block{
+  .emphasized{
+    text-transform: $uppercase;
+    text-align: $textCenter;
+    color: $colorSelection;
+    padding: .65% $zero !important;
+  }
+  &:hover .emphasized{box-shadow: inset $zero 4px 2px -3px $shade_1, inset $zero -4px 2px -3px $shade_1, $zero $zero 3px $zero $shade_2;}
 }
 /*первая, вторая картинки на страницах услуг и "О нас"*/
-.first_img,.second_img,.third_img{
-  box-shadow: 7px 7px 7px -7px $shadowImg;
-}
+.first_img,.second_img,.third_img{box-shadow: 7px 7px 7px -7px $shadowImg;}
 /*первая и третья картинки на страницах услуг и "О нас"*/
 .first_img,.third_img{float: $left;}
 /*первая картинка на страницах услуг и "О нас"*/
@@ -140,10 +135,7 @@ h6{
   clear: $left;
   margin: $zero auto;
 }
-.page,#Landing_page{
-  /*фон*/
-  background: $backgroundPage;
-}
+.page,#Landing_page{background: $backgroundPage;}
 /*общие стили страниц (кроме главной)*/
 .page{
   filter: brightness(110%);
@@ -180,7 +172,6 @@ h6{
 label{
   color: $colorSelection;
   font-weight: $fontWeight600 !important;
-  font-size: 1.2rem;
   margin-bottom: $zero !important;
 }
 /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
@@ -928,21 +919,8 @@ input {
       }
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
       .text_Landing_page{
-        font-size: .7rem !important;
+        font-size: .75rem !important;
         line-height: .9rem !important;
-      }
-    }
-    /*компонент "Услуги" (виды деятельности)*/
-    #Services{
-      /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
-      .text_Landing_page{height: 2.5rem !important;}
-    }
-    /*компонент "Важные числа"*/
-    #Import_numbers{
-      /*текст на главной странице*/
-      .text_Landing_page {
-        font-size: .78rem !important;
-        line-height: 1rem !important;
       }
     }
     /*компонент "Типы" - 3 ссылки-картинки*/
@@ -1002,7 +980,7 @@ input {
     /*текст на главной странице*/
     .text_Landing_page {
       font-size: .9rem;
-      line-height: 1.18rem;
+      line-height: 1.15rem;
     }
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
     #Home{
