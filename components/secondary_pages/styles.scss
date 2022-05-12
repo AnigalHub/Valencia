@@ -5,8 +5,8 @@ $colorBodyText: #b1afaf;
 $colorSelection: #a89815;
 $shadeOfBlack: black;
 $shadeOfWhite: white;
-$shade_1:#e6e686;
-$shade_2:#575731;
+$shade_1:#bbaa1e;
+$shade_2:#7e7317;
 $percent100:100%;
 $fontWeight600:600;
 $textCenter:center;
@@ -78,7 +78,7 @@ h1{
 }
 h1,h2,h3,h6{font-weight: $fontWeight600 !important;}
 h1,h2,h3,h4,h5,h6{ font-family: $fontText;}
-h1{color: $colorSelection; }
+h1{color: $shade_1 }
 h3{color: $shadeOfWhite}
 h2,h4,h6{color: $colorBodyText;}
 h2,h3{
@@ -99,11 +99,13 @@ h4{
 h6{
   font-size: 1.2rem;
   line-height: 1.6rem;
-  clear: left;
-  text-decoration: underline;
-  text-decoration-color: $colorSelection;
-  padding: .8% $zero;
+  clear: left !important;
+  border-bottom: 3px solid $shade_2;
+  padding: 0.8% $zero $zero;
+  margin-bottom: 2% !important;
+  display: table;
 }
+
 /*контейнер, который включает в себя повтор блоков*/
 .flex-container {
   display: $displayFlex;
@@ -131,7 +133,11 @@ h6{
 /*вторая картинка на страницах услуг и "О нас"*/
 .second_img{float: right;}
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
-.block_two{text-transform: $uppercase;clear: left;}
+.block_two{
+  text-transform: $uppercase;
+  clear: left;
+  margin: $zero auto;
+}
 /*общие стили страниц (кроме главной)*/
 .page{
   /*фон*/
@@ -248,6 +254,7 @@ input {
     /*название чопа*/
     .title_guard{
       padding: 2% $zero $zero;
+      font-family: $fontText;
       filter: contrast(125%) brightness(120%);
       cursor: $cursorDefault;
       font-size: 2.9rem;
@@ -628,7 +635,11 @@ input {
     thead th {
       color: $colorSelection;
       font-weight: 700 !important;
+
       border-bottom: $none !important;
+      &:hover{
+        background: transparent !important;
+      }
     }
     /*ячейки таблицы, заголовки таблицы*/
     td,th {
@@ -642,6 +653,11 @@ input {
       width: 33%;
       height: 120px !important;
     }
+
+    tr:hover td{
+      background: rgba(206, 193, 93, 0.28);
+      color: $colorBodyText;
+    }
   }
 }
 /*страница "О нас",все страницы c "Услуги" - первая картинка на каждой странице*/
@@ -650,6 +666,7 @@ input {
 .services{
   /*страница "Тарифы"*/
   #tariffs{
+    padding: 1.5rem $zero;
     background: transparent;
     /*контейнер контента*/
     .container{padding: $zero !important;}
@@ -669,8 +686,6 @@ input {
 }
 /*страницы "Охрана организаций", "Охрана объектов","Охрана недвижимости"*/
 .services_with_types{
-  /*заголовок (разновидности)*/
-  h6{text-align: $textCenter;}
   /*ссылки при наведении*/
   a:hover{text-decoration: $none !important;}
   /*блоки под типы охран (охрана объектов - промышленных/транспорта)*/
