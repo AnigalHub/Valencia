@@ -3,9 +3,9 @@
     <b-container>
       <div class="flex-container">
         <router-link v-for="(guard,index) in Guard" :key="index" :to="guard.link">
-          <b-button>
+          <b-button class="beautiful_block">
             <img :src="guard.src" :alt="guard.alt"/>
-            <p class="text_Landing_page">{{guard.name_guard}}</p>
+            <p class="emphasized">{{guard.name_guard}}</p>
           </b-button>
         </router-link>
       </div>
