@@ -27,9 +27,6 @@
             </b-row>
           </NuxtLink>
         </div>
-        <div class="beautiful_block">
-            <img src="../../static/services/guard_of_organizations/building.jpg" alt="здание">
-        </div>
       </div>
       <Tariffs/>
     </b-container>
