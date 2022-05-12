@@ -180,7 +180,7 @@ h6{
 }
 /*метка в форме заявки (обратной связи)*/
 label{
-  color: $colorBodyText;
+  color: $colorSelection;
   font-weight: $fontWeight600 !important;
   font-size: 1.2rem;
 }
@@ -203,7 +203,6 @@ input {
     filter: contrast($percent100) brightness(118%);
     font-size: 2.4rem;
     cursor: $cursorDefault;
-    text-shadow: 1.5px 1.5px 1.5px $shadeOfBlack;
     text-align: $textCenter;
     letter-spacing: .5px;
   }
@@ -214,14 +213,12 @@ input {
     line-height: 1.5rem;
   }
   /*текст на главной странице,слоган чопа*/
-  .text_Landing_page,#Home .slogan{
+  .text_Landing_page,#Home .slogan, #Import_numbers .number, #Feedback .call_telephone{
     font-family: $fontText;
     text-align: $textCenter;
   }
   /*текст на главной странице,слоган чопа, номер телефона в компоненте обратная связь*/
-  #Home .slogan, #Feedback .call_telephone, #Import_numbers .number{
-    color: $colorSelection;
-  }
+  #Home .slogan, #Feedback .call_telephone, #Import_numbers .number{color: $colorSelection;}
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
@@ -344,7 +341,6 @@ input {
     /*кнопки*/
     .btn {
       padding: $zero !important;
-      border-radius: unset !important;
       background-color: $shadeOfBlack !important;
     }
   }
@@ -353,8 +349,6 @@ input {
     /*цифры*/
     .number{
       font-size: 5.25rem;
-      text-align: $textCenter;
-      font-family: $fontText;
       transform: scale(1.35);
       filter: contrast($percent100) brightness(105%);
     }
@@ -405,7 +399,10 @@ input {
         &:hover{
           filter: contrast(115%) !important;
           /*заголовок*/
-          h2{text-decoration: underline;}
+          h2{
+            text-decoration: underline;
+            text-decoration-color: $colorSelection !important;
+          }
         }
       }
     }
@@ -429,10 +426,8 @@ input {
     }
     /*номер телефона*/
     .call_telephone{
-      font-family: $fontText;
       font-size: 3.8rem;
       display:$displayBlock;
-      text-align:$textCenter;
       padding: 3.5% $zero;
       letter-spacing: 1px;
       /*при наведении*/
@@ -444,7 +439,6 @@ input {
     /*блок - обратная связь с текстом, заголовком и телефоном*/
     .row{
       padding: 3.5%;
-      border-radius: 5px;
       /*место, где находится форма заявки (обратной связи)*/
       .col-6{padding: $zero !important;}
     }
@@ -465,9 +459,7 @@ input {
    /*cсылка*/
     a{filter: contrast($percent100) !important;}
     /*картинки (добавление/изменение стилей - касательно только данного компонента (Наши клиенты)*/
-    img{
-      width: $percent100;
-    }
+    img{width: $percent100;}
   }
   /*компонент "Карта"*/
   #Map{
@@ -483,9 +475,6 @@ input {
 }
 /*компонент "Обратная связь" на главной странице и страница "Контакты"*/
 #contact, #Feedback{
-  label{
-    color: $colorSelection;
-  }
   /*кнопки*/
   button{
     font-family: $fontText;
@@ -493,10 +482,10 @@ input {
     display: $displayBlock;
     margin: 1% auto;
     border-radius: 5px;
-    background: radial-gradient(#f1f0f0,#343a40);
+    background: radial-gradient($colorBodyText,#343a40);
     padding: 2%;
     width: 40%;
-    font-size: 1.08rem;
+    font-size: 1.2rem;
   }
   .text_descr{margin-top: 5%;}
   .checkbox{
@@ -504,7 +493,7 @@ input {
     width: 16px;
   }
   /*при наведении, активная*/
-  button:hover, button:active  {background: radial-gradient(#e5e2e2, rgba(146, 156, 182, .8));}
+  button:hover, button:active  {background: radial-gradient($colorBodyText, rgba(146, 156, 182, .8));}
 }
 /*страница "О нас"*/
 #company{
@@ -580,8 +569,7 @@ input {
       max-width: 5% !important;
       .emphasized{
         font-size: 2.65rem;
-       //text-shadow: 1px 2px $zero $colorBodyText;
-        font-weight: 500 !important;
+        font-weight: $fontWeight600 !important;
         color: $colorSelection;
       }
     }
@@ -637,11 +625,8 @@ input {
     thead th {
       color: $colorSelection;
       font-weight: 700 !important;
-
       border-bottom: $none !important;
-      &:hover{
-        background: transparent !important;
-      }
+      &:hover{background: transparent !important;}
     }
     /*ячейки таблицы, заголовки таблицы*/
     td,th {
@@ -655,7 +640,6 @@ input {
       width: 33%;
       height: 120px !important;
     }
-
     tr:hover td{
       background: rgba(206, 193, 93, .28);
       color: $colorBodyText;
@@ -813,11 +797,6 @@ input {
 }
 /*страница "Контакты"*/
 #contact{
-  /*заголовок*/
-  h2{
-    color: $colorBodyText;
-    text-shadow: $zero -1px $zero $colorBodyText;
-  }
   /*блок с информацией и формой заявки (обратной связи), отдельные блоки с информацией (svg, название информации, информация)*/
   .important_row{padding-bottom: 4%;}
   /*параметры сетки бутстрап (информация (svg, название информации, информация))*/
