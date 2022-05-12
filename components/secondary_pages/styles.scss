@@ -2413,20 +2413,17 @@ input {
   /*страница "Тарифы"*/
   #tariffs{
     /*текст под картинкой - описание каждого типа тарифа*/
-    p{height: 21vh;}
+    p{height: 32vh;}
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   /*общие стили страниц (кроме главной)*/
   .page{padding: 1.8rem $zero !important;}
   /*текст на всех страницах (кроме главной)*/
-  .text,a{
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
+  .text,a{font-size: 1.1rem;}
   /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
   .text_descr{
-   font-size: .8rem !important;
+   font-size: .85rem !important;
     line-height: 1.3rem !important;
   }
   /*заголовки на всех страницах (кроме главной)*/
@@ -2436,7 +2433,7 @@ input {
   }
   h2,h3{font-size: 1.6rem;}
   h4{font-size: 1.3rem;}
-  h6{font-size: 1rem;}
+  h6{font-size: 1.1rem;}
   /*метка в форме заявки (обратной связи)*/
   label{font-size: 1rem;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
@@ -2528,7 +2525,7 @@ input {
     /*компонент "Типы" - 3 ссылки-картинки*/
     #Type {
       /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
-      h2 {font-size: 1.9rem !important;}
+      h2 {font-size: 1.8rem !important;}
     }
   }
 }
