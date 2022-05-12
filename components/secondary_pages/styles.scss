@@ -42,7 +42,7 @@ $displayFlex:flex;
 }
 //текст на всех страницах (кроме главной), ссылки
 .text,a{color: $colorBodyText;}
-//текст на всех страницах (кроме главной), ссылки, выделенный текст в тексте
+//текст на всех страницах (кроме главной), ссылки, выделенный текст в тексте, метка
 .text,a,.emphasized,label{font-size: 1.15rem;}
 //любой текст (текст,заголочки, ссылки и т.д.)
 .text,.text_descr,.emphasized,.page a,#Landing_page a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
@@ -51,7 +51,7 @@ $displayFlex:flex;
   color: $colorSelection;
   font-size: 1rem !important;
 }
-
+//текст на всех страницах (кроме главной), ссылки,текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках, метка
 .text,a,.text_descr,label{
   font-family: $fontText;
   line-height: 1.5rem;
@@ -76,9 +76,7 @@ h1,h3,h6{font-weight: $fontWeight600 !important;}
 h1,h2,h3,h4,h5,h6{ font-family: $fontText;}
 h1{color: $shade_1 }
 h3{color: $shadeOfWhite}
-h1,h3{
-  cursor: $cursorDefault;
-}
+h1,h3{cursor: $cursorDefault;}
 h2,h4,h6{color: $colorBodyText;}
 h2,h3{
   padding: 1% $zero;
@@ -103,6 +101,7 @@ h6{
   margin-bottom: 1% !important;
   display: table;
 }
+//не перемещать элемент - заголовок
 .noclear{clear: none !important;}
 //контейнер, который включает в себя повтор блоков
 .flex-container {
@@ -111,12 +110,14 @@ h6{
 }
 //названия в красивых блоках
 .beautiful_block{
+  //выделение фраз в тексте - для красоты
   .emphasized{
     text-transform: $uppercase;
     text-align: $textCenter;
     color: $colorSelection;
     padding: .65% $zero !important;
   }
+  //при наведении
   &:hover .emphasized{box-shadow: inset $zero 4px 2px -3px $shade_1, inset $zero -4px 2px -3px $shade_1, $zero $zero 3px $zero $shade_2;}
 }
 //первая, вторая картинки на страницах услуг и "О нас"
@@ -133,6 +134,7 @@ h6{
   clear: $left;
   margin: $zero auto;
 }
+//общие стили страниц
 .page,#Landing_page{background: $backgroundPage;}
 //общие стили страниц (кроме главной)
 .page{
@@ -252,6 +254,7 @@ input {
   }
   //компонент "Преимущества" - 6 блоков с svg и текстом
   #Advantages{
+    //ссылка
     a:hover{text-decoration: $none !important;}
     //высота компонента
     height: 15rem;
@@ -449,7 +452,7 @@ input {
       //отступы блоков с картинками
       .row{margin: 1.5% $zero 4% !important;}
     }
-   //cсылка
+    //cсылка
     a{filter: contrast($percent100) !important;}
     //картинки (добавление/изменение стилей - касательно только данного компонента (Наши клиенты)
     img{width: $percent100;}
@@ -480,7 +483,9 @@ input {
     width: 40%;
     font-size: 1.2rem;
   }
+  //текст, который с квадратиком и галочкой
   .text_descr{margin-top: 5%;}
+  //квадратик с галочкой
   .checkbox{
     height: 16px;
     width: 16px;
@@ -619,6 +624,7 @@ input {
       color: $colorSelection;
       font-weight: 700 !important;
       border-bottom: $none !important;
+      //при наведении
       &:hover{background: transparent !important;}
     }
     //ячейки таблицы, заголовки таблицы
@@ -633,6 +639,7 @@ input {
       width: 33%;
       height: 120px;
     }
+    //при наведении на строку - ячейки
     tr:hover td{
       background: rgba(206, 193, 93, .28);
       color: $colorBodyText;
@@ -682,6 +689,7 @@ input {
       //картинка
       img {width: $percent100;}
     }
+    //список
     ul{margin-left: -6%;}
   }
 }
@@ -697,6 +705,7 @@ input {
 //"Охрана муниципальных объектов - госучреждений","Охрана промышленных объектов","Охрана объектов транспорта",
 //"Охрана коммерческих объектов","Охрана частных объектов"
 .types_of_guard{
+  //сетка бутстрап
   .row .col{
     margin-left: -.8%;
     padding: $zero !important;
@@ -776,6 +785,7 @@ input {
       text-align:$textCenter;
       margin-bottom: $zero !important;
     }
+    //абзац
     p{
       height: 40px;
       margin: $zero !important;
@@ -882,6 +892,7 @@ input {
   h2,h3{font-size: 1.1rem !important;}
   h4{font-size: .9rem !important;}
   h6{font-size: .85rem !important;}
+  //стили для главной страницы
   #Landing_page{
     //заголовок на главной странице (названия компонентов)
     h2{font-size: 1.05rem !important;}
@@ -1493,7 +1504,6 @@ input {
     }
     //компонент "Важные числа"
     #Import_numbers{
-
       //цифры
       .number{font-size:3rem;}
       //каждый блок с цифрой и текстом отдельно
@@ -1846,6 +1856,7 @@ input {
         line-height: 2rem;
         transform: scaleY(1.1);
       }
+      //слоган
       .slogan{
         font-size: 1.5rem;
         line-height: 1.8rem;
@@ -2267,6 +2278,7 @@ input {
   //страница "Тарифы"
   #tariffs{
     table tr td {height: 90px !important;}
+    //текст
     .text{
       font-size: .85rem ;
       line-height: 1.15rem;
