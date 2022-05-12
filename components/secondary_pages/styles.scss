@@ -1434,8 +1434,8 @@ input {
     ul{margin-left: -6%;}
   }
   /*текст на всех страницах (кроме главной)*/
-  .text,a{
-    font-size: .8rem;
+  .text,a,label,.emphasized{
+    font-size: .85rem;
     line-height: 1.15rem;
   }
   /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
@@ -1448,6 +1448,7 @@ input {
   h1{
     padding-left: $zero;
     font-size: 1.3rem;
+    letter-spacing: -.25px;
     margin-bottom: .2rem;
   }
   h2,h3{font-size: 1.2rem;}
@@ -1455,13 +1456,9 @@ input {
   h6{
     font-size: .9rem;
     line-height: 1.2rem;
-    text-decoration-thickness: .15rem;
   }
   /*метка в форме заявки (обратной связи)*/
-  label{
-    font-size: .8rem;
-    margin-bottom: $zero !important;
-  }
+  label{margin-bottom: $zero !important;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1rem;
@@ -1493,10 +1490,9 @@ input {
       /*слоган чопа*/
       .slogan{
         transform: scaleY(1.05);
-        font-size: .6rem;
+        font-size: .95rem;
         line-height: 1rem;
         font-weight: $fontWeight600;
-        text-shadow: .5px .5px $zero $colorBodyText, .25px .25px .25px $colorBodyText;
       }
       /*картинка с охранником*/
       img{
@@ -1750,8 +1746,6 @@ input {
     .flex-container > .beautiful_block {
       /*как выглядит список (сдвигаем)*/
       ul {margin-top: 3%;}
-      /*последний блок*/
-      &:last-child{display: $none;}
     }
   }
   /*страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
@@ -2061,7 +2055,7 @@ input {
     /*таблица*/
     table{
       /*ячейки таблицы*/
-      tr td{height: 70px;}
+      tr td{height: 90px;}
       /*ячейки таблицы, заголовки таблицы*/
       td,th {padding: .25rem .25rem;}
     }
@@ -2078,8 +2072,6 @@ input {
       width: 40px;
       height: 38px;
     }
-    /*заголовки,которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
-
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{width: 28%;}
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
