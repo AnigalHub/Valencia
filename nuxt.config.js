@@ -14,7 +14,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
-      {rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap', media:'all', disabled:''},
       {rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Lora&display=swap', media:'all', disabled:''},
       {rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap', media:'all', disabled:''},
     ]
