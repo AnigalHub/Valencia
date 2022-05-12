@@ -10,7 +10,7 @@
           <li class="text" v-for="guard in GuardOfTransportFacilities" :key="guard.index">{{guard.name}}</li>
         </ul>
       </div>
-      <h6 class="block_two">Круг обязанностей охранников коммерческих объектов:</h6>
+      <h6>Круг обязанностей охранников коммерческих объектов:</h6>
       <img class="second_img" src="../../../static/services/object_guard/barrier.jpg" alt="шлагбаум"/>
       <ul class="text">
         <li v-for="name_duty in DutiesGuardOfTransportFacilities" :key="name_duty.index">{{name_duty.duty}}</li>

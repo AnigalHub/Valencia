@@ -10,7 +10,7 @@
           <li class="text" v-for="guard in GuardOfEducationalAndPreschoolInstitutions" :key="guard.index">{{guard.name}}</li>
         </ul>
       </div>
-      <h6 class="block_two">Особенности охраны образовательных и дошкольных учреждений:</h6>
+      <h6>Особенности охраны образовательных и дошкольных учреждений:</h6>
       <b-row>
         <b-col v-for="feature in GuardOfEducationalInstitutionFeatures" :key="feature.index">
           <ul class="text">

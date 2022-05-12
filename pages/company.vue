@@ -5,7 +5,7 @@
       <img src="../static/company/walkie_talkie.jpg" alt="охрана(рация)" class="first_img" >
       <p class="text"><span class="emphasized text">"{{information.name_company}}" </span> - частное охранное предприятие, обеспечивающее комплексную безопасность личности, предпринимательской деятельности, мероприятий, и всех, кто нуждается в охране на всей территории во всех субъектах Российской Федерации.</p>
       <p class="text">Уже 15 лет компания оказывает услуги как вооруженной, так и невооруженной охраны в зависимости от конкретных задач Клиентов. Наш многолетний опыт и высокий уровень знаний позволяют выполнять самые нестандартные решения для Заказчика. Мы учитываем все пожелания Заказчика и гарантируем полную безопасность самых важных элементов жизни Клиента: близких, себя, бизнес, автотранспорт. В состав компании <span class="emphasized">"{{information.name_company}}" </span> входят более 500 сотрудников. В настоящее время нам доверяют свою безопасность около 120 клиентов по всей России.</p>
-      <h6 class="block_two">Основные принципы нашей службы:</h6>
+      <h6>Основные принципы нашей службы:</h6>
       <div class="flex-container">
         <div v-for="principle in WorkPrinciples" :key="principle.index">
           <b-row>
@@ -24,7 +24,7 @@
       <ul class="text">
         <li v-for="skill in ProfessionalSkills" :key="skill.index">{{skill.skill}}</li>
       </ul>
-      <h6 class="block_two">Как мы работаем?</h6>
+      <h6>Как мы работаем?</h6>
       <div class="stage">
         <div v-for="stage in StagesOfWork" :key="stage.index">
           <component :is="stage.svg"/>

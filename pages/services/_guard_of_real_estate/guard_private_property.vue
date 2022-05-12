@@ -10,7 +10,7 @@
           <li class="text" v-for="name in GuardPrivateProperty">{{name.name}}</li>
         </ul>
       </div>
-      <h6 class="block_two">Круг обязанностей охранников частных объектов:</h6>
+      <h6>Круг обязанностей охранников частных объектов:</h6>
       <img class="second_img" src="../../../static/services/guard_of_real_estate/guard_private_property.jpg" alt="охрана_частных_объектов"/>
       <ul class="text">
         <li v-for="name_duty in DutiesGuardPrivateProperty" :key="name_duty.index">{{name_duty.duty}}</li>
