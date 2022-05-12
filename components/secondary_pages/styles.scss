@@ -3,7 +3,7 @@ $fontImportantText:"Playfair Display", serif;
 $fontNumber:"Vollkorn", serif;
 $backgroundPage: #0a101a;
 $colorBodyText: #b1afaf;
-$colorSelection:#a89815;
+$colorSelection: #a89815;
 $shadeOfBlack: black;
 $shadeOfWhite: white;
 $shade_1:#e6e686;
@@ -13,6 +13,8 @@ $fontWeight600:600;
 $textCenter:center;
 $uppercase:uppercase;
 $none:none;
+$cursorDefault:default;
+$cursorPointer:pointer;
 $zero: 0;
 /*контейнер контента - на весь экран*/
 .container-fluid{
@@ -44,7 +46,7 @@ $zero: 0;
 /*текст на всех страницах (кроме главной)*/
 .text,a{
   color: $colorBodyText;
-  font-size: 1.12rem;
+  font-size: 1.15rem;
 }
 /*любой текст (текст,заголочки, ссылки и т.д.)*/
 .text,.text_descr,.emphasized,.page a,#Landing_page a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
@@ -55,7 +57,7 @@ $zero: 0;
 }
 .text,a,.text_descr{
   font-family: $fontText;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
 }
 /*выделение фраз в тексте - для красоты*/
 .emphasized{
@@ -70,7 +72,7 @@ h1{
   font-size: 2.2rem;
   padding: 8px $zero;
   margin: $zero $zero 1rem ;
-  cursor: default;
+  cursor: $cursorDefault;
   text-transform: $uppercase;
   letter-spacing: 2px;
 }
@@ -85,7 +87,7 @@ h2,h3{
 h3{
   line-height: 1.6rem;
   text-align:$textCenter;
-  cursor: default;
+  cursor: $cursorDefault;
 }
 h4{
   font-weight: $fontWeight600;
@@ -96,6 +98,7 @@ h4{
 h6{
   font-size: 1.2rem;
   line-height: 1.6rem;
+  clear: left;
   text-decoration: underline;
   text-decoration-color: $colorSelection;
   padding: .8% $zero;
@@ -127,7 +130,7 @@ h6{
 /*вторая картинка на страницах услуг и "О нас"*/
 .second_img{float: right;}
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
-.block_two{clear: left; text-transform: $uppercase;}
+.block_two{text-transform: $uppercase;clear: left;}
 /*общие стили страниц (кроме главной)*/
 .page{
   /*фон*/
@@ -192,7 +195,7 @@ input {
     color: $shadeOfWhite;
     filter: contrast($percent100) brightness(118%);
     font-size: 2.4rem;
-    cursor: default;
+    cursor: $cursorDefault;
     text-shadow: 1.5px 1.5px 1.5px $shadeOfBlack;
     text-align: $textCenter;
     letter-spacing: 0.5px;
@@ -245,7 +248,7 @@ input {
     .title_guard{
       padding: 2% $zero $zero;
       filter: contrast(125%) brightness(120%);
-      cursor: default;
+      cursor: $cursorDefault;
       font-size: 2.9rem;
       letter-spacing: 1px;
       text-align: $textCenter;
@@ -255,7 +258,7 @@ input {
     .slogan{
       font-size: 2.7rem;
       line-height: 3.25rem;
-      cursor: default;
+      cursor: $cursorDefault;
       filter: contrast(150%);
       padding: 6.5% $zero 3%;
       margin-left: -5%;
@@ -603,6 +606,7 @@ input {
       width: 60%;
       border-radius: 50%;
       background: $shadeOfBlack;
+      box-shadow: $zero 1px 5px 1px $colorSelection;
       padding: 5%;
       margin: 3% auto;
       display: block;
@@ -765,7 +769,7 @@ input {
 #licenses{
   /*картинки лицензий и благодарностей*/
   .flex-container > img {
-    cursor: pointer;
+    cursor: $cursorPointer;
     width: 18%;
     margin: $zero 1% 2%;
     padding: .15%;
@@ -779,12 +783,8 @@ input {
     margin: $zero 1.25% 2.5%;
     box-shadow: 8px 8px 8px -8px rgba(77, 81, 83, 0.6);
     background-color: rgba(0, 0, 0, .45) !important;
-    /*кнопки при наведении*/
-    &:hover {background-color: rgba(250, 250, 255, .65) !important;}
     /*картинка*/
-    img{
-      width: $percent100;
-    }
+    img{width: $percent100;}
     /*выделение фраз в тексте - для красоты*/
     .emphasized{
       padding: 1%;
