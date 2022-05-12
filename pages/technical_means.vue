@@ -3,7 +3,7 @@
     <b-container>
       <h1>{{name_page}}</h1>
       <p class="text">Технические средства повышают безопасность любого охраняемого объекта. Наша компания занимается монтажом и обслуживанием систем безопасности во время охраны любой вверенной территории.</p>
-      <h6>Классификация технических средств охранников компании "{{information.name_company}}":</h6>
+      <h6>Классификация технических средств компании "{{information.name_company}}":</h6>
       <div class="flex-container">
         <div class="beautiful_block" v-for="mean in СlassificationTechnicalMeans" :key="mean.name_technical_means">
           <p class="text emphasized">{{mean.name_technical_means}}</p>
