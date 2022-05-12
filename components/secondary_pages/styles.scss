@@ -4,6 +4,7 @@ $colorBodyText: #b1afaf;
 $colorSelection: #a89815;
 $shadeOfBlack: black;
 $shadeOfWhite: white;
+$shadowImg:rgba(34, 60, 80, .9);
 $shade_1:#bbaa1e;
 $shade_2:#7e7317;
 $percent100:100%;
@@ -55,7 +56,7 @@ $displayFlex:flex;
   color: $colorSelection;
   font-size: 1rem !important;
 }
-.text,a,.text_descr{
+.text,a,.text_descr,label{
   font-family: $fontText;
   line-height: 1.5rem;
 }
@@ -72,14 +73,16 @@ h1{
   font-size: 2.2rem;
   padding: 8px $zero;
   margin: $zero $zero 1rem ;
-  cursor: $cursorDefault;
   text-transform: $uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 h1,h3,h6{font-weight: $fontWeight600 !important;}
 h1,h2,h3,h4,h5,h6{ font-family: $fontText;}
 h1{color: $shade_1 }
 h3{color: $shadeOfWhite}
+h1,h3{
+  cursor: $cursorDefault;
+}
 h2,h4,h6{color: $colorBodyText;}
 h2,h3{
   padding: 1% $zero;
@@ -88,7 +91,6 @@ h2,h3{
 h3{
   line-height: 1.6rem;
   text-align:$textCenter;
-  cursor: $cursorDefault;
 }
 h4{
   font-weight: $fontWeight600;
@@ -108,7 +110,6 @@ h6{
 .noclear{
   clear: none !important;
 }
-
 /*контейнер, который включает в себя повтор блоков*/
 .flex-container {
   display: $displayFlex;
@@ -127,7 +128,7 @@ h6{
 }
 /*первая, вторая картинки на страницах услуг и "О нас"*/
 .first_img,.second_img,.third_img{
-  box-shadow: 7px 7px 7px -7px rgba(34, 60, 80, .9);
+  box-shadow: 7px 7px 7px -7px $shadowImg;
 }
 /*первая и третья картинки на страницах услуг и "О нас"*/
 .first_img,.third_img{float: $left;}
@@ -141,10 +142,12 @@ h6{
   clear: $left;
   margin: $zero auto;
 }
-/*общие стили страниц (кроме главной)*/
-.page{
+.page,#Landing_page{
   /*фон*/
   background: $backgroundPage;
+}
+/*общие стили страниц (кроме главной)*/
+.page{
   filter: brightness(110%);
   padding: 2.25rem $zero;
   /*список*/
@@ -177,25 +180,19 @@ h6{
 }
 /*метка в форме заявки (обратной связи)*/
 label{
-  font-family: $fontText;
   color: $colorBodyText;
-  font-weight: 600 !important;
-  font-size: 1.08rem;
-  line-height: 1.4rem;
+  font-weight: $fontWeight600 !important;
+  font-size: 1.2rem;
 }
 /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
 .form-control{min-height: 1.5rem;}
 input {
   font-weight: $fontWeight600;
   padding: 25px 15px;
-  border: 1px solid $colorBodyText !important;
   margin-bottom: 1%;
-  /*при наведении*/
-  &:hover {border: 2px solid $colorBodyText}
 }
 /*стили для главной страницы*/
 #Landing_page{
-  background: $backgroundPage;
   /*картинки на главной странице*/
   img{border: $none;}
   /*заголовки и текст на главной странице*/
@@ -212,8 +209,9 @@ input {
   }
   /*текст на главной странице*/
   .text_Landing_page{
+    color: $colorBodyText;
     font-size: 1.4rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
   }
   /*текст на главной странице,слоган чопа*/
   .text_Landing_page,#Home .slogan{
@@ -221,21 +219,9 @@ input {
     text-align: $textCenter;
   }
   /*текст на главной странице,слоган чопа, номер телефона в компоненте обратная связь*/
-  .text_Landing_page,#Home .slogan, #Feedback .call_telephone{
-   color: $colorBodyText;
-  }
-  /*текст на главной странице,слоган чопа, номер телефона в компоненте обратная связь*/
-  #Services .text_Landing_page,#Home .slogan, #Feedback .call_telephone{
+  #Home .slogan, #Feedback .call_telephone, #Import_numbers .number{
     color: $colorSelection;
   }
-  /*название чопа в первом компоненте,цифры в компоненте "Важные числа"*/
-  #Home .title_guard, #Import_numbers .number{
-    color: $shadeOfWhite;
-  }
-  /*название чопа в первом компоненте,текст на главной странице*/
-   #Advantages .text_Landing_page{
-     font-weight: $fontWeight600;
-   }
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
@@ -256,6 +242,7 @@ input {
     }
     /*название чопа*/
     .title_guard{
+      color: $shadeOfWhite;
       padding: 2% $zero $zero;
       font-family: $fontText;
       filter: contrast(125%) brightness(120%);
@@ -286,8 +273,8 @@ input {
     height: 15rem;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
     .text_Landing_page{
+      font-weight: $fontWeight600;
       font-size: 1.25rem;
-      line-height: 1.4rem;
       height: $percent100;
       display: $displayFlex;
       align-items: $textCenter;
@@ -305,14 +292,9 @@ input {
         &:hover {
           svg{
             /*стили цветов для svg*/
-            .color_strokes_inside{
-              fill: $shadeOfWhite;
-              stroke: $colorSelection;
-            }
+            .color_strokes_inside{fill: $shadeOfWhite;}
             .color_inside_small_object{fill: $colorSelection;}
-            .outline{
-              stroke: $colorSelection;
-            }
+            .color_strokes_inside, .outline{stroke: $colorSelection;}
           }
           /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
           .text_Landing_page{color: $colorSelection;}
@@ -350,7 +332,7 @@ input {
     .flex-container > a {
       width: 30.5%;
       margin: $zero $zero 2% 2.5%;
-      box-shadow: 8px 8px 8px -8px rgb(77 81 83 / 60%);
+      box-shadow: 7px 7px 7px -7px $shadowImg;
       filter: contrast($percent100) !important;
     }
     .btn-secondary{border-color: transparent !important;}
@@ -364,22 +346,15 @@ input {
       padding: $zero !important;
       border-radius: unset !important;
       background-color: $shadeOfBlack !important;
-      /*кнопки при наведении*/
-     // &:hover {background-color: rgba(250, 250, 255, .7) !important;}
     }
   }
   /*компонент "Важные числа"*/
   #Import_numbers{
-    /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)*/
-    .text_Landing_page{
-      color: $colorBodyText !important;
-    }
     /*цифры*/
     .number{
       font-size: 5.25rem;
       text-align: $textCenter;
       font-family: $fontText;
-      color: $colorSelection;
       transform: scale(1.35);
       filter: contrast($percent100) brightness(105%);
     }
@@ -428,7 +403,7 @@ input {
         &:first-child,&:nth-child(2){margin-right: .3%;}
         /*при наведении*/
         &:hover{
-          filter: contrast(120%) !important;
+          filter: contrast(115%) !important;
           /*заголовок*/
           h2{text-decoration: underline;}
         }
@@ -456,7 +431,7 @@ input {
     .call_telephone{
       font-family: $fontText;
       font-size: 3.8rem;
-      display: $displayBlock;
+      display:$displayBlock;
       text-align:$textCenter;
       padding: 3.5% $zero;
       letter-spacing: 1px;
@@ -472,8 +447,6 @@ input {
       border-radius: 5px;
       /*место, где находится форма заявки (обратной связи)*/
       .col-6{padding: $zero !important;}
-      /*место, где находится форма заявки (обратной связи)*/
-     // .place_form{background: $shadeOfBlack;}
     }
   }
   /*компонент "Наши клиенты"*/
@@ -512,11 +485,6 @@ input {
 #contact, #Feedback{
   label{
     color: $colorSelection;
-  }
-  /*место, где находится форма заявки (обратной связи)*/
-  .place_form{
-    padding: 2.5%;
-    border-radius: 5px;
   }
   /*кнопки*/
   button{
@@ -645,7 +613,6 @@ input {
     margin:$zero .75%;
     /*картинки страницы "Тарифы"*/
     img{
-      //background: $backgroundPage;
       width: 60%;
       border-radius: 50%;
       background: $shadeOfBlack;
@@ -889,8 +856,6 @@ input {
     }
     .color{fill: $shade_2;}
   }
-  /*место, где находится форма заявки (обратной связи)*/
-  //.place_form{background: $shadeOfBlack;}
   /*параметры сетки бутстрап (форма заявки - обратной связи)*/
   /*место под карту*/
   .map {
@@ -1043,8 +1008,6 @@ input {
     min-height: 1.5rem;
     margin-bottom: 1%;
   }
-  /*место для заголовка h1 - отступы (для всех страниц, кроме главной)*/
-  .place_form{margin-top: $zero;}
   /*стили для главной страницы*/
   #Landing_page{
     /*заголовок на главной странице (названия компонентов)*/
@@ -1471,8 +1434,6 @@ input {
       flex: $zero $zero $percent100 !important;
       max-width: $percent100 !important;
     }
-    /*место, где находится форма заявки (обратной связи)*/
-    .place_form{margin-top: 2%;}
   }
 }
 @media screen and (min-width: 500px) and (max-width: 768px) {
@@ -1893,8 +1854,6 @@ input {
       flex: $zero $zero $percent100 !important;
       max-width: $percent100 !important;
     }
-    /*место, где находится форма заявки (обратной связи)*/
-    .place_form{margin-top: 2%;}
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2241,8 +2200,6 @@ input {
       margin: $zero auto;
       display: $displayBlock;
     }
-    /*место, где находится форма заявки (обратной связи)*/
-    .place_form{margin-top: 2%;}
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
