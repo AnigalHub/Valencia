@@ -6,7 +6,7 @@
       <p class="text">Для обеспечения безопасности охраняемого объекта, поддержания правопорядка и нейтрализации правонарушителей в частном охранном предприятии <span class="emphasized">"{{information.name_company}}" </span> имеются специальные средства индивидуальной защиты - особая экипировка и оснащение охранника.</p>
       <p class="text">Личный состав частного охранного предприятия <span class="emphasized"> "{{information.name_company}}" </span> - охранники 5-го и 6-го разряда (работа со спецсредствами и оружием).</p>
       <p class="text">Исходя из рисков и угроз, для каждого охраняемого объекта подбирается своя экипировка и средства защиты охраны.</p>
-      <h6>Перечень специальных средств, используемых в компании "{{information.name_company}}":</h6>
+      <h6>Спецсредства, используемые в компании "{{information.name_company}}":</h6>
       <div class="flex-container">
         <div class="beautiful_block" v-for="equipment in ListOfSpecialEquipments" :key="equipment.index">
             <img :src="equipment.img_src" :alt="equipment.img_alt"/>
