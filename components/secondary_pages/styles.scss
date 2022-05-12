@@ -10,6 +10,7 @@ $shade_2:#7e7317;
 $percent100:100%;
 $fontWeight600:600;
 $textCenter:center;
+$left:left;
 $uppercase:uppercase;
 $none:none;
 $cursorDefault:default;
@@ -99,7 +100,7 @@ h4{
 h6{
   font-size: 1.2rem;
   line-height: 1.6rem;
-  clear: left !important;
+  clear: $left !important;
   border-bottom: 3px solid $shade_2;
   padding: 0.8% $zero $zero;
   margin-bottom: 2% !important;
@@ -127,7 +128,7 @@ h6{
   box-shadow: 7px 7px 7px -7px rgba(34, 60, 80, 0.9);
 }
 /*первая и третья картинки на страницах услуг и "О нас"*/
-.first_img,.third_img{float: left;}
+.first_img,.third_img{float: $left;}
 /*первая картинка на страницах услуг и "О нас"*/
 .first_img{margin: $zero 1.5% 0.5% $zero;}
 /*вторая картинка на страницах услуг и "О нас"*/
@@ -135,7 +136,7 @@ h6{
 /*заголовки, которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
 .block_two{
   text-transform: $uppercase;
-  clear: left;
+  clear: $left;
   margin: $zero auto;
 }
 /*общие стили страниц (кроме главной)*/
@@ -297,8 +298,7 @@ input {
         width: 46%;
         padding: 3% 2%;
         margin: 1.5% 4% 3% $zero;
-        position: relative;
-        float: left;
+        float: $left;
         /*при наведении*/
        // &:hover {background-color: rgba(250, 250, 255, .8);}
       }
@@ -307,7 +307,7 @@ input {
     svg{
       width: 75px;
       height: 75px;
-      float: left;
+      float: $left;
       padding: .5%;
       /*стили цветов для svg*/
       .color_strokes_inside{
@@ -390,7 +390,7 @@ input {
       position: absolute;
       left: 2%;
       bottom: 10%;
-      text-align: left;
+      text-align: $left;
     }
     /*картинки*/
     img{
@@ -420,7 +420,7 @@ input {
     }
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)*/
     .text_Landing_page{
-      text-align: left;
+      text-align: $left;
       position: absolute;
       left: 2%;
       bottom: 3%;
@@ -528,12 +528,31 @@ input {
   .flex-container > div {
     width: 50%;
     margin-bottom: 1.5%;
+    &:hover{
+      /*выделение фраз в тексте - для красоты*/
+      .emphasized{color: $colorSelection}
+      /*svg принципов*/
+      svg {
+        /*стили цветов для svg*/
+        .color_strokes_inside{
+          fill: $colorBodyText;
+          stroke: $shade_2;
+        }
+        .color_inside_small_object{
+          fill: $shade_2;
+          stroke: $colorBodyText;
+        }
+        .bold_outline{
+          stroke: $shade_2;
+        }
+      }
+    }
     /*svg принципов*/
     svg {
       filter: contrast(120%) brightness(130%);
       /*стили цветов для svg*/
       .color_strokes_inside{
-        fill: #7d7110;
+        fill: $shade_2;
         stroke: $colorBodyText;
         stroke-width: 2;
       }
@@ -601,7 +620,7 @@ input {
 }
 /*страница "Тарифы"*/
 #tariffs{
-  clear: left;
+  clear: $left;
   /*заголовоки - касательно только для страницы "Тарифы"*/
   h3{margin: 1% $zero}
   /*типы тарифов*/
@@ -1699,7 +1718,7 @@ input {
       margin: $zero 1% 2%;
       /*картинки страницы "Тарифы"*/
       img{
-        float: left;
+        float: $left;
         width: 30%;
         margin: $zero 4% 4%;
       }
@@ -1726,7 +1745,7 @@ input {
   /*все страницы c "Услуги"*/
   .services {
     /*заголовок*/
-    h4{clear: left;}
+    h4{clear: $left;}
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{
       width: 30%;
@@ -2098,7 +2117,7 @@ input {
       height: 38px;
     }
     /*заголовки,которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
-    .block_one{clear: left;}
+    .block_one{clear: $left;}
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{width: 28%;}
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
