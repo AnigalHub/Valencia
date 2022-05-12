@@ -1,5 +1,4 @@
 $fontText:'Lora', serif;
-$fontImportantText:"Playfair Display", serif;
 $fontNumber:"Vollkorn", serif;
 $backgroundPage: #0a101a;
 $colorBodyText: #b1afaf;
@@ -16,15 +15,16 @@ $none:none;
 $cursorDefault:default;
 $cursorPointer:pointer;
 $zero: 0;
+$displayBlock:block;
+$displayFlex:flex;
+
 /*контейнер контента - на весь экран*/
 .container-fluid{
-  padding-left: $zero !important;
-  padding-right: $zero !important;
+  padding: $zero !important;
 }
 /*контейнер контента - по середине*/
 .container{
-  padding-right: 15px !important;
-  padding-left: 15px !important;
+  padding: 0 15px !important;
 }
 /*параметры сетки бутстрап - блок*/
 .row {margin: $zero !important;}
@@ -77,6 +77,7 @@ h1{
   letter-spacing: 2px;
 }
 h1,h2,h3,h6{font-weight: $fontWeight600 !important;}
+h1,h2,h3,h4,h5,h6{ font-family: $fontText;}
 h1{color: $colorSelection; }
 h3{color: $shadeOfWhite}
 h2,h4,h6{color: $colorBodyText;}
@@ -91,7 +92,7 @@ h3{
 }
 h4{
   font-weight: $fontWeight600;
-  display: block;
+  display: $displayBlock;
   padding-bottom: 0.5%;
   margin-bottom: $zero;
 }
@@ -105,7 +106,7 @@ h6{
 }
 /*контейнер, который включает в себя повтор блоков*/
 .flex-container {
-  display: flex;
+  display: $displayFlex;
   flex-wrap: wrap;
 }
 /*красивые блоки (используются в видах охран, страницах - "Технические средства","Спецсредства")*/
@@ -278,7 +279,7 @@ input {
       font-size: 1.2rem;
       line-height: 1.4rem;
       height: $percent100;
-      display: flex;
+      display: $displayFlex;
       align-items: $textCenter;
     }
     /*контейнер, который включает в себя повтор блоков (добавление отступов - касательно только этого компонента (Преимущества)*/
@@ -373,7 +374,7 @@ input {
   /*компонент "Типы" - 3 ссылки-картинки*/
   #Type{
     /*общие стили на весь компонент (Type) в целом*/
-    display: flex;
+    display: $displayFlex;
     max-width: $percent100;
     /*добавление стилей в заголовок (названия компонентов) - касатально только этого компонента (Типы)*/
     h2{
@@ -393,7 +394,7 @@ input {
     }
     /*блок с картинками*/
     .row{
-      display: flex;
+      display: $displayFlex;
       min-width: $percent100;
       height: auto;
       /*параметры сетки бутстрап (каждая картинка по отдельности)*/
@@ -432,7 +433,7 @@ input {
     .call_telephone{
       font-family: $fontNumber;
       font-size: 3.8rem;
-      display: block;
+      display: $displayBlock;
       text-align:$textCenter;
       padding: 3.5% $zero;
       letter-spacing: 1px;
@@ -498,7 +499,7 @@ input {
   button{
     font-family: $fontText;
     font-weight: $fontWeight600 !important;
-    display: block;
+    display: $displayBlock;
     margin: 1% auto;
     border-radius: 5px;
     background: radial-gradient(#f1f0f0,#343a40);
@@ -582,7 +583,7 @@ input {
     /*параметры сетки бутстрап (номер этапа, название этапа)*/
     .col-1,.col-2{
       padding: $zero !important;
-      display: flex;
+      display: $displayFlex;
       align-items: $textCenter;
     }
     /*блок под каждый этап*/
@@ -609,7 +610,7 @@ input {
       box-shadow: $zero 1px 5px 1px $colorSelection;
       padding: 5%;
       margin: 3% auto;
-      display: block;
+      display: $displayBlock;
     }
     /*текст под картинкой - описание каждого типа тарифа*/
     p{
@@ -639,7 +640,7 @@ input {
     /*ячейки таблицы*/
     tr td{
       width: 33%;
-      height: 90px;
+      height: 120px !important;
     }
   }
 }
@@ -755,7 +756,7 @@ input {
     img{
       padding: 6%;
       width: 55%;
-      display: block;
+      display: $displayBlock;
       margin: $zero auto;
     }
     /*абзац(текст)*/
@@ -806,7 +807,7 @@ input {
   .col .row{padding-bottom: 1.5%;}
   /*параметры сетки бутстрап (информация (название информации и информация))*/
   .col .col{
-    display: flex;
+    display: $displayFlex;
     align-items: $textCenter;
   }
   /*контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)*/
@@ -857,13 +858,6 @@ input {
 
 
 /******************* АДАПТИВНОСТЬ ***********************/
-@media screen and (max-width: 1200px) {
-  .title_guard,h1,h2,h3,h6,thead th.emphasized{font-family: $fontText}
-  #company .stage .col-1 .emphasized{font-family: $fontImportantText !important;}
-}
-@media screen and (min-width: 1200px) {
-  .title_guard,h1,h2,h3,h6,thead th,.emphasized{font-family: $fontImportantText}
-}
 @media screen and (max-width: 300px) {
   #Landing_page{
     /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
@@ -1043,7 +1037,7 @@ input {
       /*большая версия*/
       .desktop_version{display: $none;}
       /*мобильная версия*/
-      .mobile_version{display: block;}
+      .mobile_version{display: $displayBlock;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
       .text_Landing_page{
         font-size: .8rem;
@@ -1141,7 +1135,7 @@ input {
     #Clients{
       /*включаем слайдер для мобилки*/
       #carousel_mobile{
-        display: block;
+        display: $displayBlock;
         /*блок под картинки*/
         .carousel-item {padding: 2%;}
       }
@@ -1299,7 +1293,7 @@ input {
       .col{padding: $zero 10px !important;}
       /*картинка*/
       img{
-        display: block;
+        display: $displayBlock;
         margin: $zero auto;
         width: 65% !important;
       }
@@ -1354,7 +1348,7 @@ input {
       .col{padding: $zero !important;}
       /*картинка*/
       img{
-        display: block;
+        display: $displayBlock;
         margin-right: auto;
         margin-left: auto;
         width: 60%;
@@ -1516,7 +1510,7 @@ input {
       /*большая версия*/
       .desktop_version{display: $none;}
       /*мобильная версия*/
-      .mobile_version{display: block;}
+      .mobile_version{display: $displayBlock;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
       .text_Landing_page{
         font-size: .8rem;
@@ -1613,7 +1607,7 @@ input {
     #Clients{
       /*включаем слайдер для мобилки*/
       #carousel_mobile{
-        display: block;
+        display: $displayBlock;
         /*блок под картинки*/
         .carousel-item {padding: 2%;}
       }
@@ -1789,7 +1783,7 @@ input {
       .col{padding: $zero !important;}
       /*картинка*/
       img{
-        display: block;
+        display: $displayBlock;
         margin-right: auto;
         margin-left: auto;
         width: 65%;
@@ -1932,7 +1926,7 @@ input {
       /*большая версия*/
       .desktop_version{display: $none;}
       /*мобильная версия*/
-      .mobile_version{display: block;}
+      .mobile_version{display: $displayBlock;}
       /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Преимущества)*/
       .text_Landing_page{
         font-size: 1.02rem;
@@ -2063,7 +2057,7 @@ input {
     margin: $zero 1% 2%;
         /*последний тип*/
        &:last-child{
-         display: block;
+         display: $displayBlock;
          margin-left: auto;
          margin-right: auto;
        }
@@ -2145,7 +2139,7 @@ input {
       .col{padding: $zero 10px !important;}
       /*картинки*/
       img{
-        display: block;
+        display: $displayBlock;
         margin: 2% auto 0.8% auto;
         width: 60%;
       }
@@ -2195,7 +2189,7 @@ input {
       flex: $zero $zero 82% !important;
       max-width: 82% !important;
       margin: $zero auto;
-      display: block;
+      display: $displayBlock;
     }
     /*место, где находится форма заявки (обратной связи)*/
     .place_form{margin-top: 2%;}
