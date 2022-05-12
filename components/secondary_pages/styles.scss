@@ -45,10 +45,8 @@ $displayFlex:flex;
   }
 }
 /*текст на всех страницах (кроме главной)*/
-.text,a{
-  color: $colorBodyText;
-  font-size: 1.15rem;
-}
+.text,a{color: $colorBodyText;}
+.text,a, .emphasized{font-size: 1.15rem;}
 /*любой текст (текст,заголочки, ссылки и т.д.)*/
 .text,.text_descr,.emphasized,.page a,#Landing_page a,h1,h2,h3,h4,h5,h6{filter: contrast(140%);}
 /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
@@ -324,8 +322,14 @@ input {
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Услуги)*/
     .text_Landing_page{padding: 2% $zero;}
     /*абзацы*/
-    p{margin: $zero !important;}
-    /*блоки-ссылки с картинками и кнопками*/
+    p{
+      margin: $zero !important;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      display: $displayFlex !important;
+    }
+     /*блоки-ссылки с картинками и кнопками*/
     .flex-container > a {
       width: 30.5%;
       margin: $zero $zero 2% 2.5%;
@@ -605,7 +609,7 @@ input {
       border-radius: 50%;
       background: $shadeOfBlack;
       box-shadow: $zero 1px 5px 1px $colorSelection;
-      padding: 5%;
+      padding: 2%;
       margin: 3% auto;
       display: $displayBlock;
     }
@@ -638,7 +642,7 @@ input {
     /*ячейки таблицы*/
     tr td{
       width: 33%;
-      height: 120px !important;
+      height: 120px;
     }
     tr:hover td{
       background: rgba(206, 193, 93, .28);
@@ -792,6 +796,13 @@ input {
       padding: 1%;
       text-align:$textCenter;
       margin-bottom: $zero !important;
+    }
+    p{
+      height: 40px;
+      margin: $zero !important;
+      align-items: center;
+      justify-content: center;
+      display: $displayFlex !important;
     }
   }
 }
@@ -1845,13 +1856,13 @@ input {
     li{padding-bottom: .5%;}
   }
   /*текст на всех страницах (кроме главной)*/
-  .text,a{
-    font-size: .85rem;
+  .text,a,.emphasized,label{
+    font-size: .9rem;
     line-height: 1.2rem;
   }
   /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
   .text_descr{
-    font-size: .75rem !important;
+    font-size: .8rem !important;
     line-height: 1rem !important;
   }
   /*заголовки на всех страницах (кроме главной)*/
@@ -1867,10 +1878,7 @@ input {
     line-height: 1.3rem;
   }
   /*метка в форме заявки (обратной связи)*/
-  label{
-    font-size: .85rem;
-    margin-bottom: $zero !important;
-  }
+  label{margin-bottom: $zero !important;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1rem;
@@ -2156,6 +2164,7 @@ input {
       margin-bottom: .5rem !important;
     }
   }
+  #Services p, #our_clients .flex-container > div p{height: 30px;}
   /*страница "Наши клиенты"*/
   #our_clients{
     /*блоки с картинкой и названием клиента*/
@@ -2195,21 +2204,18 @@ input {
     font-size: 1rem;
     line-height: 1.45rem;
   }
-  /*текст на всех страницах (кроме главной)*/
-  .text,a{
-    font-size: .9rem;
+  /*текст на всех страницах (кроме главной), метка в форме заявки (обратной связи)*/
+  .text,a,label{
+    font-size: 1rem;
     line-height: 1.3rem;
   }
   /*текст страницы "Тарифы" и компонента "Тарифы" - который в скобочках*/
   .text_descr{
-    font-size: .8rem !important;
+    font-size: .85rem !important;
     line-height: 1.2rem !important;
   }
   /*метка в форме заявки (обратной связи)*/
-  label{
-    font-size: .9rem;
-    margin-bottom: $zero !important;
-  }
+  label{margin-bottom: $zero !important;}
   /*поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"*/
   .form-control {
     min-height: 1rem;
@@ -2329,6 +2335,7 @@ input {
   }
   /*страница "Тарифы"*/
   #tariffs{
+    table tr td {height: 90px !important;}
     .text{
       font-size: .85rem ;
       line-height: 1.15rem;
@@ -2413,7 +2420,7 @@ input {
   /*страница "Тарифы"*/
   #tariffs{
     /*текст под картинкой - описание каждого типа тарифа*/
-    p{height: 32vh;}
+    p{height: 120px;}
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -2493,7 +2500,7 @@ input {
   #contact, #Feedback {
     /*кнопки*/
     button {
-      font-size: 1rem;
+      font-size: 1.1rem;
       padding: 1.5%;
     }
   }
@@ -2501,7 +2508,7 @@ input {
   #company{
     /*блоки принципов*/
     .flex-container > div {
-      margin-bottom: 1%  !important;
+      margin-bottom: 1% !important;
       /*svg принципов*/
       svg {
         width: 75px;
