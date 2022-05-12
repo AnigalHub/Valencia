@@ -99,11 +99,14 @@ h4{
 h6{
   font-size: 1.2rem;
   line-height: 1.6rem;
-  clear: $left !important;
+  clear: $left;
   border-bottom: 3px solid $shade_2;
   padding: .8% $zero $zero;
-  margin-bottom: 2% !important;
+  margin-bottom: 1% !important;
   display: table;
+}
+.noclear{
+  clear: none !important;
 }
 
 /*контейнер, который включает в себя повтор блоков*/
@@ -2130,7 +2133,7 @@ input {
       height: 38px;
     }
     /*заголовки,которые не будут переносится вверх, если выше - текста с картинкой будет мало (используется на страницах услуг)*/
-    .block_one{clear: $left;}
+
     /*вторая картинка на страницах "Личная охрана", "Сопровождение грузов"*/
     .second_img{width: 28%;}
     /*третья картинка на страницах "Личная охрана", "Сопровождение грузов"*/
