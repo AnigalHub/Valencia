@@ -4,11 +4,11 @@
       <h1>{{name_page}}</h1>
       <img src="../../static/services/guard_of_events/guard_of_events.jpg" class="first_img" alt="охрана_мероприятий"/>
       <p class="text"><span class="emphasized">Любое массовое скопление людей на мероприятиях </span> - это риск для безопасности участников мероприятия. Вне зависимости общественные это мероприятия, деловые или частные необходимо предоставлять защиту жизни и здоровья участникам и следить за соблюдением порядка на территории и избегать инцидентов.</p>
-      <h6 class="block_one">Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
+      <h6 class="noclear">Каждое мероприятие уникальное и отличается следующими характеристиками:</h6>
       <ul class="text">
         <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
       </ul>
-      <h6 class="block_two">Перечень мер по охране мероприятий:</h6>
+      <h6>Перечень мер по охране мероприятий:</h6>
       <img class="second_img" src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта"/>
       <ul class="text">
         <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
