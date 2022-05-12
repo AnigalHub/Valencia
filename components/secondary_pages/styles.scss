@@ -673,6 +673,7 @@ input {
     padding: .25%;
     height: 230px;
     margin: $zero 1% 2%;
+    &:hover{box-shadow: $zero 3px 3px $zero $shadowImg;}
     //параметры сетки бутстрап (перечисление охран)
     .col{padding: $zero 5px !important;}
     //параметры сетки бутстрап (место с картинкой)
@@ -690,17 +691,6 @@ input {
   .flex-container > .beautiful_block {
     //как выглядит список (сдвигаем)
     ul {margin-top: 5%;}
-    //последний блок
-    &:last-child {
-      box-shadow: $none;
-      border: $none;
-      padding: $zero;
-      //картинка
-      img {
-        width: $percent100;
-        height: $percent100;
-      }
-    }
   }
 }
 //страницы типов охран ("Охрана образовательных и дошкольных учреждений","Охрана медицинских учреждений",
@@ -2005,8 +1995,7 @@ input {
         //последний тип
        &:last-child{
          display: $displayBlock;
-         margin-left: auto;
-         margin-right: auto;
+         margin: $zero auto;
        }
     }
     //таблица
