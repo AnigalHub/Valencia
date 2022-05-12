@@ -1,6 +1,6 @@
 <template>
-  <div class="place_form">
-    <form name="sentMessage" id="Form" @submit.prevent="SendFeedback">
+  <div>
+    <form name="sentMessage" id="Form">
       <label for="name">Ваше имя:</label>
       <input v-model="feedback.name" type="text" class="form-control" placeholder="ФИО" id="name" name="name" required="" data-validation-required-message="Пожалуйста, введите Ваше имя">
       <label for="phone">Ваш телефон:</label>
