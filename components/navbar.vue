@@ -79,23 +79,24 @@
   $textCenter:center;
   $shadeOfBlack: black;
   $fontText:'Lora', serif;
+  $zero: 0;
 
   //вид меню на большом экране (отступы)
-  .navbar-expand-xl .navbar-collapse {margin-left: 0;}
+  .navbar-expand-xl .navbar-collapse {margin-left:   $zero;}
   #Nav{
     .navbar-nav{width: 100% !important;}
-    .dropdown{padding: .15rem .5rem 0 !important;}
+    .dropdown{padding: .15rem .5rem   $zero !important;}
     .nav-item{
-      padding: 0 .5%;
+      padding:   $zero .5%;
       height: 30px !important;
     }
     //меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)
-    padding: 0 !important;
+    padding:   $zero !important;
     background: $shadeOfBlack;
-    box-shadow: 13px 0 18px -6px #000000;
+    box-shadow: 13px   $zero 18px -6px $shadeOfBlack;
     .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #b1afaf;}
     //контейнер, в котором находится весь контент меню
-    .container {padding: 0 !important;}
+    .container {padding:   $zero !important;}
     //блок под логотип(svg, название компании, что за компания(чоп))
     .navbar-brand{
       padding: .2rem .35rem .15rem ;
@@ -107,7 +108,7 @@
         width: 50px;
         height: 54px;
         padding: .8%;
-        margin: 2% 0 1%;
+        margin: 2%   $zero 1%;
       }
       //название компании в логотипе
       .name_brand{
@@ -132,7 +133,7 @@
     .nav-link,.telephone{letter-spacing: -.3px;}
     //активные кнопки
     .nav-link-active{
-      text-shadow: 0 1px 2px $shadeOfBlack !important;
+      text-shadow:   $zero 1px 2px $shadeOfBlack !important;
       color: #e6e686 !important;
     }
     //все кнопки (кроме кнопок в dropdown)
@@ -146,11 +147,11 @@
     .nav-link:hover,.show > .btn-secondary.dropdown-toggle,
     .dropdown-toggle:hover,.dropdown-item:hover,  .show > .btn-secondary.dropdown-toggle{
       color: #007bff !important;
-      text-shadow: 0 .25px .5px $shadeOfBlack !important;
+      text-shadow:   $zero .25px .5px $shadeOfBlack !important;
     }
     //кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки
     .btn{
-      padding: 0 !important;
+      padding:   $zero !important;
       background: transparent !important;
       border: none !important;
     }
@@ -160,12 +161,12 @@
     }
     //выпадающий блок при нажатии на "Услуги" (dropdown)
     .dropdown-menu {
-      padding: 0 !important;
+      padding:   $zero !important;
       border: none !important;
     }
     //кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)
     .dropdown-item{
-      box-shadow: 2px 0 9px -6px #000000;
+      box-shadow: 2px   $zero 9px -6px $shadeOfBlack;
       text-shadow: none;
       font-size: 1.15rem;
       padding: .25rem .3rem !important;
@@ -193,7 +194,7 @@
   //*****************АДАПТИВНОСТЬ**************
   @media screen  and (max-width: 1200px) {
     #Nav{
-      box-shadow: 0 0 10px 0 #000000;
+      box-shadow:   $zero   $zero 10px   $zero $shadeOfBlack;
       //меню (кнопки все)
       .navbar-nav{margin-left: 3%;}
       //блок под логотип(svg, название компании, что за компания(чоп))
@@ -207,7 +208,7 @@
         .name_brand{font-size: 1.14rem;}
       }
       //все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)
-      .nav-link{padding: .4rem 0 !important;}
+      .nav-link{padding: .4rem   $zero !important;}
       //все кнопки (кроме кнопок в опускающемся dropdown)
       .nav-link,.dropdown-toggle{font-size: 1.1rem !important;}
       //номер телефона, блоки подвидов охраны
@@ -227,7 +228,7 @@
       .navbar-nav{margin-left: -.8%;}
       //блок под логотип(svg, название компании, что за компания(чоп))
       .navbar-brand{
-        margin-right: 0 !important;
+        margin-right:   $zero !important;
         //svg-щит
         #navbar_svg{
           width:42px;
@@ -239,7 +240,7 @@
       //все кнопки, номер телефона
       .nav-link,.dropdown-item,.telephone,.dropdown-toggle{font-size: 1.1rem !important;}
       //все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)
-      .nav-link{padding: 0 .3rem !important;}
+      .nav-link{padding:   $zero .3rem !important;}
       //номер телефона
       .telephone{margin-left: -.8%;}
     }
@@ -256,7 +257,7 @@
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
       .nav-link,.telephone,.dropdown-toggle,.dropdown-item{font-size: 1.1rem !important;}
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
-      .nav-link{padding: 0 .35rem !important;}
+      .nav-link{padding:   $zero .35rem !important;}
       //номер телефона
       .telephone{margin-left: -1%;}
     }
@@ -264,9 +265,9 @@
   @media screen and (min-width: 1300px) and (max-width: 1350px) {
     #Nav{
       //меню (кнопки все)
-      .navbar-nav{margin-left: 0;}
+      .navbar-nav{margin-left:   $zero;}
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
-      .nav-link{padding: 0 .42rem !important;}
+      .nav-link{padding:   $zero .42rem !important;}
     }
   }
   @media screen and (min-width: 1350px) and (max-width: 1400px) {
