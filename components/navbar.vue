@@ -78,14 +78,13 @@
 <style lang="scss">
   $textCenter:center;
   $shadeOfBlack: black;
-  $shadeOfWhite: white;
   $fontText:'Lora', serif;
 
   /*вид меню на большом экране (отступы)*/
   .navbar-expand-xl .navbar-collapse {margin-left: 0;}
   #Nav{
     .navbar-nav{width: 100% !important;}
-    .dropdown{padding: 0.15rem .5rem 0 !important;}
+    .dropdown{padding: .15rem .5rem 0 !important;}
     .nav-item{
       padding: 0 .5%;
       height: 30px !important;
@@ -94,12 +93,12 @@
     padding: 0 !important;
     background: $shadeOfBlack;
     box-shadow: 13px 0 18px -6px #000000;
-    .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #a2a2a3;}
+    .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #b1afaf;}
     /*контейнер, в котором находится весь контент меню*/
     .container {padding: 0 !important;}
     /*блок под логотип(svg, название компании, что за компания(чоп))*/
     .navbar-brand{
-      padding: .2rem .35rem 0.15rem ;
+      padding: .2rem .35rem .15rem ;
       font-family: $fontText;
       font-weight: 600;
       margin-top: -.8%;
@@ -169,7 +168,7 @@
       box-shadow: 2px 0 9px -6px #000000;
       text-shadow: none;
       font-size: 1.15rem;
-      padding: 0.25rem .3rem !important;
+      padding: .25rem .3rem !important;
       /*при наведении*/
       &:hover{background: #dce4ee;}
     }
@@ -240,7 +239,7 @@
       /*все кнопки, номер телефона*/
       .nav-link,.dropdown-item,.telephone,.dropdown-toggle{font-size: 1.1rem !important;}
       /*все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)*/
-      .nav-link{padding: 0 0.3rem !important;}
+      .nav-link{padding: 0 .3rem !important;}
       /*номер телефона*/
       .telephone{margin-left: -.8%;}
     }
