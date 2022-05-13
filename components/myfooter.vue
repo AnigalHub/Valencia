@@ -57,21 +57,23 @@
   $shadeOfWhite: white;
   $fontText:'Lora', serif;
   $zero: 0;
+  $displayBlock:block;
+  $percent100:100%;
+  $textCenter:center;
 
   /*компонент Footer*/
   #Myfooter{
     padding: 2% $zero;
-    background: black;
+    background: $shadeOfBlack;
     /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
     .flex-container > div {
       width: 20%;
       margin: $zero;
       color: $shadeOfWhite !important;
-      text-align: center;
+      text-align: $textCenter;
       letter-spacing: -.25px;
-      font-weight: 400;
       /*ссылки*/
-      a{display: block;}
+      a{display: $displayBlock;}
     }
     /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
     .flex-container > div,a {
@@ -93,7 +95,7 @@
           width: 50%;
           /*5-ый (блок с адресом)*/
           &:nth-child(5){
-            width: 100%;
+            width: $percent100;
             margin-bottom: 5%;
           }
         }
@@ -105,14 +107,14 @@
     #Myfooter{
       /*контейнер, который включает в себя повтор блоков*/
       .flex-container{
-        margin: 1.5% 0;
+        margin: 1.5% $zero;
         /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
         & > div {
           width: 33%;
           /*4-ый и 5-ый (блок с адресом)*/
           &:nth-child(4), &:nth-child(5), {
-            display: block;
-            margin: 0 auto;
+            display: $displayBlock;
+            margin: $zero auto;
           }
         }
       }
