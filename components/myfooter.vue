@@ -53,15 +53,20 @@
 </script>
 
 <style scoped lang="scss">
+  $shadeOfBlack: black;
+  $shadeOfWhite: white;
+  $fontText:'Lora', serif;
+  $zero: 0;
+
   /*компонент Footer*/
   #Myfooter{
-    padding: 2% 0;
+    padding: 2% $zero;
     background: black;
     /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
     .flex-container > div {
       width: 20%;
-      margin: 0;
-      color: white !important;
+      margin: $zero;
+      color: $shadeOfWhite !important;
       text-align: center;
       letter-spacing: -.25px;
       font-weight: 400;
@@ -71,8 +76,8 @@
     /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
     .flex-container > div,a {
       font-size: 1.2rem;
-      font-family: "Lora", serif !important;
-      color: white !important;
+      font-family: $fontText!important;
+      color: $shadeOfWhite !important;
     }
   }
 
