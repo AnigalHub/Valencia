@@ -76,7 +76,7 @@
 
 </script>
 <style lang="scss">
-  $text$textCenter:center;
+  $textCenter:center;
 
   /*вид меню на большом экране (отступы)*/
   .navbar-expand-xl .navbar-collapse {margin-left: 0;}
