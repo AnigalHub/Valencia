@@ -77,6 +77,9 @@
 </script>
 <style lang="scss">
   $textCenter:center;
+  $shadeOfBlack: black;
+  $shadeOfWhite: white;
+  $fontText:'Lora', serif;
 
   /*вид меню на большом экране (отступы)*/
   .navbar-expand-xl .navbar-collapse {margin-left: 0;}
@@ -89,7 +92,7 @@
     }
     /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
     padding: 0 !important;
-    background: black;
+    background: $shadeOfBlack;
     box-shadow: 13px 0 18px -6px #000000;
     .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #a2a2a3;}
     /*контейнер, в котором находится весь контент меню*/
@@ -97,7 +100,7 @@
     /*блок под логотип(svg, название компании, что за компания(чоп))*/
     .navbar-brand{
       padding: .2rem .35rem 0.15rem ;
-      font-family: 'Playfair Display', serif;
+      font-family: $fontText;
       font-weight: 600;
       margin-top: -.8%;
       /*svg-щит*/
@@ -117,12 +120,12 @@
     }
     /*номер телефона*/
     .telephone{
-      text-align: $textCenter:center;;
+      text-align: $textCenter;
       font-weight: 900 !important;
       font-family: 'Vollkorn', serif;
       //при наведении
       &:hover{
-        text-shadow: -.1px .25px .15px black;
+        text-shadow: -.1px .25px .15px $shadeOfBlack;
         text-decoration: underline;
       }
     }
@@ -130,7 +133,7 @@
     .nav-link,.telephone{letter-spacing: -.3px;}
     /*активные кнопки*/
     .nav-link-active{
-      text-shadow: 0 1px 2px black !important;
+      text-shadow: 0 1px 2px $shadeOfBlack !important;
       color: #e6e686 !important;
     }
     /*все кнопки (кроме кнопок в dropdown)*/
@@ -144,7 +147,7 @@
     .nav-link:hover,.show > .btn-secondary.dropdown-toggle,
     .dropdown-toggle:hover,.dropdown-item:hover,  .show > .btn-secondary.dropdown-toggle{
       color: #007bff !important;
-      text-shadow: 0 .25px .5px black !important;
+      text-shadow: 0 .25px .5px $shadeOfBlack !important;
     }
     /*кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки*/
     .btn{
@@ -171,7 +174,7 @@
       &:hover{background: #dce4ee;}
     }
     /*все кнопки, которые находятся в dropdown - в том числе и подпункты*/
-    .dropdown-item,.menu_org,.menu_obj,.menu_state{background: black !important;}
+    .dropdown-item,.menu_org,.menu_obj,.menu_state{background: $shadeOfBlack !important;}
     /*блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)*/
     .menu_org{top: -.35% !important;}
     /*блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)*/
@@ -295,9 +298,9 @@
     /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown),номер телефона*/
     .nav-link,.telephone{
       height: 1.7em;
-      text-align: $textCenter:center;;
+      text-align: $textCenter;
       display: flex;
-      align-items: $textCenter:center;;
+      align-items: $textCenter;
     }
   }
 </style>
