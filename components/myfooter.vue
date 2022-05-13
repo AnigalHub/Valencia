@@ -77,7 +77,7 @@
     }
     /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
     .flex-container > div,a {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-family: $fontText!important;
       color: $shadeOfWhite !important;
     }
@@ -124,14 +124,14 @@
     /*компонент Footer*/
     #Myfooter {
       /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
-      .flex-container > div,a {font-size: 1.1rem !important;}
+      .flex-container > div,a {font-size: .9rem !important;}
     }
   }
   @media screen and (min-width:1250px) and (max-width: 1400px) {
     /*компонент Footer*/
     #Myfooter {
       /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
-      .flex-container > div,a {font-size: 1.14rem !important;}
+      .flex-container > div,a {font-size: 1.1rem !important;}
     }
   }
 </style>
