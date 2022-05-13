@@ -61,21 +61,21 @@
   $percent100:100%;
   $textCenter:center;
 
-  /*компонент Footer*/
+  //компонент Footer
   #Myfooter{
     padding: 2% $zero;
     background: $shadeOfBlack;
-    /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+    //стили на одинаковые блоки контейнера (столбики с ссылками)
     .flex-container > div {
       width: 20%;
       margin: $zero;
       color: $shadeOfWhite !important;
       text-align: $textCenter;
       letter-spacing: -.25px;
-      /*ссылки*/
+      //ссылки
       a{display: $displayBlock;}
     }
-    /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+    //стили на одинаковые блоки контейнера (столбики с ссылками)
     .flex-container > div,a {
       font-size: 1.15rem;
       font-family: $fontText!important;
@@ -83,17 +83,17 @@
     }
   }
 
-  /************АДАПТИВКА***************/
+  //***********АДАПТИВКА**************
   @media screen and (max-width: 768px) {
-    /*компонент Footer*/
+    //компонент Footer
     #Myfooter {
-      /*контейнер, который включает в себя повтор блоков*/
+      //контейнер, который включает в себя повтор блоков
       .flex-container {
         margin-top: 5%;
-        /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+        //стили на одинаковые блоки контейнера (столбики с ссылками)
         & > div {
           width: 50%;
-          /*5-ый (блок с адресом)*/
+          //5-ый (блок с адресом)
           &:nth-child(5){
             width: $percent100;
             margin-bottom: 5%;
@@ -103,15 +103,15 @@
     }
   }
   @media screen and (min-width:768px) and (max-width: 992px) {
-    /*компонент Footer*/
+    //компонент Footer
     #Myfooter{
-      /*контейнер, который включает в себя повтор блоков*/
+      //контейнер, который включает в себя повтор блоков
       .flex-container{
         margin: 1.5% $zero;
-        /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+        //стили на одинаковые блоки контейнера (столбики с ссылками)
         & > div {
           width: 33%;
-          /*4-ый и 5-ый (блок с адресом)*/
+          //4-ый и 5-ый (блок с адресом)
           &:nth-child(4), &:nth-child(5), {
             display: $displayBlock;
             margin: $zero auto;
@@ -121,16 +121,16 @@
     }
   }
   @media screen and (max-width: 1250px) {
-    /*компонент Footer*/
+    //компонент Footer
     #Myfooter {
-      /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+      //стили на одинаковые блоки контейнера (столбики с ссылками)
       .flex-container > div,a {font-size: .9rem !important;}
     }
   }
   @media screen and (min-width:1250px) and (max-width: 1400px) {
-    /*компонент Footer*/
+    //компонент Footer
     #Myfooter {
-      /*стили на одинаковые блоки контейнера (столбики с ссылками)*/
+      //стили на одинаковые блоки контейнера (столбики с ссылками)
       .flex-container > div,a {font-size: 1.1rem !important;}
     }
   }
