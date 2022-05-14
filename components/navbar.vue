@@ -83,6 +83,7 @@
   $percent100:100%;
   $fontWeight600:600;
   $none:none;
+  $displayBlock:block;
 
   //вид меню на большом экране (отступы)
   .navbar-expand-xl .navbar-collapse {margin-left:   $zero;}
@@ -191,7 +192,7 @@
       left: $percent100;
     }
     //при наведении на определенный вид услуги - показывается блок с определенными подвидами услуг
-    .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {display:block;}
+    .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {display:$displayBlock;}
   }
 
   //*****************АДАПТИВНОСТЬ**************
@@ -222,7 +223,7 @@
         box-shadow: $none !important;
       }
       //кнопки - список - который находится в dropdown
-      .btn-group{display: block}
+      .btn-group{display: $displayBlock}
     }
   }
   @media screen and (min-width: 1200px) and (max-width: 1250px) {
