@@ -21,6 +21,7 @@ $displayFlex:flex;
 $flexDirectionColumn: column;
 $flexDirectionColumnReverse: column-reverse;
 $boxShadowImg: 7px 7px 7px -7px;
+$auto:auto;
 
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
@@ -66,7 +67,7 @@ $boxShadowImg: 7px 7px 7px -7px;
   text-decoration: $none !important;
 }
 //картинки (общие стили)
-img{height: auto;}
+img{height: $auto;}
 //заголовки на всех страницах (кроме главной)
 h1{
   font-size: 2.2rem;
@@ -135,7 +136,7 @@ h6{
 .block_two{
   text-transform: $uppercase;
   clear: $left;
-  margin: $zero auto;
+  margin: $zero $auto;
 }
 //общие стили страниц
 .page,#Landing_page{background: $backgroundPage;}
@@ -213,7 +214,7 @@ input {
   #Home .slogan, #Feedback .call_telephone, #Import_numbers .number{color: $colorSelection;}
   //компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами
   #Home{
-    height: auto;
+    height: $auto;
     background: url(../../static/Landing_page/Home/background_1.jpg) $percent100 $percent100 no-repeat;
     background-size: $percent100 $percent100;
     animation: anim 30s ease-out infinite; //время смены фона и эффект
@@ -387,7 +388,7 @@ input {
     .row{
       display: $displayFlex;
       min-width: $percent100;
-      height: auto;
+      height: $auto;
       //параметры сетки бутстрап (каждая картинка по отдельности)
       .col{
         padding: $zero !important;
@@ -466,7 +467,7 @@ input {
     iframe {
       filter: opacity(75%) brightness(95%) contrast(110%);
       min-height: 400px;
-      height: auto;
+      height: $auto;
       width: $percent100 !important;
       border:0;
     }
@@ -479,7 +480,7 @@ input {
     font-family: $fontText;
     font-weight: $fontWeight600 !important;
     display: $displayBlock;
-    margin: 1% auto;
+    margin: 1% $auto;
     border-radius: 5px;
     background: radial-gradient($colorBodyText,#343a40);
     padding: 2%;
@@ -607,7 +608,7 @@ input {
       background: $shadeOfBlack;
       box-shadow: $zero 1px 5px 1px $colorSelection;
       padding: 2%;
-      margin: 3% auto;
+      margin: 3% $auto;
       display: $displayBlock;
     }
     //текст под картинкой - описание каждого типа тарифа
@@ -753,7 +754,7 @@ input {
       padding: 6%;
       width: 55%;
       display: $displayBlock;
-      margin: $zero auto;
+      margin: $zero $auto;
     }
     //абзац(текст)
     p{
@@ -845,7 +846,7 @@ input {
     iframe {
       filter: opacity(85%) brightness(92%);
       min-height: 500px;
-      height: auto;
+      height: $auto;
       width: $percent100 !important;
       border: $zero;
     }
@@ -985,7 +986,7 @@ input {
     }
     //компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами
     #Home{
-      height: auto;
+      height: $auto;
       background: url(../../static/Landing_page/Home/background_1.jpg) $percent100 $percent100 no-repeat !important ;
       background-size: $percent100 $percent100 !important;
       animation: $none;
@@ -1185,7 +1186,7 @@ input {
         //параметры сетки бутстрап (описание этапа)
         .col{
           padding: $zero !important;
-          flex-basis: auto !important;
+          flex-basis: $auto !important;
         }
       }
       //абзац
@@ -1202,7 +1203,7 @@ input {
       img{
         float: $none;
         width: 45%;
-        margin: 2% auto $zero;
+        margin: 2% $auto $zero;
       }
       //текст под картинкой - описание каждого типа тарифа
       p{margin-top: 4%;}
@@ -1211,7 +1212,7 @@ input {
     table{
       //ячейки таблицы
       tr td{
-        height: auto !important;
+        height: $auto !important;
         //первый столбец таблицы
         &:first-child {width: 35%;}
       }
@@ -1244,7 +1245,7 @@ input {
   .services_with_types{
     //блоки под типы охран (охрана объектов - промышленных/транспорта)
     .flex-container > .beautiful_block {
-      height: auto !important;
+      height: $auto !important;
       width: $percent100;
       margin: $zero $zero 2%;
       //как выглядит список (сдвигаем)
@@ -1265,7 +1266,7 @@ input {
       //картинка
       img{
         display: $displayBlock;
-        margin: $zero auto;
+        margin: $zero $auto;
         width: 65% !important;
       }
     }
@@ -1318,8 +1319,8 @@ input {
       //картинка
       img{
         display: $displayBlock;
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: $auto;
+        margin-left: $auto;
         width: 60%;
       }
     }
@@ -1624,7 +1625,7 @@ input {
         //параметры сетки бутстрап (описание этапа)
         .col{
           padding: $zero !important;
-          flex-basis: auto !important;
+          flex-basis: $auto !important;
         }
       }
       //блок под каждый этап
@@ -1654,7 +1655,7 @@ input {
     table{
       //ячейки таблицы
       tr td{
-        height: auto !important;
+        height: $auto !important;
         //первый столбец таблицы
          &:first-child {width: 35%;}
       }
@@ -1687,7 +1688,7 @@ input {
     //блоки под типы охран (охрана объектов - промышленных/транспорта)
     .flex-container > .beautiful_block {
       width: $percent100;
-      height: auto !important;
+      height: $auto !important;
       margin: $zero $zero 2%;
       //название типа охраны
       p{margin-bottom: .8rem !important;}
@@ -1741,8 +1742,8 @@ input {
       //картинка
       img{
         display: $displayBlock;
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: $auto;
+        margin-left: $auto;
         width: 65%;
       }
     }
@@ -2009,7 +2010,7 @@ input {
         //последний тип
        &:last-child{
          display: $displayBlock;
-         margin: $zero auto;
+         margin: $zero $auto;
        }
     }
     //таблица
@@ -2045,7 +2046,7 @@ input {
     //блоки под типы охран (охрана объектов - промышленных/транспорта)
     .flex-container > .beautiful_block {
       width: $percent100;
-      height: auto !important;
+      height: $auto !important;
       margin: $zero $zero 2%;
       //название типа охраны
       p{margin-bottom: .8rem !important;}
@@ -2083,7 +2084,7 @@ input {
       //картинки
       img{
         display: $displayBlock;
-        margin: 2% auto .8% auto;
+        margin: 2% $auto .8% $auto;
         width: 60%;
       }
     }
@@ -2132,7 +2133,7 @@ input {
     .col-5{
       flex: $zero $zero 82% !important;
       max-width: 82% !important;
-      margin: $zero auto;
+      margin: $zero $auto;
       display: $displayBlock;
     }
   }
@@ -2218,7 +2219,7 @@ input {
         letter-spacing: -.15px;
       }
       //картинки
-      img{height: auto;}
+      img{height: $auto;}
     }
     //компонент "Обратная связь"
     #Feedback{
