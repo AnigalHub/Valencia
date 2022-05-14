@@ -22,7 +22,7 @@ $displayFlex:flex;
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
 //контейнер контента - по середине
-.container{padding: 0 15px !important;}
+.container{padding: $zero 15px !important;}
 //параметры сетки бутстрап - блок
 .row {margin: $zero !important;}
 //svg в шапке меню
@@ -84,7 +84,7 @@ h2,h3{
 }
 h3{
   line-height: 1.6rem;
-  text-align:$textCenter;
+  text-align: $textCenter;
 }
 h4{
   font-weight: $fontWeight600;
@@ -102,7 +102,7 @@ h6{
   display: table;
 }
 //не перемещать элемент - заголовок
-.noclear{clear: none !important;}
+.noclear{clear: $none !important;}
 //контейнер, который включает в себя повтор блоков
 .flex-container {
   display: $displayFlex;
@@ -217,13 +217,13 @@ input {
     //смена фона
     @keyframes anim {
       0% {background: url(../../static/Landing_page/Home/background_1.jpg) no-repeat;background-size: $percent100 $percent100;}
-      33%{background: url(../../static/Landing_page/Home/background_2.jpg) no-repeat;background-size: $percent100 $percent100;}
-      67%{background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: $percent100 $percent100;}
+      33% {background: url(../../static/Landing_page/Home/background_2.jpg) no-repeat;background-size: $percent100 $percent100;}
+      67% {background: url(../../static/Landing_page/Home/background_3.jpg) no-repeat;background-size: $percent100 $percent100;}
     }
     //картинка с охранником
     img{
-      width:108%;
-      margin-left:-8%;
+      width: 108%;
+      margin-left: -8%;
       filter: contrast(110%) brightness(110%) !important;
     }
     //название чопа
@@ -423,7 +423,7 @@ input {
     //номер телефона
     .call_telephone{
       font-size: 3.8rem;
-      display:$displayBlock;
+      display: $displayBlock;
       padding: 3.5% $zero;
       letter-spacing: 1px;
       //при наведении
@@ -464,7 +464,7 @@ input {
       filter: opacity(75%) brightness(95%) contrast(110%);
       min-height: 400px;
       height: auto;
-      width:$percent100 !important;
+      width: $percent100 !important;
       border:0;
     }
   }
@@ -596,7 +596,7 @@ input {
   //типы тарифов
   .flex-container > .type{
     width: 31.8%;
-    margin:$zero .75%;
+    margin: $zero .75%;
     //картинки страницы "Тарифы"
     img{
       width: 60%;
@@ -782,7 +782,7 @@ input {
     //выделение фраз в тексте - для красоты
     .emphasized{
       padding: 1%;
-      text-align:$textCenter;
+      text-align: $textCenter;
       margin-bottom: $zero !important;
     }
     //абзац
@@ -823,7 +823,7 @@ input {
     height: 60px;
     //стили цветов для svg
     .color_inside{fill: $none;}
-    .color_shadow{fill:$none;}
+    .color_shadow{fill: $none;}
     .outline{
       fill: $shade_2;
       stroke: $colorBodyText;
@@ -844,7 +844,7 @@ input {
       min-height: 500px;
       height: auto;
       width: $percent100 !important;
-      border:$zero;
+      border: $zero;
     }
   }
 }
@@ -901,7 +901,7 @@ input {
       //слоган
       .slogan{padding: 19% $zero 8% 19%;}
       //картинка с охранником
-      img{width:256% !important;}
+      img{width: 256% !important;}
     }
     //компонент "Преимущества" - 6 блоков с svg и текстом
     #Advantages{
@@ -958,7 +958,7 @@ input {
     font-size: .9rem;
     line-height: 1.2rem;
     border-top: 3px solid $shade_2;
-    padding: 0;
+    padding: $zero;
   }
   //поле ввода в форме заявки (обратной связи) - фраза внутри
   .form-control{
@@ -994,7 +994,7 @@ input {
       }
       //слоган
       .slogan{
-        font-weight:$fontWeight600;
+        font-weight: $fontWeight600;
         font-size: 1rem;
         line-height: 1.2rem;
       }
@@ -1006,7 +1006,7 @@ input {
       }
     }
     //компонент "Услуги" (виды деятельности),"Обратная связь","Наши клиенты" - общие стили
-    #Services, #Feedback{ padding: 6% $zero;}
+    #Services, #Feedback{padding: 6% $zero;}
     //компонент "Преимущества" - 6 блоков с svg и текстом
     #Advantages{
       //большая версия
@@ -1505,7 +1505,7 @@ input {
     //компонент "Важные числа"
     #Import_numbers{
       //цифры
-      .number{font-size:3rem;}
+      .number{font-size: 3rem;}
       //каждый блок с цифрой и текстом отдельно
       .flex-container > div{width: 45%;}
     }
@@ -1865,7 +1865,7 @@ input {
       }
       //картинка с охранником
       img{
-        width:130%;
+        width: 130%;
         margin-left: -12%;
       }
     }
@@ -1901,7 +1901,7 @@ input {
       //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Важные числа)
       .text_Landing_page{letter-spacing: -.5px;}
       //цифры
-      .number{font-size:3.5rem;}
+      .number{font-size: 3.5rem;}
       //контейнер с цифрами и текстом
       .flex-container{
         margin: $zero;
@@ -2418,7 +2418,7 @@ input {
     //компонент "Важные числа"
     #Import_numbers{
       //цифры
-      .number{font-size:4.5rem;}
+      .number{font-size: 4.5rem;}
       //контейнер с цифрами и текстом
       .flex-container{
         margin: $zero 5.5%;
