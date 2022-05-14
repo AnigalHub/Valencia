@@ -40,5 +40,47 @@
       "price_hour_with_weapon":155,
       "price_with_weapon":75000
     }
+  ],
+  "standart": [
+    {
+      "name":"Вахтовый",
+      "descr_name":"(12 ч.)",
+      "price_hour":140,
+      "price":80000,
+      "price_hour_with_weapon":160,
+      "price_with_weapon":85000
+    },
+    {
+      "name":"Суточный",
+      "descr_name":"(2/2)",
+      "price_hour":165,
+      "price":105000,
+      "price_hour_with_weapon":185,
+      "price_with_weapon":110000
+    },
+    {
+      "name":"Суточный",
+      "descr_name":"(1/2)",
+      "price_hour":170,
+      "price":125000,
+      "price_hour_with_weapon":190,
+      "price_with_weapon":130000
+    },
+    {
+      "name":"Дневной (ночной)",
+      "descr_name":"(12 часов, пн-вс)",
+      "price_hour":145,
+      "price":85000,
+      "price_hour_with_weapon":165,
+      "price_with_weapon":90000
+    },
+    {
+      "name":"Дневной (ночной)",
+      "descr_name":"(12 часов, пн-пт)",
+      "price_hour":140,
+      "price":75000,
+      "price_hour_with_weapon":160,
+      "price_with_weapon":80000
+    }
   ]
 }
