@@ -80,11 +80,13 @@
   $shadeOfBlack: black;
   $fontText:'Lora', serif;
   $zero: 0;
+  $percent100:100%;
+  $fontWeight600:600;
 
   //вид меню на большом экране (отступы)
   .navbar-expand-xl .navbar-collapse {margin-left:   $zero;}
   #Nav{
-    .navbar-nav{width: 100% !important;}
+    .navbar-nav{width: $percent100 !important;}
     .dropdown{padding: .15rem .5rem $zero !important;}
     .nav-item{
       padding: $zero .5%;
@@ -101,14 +103,14 @@
     .navbar-brand{
       padding: .2rem .35rem .15rem ;
       font-family: $fontText;
-      font-weight: 600;
+      font-weight: $fontWeight600;
       margin-top: -.8%;
       //svg-щит
       #navbar_svg{
         width: 50px;
         height: 54px;
         padding: .8%;
-        margin: 2%   $zero 1%;
+        margin: 2% $zero 1%;
       }
       //название компании в логотипе
       .name_brand{
@@ -121,7 +123,7 @@
     //номер телефона
     .telephone{
       text-align: $textCenter;
-      font-weight: 900 !important;
+      font-weight: $fontWeight600;
       font-family: $fontText;
       //при наведении
       &:hover{
@@ -140,18 +142,18 @@
     .nav-link,.telephone,.dropdown-toggle{font-size: 1.2rem;}
     //кнопки меню (все)
     .nav-link,.dropdown-toggle,.dropdown-item{
-      font-family: 'Lora', serif;
+      font-family: $fontText;
       font-weight: 600 !important;
     }
     //наведение на любую кнопку меню, кнопка "Услуги" - в открытом виде
     .nav-link:hover,.show > .btn-secondary.dropdown-toggle,
     .dropdown-toggle:hover,.dropdown-item:hover,  .show > .btn-secondary.dropdown-toggle{
       color: #007bff !important;
-      text-shadow:   $zero .25px .5px $shadeOfBlack !important;
+      text-shadow: $zero .25px .5px $shadeOfBlack !important;
     }
     //кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки
     .btn{
-      padding:   $zero !important;
+      padding: $zero !important;
       background: transparent !important;
       border: none !important;
     }
@@ -161,12 +163,12 @@
     }
     //выпадающий блок при нажатии на "Услуги" (dropdown)
     .dropdown-menu {
-      padding:   $zero !important;
+      padding: $zero !important;
       border: none !important;
     }
     //кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)
     .dropdown-item{
-      box-shadow: 2px   $zero 9px -6px $shadeOfBlack;
+      box-shadow: 2px $zero 9px -6px $shadeOfBlack;
       text-shadow: none;
       font-size: 1.15rem;
       padding: .25rem .3rem !important;
@@ -185,7 +187,7 @@
     .menu_org,.menu_obj,.menu_state{
       display:none;
       position: absolute;
-      left: 100%;
+      left: $percent100;
     }
     //при наведении на определенный вид услуги - показывается блок с определенными подвидами услуг
     .menu1:hover .menu_org, .menu2:hover .menu_obj, .menu3:hover .menu_state {display:block;}
@@ -194,7 +196,7 @@
   //*****************АДАПТИВНОСТЬ**************
   @media screen  and (max-width: 1200px) {
     #Nav{
-      box-shadow:   $zero   $zero 10px   $zero $shadeOfBlack;
+      box-shadow: $zero $zero 10px   $zero $shadeOfBlack;
       //меню (кнопки все)
       .navbar-nav{margin-left: 3%;}
       //блок под логотип(svg, название компании, что за компания(чоп))
