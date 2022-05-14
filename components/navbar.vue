@@ -85,15 +85,15 @@
   .navbar-expand-xl .navbar-collapse {margin-left:   $zero;}
   #Nav{
     .navbar-nav{width: 100% !important;}
-    .dropdown{padding: .15rem .5rem   $zero !important;}
+    .dropdown{padding: .15rem .5rem $zero !important;}
     .nav-item{
-      padding:   $zero .5%;
+      padding: $zero .5%;
       height: 30px !important;
     }
     //меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)
-    padding:   $zero !important;
+    padding: $zero !important;
     background: $shadeOfBlack;
-    box-shadow: 13px   $zero 18px -6px $shadeOfBlack;
+    box-shadow: 13px $zero 18px -6px $shadeOfBlack;
     .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #b1afaf;}
     //контейнер, в котором находится весь контент меню
     .container {padding:   $zero !important;}
@@ -122,7 +122,7 @@
     .telephone{
       text-align: $textCenter;
       font-weight: 900 !important;
-      font-family: 'Vollkorn', serif;
+      font-family: $fontText;
       //при наведении
       &:hover{
         text-shadow: -.1px .25px .15px $shadeOfBlack;
