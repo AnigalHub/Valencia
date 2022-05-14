@@ -19,6 +19,7 @@ $zero: 0;
 $displayBlock:block;
 $displayFlex:flex;
 $flexDirectionColumn: column;
+$flexDirectionColumnReverse: column-reverse;
 
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
@@ -1083,7 +1084,7 @@ input {
       .text_Landing_page{line-height: 1.25rem;}
       //блок - обратная связь с текстом, заголовком и телефоном
       .row{
-        flex-direction: column-reverse;
+        flex-direction: $flexDirectionColumnReverse;
         //место, где находится форма заявки (обратной связи)
         .col-6{
           flex: $zero $zero $percent100 !important;
@@ -1538,7 +1539,7 @@ input {
       h2{margin-bottom: $zero}
       //блок с формой заявки (обратной связи) и текстом, телефоном, заголовком
       .row{
-        flex-direction: column-reverse;
+        flex-direction: $flexDirectionColumnReverse;
         margin: $zero 3% !important;
         padding: 2% 3.5% 4.5%;
         //параметры сетки бутстрап (текст,телефон,заголовок)
