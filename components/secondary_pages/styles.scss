@@ -20,6 +20,7 @@ $displayBlock:block;
 $displayFlex:flex;
 $flexDirectionColumn: column;
 $flexDirectionColumnReverse: column-reverse;
+$boxShadowImg: 7px 7px 7px -7px;
 
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
@@ -123,7 +124,7 @@ h6{
   &:hover .emphasized{box-shadow: inset $zero 4px 2px -3px $shade_1, inset $zero -4px 2px -3px $shade_1, $zero $zero 3px $zero $shade_2;}
 }
 //первая, вторая картинки на страницах услуг и "О нас"
-.first_img,.second_img,.third_img{box-shadow: 7px 7px 7px -7px $shadowImg;}
+.first_img,.second_img,.third_img{box-shadow: $boxShadowImg $shadowImg;}
 //первая и третья картинки на страницах услуг и "О нас"
 .first_img,.third_img{float: $left;}
 //первая картинка на страницах услуг и "О нас"
@@ -327,7 +328,7 @@ input {
     .flex-container > a {
       width: 30.5%;
       margin: $zero $zero 2% 2.5%;
-      box-shadow: 7px 7px 7px -7px $shadowImg;
+      box-shadow: $boxShadowImg $shadowImg;
       filter: contrast($percent100) !important;
     }
     .btn-secondary{border-color: transparent !important;}
@@ -777,7 +778,7 @@ input {
   .flex-container > div {
     width: 30.5%;
     margin: $zero 1.25% 2.5%;
-    box-shadow: 8px 8px 8px -8px rgba(77, 81, 83, .6);
+    box-shadow: $boxShadowImg $shadowImg;
     background-color: $shadeOfBlack !important;
     //картинка
     img{width: $percent100;}
