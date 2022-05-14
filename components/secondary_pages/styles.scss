@@ -18,6 +18,7 @@ $cursorPointer:pointer;
 $zero: 0;
 $displayBlock:block;
 $displayFlex:flex;
+$flexDirectionColumn: column;
 
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
@@ -1058,7 +1059,7 @@ input {
     #Type{
       //блок с картинками
       .row{
-        flex-direction: column;
+        flex-direction: $flexDirectionColumn;
         //параметры сетки бутстрап (первая картинка, вторая картинка)
         .col:first-child,.col:nth-child(2){margin-bottom: 1.5%;}
       }
@@ -1251,7 +1252,7 @@ input {
     }
     //блок с картинкой и списком(перечисление)
     .row{
-      flex-direction: column;
+      flex-direction: $flexDirectionColumn;
       //параметры сетки бутстрап (картинка)
       .col-5{
         flex: $zero $zero $percent100 !important;
@@ -1281,7 +1282,7 @@ input {
   .types_of_guard{
     //блок с особенностями
     .row{
-      flex-direction: column;
+      flex-direction: $flexDirectionColumn;
       //как выглядит список (сдвигаем)
       ul{margin-bottom: $zero !important;}
     }
@@ -1304,7 +1305,7 @@ input {
     }
     //блок с картинкой и спиком
     .row{
-      flex-direction: column;
+      flex-direction: $flexDirectionColumn;
       //прааметры сетки бутстрап (картинки)
       .col-5{
         flex: $zero $zero $percent100 !important;
@@ -1369,7 +1370,7 @@ input {
   //страница "Контакты"
   #contact{
     //блок с информацикй и формой заявки (обратной связи)
-    .important_row{flex-direction: column;}
+    .important_row{flex-direction: $flexDirectionColumn;}
     //контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)
     .flex-container {margin-top: 1rem;}
     //блок с информацикй и формой заявки (обратной связи), отдельные блоки с информацией (svg, название информации, информация)
@@ -1713,7 +1714,7 @@ input {
   .types_of_guard{
     //блок под особенности
     .row{
-      flex-direction: column;
+      flex-direction: $flexDirectionColumn;
       //как выглядит список (сдвигаем)
       ul{margin-bottom: $zero !important;}
     }
@@ -1727,7 +1728,7 @@ input {
   #technical_means{
     //блок с картинкой и спиком
     .row{
-      flex-direction: column;
+      flex-direction: $flexDirectionColumn;
       //прааметры сетки бутстрап (картинки)
       .col-5{
         flex: $zero $zero $percent100 !important;
@@ -1781,7 +1782,7 @@ input {
   //страница "Контакты"
   #contact{
     //блок с информацикй и формой заявки (обратной связи)
-    .important_row{flex-direction: column;}
+    .important_row{flex-direction: $flexDirectionColumn;}
     //контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)
     .flex-container {margin-top: $zero;}
     //svg страницы "Контакты"
@@ -2069,7 +2070,7 @@ input {
   #technical_means{
     //блок с картинкой и спиком
     .row{
-      flex-direction: column;
+      flex-direction: $flexDirectionColumn;
       //прааметры сетки бутстрап (картинки)
       .col-5{
         flex: $zero $zero $percent100 !important;
@@ -2117,7 +2118,7 @@ input {
   //страница "Контакты"
   #contact{
     //блок с информацикй и формой заявки (обратной связи)
-    .important_row{flex-direction: column;}
+    .important_row{flex-direction: $flexDirectionColumn;}
     //контейнер, который включает в себя повтор блоков (информация (название информации, svg, информация)
     .flex-container {margin-top: $zero;}
     //svg страницы "Контакты"
