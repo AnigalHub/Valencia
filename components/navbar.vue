@@ -82,6 +82,7 @@
   $zero: 0;
   $percent100:100%;
   $fontWeight600:600;
+  $none:none;
 
   //вид меню на большом экране (отступы)
   .navbar-expand-xl .navbar-collapse {margin-left:   $zero;}
@@ -135,7 +136,7 @@
     .nav-link,.telephone{letter-spacing: -.3px;}
     //активные кнопки
     .nav-link-active{
-      text-shadow:   $zero 1px 2px $shadeOfBlack !important;
+      text-shadow: $zero 1px 2px $shadeOfBlack !important;
       color: #e6e686 !important;
     }
     //все кнопки (кроме кнопок в dropdown)
@@ -155,7 +156,7 @@
     .btn{
       padding: $zero !important;
       background: transparent !important;
-      border: none !important;
+      border: $none !important;
     }
     //кнопка "Услуги" (пишем свои стили - переписываем btn)
     .dropdown-toggle{
@@ -164,12 +165,12 @@
     //выпадающий блок при нажатии на "Услуги" (dropdown)
     .dropdown-menu {
       padding: $zero !important;
-      border: none !important;
+      border: $none !important;
     }
     //кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)
     .dropdown-item{
       box-shadow: 2px $zero 9px -6px $shadeOfBlack;
-      text-shadow: none;
+      text-shadow: $none;
       font-size: 1.15rem;
       padding: .25rem .3rem !important;
       //при наведении
@@ -185,7 +186,7 @@
     .menu_state{top: 32% !important;}
     //блоки подвидов охраны
     .menu_org,.menu_obj,.menu_state{
-      display:none;
+      display:$none;
       position: absolute;
       left: $percent100;
     }
@@ -214,11 +215,11 @@
       //все кнопки (кроме кнопок в опускающемся dropdown)
       .nav-link,.dropdown-toggle{font-size: 1.1rem !important;}
       //номер телефона, блоки подвидов охраны
-      .telephone, .menu_org, .menu_obj, .menu_state{display: none;}
+      .telephone, .menu_org, .menu_obj, .menu_state{display: $none;}
       //кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)
       .dropdown-item {
-        border: none !important;
-        box-shadow: none !important;
+        border: $none !important;
+        box-shadow: $none !important;
       }
       //кнопки - список - который находится в dropdown
       .btn-group{display: block}
