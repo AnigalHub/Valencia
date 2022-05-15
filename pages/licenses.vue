@@ -91,6 +91,9 @@
     padding: 0.5rem 1.5rem !important;
     font-family:'EB Garamond', serif;
   }
+  .modal-content{ /*контент модального окна*/
+    background: #c5c4c4 !important;
+  }
   .modal-title{ /*фразы в заголовке модального меню*/
     font-weight: 800;
   }
@@ -101,11 +104,9 @@
     display: none !important;
   }
   @media (min-width: 992px){
-    .modal-lg, .modal-xl { /*ширина модального окна на разных экранах*/
+    /*ширина модального окна на разных экранах*/
+    .modal-lg, .modal-xl {
       max-width: 720px !important;
     }
   }
-</style>
-<style scoped lang="scss">
-
 </style>
