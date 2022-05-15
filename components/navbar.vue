@@ -122,7 +122,6 @@
       .name_brand{
         color: $shade_2;
         text-shadow: 1px 1px 2px #387fac;
-        margin-top: 2%;
         vertical-align: middle;
         font-size: 1.25rem;
         filter: contrast(140%);
@@ -261,27 +260,16 @@
       .nav-link{padding: $zero .42rem !important;}
     }
   }
-  @media screen and (min-width: 1350px) and (max-width: 1400px) {
-    #Nav{
-      //меню (кнопки все)
-      .navbar-nav{margin-left: -3%;}
-    }
-  }
   @media screen and (min-width: 1300px) and (max-width: 1400px) {
     #Nav{
       //блок под логотип(svg, название компании, что за компания(чоп))
       .navbar-brand{
-        margin-right: .3rem !important;
         //svg-щит
         #navbar_svg{height: 51px;}
       }
-      //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
-      .nav-link,.telephone{font-size: 1.14rem !important;}
-      //номер телефона
-      .telephone {margin-left: -.15%;}
+      //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефонакнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)
+      .nav-link,.telephone, .dropdown-item,.dropdown-toggle{font-size: 1.12rem !important;}
     }
-    //кнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)
-    .dropdown-item,.dropdown-toggle{font-size: 1.12rem !important;}
   }
   @media screen  and (min-width: 1200px) {
     //максимальная ширина контента меню на больших экранах
