@@ -11,8 +11,9 @@
                 <component :is="company_information.svg"/>
               </b-col>
               <b-col>
-                <p class="text"><b>{{company_information.name}}: </b>
-                  <a :href="company_information.link" > {{company_information.description}} </a>
+                <p class="text">
+                  <b>{{company_information.name}}:</b>
+                  <a :href="company_information.link" > {{company_information.description}}</a>
                 </p>
               </b-col>
             </b-row>
