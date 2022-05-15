@@ -36,13 +36,13 @@ $positionAbsolute:absolute;
   //квадратик и полоска
   .outline{fill: $colorSelection}
   //верхняя часть отпечатка
-  .top_print{stroke: #1d6a9e;}
+  .top_print{stroke: #1b5a82;}
   //нижняя часть отпечатка
-  .bottom_print{stroke: #1d6a9e;}
+  .bottom_print{stroke: #1b5a82;}
   //тень svg (яркость и четкость добавляет)
   .shadow_svg{
-    stroke: #1d6a9e;
-    stroke-width: 2.6;
+    stroke: #1b5a82;
+    stroke-width: 6;
   }
 }
 //текст на всех страницах (кроме главной), ссылки
