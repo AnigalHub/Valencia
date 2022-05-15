@@ -13,7 +13,7 @@
         <b-carousel-slide v-for="(advantages, index) in Advantages" :key="index">
           <template #img>
             <div class="flex-container">
-              <div v-for="adv in advantages.advantages"  :key="adv.index">
+              <div v-for="adv in advantages.advantages" :key="adv.index">
                 <router-link :to="adv.link">
                   <component :is="adv.svg"/>
                   <p class="text_Landing_page" v-html="adv.name"></p>

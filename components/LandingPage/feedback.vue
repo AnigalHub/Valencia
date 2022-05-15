@@ -8,7 +8,7 @@
         <b-col>
           <p class="text_Landing_page">Оставьте заявку или позвоните по телефону, мы ответим Вам на все интересующие Вас вопросы и представим индивидуальные решения по безопасности для Вашего объекта.</p>
           <h2>Свяжитесь с нами!</h2>
-          <a :href="information.phone" class="call_telephone"> {{information.phone}} </a>
+          <a :href="information.phone" class="call_telephone">{{information.phone}}</a>
         </b-col>
       </b-row>
     </b-container>
