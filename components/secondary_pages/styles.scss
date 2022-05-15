@@ -179,7 +179,10 @@ label{
   margin-bottom: $zero !important;
 }
 //поле ввода в форме заявки (обратной связи) - используется везде, но пока применяется на главной странице и в "Контакты"
-.form-control{min-height: 1.5rem;}
+.form-control{
+  background: $colorBodyText;
+  min-height: 1.5rem;
+}
 input {
   font-weight: $fontWeight600;
   padding: 25px 15px;
