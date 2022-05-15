@@ -72,9 +72,9 @@
       return {
         name_page:"Тарифы",
         fields: [
-          { label: "Режим", key: "econom" },
-          { label: "Невооруженная", key: "tt" },
-          { label: "Вооруженная", key: "ttr" },
+          { label: "Режим", key: "mode" },
+          { label: "Невооруженная", key: "unarmed" },
+          { label: "Вооруженная", key: "armed" },
         ],
         items: [
           {
