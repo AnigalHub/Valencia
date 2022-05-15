@@ -97,7 +97,6 @@
     padding: $zero !important;
     background: $shadeOfBlack;
     .navbar-nav{width: $percent100 !important;}
-    .dropdown{padding: .15rem .5rem $zero !important;}
     .nav-item{padding: $zero .55%;}
     .nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: $colorBodyText;}
     //контейнер, в котором находится весь контент меню
@@ -195,12 +194,12 @@
           height: 42px;
         }
         //название компании в логотипе
-        .name_brand{font-size: 1.14rem;}
+        .name_brand{font-size: 1rem;}
       }
       //все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)
-      .nav-link{padding: .4rem $zero !important;}
+      .nav-link{padding: .25rem $zero !important;}
       //все кнопки (кроме кнопок в опускающемся dropdown)
-      .nav-link,.dropdown-toggle{font-size: 1.1rem !important;}
+      .nav-link,.dropdown-toggle,.dropdown-item{font-size: .9rem !important;}
       //номер телефона, блоки подвидов охраны
       .telephone, .menu_org, .menu_obj, .menu_state{display: $none;}
       //кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)
@@ -208,6 +207,10 @@
         border: $none !important;
         box-shadow: $none !important;
       }
+      .dropdown-menu{
+        box-shadow: $none;
+      }
+      .dropdown{padding: .15rem $zero $zero !important;}
       //кнопки - список - который находится в dropdown
       .btn-group{display: $displayBlock}
     }
