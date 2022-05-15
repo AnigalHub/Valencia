@@ -86,7 +86,8 @@
   $displayBlock:block;
   $colorBodyText: #b1afaf;
   $colorSelection: #a89815;
-  $shade_2: #9a8d20;
+  $shade: #9a8d20;
+  $colorNameCompany:#b8a92a;
   $boxShadowDropdown: 7px 7px 7px -7px rgba(34, 60, 80, .9);
 
   //вид меню на большом экране (отступы)
@@ -119,7 +120,7 @@
       }
       //название компании в логотипе
       .name_brand{
-        color: $shade_2;
+        color: $colorNameCompany;
         text-shadow: 1px 1px 2px #387fac;
         vertical-align: middle;
         font-size: 1.25rem;
@@ -135,7 +136,7 @@
     //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown),номер телефона
     .nav-link, .telephone{letter-spacing: -.3px;}
     //активные кнопки
-    .nav-link-active{color: $shade_2 !important;}
+    .nav-link-active{color: $shade !important;}
     //все кнопки (кроме кнопок в dropdown)
     .nav-link, .telephone, .dropdown-toggle{font-size: 1.2rem;}
     //наведение на любую кнопку меню, кнопка "Услуги" - в открытом виде
