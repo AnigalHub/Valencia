@@ -97,8 +97,11 @@
     box-shadow: $boxShadowDropdown;
     padding: $zero !important;
     background: $shadeOfBlack;
+    //меню
     .navbar-nav{width: $percent100 !important;}
+    //пункты меню
     .nav-item{padding: $zero .55%;}
+    //все кнопки и номер телефона
     .nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: $colorBodyText;}
     //контейнер, в котором находится весь контент меню
     .container {padding: $zero !important;}
@@ -163,7 +166,7 @@
       padding: .25rem .3rem !important;
     }
     //все кнопки, которые находятся в dropdown - в том числе и подпункты
-    .dropdown-item,.menu_org,.menu_obj,.menu_state{background: $shadeOfBlack !important;}
+    .dropdown-item, .menu_org, .menu_obj, .menu_state{background: $shadeOfBlack !important;}
     //блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)
     .menu_org{top: -.35% !important;}
     //блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)
@@ -208,9 +211,9 @@
         border: $none !important;
         box-shadow: $none !important;
       }
-      .dropdown-menu{
-        box-shadow: $none;
-      }
+      //выпадающий блок при нажатии на "Услуги" (dropdown)
+      .dropdown-menu{box-shadow: $none;}
+      //меню выпадающего списка
       .dropdown{padding: .15rem $zero $zero !important;}
       //кнопки - список - который находится в dropdown
       .btn-group{display: $displayBlock}
@@ -266,7 +269,7 @@
       }
     }
   }
-  @media screen  and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     //максимальная ширина контента меню на больших экранах
     .container, .container-lg, .container-md, .container-sm, .container-xl {max-width: 1400px !important;}
     //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown),номер телефона
