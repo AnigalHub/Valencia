@@ -212,10 +212,8 @@
       .btn-group{display: $displayBlock}
     }
   }
-  @media screen and (min-width: 1200px) and (max-width: 1250px) {
+  @media screen and (min-width: 1200px) and (max-width: 1265px) {
     #Nav{
-      //меню (кнопки все)
-      .navbar-nav{margin-left: -.8%;}
       //блок под логотип(svg, название компании, что за компания(чоп))
       .navbar-brand{
         margin-right: $zero !important;
@@ -225,31 +223,20 @@
           height: 42px;
         }
         //название компании в логотипе
-        .name_brand{font-size: 1.14rem;}
+        .name_brand{font-size: 1.1rem;}
       }
       //все кнопки, номер телефона
       .nav-link,.dropdown-item,.telephone,.dropdown-toggle{font-size: 1.1rem !important;}
       //все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)
-      .nav-link{padding: $zero .3rem !important;}
-      //номер телефона
-      .telephone{margin-left: -.8%;}
+      .nav-link{padding: $zero .2rem !important;}
     }
   }
-  @media screen and (min-width: 1250px) and (max-width: 1300px) {
+  @media screen and (min-width: 1265px) and (max-width: 1300px) {
     #Nav{
-      //меню (кнопки все)
-      .navbar-nav{margin-left: -1%;}
-      //блок под логотип(svg, название компании, что за компания(чоп))
-      .navbar-brand{
-        //svg-щит
-        #navbar_svg{height: 51px;}
-      }
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
       .nav-link,.telephone,.dropdown-toggle,.dropdown-item{font-size: 1.1rem !important;}
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
       .nav-link{padding: $zero .35rem !important;}
-      //номер телефона
-      .telephone{margin-left: -1%;}
     }
   }
   @media screen and (min-width: 1300px) and (max-width: 1350px) {
@@ -262,13 +249,17 @@
   }
   @media screen and (min-width: 1300px) and (max-width: 1400px) {
     #Nav{
+      //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефонакнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)
+      .nav-link,.telephone, .dropdown-item,.dropdown-toggle{font-size: 1.12rem !important;}
+    }
+  }
+  @media screen and (min-width: 1250px) and (max-width: 1400px) {
+    #Nav{
       //блок под логотип(svg, название компании, что за компания(чоп))
       .navbar-brand{
         //svg-щит
         #navbar_svg{height: 51px;}
       }
-      //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефонакнопка "Услуги" и все кнопки в опускающемся dropdown (охрана...)
-      .nav-link,.telephone, .dropdown-item,.dropdown-toggle{font-size: 1.12rem !important;}
     }
   }
   @media screen  and (min-width: 1200px) {
