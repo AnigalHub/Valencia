@@ -6,8 +6,9 @@
       <label for="phone">Ваш телефон:</label>
       <input v-model="feedback.phone" type="tel" class="form-control" v-mask="'+7 (###) ###-##-##'" id="phone" name="phone" data-validation-required-message="Пожалуйста, введите Номер телефона">
       <p class="text_descr" style="text-align: center;">
-        <input type="checkbox" class="checkbox"/> Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
-      <button type="submit">Отправить заявку</button>
+        <input type="checkbox" class="checkbox"/> Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+      </p>
+      <button type="submit" :disabled="buttonDisabled" >Отправить заявку</button>
     </form>
   </div>
 </template>
@@ -24,6 +25,14 @@
             message: '',
           }
         }
+      },
+      computed:{
+        buttonDisabled(){
+          if (this.feedback.name && this.feedback.phone) {
+            return false;
+          }
+          return true;
+        },
       },
     }
 </script>
