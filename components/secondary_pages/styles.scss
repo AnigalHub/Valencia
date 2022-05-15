@@ -22,6 +22,7 @@ $flexDirectionColumn: column;
 $flexDirectionColumnReverse: column-reverse;
 $boxShadowImg: 7px 7px 7px -7px;
 $auto:auto;
+$positionAbsolute:absolute;
 
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
@@ -372,7 +373,7 @@ input {
     h2{
       font-size: 2rem !important;
       color: $shadeOfWhite;
-      position: absolute;
+      position: $positionAbsolute;
       left: 2%;
       bottom: 10%;
       text-align: $left;
@@ -409,7 +410,7 @@ input {
     //изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Типы)
     .text_Landing_page{
       text-align: $left;
-      position: absolute;
+      position: $positionAbsolute;
       left: 2%;
       bottom: 3%;
       letter-spacing: -.5px;
