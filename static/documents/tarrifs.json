@@ -1,0 +1,44 @@
+{
+  "econom": [
+    {
+      "name":"Вахтовый",
+      "descr_name":"(12 ч.)",
+      "price_hour":130,
+      "price":65000,
+      "price_hour_with_weapon":"150",
+      "price_with_weapon":70000
+    },
+    {
+      "name":"Суточный",
+      "descr_name":"(2/2)",
+      "price_hour":145,
+      "price":85000,
+      "price_hour_with_weapon":165,
+      "price_with_weapon":90000
+    },
+    {
+      "name":"Суточный",
+      "descr_name":"(1/2)",
+      "price_hour":150,
+      "price":95000,
+      "price_hour_with_weapon":170,
+      "price_with_weapon":100000
+    },
+    {
+      "name":"Дневной (ночной)",
+      "descr_name":"(12 ч., пн-вс)",
+      "price_hour":140,
+      "price":75000,
+      "price_hour_with_weapon":160,
+      "price_with_weapon":80000
+    },
+    {
+      "name":"Дневной (ночной)",
+      "descr_name":"(12 ч., пн-пт)",
+      "price_hour":135,
+      "price":70000,
+      "price_hour_with_weapon":155,
+      "price_with_weapon":75000
+    }
+  ]
+}
