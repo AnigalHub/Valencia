@@ -187,7 +187,7 @@
     .menu_state{top: 32% !important;}
     //блоки подвидов охраны
     .menu_org,.menu_obj,.menu_state{
-      display:$none;
+      display: $none;
       position: absolute;
       left: $percent100;
     }
@@ -196,23 +196,23 @@
   }
 
   //*****************АДАПТИВНОСТЬ**************
-  @media screen  and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     #Nav{
-      box-shadow: $zero $zero 10px   $zero $shadeOfBlack;
+      box-shadow: $zero $zero 10px $zero $shadeOfBlack;
       //меню (кнопки все)
       .navbar-nav{margin-left: 3%;}
       //блок под логотип(svg, название компании, что за компания(чоп))
       .navbar-brand{
         //svg-щит
         #navbar_svg{
-          width:42px;
-          height:42px;
+          width: 42px;
+          height: 42px;
         }
         //название компании в логотипе
         .name_brand{font-size: 1.14rem;}
       }
       //все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)
-      .nav-link{padding: .4rem   $zero !important;}
+      .nav-link{padding: .4rem $zero !important;}
       //все кнопки (кроме кнопок в опускающемся dropdown)
       .nav-link,.dropdown-toggle{font-size: 1.1rem !important;}
       //номер телефона, блоки подвидов охраны
@@ -232,11 +232,11 @@
       .navbar-nav{margin-left: -.8%;}
       //блок под логотип(svg, название компании, что за компания(чоп))
       .navbar-brand{
-        margin-right:   $zero !important;
+        margin-right: $zero !important;
         //svg-щит
         #navbar_svg{
-          width:42px;
-          height:42px;
+          width: 42px;
+          height: 42px;
         }
         //название компании в логотипе
         .name_brand{font-size: 1.14rem;}
@@ -244,7 +244,7 @@
       //все кнопки, номер телефона
       .nav-link,.dropdown-item,.telephone,.dropdown-toggle{font-size: 1.1rem !important;}
       //все кнопки(кроме "Услуги" и кнопок в опускающемся dropdown (охрана...)
-      .nav-link{padding:   $zero .3rem !important;}
+      .nav-link{padding: $zero .3rem !important;}
       //номер телефона
       .telephone{margin-left: -.8%;}
     }
@@ -261,7 +261,7 @@
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
       .nav-link,.telephone,.dropdown-toggle,.dropdown-item{font-size: 1.1rem !important;}
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
-      .nav-link{padding:   $zero .35rem !important;}
+      .nav-link{padding: $zero .35rem !important;}
       //номер телефона
       .telephone{margin-left: -1%;}
     }
@@ -269,9 +269,9 @@
   @media screen and (min-width: 1300px) and (max-width: 1350px) {
     #Nav{
       //меню (кнопки все)
-      .navbar-nav{margin-left:   $zero;}
+      .navbar-nav{margin-left: $zero;}
       //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона
-      .nav-link{padding:   $zero .42rem !important;}
+      .nav-link{padding: $zero .42rem !important;}
     }
   }
   @media screen and (min-width: 1350px) and (max-width: 1400px) {
