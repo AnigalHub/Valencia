@@ -76,37 +76,34 @@
       }
     }
 </script>
-<style>
-  /*стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)*/
+<style lang="scss">
+  //стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)
 
-  .modal-dialog img{ /*картинка в модальном окне*/
+  //картинка в модальном окне
+  .modal-dialog img{
     width: 100% !important;
     box-shadow: none !important;
   }
-  .close { /*"крестик" (размер) - кнопка закрытия модального окна*/
+  //"крестик" (размер) - кнопка закрытия модального окна
+  .close {
     font-size: 2rem !important;
     padding: 1rem .5rem !important;
   }
-  .modal-header{ /*заголовок модального окна*/
+  //заголовок модального окна
+  .modal-header{
     padding: 0.5rem 1.5rem !important;
     font-family:'EB Garamond', serif;
   }
-  .modal-content{ /*контент модального окна*/
-    background: #c5c4c4 !important;
-  }
-  .modal-title{ /*фразы в заголовке модального меню*/
-    font-weight: 800;
-  }
-  .modal-body { /*тело модального окна*/
-    padding:0 1rem 1rem 1rem!important;
-  }
-  .modal-footer { /*footer-модального окна*/
-    display: none !important;
-  }
+  //контент модального окна
+  .modal-content{background: #c5c4c4 !important;}
+  //фразы в заголовке модального меню
+  .modal-title{font-weight: 800;}
+  //тело модального окна
+  .modal-body {padding:0 1rem 1rem 1rem!important;}
+  //footer-модального окна
+  .modal-footer {display: none !important;}
   @media (min-width: 992px){
-    /*ширина модального окна на разных экранах*/
-    .modal-lg, .modal-xl {
-      max-width: 720px !important;
-    }
+    //ширина модального окна на разных экранах
+    .modal-lg, .modal-xl {max-width: 720px !important;}
   }
 </style>
