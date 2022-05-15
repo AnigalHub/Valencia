@@ -86,8 +86,8 @@
 
   //картинка в модальном окне
   .modal-dialog img{
-    width: 100% !important;
-    box-shadow: none !important;
+    width: $percent100 !important;
+    box-shadow: $none !important;
   }
   //"крестик" (размер) - кнопка закрытия модального окна
   .close {
@@ -96,17 +96,17 @@
   }
   //заголовок модального окна
   .modal-header{
-    padding: 0.5rem 1.5rem !important;
-    font-family:'EB Garamond', serif;
+    padding: .5rem 1.5rem !important;
+    font-family: $fontText;
   }
   //контент модального окна
   .modal-content{background: #c5c4c4 !important;}
   //фразы в заголовке модального меню
-  .modal-title{font-weight: 800;}
+  .modal-title{font-weight: $fontWeight600;}
   //тело модального окна
-  .modal-body {padding: 0 1rem 1rem 1rem!important;}
+  .modal-body {padding: $zero 1rem 1rem 1rem!important;}
   //footer-модального окна
-  .modal-footer {display: none !important;}
+  .modal-footer {display: $none !important;}
   @media (min-width: 992px){
     //ширина модального окна на разных экранах
     .modal-lg, .modal-xl {max-width: 720px !important;}
