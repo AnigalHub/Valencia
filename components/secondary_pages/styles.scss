@@ -298,6 +298,7 @@ input {
     }
     //общие стили для svg для данного компонента (Преимущества)
     svg{
+      filter: contrast(140%) !important;
       width: 75px;
       height: 75px;
       float: $left;
