@@ -84,75 +84,65 @@
   $fontWeight600:600;
   $none:none;
   $displayBlock:block;
+  $colorBodyText: #b1afaf;
+  $colorSelection: #a89815;
+  $shade_2: #9a8d20;
+  $boxShadowDropdown: 7px 7px 7px -7px rgba(34, 60, 80, .9);
 
   //вид меню на большом экране (отступы)
-  .navbar-expand-xl .navbar-collapse {margin-left:   $zero;}
+  .navbar-expand-xl .navbar-collapse {margin-left: $zero;}
   #Nav{
-    .navbar-nav{width: $percent100 !important;}
-    .dropdown{padding: .15rem .5rem $zero !important;}
-    .nav-item{
-      padding: $zero .5%;
-      height: 30px !important;
-    }
     //меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)
+    box-shadow: $boxShadowDropdown;
     padding: $zero !important;
     background: $shadeOfBlack;
-    box-shadow: 13px $zero 18px -6px $shadeOfBlack;
-    .navbar-brand,.name_brand,.nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: #b1afaf;}
+    .navbar-nav{width: $percent100 !important;}
+    .dropdown{padding: .15rem .5rem $zero !important;}
+    .nav-item{padding: $zero .55%;}
+    .nav-link,.telephone,.btn-secondary,.dropdown-toggle,.dropdown-item{color: $colorBodyText;}
     //контейнер, в котором находится весь контент меню
-    .container {padding:   $zero !important;}
+    .container {padding: $zero !important;}
+    //блок под логотип(svg, название компании, что за компания(чоп)),номер телефона,кнопки меню (все)
+    .navbar-brand, .telephone, .nav-link, .dropdown-toggle, .dropdown-item{
+      font-family: $fontText;
+      font-weight: $fontWeight600 !important;
+    }
     //блок под логотип(svg, название компании, что за компания(чоп))
     .navbar-brand{
       padding: .2rem .35rem .15rem ;
-      font-family: $fontText;
-      font-weight: $fontWeight600;
       margin-top: -.8%;
+      margin-right: .5%;
       //svg-щит
       #navbar_svg{
         width: 50px;
         height: 54px;
-        padding: .8%;
-        margin: 2% $zero 1%;
+        padding: 6% .8% .8%;
       }
       //название компании в логотипе
       .name_brand{
+        color: $shade_2;
+        text-shadow: 1px 1px 2px #387fac;
+        margin-top: 2%;
         vertical-align: middle;
-        font-size: 1.22rem;
+        font-size: 1.25rem;
+        filter: contrast(140%);
       }
-      //название компании в логотипе, надпись "частное охранное предприятие" в логотипе
-      .name_brand{filter: contrast(140%);}
     }
     //номер телефона
     .telephone{
-      text-align: $textCenter;
-      font-weight: $fontWeight600;
-      font-family: $fontText;
+      margin-left: -.2%;
       //при наведении
-      &:hover{
-        text-shadow: -.1px .25px .15px $shadeOfBlack;
-        text-decoration: underline;
-      }
+      &:hover{text-decoration: underline;}
     }
     //все кнопки (кроме кнопки "Услуги" и кнопок в dropdown),номер телефона
-    .nav-link,.telephone{letter-spacing: -.3px;}
+    .nav-link, .telephone{letter-spacing: -.3px;}
     //активные кнопки
-    .nav-link-active{
-      text-shadow: $zero 1px 2px $shadeOfBlack !important;
-      color: #e6e686 !important;
-    }
+    .nav-link-active{color: $shade_2 !important;}
     //все кнопки (кроме кнопок в dropdown)
-    .nav-link,.telephone,.dropdown-toggle{font-size: 1.2rem;}
-    //кнопки меню (все)
-    .nav-link,.dropdown-toggle,.dropdown-item{
-      font-family: $fontText;
-      font-weight: 600 !important;
-    }
+    .nav-link, .telephone, .dropdown-toggle{font-size: 1.2rem;}
     //наведение на любую кнопку меню, кнопка "Услуги" - в открытом виде
-    .nav-link:hover,.show > .btn-secondary.dropdown-toggle,
-    .dropdown-toggle:hover,.dropdown-item:hover,  .show > .btn-secondary.dropdown-toggle{
-      color: #007bff !important;
-      text-shadow: $zero .25px .5px $shadeOfBlack !important;
-    }
+    .nav-link:hover, .show > .btn-secondary.dropdown-toggle,
+    .dropdown-toggle:hover, .dropdown-item:hover, .show > .btn-secondary.dropdown-toggle{color: #1066c1 !important;}
     //кнопка "Услуги" (эта в меню единственная кнопка, а не ссылка т к она с dropdown (выпадающим списком) - отключаем дефолтные стили у этой кнопки
     .btn{
       padding: $zero !important;
@@ -160,22 +150,18 @@
       border: $none !important;
     }
     //кнопка "Услуги" (пишем свои стили - переписываем btn)
-    .dropdown-toggle{
-      letter-spacing: -.8px;
-    }
+    .dropdown-toggle{letter-spacing: -.8px;}
     //выпадающий блок при нажатии на "Услуги" (dropdown)
     .dropdown-menu {
       padding: $zero !important;
+      box-shadow: $boxShadowDropdown;
       border: $none !important;
     }
     //кнопки, которые находятся в drowdown (виды и подвиды охран) - переписываем дефолтный dropdown-item для них (в данном случае - цвета)
     .dropdown-item{
-      box-shadow: 2px $zero 9px -6px $shadeOfBlack;
       text-shadow: $none;
       font-size: 1.15rem;
       padding: .25rem .3rem !important;
-      //при наведении
-      &:hover{background: #dce4ee;}
     }
     //все кнопки, которые находятся в dropdown - в том числе и подпункты
     .dropdown-item,.menu_org,.menu_obj,.menu_state{background: $shadeOfBlack !important;}
@@ -187,6 +173,7 @@
     .menu_state{top: 32% !important;}
     //блоки подвидов охраны
     .menu_org,.menu_obj,.menu_state{
+      box-shadow: $boxShadowDropdown;
       display: $none;
       position: absolute;
       left: $percent100;
