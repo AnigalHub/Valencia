@@ -8,7 +8,7 @@
       <p class="text_descr" style="text-align: center;font-weight: bold">
         <input type="checkbox" class="checkbox"/>
        Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
-      <button type="submit" class="justify-content-end">Отправить заявку</button>
+      <button type="submit">Отправить заявку</button>
     </form>
   </div>
 </template>
