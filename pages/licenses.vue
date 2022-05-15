@@ -78,6 +78,11 @@
 </script>
 <style lang="scss">
   //стили которые переписаны с бутстрапа (переносить отсюда нельзя!!!!!)
+  $percent100:100%;
+  $fontWeight600:600;
+  $fontText:'Lora', serif;
+  $none:none;
+  $zero: 0;
 
   //картинка в модальном окне
   .modal-dialog img{
@@ -99,7 +104,7 @@
   //фразы в заголовке модального меню
   .modal-title{font-weight: 800;}
   //тело модального окна
-  .modal-body {padding:0 1rem 1rem 1rem!important;}
+  .modal-body {padding: 0 1rem 1rem 1rem!important;}
   //footer-модального окна
   .modal-footer {display: none !important;}
   @media (min-width: 992px){
