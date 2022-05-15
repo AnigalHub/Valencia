@@ -21,8 +21,6 @@
           feedback:{
             name: '',
             phone: '',
-            email: '',
-            message: '',
           }
         }
       },
