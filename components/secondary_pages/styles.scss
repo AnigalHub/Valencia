@@ -36,9 +36,9 @@ $positionAbsolute:absolute;
   //квадратик и полоска
   .outline{fill: $colorSelection}
   //верхняя часть отпечатка
-  .top_print{stroke: #1b5a82;}
+  .top_print{stroke: #3188bf;}
   //нижняя часть отпечатка
-  .bottom_print{stroke: #1b5a82;}
+  .bottom_print{stroke: #3188bf}
   //тень svg (яркость и четкость добавляет)
   .shadow_svg{
     stroke: #1b5a82;
@@ -298,7 +298,7 @@ input {
     }
     //общие стили для svg для данного компонента (Преимущества)
     svg{
-      filter: contrast(140%) !important;
+      filter: contrast(120%) !important;
       width: 75px;
       height: 75px;
       float: $left;
