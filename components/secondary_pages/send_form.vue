@@ -14,25 +14,25 @@
 </template>
 
 <script>
-    export default {
-      name: "send_form",
-      data(){
-        return {
-          feedback:{
-            name: '',
-            phone: '',
-          }
+  export default {
+    name: "send_form",
+    data(){
+      return {
+        feedback:{
+          name: '',
+          phone: '',
         }
+      }
+    },
+    computed:{
+      buttonDisabled(){
+        if (this.feedback.name && this.feedback.phone) {
+          return false;
+        }
+        return true;
       },
-      computed:{
-        buttonDisabled(){
-          if (this.feedback.name && this.feedback.phone) {
-            return false;
-          }
-          return true;
-        },
-      },
-    }
+    },
+  }
 </script>
 
 <style scoped>

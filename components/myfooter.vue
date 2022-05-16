@@ -15,41 +15,41 @@
 </template>
 
 <script>
-      import Information from "../static/documents/information.json";
-    export default {
-      name: "myfooter",
-      data(){
-        return{
-          information:Information,
-          catalog_pages:[
-            {
-              pages:[
-                {link: "/company", page: "О нас",},
-                {link: "/#Services", page: "Услуги",},
-              ],
-            },
-            {
-              pages:[
-                {link: "/tariffs", page: "Тарифы",},
-                {link: "/technical_means", page: "Технические средства",},
-              ],
-            },
-            {
-              pages:[
-                {link: "/special_equipment", page: "Спецсрества",},
-                {link: "/licenses", page: "Лицензии",},
-              ],
-            },
-            {
-              pages:[
-                {link: "/our_clients", page: "Наши клиенты",},
-                {link: "/contact", page: "Контакты",},
-              ],
-            },
-          ]
-        }
+  import Information from "../static/documents/information.json";
+  export default {
+    name: "myfooter",
+    data(){
+      return{
+        information:Information,
+        catalog_pages:[
+          {
+            pages:[
+              {link: "/company", page: "О нас",},
+              {link: "/#Services", page: "Услуги",},
+            ],
+          },
+          {
+            pages:[
+              {link: "/tariffs", page: "Тарифы",},
+              {link: "/technical_means", page: "Технические средства",},
+            ],
+          },
+          {
+            pages:[
+              {link: "/special_equipment", page: "Спецсрества",},
+              {link: "/licenses", page: "Лицензии",},
+            ],
+          },
+          {
+            pages:[
+              {link: "/our_clients", page: "Наши клиенты",},
+              {link: "/contact", page: "Контакты",},
+            ],
+          },
+        ]
       }
     }
+  }
 </script>
 
 <style scoped lang="scss">

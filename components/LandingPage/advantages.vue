@@ -34,39 +34,39 @@
   import SupportSVG from "./advantages_svg/support_svg";
   import ClockSVG from "./advantages_svg/clock_svg";
   import PriceSVG from "./advantages_svg/price_svg";
-    export default {
-      name: "advantages",
-      data(){
-        return{
-          slide: 0,
-          sliding: null,
-          advantages:[
-            {name:"квалифицированный штат  сотрудников", svg:StateSVG, link:'/company',},
-            {name:"современное инновационное  оборудование", svg:EquipmentSVG, link:'/technical_means',},
-            {name:"готовность работать в  любое время", svg:ClockSVG, link:'/tariffs',},
-            {name:"контроль качества  на каждом  этапе работы", svg:QualityControlSVG, link:'/company',},
-            {name:"круглосуточная поддержка клиентов 24/7", svg:SupportSVG, link:'/contact',},
-            {name:"гибкое  ценнообразование  на любой бюджет",svg:PriceSVG, link:'/tariffs',},
-          ],
-          Advantages:[
-            {
-              advantages:[
-                {name:"квалифицированный штат  сотрудников", svg:StateSVG, link:'/company',},
-                {name:"современное инновационное  оборудование", svg:EquipmentSVG, link:'/technical_means',},
-                {name:"готовность  работать в  любое время", svg:ClockSVG, link:'/tariffs',},
-              ]
-            },
-            {
-              advantages:[
-                {name:"контроль качества  на каждом  этапе работы", svg:QualityControlSVG, link:'/company',},
-                {name:"круглосуточная поддержка клиентов 24/7", svg:SupportSVG, link:'/contact',},
-                {name:"гибкое  ценнообразование  на любой бюджет",svg:PriceSVG, link:'/tariffs',},
-              ]
-            },
-          ]
-        }
+  export default {
+    name: "advantages",
+    data(){
+      return{
+        slide: 0,
+        sliding: null,
+        advantages:[
+          {name:"квалифицированный штат  сотрудников", svg:StateSVG, link:'/company',},
+          {name:"современное инновационное  оборудование", svg:EquipmentSVG, link:'/technical_means',},
+          {name:"готовность работать в  любое время", svg:ClockSVG, link:'/tariffs',},
+          {name:"контроль качества  на каждом  этапе работы", svg:QualityControlSVG, link:'/company',},
+          {name:"круглосуточная поддержка клиентов 24/7", svg:SupportSVG, link:'/contact',},
+          {name:"гибкое  ценнообразование  на любой бюджет",svg:PriceSVG, link:'/tariffs',},
+        ],
+        Advantages:[
+          {
+            advantages:[
+              {name:"квалифицированный штат  сотрудников", svg:StateSVG, link:'/company',},
+              {name:"современное инновационное  оборудование", svg:EquipmentSVG, link:'/technical_means',},
+              {name:"готовность  работать в  любое время", svg:ClockSVG, link:'/tariffs',},
+            ]
+          },
+          {
+            advantages:[
+              {name:"контроль качества  на каждом  этапе работы", svg:QualityControlSVG, link:'/company',},
+              {name:"круглосуточная поддержка клиентов 24/7", svg:SupportSVG, link:'/contact',},
+              {name:"гибкое  ценнообразование  на любой бюджет",svg:PriceSVG, link:'/tariffs',},
+            ]
+          },
+        ]
       }
     }
+  }
 </script>
 
 <style scoped>

@@ -32,11 +32,11 @@
 
 <script>
   import TelephoneSVG from "../components/contact_svg/telephone_svg";
-    import EmailSVG from "../components/contact_svg/email_svg";
-    import OpeningHoursSVG from "../components/contact_svg/opening_hours_svg";
-    import AddressSVG from "../components/contact_svg/address_svg";
-    import Send_form from "../components/secondary_pages/send_form";
-    import Information from "static/documents/information.json"
+  import EmailSVG from "../components/contact_svg/email_svg";
+  import OpeningHoursSVG from "../components/contact_svg/opening_hours_svg";
+  import AddressSVG from "../components/contact_svg/address_svg";
+  import Send_form from "../components/secondary_pages/send_form";
+  import Information from "static/documents/information.json"
   export default {
     name: "contact",
     components: {Send_form},

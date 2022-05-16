@@ -47,12 +47,12 @@
 
 <script>
   import LawSVG from "../components/company_svg/law_svg";
-    import SpeedSVG from "../components/company_svg/speed_svg";
-    import StrengthSVG from "../components/company_svg/strength_svg";
-    import ReliabilitySVG from "../components/company_svg/reliability_svg";
-    import PartnersSVG from "../components/company_svg/partners_svg";
-    import ConfidentialitySVG from "../components/company_svg/confidentiality_svg";
-    import Information from "static/documents/information.json"
+  import SpeedSVG from "../components/company_svg/speed_svg";
+  import StrengthSVG from "../components/company_svg/strength_svg";
+  import ReliabilitySVG from "../components/company_svg/reliability_svg";
+  import PartnersSVG from "../components/company_svg/partners_svg";
+  import ConfidentialitySVG from "../components/company_svg/confidentiality_svg";
+  import Information from "static/documents/information.json"
   export default {
     name: "company",
     data() {

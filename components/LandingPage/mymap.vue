@@ -5,15 +5,15 @@
 </template>
 
 <script>
-    import Information from "../../static/documents/information.json";
-    export default {
-      name: "mymap",
-      data() {
-        return {
-          information: Information,
-        }
+  import Information from "../../static/documents/information.json";
+  export default {
+    name: "mymap",
+    data() {
+      return {
+        information: Information,
       }
     }
+  }
 </script>
 
 <style scoped>

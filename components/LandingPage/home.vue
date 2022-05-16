@@ -16,17 +16,17 @@
 </template>
 
 <script>
-    import Advantages from "./advantages";
+  import Advantages from "./advantages";
     import Information from "../../static/documents/information.json";
-    export default {
-      name: "home",
-      components: {Advantages},
-      data(){
-        return{
-          information:Information,
-        }
+  export default {
+    name: "home",
+    components: {Advantages},
+    data(){
+      return{
+        information:Information,
       }
     }
+  }
 </script>
 <style scoped>
 

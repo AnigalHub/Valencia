@@ -16,17 +16,17 @@
 </template>
 
 <script>
-    import Send_form from "../secondary_pages/send_form";
-    import Information from "static/documents/information.json"
-    export default {
-      name: "feedback",
-      components: {Send_form},
-      data(){
-        return{
-          information:Information,
-        }
+  import Send_form from "../secondary_pages/send_form";
+  import Information from "static/documents/information.json"
+  export default {
+    name: "feedback",
+    components: {Send_form},
+    data(){
+      return{
+        information:Information,
       }
     }
+  }
 </script>
 
 <style scoped>
