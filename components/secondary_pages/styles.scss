@@ -261,7 +261,13 @@ input {
     color: $shadeOfBlack;
   }
   /*название чопа в первом компоненте,цифры в компоненте "Важные числа"*/
-  #Home .title_guard, #Import_numbers .number{color: $shadeOfYellow_1;}
+  #Home .title_guard, #Import_numbers .number{
+    color: $shadeOfYellow_1;
+  }
+  /*название чопа в первом компоненте,текст на главной странице*/
+   #Home .title_guard,#Advantages .text_Landing_page{
+     font-weight: 600;
+   }
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
@@ -285,7 +291,6 @@ input {
       padding: 2% 0;
       filter: contrast(125%) brightness(120%);
       cursor: default;
-      font-weight: 600;
       font-size: 2.9rem;
       letter-spacing: 1px;
       text-align: center;
@@ -319,7 +324,6 @@ input {
       transform: scale(1, 1.1);
       font-size: 1.2rem;
       line-height: 1.4rem;
-      font-weight: 600;
       height: 100%;
       display: flex;
       align-items: center;
