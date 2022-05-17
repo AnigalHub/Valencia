@@ -83,8 +83,7 @@ img{height: auto;}
 h1{
   font-size: 2.2rem;
   padding: 8px 0;
-  margin-top: 0 !important;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem ;
   cursor: default;
   background: transparent;
   text-transform: uppercase;
@@ -248,11 +247,14 @@ input {
   }
   /*текст на главной странице*/
   .text_Landing_page{
-    font-family: $fontText;
-    color: $shadeOfBlack;
-    font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.4rem;
+  }
+  /*текст на главной странице,слоган чопа*/
+  .text_Landing_page,#Home .slogan{
+    color: $shadeOfBlack;
+    font-family: $fontText;
+    font-weight: 400;
     text-align: center;
   }
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
@@ -290,14 +292,10 @@ input {
     }
     /*слоган чопа*/
     .slogan{
-      font-family: $fontText;
-      font-weight: 400;
       font-size: 2.7rem;
       line-height: 3.25rem;
       text-shadow: -1px 1px 1px $shadeOfBlack;
       cursor: default;
-      text-align: center;
-      color: $shadeOfBlack;
       filter: contrast(90%);
       padding: 6.5% 0 3%;
       margin-left: -5%;
@@ -318,7 +316,6 @@ input {
       font-size: 1.2rem;
       line-height: 1.4rem;
       font-weight: 600;
-      color: $shadeOfBlack;
       height: 100%;
       display: flex;
       align-items: center;
@@ -371,9 +368,7 @@ input {
       margin: 0 0 2% 2.5%;
       filter: contrast(100%) !important;
     }
-    .btn-secondary{
-      border-color: transparent !important;
-    }
+    .btn-secondary{border-color: transparent !important;}
     /*картинки (изменение/добавление стилей касательно только этого компонента (Услуги))*/
     img{
       width: $imgWidth100percent;
