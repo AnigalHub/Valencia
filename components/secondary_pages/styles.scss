@@ -81,10 +81,7 @@ $imgWidth100percent:100%;
 img{height: auto;}
 /*заголовки на всех страницах (кроме главной)*/
 h1{
-  color: $shadeOfYellow_5;
-  font-weight: 600 !important;
   font-size: 2.2rem;
-  text-shadow: 0 1px 2px $shadeOfBlack;
   padding: 8px 0;
   margin-top: 0 !important;
   margin-bottom: 1rem;
@@ -93,10 +90,12 @@ h1{
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-h2,h3{
-  color: $shadeOfYellow_5;
+h1,h2,h3{
   font-weight: 600 !important;
   text-shadow: 0 1px 3px $shadeOfBlack;
+}
+h1,h2,h3,h4,h6{color: $shadeOfBlack;}
+h2,h3{
   padding: 1% 0;
   margin-bottom: 3%;
 }
@@ -106,14 +105,12 @@ h3{
   cursor: default;
 }
 h4{
-  color: $shadeOfBlack;
-  font-weight: 600;
+  font-weight: 800;
   display: block;
   padding-bottom: 0.5%;
   margin-bottom: 0;
 }
 h6{
-  color: $shadeOfBlack;
   font-weight: 600 !important;
   font-size: 1.2rem;
   line-height: 1.6rem;
