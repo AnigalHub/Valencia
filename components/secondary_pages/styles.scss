@@ -252,11 +252,16 @@ input {
   }
   /*текст на главной странице,слоган чопа*/
   .text_Landing_page,#Home .slogan{
-    color: $shadeOfBlack;
     font-family: $fontText;
     font-weight: 400;
     text-align: center;
   }
+  /*текст на главной странице,слоган чопа, номер телефона в компоненте обратная связь*/
+  .text_Landing_page,#Home .slogan, #Feedback .call_telephone{
+    color: $shadeOfBlack;
+  }
+  /*название чопа в первом компоненте,цифры в компоненте "Важные числа"*/
+  #Home .title_guard, #Import_numbers .number{color: $shadeOfYellow_1;}
   /*компонент (самый первый - главный) с названием чопа, слоганом,картинкой и преимуществами*/
   #Home{
     height: auto;
@@ -285,8 +290,7 @@ input {
       letter-spacing: 1px;
       text-align: center;
       transform: scale(1);
-      color: $shadeOfYellow_1;
-      text-shadow:  1px 1px 2px $shadeOfBlack;
+      text-shadow: 1px 1px 2px $shadeOfBlack;
       text-transform: uppercase;
       line-height: 4rem;
     }
@@ -399,7 +403,6 @@ input {
       text-shadow: 2px 2px 2px $shadeOfBlack;
       transform: scale(1.35);
       letter-spacing: -2.5px;
-      color: $shadeOfYellow_1;
       filter: contrast(100%) brightness(125%);
     }
     /*контейнер с цифрами и текстом*/
@@ -468,14 +471,12 @@ input {
     padding: 4% 0 2%;
     /*изменение/добавление стилей в текст на главной странице - касательно только этого компонента (Обратная связь)*/
     .text_Landing_page{
-      text-align: center !important;
       margin: 2% 0;
       line-height: 1.8rem;
     }
     /*номер телефона*/
     .call_telephone{
       font-family: $fontNumber;
-      color: $shadeOfBlack;
       text-shadow:  1px 1px .5px $shadeOfBlack;
       font-size: 3.8rem;
       display: block;
