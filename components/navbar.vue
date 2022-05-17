@@ -94,7 +94,7 @@
       margin-top: -.8%;
       /*svg-щит*/
       #navbar_svg{
-        width:50px;
+        width: 50px;
         height: 54px;
         padding: .8%;
         margin: 2% 0 1%;
@@ -165,9 +165,9 @@
     /*блок с подвидами охраны организаций (образовательные учреждения, медучреждения, госучреждения)*/
     .menu_org{top: -.35% !important;}
     /*блок с подвидами охраны объектов (промышленные объекты, объекты транспорта)*/
-    .menu_obj{top:16% !important;}
+    .menu_obj{top: 16% !important;}
     /*блок с подвидами охраны недвижимости (коммерческие объекты, частные объекты)*/
-    .menu_state{top:32% !important;}
+    .menu_state{top: 32% !important;}
     /*блоки подвидов охраны*/
     .menu_org,.menu_obj,.menu_state{
       display:none;
@@ -209,7 +209,7 @@
       .btn-group{display: block}
     }
   }
-  @media screen and (min-width:1200px) and (max-width: 1250px) {
+  @media screen and (min-width: 1200px) and (max-width: 1250px) {
     #Nav{
       /*меню (кнопки все)*/
       .navbar-nav{margin-left: -.8%;}
@@ -232,14 +232,14 @@
       .telephone{margin-left: -.8%;}
     }
   }
-  @media screen and (min-width:1250px) and (max-width: 1300px) {
+  @media screen and (min-width: 1250px) and (max-width: 1300px) {
     #Nav{
       /*меню (кнопки все)*/
       .navbar-nav{margin-left: -1%;}
       /*блок под логотип(svg, название компании, что за компания(чоп))*/
       .navbar-brand{
         /*svg-щит*/
-        #navbar_svg{height:51px;}
+        #navbar_svg{height: 51px;}
       }
       /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
       .nav-link,.telephone,.dropdown-toggle,.dropdown-item{font-size: 1.1rem !important;}
@@ -249,7 +249,7 @@
       .telephone{margin-left: -1%;}
     }
   }
-  @media screen and (min-width:1300px) and (max-width: 1350px) {
+  @media screen and (min-width: 1300px) and (max-width: 1350px) {
     #Nav{
       /*меню (кнопки все)*/
       .navbar-nav{margin-left: 0;}
@@ -257,19 +257,19 @@
       .nav-link{padding: 0 .42rem !important;}
     }
   }
-  @media screen and (min-width:1350px) and (max-width: 1400px) {
+  @media screen and (min-width: 1350px) and (max-width: 1400px) {
     #Nav{
       /*меню (кнопки все)*/
       .navbar-nav{margin-left: -3%;}
     }
   }
-  @media screen and (min-width:1300px) and (max-width: 1400px) {
+  @media screen and (min-width: 1300px) and (max-width: 1400px) {
     #Nav{
       /*блок под логотип(svg, название компании, что за компания(чоп))*/
       .navbar-brand{
         margin-right: .3rem !important;
         /*svg-щит*/
-        #navbar_svg{height:51px;}
+        #navbar_svg{height: 51px;}
       }
       /*все кнопки (кроме кнопки "Услуги" и кнопок в dropdown), номер телефона*/
       .nav-link,.telephone{font-size: 1.14rem !important;}
