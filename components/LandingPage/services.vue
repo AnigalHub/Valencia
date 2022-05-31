@@ -1,7 +1,6 @@
 <template>
   <div id="Services">
     <b-container>
-      <h2>Виды деятельности организации:</h2>
       <div class="flex-container">
         <router-link v-for="(guard,index) in Guard" :key="index" :to="guard.link">
           <b-button>
