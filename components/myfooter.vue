@@ -4,7 +4,7 @@
       <div class="flex-container">
         <div v-for="(page_catalog,index) in catalog_pages" :key="index">
           <div v-for="(value, index) in page_catalog.pages" :key="index">
-            <NuxtLink  :to="value.link">{{value.page}}</NuxtLink>
+            <NuxtLink :to="value.link">{{value.page}}</NuxtLink>
             <br>
           </div>
         </div>
