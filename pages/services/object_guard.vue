@@ -50,7 +50,7 @@
             {
               link:"/services/_object_guard/guard_of_industrial_facilities",
               name:"Охрана промышленных объектов",
-              img_src:"../object_guard/checkpoint.png",
+              img_src:"services/object_guard/checkpoint.png",
               img_alt:"охрана_коммерческих_объектов",
               list:[
                 {guard:"охрана предприятий;"},
@@ -64,7 +64,7 @@
             {
               link:"/services/_object_guard/guard_of_transport_facilities",
               name:"Охрана объектов транспорта",
-              img_src:"../object_guard/barrier.jpg",
+              img_src:"services/object_guard/barrier.jpg",
               img_alt:"охрана_частных_объектов",
               list:[
                 {guard:"охрана вокзалов;"},

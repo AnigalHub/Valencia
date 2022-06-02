@@ -53,7 +53,7 @@
           {
             link:"/services/_guard_of_organizations/guard_of_educational_institutions",
             name: "Охрана образовательных и дошкольных учреждений",
-            img_src: "../guard_of_organizations/guard_of_educational_institutions.jpg",
+            img_src: "services/guard_of_organizations/guard_of_educational_institutions.jpg",
             img_alt: "охрана_коммерческих_объектов",
             list: [
               {guard: "охрана детских садов;"},
@@ -65,7 +65,7 @@
           {
             link:"/services/_guard_of_organizations/guard_of_medical_institutions",
             name: "Охрана медицинских учреждений",
-            img_src: "../guard_of_organizations/guard_of_medical_institutions.jpg",
+            img_src: "services/guard_of_organizations/guard_of_medical_institutions.jpg",
             img_alt: "охрана_частных_объектов",
             list: [
               {guard: "охрана поликлиник;"},
@@ -77,7 +77,7 @@
           {
             link:"/services/_guard_of_organizations/guard_of_municipal_facilities",
             name: "Охрана муниципальных объектов - госучреждений",
-            img_src: "../guard_of_organizations/gallery.jpg",
+            img_src: "services/guard_of_organizations/gallery.jpg",
             img_alt: "охрана_частных_объектов",
             list: [
               {guard: "охрана административных зданий;"},
