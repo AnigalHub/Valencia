@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="Nav" class="navbar-expand-xl sticky-top navbar-dark" toggleable>
     <b-container>
-      <b-navbar-brand to="/">
+      <b-navbar-brand to="/#Home">
         <component :is="svg"/>
         <span class="name_brand">"{{information.name_company}}"</span>
       </b-navbar-brand>
@@ -18,37 +18,37 @@
       </b-navbar-toggle>
       <b-collapse id="navbar-toggle-collapse" class="justify-content-$textCenter:center;" is-nav v-model="isExpanded">
         <b-navbar-nav>
-          <b-nav-item to="/company" active-class="nav-link-active">О нас</b-nav-item>
+          <b-nav-item to="/company/" active-class="nav-link-active">О нас</b-nav-item>
           <b-dropdown text="Услуги" class="menu" :class="{'nav-link-active': isServicesActive} ">
-            <b-dropdown-item to="/services/guard_of_organizations/" class="menu1" active-class="nav-link-active">Охрана организаций
+            <b-dropdown-item to="/services/guard_of_organizations" class="menu1" active-class="nav-link-active">Охрана организаций
               <span class="menu_org">
-                <b-dropdown-item id="rr" to="/services/_guard_of_organizations/guard_of_educational_institutions" active-class="nav-link-active">Охрана образовательных учреждений</b-dropdown-item>
-                <b-dropdown-item id="r2" to="/services/_guard_of_organizations/guard_of_medical_institutions" active-class="nav-link-active">Охрана медицинских учреждений</b-dropdown-item>
+                <b-dropdown-item id="rr" to="services/_guard_of_organizations/guard_of_educational_institutions" active-class="nav-link-active">Охрана образовательных учреждений</b-dropdown-item>
+                <b-dropdown-item id="r2" to="services/_guard_of_organizations/guard_of_medical_institutions" active-class="nav-link-active">Охрана медицинских учреждений</b-dropdown-item>
                 <b-dropdown-item to="/services/_guard_of_organizations/guard_of_municipal_facilities" active-class="nav-link-active">Охрана муниципальных объектов</b-dropdown-item>
               </span>
             </b-dropdown-item>
-            <b-dropdown-item to="/services/object_guard/" class="menu2" active-class="nav-link-active">Охрана объектов
+            <b-dropdown-item to="/services/object_guard" class="menu2" active-class="nav-link-active">Охрана объектов
               <span class="menu_obj">
                 <b-dropdown-item to="/services/_object_guard/guard_of_industrial_facilities" active-class="nav-link-active">Охрана промышленных объектов</b-dropdown-item>
                 <b-dropdown-item to="/services/_object_guard/guard_of_transport_facilities" active-class="nav-link-active">Охрана объектов транспорта</b-dropdown-item>
               </span>
             </b-dropdown-item>
-             <b-dropdown-item to="/services/guard_of_real_estate/" class="menu3" active-class="nav-link-active">Охрана недвижимости
+             <b-dropdown-item to="/services/guard_of_real_estate" class="menu3" active-class="nav-link-active">Охрана недвижимости
                <span class="menu_state">
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_of_commercial_objects" active-class="nav-link-active">Охрана коммерческих объектов</b-dropdown-item>
                  <b-dropdown-item to="/services/_guard_of_real_estate/guard_private_property" active-class="nav-link-active">Охрана частных объектов</b-dropdown-item>
                </span>
              </b-dropdown-item>
-              <b-dropdown-item to="/services/bodyguard" active-class="nav-link-active">Личная охрана</b-dropdown-item>
-              <b-dropdown-item to="/services/guard_of_events" active-class="nav-link-active">Охрана мероприятий </b-dropdown-item>
-              <b-dropdown-item to="/services/cargo_escort" active-class="nav-link-active">Сопровождение грузов</b-dropdown-item>
+              <b-dropdown-item to="/services/bodyguard/" active-class="nav-link-active">Личная охрана</b-dropdown-item>
+              <b-dropdown-item to="/services/guard_of_events/" active-class="nav-link-active">Охрана мероприятий </b-dropdown-item>
+              <b-dropdown-item to="/services/cargo_escort/" active-class="nav-link-active">Сопровождение грузов</b-dropdown-item>
             </b-dropdown>
-          <b-nav-item to="/tariffs" active-class="nav-link-active">Тарифы</b-nav-item>
-          <b-nav-item to="/technical_means" active-class="nav-link-active">Технические средства</b-nav-item>
-          <b-nav-item to="/special_equipment" active-class="nav-link-active">Спецсредства</b-nav-item>
-          <b-nav-item to="/licenses" active-class="nav-link-active">Лицензии</b-nav-item>
-          <b-nav-item to="/our_clients" active-class="nav-link-active">Наши клиенты</b-nav-item>
-          <b-nav-item to="/contact" active-class="nav-link-active">Контакты</b-nav-item>
+          <b-nav-item to="/tariffs/" active-class="nav-link-active">Тарифы</b-nav-item>
+          <b-nav-item to="/technical_means/" active-class="nav-link-active">Технические средства</b-nav-item>
+          <b-nav-item to="/special_equipment/" active-class="nav-link-active">Спецсредства</b-nav-item>
+          <b-nav-item to="/licenses/" active-class="nav-link-active">Лицензии</b-nav-item>
+          <b-nav-item to="/our_clients/" active-class="nav-link-active">Наши клиенты</b-nav-item>
+          <b-nav-item to="/contact/" active-class="nav-link-active">Контакты</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
