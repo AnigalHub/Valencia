@@ -18,6 +18,12 @@ export default {
       {rel: 'stylesheet' , href:'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap', media:'all', disabled:''},
     ]
   },
+
+  //Router
+  router: {
+    base: '/security/'
+  },
+
   server:{
     host: "0.0.0.0",
     port: 5000
