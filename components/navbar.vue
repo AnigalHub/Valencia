@@ -127,8 +127,9 @@
       //название компании в логотипе
       .name_brand{
         color: $colorNameCompany;
+        padding-top: 2%;
         text-shadow: 1px 1px 2px #387fac;
-        vertical-align: middle;
+        vertical-align: sub;
         font-size: 1.25rem;
         filter: contrast(140%);
       }
