@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="Nav" class="navbar-expand-xl sticky-top navbar-dark" toggleable>
     <b-container>
-      <b-navbar-brand to="/#Home">
+      <b-navbar-brand to="/">
         <component :is="svg"/>
         <span class="name_brand">"{{information.name_company}}"</span>
       </b-navbar-brand>
