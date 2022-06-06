@@ -50,7 +50,7 @@
             {
               link:"/services/_object_guard/guard_of_industrial_facilities",
               name:"Охрана промышленных объектов",
-              img_src:"services/object_guard/checkpoint.png",
+              img_src:"services/object_guard/checkpoint.jpg",
               img_alt:"охрана_коммерческих_объектов",
               list:[
                 {guard:"охрана предприятий;"},

@@ -56,7 +56,7 @@
           },
           {
             name_technical_means:"Охранная сигнализация",
-            img_src:"technical_means/guard_alarm.png",
+            img_src:"technical_means/guard_alarm.jpg",
             img_alt:"охранная_сигнализация",
             list:[
               {paragraph:"контрольная панель;"},

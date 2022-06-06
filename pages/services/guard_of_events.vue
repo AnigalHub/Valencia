@@ -9,7 +9,7 @@
         <li v-for="paragraph in CharacteristicsOfEvents" :key="paragraph.index">{{paragraph.paragraph}}</li>
       </ul>
       <h6>Перечень мер по охране мероприятий:</h6>
-      <img class="second_img" src="../../static/services/guard_of_events/concert_guard.png" alt="охрана_концерта"/>
+      <img class="second_img" src="../../static/services/guard_of_events/concert_guard.jpg" alt="охрана_концерта"/>
       <ul class="text">
         <li v-for="duty in DutiesGuardOfEvents" :key="duty.index">{{duty.duty}}</li>
       </ul>
