@@ -24,6 +24,9 @@ $boxShadowImg: 7px 7px 7px -7px;
 $auto:auto;
 $positionAbsolute:absolute;
 
+body{
+  background: $backgroundPage !important;
+}
 //контейнер контента - на весь экран
 .container-fluid{padding: $zero !important;}
 //контейнер контента - по середине
